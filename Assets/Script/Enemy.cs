@@ -19,10 +19,17 @@ public class Enemy : MonoBehaviour
         ReturnToSpawn,
         WaitToReturn
     }
+
+    [Serializable] public struct EnemyTarget
+    {
+        public GameObject Target;
+        public int Priority;
+    }
     
     [SerializeField] private float viewDistance;
     [SerializeField] private LayerMask playerLayerMask;
     [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private List<EnemyTarget> targets;
     private GameObject _target;
     private Rigidbody2D _rigidbody2D;
     private Vector2 _spawnPoint;
@@ -44,15 +51,28 @@ public class Enemy : MonoBehaviour
     
     void Update()
     {
-        Collider2D targetInDistance = Physics2D.OverlapCircle(transform.position, viewDistance,playerLayerMask);
-
-        if (targetInDistance)
+        Collider2D[] targetInDistances = Physics2D.OverlapCircleAll(transform.position, viewDistance,playerLayerMask);
+ 
+        if (targetInDistances.Length > 0)
         {
-            _target = targetInDistance.gameObject;
+            for (int i = 0; i < targets.Count; i++)
+            {
+                foreach (Collider2D tar in targetInDistances)
+                {
+                    if (tar.gameObject == targets[i].Target)
+                    {
+                        _target = tar.gameObject;
+                        i += targets.Count;
+                        break;
+                    }
+                }
+            }
+            
             SetEnemyState(EnemyState.FollowTarget);
         }
         else if (EnemyActionState == EnemyState.FollowTarget)
         {
+            
             SetEnemyState(EnemyState.WaitToReturn);
         }
         else if ((Vector2)transform.position == _spawnPoint)
