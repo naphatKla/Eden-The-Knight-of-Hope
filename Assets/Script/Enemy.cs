@@ -8,6 +8,7 @@ using UnityEngine.AI;
 using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 using Debug = UnityEngine.Debug;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
@@ -19,21 +20,23 @@ public class Enemy : MonoBehaviour
         ReturnToSpawn,
         WaitToReturn
     }
-
-    [Serializable] public struct EnemyTarget
+    public enum PriorityTag
     {
-        public GameObject Target;
-        public int Priority;
+        Player,
+        NPC,
+        Tower
     }
     
     [SerializeField] private float viewDistance;
     [SerializeField] private LayerMask playerLayerMask;
     [SerializeField] private NavMeshAgent agent;
-    [SerializeField] private List<EnemyTarget> targets;
+    [SerializeField] private List<PriorityTag> priorityTags;
     private GameObject _target;
     private Rigidbody2D _rigidbody2D;
     private Vector2 _spawnPoint;
     private bool _isWait;
+    private float _idleTimeCounter;
+    private bool _isRoam;
     public EnemyState EnemyActionState;
     #endregion
 
@@ -55,19 +58,19 @@ public class Enemy : MonoBehaviour
  
         if (targetInDistances.Length > 0)
         {
-            for (int i = 0; i < targets.Count; i++)
+            
+            // set target to the first priority tag
+            for (int i = 0; i < priorityTags.Count; i++)
             {
-                foreach (Collider2D tar in targetInDistances)
+                foreach (Collider2D col in targetInDistances)
                 {
-                    if (tar.gameObject == targets[i].Target)
-                    {
-                        _target = tar.gameObject;
-                        i += targets.Count;
-                        break;
-                    }
+                    if (!col.gameObject.CompareTag(priorityTags[i].ToString())) continue;
+                    
+                    _target = col.gameObject;
+                    i += priorityTags.Count; // break out loop
+                    break;
                 }
             }
-            
             SetEnemyState(EnemyState.FollowTarget);
         }
         else if (EnemyActionState == EnemyState.FollowTarget)
@@ -104,6 +107,23 @@ public class Enemy : MonoBehaviour
         _isWait = false;
         EnemyActionState = state;
     }
+
+    private IEnumerator RoamAround(float time)
+    {
+        float timeCounter = 0;
+        Vector2 randomPos = new Vector2(_spawnPoint.x + Random.Range(-4, 4), _spawnPoint.y + Random.Range(-4, 4));
+        
+        while (timeCounter < time)
+        {
+            _isRoam = true;
+            agent.SetDestination(randomPos);
+            timeCounter += Time.deltaTime;
+            yield return null;
+        }
+
+        Debug.Log("Rome Done");
+        _isRoam = false;
+    }
     #endregion
 
     #region Method
@@ -124,7 +144,11 @@ public class Enemy : MonoBehaviour
         {
             case EnemyState.Idle:
             {
-               
+                _idleTimeCounter += Time.deltaTime;
+                if((int)_idleTimeCounter % 5 != 0) return;
+                if (Random.Range(0, 100) < 0) return;
+                if (_isRoam) return;
+                StartCoroutine(RoamAround(3));
                 break;
             }
             case EnemyState.FollowTarget:
