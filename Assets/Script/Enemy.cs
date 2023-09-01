@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Serialization;
@@ -18,13 +19,14 @@ public class Enemy : MonoBehaviour
         ReturnToSpawn,
         WaitToReturn
     }
-    [SerializeField] private GameObject target;
-    [SerializeField] private float speed;
+    
     [SerializeField] private float viewDistance;
     [SerializeField] private LayerMask playerLayerMask;
     [SerializeField] private NavMeshAgent agent;
+    private GameObject _target;
     private Rigidbody2D _rigidbody2D;
-    private Vector3 _spawnPoint;
+    private Vector2 _spawnPoint;
+    private bool _isWait;
     public EnemyState EnemyActionState;
     #endregion
 
@@ -35,30 +37,30 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        _isWait = false;
         _spawnPoint = transform.position;
         EnemyActionState = EnemyState.Idle;
     }
     
     void Update()
     {
-        Collider2D viewDistanceHit = Physics2D.OverlapCircle(transform.position, viewDistance,playerLayerMask);
-        
-        if (viewDistanceHit)
+        Collider2D targetInDistance = Physics2D.OverlapCircle(transform.position, viewDistance,playerLayerMask);
+
+        if (targetInDistance)
         {
+            _target = targetInDistance.gameObject;
             SetEnemyState(EnemyState.FollowTarget);
-            agent.SetDestination(target.transform.position);
         }
         else if (EnemyActionState == EnemyState.FollowTarget)
         {
-            EnemyActionState = EnemyState.WaitToReturn;
-            StartCoroutine(SetEnemyState(EnemyState.ReturnToSpawn, 3));
+            SetEnemyState(EnemyState.WaitToReturn);
         }
-        else if (EnemyActionState == EnemyState.ReturnToSpawn)
+        else if ((Vector2)transform.position == _spawnPoint)
         {
-            SetEnemyState(EnemyState.ReturnToSpawn);
-            agent.SetDestination(_spawnPoint);
+            SetEnemyState(EnemyState.Idle);
         }
-
+        
+        PlayAction(EnemyActionState);
         Debug.Log(EnemyActionState);
     }
     
@@ -75,13 +77,11 @@ public class Enemy : MonoBehaviour
         while (timeCount < time)
         {
             timeCount += Time.deltaTime;
-            
-            if(EnemyActionState.Equals(EnemyState.WaitToReturn))
-                agent.SetDestination(target.transform.position);
-            
+            _isWait = true;
             yield return null;
         }
 
+        _isWait = false;
         EnemyActionState = state;
     }
     #endregion
@@ -104,22 +104,25 @@ public class Enemy : MonoBehaviour
         {
             case EnemyState.Idle:
             {
-                
+               
                 break;
             }
             case EnemyState.FollowTarget:
             {
-                
+                agent.SetDestination(_target.transform.position);
                 break;
             }
             case EnemyState.ReturnToSpawn:
             {
-                
+                agent.SetDestination(_spawnPoint);
                 break;
             }
             case EnemyState.WaitToReturn:
             {
+                agent.SetDestination(_target.transform.position);
                 
+                if(!_isWait)
+                    StartCoroutine(SetEnemyState(EnemyState.ReturnToSpawn, 3));
                 break;
             }
         }
