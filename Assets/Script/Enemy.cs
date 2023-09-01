@@ -1,17 +1,28 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Serialization;
 using UnityEngine.UIElements;
+using Debug = UnityEngine.Debug;
 
 public class Enemy : MonoBehaviour
 {
     #region Declare Variable
+    public enum EnemyState
+    {
+        Idle,
+        FollowTarget,
+        ReturnToSpawn,
+        WaitToReturn
+    }
     [SerializeField] private GameObject target;
     [SerializeField] private float speed;
     [SerializeField] private float viewDistance;
     [SerializeField] private LayerMask playerLayerMask;
+    [SerializeField] private NavMeshAgent agent;
     private Rigidbody2D _rigidbody2D;
     private Vector3 _spawnPoint;
     public EnemyState EnemyActionState;
@@ -20,9 +31,12 @@ public class Enemy : MonoBehaviour
     #region Unity Method
     void Start()
     {
-        EnemyActionState = EnemyState.Idle;
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
         _spawnPoint = transform.position;
+        EnemyActionState = EnemyState.Idle;
     }
     
     void Update()
@@ -32,7 +46,7 @@ public class Enemy : MonoBehaviour
         if (viewDistanceHit)
         {
             SetEnemyState(EnemyState.FollowTarget);
-            FollowTarget(target.transform.position, speed);
+            agent.SetDestination(target.transform.position);
         }
         else if (EnemyActionState == EnemyState.FollowTarget)
         {
@@ -42,13 +56,7 @@ public class Enemy : MonoBehaviour
         else if (EnemyActionState == EnemyState.ReturnToSpawn)
         {
             SetEnemyState(EnemyState.ReturnToSpawn);
-            FollowTarget(_spawnPoint, speed * 2);
-            
-            if (Mathf.Round(transform.position.x) == Mathf.Round(_spawnPoint.x) && Mathf.Round(transform.position.y) == Mathf.Round(_spawnPoint.y))
-            {
-                SetEnemyState(EnemyState.Idle);
-                _rigidbody2D.velocity = Vector3.zero;
-            }
+            agent.SetDestination(_spawnPoint);
         }
 
         Debug.Log(EnemyActionState);
@@ -69,16 +77,16 @@ public class Enemy : MonoBehaviour
             timeCount += Time.deltaTime;
             
             if(EnemyActionState.Equals(EnemyState.WaitToReturn))
-                FollowTarget(target.transform.position, speed);
+                agent.SetDestination(target.transform.position);
             
             yield return null;
         }
 
         EnemyActionState = state;
     }
-    
     #endregion
 
+    #region Method
     public void FollowTarget(Vector3 targetPosition, float speed)
     {
         Vector3 direction = (targetPosition - transform.position).normalized;
@@ -89,12 +97,32 @@ public class Enemy : MonoBehaviour
     {
         EnemyActionState = state;
     }
-    
-    public enum EnemyState
+
+    public void PlayAction(EnemyState enemyState)
     {
-        Idle,
-        FollowTarget,
-        ReturnToSpawn,
-        WaitToReturn
+        switch (enemyState)
+        {
+            case EnemyState.Idle:
+            {
+                
+                break;
+            }
+            case EnemyState.FollowTarget:
+            {
+                
+                break;
+            }
+            case EnemyState.ReturnToSpawn:
+            {
+                
+                break;
+            }
+            case EnemyState.WaitToReturn:
+            {
+                
+                break;
+            }
+        }
     }
+    #endregion
 }
