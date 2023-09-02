@@ -563,6 +563,7 @@ MonoBehaviour:
     colors: {r: 0.6115388, g: 0.8490566, b: 0.5246529, a: 1}
   - timeRatio: 30
     colors: {r: 1, g: 0.11931807, b: 0, a: 1}
+  cycleLength: 600
 --- !u!1 &1495542481
 GameObject:
   m_ObjectHideFlags: 0

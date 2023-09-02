@@ -16,7 +16,7 @@ public class DayAndNight : MonoBehaviour
     
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private DayAndNightMark[] marks;
-    float cycleLength ; //1 day time / sec
+    public float cycleLength ; //1 day time / sec
 
     private const float TIME_CHECK_EPSILON = 0.1f;
 
