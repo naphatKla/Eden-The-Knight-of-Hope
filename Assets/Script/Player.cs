@@ -62,45 +62,49 @@ public class Player : MonoBehaviour
         WalkHandle();
         SprintHandle();
         DashHandle();
-        IdleHandle();
         
         Vector2 playerVelocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * _currentSpeed;
         _playerRigidbody2D.velocity = playerVelocity;
-    }
-
-    private void IdleHandle()
-    {
-        if(_playerRigidbody2D.velocity != Vector2.zero) return;
-        SetPlayerState(PlayerState.Idle);
+        
+        if(playerVelocity == Vector2.zero) 
+            SetPlayerState(PlayerState.Idle);
     }
     
     private void WalkHandle()
     {
-        if(_playerState == PlayerState.Dash) return;
+        if(CheckPlayerState(PlayerState.Dash)) return;
+        
         _currentSpeed = walkSpeed;
         SetPlayerState(PlayerState.Walk);
     }
     
     private void SprintHandle()
     {
-        if (_playerState == PlayerState.Idle) return;
-        if(_playerState == PlayerState.Dash) return;
+        if (CheckPlayerState(PlayerState.Dash)) return;
+        if (CheckPlayerState(PlayerState.Idle)) return;
         if (!Input.GetKey(KeyCode.LeftShift)) return;
+        
         _currentSpeed = sprintSpeed;
         SetPlayerState(PlayerState.Sprint);
     }
     
     private void DashHandle()
     {
-        if (_playerState == PlayerState.Idle) return;
         if (_isDash) return;
+        if (CheckPlayerState(PlayerState.Idle)) return;
         if (!Input.GetKeyDown(KeyCode.LeftControl)) return;
+        
         StartCoroutine(Dash());
     }
     
     private void SetPlayerState(PlayerState state)
     {
         _playerState = state;
+    }
+
+    private bool CheckPlayerState(PlayerState state)
+    {
+        return _playerState == state;
     }
     #endregion
 }
