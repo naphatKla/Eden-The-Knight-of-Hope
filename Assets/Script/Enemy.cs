@@ -29,27 +29,30 @@ public class Enemy : MonoBehaviour
     
     [SerializeField] private float viewDistance;
     [SerializeField] private LayerMask playerLayerMask;
-    [SerializeField] private NavMeshAgent agent;
     [SerializeField] private List<PriorityTag> priorityTags;
-    private GameObject _target;
+    [SerializeField] private float roamDuration;
+    [SerializeField] private float roamCooldown;
+    [SerializeField] private Vector2 roamArea;
+    private NavMeshAgent _agent;
     private Rigidbody2D _rigidbody2D;
+    private GameObject _target;
     private Vector2 _spawnPoint;
     private bool _isWait;
-    private float _idleTimeCounter;
     private bool _isRoam;
-    public EnemyState EnemyActionState;
+    private float _roamCooldownCounter;
+    public EnemyState enemyActionState;
     #endregion
 
     #region Unity Method
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        agent = GetComponent<NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
+        _agent = GetComponent<NavMeshAgent>();
+        _agent.updateRotation = false;
+        _agent.updateUpAxis = false;
         _isWait = false;
         _spawnPoint = transform.position;
-        EnemyActionState = EnemyState.Idle;
+        enemyActionState = EnemyState.Idle;
     }
     
     void Update()
@@ -73,7 +76,7 @@ public class Enemy : MonoBehaviour
             }
             SetEnemyState(EnemyState.FollowTarget);
         }
-        else if (EnemyActionState == EnemyState.FollowTarget)
+        else if (enemyActionState == EnemyState.FollowTarget)
         {
             
             SetEnemyState(EnemyState.WaitToReturn);
@@ -83,8 +86,8 @@ public class Enemy : MonoBehaviour
             SetEnemyState(EnemyState.Idle);
         }
         
-        PlayAction(EnemyActionState);
-        Debug.Log(EnemyActionState);
+        PlayAction(enemyActionState);
+        Debug.Log(enemyActionState);
     }
     
     private void OnDrawGizmos()
@@ -105,37 +108,33 @@ public class Enemy : MonoBehaviour
         }
 
         _isWait = false;
-        EnemyActionState = state;
+        enemyActionState = state;
     }
 
     private IEnumerator RoamAround(float time)
     {
-        float timeCounter = 0;
-        Vector2 randomPos = new Vector2(_spawnPoint.x + Random.Range(-4, 4), _spawnPoint.y + Random.Range(-4, 4));
+        float _timeCount = 0;
+        Vector2 randomPos = new Vector2(_spawnPoint.x + Random.Range(roamArea.x, roamArea.y), _spawnPoint.y + Random.Range(roamArea.x, roamArea.y));
         
-        while (timeCounter < time)
+        while (_timeCount < time)
         {
             _isRoam = true;
-            agent.SetDestination(randomPos);
-            timeCounter += Time.deltaTime;
+            _agent.SetDestination(randomPos);
+            _timeCount += Time.deltaTime;
+            if (enemyActionState != EnemyState.Idle)
+                yield break;
             yield return null;
         }
 
-        Debug.Log("Rome Done");
+        _roamCooldownCounter = 0;
         _isRoam = false;
     }
     #endregion
 
     #region Method
-    public void FollowTarget(Vector3 targetPosition, float speed)
-    {
-        Vector3 direction = (targetPosition - transform.position).normalized;
-        _rigidbody2D.velocity = direction * speed;
-    }
-
     public void SetEnemyState(EnemyState state)
     {
-        EnemyActionState = state;
+        enemyActionState = state;
     }
 
     public void PlayAction(EnemyState enemyState)
@@ -144,26 +143,25 @@ public class Enemy : MonoBehaviour
         {
             case EnemyState.Idle:
             {
-                _idleTimeCounter += Time.deltaTime;
-                if((int)_idleTimeCounter % 5 != 0) return;
-                if (Random.Range(0, 100) < 0) return;
+                _roamCooldownCounter += Time.deltaTime;
+                if(_roamCooldownCounter < roamCooldown) return;
                 if (_isRoam) return;
-                StartCoroutine(RoamAround(3));
+                StartCoroutine(RoamAround(roamDuration));
                 break;
             }
             case EnemyState.FollowTarget:
             {
-                agent.SetDestination(_target.transform.position);
+                _agent.SetDestination(_target.transform.position);
                 break;
             }
             case EnemyState.ReturnToSpawn:
             {
-                agent.SetDestination(_spawnPoint);
+                _agent.SetDestination(_spawnPoint);
                 break;
             }
             case EnemyState.WaitToReturn:
             {
-                agent.SetDestination(_target.transform.position);
+                _agent.SetDestination(_target.transform.position);
                 
                 if(!_isWait)
                     StartCoroutine(SetEnemyState(EnemyState.ReturnToSpawn, 3));

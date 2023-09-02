@@ -2495,9 +2495,11 @@ MonoBehaviour:
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 8
-  agent: {fileID: 0}
   priorityTags: 000000000100000002000000
-  EnemyActionState: 0
+  roamDuration: 3
+  roamCooldown: 5
+  roamArea: {x: -4, y: -4}
+  enemyActionState: 0
 --- !u!212 &1490353556
 SpriteRenderer:
   m_ObjectHideFlags: 0
