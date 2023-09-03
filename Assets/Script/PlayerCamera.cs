@@ -1,38 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerCamera : MonoBehaviour
 {
     //CameraFollowPlayer
-    [SerializeField] private Transform Player;
+    [SerializeField] private Transform player;
+    [Space] [SerializeField] private float smoothTime = 0.25f;
     private Vector3 offset = new Vector3(0f, 0f, -10f);
-    private float smoothTime = 0.25f;
-    private Vector3 velocity = Vector3.zero;
+    private Vector3 _velocity = Vector3.zero;
     
     //Zoom
-    [SerializeField] private Camera cam;
-    private float zoom;
-    private float zoomMultiplier = 4f;
-    private float minZoom = 2f;
-    private float maxZoom = 8f;
-    private float velocity2 = 0f;
-    private float zoomSmoothTime = 0.25f;
+    [SerializeField] private float zoomSmoothTime = 0.25f;
+    [SerializeField] private float zoomMultiplier = 4f;
+    [SerializeField] private float minZoom = 2f;
+    [SerializeField] private float maxZoom = 8f;
+    private float _velocity2;
+    private float _zoom;
+    private Camera _cam;
 
     void Start()
     {
-        //Zoom
-        zoom = cam.orthographicSize;
+        _cam = GetComponent<Camera>();
+        _zoom = _cam.orthographicSize;
     }
     void Update()
     {
         //CameraFollowPlayer
-        Vector3 targetPosition = Player.position + offset;
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+        Vector3 targetPosition = player.position + offset;
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref _velocity, smoothTime);
+        
         //Zoom
         float scroll = Input.GetAxis("Mouse ScrollWheel");
-        zoom -= scroll * zoomMultiplier;
-        zoom = Mathf.Clamp(zoom, minZoom, maxZoom);
-        cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, zoom, ref velocity2, zoomSmoothTime);
+        _zoom -= scroll * zoomMultiplier;
+        _zoom = Mathf.Clamp(_zoom, minZoom, maxZoom);
+        _cam.orthographicSize = Mathf.SmoothDamp(_cam.orthographicSize, _zoom, ref _velocity2, zoomSmoothTime);
     }
 }

@@ -228,8 +228,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d57f5c888a2c684f9c247e3cc02bb16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1495542484}
-  cam: {fileID: 230626226}
+  player: {fileID: 1495542484}
+  smoothTime: 0.25
+  zoomSmoothTime: 0.25
+  zoomMultiplier: 4
+  minZoom: 2
+  maxZoom: 8
 --- !u!1 &563373994
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +322,7 @@ GameObject:
   - component: {fileID: 1259386253}
   - component: {fileID: 1259386252}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -552,18 +556,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1431441939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c9d79d1c4c22f64aaa85787989c64a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 46cae6132605e2a44b6f8bbe480156e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 1552821432}
-  marks:
-  - timeRatio: 30
-    colors: {r: 0.7216981, g: 0.871553, b: 1, a: 1}
-  - timeRatio: 30
-    colors: {r: 0.6115388, g: 0.8490566, b: 0.5246529, a: 1}
-  - timeRatio: 30
-    colors: {r: 1, g: 0.11931807, b: 0, a: 1}
-  cycleLength: 600
+  cycleLength: 800
 --- !u!1 &1495542481
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +573,7 @@ GameObject:
   - component: {fileID: 1495542487}
   - component: {fileID: 1495542486}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -712,90 +708,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &1552821431
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1552821433}
-  - component: {fileID: 1552821432}
-  m_Layer: 0
-  m_Name: Square (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1552821432
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552821431}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.72156864, g: 0.87058824, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1552821433
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552821431}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.56, y: 2.71, z: 0}
-  m_LocalScale: {x: 7.7229447, y: 3.4420364, z: 21.304674}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1634347126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,4 +1098,3 @@ SceneRoots:
   - {fileID: 2052170481}
   - {fileID: 1634347129}
   - {fileID: 1431441941}
-  - {fileID: 1552821433}

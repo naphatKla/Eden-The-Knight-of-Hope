@@ -10,25 +10,25 @@ public class ClockRotation : MonoBehaviour
     private float currentTime;
     [SerializeField] private Image clock;
     [SerializeField] private TMP_Text day;
-    private DayAndNight _dayAndNight;
+    private TimeSystem _timeSystem;
     private int dayInt = 1;
 
     void Start()
     {
         currentTime = 0;
-        _dayAndNight = GetComponent<DayAndNight>();
+        _timeSystem = GetComponent<TimeSystem>();
     }
 
     // Update is called once per frame
     void Update()
     {
         currentTime = currentTime + Time.deltaTime;
-        if (currentTime >= _dayAndNight.cycleLength)
+        if (currentTime >= _timeSystem.cycleLength)
         {
             dayInt += 1;
             currentTime = 0;
         }
-        clock.rectTransform.rotation = Quaternion.Euler(0,0,(currentTime / _dayAndNight.cycleLength )*360);
+        clock.rectTransform.rotation = Quaternion.Euler(0,0,(currentTime / _timeSystem.cycleLength )*360);
 
         day.text = "Day " + Convert.ToString(dayInt);
     }
