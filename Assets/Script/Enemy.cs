@@ -13,7 +13,8 @@ public class Enemy : MonoBehaviour
         Idle,
         FollowTarget,
         ReturnToSpawn,
-        WaitToReturn
+        WaitToReturn,
+        FocusOnTower
     }
 
     public enum PriorityTag
@@ -29,6 +30,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float roamDuration;
     [SerializeField] private float roamCooldown;
     [SerializeField] private Vector2 roamArea;
+    public bool nightMode;
+    private GameManager _gameManager;
     private NavMeshAgent _agent;
     private Rigidbody2D _rigidbody2D;
     private GameObject _target;
@@ -44,6 +47,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _gameManager = FindObjectOfType<GameManager>();
         _agent = GetComponent<NavMeshAgent>();
         _agent.updateRotation = false;
         _agent.updateUpAxis = false;
@@ -80,6 +84,10 @@ public class Enemy : MonoBehaviour
         else if ((Vector2)transform.position == _spawnPoint)
         {
             SetEnemyState(EnemyState.Idle);
+        }
+        else if (nightMode)
+        {
+            SetEnemyState(EnemyState.FocusOnTower);
         }
 
         PlayAction(enemyActionState);
@@ -161,6 +169,11 @@ public class Enemy : MonoBehaviour
 
                 if (!_isWait)
                     StartCoroutine(WaitToReturn(3));
+                break;
+            }
+            case EnemyState.FocusOnTower:
+            {
+                _agent.SetDestination(_gameManager.tower.position);
                 break;
             }
         }
