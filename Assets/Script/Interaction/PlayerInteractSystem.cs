@@ -1,13 +1,15 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class InteractSystem : MonoBehaviour
+public class PlayerInteractSystem : MonoBehaviour
 {
     [SerializeField] private Transform interactionPoint;
     [SerializeField] private float interactionPointRadius = 0.5f ;
     [SerializeField] private LayerMask interactableMask;
-    
+    private InteractableObject interactableObject;
+
     void Start()
     {
         
@@ -15,19 +17,17 @@ public class InteractSystem : MonoBehaviour
     
     private void Update()
     {
-        InteracHandle();
+        InteractHandle();
     }
 
-    private void InteracHandle()
+    private void InteractHandle()
     {
         Collider2D[] collider2Ds =
             Physics2D.OverlapCircleAll(interactionPoint.position, interactionPointRadius, interactableMask);
-
+        
         if (collider2Ds.Length <= 0) return;
 
         List<float> distances = new List<float>();
-        InteractableObject interactableObject;
-
         foreach (Collider2D col in collider2Ds)
             distances.Add(Vector2.Distance(transform.position, col.transform.position));
 
@@ -41,9 +41,4 @@ public class InteractSystem : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(interactionPoint.position, interactionPointRadius);
     }
-    
-
-
-
-
 }
