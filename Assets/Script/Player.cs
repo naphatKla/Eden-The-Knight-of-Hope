@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -19,10 +20,12 @@ public class Player : MonoBehaviour
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashDuration;
     [SerializeField] private float dashDelay;
+    public Animator animator;
     private Rigidbody2D _playerRigidbody2D;
     public PlayerState _playerState;
     private float _currentSpeed;
     private bool _isDash;
+    private bool _facingLeft = true;
     #endregion
 
     #region Unity Method
@@ -35,8 +38,12 @@ public class Player : MonoBehaviour
     void Update()
     {
         MovementHandle();
+        if (_playerState == PlayerState.Idle)
+            animator.SetTrigger("Idle");
+        if (_playerState == PlayerState.Walk)
+            animator.SetTrigger("Run");
     }
-    
+
     private IEnumerator Dash()
     {
         float _dashTimeCount = 0;
@@ -65,6 +72,15 @@ public class Player : MonoBehaviour
         
         Vector2 playerVelocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * _currentSpeed;
         _playerRigidbody2D.velocity = playerVelocity;
+        if (Input.GetAxis("Horizontal") > 0 && !_facingLeft)
+        {
+            Flip();
+        }
+        else if (Input.GetAxis("Horizontal") < 0 && _facingLeft)
+        {
+            Flip();
+        }
+        
         
         if(playerVelocity == Vector2.zero) 
             SetPlayerState(PlayerState.Idle);
@@ -105,6 +121,15 @@ public class Player : MonoBehaviour
     private bool CheckPlayerState(PlayerState state)
     {
         return _playerState == state;
+    }
+
+    private void Flip()
+    {
+        _facingLeft = !_facingLeft;
+        
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
     #endregion
 }
