@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -69,18 +66,10 @@ public class Player : MonoBehaviour
         WalkHandle();
         SprintHandle();
         DashHandle();
+        FlipDirectionHandle();
         
         Vector2 playerVelocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * _currentSpeed;
         _playerRigidbody2D.velocity = playerVelocity;
-        if (Input.GetAxis("Horizontal") > 0 && !_facingLeft)
-        {
-            Flip();
-        }
-        else if (Input.GetAxis("Horizontal") < 0 && _facingLeft)
-        {
-            Flip();
-        }
-        
         
         if(playerVelocity == Vector2.zero) 
             SetPlayerState(PlayerState.Idle);
@@ -123,13 +112,16 @@ public class Player : MonoBehaviour
         return _playerState == state;
     }
 
-    private void Flip()
+    private void FlipDirectionHandle()
     {
-        _facingLeft = !_facingLeft;
-        
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            transform.right = new Vector3(1, 0);
+        }
+        else if (Input.GetAxis("Horizontal") < 0)
+        {
+            transform.right = new Vector3(-1, 0);
+        }
     }
     #endregion
 }

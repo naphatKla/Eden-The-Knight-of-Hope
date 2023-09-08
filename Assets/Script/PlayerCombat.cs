@@ -19,31 +19,24 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time >= nextAttackTime)
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                Attack();
-                nextAttackTime = Time.time + 1f / attackRate;
-            }
-            
-        }
+        if (Time.time < nextAttackTime || !Input.GetKeyDown(KeyCode.Mouse0)) return;
+        
+        Attack();
+        nextAttackTime = Time.time + (1f / attackRate);
     }
 
     void Attack()
     {
         animator.SetTrigger("Attack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position,attackRange,enemyLayers);
+        
         foreach (Collider2D enemy in hitEnemies)
-        {
             enemy.GetComponent<Enemy01>().TakeDamage(attackDamage);
-        }
     }
 
     private void OnDrawGizmosSelected()
     {
-        if (attackPoint == null)
-            return;
+        if (attackPoint == null) return;
         Gizmos.DrawWireSphere(attackPoint.position,attackRange);
     }
 }
