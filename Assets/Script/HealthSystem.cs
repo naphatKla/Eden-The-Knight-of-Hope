@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+/*using Input = UnityEngine.Windows.Input;*/
 
 public class HealthSystem : MonoBehaviour
 {
@@ -24,22 +25,18 @@ public class HealthSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            TakeDamage(15);
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Heal(15);
-        }
-
         if (_currentHp <= 0)
         {
             Debug.Log("Die");
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            TakeDamage(10);
+        }
     }
 
+    // เผื่อไว้
     public void TakeDamage(float damage)
     {
         _currentHp -= damage;
