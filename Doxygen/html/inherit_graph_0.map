@@ -1,0 +1,23 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,233,115,260"/>
+<area shape="rect" id="Node000001" href="$class_enemy.html" title=" " alt="" coords="208,5,270,32"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="65,218,78,179,97,132,124,84,161,42,183,29,206,21,208,26,185,33,164,46,129,87,102,134,83,180,71,219"/>
+<area shape="rect" id="Node000002" href="$class_enemy_combat_system.html" title=" " alt="" coords="163,56,315,83"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="71,218,105,155,131,122,161,93,181,81,184,85,164,97,135,125,110,158,75,220"/>
+<area shape="rect" id="Node000003" href="$class_game_manager.html" title=" " alt="" coords="186,107,292,133"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="79,220,115,181,161,143,185,131,187,136,164,148,118,184,83,223"/>
+<area shape="rect" id="Node000004" href="$class_health_system.html" title=" " alt="" coords="187,157,291,184"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="99,223,162,194,192,182,194,187,164,198,101,228"/>
+<area shape="rect" id="Node000005" href="$class_interactable_object.html" title=" " alt="" coords="176,208,302,235"/>
+<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="130,234,175,228,176,233,131,239"/>
+<area shape="rect" id="Node000006" href="$class_player.html" title=" " alt="" coords="210,259,268,285"/>
+<area shape="poly" id="edge6_Node000000_Node000006" title=" " alt="" coords="130,254,209,265,209,271,130,259"/>
+<area shape="rect" id="Node000007" href="$class_player_camera.html" title=" " alt="" coords="187,309,291,336"/>
+<area shape="poly" id="edge7_Node000000_Node000007" title=" " alt="" coords="101,265,164,295,194,306,192,311,162,300,99,270"/>
+<area shape="rect" id="Node000008" href="$class_player_combat_system.html" title=" " alt="" coords="165,360,313,387"/>
+<area shape="poly" id="edge8_Node000000_Node000008" title=" " alt="" coords="83,270,118,309,164,346,187,357,185,362,161,350,115,313,79,274"/>
+<area shape="rect" id="Node000009" href="$class_player_interact_system.html" title=" " alt="" coords="166,411,312,437"/>
+<area shape="poly" id="edge9_Node000000_Node000009" title=" " alt="" coords="75,273,110,335,135,368,164,397,184,408,181,412,161,401,131,372,105,338,71,276"/>
+<area shape="rect" id="Node000010" href="$class_time_system.html" title=" " alt="" coords="192,461,286,488"/>
+<area shape="poly" id="edge10_Node000000_Node000010" title=" " alt="" coords="71,274,83,313,102,359,129,407,164,447,193,463,190,468,161,451,124,410,97,362,78,315,65,276"/>
+</map>

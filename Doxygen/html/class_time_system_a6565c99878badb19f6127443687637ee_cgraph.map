@@ -1,0 +1,7 @@
+<map id="TimeSystem.DayTimeUpdate" name="TimeSystem.DayTimeUpdate">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,196,32"/>
+<area shape="rect" id="Node000002" href="$class_time_system.html#a82e2a51fcdb9a514a1b2a18b2b392c1b" title=" " alt="" coords="244,5,444,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,16,228,16,228,21,196,21"/>
+<area shape="rect" id="Node000003" href="$class_time_system.html#aa9fab23d98070b757d1d49f8e8acf030" title=" " alt="" coords="492,5,697,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="444,16,476,16,476,21,444,21"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="EnemyCombatSystem.Attack" name="EnemyCombatSystem.Attack">
+<area shape="rect" id="Node000001" title=" " alt="" coords="251,5,445,32"/>
+<area shape="rect" id="Node000002" href="$class_enemy_combat_system.html#a9e03a99abd2b76b9d6a5723a4f718d31" title=" " alt="" coords="5,5,203,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,21,203,21,203,16,235,16"/>
+</map>

@@ -1,0 +1,339 @@
+\doxysection{Time\+System Class Reference}
+\hypertarget{class_time_system}{}\label{class_time_system}\index{TimeSystem@{TimeSystem}}
+
+
+Inheritance diagram for Time\+System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_time_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Time\+System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_time_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_time_system_a842de62f9695ad344e3567385604312d}{Time\+State}} \{ \mbox{\hyperlink{class_time_system_a842de62f9695ad344e3567385604312da03727ac48595a24daed975559c944a44}{Day}}
+, \mbox{\hyperlink{class_time_system_a842de62f9695ad344e3567385604312da0edc9b073397681dc9f2c479686ea0d9}{Night}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_time_system_aa9fab23d98070b757d1d49f8e8acf030}{Convert\+Sec\+To\+Hour}} (float sec)
+\item 
+float \mbox{\hyperlink{class_time_system_aa6eae6aa7d7c6f53a011aaa46d231727}{Convert\+Hour\+To\+Sec}} (float hour)
+\item 
+bool \mbox{\hyperlink{class_time_system_a82e2a51fcdb9a514a1b2a18b2b392c1b}{Time\+Period\+Check}} (float x, float y)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_time_system_ab53470ec05deaecf41cfcd1600f7dff7}{day\+Time}}
+\item 
+float \mbox{\hyperlink{class_time_system_a42af692e6df84588f5c66402d2383db1}{night\+Time}}
+\item 
+float \mbox{\hyperlink{class_time_system_a269356782120908bb37f3c54102949f6}{game\+Start\+Time}}
+\item 
+float \mbox{\hyperlink{class_time_system_a8b22a3a3fe5ce7429521c24acef884e6}{cycle\+Length}}
+\item 
+float \mbox{\hyperlink{class_time_system_a5d84200da55d7620577f1c24c953d17d}{time}}
+\item 
+int \mbox{\hyperlink{class_time_system_aafaa7bed4a3b1bc220c5980c464c877b}{day}}
+\item 
+\mbox{\hyperlink{class_time_system_a842de62f9695ad344e3567385604312d}{Time\+State}} \mbox{\hyperlink{class_time_system_a90910a5fcb427cd7c07669aa96ea6f89}{time\+State}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_time_system_a1bc6bfd33a82487c0d43abf7404706d6}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_time_system_ab6de60d288f4ba297b658622b28092a8}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_time_system_a6565c99878badb19f6127443687637ee}{Day\+Time\+Update}} ()
+\item 
+void \mbox{\hyperlink{class_time_system_a4fb86a5324ec855567b074f8ee7f9e08}{Day\+Light\+Handle}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{class_time_system_a702efea2807268924cb70f1a1f84dad8}{day\+Period}}
+\item 
+float \mbox{\hyperlink{class_time_system_a6d3da197483280a314e212db80155ddf}{\+\_\+time\+Multiplier}}
+\item 
+Light2D \mbox{\hyperlink{class_time_system_ad99b0d7b4b5d9d6f3694612ee37a2af9}{day\+Light}}
+\item 
+float \mbox{\hyperlink{class_time_system_a2f3961d6da3384774813da12d95c5492}{max\+Light}}
+\item 
+float \mbox{\hyperlink{class_time_system_ac9333e0514786aed276d6d3e7cdbe90a}{min\+Light}}
+\item 
+Vector2 \mbox{\hyperlink{class_time_system_af7162d28565579a249f5c0f3b452a193}{light\+Up\+Period}}
+\item 
+Vector2 \mbox{\hyperlink{class_time_system_a5803ae6e1e3a112cc5df44c6c1380c05}{light\+Down\+Period}}
+\item 
+float \mbox{\hyperlink{class_time_system_a47654c930b11d832d604bf9ac1497f6a}{\+\_\+light\+Up\+Duration}}
+\item 
+float \mbox{\hyperlink{class_time_system_a880e3c71e4e02b7e6959268497d0f197}{\+\_\+light\+Down\+Duration}}
+\item 
+Image \mbox{\hyperlink{class_time_system_af58174a10ca129f9f27871740aee1d55}{clock}}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_time_system_a4b8d90aeae5709ba4ccbdac6e241e08f}{day\+Text}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_time_system_a842de62f9695ad344e3567385604312d}\label{class_time_system_a842de62f9695ad344e3567385604312d} 
+\index{TimeSystem@{TimeSystem}!TimeState@{TimeState}}
+\index{TimeState@{TimeState}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{TimeState}{TimeState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_time_system_a842de62f9695ad344e3567385604312d}{Time\+System.\+Time\+State}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Day@{Day}!TimeSystem@{TimeSystem}}\index{TimeSystem@{TimeSystem}!Day@{Day}}}\Hypertarget{class_time_system_a842de62f9695ad344e3567385604312da03727ac48595a24daed975559c944a44}\label{class_time_system_a842de62f9695ad344e3567385604312da03727ac48595a24daed975559c944a44} 
+Day&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Night@{Night}!TimeSystem@{TimeSystem}}\index{TimeSystem@{TimeSystem}!Night@{Night}}}\Hypertarget{class_time_system_a842de62f9695ad344e3567385604312da0edc9b073397681dc9f2c479686ea0d9}\label{class_time_system_a842de62f9695ad344e3567385604312da0edc9b073397681dc9f2c479686ea0d9} 
+Night&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_time_system_aa6eae6aa7d7c6f53a011aaa46d231727}\label{class_time_system_aa6eae6aa7d7c6f53a011aaa46d231727} 
+\index{TimeSystem@{TimeSystem}!ConvertHourToSec@{ConvertHourToSec}}
+\index{ConvertHourToSec@{ConvertHourToSec}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{ConvertHourToSec()}{ConvertHourToSec()}}
+{\footnotesize\ttfamily float Time\+System.\+Convert\+Hour\+To\+Sec (\begin{DoxyParamCaption}\item[{float}]{hour }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_aa6eae6aa7d7c6f53a011aaa46d231727_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_time_system_aa9fab23d98070b757d1d49f8e8acf030}\label{class_time_system_aa9fab23d98070b757d1d49f8e8acf030} 
+\index{TimeSystem@{TimeSystem}!ConvertSecToHour@{ConvertSecToHour}}
+\index{ConvertSecToHour@{ConvertSecToHour}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{ConvertSecToHour()}{ConvertSecToHour()}}
+{\footnotesize\ttfamily float Time\+System.\+Convert\+Sec\+To\+Hour (\begin{DoxyParamCaption}\item[{float}]{sec }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_aa9fab23d98070b757d1d49f8e8acf030_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_time_system_a4fb86a5324ec855567b074f8ee7f9e08}\label{class_time_system_a4fb86a5324ec855567b074f8ee7f9e08} 
+\index{TimeSystem@{TimeSystem}!DayLightHandle@{DayLightHandle}}
+\index{DayLightHandle@{DayLightHandle}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{DayLightHandle()}{DayLightHandle()}}
+{\footnotesize\ttfamily void Time\+System.\+Day\+Light\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_a4fb86a5324ec855567b074f8ee7f9e08_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_a4fb86a5324ec855567b074f8ee7f9e08_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_time_system_a6565c99878badb19f6127443687637ee}\label{class_time_system_a6565c99878badb19f6127443687637ee} 
+\index{TimeSystem@{TimeSystem}!DayTimeUpdate@{DayTimeUpdate}}
+\index{DayTimeUpdate@{DayTimeUpdate}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{DayTimeUpdate()}{DayTimeUpdate()}}
+{\footnotesize\ttfamily void Time\+System.\+Day\+Time\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_a6565c99878badb19f6127443687637ee_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_a6565c99878badb19f6127443687637ee_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_time_system_a1bc6bfd33a82487c0d43abf7404706d6}\label{class_time_system_a1bc6bfd33a82487c0d43abf7404706d6} 
+\index{TimeSystem@{TimeSystem}!Start@{Start}}
+\index{Start@{Start}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Time\+System.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_a1bc6bfd33a82487c0d43abf7404706d6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_time_system_a82e2a51fcdb9a514a1b2a18b2b392c1b}\label{class_time_system_a82e2a51fcdb9a514a1b2a18b2b392c1b} 
+\index{TimeSystem@{TimeSystem}!TimePeriodCheck@{TimePeriodCheck}}
+\index{TimePeriodCheck@{TimePeriodCheck}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{TimePeriodCheck()}{TimePeriodCheck()}}
+{\footnotesize\ttfamily bool Time\+System.\+Time\+Period\+Check (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_a82e2a51fcdb9a514a1b2a18b2b392c1b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_a82e2a51fcdb9a514a1b2a18b2b392c1b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_time_system_ab6de60d288f4ba297b658622b28092a8}\label{class_time_system_ab6de60d288f4ba297b658622b28092a8} 
+\index{TimeSystem@{TimeSystem}!Update@{Update}}
+\index{Update@{Update}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Time\+System.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_ab6de60d288f4ba297b658622b28092a8_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_time_system_a880e3c71e4e02b7e6959268497d0f197}\label{class_time_system_a880e3c71e4e02b7e6959268497d0f197} 
+\index{TimeSystem@{TimeSystem}!\_lightDownDuration@{\_lightDownDuration}}
+\index{\_lightDownDuration@{\_lightDownDuration}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{\_lightDownDuration}{\_lightDownDuration}}
+{\footnotesize\ttfamily float Time\+System.\+\_\+light\+Down\+Duration\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_time_system_a47654c930b11d832d604bf9ac1497f6a}\label{class_time_system_a47654c930b11d832d604bf9ac1497f6a} 
+\index{TimeSystem@{TimeSystem}!\_lightUpDuration@{\_lightUpDuration}}
+\index{\_lightUpDuration@{\_lightUpDuration}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{\_lightUpDuration}{\_lightUpDuration}}
+{\footnotesize\ttfamily float Time\+System.\+\_\+light\+Up\+Duration\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_time_system_a6d3da197483280a314e212db80155ddf}\label{class_time_system_a6d3da197483280a314e212db80155ddf} 
+\index{TimeSystem@{TimeSystem}!\_timeMultiplier@{\_timeMultiplier}}
+\index{\_timeMultiplier@{\_timeMultiplier}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{\_timeMultiplier}{\_timeMultiplier}}
+{\footnotesize\ttfamily float Time\+System.\+\_\+time\+Multiplier\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_time_system_af58174a10ca129f9f27871740aee1d55}\label{class_time_system_af58174a10ca129f9f27871740aee1d55} 
+\index{TimeSystem@{TimeSystem}!clock@{clock}}
+\index{clock@{clock}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{clock}{clock}}
+{\footnotesize\ttfamily Image Time\+System.\+clock\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_time_system_a8b22a3a3fe5ce7429521c24acef884e6}\label{class_time_system_a8b22a3a3fe5ce7429521c24acef884e6} 
+\index{TimeSystem@{TimeSystem}!cycleLength@{cycleLength}}
+\index{cycleLength@{cycleLength}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{cycleLength}{cycleLength}}
+{\footnotesize\ttfamily float Time\+System.\+cycle\+Length}
+
+\Hypertarget{class_time_system_aafaa7bed4a3b1bc220c5980c464c877b}\label{class_time_system_aafaa7bed4a3b1bc220c5980c464c877b} 
+\index{TimeSystem@{TimeSystem}!day@{day}}
+\index{day@{day}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{day}{day}}
+{\footnotesize\ttfamily int Time\+System.\+day}
+
+\Hypertarget{class_time_system_ad99b0d7b4b5d9d6f3694612ee37a2af9}\label{class_time_system_ad99b0d7b4b5d9d6f3694612ee37a2af9} 
+\index{TimeSystem@{TimeSystem}!dayLight@{dayLight}}
+\index{dayLight@{dayLight}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{dayLight}{dayLight}}
+{\footnotesize\ttfamily Light2D Time\+System.\+day\+Light\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_time_system_a702efea2807268924cb70f1a1f84dad8}\label{class_time_system_a702efea2807268924cb70f1a1f84dad8} 
+\index{TimeSystem@{TimeSystem}!dayPeriod@{dayPeriod}}
+\index{dayPeriod@{dayPeriod}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{dayPeriod}{dayPeriod}}
+{\footnotesize\ttfamily Vector2 Time\+System.\+day\+Period\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_time_system_a4b8d90aeae5709ba4ccbdac6e241e08f}\label{class_time_system_a4b8d90aeae5709ba4ccbdac6e241e08f} 
+\index{TimeSystem@{TimeSystem}!dayText@{dayText}}
+\index{dayText@{dayText}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{dayText}{dayText}}
+{\footnotesize\ttfamily Text\+Mesh\+Pro\+UGUI Time\+System.\+day\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_time_system_ab53470ec05deaecf41cfcd1600f7dff7}\label{class_time_system_ab53470ec05deaecf41cfcd1600f7dff7} 
+\index{TimeSystem@{TimeSystem}!dayTime@{dayTime}}
+\index{dayTime@{dayTime}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{dayTime}{dayTime}}
+{\footnotesize\ttfamily float Time\+System.\+day\+Time}
+
+\Hypertarget{class_time_system_a269356782120908bb37f3c54102949f6}\label{class_time_system_a269356782120908bb37f3c54102949f6} 
+\index{TimeSystem@{TimeSystem}!gameStartTime@{gameStartTime}}
+\index{gameStartTime@{gameStartTime}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{gameStartTime}{gameStartTime}}
+{\footnotesize\ttfamily float Time\+System.\+game\+Start\+Time}
+
+\Hypertarget{class_time_system_a5803ae6e1e3a112cc5df44c6c1380c05}\label{class_time_system_a5803ae6e1e3a112cc5df44c6c1380c05} 
+\index{TimeSystem@{TimeSystem}!lightDownPeriod@{lightDownPeriod}}
+\index{lightDownPeriod@{lightDownPeriod}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{lightDownPeriod}{lightDownPeriod}}
+{\footnotesize\ttfamily Vector2 Time\+System.\+light\+Down\+Period\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_time_system_af7162d28565579a249f5c0f3b452a193}\label{class_time_system_af7162d28565579a249f5c0f3b452a193} 
+\index{TimeSystem@{TimeSystem}!lightUpPeriod@{lightUpPeriod}}
+\index{lightUpPeriod@{lightUpPeriod}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{lightUpPeriod}{lightUpPeriod}}
+{\footnotesize\ttfamily Vector2 Time\+System.\+light\+Up\+Period\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_time_system_a2f3961d6da3384774813da12d95c5492}\label{class_time_system_a2f3961d6da3384774813da12d95c5492} 
+\index{TimeSystem@{TimeSystem}!maxLight@{maxLight}}
+\index{maxLight@{maxLight}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{maxLight}{maxLight}}
+{\footnotesize\ttfamily float Time\+System.\+max\+Light\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_time_system_ac9333e0514786aed276d6d3e7cdbe90a}\label{class_time_system_ac9333e0514786aed276d6d3e7cdbe90a} 
+\index{TimeSystem@{TimeSystem}!minLight@{minLight}}
+\index{minLight@{minLight}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{minLight}{minLight}}
+{\footnotesize\ttfamily float Time\+System.\+min\+Light\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_time_system_a42af692e6df84588f5c66402d2383db1}\label{class_time_system_a42af692e6df84588f5c66402d2383db1} 
+\index{TimeSystem@{TimeSystem}!nightTime@{nightTime}}
+\index{nightTime@{nightTime}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{nightTime}{nightTime}}
+{\footnotesize\ttfamily float Time\+System.\+night\+Time}
+
+\Hypertarget{class_time_system_a5d84200da55d7620577f1c24c953d17d}\label{class_time_system_a5d84200da55d7620577f1c24c953d17d} 
+\index{TimeSystem@{TimeSystem}!time@{time}}
+\index{time@{time}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily float Time\+System.\+time}
+
+\Hypertarget{class_time_system_a90910a5fcb427cd7c07669aa96ea6f89}\label{class_time_system_a90910a5fcb427cd7c07669aa96ea6f89} 
+\index{TimeSystem@{TimeSystem}!timeState@{timeState}}
+\index{timeState@{timeState}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{timeState}{timeState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time_system_a842de62f9695ad344e3567385604312d}{Time\+State}} Time\+System.\+time\+State}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\mbox{\hyperlink{_time_system_8cs}{Time\+System.\+cs}}\end{DoxyCompactItemize}

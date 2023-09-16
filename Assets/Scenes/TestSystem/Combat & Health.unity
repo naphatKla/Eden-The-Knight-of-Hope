@@ -1799,6 +1799,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1184747209202350142, guid: 78144a0ffddc96a43abfc1c300a778fb, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184747209202350142, guid: 78144a0ffddc96a43abfc1c300a778fb, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1411840987493713614, guid: 78144a0ffddc96a43abfc1c300a778fb, type: 3}
       propertyPath: m_Name
       value: Tower

@@ -1,0 +1,19 @@
+<map id="Player.MovementHandle" name="Player.MovementHandle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,167,108"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a26518807fa77390488e153617ef08cfb" title=" " alt="" coords="217,31,349,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,78,213,59,214,64,142,83"/>
+<area shape="rect" id="Node000006" href="$class_player.html#a180b2c378687b6710de5b44d2b772f68" title=" " alt="" coords="215,81,351,108"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="167,92,199,92,199,97,167,97"/>
+<area shape="rect" id="Node000007" href="$class_player.html#ab37b64ea6597e44f6738571f68f8db63" title=" " alt="" coords="217,132,349,159"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="142,106,214,125,213,130,140,111"/>
+<area shape="rect" id="Node000003" href="$class_player.html#a33d429ce060086748994165a67efa960" title=" " alt="" coords="399,56,566,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="350,50,384,54,383,59,349,55"/>
+<area shape="rect" id="Node000004" href="$class_player.html#a6c9cbd565959c1f4a6b78f78096a619c" title=" " alt="" coords="437,5,529,32"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="349,33,421,24,421,29,350,38"/>
+<area shape="rect" id="Node000005" href="$class_player.html#abeefe75958c0ae74e9a1f290848e5326" title=" " alt="" coords="614,107,765,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="530,28,567,42,616,68,659,95,656,100,614,72,565,46,528,33"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="351,83,383,79,384,85,352,89"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="351,96,599,112,599,117,351,102"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="320,129,350,118,431,86,433,91,352,122,322,134"/>
+<area shape="poly" id="edge10_Node000007_Node000005" title=" " alt="" coords="349,139,599,123,599,128,350,144"/>
+</map>

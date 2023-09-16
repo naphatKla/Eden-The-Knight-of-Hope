@@ -1,0 +1,327 @@
+\doxysection{Player Class Reference}
+\hypertarget{class_player}{}\label{class_player}\index{Player@{Player}}
+
+
+Inheritance diagram for Player\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_player__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_player__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9}{Player\+State}} \{ \mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9ae599161956d626eda4cb0a5ffb85271c}{Idle}}
+, \mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9a7a16a854f32231a8df9326136b09ee62}{Walk}}
+, \mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9affc3dc096e3578a9474b7976953f0ef9}{Sprint}}
+, \mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9a3663598d5c5858b5a6040b1bbed4f187}{Dash}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9}{Player\+State}} \mbox{\hyperlink{class_player_ab0c6e39ba2fb155e514039a4def8f8ab}{player\+State}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_a1a09a3ded16ac1646f6bdd4f25fe0ddd}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_player_aace80372e18e32fe177e295fe5d93ba8}{Update}} ()
+\item 
+IEnumerator \mbox{\hyperlink{class_player_a6c9cbd565959c1f4a6b78f78096a619c}{Dash}} ()
+\item 
+void \mbox{\hyperlink{class_player_ab9121efd0a345ec0feec9f3d39aeb4a7}{Movement\+Handle}} ()
+\item 
+void \mbox{\hyperlink{class_player_ab37b64ea6597e44f6738571f68f8db63}{Walk\+Handle}} ()
+\item 
+void \mbox{\hyperlink{class_player_a180b2c378687b6710de5b44d2b772f68}{Sprint\+Handle}} ()
+\item 
+void \mbox{\hyperlink{class_player_a26518807fa77390488e153617ef08cfb}{Dash\+Handle}} ()
+\item 
+void \mbox{\hyperlink{class_player_abeefe75958c0ae74e9a1f290848e5326}{Set\+Player\+State}} (\mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9}{Player\+State}} state)
+\item 
+bool \mbox{\hyperlink{class_player_a33d429ce060086748994165a67efa960}{Check\+Player\+State}} (\mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9}{Player\+State}} state)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_player_a8ccb0827b7fa69f1fb10f9e9ea4787b3}{walk\+Speed}}
+\item 
+float \mbox{\hyperlink{class_player_a83193946d87704a77d8568fcfd40d6c3}{sprint\+Speed}}
+\item 
+float \mbox{\hyperlink{class_player_a7d79f1e0e885f518498a6f78320df5a8}{dash\+Speed}}
+\item 
+float \mbox{\hyperlink{class_player_a1689b529345cf78db3cc93251f19cf19}{dash\+Duration}}
+\item 
+float \mbox{\hyperlink{class_player_ae112ee8ce1be183f919f75ba72ad81f9}{dash\+Delay}}
+\item 
+Rigidbody2D \mbox{\hyperlink{class_player_ae4bcf65c406614983e01f9f4ff55bc54}{\+\_\+player\+Rigidbody2D}}
+\item 
+Animator \mbox{\hyperlink{class_player_a457a0bed87da53eaa5397e3b629f7ac3}{\+\_\+animator}}
+\item 
+Sprite\+Renderer \mbox{\hyperlink{class_player_ab5314141b233b02f551acd01dd30fa98}{\+\_\+sprite\+Renderer}}
+\item 
+float \mbox{\hyperlink{class_player_af644e90909ae1aaee282b29b3f161da2}{\+\_\+current\+Speed}}
+\item 
+bool \mbox{\hyperlink{class_player_a9f4cf12c4af9871a2bc08915659e061e}{\+\_\+is\+Dash}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_player_a07fe57ec176032714d7d6de076b06ec9}\label{class_player_a07fe57ec176032714d7d6de076b06ec9} 
+\index{Player@{Player}!PlayerState@{PlayerState}}
+\index{PlayerState@{PlayerState}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{PlayerState}{PlayerState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9}{Player.\+Player\+State}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Idle@{Idle}!Player@{Player}}\index{Player@{Player}!Idle@{Idle}}}\Hypertarget{class_player_a07fe57ec176032714d7d6de076b06ec9ae599161956d626eda4cb0a5ffb85271c}\label{class_player_a07fe57ec176032714d7d6de076b06ec9ae599161956d626eda4cb0a5ffb85271c} 
+Idle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Walk@{Walk}!Player@{Player}}\index{Player@{Player}!Walk@{Walk}}}\Hypertarget{class_player_a07fe57ec176032714d7d6de076b06ec9a7a16a854f32231a8df9326136b09ee62}\label{class_player_a07fe57ec176032714d7d6de076b06ec9a7a16a854f32231a8df9326136b09ee62} 
+Walk&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sprint@{Sprint}!Player@{Player}}\index{Player@{Player}!Sprint@{Sprint}}}\Hypertarget{class_player_a07fe57ec176032714d7d6de076b06ec9affc3dc096e3578a9474b7976953f0ef9}\label{class_player_a07fe57ec176032714d7d6de076b06ec9affc3dc096e3578a9474b7976953f0ef9} 
+Sprint&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Dash@{Dash}!Player@{Player}}\index{Player@{Player}!Dash@{Dash}}}\Hypertarget{class_player_a07fe57ec176032714d7d6de076b06ec9a3663598d5c5858b5a6040b1bbed4f187}\label{class_player_a07fe57ec176032714d7d6de076b06ec9a3663598d5c5858b5a6040b1bbed4f187} 
+Dash&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_a33d429ce060086748994165a67efa960}\label{class_player_a33d429ce060086748994165a67efa960} 
+\index{Player@{Player}!CheckPlayerState@{CheckPlayerState}}
+\index{CheckPlayerState@{CheckPlayerState}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{CheckPlayerState()}{CheckPlayerState()}}
+{\footnotesize\ttfamily bool Player.\+Check\+Player\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9}{Player\+State}}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_a33d429ce060086748994165a67efa960_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_a6c9cbd565959c1f4a6b78f78096a619c}\label{class_player_a6c9cbd565959c1f4a6b78f78096a619c} 
+\index{Player@{Player}!Dash@{Dash}}
+\index{Dash@{Dash}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Dash()}{Dash()}}
+{\footnotesize\ttfamily IEnumerator Player.\+Dash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{class_player_a6c9cbd565959c1f4a6b78f78096a619c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_a6c9cbd565959c1f4a6b78f78096a619c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_a26518807fa77390488e153617ef08cfb}\label{class_player_a26518807fa77390488e153617ef08cfb} 
+\index{Player@{Player}!DashHandle@{DashHandle}}
+\index{DashHandle@{DashHandle}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{DashHandle()}{DashHandle()}}
+{\footnotesize\ttfamily void Player.\+Dash\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_a26518807fa77390488e153617ef08cfb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_a26518807fa77390488e153617ef08cfb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_ab9121efd0a345ec0feec9f3d39aeb4a7}\label{class_player_ab9121efd0a345ec0feec9f3d39aeb4a7} 
+\index{Player@{Player}!MovementHandle@{MovementHandle}}
+\index{MovementHandle@{MovementHandle}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{MovementHandle()}{MovementHandle()}}
+{\footnotesize\ttfamily void Player.\+Movement\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_ab9121efd0a345ec0feec9f3d39aeb4a7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_player_ab9121efd0a345ec0feec9f3d39aeb4a7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_abeefe75958c0ae74e9a1f290848e5326}\label{class_player_abeefe75958c0ae74e9a1f290848e5326} 
+\index{Player@{Player}!SetPlayerState@{SetPlayerState}}
+\index{SetPlayerState@{SetPlayerState}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SetPlayerState()}{SetPlayerState()}}
+{\footnotesize\ttfamily void Player.\+Set\+Player\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9}{Player\+State}}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_abeefe75958c0ae74e9a1f290848e5326_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_a180b2c378687b6710de5b44d2b772f68}\label{class_player_a180b2c378687b6710de5b44d2b772f68} 
+\index{Player@{Player}!SprintHandle@{SprintHandle}}
+\index{SprintHandle@{SprintHandle}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SprintHandle()}{SprintHandle()}}
+{\footnotesize\ttfamily void Player.\+Sprint\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_player_a180b2c378687b6710de5b44d2b772f68_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_a180b2c378687b6710de5b44d2b772f68_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_a1a09a3ded16ac1646f6bdd4f25fe0ddd}\label{class_player_a1a09a3ded16ac1646f6bdd4f25fe0ddd} 
+\index{Player@{Player}!Start@{Start}}
+\index{Start@{Start}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Player.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_aace80372e18e32fe177e295fe5d93ba8}\label{class_player_aace80372e18e32fe177e295fe5d93ba8} 
+\index{Player@{Player}!Update@{Update}}
+\index{Update@{Update}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_aace80372e18e32fe177e295fe5d93ba8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_ab37b64ea6597e44f6738571f68f8db63}\label{class_player_ab37b64ea6597e44f6738571f68f8db63} 
+\index{Player@{Player}!WalkHandle@{WalkHandle}}
+\index{WalkHandle@{WalkHandle}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{WalkHandle()}{WalkHandle()}}
+{\footnotesize\ttfamily void Player.\+Walk\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{class_player_ab37b64ea6597e44f6738571f68f8db63_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_ab37b64ea6597e44f6738571f68f8db63_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_player_a457a0bed87da53eaa5397e3b629f7ac3}\label{class_player_a457a0bed87da53eaa5397e3b629f7ac3} 
+\index{Player@{Player}!\_animator@{\_animator}}
+\index{\_animator@{\_animator}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{\_animator}{\_animator}}
+{\footnotesize\ttfamily Animator Player.\+\_\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_af644e90909ae1aaee282b29b3f161da2}\label{class_player_af644e90909ae1aaee282b29b3f161da2} 
+\index{Player@{Player}!\_currentSpeed@{\_currentSpeed}}
+\index{\_currentSpeed@{\_currentSpeed}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{\_currentSpeed}{\_currentSpeed}}
+{\footnotesize\ttfamily float Player.\+\_\+current\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_a9f4cf12c4af9871a2bc08915659e061e}\label{class_player_a9f4cf12c4af9871a2bc08915659e061e} 
+\index{Player@{Player}!\_isDash@{\_isDash}}
+\index{\_isDash@{\_isDash}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{\_isDash}{\_isDash}}
+{\footnotesize\ttfamily bool Player.\+\_\+is\+Dash\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_ae4bcf65c406614983e01f9f4ff55bc54}\label{class_player_ae4bcf65c406614983e01f9f4ff55bc54} 
+\index{Player@{Player}!\_playerRigidbody2D@{\_playerRigidbody2D}}
+\index{\_playerRigidbody2D@{\_playerRigidbody2D}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{\_playerRigidbody2D}{\_playerRigidbody2D}}
+{\footnotesize\ttfamily Rigidbody2D Player.\+\_\+player\+Rigidbody2D\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_ab5314141b233b02f551acd01dd30fa98}\label{class_player_ab5314141b233b02f551acd01dd30fa98} 
+\index{Player@{Player}!\_spriteRenderer@{\_spriteRenderer}}
+\index{\_spriteRenderer@{\_spriteRenderer}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{\_spriteRenderer}{\_spriteRenderer}}
+{\footnotesize\ttfamily Sprite\+Renderer Player.\+\_\+sprite\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_ae112ee8ce1be183f919f75ba72ad81f9}\label{class_player_ae112ee8ce1be183f919f75ba72ad81f9} 
+\index{Player@{Player}!dashDelay@{dashDelay}}
+\index{dashDelay@{dashDelay}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{dashDelay}{dashDelay}}
+{\footnotesize\ttfamily float Player.\+dash\+Delay\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_a1689b529345cf78db3cc93251f19cf19}\label{class_player_a1689b529345cf78db3cc93251f19cf19} 
+\index{Player@{Player}!dashDuration@{dashDuration}}
+\index{dashDuration@{dashDuration}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{dashDuration}{dashDuration}}
+{\footnotesize\ttfamily float Player.\+dash\+Duration\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_a7d79f1e0e885f518498a6f78320df5a8}\label{class_player_a7d79f1e0e885f518498a6f78320df5a8} 
+\index{Player@{Player}!dashSpeed@{dashSpeed}}
+\index{dashSpeed@{dashSpeed}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{dashSpeed}{dashSpeed}}
+{\footnotesize\ttfamily float Player.\+dash\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_ab0c6e39ba2fb155e514039a4def8f8ab}\label{class_player_ab0c6e39ba2fb155e514039a4def8f8ab} 
+\index{Player@{Player}!playerState@{playerState}}
+\index{playerState@{playerState}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{playerState}{playerState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9}{Player\+State}} Player.\+player\+State}
+
+\Hypertarget{class_player_a83193946d87704a77d8568fcfd40d6c3}\label{class_player_a83193946d87704a77d8568fcfd40d6c3} 
+\index{Player@{Player}!sprintSpeed@{sprintSpeed}}
+\index{sprintSpeed@{sprintSpeed}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{sprintSpeed}{sprintSpeed}}
+{\footnotesize\ttfamily float Player.\+sprint\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_a8ccb0827b7fa69f1fb10f9e9ea4787b3}\label{class_player_a8ccb0827b7fa69f1fb10f9e9ea4787b3} 
+\index{Player@{Player}!walkSpeed@{walkSpeed}}
+\index{walkSpeed@{walkSpeed}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{walkSpeed}{walkSpeed}}
+{\footnotesize\ttfamily float Player.\+walk\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\mbox{\hyperlink{_player_8cs}{Player.\+cs}}\end{DoxyCompactItemize}

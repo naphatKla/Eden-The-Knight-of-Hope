@@ -41,7 +41,7 @@ public class EnemyCombatSystem : MonoBehaviour
         // flip attack point
         if (_enemy.agent.velocity.magnitude != 0)
             _attackPointParent.transform.right =
-                new Vector3(_enemy.agent.velocity.x / Mathf.Abs(_enemy.agent.velocity.x), 0, 0);
+                new Vector3(_enemy.agent.velocity.x / Mathf.Abs(_enemy.agent.velocity.x) + 0.01f, 0, 0);
         
         Collider2D[] hitTargets = Physics2D.OverlapCircleAll(attackPoint.position,attackRange,targetLayer);
 

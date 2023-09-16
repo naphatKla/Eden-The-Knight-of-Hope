@@ -1,0 +1,13 @@
+<map id="TimeSystem.Update" name="TimeSystem.Update">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,145,57"/>
+<area shape="rect" id="Node000002" href="$class_time_system.html#a4fb86a5324ec855567b074f8ee7f9e08" title=" " alt="" coords="193,5,383,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,33,177,29,178,34,145,38"/>
+<area shape="rect" id="Node000005" href="$class_time_system.html#a6565c99878badb19f6127443687637ee" title=" " alt="" coords="193,56,383,83"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="145,50,178,54,177,59,145,55"/>
+<area shape="rect" id="Node000003" href="$class_time_system.html#aa9fab23d98070b757d1d49f8e8acf030" title=" " alt="" coords="679,31,885,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="383,21,664,35,664,41,383,26"/>
+<area shape="rect" id="Node000004" href="$class_time_system.html#a82e2a51fcdb9a514a1b2a18b2b392c1b" title=" " alt="" coords="431,56,631,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="356,30,449,50,448,55,355,35"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="631,57,663,53,664,59,632,62"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="384,67,415,67,415,72,384,72"/>
+</map>

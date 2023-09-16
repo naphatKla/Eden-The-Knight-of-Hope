@@ -1,0 +1,7 @@
+<map id="PlayerInteractSystem.InteractHandle" name="PlayerInteractSystem.InteractHandle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,199,48"/>
+<area shape="rect" id="Node000002" href="$class_interactable_object.html#a8d24c5e90977f2f0c08f36bed0b1d021" title=" " alt="" coords="247,13,420,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,24,231,24,231,29,199,29"/>
+<area shape="rect" id="Node000003" href="$class_interactable_object.html#a26d77c7ca15160ca4be53a95144465dd" title=" " alt="" coords="468,5,637,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="420,24,452,24,452,29,420,29"/>
+</map>

@@ -1,0 +1,141 @@
+\doxysection{Player\+Camera Class Reference}
+\hypertarget{class_player_camera}{}\label{class_player_camera}\index{PlayerCamera@{PlayerCamera}}
+
+
+Inheritance diagram for Player\+Camera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_player_camera__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+Camera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_player_camera__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_camera_a31bf97e8c2d69434a4c6d45c883aa441}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_player_camera_a48c696962efd8f9943b92ed8f857e1fe}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{class_player_camera_a4d396ec20c6e7495e5bf6971602944a4}{player}}
+\item 
+float \mbox{\hyperlink{class_player_camera_a9b3e834e831de0bfea6bd16ff48495ee}{smooth\+Time}} = 0.\+25f
+\item 
+Vector3 \mbox{\hyperlink{class_player_camera_a71f08dd53c8a631eb4f36eb8539ff6df}{offset}} = new Vector3(0f, 0f, -\/10f)
+\item 
+Vector3 \mbox{\hyperlink{class_player_camera_ac028d2be368a4c94b7b4add4fa9d527e}{\+\_\+velocity}} = Vector3.\+zero
+\item 
+float \mbox{\hyperlink{class_player_camera_af8cc99cf9b44086c79fa1bb906d79d79}{zoom\+Smooth\+Time}} = 0.\+25f
+\item 
+float \mbox{\hyperlink{class_player_camera_a0292920ea389a1d2573a61f0126bc91e}{zoom\+Multiplier}} = 4f
+\item 
+float \mbox{\hyperlink{class_player_camera_ae0a7019bb577c5996a829d0daf2256c5}{min\+Zoom}} = 2f
+\item 
+float \mbox{\hyperlink{class_player_camera_af8c5f560980ae0e3ff0d3083b0505cc1}{max\+Zoom}} = 8f
+\item 
+float \mbox{\hyperlink{class_player_camera_a1b02e46fc214c452f003545f6ef84548}{\+\_\+velocity2}}
+\item 
+float \mbox{\hyperlink{class_player_camera_a2323005677ae297826bddd320d066911}{\+\_\+zoom}}
+\item 
+Camera \mbox{\hyperlink{class_player_camera_a6b1f06bda41b62da47da70f13380cb28}{\+\_\+cam}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_camera_a31bf97e8c2d69434a4c6d45c883aa441}\label{class_player_camera_a31bf97e8c2d69434a4c6d45c883aa441} 
+\index{PlayerCamera@{PlayerCamera}!Start@{Start}}
+\index{Start@{Start}!PlayerCamera@{PlayerCamera}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Player\+Camera.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_camera_a48c696962efd8f9943b92ed8f857e1fe}\label{class_player_camera_a48c696962efd8f9943b92ed8f857e1fe} 
+\index{PlayerCamera@{PlayerCamera}!Update@{Update}}
+\index{Update@{Update}!PlayerCamera@{PlayerCamera}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+Camera.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_player_camera_a6b1f06bda41b62da47da70f13380cb28}\label{class_player_camera_a6b1f06bda41b62da47da70f13380cb28} 
+\index{PlayerCamera@{PlayerCamera}!\_cam@{\_cam}}
+\index{\_cam@{\_cam}!PlayerCamera@{PlayerCamera}}
+\doxysubsubsection{\texorpdfstring{\_cam}{\_cam}}
+{\footnotesize\ttfamily Camera Player\+Camera.\+\_\+cam\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_camera_ac028d2be368a4c94b7b4add4fa9d527e}\label{class_player_camera_ac028d2be368a4c94b7b4add4fa9d527e} 
+\index{PlayerCamera@{PlayerCamera}!\_velocity@{\_velocity}}
+\index{\_velocity@{\_velocity}!PlayerCamera@{PlayerCamera}}
+\doxysubsubsection{\texorpdfstring{\_velocity}{\_velocity}}
+{\footnotesize\ttfamily Vector3 Player\+Camera.\+\_\+velocity = Vector3.\+zero\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_camera_a1b02e46fc214c452f003545f6ef84548}\label{class_player_camera_a1b02e46fc214c452f003545f6ef84548} 
+\index{PlayerCamera@{PlayerCamera}!\_velocity2@{\_velocity2}}
+\index{\_velocity2@{\_velocity2}!PlayerCamera@{PlayerCamera}}
+\doxysubsubsection{\texorpdfstring{\_velocity2}{\_velocity2}}
+{\footnotesize\ttfamily float Player\+Camera.\+\_\+velocity2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_camera_a2323005677ae297826bddd320d066911}\label{class_player_camera_a2323005677ae297826bddd320d066911} 
+\index{PlayerCamera@{PlayerCamera}!\_zoom@{\_zoom}}
+\index{\_zoom@{\_zoom}!PlayerCamera@{PlayerCamera}}
+\doxysubsubsection{\texorpdfstring{\_zoom}{\_zoom}}
+{\footnotesize\ttfamily float Player\+Camera.\+\_\+zoom\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_camera_af8c5f560980ae0e3ff0d3083b0505cc1}\label{class_player_camera_af8c5f560980ae0e3ff0d3083b0505cc1} 
+\index{PlayerCamera@{PlayerCamera}!maxZoom@{maxZoom}}
+\index{maxZoom@{maxZoom}!PlayerCamera@{PlayerCamera}}
+\doxysubsubsection{\texorpdfstring{maxZoom}{maxZoom}}
+{\footnotesize\ttfamily float Player\+Camera.\+max\+Zoom = 8f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_camera_ae0a7019bb577c5996a829d0daf2256c5}\label{class_player_camera_ae0a7019bb577c5996a829d0daf2256c5} 
+\index{PlayerCamera@{PlayerCamera}!minZoom@{minZoom}}
+\index{minZoom@{minZoom}!PlayerCamera@{PlayerCamera}}
+\doxysubsubsection{\texorpdfstring{minZoom}{minZoom}}
+{\footnotesize\ttfamily float Player\+Camera.\+min\+Zoom = 2f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_camera_a71f08dd53c8a631eb4f36eb8539ff6df}\label{class_player_camera_a71f08dd53c8a631eb4f36eb8539ff6df} 
+\index{PlayerCamera@{PlayerCamera}!offset@{offset}}
+\index{offset@{offset}!PlayerCamera@{PlayerCamera}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily Vector3 Player\+Camera.\+offset = new Vector3(0f, 0f, -\/10f)\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_camera_a4d396ec20c6e7495e5bf6971602944a4}\label{class_player_camera_a4d396ec20c6e7495e5bf6971602944a4} 
+\index{PlayerCamera@{PlayerCamera}!player@{player}}
+\index{player@{player}!PlayerCamera@{PlayerCamera}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily Transform Player\+Camera.\+player\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_camera_a9b3e834e831de0bfea6bd16ff48495ee}\label{class_player_camera_a9b3e834e831de0bfea6bd16ff48495ee} 
+\index{PlayerCamera@{PlayerCamera}!smoothTime@{smoothTime}}
+\index{smoothTime@{smoothTime}!PlayerCamera@{PlayerCamera}}
+\doxysubsubsection{\texorpdfstring{smoothTime}{smoothTime}}
+{\footnotesize\ttfamily float Player\+Camera.\+smooth\+Time = 0.\+25f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_camera_a0292920ea389a1d2573a61f0126bc91e}\label{class_player_camera_a0292920ea389a1d2573a61f0126bc91e} 
+\index{PlayerCamera@{PlayerCamera}!zoomMultiplier@{zoomMultiplier}}
+\index{zoomMultiplier@{zoomMultiplier}!PlayerCamera@{PlayerCamera}}
+\doxysubsubsection{\texorpdfstring{zoomMultiplier}{zoomMultiplier}}
+{\footnotesize\ttfamily float Player\+Camera.\+zoom\+Multiplier = 4f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_camera_af8cc99cf9b44086c79fa1bb906d79d79}\label{class_player_camera_af8cc99cf9b44086c79fa1bb906d79d79} 
+\index{PlayerCamera@{PlayerCamera}!zoomSmoothTime@{zoomSmoothTime}}
+\index{zoomSmoothTime@{zoomSmoothTime}!PlayerCamera@{PlayerCamera}}
+\doxysubsubsection{\texorpdfstring{zoomSmoothTime}{zoomSmoothTime}}
+{\footnotesize\ttfamily float Player\+Camera.\+zoom\+Smooth\+Time = 0.\+25f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\mbox{\hyperlink{_player_camera_8cs}{Player\+Camera.\+cs}}\end{DoxyCompactItemize}

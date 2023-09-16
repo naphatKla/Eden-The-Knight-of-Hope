@@ -1,0 +1,150 @@
+\doxysection{Player\+Combat\+System Class Reference}
+\hypertarget{class_player_combat_system}{}\label{class_player_combat_system}\index{PlayerCombatSystem@{PlayerCombatSystem}}
+
+
+Inheritance diagram for Player\+Combat\+System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{class_player_combat_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+Combat\+System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{class_player_combat_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Layer\+Mask \mbox{\hyperlink{class_player_combat_system_a7d76e156496ae879da8f2d3acda8f619}{enemy\+Layer}}
+\item 
+Transform \mbox{\hyperlink{class_player_combat_system_a7fb123d7b2c0ef068bb0abe162ce48d1}{attack\+Point}}
+\item 
+int \mbox{\hyperlink{class_player_combat_system_aff6818b993e397e96034c17c8bf6041e}{attack\+Damage}} = 40
+\item 
+float \mbox{\hyperlink{class_player_combat_system_a9928408a2da0646b8f7ccb4c31359e04}{attack\+Range}} = 0.\+5f
+\item 
+float \mbox{\hyperlink{class_player_combat_system_a18212a719f3c483e8ccf06f3eab207c1}{attack\+Rate}} = 2f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_combat_system_aa971025d35c23be5b0b8084bb0a2ca51}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_player_combat_system_a47a6a23a4ea4a09eb30fa79c7b53bd12}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_player_combat_system_a3480c39740badbe92ed142ea4c79603a}{Attack}} ()
+\item 
+void \mbox{\hyperlink{class_player_combat_system_a0aa3728f8b90c3bce7486164f77b215f}{On\+Draw\+Gizmos}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Animator \mbox{\hyperlink{class_player_combat_system_a2ee62c8f0ae5f11a57df1b6f6375812c}{\+\_\+animator}}
+\item 
+float \mbox{\hyperlink{class_player_combat_system_af869b625e80d7b44144f6085bda6bbd9}{\+\_\+next\+Attack\+Time}} = 0f
+\item 
+Game\+Object \mbox{\hyperlink{class_player_combat_system_a99291b9db9ee44053a34744313985713}{\+\_\+attack\+Point\+Parent}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_combat_system_a3480c39740badbe92ed142ea4c79603a}\label{class_player_combat_system_a3480c39740badbe92ed142ea4c79603a} 
+\index{PlayerCombatSystem@{PlayerCombatSystem}!Attack@{Attack}}
+\index{Attack@{Attack}!PlayerCombatSystem@{PlayerCombatSystem}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily void Player\+Combat\+System.\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_combat_system_a3480c39740badbe92ed142ea4c79603a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_combat_system_a0aa3728f8b90c3bce7486164f77b215f}\label{class_player_combat_system_a0aa3728f8b90c3bce7486164f77b215f} 
+\index{PlayerCombatSystem@{PlayerCombatSystem}!OnDrawGizmos@{OnDrawGizmos}}
+\index{OnDrawGizmos@{OnDrawGizmos}!PlayerCombatSystem@{PlayerCombatSystem}}
+\doxysubsubsection{\texorpdfstring{OnDrawGizmos()}{OnDrawGizmos()}}
+{\footnotesize\ttfamily void Player\+Combat\+System.\+On\+Draw\+Gizmos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_combat_system_aa971025d35c23be5b0b8084bb0a2ca51}\label{class_player_combat_system_aa971025d35c23be5b0b8084bb0a2ca51} 
+\index{PlayerCombatSystem@{PlayerCombatSystem}!Start@{Start}}
+\index{Start@{Start}!PlayerCombatSystem@{PlayerCombatSystem}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Player\+Combat\+System.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_combat_system_a47a6a23a4ea4a09eb30fa79c7b53bd12}\label{class_player_combat_system_a47a6a23a4ea4a09eb30fa79c7b53bd12} 
+\index{PlayerCombatSystem@{PlayerCombatSystem}!Update@{Update}}
+\index{Update@{Update}!PlayerCombatSystem@{PlayerCombatSystem}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+Combat\+System.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_combat_system_a47a6a23a4ea4a09eb30fa79c7b53bd12_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_player_combat_system_a2ee62c8f0ae5f11a57df1b6f6375812c}\label{class_player_combat_system_a2ee62c8f0ae5f11a57df1b6f6375812c} 
+\index{PlayerCombatSystem@{PlayerCombatSystem}!\_animator@{\_animator}}
+\index{\_animator@{\_animator}!PlayerCombatSystem@{PlayerCombatSystem}}
+\doxysubsubsection{\texorpdfstring{\_animator}{\_animator}}
+{\footnotesize\ttfamily Animator Player\+Combat\+System.\+\_\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_combat_system_a99291b9db9ee44053a34744313985713}\label{class_player_combat_system_a99291b9db9ee44053a34744313985713} 
+\index{PlayerCombatSystem@{PlayerCombatSystem}!\_attackPointParent@{\_attackPointParent}}
+\index{\_attackPointParent@{\_attackPointParent}!PlayerCombatSystem@{PlayerCombatSystem}}
+\doxysubsubsection{\texorpdfstring{\_attackPointParent}{\_attackPointParent}}
+{\footnotesize\ttfamily Game\+Object Player\+Combat\+System.\+\_\+attack\+Point\+Parent\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_combat_system_af869b625e80d7b44144f6085bda6bbd9}\label{class_player_combat_system_af869b625e80d7b44144f6085bda6bbd9} 
+\index{PlayerCombatSystem@{PlayerCombatSystem}!\_nextAttackTime@{\_nextAttackTime}}
+\index{\_nextAttackTime@{\_nextAttackTime}!PlayerCombatSystem@{PlayerCombatSystem}}
+\doxysubsubsection{\texorpdfstring{\_nextAttackTime}{\_nextAttackTime}}
+{\footnotesize\ttfamily float Player\+Combat\+System.\+\_\+next\+Attack\+Time = 0f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_combat_system_aff6818b993e397e96034c17c8bf6041e}\label{class_player_combat_system_aff6818b993e397e96034c17c8bf6041e} 
+\index{PlayerCombatSystem@{PlayerCombatSystem}!attackDamage@{attackDamage}}
+\index{attackDamage@{attackDamage}!PlayerCombatSystem@{PlayerCombatSystem}}
+\doxysubsubsection{\texorpdfstring{attackDamage}{attackDamage}}
+{\footnotesize\ttfamily int Player\+Combat\+System.\+attack\+Damage = 40}
+
+\Hypertarget{class_player_combat_system_a7fb123d7b2c0ef068bb0abe162ce48d1}\label{class_player_combat_system_a7fb123d7b2c0ef068bb0abe162ce48d1} 
+\index{PlayerCombatSystem@{PlayerCombatSystem}!attackPoint@{attackPoint}}
+\index{attackPoint@{attackPoint}!PlayerCombatSystem@{PlayerCombatSystem}}
+\doxysubsubsection{\texorpdfstring{attackPoint}{attackPoint}}
+{\footnotesize\ttfamily Transform Player\+Combat\+System.\+attack\+Point}
+
+\Hypertarget{class_player_combat_system_a9928408a2da0646b8f7ccb4c31359e04}\label{class_player_combat_system_a9928408a2da0646b8f7ccb4c31359e04} 
+\index{PlayerCombatSystem@{PlayerCombatSystem}!attackRange@{attackRange}}
+\index{attackRange@{attackRange}!PlayerCombatSystem@{PlayerCombatSystem}}
+\doxysubsubsection{\texorpdfstring{attackRange}{attackRange}}
+{\footnotesize\ttfamily float Player\+Combat\+System.\+attack\+Range = 0.\+5f}
+
+\Hypertarget{class_player_combat_system_a18212a719f3c483e8ccf06f3eab207c1}\label{class_player_combat_system_a18212a719f3c483e8ccf06f3eab207c1} 
+\index{PlayerCombatSystem@{PlayerCombatSystem}!attackRate@{attackRate}}
+\index{attackRate@{attackRate}!PlayerCombatSystem@{PlayerCombatSystem}}
+\doxysubsubsection{\texorpdfstring{attackRate}{attackRate}}
+{\footnotesize\ttfamily float Player\+Combat\+System.\+attack\+Rate = 2f}
+
+\Hypertarget{class_player_combat_system_a7d76e156496ae879da8f2d3acda8f619}\label{class_player_combat_system_a7d76e156496ae879da8f2d3acda8f619} 
+\index{PlayerCombatSystem@{PlayerCombatSystem}!enemyLayer@{enemyLayer}}
+\index{enemyLayer@{enemyLayer}!PlayerCombatSystem@{PlayerCombatSystem}}
+\doxysubsubsection{\texorpdfstring{enemyLayer}{enemyLayer}}
+{\footnotesize\ttfamily Layer\+Mask Player\+Combat\+System.\+enemy\+Layer}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\mbox{\hyperlink{_player_combat_system_8cs}{Player\+Combat\+System.\+cs}}\end{DoxyCompactItemize}

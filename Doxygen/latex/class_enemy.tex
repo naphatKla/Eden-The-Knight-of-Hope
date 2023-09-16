@@ -1,0 +1,350 @@
+\doxysection{Enemy Class Reference}
+\hypertarget{class_enemy}{}\label{class_enemy}\index{Enemy@{Enemy}}
+
+
+Inheritance diagram for Enemy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_enemy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Enemy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_enemy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594d}{Enemy\+State}} \{ \newline
+\mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594dae599161956d626eda4cb0a5ffb85271c}{Idle}}
+, \mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594da23a0d6103e6eb8265ec3203088db3c9c}{Follow\+Target}}
+, \mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594daf96d9446f78479a6f540762f81171394}{Return\+To\+Spawn}}
+, \mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594dad9225ac958a165edf1f45f12ca056ac7}{Wait\+To\+Return}}
+, \newline
+\mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594da32880dab32454a7d556c9cd71382f677}{Focus\+On\+Tower}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_enemy_a53aff336dbb3dd7847e86c3635273550}{Priority\+Tag}} \{ \mbox{\hyperlink{class_enemy_a53aff336dbb3dd7847e86c3635273550a636da1d35e805b00eae0fcd8333f9234}{Player}}
+, \mbox{\hyperlink{class_enemy_a53aff336dbb3dd7847e86c3635273550a2bda99597da06a11feafd8760b68aec6}{NPC}}
+, \mbox{\hyperlink{class_enemy_a53aff336dbb3dd7847e86c3635273550a8f8b35b2b5f50b489f1e528f89bdd6e4}{Tower}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_enemy_a115c8ded4831b6e9168cfd9d634300f8}{Set\+Enemy\+State}} (\mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594d}{Enemy\+State}} state)
+\begin{DoxyCompactList}\small\item\em Set enemy state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_enemy_a8e4f86c94569ba5be94e533806441468}{Play\+Action}} (\mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594d}{Enemy\+State}} enemy\+State)
+\begin{DoxyCompactList}\small\item\em Play enemy action and behavior follow enemy state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Nav\+Mesh\+Agent \mbox{\hyperlink{class_enemy_a945192ab3b423160afe30162dfd549f8}{agent}}
+\item 
+bool \mbox{\hyperlink{class_enemy_a86288aef625be6e14d6d03baf646bcc0}{night\+Mode}}
+\item 
+\mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594d}{Enemy\+State}} \mbox{\hyperlink{class_enemy_aa7769cb5509952cdb00cc6273c607aaa}{enemy\+Action\+State}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_enemy_ae3442338205f74a157f1a311640e84eb}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_enemy_a80560cd7c04c1c0846715740bad699d1}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_enemy_a447a675aaf79cf23a7dbd6fac34d42b9}{On\+Draw\+Gizmos}} ()
+\begin{DoxyCompactList}\small\item\em Draw gizmos on inspector. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_enemy_a19b7e5420567e77301f3259cbaa42b68}{Wait\+To\+Return}} (float time=0)
+\begin{DoxyCompactList}\small\item\em Wait for a second and set enemy state to Return\+To\+Spawn. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_enemy_af7785bbf93d2f79ecac9424e729d48d7}{Roam\+Around}} (float time)
+\begin{DoxyCompactList}\small\item\em Roam an enemy around enemy\textquotesingle{}s spawn point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_enemy_a1e3c867cd62062f40cd6869f3f641e26}{view\+Distance}}
+\item 
+Layer\+Mask \mbox{\hyperlink{class_enemy_aa2498137b3324147bce199212f353ce7}{player\+Layer\+Mask}}
+\item 
+List$<$ \mbox{\hyperlink{class_enemy_a53aff336dbb3dd7847e86c3635273550}{Priority\+Tag}} $>$ \mbox{\hyperlink{class_enemy_a297c3ba2ad660472128fb5a99f7c1006}{priority\+Tags}}
+\item 
+float \mbox{\hyperlink{class_enemy_abc66862bfd7e2296ee764a84e1efa30a}{roam\+Duration}}
+\item 
+float \mbox{\hyperlink{class_enemy_a9dc01f81645b824d9e83499dd11985f2}{roam\+Cooldown}}
+\item 
+Vector2 \mbox{\hyperlink{class_enemy_a59442945d7cb009b80822b8b48fb3728}{roam\+Area}}
+\item 
+Rigidbody2D \mbox{\hyperlink{class_enemy_a5ce7f6daf5e9f188f9854be988d951ee}{\+\_\+rigidbody2D}}
+\item 
+Sprite\+Renderer \mbox{\hyperlink{class_enemy_a15f9ec2ea439f9e4d1153b1d72dc0375}{\+\_\+sprite\+Renderer}}
+\item 
+Animator \mbox{\hyperlink{class_enemy_a537f39693d69267fbc2c32652d7f9a50}{\+\_\+animator}}
+\item 
+Game\+Object \mbox{\hyperlink{class_enemy_a4ab633efad75ee59e3b94d7a6b8a0fcb}{\+\_\+target}}
+\item 
+Vector2 \mbox{\hyperlink{class_enemy_af4b62a8d14ec736dd67563996a0846bb}{\+\_\+spawn\+Point}}
+\item 
+bool \mbox{\hyperlink{class_enemy_a1ea39b82af76301f03f3e7cecb76fd19}{\+\_\+is\+Wait}}
+\item 
+bool \mbox{\hyperlink{class_enemy_a4983dfae1bfd93bb3db29b1915fe6cf7}{\+\_\+is\+Roam}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_enemy_a14bead85804fe8c4cfd27ea20122594d}\label{class_enemy_a14bead85804fe8c4cfd27ea20122594d} 
+\index{Enemy@{Enemy}!EnemyState@{EnemyState}}
+\index{EnemyState@{EnemyState}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{EnemyState}{EnemyState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594d}{Enemy.\+Enemy\+State}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Idle@{Idle}!Enemy@{Enemy}}\index{Enemy@{Enemy}!Idle@{Idle}}}\Hypertarget{class_enemy_a14bead85804fe8c4cfd27ea20122594dae599161956d626eda4cb0a5ffb85271c}\label{class_enemy_a14bead85804fe8c4cfd27ea20122594dae599161956d626eda4cb0a5ffb85271c} 
+Idle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FollowTarget@{FollowTarget}!Enemy@{Enemy}}\index{Enemy@{Enemy}!FollowTarget@{FollowTarget}}}\Hypertarget{class_enemy_a14bead85804fe8c4cfd27ea20122594da23a0d6103e6eb8265ec3203088db3c9c}\label{class_enemy_a14bead85804fe8c4cfd27ea20122594da23a0d6103e6eb8265ec3203088db3c9c} 
+Follow\+Target&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReturnToSpawn@{ReturnToSpawn}!Enemy@{Enemy}}\index{Enemy@{Enemy}!ReturnToSpawn@{ReturnToSpawn}}}\Hypertarget{class_enemy_a14bead85804fe8c4cfd27ea20122594daf96d9446f78479a6f540762f81171394}\label{class_enemy_a14bead85804fe8c4cfd27ea20122594daf96d9446f78479a6f540762f81171394} 
+Return\+To\+Spawn&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WaitToReturn@{WaitToReturn}!Enemy@{Enemy}}\index{Enemy@{Enemy}!WaitToReturn@{WaitToReturn}}}\Hypertarget{class_enemy_a14bead85804fe8c4cfd27ea20122594dad9225ac958a165edf1f45f12ca056ac7}\label{class_enemy_a14bead85804fe8c4cfd27ea20122594dad9225ac958a165edf1f45f12ca056ac7} 
+Wait\+To\+Return&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FocusOnTower@{FocusOnTower}!Enemy@{Enemy}}\index{Enemy@{Enemy}!FocusOnTower@{FocusOnTower}}}\Hypertarget{class_enemy_a14bead85804fe8c4cfd27ea20122594da32880dab32454a7d556c9cd71382f677}\label{class_enemy_a14bead85804fe8c4cfd27ea20122594da32880dab32454a7d556c9cd71382f677} 
+Focus\+On\+Tower&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_enemy_a53aff336dbb3dd7847e86c3635273550}\label{class_enemy_a53aff336dbb3dd7847e86c3635273550} 
+\index{Enemy@{Enemy}!PriorityTag@{PriorityTag}}
+\index{PriorityTag@{PriorityTag}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{PriorityTag}{PriorityTag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_enemy_a53aff336dbb3dd7847e86c3635273550}{Enemy.\+Priority\+Tag}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Player@{Player}!Enemy@{Enemy}}\index{Enemy@{Enemy}!Player@{Player}}}\Hypertarget{class_enemy_a53aff336dbb3dd7847e86c3635273550a636da1d35e805b00eae0fcd8333f9234}\label{class_enemy_a53aff336dbb3dd7847e86c3635273550a636da1d35e805b00eae0fcd8333f9234} 
+Player&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPC@{NPC}!Enemy@{Enemy}}\index{Enemy@{Enemy}!NPC@{NPC}}}\Hypertarget{class_enemy_a53aff336dbb3dd7847e86c3635273550a2bda99597da06a11feafd8760b68aec6}\label{class_enemy_a53aff336dbb3dd7847e86c3635273550a2bda99597da06a11feafd8760b68aec6} 
+NPC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Tower@{Tower}!Enemy@{Enemy}}\index{Enemy@{Enemy}!Tower@{Tower}}}\Hypertarget{class_enemy_a53aff336dbb3dd7847e86c3635273550a8f8b35b2b5f50b489f1e528f89bdd6e4}\label{class_enemy_a53aff336dbb3dd7847e86c3635273550a8f8b35b2b5f50b489f1e528f89bdd6e4} 
+Tower&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_enemy_a447a675aaf79cf23a7dbd6fac34d42b9}\label{class_enemy_a447a675aaf79cf23a7dbd6fac34d42b9} 
+\index{Enemy@{Enemy}!OnDrawGizmos@{OnDrawGizmos}}
+\index{OnDrawGizmos@{OnDrawGizmos}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{OnDrawGizmos()}{OnDrawGizmos()}}
+{\footnotesize\ttfamily void Enemy.\+On\+Draw\+Gizmos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Draw gizmos on inspector. 
+
+\Hypertarget{class_enemy_a8e4f86c94569ba5be94e533806441468}\label{class_enemy_a8e4f86c94569ba5be94e533806441468} 
+\index{Enemy@{Enemy}!PlayAction@{PlayAction}}
+\index{PlayAction@{PlayAction}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{PlayAction()}{PlayAction()}}
+{\footnotesize\ttfamily void Enemy.\+Play\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594d}{Enemy\+State}}}]{enemy\+State }\end{DoxyParamCaption})}
+
+
+
+Play enemy action and behavior follow enemy state. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{class_enemy_a8e4f86c94569ba5be94e533806441468_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_enemy_a8e4f86c94569ba5be94e533806441468_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_enemy_af7785bbf93d2f79ecac9424e729d48d7}\label{class_enemy_af7785bbf93d2f79ecac9424e729d48d7} 
+\index{Enemy@{Enemy}!RoamAround@{RoamAround}}
+\index{RoamAround@{RoamAround}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{RoamAround()}{RoamAround()}}
+{\footnotesize\ttfamily IEnumerator Enemy.\+Roam\+Around (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Roam an enemy around enemy\textquotesingle{}s spawn point. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_enemy_af7785bbf93d2f79ecac9424e729d48d7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_enemy_a115c8ded4831b6e9168cfd9d634300f8}\label{class_enemy_a115c8ded4831b6e9168cfd9d634300f8} 
+\index{Enemy@{Enemy}!SetEnemyState@{SetEnemyState}}
+\index{SetEnemyState@{SetEnemyState}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{SetEnemyState()}{SetEnemyState()}}
+{\footnotesize\ttfamily void Enemy.\+Set\+Enemy\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594d}{Enemy\+State}}}]{state }\end{DoxyParamCaption})}
+
+
+
+Set enemy state. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_enemy_a115c8ded4831b6e9168cfd9d634300f8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_enemy_ae3442338205f74a157f1a311640e84eb}\label{class_enemy_ae3442338205f74a157f1a311640e84eb} 
+\index{Enemy@{Enemy}!Start@{Start}}
+\index{Start@{Start}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Enemy.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_a80560cd7c04c1c0846715740bad699d1}\label{class_enemy_a80560cd7c04c1c0846715740bad699d1} 
+\index{Enemy@{Enemy}!Update@{Update}}
+\index{Update@{Update}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Enemy.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_enemy_a80560cd7c04c1c0846715740bad699d1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_enemy_a19b7e5420567e77301f3259cbaa42b68}\label{class_enemy_a19b7e5420567e77301f3259cbaa42b68} 
+\index{Enemy@{Enemy}!WaitToReturn@{WaitToReturn}}
+\index{WaitToReturn@{WaitToReturn}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{WaitToReturn()}{WaitToReturn()}}
+{\footnotesize\ttfamily IEnumerator Enemy.\+Wait\+To\+Return (\begin{DoxyParamCaption}\item[{float}]{time = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wait for a second and set enemy state to Return\+To\+Spawn. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_enemy_a537f39693d69267fbc2c32652d7f9a50}\label{class_enemy_a537f39693d69267fbc2c32652d7f9a50} 
+\index{Enemy@{Enemy}!\_animator@{\_animator}}
+\index{\_animator@{\_animator}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{\_animator}{\_animator}}
+{\footnotesize\ttfamily Animator Enemy.\+\_\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_a4983dfae1bfd93bb3db29b1915fe6cf7}\label{class_enemy_a4983dfae1bfd93bb3db29b1915fe6cf7} 
+\index{Enemy@{Enemy}!\_isRoam@{\_isRoam}}
+\index{\_isRoam@{\_isRoam}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{\_isRoam}{\_isRoam}}
+{\footnotesize\ttfamily bool Enemy.\+\_\+is\+Roam\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_a1ea39b82af76301f03f3e7cecb76fd19}\label{class_enemy_a1ea39b82af76301f03f3e7cecb76fd19} 
+\index{Enemy@{Enemy}!\_isWait@{\_isWait}}
+\index{\_isWait@{\_isWait}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{\_isWait}{\_isWait}}
+{\footnotesize\ttfamily bool Enemy.\+\_\+is\+Wait\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_a5ce7f6daf5e9f188f9854be988d951ee}\label{class_enemy_a5ce7f6daf5e9f188f9854be988d951ee} 
+\index{Enemy@{Enemy}!\_rigidbody2D@{\_rigidbody2D}}
+\index{\_rigidbody2D@{\_rigidbody2D}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{\_rigidbody2D}{\_rigidbody2D}}
+{\footnotesize\ttfamily Rigidbody2D Enemy.\+\_\+rigidbody2D\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_af4b62a8d14ec736dd67563996a0846bb}\label{class_enemy_af4b62a8d14ec736dd67563996a0846bb} 
+\index{Enemy@{Enemy}!\_spawnPoint@{\_spawnPoint}}
+\index{\_spawnPoint@{\_spawnPoint}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{\_spawnPoint}{\_spawnPoint}}
+{\footnotesize\ttfamily Vector2 Enemy.\+\_\+spawn\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_a15f9ec2ea439f9e4d1153b1d72dc0375}\label{class_enemy_a15f9ec2ea439f9e4d1153b1d72dc0375} 
+\index{Enemy@{Enemy}!\_spriteRenderer@{\_spriteRenderer}}
+\index{\_spriteRenderer@{\_spriteRenderer}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{\_spriteRenderer}{\_spriteRenderer}}
+{\footnotesize\ttfamily Sprite\+Renderer Enemy.\+\_\+sprite\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_a4ab633efad75ee59e3b94d7a6b8a0fcb}\label{class_enemy_a4ab633efad75ee59e3b94d7a6b8a0fcb} 
+\index{Enemy@{Enemy}!\_target@{\_target}}
+\index{\_target@{\_target}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{\_target}{\_target}}
+{\footnotesize\ttfamily Game\+Object Enemy.\+\_\+target\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_a945192ab3b423160afe30162dfd549f8}\label{class_enemy_a945192ab3b423160afe30162dfd549f8} 
+\index{Enemy@{Enemy}!agent@{agent}}
+\index{agent@{agent}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{agent}{agent}}
+{\footnotesize\ttfamily Nav\+Mesh\+Agent Enemy.\+agent}
+
+\Hypertarget{class_enemy_aa7769cb5509952cdb00cc6273c607aaa}\label{class_enemy_aa7769cb5509952cdb00cc6273c607aaa} 
+\index{Enemy@{Enemy}!enemyActionState@{enemyActionState}}
+\index{enemyActionState@{enemyActionState}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{enemyActionState}{enemyActionState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594d}{Enemy\+State}} Enemy.\+enemy\+Action\+State}
+
+\Hypertarget{class_enemy_a86288aef625be6e14d6d03baf646bcc0}\label{class_enemy_a86288aef625be6e14d6d03baf646bcc0} 
+\index{Enemy@{Enemy}!nightMode@{nightMode}}
+\index{nightMode@{nightMode}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{nightMode}{nightMode}}
+{\footnotesize\ttfamily bool Enemy.\+night\+Mode}
+
+\Hypertarget{class_enemy_aa2498137b3324147bce199212f353ce7}\label{class_enemy_aa2498137b3324147bce199212f353ce7} 
+\index{Enemy@{Enemy}!playerLayerMask@{playerLayerMask}}
+\index{playerLayerMask@{playerLayerMask}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{playerLayerMask}{playerLayerMask}}
+{\footnotesize\ttfamily Layer\+Mask Enemy.\+player\+Layer\+Mask\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_a297c3ba2ad660472128fb5a99f7c1006}\label{class_enemy_a297c3ba2ad660472128fb5a99f7c1006} 
+\index{Enemy@{Enemy}!priorityTags@{priorityTags}}
+\index{priorityTags@{priorityTags}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{priorityTags}{priorityTags}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_enemy_a53aff336dbb3dd7847e86c3635273550}{Priority\+Tag}}$>$ Enemy.\+priority\+Tags\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_a59442945d7cb009b80822b8b48fb3728}\label{class_enemy_a59442945d7cb009b80822b8b48fb3728} 
+\index{Enemy@{Enemy}!roamArea@{roamArea}}
+\index{roamArea@{roamArea}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{roamArea}{roamArea}}
+{\footnotesize\ttfamily Vector2 Enemy.\+roam\+Area\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_a9dc01f81645b824d9e83499dd11985f2}\label{class_enemy_a9dc01f81645b824d9e83499dd11985f2} 
+\index{Enemy@{Enemy}!roamCooldown@{roamCooldown}}
+\index{roamCooldown@{roamCooldown}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{roamCooldown}{roamCooldown}}
+{\footnotesize\ttfamily float Enemy.\+roam\+Cooldown\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_abc66862bfd7e2296ee764a84e1efa30a}\label{class_enemy_abc66862bfd7e2296ee764a84e1efa30a} 
+\index{Enemy@{Enemy}!roamDuration@{roamDuration}}
+\index{roamDuration@{roamDuration}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{roamDuration}{roamDuration}}
+{\footnotesize\ttfamily float Enemy.\+roam\+Duration\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_a1e3c867cd62062f40cd6869f3f641e26}\label{class_enemy_a1e3c867cd62062f40cd6869f3f641e26} 
+\index{Enemy@{Enemy}!viewDistance@{viewDistance}}
+\index{viewDistance@{viewDistance}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{viewDistance}{viewDistance}}
+{\footnotesize\ttfamily float Enemy.\+view\+Distance\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\mbox{\hyperlink{_enemy_8cs}{Enemy.\+cs}}\end{DoxyCompactItemize}

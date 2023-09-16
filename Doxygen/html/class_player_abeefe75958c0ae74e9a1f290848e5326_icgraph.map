@@ -1,0 +1,17 @@
+<map id="Player.SetPlayerState" name="Player.SetPlayerState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="731,56,881,83"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a6c9cbd565959c1f4a6b78f78096a619c" title=" " alt="" coords="568,5,661,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="737,54,661,33,662,28,739,49"/>
+<area shape="rect" id="Node000006" href="$class_player.html#a180b2c378687b6710de5b44d2b772f68" title=" " alt="" coords="546,56,683,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="715,72,683,72,683,67,715,67"/>
+<area shape="rect" id="Node000007" href="$class_player.html#ab37b64ea6597e44f6738571f68f8db63" title=" " alt="" coords="366,107,498,133"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="729,89,683,97,499,118,498,113,682,92,729,84"/>
+<area shape="rect" id="Node000003" href="$class_player.html#a26518807fa77390488e153617ef08cfb" title=" " alt="" coords="366,5,498,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="553,21,499,21,499,16,553,16"/>
+<area shape="rect" id="Node000004" href="$class_player.html#ab9121efd0a345ec0feec9f3d39aeb4a7" title=" " alt="" coords="157,56,318,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="364,39,292,58,291,53,362,34"/>
+<area shape="rect" id="Node000005" href="$class_player.html#aace80372e18e32fe177e295fe5d93ba8" title=" " alt="" coords="5,56,109,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="141,72,109,72,109,67,141,67"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="531,72,319,72,319,67,531,67"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="362,105,291,86,292,81,364,100"/>
+</map>

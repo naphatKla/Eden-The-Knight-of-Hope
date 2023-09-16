@@ -1,0 +1,8 @@
+<map id="EnemyCombatSystem" name="EnemyCombatSystem">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,172,158,199"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="22,5,131,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,47,84,171,78,172,74,47"/>
+<area shape="rect" id="Node000003" href="$class_enemy.html" title=" " alt="" coords="97,81,159,108"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="96,43,122,79,117,83,91,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="117,123,91,173,86,170,112,121"/>
+</map>

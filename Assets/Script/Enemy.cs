@@ -8,7 +8,6 @@ using Random = UnityEngine.Random;
 public class Enemy : MonoBehaviour
 {
     #region Declare Variable
-
     public enum EnemyState
     {
         Idle,
@@ -25,12 +24,12 @@ public class Enemy : MonoBehaviour
         Tower
     }
     
-    [SerializeField] private float viewDistance;
-    [SerializeField] private LayerMask playerLayerMask;
-    [SerializeField] private List<PriorityTag> priorityTags;
-    [SerializeField] private float roamDuration;
-    [SerializeField] private float roamCooldown;
-    [SerializeField] private Vector2 roamArea;
+    [SerializeField] private float viewDistance; 
+    [SerializeField] private LayerMask playerLayerMask;  
+    [SerializeField] private List<PriorityTag> priorityTags; 
+    [SerializeField] private float roamDuration; 
+    [SerializeField] private float roamCooldown; 
+    [SerializeField] private Vector2 roamArea; 
     public NavMeshAgent agent;
     public bool nightMode;
     private Rigidbody2D _rigidbody2D;
@@ -43,9 +42,9 @@ public class Enemy : MonoBehaviour
     public EnemyState enemyActionState;
 
     #endregion
-
+    
+    
     #region Unity Method
-
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -104,12 +103,20 @@ public class Enemy : MonoBehaviour
 
     }
 
+    
+    /// <summary>
+    ///  Draw gizmos on inspector
+    /// </summary>
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, viewDistance);
     }
 
+    
+    /// <summary>
+    ///  Wait for a second and set enemy state to ReturnToSpawn.
+    /// </summary>
     private IEnumerator WaitToReturn(float time = 0)
     {
         _isWait = true;
@@ -117,7 +124,11 @@ public class Enemy : MonoBehaviour
         _isWait = false;
         enemyActionState = EnemyState.ReturnToSpawn;
     }
-
+    
+    
+    /// <summary>
+    ///  Roam an enemy around enemy's spawn point.
+    /// </summary>
     private IEnumerator RoamAround(float time)
     {
         float _timeCount = 0;
@@ -144,16 +155,23 @@ public class Enemy : MonoBehaviour
 
         _isRoam = false;
     }
-
     #endregion
 
+    
     #region Method
-
+    
+    /// <summary>
+    ///  Set enemy state.
+    /// </summary>
     public void SetEnemyState(EnemyState state)
     {
         enemyActionState = state;
     }
 
+    
+    /// <summary>
+    ///  Play enemy action and behavior follow enemy state.
+    /// </summary>
     public void PlayAction(EnemyState enemyState)
     {
         switch (enemyState)

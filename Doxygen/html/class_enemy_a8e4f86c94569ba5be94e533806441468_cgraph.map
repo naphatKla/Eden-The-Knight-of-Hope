@@ -1,0 +1,5 @@
+<map id="Enemy.PlayAction" name="Enemy.PlayAction">
+<area shape="rect" id="Node000001" title="Play enemy action and behavior follow enemy state." alt="" coords="5,5,135,32"/>
+<area shape="rect" id="Node000002" href="$class_enemy.html#af7785bbf93d2f79ecac9424e729d48d7" title="Roam an enemy around enemy&#39;s spawn point." alt="" coords="183,5,324,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,16,167,16,167,21,135,21"/>
+</map>

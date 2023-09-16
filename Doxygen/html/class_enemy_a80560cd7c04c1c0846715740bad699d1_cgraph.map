@@ -1,0 +1,9 @@
+<map id="Enemy.Update" name="Enemy.Update">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,113,57"/>
+<area shape="rect" id="Node000002" href="$class_enemy.html#a8e4f86c94569ba5be94e533806441468" title="Play enemy action and behavior follow enemy state." alt="" coords="175,5,305,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,34,159,27,160,32,114,39"/>
+<area shape="rect" id="Node000004" href="$class_enemy.html#a115c8ded4831b6e9168cfd9d634300f8" title="Set enemy state." alt="" coords="161,56,319,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="114,49,146,53,145,59,113,54"/>
+<area shape="rect" id="Node000003" href="$class_enemy.html#af7785bbf93d2f79ecac9424e729d48d7" title="Roam an enemy around enemy&#39;s spawn point." alt="" coords="367,5,508,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="305,16,351,16,351,21,305,21"/>
+</map>

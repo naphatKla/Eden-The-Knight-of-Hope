@@ -1,0 +1,13 @@
+<map id="TimeSystem.ConvertSecToHour" name="TimeSystem.ConvertSecToHour">
+<area shape="rect" id="Node000001" title=" " alt="" coords="679,31,885,57"/>
+<area shape="rect" id="Node000002" href="$class_time_system.html#a4fb86a5324ec855567b074f8ee7f9e08" title=" " alt="" coords="193,5,383,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="664,41,383,26,383,21,664,35"/>
+<area shape="rect" id="Node000004" href="$class_time_system.html#a82e2a51fcdb9a514a1b2a18b2b392c1b" title=" " alt="" coords="431,56,631,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="664,59,632,62,632,57,664,53"/>
+<area shape="rect" id="Node000003" href="$class_time_system.html#ab6de60d288f4ba297b658622b28092a8" title=" " alt="" coords="5,31,145,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="179,34,145,38,145,33,178,29"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="448,55,355,35,356,30,449,50"/>
+<area shape="rect" id="Node000005" href="$class_time_system.html#a6565c99878badb19f6127443687637ee" title=" " alt="" coords="193,56,383,83"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="416,72,384,72,384,67,416,67"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="177,59,145,55,145,50,178,54"/>
+</map>
