@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
@@ -14,7 +15,7 @@ public class Enemy : MonoBehaviour
         FollowTarget,
         ReturnToSpawn,
         WaitToReturn,
-        FocusOnTower
+        FocusOnTower,
     }
 
     public enum PriorityTag
@@ -23,17 +24,18 @@ public class Enemy : MonoBehaviour
         NPC,
         Tower
     }
-
+    
     [SerializeField] private float viewDistance;
     [SerializeField] private LayerMask playerLayerMask;
     [SerializeField] private List<PriorityTag> priorityTags;
     [SerializeField] private float roamDuration;
     [SerializeField] private float roamCooldown;
     [SerializeField] private Vector2 roamArea;
+    public NavMeshAgent agent;
     public bool nightMode;
-    private GameManager _gameManager;
-    private NavMeshAgent _agent;
     private Rigidbody2D _rigidbody2D;
+    private SpriteRenderer _spriteRenderer;
+    private Animator _animator;
     private GameObject _target;
     private Vector2 _spawnPoint;
     private bool _isWait;
@@ -47,10 +49,11 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _gameManager = FindObjectOfType<GameManager>();
-        _agent = GetComponent<NavMeshAgent>();
-        _agent.updateRotation = false;
-        _agent.updateUpAxis = false;
+        _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
         _isWait = false;
         _spawnPoint = transform.position;
         enemyActionState = EnemyState.Idle;
@@ -58,6 +61,8 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if(_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt")) return;
+
         Collider2D[] targetInDistances = Physics2D.OverlapCircleAll(transform.position, viewDistance, playerLayerMask);
 
         if (targetInDistances.Length > 0)
@@ -91,6 +96,12 @@ public class Enemy : MonoBehaviour
         }
 
         PlayAction(enemyActionState);
+        _animator.SetFloat("Speed",agent.velocity.magnitude);
+        
+        // flip horizontal direction relate with enemy direction
+        if (agent.velocity.x != 0)
+            _spriteRenderer.flipX = agent.velocity.x < 0;
+
     }
 
     private void OnDrawGizmos()
@@ -120,7 +131,7 @@ public class Enemy : MonoBehaviour
         {
             _isRoam = true;
             _timeCount += Time.deltaTime;
-            _agent.SetDestination(randomPos);
+            agent.SetDestination(randomPos);
 
             if (enemyActionState != EnemyState.Idle)
             {
@@ -155,29 +166,28 @@ public class Enemy : MonoBehaviour
             }
             case EnemyState.FollowTarget:
             {
-                _agent.SetDestination(_target.transform.position);
+                agent.SetDestination(_target.transform.position);
                 break;
             }
             case EnemyState.ReturnToSpawn:
             {
-                _agent.SetDestination(_spawnPoint);
+                agent.SetDestination(_spawnPoint);
                 break;
             }
             case EnemyState.WaitToReturn:
             {
-                _agent.SetDestination(_target.transform.position);
-
+                agent.SetDestination(_target.transform.position);
+                
                 if (!_isWait)
                     StartCoroutine(WaitToReturn(3));
                 break;
             }
             case EnemyState.FocusOnTower:
             {
-                _agent.SetDestination(_gameManager.tower.position);
+                agent.SetDestination(GameManager.instance.tower.position);
                 break;
             }
         }
     }
-
     #endregion
 }

@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public PlayerState playerState;
     private Rigidbody2D _playerRigidbody2D;
     private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
     private float _currentSpeed;
     private bool _isDash;
 
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _playerRigidbody2D = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         playerState = PlayerState.Idle;
     }
 
@@ -78,7 +80,7 @@ public class Player : MonoBehaviour
 
         // flip player horizontal direction
         if (Input.GetAxisRaw("Horizontal") != 0)
-            transform.right = new Vector3(Input.GetAxisRaw("Horizontal"), 0);
+            _spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") < 0;
     }
 
     private void WalkHandle()
