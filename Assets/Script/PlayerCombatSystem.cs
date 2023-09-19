@@ -14,6 +14,7 @@ public class PlayerCombatSystem : MonoBehaviour
     public float attackRange = 0.5f;
     public float attackRate = 2f;
     private float _nextAttackTime = 0f;
+    private int noOfClick = 0;
     private GameObject _attackPointParent;
 
     private void Start()
@@ -25,6 +26,7 @@ public class PlayerCombatSystem : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(noOfClick);
         if (Input.GetAxisRaw("Horizontal")  != 0)
             _attackPointParent.transform.right = new Vector3(Input.GetAxisRaw("Horizontal") , 0, 0);
         
@@ -37,8 +39,20 @@ public class PlayerCombatSystem : MonoBehaviour
     void Attack()
     {
         // flip attack point
-        
-        _animator.SetTrigger("Attack");
+        if (noOfClick == 0)
+        {
+            _animator.SetTrigger("Attack1");
+        }
+        if (noOfClick == 1)
+        {
+            _animator.SetTrigger("Attack2");
+        }
+        if (noOfClick == 2)
+        {
+            _animator.SetTrigger("Attack3");
+            noOfClick = -1;
+        }
+        noOfClick++;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position,attackRange,enemyLayer);
         
         foreach (Collider2D enemy in hitEnemies) 
