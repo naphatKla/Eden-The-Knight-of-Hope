@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
@@ -12,6 +13,11 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private string prompt;
     [SerializeField] private TextMeshProUGUI interactionTextUI;
     [SerializeField] private GameObject[] interactionIndicators;
+    [SerializeField] private int point;
+    
+    //countdownTime 
+    [SerializeField] private float countdownTime;
+    private bool canCollect = true;
 
     void Start()
     {
@@ -20,14 +26,25 @@ public class InteractableObject : MonoBehaviour
     
     void Update()
     {
-
+       
     }
     
     public virtual void Interact()
     {
         StartCoroutine(TriggerIndicators());
-        if(!Input.GetKeyDown(key)) return;
+        if (!Input.GetKeyDown(key)) return;
         // Do something when player interact
+        
+        // Reward Point & Destroy
+        StartCoroutine(CountdownAndDestroy());
+        
+    }
+    
+    IEnumerator CountdownAndDestroy()
+    {
+        yield return new WaitForSeconds(countdownTime);
+        GameManager.instance.AddPoint(point);
+        Destroy(gameObject);
     }
 
     IEnumerator TriggerIndicators()
@@ -39,4 +56,6 @@ public class InteractableObject : MonoBehaviour
         foreach (GameObject interactionIndicator in interactionIndicators)
             interactionIndicator.SetActive(false);
     }
+    
+    
 }

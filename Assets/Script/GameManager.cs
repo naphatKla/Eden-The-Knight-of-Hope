@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private int TotalPoint = 0;
     public Transform player;
     public Transform tower;
 
@@ -16,5 +17,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+    
+    // Add Point
+    public void AddPoint(int n)
+    {
+        TotalPoint += n;
     }
 }
