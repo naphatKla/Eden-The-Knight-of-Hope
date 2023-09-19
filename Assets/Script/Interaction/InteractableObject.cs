@@ -36,13 +36,21 @@ public class InteractableObject : MonoBehaviour
         // Do something when player interact
         
         // Reward Point & Destroy
-        StartCoroutine(CountdownAndDestroy());
+        StartCoroutine(CountdownAndDestroy(countdownTime));
         
     }
     
-    IEnumerator CountdownAndDestroy()
+    IEnumerator CountdownAndDestroy(float time)
     {
-        yield return new WaitForSeconds(countdownTime);
+        float timeCount = 0;
+        
+        while (timeCount < time)
+        {
+            if(Input.GetKeyUp(key)) yield break;
+            Debug.Log($"{timeCount:F1}");
+            timeCount += Time.deltaTime;
+            yield return null;
+        }
         GameManager.instance.AddPoint(point);
         Destroy(gameObject);
     }

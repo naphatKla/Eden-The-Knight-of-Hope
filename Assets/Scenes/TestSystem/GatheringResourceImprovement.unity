@@ -210,6 +210,10 @@ PrefabInstance:
       propertyPath: point
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 3046294938974754917, guid: 4e9d80b6a1dbb9240bfe1396341f58e4, type: 3}
+      propertyPath: countdownTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3098089474000144508, guid: 4e9d80b6a1dbb9240bfe1396341f58e4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.16
