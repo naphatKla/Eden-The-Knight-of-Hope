@@ -8,7 +8,7 @@ public class PlayerCamera : MonoBehaviour
     //CameraFollowPlayer
     [SerializeField] private Transform player;
     [Space] [SerializeField] private float smoothTime = 0.25f;
-    private Vector3 offset = new Vector3(0f, 0f, -10f);
+    [SerializeField] private Vector3 offset = new Vector3(0f, 0f, -10f);
     private Vector3 _velocity = Vector3.zero;
     
     //Zoom

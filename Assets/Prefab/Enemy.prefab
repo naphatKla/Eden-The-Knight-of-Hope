@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 6257944786764759834}
   - component: {fileID: 4396473563933777755}
   - component: {fileID: 2422095479551939579}
-  - component: {fileID: 1966078258057387171}
+  - component: {fileID: 3604576800329324049}
   - component: {fileID: 1154486622580121859}
   - component: {fileID: 3338019295559380173}
   - component: {fileID: 7892754169190233115}
@@ -203,9 +203,11 @@ MonoBehaviour:
   roamCooldown: 5
   roamArea: {x: -4, y: 4}
   agent: {fileID: 0}
-  nightMode: 0
+  nightMode: 1
+  spriteRenderer: {fileID: 0}
+  target: {fileID: 0}
   enemyActionState: 0
---- !u!114 &1966078258057387171
+--- !u!114 &3604576800329324049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,7 +216,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3982792202371823300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f616c12a19a9a74f9ad5223a7b5baae, type: 3}
+  m_Script: {fileID: 11500000, guid: 49c50d354ff94fd458ab004447f9eb76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sliderHpPlayer: {fileID: 2566465687061256877}
@@ -236,7 +238,7 @@ MonoBehaviour:
     m_Bits: 64
   attackPoint: {fileID: 1066272621460311471}
   attackDamage: 20
-  attackRange: 2
+  attackArea: {x: 4, y: 1}
   attackRate: 1
 --- !u!195 &3338019295559380173
 NavMeshAgent:
@@ -247,19 +249,19 @@ NavMeshAgent:
   m_GameObject: {fileID: 3982792202371823300}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1
-  m_Speed: 3
+  m_Radius: 1.335
+  m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 1
+  m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1.4226667
-  m_BaseOffset: 0.71133333
+  m_Height: 6.02
+  m_BaseOffset: 3.01
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!61 &7892754169190233115
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -292,10 +294,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.0755717}
+  m_Offset: {x: 0, y: 0.9344852}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 2.67, y: 3.01}
     newSize: {x: 3.41, y: 3.39}
     adaptiveTilingThreshold: 0.5
@@ -303,7 +305,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.66, y: 0.98885655}
+  m_Size: {x: 2.67, y: 1.8689704}
   m_EdgeRadius: 0
 --- !u!95 &3948467626594471964
 Animator:
@@ -508,7 +510,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.0139, y: -0.0186}
+  m_AnchoredPosition: {x: 0.0139, y: 1.55}
   m_SizeDelta: {x: 202.9902, y: 237.6105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8846032108222600025
@@ -599,7 +601,7 @@ Transform:
   m_GameObject: {fileID: 7024250491824399965}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.55, y: 0.06, z: 0}
+  m_LocalPosition: {x: 0.7, y: 0.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

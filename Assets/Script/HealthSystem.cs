@@ -8,18 +8,18 @@ public class HealthSystem : MonoBehaviour
     private float _currentHp;
     private Animator _animator;
 
-    void Start()
+    protected virtual void Start()
     {
         _currentHp = maxHp;
         _animator = GetComponent<Animator>();
     }
     
-    void Update()
+    protected virtual void Update()
     {
         
     }
     
-    public void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage)
     {
         if(_animator != null)
             _animator.SetTrigger("TakeDamage");
@@ -30,6 +30,7 @@ public class HealthSystem : MonoBehaviour
         if (_currentHp <= 0)
         {
             gameObject.SetActive(false);
+            return;
         }
 
     }

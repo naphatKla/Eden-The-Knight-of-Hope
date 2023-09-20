@@ -11,7 +11,7 @@ public class PlayerCombatSystem : MonoBehaviour
     public LayerMask enemyLayer;
     public Transform attackPoint;
     public int attackDamage = 40;
-    public float attackRange = 0.5f;
+    public Vector2 attackArea;
     public float attackRate = 2f;
     private float _nextAttackTime = 0f;
     private GameObject _attackPointParent;
@@ -36,18 +36,16 @@ public class PlayerCombatSystem : MonoBehaviour
 
     void Attack()
     {
-        // flip attack point
-        
         _animator.SetTrigger("Attack");
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position,attackRange,enemyLayer);
+        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position,attackArea,0,enemyLayer);
         
-        foreach (Collider2D enemy in hitEnemies) 
-            enemy.GetComponent<HealthSystem>().TakeDamage(attackDamage);
+        foreach (Collider2D enemy in hitEnemies)
+            enemy.GetComponent<EnemyHealthSystem>().TakeDamage(attackDamage,gameObject);
     }
 
     private void OnDrawGizmos()
     {
         if (attackPoint == null) return;
-        Gizmos.DrawWireSphere(attackPoint.position,attackRange);
+        Gizmos.DrawWireCube(attackPoint.position,attackArea);
     }
 }

@@ -33,9 +33,9 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent agent;
     public bool nightMode;
     private Rigidbody2D _rigidbody2D;
-    private SpriteRenderer _spriteRenderer;
+    [HideInInspector] public SpriteRenderer spriteRenderer;
     private Animator _animator;
-    private GameObject _target;
+    [HideInInspector] public GameObject target;
     private Vector2 _spawnPoint;
     private bool _isWait;
     private bool _isRoam;
@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -66,16 +66,19 @@ public class Enemy : MonoBehaviour
 
         if (targetInDistances.Length > 0)
         {
-            // Detect targets only on the first priority tag found
-            for (int i = 0; i < priorityTags.Count; i++)
+            if (enemyActionState != EnemyState.FollowTarget)
             {
-                foreach (Collider2D col in targetInDistances)
+                // Detect targets only on the first priority tag found
+                for (int i = 0; i < priorityTags.Count; i++)
                 {
-                    if (!col.gameObject.CompareTag(priorityTags[i].ToString())) continue;
+                    foreach (Collider2D col in targetInDistances)
+                    {
+                        if (!col.gameObject.CompareTag(priorityTags[i].ToString())) continue;
 
-                    _target = col.gameObject;
-                    i += priorityTags.Count; // break out the loop
-                    break;
+                        target = col.gameObject;
+                        i += priorityTags.Count; // break out the loop
+                        break;
+                    }
                 }
             }
 
@@ -98,8 +101,8 @@ public class Enemy : MonoBehaviour
         _animator.SetFloat("Speed",agent.velocity.magnitude);
         
         // flip horizontal direction relate with enemy direction
-        if (agent.velocity.x != 0)
-            _spriteRenderer.flipX = agent.velocity.x < 0;
+        if (Mathf.Abs(agent.velocity.x) > 1)
+            spriteRenderer.flipX = agent.velocity.x < 0f;
 
     }
 
@@ -184,7 +187,7 @@ public class Enemy : MonoBehaviour
             }
             case EnemyState.FollowTarget:
             {
-                agent.SetDestination(_target.transform.position);
+                agent.SetDestination(target.transform.position);
                 break;
             }
             case EnemyState.ReturnToSpawn:
@@ -194,7 +197,7 @@ public class Enemy : MonoBehaviour
             }
             case EnemyState.WaitToReturn:
             {
-                agent.SetDestination(_target.transform.position);
+                agent.SetDestination(target.transform.position);
                 
                 if (!_isWait)
                     StartCoroutine(WaitToReturn(3));
