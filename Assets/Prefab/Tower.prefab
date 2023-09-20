@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7984275085467028357}
   - component: {fileID: 3664881140964394429}
   - component: {fileID: 8594177021796746425}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: TowerUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 17.2}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7984275085467028357
@@ -56,11 +56,11 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &3664881140964394429
 MonoBehaviour:
@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7730372830304123148}
   - component: {fileID: 95032171649255969}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,10 +194,10 @@ GameObject:
   m_Component:
   - component: {fileID: 130547260422068490}
   - component: {fileID: 436287734021547864}
-  - component: {fileID: 1253910584177594855}
+  - component: {fileID: 8866339207696792091}
   - component: {fileID: 1184747209202350142}
   - component: {fileID: 7939167311004843920}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Tower
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -263,19 +263,19 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2a419b0f63488224c9cc3ff877a054b3, type: 3}
+  m_Sprite: {fileID: 280506504, guid: 2a419b0f63488224c9cc3ff877a054b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 24.802656, y: 19.380001}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1253910584177594855
-BoxCollider2D:
+--- !u!60 &8866339207696792091
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -306,19 +306,28 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03504181, y: -15.501707}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 24.802656, y: 35.079998}
-    newSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 24.802656, y: 19.380001}
+    newSize: {x: 24.802656, y: 19.380001}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 24.775284, y: 3.6930742}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -12.33132, y: 0.05000043}
+      - {x: -12.241309, y: 2.0000005}
+      - {x: -10.721148, y: 6.2099996}
+      - {x: -7.280779, y: 7.7}
+      - {x: -3.3903627, y: 9.119999}
+      - {x: 4.310461, y: 9.2}
+      - {x: 7.1707673, y: 7.7499995}
+      - {x: 12.121298, y: 4.7700005}
+      - {x: 12.401327, y: 0}
+  m_UseDelaunayMesh: 0
 --- !u!50 &1184747209202350142
 Rigidbody2D:
   serializedVersion: 4
@@ -327,7 +336,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411840987493713614}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -369,7 +378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8089287970827882107}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +415,7 @@ GameObject:
   - component: {fileID: 729353206569953568}
   - component: {fileID: 8473424009091559303}
   - component: {fileID: 1022447871946105827}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4730057735116526878}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,7 +526,7 @@ GameObject:
   - component: {fileID: 6824159128659026436}
   - component: {fileID: 8737299616049074224}
   - component: {fileID: 1895791842425278509}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,8 +542,8 @@ Transform:
   m_GameObject: {fileID: 8438567674294832544}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.059, y: -6.439, z: 0}
-  m_LocalScale: {x: 24.845266, y: 17.010164, z: 1}
+  m_LocalPosition: {x: 0, y: 11.596, z: 0}
+  m_LocalScale: {x: 40, y: 15.041628, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 130547260422068490}
@@ -617,7 +626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7809206728100020698}
   - component: {fileID: 2823126208760890925}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: HealthBar
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -708,7 +717,7 @@ GameObject:
   - component: {fileID: 2812070252828628581}
   - component: {fileID: 4301607392165901116}
   - component: {fileID: 5294953261100219547}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}

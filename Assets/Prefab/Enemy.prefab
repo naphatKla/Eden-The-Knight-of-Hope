@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3486398855617672069}
   - component: {fileID: 2566465687061256877}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: HealthBarEnemy
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ MonoBehaviour:
   viewDistance: 10
   playerLayerMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
   priorityTags: 000000000100000002000000
   roamDuration: 3
   roamCooldown: 5
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
   attackPoint: {fileID: 1066272621460311471}
   attackDamage: 20
   attackRange: 2
@@ -335,7 +335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5970731646677834043}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 6896569478069676352}
   - component: {fileID: 4429460208779125937}
   - component: {fileID: 3567976214182566}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +445,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1676950911804256480}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 8846032108222600025}
   - component: {fileID: 1402476508399978060}
   - component: {fileID: 5258684816963035047}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: EnemyUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,11 +528,11 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &1402476508399978060
 MonoBehaviour:
@@ -616,7 +616,7 @@ GameObject:
   - component: {fileID: 8473154204629420662}
   - component: {fileID: 2263388267451456635}
   - component: {fileID: 7380098031956774478}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
