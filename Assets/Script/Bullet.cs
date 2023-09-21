@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
    
     void Update()
     {
-        if(target == null) Destroy(gameObject);
+        if(target == null || tower == null) Destroy(gameObject);
         Vector2 direction = target.transform.position - transform.position;
         transform.up = direction;
         rb2d.velocity = direction.normalized * speed;
