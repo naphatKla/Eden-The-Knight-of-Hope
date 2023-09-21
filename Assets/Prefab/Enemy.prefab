@@ -197,13 +197,13 @@ MonoBehaviour:
   viewDistance: 10
   playerLayerMask:
     serializedVersion: 2
-    m_Bits: 64
-  priorityTags: 000000000100000002000000
+    m_Bits: 576
+  priorityTags: 00000000010000000200000003000000
   roamDuration: 3
   roamCooldown: 5
   roamArea: {x: -4, y: 4}
   agent: {fileID: 0}
-  nightMode: 1
+  nightMode: 0
   spriteRenderer: {fileID: 0}
   target: {fileID: 0}
   enemyActionState: 0
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 576
   attackPoint: {fileID: 1066272621460311471}
   attackDamage: 20
   attackArea: {x: 4, y: 1}

@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
     public Transform player;
-    public Transform tower;
+    public Transform playerBase;
 
     public static GameManager instance;
     void Start()

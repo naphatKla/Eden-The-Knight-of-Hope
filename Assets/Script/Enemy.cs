@@ -21,7 +21,8 @@ public class Enemy : MonoBehaviour
     {
         Player,
         NPC,
-        Tower
+        Tower,
+        Base
     }
     
     [SerializeField] private float viewDistance; 
@@ -205,7 +206,7 @@ public class Enemy : MonoBehaviour
             }
             case EnemyState.FocusOnTower:
             {
-                agent.SetDestination(GameManager.instance.tower.position);
+                agent.SetDestination(GameManager.instance.playerBase.position);
                 break;
             }
         }

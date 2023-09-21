@@ -13,12 +13,12 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private TextMeshProUGUI interactionTextUI;
     [SerializeField] private GameObject[] interactionIndicators;
 
-    void Start()
+    protected virtual void Start()
     {
         interactionTextUI.text = prompt;
     }
     
-    void Update()
+    protected virtual void Update()
     {
 
     }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7984275085467028357}
   - component: {fileID: 3664881140964394429}
   - component: {fileID: 8594177021796746425}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: TowerUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7730372830304123148}
   - component: {fileID: 95032171649255969}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,9 +197,9 @@ GameObject:
   - component: {fileID: 8866339207696792091}
   - component: {fileID: 1184747209202350142}
   - component: {fileID: 7939167311004843920}
-  m_Layer: 6
-  m_Name: Tower
-  m_TagString: Tower
+  m_Layer: 9
+  m_Name: Base
+  m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -378,7 +378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8089287970827882107}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 729353206569953568}
   - component: {fileID: 8473424009091559303}
   - component: {fileID: 1022447871946105827}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4730057735116526878}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 6824159128659026436}
   - component: {fileID: 8737299616049074224}
   - component: {fileID: 1895791842425278509}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -542,8 +542,8 @@ Transform:
   m_GameObject: {fileID: 8438567674294832544}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.15, z: 0}
-  m_LocalScale: {x: 40, y: 17.312914, z: 1}
+  m_LocalPosition: {x: 0.154, y: 4.105, z: 0}
+  m_LocalScale: {x: 22.285711, y: 6.126771, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 130547260422068490}
@@ -589,12 +589,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 24.802656, y: 19.380001}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -607,7 +607,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8438567674294832544}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
   m_Name: 
@@ -626,7 +626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7809206728100020698}
   - component: {fileID: 2823126208760890925}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: HealthBar
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -717,7 +717,7 @@ GameObject:
   - component: {fileID: 2812070252828628581}
   - component: {fileID: 4301607392165901116}
   - component: {fileID: 5294953261100219547}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
