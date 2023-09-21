@@ -183,7 +183,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!61 &2423394471821278878
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -291,7 +291,7 @@ MonoBehaviour:
     m_Bits: 128
   attackPoint: {fileID: 6126908590091014635}
   attackDamage: 40
-  attackArea: {x: 4, y: 1}
+  attackArea: {x: 4, y: 2}
   attackRate: 1
 --- !u!114 &2578651836125405408
 MonoBehaviour:

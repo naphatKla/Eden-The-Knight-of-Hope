@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     [HideInInspector] public SpriteRenderer spriteRenderer;
     private Animator _animator;
-    [HideInInspector] public GameObject target;
+    public GameObject target;
     private Vector2 _spawnPoint;
     private bool _isWait;
     private bool _isRoam;
@@ -97,7 +97,7 @@ public class Enemy : MonoBehaviour
         {
             SetEnemyState(EnemyState.FocusOnTower);
         }
-
+        
         PlayAction(enemyActionState);
         _animator.SetFloat("Speed",agent.velocity.magnitude);
         
@@ -188,6 +188,11 @@ public class Enemy : MonoBehaviour
             }
             case EnemyState.FollowTarget:
             {
+                if (target == null || !target.gameObject.activeSelf)
+                {
+                    SetEnemyState(EnemyState.ReturnToSpawn);
+                    return;
+                }
                 agent.SetDestination(target.transform.position);
                 break;
             }
@@ -198,6 +203,11 @@ public class Enemy : MonoBehaviour
             }
             case EnemyState.WaitToReturn:
             {
+                if (target == null || !target.gameObject.activeSelf)
+                {
+                    SetEnemyState(EnemyState.ReturnToSpawn);
+                    return;
+                }
                 agent.SetDestination(target.transform.position);
                 
                 if (!_isWait)

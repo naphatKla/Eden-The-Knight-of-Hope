@@ -29,7 +29,15 @@ public class HealthSystem : MonoBehaviour
 
         if (_currentHp <= 0)
         {
-            gameObject.SetActive(false);
+            if (gameObject.tag.Equals("Player"))
+            {
+                if(!gameObject.activeSelf) return;
+                gameObject.SetActive(false);
+                Invoke(nameof(Respawn),3);
+            }
+            else
+                Destroy(gameObject);
+            
             return;
         }
 
@@ -37,6 +45,15 @@ public class HealthSystem : MonoBehaviour
     public void Heal(float damage)
     {
         _currentHp += damage;
+        sliderHpPlayer.value = _currentHp / maxHp;
+    }
+
+    public void Respawn()
+    {
+        transform.position = GameManager.instance.playerBase.position;
+        gameObject.SetActive(true);
+        gameObject.GetComponent<Player>().ResetState();
+        _currentHp = maxHp;
         sliderHpPlayer.value = _currentHp / maxHp;
     }
 }

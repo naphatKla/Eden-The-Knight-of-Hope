@@ -8,10 +8,10 @@ using UnityEngine.Serialization;
 
 public class InteractableObject : MonoBehaviour
 {
-    [SerializeField] private KeyCode key;
-    [SerializeField] private string prompt;
-    [SerializeField] private TextMeshProUGUI interactionTextUI;
-    [SerializeField] private GameObject[] interactionIndicators;
+    [SerializeField] protected KeyCode key;
+    [SerializeField] protected string prompt;
+    [SerializeField] protected TextMeshProUGUI interactionTextUI;
+    [SerializeField] protected GameObject[] interactionIndicators;
 
     protected virtual void Start()
     {

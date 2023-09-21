@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
@@ -16,6 +17,6 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
-        
+        if (playerBase == null) SceneManager.LoadScene(0);
     }
 }

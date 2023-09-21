@@ -28,11 +28,12 @@ public class EnemyCombatSystem : MonoBehaviour
 
     void Update()
     {
-        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt"))
+        // stun
+        /*if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt"))
         {
             _nextAttackTime = Time.time + (1f / attackRate);
             _isCharge = false;
-        }
+        }*/
         if(_isCharge) return;
         StartCoroutine( Attack(0.5f));
     }
@@ -67,12 +68,13 @@ public class EnemyCombatSystem : MonoBehaviour
             _isCharge = true;
             _enemy.agent.velocity = Vector3.zero;
             
-            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt"))
+            // stun
+            /*if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt"))
             {
                 _nextAttackTime = Time.time + (1f / attackRate);
                 _isCharge = false;
                 yield break;
-            }
+            }*/
 
             timeCount += Time.deltaTime;
             yield return null;

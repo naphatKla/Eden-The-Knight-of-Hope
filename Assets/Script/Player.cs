@@ -124,5 +124,12 @@ public class Player : MonoBehaviour
         return playerState == state;
     }
 
+    public void ResetState()
+    {
+        SetPlayerState(PlayerState.Idle);
+        _isDash = false;
+        _currentSpeed = walkSpeed;
+    }
+
     #endregion
 }
