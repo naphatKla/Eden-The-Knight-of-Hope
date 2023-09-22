@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class InteractableObject : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class InteractableObject : MonoBehaviour
     //countdownTime 
     [SerializeField] private float countdownTime;
     private bool canCollect = true;
+    
+    // UI Bar TimeCount
+    [SerializeField] public Slider timeCountUi;
 
     void Start()
     {
@@ -26,7 +30,7 @@ public class InteractableObject : MonoBehaviour
     
     void Update()
     {
-       
+        
     }
     
     public virtual void Interact()
@@ -34,19 +38,28 @@ public class InteractableObject : MonoBehaviour
         StartCoroutine(TriggerIndicators());
         if (!Input.GetKeyDown(key)) return;
         // Do something when player interact
-        
         // Reward Point & Destroy
+        
         StartCoroutine(CountdownAndDestroy(countdownTime));
         
     }
-    
+
     IEnumerator CountdownAndDestroy(float time)
     {
         float timeCount = 0;
         
         while (timeCount < time)
         {
-            if(Input.GetKeyUp(key)) yield break;
+            if (Input.GetKeyUp(key))
+            {
+                timeCountUi.gameObject.SetActive(false);
+                yield break;
+            }
+            timeCountUi.gameObject.SetActive(true);
+
+            float progress = timeCount / time;
+            timeCountUi.value = Mathf.Lerp(1f, 0f, progress);
+
             Debug.Log($"{timeCount:F1}");
             timeCount += Time.deltaTime;
             yield return null;
@@ -64,6 +77,5 @@ public class InteractableObject : MonoBehaviour
         foreach (GameObject interactionIndicator in interactionIndicators)
             interactionIndicator.SetActive(false);
     }
-    
     
 }
