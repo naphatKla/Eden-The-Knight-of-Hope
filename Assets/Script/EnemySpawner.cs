@@ -5,16 +5,14 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private Transform enemySpawnPoint;
-    [SerializeField] private float enemySpawnRadius = 0.5f;
-    //[SerializeField] private Vector2 enemySpawnRadius = new Vector2(0.5f, 0.5f);
+    [SerializeField] private Vector2 enemySpawnRadius = new Vector2(10f, 10f);
     [SerializeField] private float enemySpawnTime;
     
     public GameObject enemyPrefab;
     
     void Start()
     {
-        Invoke("SpawnEnemy",enemySpawnTime);
+        InvokeRepeating("SpawnEnemy", 0f, enemySpawnTime);
     }
     
     void Update()
@@ -24,25 +22,22 @@ public class EnemySpawner : MonoBehaviour
     
     private void OnDrawGizmos()
     {
-        /*Vector2 scale = new Vector2(enemySpawnRadius.x, enemySpawnRadius.y);
-        Matrix4x4 oldMatrix = Gizmos.matrix;
-        Gizmos.matrix = Matrix4x4.TRS(enemySpawnPoint.position, Quaternion.identity, scale);
-        Gizmos.matrix = oldMatrix;*/
-        
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(Vector3.zero, enemySpawnRadius);
+        Gizmos.DrawWireCube(transform.position, new Vector3(enemySpawnRadius.x * 2, enemySpawnRadius.y * 2, 0f));
     }
-    
+
     private void SpawnEnemy()
     {
-        // Random position x, y in red area
-        Vector2 randomPosition = UnityEngine.Random.insideUnitCircle * enemySpawnRadius;
-        Vector2 spawnPosition = new Vector2(randomPosition.x, randomPosition.y);
-        // Spawn enemy
-        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
-        
-        Invoke("SpawnEnemy",enemySpawnTime);
+        // คำนวณตำแหน่งสุ่มภายใน enemySpawnRadius
+        Vector2 spawnPosition = new Vector2(
+            UnityEngine.Random.Range(-enemySpawnRadius.x, enemySpawnRadius.x),
+            UnityEngine.Random.Range(-enemySpawnRadius.y, enemySpawnRadius.y)
+        );
+
+        // สร้างศัตรูที่ตำแหน่งที่คำนวณได้
+        Instantiate(enemyPrefab, transform.position + (Vector3)spawnPosition, Quaternion.identity);
     }
     
-    
 }
+    
+
