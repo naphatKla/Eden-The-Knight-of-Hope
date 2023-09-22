@@ -1463,7 +1463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1691517575}
-  tower: {fileID: 7741871855155840472}
+  playerBase: {fileID: 7741871855155840472}
 --- !u!114 &1857990964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1932,7 +1932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1411840987493713614, guid: 78144a0ffddc96a43abfc1c300a778fb, type: 3}
       propertyPath: m_Name
-      value: Tower
+      value: Base
       objectReference: {fileID: 0}
     - target: {fileID: 2812070252828628581, guid: 78144a0ffddc96a43abfc1c300a778fb, type: 3}
       propertyPath: m_AnchorMax.x

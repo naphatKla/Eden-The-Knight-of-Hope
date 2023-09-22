@@ -290,9 +290,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   attackPoint: {fileID: 6126908590091014635}
+  heavyAttackPoint: {fileID: 6126908590091014635}
   attackDamage: 40
   attackArea: {x: 4, y: 2}
   attackRate: 1
+  heavyAttackDamage: 60
+  heavyAttackRange: 2
 --- !u!114 &2578651836125405408
 MonoBehaviour:
   m_ObjectHideFlags: 0
