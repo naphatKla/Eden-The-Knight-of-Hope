@@ -40,6 +40,10 @@ public class Enemy : MonoBehaviour
     private bool _isWait;
     private bool _isRoam;
     public EnemyState enemyActionState;
+    // สร้าง delegate สำหรับอีเวนต์ OnEnemyDestroyed
+    public delegate void EnemyDestroyedEventHandler();
+    // ประกาศ event โดยใช้ delegate ที่สร้างไว้
+    public event EnemyDestroyedEventHandler OnEnemyDestroyed;
 
     #endregion
     
@@ -205,6 +209,16 @@ public class Enemy : MonoBehaviour
                 agent.SetDestination(GameManager.instance.tower.position);
                 break;
             }
+        }
+    }
+    public void DestroyEnemy()
+    {
+        // โค้ดการทำลายศัตรูไปตามที่คุณต้องการ
+
+        // เมื่อศัตรูถูกทำลาย
+        if (OnEnemyDestroyed != null)
+        {
+            OnEnemyDestroyed(); // เรียกใช้งาน event OnEnemyDestroyed
         }
     }
     #endregion

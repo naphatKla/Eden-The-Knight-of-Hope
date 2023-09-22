@@ -7,11 +7,13 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private Vector2 enemySpawnRadius = new Vector2(10f, 10f);
     [SerializeField] private float enemySpawnTime;
-    
+    [SerializeField] private int maxEnemy = 4;
+    private int currentEnemyCount;
     public GameObject enemyPrefab;
     
     void Start()
     {
+        currentEnemyCount = 0; // เริ่มต้นจำนวนศัตรูในปัจจุบันที่ 0
         InvokeRepeating("SpawnEnemy", 0f, enemySpawnTime);
     }
     
@@ -28,16 +30,28 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        // คำนวณตำแหน่งสุ่มภายใน enemySpawnRadius
-        Vector2 spawnPosition = new Vector2(
-            UnityEngine.Random.Range(-enemySpawnRadius.x, enemySpawnRadius.x),
-            UnityEngine.Random.Range(-enemySpawnRadius.y, enemySpawnRadius.y)
-        );
+        // ตรวจสอบว่ายังไม่เกิน MaxEnemy ก่อนที่จะสร้างศัตรูใหม่
+        if (currentEnemyCount < maxEnemy)
+        {
+            // คำนวณตำแหน่งสุ่มภายใน enemySpawnRadius
+            Vector2 spawnPosition = new Vector2(
+                UnityEngine.Random.Range(-enemySpawnRadius.x, enemySpawnRadius.x),
+                UnityEngine.Random.Range(-enemySpawnRadius.y, enemySpawnRadius.y)
+            );
 
-        // สร้างศัตรูที่ตำแหน่งที่คำนวณได้
-        Instantiate(enemyPrefab, transform.position + (Vector3)spawnPosition, Quaternion.identity);
+            // สร้างศัตรูที่ตำแหน่งที่คำนวณได้
+            GameObject newEnemy = Instantiate(enemyPrefab, transform.position + (Vector3)spawnPosition, Quaternion.identity);
+
+            // เพิ่มจำนวนศัตรูในปัจจุบัน
+            currentEnemyCount++;
+
+            // เมื่อศัตรูถูกทำลาย ลดจำนวนศัตรูในปัจจุบันลง
+            newEnemy.GetComponent<Enemy>().OnEnemyDestroyed += () =>
+            {
+                currentEnemyCount--;
+            };
+        }
     }
-    
 }
     
 
