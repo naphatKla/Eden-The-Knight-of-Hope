@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         currentEnemyCount = 0; // เริ่มต้นจำนวนศัตรูในปัจจุบันที่ 0
-        InvokeRepeating("SpawnEnemy", 0f, enemySpawnTime);
+        InvokeRepeating("SpawnEnemy", 0.5f, enemySpawnTime);
     }
     
     void Update()
@@ -38,14 +38,13 @@ public class EnemySpawner : MonoBehaviour
                 UnityEngine.Random.Range(-enemySpawnRadius.x, enemySpawnRadius.x),
                 UnityEngine.Random.Range(-enemySpawnRadius.y, enemySpawnRadius.y)
             );
-
-            // สร้างศัตรูที่ตำแหน่งที่คำนวณได้
-            GameObject newEnemy = Instantiate(enemyPrefab, transform.position + (Vector3)spawnPosition, Quaternion.identity);
-
-            // เพิ่มจำนวนศัตรูในปัจจุบัน
-            currentEnemyCount++;
             
+            // สร้างศัตรูที่ตำแหน่งที่คำนวณได้
+            GameObject newEnemy = Instantiate(enemyPrefab, transform.position + (Vector3)spawnPosition, Quaternion.identity,transform);
         }
+        
+        // update จำนวนศัตรู
+        currentEnemyCount = transform.childCount;
     }
 }
     

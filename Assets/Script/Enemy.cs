@@ -48,7 +48,6 @@ public class Enemy : MonoBehaviour
     #region Unity Method
     void Start()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         agent = GetComponent<NavMeshAgent>();
