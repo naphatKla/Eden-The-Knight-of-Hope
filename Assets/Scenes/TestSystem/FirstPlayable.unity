@@ -339,10 +339,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7939167311004843920, guid: 78144a0ffddc96a43abfc1c300a778fb, type: 3}
-      propertyPath: maxHp
-      value: 2500
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1599,7 +1595,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
   m_FlipX: 0
@@ -1993,22 +1989,6 @@ PrefabInstance:
     - target: {fileID: 1022125500977079456, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1899462294495903435, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
-      propertyPath: attackRate
-      value: 1.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1899462294495903435, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
-      propertyPath: attackDamage
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 1899462294495903435, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
-      propertyPath: heavyAttackDamage
-      value: 36
-      objectReference: {fileID: 0}
-    - target: {fileID: 2578651836125405408, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
-      propertyPath: _currentHp
-      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2961274887369379640, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
       propertyPath: m_Name

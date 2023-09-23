@@ -291,10 +291,10 @@ MonoBehaviour:
     m_Bits: 128
   attackPoint: {fileID: 6126908590091014635}
   heavyAttackPoint: {fileID: 6126908590091014635}
-  attackDamage: 40
+  attackDamage: 18
   attackArea: {x: 4, y: 2}
-  attackRate: 1
-  heavyAttackDamage: 60
+  attackRate: 1.11
+  heavyAttackDamage: 36
   heavyAttackRange: 2
 --- !u!114 &2578651836125405408
 MonoBehaviour:
@@ -310,6 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sliderHpPlayer: {fileID: 1242721326779355130}
   maxHp: 100
+  _currentHp: 100
 --- !u!95 &7170810262454737404
 Animator:
   serializedVersion: 5
@@ -698,7 +699,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1
-  m_PointLightOuterRadius: 5
+  m_PointLightOuterRadius: 6
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1

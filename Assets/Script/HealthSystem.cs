@@ -16,7 +16,7 @@ public class HealthSystem : MonoBehaviour
     
     protected virtual void Update()
     {
-        
+        _currentHp = Mathf.Clamp(_currentHp, 0, maxHp);
     }
     
     public virtual void TakeDamage(float damage)
@@ -38,7 +38,7 @@ public class HealthSystem : MonoBehaviour
         {
             if (!gameObject.activeSelf) return;
             gameObject.SetActive(false);
-            Invoke(nameof(Respawn), 3);
+            Invoke(nameof(Respawn), 8);
         }
         else
             Destroy(gameObject);
