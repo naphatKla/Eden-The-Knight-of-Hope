@@ -6,6 +6,7 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private int TotalPoint = 0;
     public Transform player;
     public Transform playerBase;
 
@@ -18,5 +19,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (playerBase == null) SceneManager.LoadScene(0);
+    }
+    
+    // Add Point
+    public void AddPoint(int n)
+    {
+        TotalPoint += n;
     }
 }
