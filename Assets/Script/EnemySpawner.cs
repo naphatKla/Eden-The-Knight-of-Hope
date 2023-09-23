@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Vector2 enemySpawnRadius = new Vector2(10f, 10f);
     [SerializeField] private float enemySpawnTime;
     [SerializeField] private int maxEnemy = 4;
-    private int currentEnemyCount;
+    [SerializeField] private int currentEnemyCount;
     public GameObject enemyPrefab;
     
     void Start()
@@ -44,12 +44,7 @@ public class EnemySpawner : MonoBehaviour
 
             // เพิ่มจำนวนศัตรูในปัจจุบัน
             currentEnemyCount++;
-
-            // เมื่อศัตรูถูกทำลาย ลดจำนวนศัตรูในปัจจุบันลง
-            newEnemy.GetComponent<Enemy>().OnEnemyDestroyed += () =>
-            {
-                currentEnemyCount--;
-            };
+            
         }
     }
 }

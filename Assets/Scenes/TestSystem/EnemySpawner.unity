@@ -745,10 +745,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463076e0ac776249a1614d3d3c4b77b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpawnPoint: {fileID: 1190857197}
-  enemySpawnRadius: 100
-  enemySpawnScale: {x: 1, y: 1}
-  enemySpawnTime: 0.5
+  enemySpawnRadius: {x: 30, y: 10}
+  enemySpawnTime: 5
+  maxEnemy: 4
   enemyPrefab: {fileID: 3982792202371823300, guid: 6ec4834ef71f58e459b9c24f3c971814, type: 3}
 --- !u!1001 &1112520998
 PrefabInstance:
@@ -812,7 +811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1899462294495903435, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
       propertyPath: attackDamage
-      value: 40
+      value: 9999999
       objectReference: {fileID: 0}
     - target: {fileID: 2423394471821278878, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
       propertyPath: m_Size.y
@@ -822,9 +821,25 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.9310049
       objectReference: {fileID: 0}
+    - target: {fileID: 2578651836125405408, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
+      propertyPath: maxHp
+      value: 9999999
+      objectReference: {fileID: 0}
     - target: {fileID: 2961274887369379640, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928065848129705251, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
+      propertyPath: dashSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928065848129705251, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
+      propertyPath: walkSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928065848129705251, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
+      propertyPath: sprintSpeed
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
