@@ -17,9 +17,8 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] protected int point;
     
     //countdownTime 
-    [SerializeField] private float countdownTime;
-    private bool canCollect = true;
-    
+    [SerializeField] protected float countdownTime;
+
     // UI Bar TimeCount
     [SerializeField] public Slider timeCountUi;
 
@@ -38,13 +37,9 @@ public class InteractableObject : MonoBehaviour
         StartCoroutine(TriggerIndicators());
         if (!Input.GetKeyDown(key)) return;
         // Do something when player interact
-        // Reward Point & Destroy
-        
-        StartCoroutine(CountdownAndDestroy(countdownTime));
-        
     }
 
-    IEnumerator CountdownAndDestroy(float time)
+    protected IEnumerator CountdownAndDestroy(float time)
     {
         float timeCount = 0;
         

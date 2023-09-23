@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 3193662953248191171}
   - component: {fileID: 6553261440361274245}
   - component: {fileID: 994433983691826144}
-  - component: {fileID: 3046294938974754917}
+  - component: {fileID: 6840939052838145826}
   m_Layer: 8
   m_Name: InteractableObject
   m_TagString: Untagged
@@ -354,7 +354,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -458,7 +458,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3046294938974754917
+--- !u!114 &6840939052838145826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -467,17 +467,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1652201029327280216}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdefcdf75bc72a24eac2b190edf2a6ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 57bce78a10b0afe4ab6b81e6fa2f9265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   key: 101
-  prompt: Press "E" to interact
+  prompt: Press 'E' to Interact
   interactionTextUI: {fileID: 8694446730242176781}
   interactionIndicators:
   - {fileID: 904145661372633570}
   - {fileID: 1126796864824265559}
   point: 50
-  countdownTime: 1
+  countdownTime: 0.5
   timeCountUi: {fileID: 6157137315286616074}
 --- !u!1 &1896658112953925451
 GameObject:

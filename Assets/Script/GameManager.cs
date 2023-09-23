@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private int TotalPoint = 0;
+    public int totalPoint = 0;
+    [SerializeField] private TextMeshProUGUI scoreText;
     public Transform player;
     public Transform playerBase;
 
@@ -24,6 +26,7 @@ public class GameManager : MonoBehaviour
     // Add Point
     public void AddPoint(int n)
     {
-        TotalPoint += n;
+        totalPoint += n;
+        scoreText.text = $"Score: {totalPoint}";
     }
 }
