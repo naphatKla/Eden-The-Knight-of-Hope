@@ -476,7 +476,7 @@ MonoBehaviour:
   interactionIndicators:
   - {fileID: 904145661372633570}
   - {fileID: 1126796864824265559}
-  point: 50
+  point: 15
   countdownTime: 0.5
   timeCountUi: {fileID: 6157137315286616074}
 --- !u!1 &1896658112953925451

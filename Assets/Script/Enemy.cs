@@ -41,6 +41,7 @@ public class Enemy : MonoBehaviour
     private bool _isWait;
     private bool _isRoam;
     public EnemyState enemyActionState;
+    
 
     #endregion
     
@@ -48,7 +49,6 @@ public class Enemy : MonoBehaviour
     #region Unity Method
     void Start()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         agent = GetComponent<NavMeshAgent>();

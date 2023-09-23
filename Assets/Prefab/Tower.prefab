@@ -144,9 +144,9 @@ MonoBehaviour:
     m_Bits: 128
   bulletSpawnPoint: {fileID: 7521590804567726720}
   bulletPrefab: {fileID: 7684876603425027750, guid: 2c0effeb60ae2be4299195950078ceaa, type: 3}
-  bulletDamage: 10
+  bulletDamage: 15
   bulletSpeed: 10
-  attackRate: 0.5
+  attackRate: 0.7
 --- !u!114 &423204310504910108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sliderHpPlayer: {fileID: 8527158778361198969}
   maxHp: 200
+  _currentHp: 0
 --- !u!60 &8249009458153756354
 PolygonCollider2D:
   m_ObjectHideFlags: 0

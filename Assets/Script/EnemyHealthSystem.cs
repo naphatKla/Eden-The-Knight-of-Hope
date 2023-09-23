@@ -13,7 +13,14 @@ public class EnemyHealthSystem : HealthSystem
 
     public void TakeDamage(float damage, GameObject attacker)
     {
-        base.TakeDamage(damage);
         _enemy.target = attacker;
+        base.TakeDamage(damage);
+    }
+
+    protected override void Dead()
+    {
+        if(Random.Range(0,101) >= 90)
+            GameManager.instance.AddPoint(10);
+        base.Dead();
     }
 }

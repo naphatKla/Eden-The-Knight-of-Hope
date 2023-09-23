@@ -203,7 +203,7 @@ MonoBehaviour:
   roamCooldown: 5
   roamArea: {x: -4, y: 4}
   agent: {fileID: 0}
-  nightMode: 1
+  nightMode: 0
   spriteRenderer: {fileID: 0}
   target: {fileID: 0}
   enemyActionState: 0
@@ -220,7 +220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderHpPlayer: {fileID: 2566465687061256877}
-  maxHp: 100
+  maxHp: 45
+  _currentHp: 45
 --- !u!114 &1154486622580121859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +238,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 576
   attackPoint: {fileID: 1066272621460311471}
-  attackDamage: 20
+  attackDamage: 13
   attackArea: {x: 4, y: 1}
   attackRate: 1
 --- !u!195 &3338019295559380173

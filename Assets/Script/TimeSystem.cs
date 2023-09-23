@@ -34,6 +34,8 @@ public class TimeSystem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dayText;
     public TimeState timeState;
 
+    public static TimeSystem instance;
+
     void Start()
     {
         day = 1;
@@ -41,6 +43,7 @@ public class TimeSystem : MonoBehaviour
         _lightUpDuration = lightUpPeriod.y - lightUpPeriod.x;
         _lightDownDuration = lightDownPeriod.y - lightDownPeriod.x;
         time = ConvertHourToSec(gameStartTime);
+        instance = this;
     }
     
     void Update()
@@ -105,5 +108,14 @@ public class TimeSystem : MonoBehaviour
     {
         return ConvertSecToHour(time) >= x && ConvertSecToHour(time) <= y;
     }
-    
+
+    public float GetCurrentTime()
+    {
+        return ConvertSecToHour(time);
+    }
+
+    public TimeState GetTimeState()
+    {
+        return timeState;
+    }
 }
