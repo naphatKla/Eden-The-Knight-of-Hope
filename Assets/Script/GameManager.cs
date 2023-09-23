@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
-        if (playerBase == null) SceneManager.LoadScene(0);
+        //if (playerBase == null) SceneManager.LoadScene(0);
     }
     
     // Add Point

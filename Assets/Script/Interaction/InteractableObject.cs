@@ -10,11 +10,11 @@ using UnityEngine.UI;
 
 public class InteractableObject : MonoBehaviour
 {
-    [SerializeField] private KeyCode key;
-    [SerializeField] private string prompt;
-    [SerializeField] private TextMeshProUGUI interactionTextUI;
-    [SerializeField] private GameObject[] interactionIndicators;
-    [SerializeField] private int point;
+    [SerializeField] protected KeyCode key;
+    [SerializeField] protected string prompt;
+    [SerializeField] protected TextMeshProUGUI interactionTextUI;
+    [SerializeField] protected GameObject[] interactionIndicators;
+    [SerializeField] protected int point;
     
     //countdownTime 
     [SerializeField] private float countdownTime;
@@ -59,8 +59,7 @@ public class InteractableObject : MonoBehaviour
 
             float progress = timeCount / time;
             timeCountUi.value = Mathf.Lerp(1f, 0f, progress);
-
-            Debug.Log($"{timeCount:F1}");
+            
             timeCount += Time.deltaTime;
             yield return null;
         }
