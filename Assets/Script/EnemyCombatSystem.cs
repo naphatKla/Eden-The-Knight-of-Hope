@@ -75,7 +75,7 @@ public class EnemyCombatSystem : MonoBehaviour
                 _isCharge = false;
                 yield break;
             }
-
+            
             timeCount += Time.deltaTime;
             yield return null;
         }

@@ -262,18 +262,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: maxEnemy
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: nightMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: enemySpawnTime
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -403,7 +391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: maxEnemy
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: nightMode
@@ -917,7 +905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: maxEnemy
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: nightMode
@@ -986,7 +974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: maxEnemy
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: nightMode
@@ -2505,11 +2493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: maxEnemy
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: nightMode
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: enemySpawnTime
@@ -3091,7 +3075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: enemySpawnTime
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: enemySpawnRadius.x
@@ -3431,7 +3415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: enemySpawnTime
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: enemySpawnRadius.x
@@ -3623,7 +3607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: enemySpawnTime
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

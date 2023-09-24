@@ -45,7 +45,7 @@ public class InteractableObject : MonoBehaviour
         
         while (timeCount < time)
         {
-            if (Input.GetAxisRaw("Horizontal") > 0 || Input.GetAxisRaw("Vertical") > 0)
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
             {
                 timeCountUi.gameObject.SetActive(false);
                 yield break;

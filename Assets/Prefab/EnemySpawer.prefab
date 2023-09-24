@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawnRadius: {x: 30, y: 10}
-  enemySpawnTime: 1
-  maxEnemy: 4
+  enemySpawnTime: 7
+  maxEnemy: 20
   currentEnemyCount: 0
+  nightMode: 1
   enemyPrefab: {fileID: 3982792202371823300, guid: 6ec4834ef71f58e459b9c24f3c971814, type: 3}
