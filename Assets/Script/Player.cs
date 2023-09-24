@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private float _currentSpeed;
     private bool _isDash;
+    private bool _isRunning;
 
     #endregion
 
@@ -98,18 +99,29 @@ public class Player : MonoBehaviour
     private void SprintHandle()
     {
         if (CheckPlayerState(PlayerState.Dash)) return;
-        if (CheckPlayerState(PlayerState.Idle)) return;
-        if (!Input.GetKey(KeyCode.LeftShift)) return;
+        if (CheckPlayerState(PlayerState.Idle))
+        {
+            _isRunning = false;
+            return;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            _isRunning = !_isRunning;
+        }
 
-        _currentSpeed = sprintSpeed;
-        SetPlayerState(PlayerState.Sprint);
+        if (_isRunning)
+        {
+            _currentSpeed = sprintSpeed;
+            SetPlayerState(PlayerState.Sprint);
+        }
     }
 
     private void DashHandle()
     {
         if (_isDash) return;
         if (CheckPlayerState(PlayerState.Idle)) return;
-        if (!Input.GetKeyDown(KeyCode.LeftControl)) return;
+        if (!Input.GetKeyDown(KeyCode.Space)) return;
 
         StartCoroutine(Dash());
     }
