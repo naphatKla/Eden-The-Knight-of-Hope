@@ -40,6 +40,7 @@ public class Enemy : MonoBehaviour
     private Vector2 _spawnPoint;
     private bool _isWait;
     private bool _isRoam;
+    public bool isStun;
     public EnemyState enemyActionState;
     
 
@@ -62,6 +63,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         if(_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt")) return;
+        if(isStun) return;
 
         Collider2D[] targetInDistances = Physics2D.OverlapCircleAll(transform.position, viewDistance, playerLayerMask);
 

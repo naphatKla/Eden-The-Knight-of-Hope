@@ -1990,6 +1990,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1899462294495903435, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
+      propertyPath: attackRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899462294495903435, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
+      propertyPath: attackDamage
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899462294495903435, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
+      propertyPath: heavyAttackDamage
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 2961274887369379640, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2864,7 +2876,7 @@ Transform:
   m_GameObject: {fileID: 1711716592}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.26, y: -13.81, z: -3.7276654}
+  m_LocalPosition: {x: -11.26, y: -13.81, z: -3.727665}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

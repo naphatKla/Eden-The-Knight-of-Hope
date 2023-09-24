@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Vector3 = System.Numerics.Vector3;
 
 public class Player : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
     private float _currentSpeed;
     private bool _isDash;
     private bool _isRunning;
+    public static Player instance;
 
     #endregion
 
@@ -38,10 +40,20 @@ public class Player : MonoBehaviour
         _playerRigidbody2D = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         playerState = PlayerState.Idle;
+        instance = this;
     }
 
     private void Update()
     {
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttackState_1") ||
+            _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttackState_2") ||
+            _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttackState_3") ||
+            _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerHeavyAttack") )
+        {
+            _playerRigidbody2D.velocity = Vector2.zero;
+            return;
+        }
+      
         MovementHandle();
     }
 

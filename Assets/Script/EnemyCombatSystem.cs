@@ -29,13 +29,13 @@ public class EnemyCombatSystem : MonoBehaviour
     void Update()
     {
         // stun
-        /*if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt"))
+        if (_enemy.isStun)
         {
-            _nextAttackTime = Time.time + (1f / attackRate);
+            //_nextAttackTime = Time.time + (1f / attackRate);
             _isCharge = false;
-        }*/
+        }
         if(_isCharge) return;
-        StartCoroutine( Attack(0.5f));
+        StartCoroutine( Attack(0.4f));
     }
 
     private IEnumerator Attack(float delay)
@@ -69,12 +69,12 @@ public class EnemyCombatSystem : MonoBehaviour
             _enemy.agent.velocity = Vector3.zero;
             
             // stun
-            /*if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt"))
+            if (_enemy.isStun)
             {
                 _nextAttackTime = Time.time + (1f / attackRate);
                 _isCharge = false;
                 yield break;
-            }*/
+            }
 
             timeCount += Time.deltaTime;
             yield return null;

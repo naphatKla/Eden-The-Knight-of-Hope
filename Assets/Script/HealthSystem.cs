@@ -6,7 +6,7 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private Slider sliderHpPlayer;
     [SerializeField] public float maxHp;
     public float _currentHp;
-    private Animator _animator;
+    protected Animator _animator;
 
     protected virtual void Start()
     {
