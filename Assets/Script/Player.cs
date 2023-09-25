@@ -113,7 +113,7 @@ public class Player : MonoBehaviour
         if (CheckPlayerState(PlayerState.Dash)) return;
         if (CheckPlayerState(PlayerState.Idle))
         {
-            _isRunning = false;
+            //_isRunning = false;
             return;
         }
         

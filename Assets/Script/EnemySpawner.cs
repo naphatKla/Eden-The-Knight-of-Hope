@@ -29,11 +29,21 @@ public class EnemySpawner : MonoBehaviour
         {
             isReduceRate = false;
         }
-                
-        if (TimeSystem.instance.GetCurrentTime() >= 23 && !isReduceRate)
+
+        switch (TimeSystem.instance.day)
         {
-            isReduceRate = true;
-            enemySpawnTime -= 1.5f;
+            case 0:
+                enemySpawnTime = 7;
+                break;
+            case 1:
+                enemySpawnTime = 5.5f;
+                break;
+            case 2:
+                enemySpawnTime = 4.5f;
+                break;
+            case 3:
+                enemySpawnTime = 3.5f;
+                break;
         }
     }
     
