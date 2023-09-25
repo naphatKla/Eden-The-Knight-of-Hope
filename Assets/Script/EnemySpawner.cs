@@ -10,6 +10,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int maxEnemy = 4;
     [SerializeField] private int currentEnemyCount;
     [SerializeField] private bool nightMode;
+    [SerializeField] private LayerMask playerMask;
     public GameObject enemyPrefab;
     
     void Start()
@@ -71,6 +72,15 @@ public class EnemySpawner : MonoBehaviour
             }
             else
             {
+                 Collider2D[] col = Physics2D.OverlapBoxAll(transform.position, new Vector2(enemySpawnRadius.x * 2, enemySpawnRadius.y * 2),
+                    0, playerMask);
+
+                 if (col.Length > 0)
+                 {
+                     yield return null;
+                     continue;
+                 }
+                
                 // ตรวจสอบว่ายังไม่เกิน MaxEnemy ก่อนที่จะสร้างศัตรูใหม่
                 if (currentEnemyCount < maxEnemy)
                 {
