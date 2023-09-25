@@ -38,7 +38,7 @@ public class TimeSystem : MonoBehaviour
 
     void Start()
     {
-        day = 1;
+        day = 0;
         cycleLength = dayTime + nightTime;
         _lightUpDuration = lightUpPeriod.y - lightUpPeriod.x;
         _lightDownDuration = lightDownPeriod.y - lightDownPeriod.x;

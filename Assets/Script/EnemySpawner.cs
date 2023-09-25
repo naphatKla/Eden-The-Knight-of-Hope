@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int currentEnemyCount;
     [SerializeField] private bool nightMode;
     [SerializeField] private LayerMask playerMask;
+    bool isReduceRate = false;
     public GameObject enemyPrefab;
     
     void Start()
@@ -21,7 +22,19 @@ public class EnemySpawner : MonoBehaviour
     
     void Update()
     {
+
+        bool isNight = TimeSystem.instance.GetTimeState() == TimeSystem.TimeState.Night;
         
+        if (!isNight)
+        {
+            isReduceRate = false;
+        }
+                
+        if (TimeSystem.instance.GetCurrentTime() >= 23 && !isReduceRate)
+        {
+            isReduceRate = true;
+            enemySpawnTime -= 1.5f;
+        }
     }
     
     private void OnDrawGizmos()
@@ -33,8 +46,7 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator SpawnEnemy()
     {
         yield return new WaitForSeconds(3);
-        bool isReduceRate = false;
-        
+
         while (true)
         {
             bool isNight = TimeSystem.instance.GetTimeState() == TimeSystem.TimeState.Night;
@@ -42,17 +54,10 @@ public class EnemySpawner : MonoBehaviour
             {
                 if (!isNight)
                 {
-                    isReduceRate = false;
                     yield return null;
                     continue;
                 }
-                
-                if (TimeSystem.instance.GetCurrentTime() >= 23 && !isReduceRate)
-                {
-                    isReduceRate = true;
-                    enemySpawnTime -= 1.5f;
-                }
-                
+
                 // ตรวจสอบว่ายังไม่เกิน MaxEnemy ก่อนที่จะสร้างศัตรูใหม่
                 if (currentEnemyCount < maxEnemy)
                 {
