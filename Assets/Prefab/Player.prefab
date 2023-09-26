@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 121.3}
-  m_SizeDelta: {x: 150, y: 29.84}
+  m_AnchoredPosition: {x: -0.79, y: 121.3}
+  m_SizeDelta: {x: 185.53, y: 29.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1242721326779355130
 MonoBehaviour:
@@ -129,6 +129,7 @@ Transform:
   m_Children:
   - {fileID: 2254507535340655425}
   - {fileID: 6126908590091014635}
+  - {fileID: 8124607446534933881}
   - {fileID: 7000580293569115590}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -292,9 +293,9 @@ MonoBehaviour:
   attackPoint: {fileID: 6126908590091014635}
   heavyAttackPoint: {fileID: 6126908590091014635}
   attackDamage: 18
-  attackArea: {x: 4, y: 2}
-  attackRate: 1.11
-  heavyAttackDamage: 36
+  attackArea: {x: 4, y: 2.5}
+  attackRate: 1
+  heavyAttackDamage: 24
   heavyAttackRange: 2
 --- !u!114 &2578651836125405408
 MonoBehaviour:
@@ -344,8 +345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d75ccdc145ff94a8dd75771ee269ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPoint: {fileID: 6126908590091014635}
-  interactionPointRadius: 1.5
+  interactionPoint: {fileID: 8124607446534933881}
+  interactionPointRadius: 2.5
   interactableMask:
     serializedVersion: 2
     m_Bits: 256
@@ -407,7 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.24022818, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.24022818, g: 1, b: 0, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -424,6 +425,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &3420976649831448392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8124607446534933881}
+  m_Layer: 6
+  m_Name: InteractionPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8124607446534933881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3420976649831448392}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.54, y: 1.21, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1022125500977079456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3817412853105133270
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

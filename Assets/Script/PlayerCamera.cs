@@ -23,7 +23,7 @@ public class PlayerCamera : MonoBehaviour
     void Start()
     {
         _cam = GetComponent<Camera>();
-        _zoom = _cam.orthographicSize;
+        _zoom = minZoom;
     }
     void Update()
     {

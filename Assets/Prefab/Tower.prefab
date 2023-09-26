@@ -114,7 +114,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1810214492, guid: 98c081a0345b6f64a9b547a88c6bf3b4, type: 3}
+  m_Sprite: {fileID: -1534047362, guid: 262b25c57deae174ca513504431ad414, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -137,16 +137,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46ff0d068a1ba4f418eb7e8b1b8319dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 10
+  attackRadius: 15
   attackPoint: {fileID: 3745804380099421501}
   targetLayerMask:
     serializedVersion: 2
     m_Bits: 128
   bulletSpawnPoint: {fileID: 7521590804567726720}
   bulletPrefab: {fileID: 7684876603425027750, guid: 2c0effeb60ae2be4299195950078ceaa, type: 3}
-  bulletDamage: 15
+  bulletDamage: 17.5
   bulletSpeed: 10
-  attackRate: 0.7
+  attackRate: 0.8
 --- !u!114 &423204310504910108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,7 +198,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 6, y: 4.19}
+    oldSize: {x: 3.22, y: 5.920634}
     newSize: {x: 6, y: 4.19}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -206,15 +206,18 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.36224547, y: 0.042752683}
-      - {x: -0.02, y: 0.02}
-      - {x: -0.26751465, y: 0.03546982}
-      - {x: -0.64, y: 0.17}
-      - {x: -0.82, y: 0.36560515}
-      - {x: -0.76, y: 0.66999996}
-      - {x: 0.77, y: 0.66999996}
-      - {x: 0.82, y: 0.389335}
-      - {x: 0.66999996, y: 0.17999999}
+    - - {x: -1.5999999, y: 0.050005395}
+      - {x: -1.5699998, y: 0.5200558}
+      - {x: -1.3899999, y: 0.7700825}
+      - {x: -1.4699999, y: 0.99010605}
+      - {x: -1.4299998, y: 1.1801263}
+      - {x: -1.2099998, y: 1.3201413}
+      - {x: 1.2599999, y: 1.3201413}
+      - {x: 1.31, y: 1.0301102}
+      - {x: 1.3799999, y: 0.88009423}
+      - {x: 1.4999999, y: 0.6700717}
+      - {x: 1.5899999, y: 0.43004617}
+      - {x: 1.5999999, y: 0.060006578}
   m_UseDelaunayMesh: 0
 --- !u!1 &3431273846633287670
 GameObject:
@@ -252,8 +255,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 121.3}
-  m_SizeDelta: {x: 250, y: 29.84}
+  m_AnchoredPosition: {x: 0, y: 245.97}
+  m_SizeDelta: {x: 300, y: 41.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8527158778361198969
 MonoBehaviour:
@@ -431,7 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.24022818, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.24022818, g: 1, b: 0, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -506,7 +509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

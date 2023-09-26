@@ -97,7 +97,7 @@ public class PlayerCombatSystem : MonoBehaviour
         _animator.SetTrigger("HeavyAttack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(heavyAttackPoint.position,heavyAttackRange,enemyLayer);
         foreach (Collider2D enemy in hitEnemies)
-            enemy.GetComponent<EnemyHealthSystem>().TakeDamageAndStun(attackDamage,gameObject,0.2f);
+            enemy.GetComponent<EnemyHealthSystem>().TakeDamageAndStun(heavyAttackDamage,gameObject,0.2f);
     }
 
     private void OnDrawGizmos()

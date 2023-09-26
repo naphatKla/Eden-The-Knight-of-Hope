@@ -17,6 +17,7 @@ public class HealthSystem : MonoBehaviour
     protected virtual void Update()
     {
         _currentHp = Mathf.Clamp(_currentHp, 0, maxHp);
+        sliderHpPlayer.value = _currentHp / maxHp;
     }
     
     public virtual void TakeDamage(float damage)
@@ -25,11 +26,9 @@ public class HealthSystem : MonoBehaviour
             _animator.SetTrigger("TakeDamage");
         
         _currentHp -= damage;
-        sliderHpPlayer.value = _currentHp / maxHp;
 
         if (_currentHp <= 0)
             Dead();
-
     }
 
     protected virtual void Dead()
@@ -38,27 +37,25 @@ public class HealthSystem : MonoBehaviour
         {
             if (!gameObject.activeSelf) return;
             gameObject.SetActive(false);
-            Invoke(nameof(Respawn), 8);
+            Invoke(nameof(Respawn), 5);
         }
         else
             Destroy(gameObject);
     }
 
-    public void Heal(float damage)
+    public void Heal(float Heal)
     {
-        _currentHp += damage;
-        sliderHpPlayer.value = _currentHp / maxHp;
+        _currentHp += Heal;
     }
 
     public void FullHeal()
     {
         _currentHp = maxHp;
-        sliderHpPlayer.value = _currentHp / maxHp;
     }
     
     public void Respawn()
     {
-        transform.position = GameManager.instance.playerBase.position;
+        transform.position = GameManager.instance.spawnPoint;
         gameObject.SetActive(true);
         gameObject.GetComponent<Player>().ResetState();
         _currentHp = maxHp;

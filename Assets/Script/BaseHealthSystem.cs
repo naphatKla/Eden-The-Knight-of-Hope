@@ -11,5 +11,6 @@ public class BaseHealthSystem : HealthSystem
         
         if(TimeSystem.instance.GetTimeState() != TimeSystem.TimeState.Day) return;
         _currentHp +=  ((hpRegenPercentage / 100) * maxHp) * Time.deltaTime;
+        
     }
 }
