@@ -1,11 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
+    public int totalPoint = 0;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI scoreAddAnimation;
+    [SerializeField] private TextMeshProUGUI warningText;
+    public Vector2 spawnPoint;
+    private bool _isWarning;
     public Transform player;
-    public Transform tower;
+    public Transform playerBase;
 
     public static GameManager instance;
     void Start()
@@ -15,6 +24,40 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
+        Debug.Log(_isWarning);
+        if (playerBase == null) SceneManager.LoadScene(0);
+        if (TimeSystem.instance.TimePeriodCheck(17,18))
+        {
+            if(_isWarning) return;
+            _isWarning = true;
+            StartCoroutine(ToggleSetActiveRelateWithAnimation(warningText.gameObject));
+            return;
+        }
+
+        _isWarning = false;
+    }
+    
+    // Add Poinwa
+    public void AddPoint(int n)
+    {
+        totalPoint += n;
+        scoreText.text = $"Score: {totalPoint}";
+        scoreAddAnimation.text = $"+ {n}";
+        StartCoroutine(ToggleSetActiveRelateWithAnimation(scoreAddAnimation.gameObject));
+
+    }
+
+    IEnumerator ToggleSetActiveRelateWithAnimation(GameObject obj)
+    {
+        Animator animator = obj.GetComponent<Animator>();
         
+        yield return new WaitUntil(() => !obj.activeSelf);
+        
+        obj.SetActive(true);
+
+        yield return new WaitUntil(() =>
+            animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+        
+        obj.SetActive(false);
     }
 }

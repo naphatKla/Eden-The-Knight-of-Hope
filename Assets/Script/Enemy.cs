@@ -21,7 +21,8 @@ public class Enemy : MonoBehaviour
     {
         Player,
         NPC,
-        Tower
+        Tower,
+        Base
     }
     
     [SerializeField] private float viewDistance; 
@@ -33,13 +34,15 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent agent;
     public bool nightMode;
     private Rigidbody2D _rigidbody2D;
-    private SpriteRenderer _spriteRenderer;
+    [HideInInspector] public SpriteRenderer spriteRenderer;
     private Animator _animator;
-    private GameObject _target;
+    public GameObject target;
     private Vector2 _spawnPoint;
     private bool _isWait;
     private bool _isRoam;
+    public bool isStun;
     public EnemyState enemyActionState;
+    
 
     #endregion
     
@@ -47,9 +50,8 @@ public class Enemy : MonoBehaviour
     #region Unity Method
     void Start()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -61,21 +63,25 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         if(_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt")) return;
+        if(isStun) return;
 
         Collider2D[] targetInDistances = Physics2D.OverlapCircleAll(transform.position, viewDistance, playerLayerMask);
 
         if (targetInDistances.Length > 0)
         {
-            // Detect targets only on the first priority tag found
-            for (int i = 0; i < priorityTags.Count; i++)
+            if (enemyActionState != EnemyState.FollowTarget)
             {
-                foreach (Collider2D col in targetInDistances)
+                // Detect targets only on the first priority tag found
+                for (int i = 0; i < priorityTags.Count; i++)
                 {
-                    if (!col.gameObject.CompareTag(priorityTags[i].ToString())) continue;
+                    foreach (Collider2D col in targetInDistances)
+                    {
+                        if (!col.gameObject.CompareTag(priorityTags[i].ToString())) continue;
 
-                    _target = col.gameObject;
-                    i += priorityTags.Count; // break out the loop
-                    break;
+                        target = col.gameObject;
+                        i += priorityTags.Count; // break out the loop
+                        break;
+                    }
                 }
             }
 
@@ -93,13 +99,13 @@ public class Enemy : MonoBehaviour
         {
             SetEnemyState(EnemyState.FocusOnTower);
         }
-
+        
         PlayAction(enemyActionState);
         _animator.SetFloat("Speed",agent.velocity.magnitude);
         
         // flip horizontal direction relate with enemy direction
-        if (agent.velocity.x != 0)
-            _spriteRenderer.flipX = agent.velocity.x < 0;
+        if (Mathf.Abs(agent.velocity.x) > 1)
+            spriteRenderer.flipX = agent.velocity.x < 0f;
 
     }
 
@@ -184,7 +190,12 @@ public class Enemy : MonoBehaviour
             }
             case EnemyState.FollowTarget:
             {
-                agent.SetDestination(_target.transform.position);
+                if (target == null || !target.gameObject.activeSelf)
+                {
+                    SetEnemyState(EnemyState.ReturnToSpawn);
+                    return;
+                }
+                agent.SetDestination(target.transform.position);
                 break;
             }
             case EnemyState.ReturnToSpawn:
@@ -194,7 +205,12 @@ public class Enemy : MonoBehaviour
             }
             case EnemyState.WaitToReturn:
             {
-                agent.SetDestination(_target.transform.position);
+                if (target == null || !target.gameObject.activeSelf)
+                {
+                    SetEnemyState(EnemyState.ReturnToSpawn);
+                    return;
+                }
+                agent.SetDestination(target.transform.position);
                 
                 if (!_isWait)
                     StartCoroutine(WaitToReturn(3));
@@ -202,7 +218,7 @@ public class Enemy : MonoBehaviour
             }
             case EnemyState.FocusOnTower:
             {
-                agent.SetDestination(GameManager.instance.tower.position);
+                agent.SetDestination(GameManager.instance.playerBase.position);
                 break;
             }
         }

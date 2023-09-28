@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -12,7 +13,7 @@ public class EnemyCombatSystem : MonoBehaviour
     public LayerMask targetLayer;
     public Transform attackPoint;
     public int attackDamage = 40;
-    public float attackRange = 0.5f;
+    public Vector2 attackArea;
     public float attackRate = 2f;
     private float _nextAttackTime = 0f;
     private GameObject _attackPointParent;
@@ -27,25 +28,33 @@ public class EnemyCombatSystem : MonoBehaviour
 
     void Update()
     {
-        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt"))
+        // stun
+        if (_enemy.isStun)
         {
-            _nextAttackTime = Time.time + (1f / attackRate);
+            //_nextAttackTime = Time.time + (1f / attackRate);
             _isCharge = false;
         }
         if(_isCharge) return;
-        StartCoroutine( Attack(0.5f));
+        StartCoroutine( Attack(0.4f));
     }
 
     private IEnumerator Attack(float delay)
     {
         // flip attack point
-        if (_enemy.agent.velocity.magnitude != 0)
+        if (_enemy.spriteRenderer.flipX)
             _attackPointParent.transform.right =
-                new Vector3(_enemy.agent.velocity.x / Mathf.Abs(_enemy.agent.velocity.x) + 0.01f, 0, 0);
+                new Vector3(-1, 0, 0);
+        else
+            _attackPointParent.transform.right =
+                new Vector3(1, 0, 0);
         
-        Collider2D[] hitTargets = Physics2D.OverlapCircleAll(attackPoint.position,attackRange,targetLayer);
 
-        if (hitTargets.Length <= 0) yield break;
+        List<Collider2D> hitTargets =
+            Physics2D.OverlapBoxAll(attackPoint.position, attackArea, 0, targetLayer).ToList();
+        
+        if (hitTargets.Count <= 0) yield break;
+        if (!hitTargets.Contains(_enemy.target.GetComponent<Collider2D>())) yield break;
+
         _enemy.agent.velocity = Vector3.zero;
         
         if(Time.time < _nextAttackTime) yield break;
@@ -59,19 +68,20 @@ public class EnemyCombatSystem : MonoBehaviour
             _isCharge = true;
             _enemy.agent.velocity = Vector3.zero;
             
-            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt"))
+            // stun
+            if (_enemy.isStun)
             {
                 _nextAttackTime = Time.time + (1f / attackRate);
                 _isCharge = false;
                 yield break;
             }
-
+            
             timeCount += Time.deltaTime;
             yield return null;
         }
         
-        hitTargets = Physics2D.OverlapCircleAll(attackPoint.position,attackRange,targetLayer);
-        if (hitTargets.Length <= 0)
+        hitTargets =  Physics2D.OverlapBoxAll(attackPoint.position,attackArea, 0, targetLayer).ToList();
+        if (hitTargets.Count <= 0)
         {
             _isCharge = false;
             yield break;
@@ -87,6 +97,6 @@ public class EnemyCombatSystem : MonoBehaviour
     private void OnDrawGizmos()
     {
         if (attackPoint == null) return;
-        Gizmos.DrawWireSphere(attackPoint.position,attackRange);
+        Gizmos.DrawWireCube(attackPoint.position,attackArea);
     }
 }

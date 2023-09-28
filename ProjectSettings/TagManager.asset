@@ -6,17 +6,18 @@ TagManager:
   tags:
   - Tower
   - NPC
+  - Base
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
-  - Interactable
+  - Player
   - Enemy
-  - 
-  - 
+  - Interactable
+  - Base&Tower
   - 
   - 
   - 
@@ -40,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Ground
+    uniqueID: 3689468277
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

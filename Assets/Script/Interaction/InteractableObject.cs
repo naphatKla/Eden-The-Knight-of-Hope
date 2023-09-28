@@ -1,33 +1,69 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class InteractableObject : MonoBehaviour
 {
-    [SerializeField] private KeyCode key;
-    [SerializeField] private string prompt;
-    [SerializeField] private TextMeshProUGUI interactionTextUI;
-    [SerializeField] private GameObject[] interactionIndicators;
+    [SerializeField] protected KeyCode key;
+    [SerializeField] protected string prompt;
+    [SerializeField] protected TextMeshProUGUI interactionTextUI;
+    [SerializeField] protected GameObject[] interactionIndicators;
+    [SerializeField] protected int point;
+    
+    //countdownTime 
+    [SerializeField] protected float countdownTime;
 
-    void Start()
+    // UI Bar TimeCount
+    [SerializeField] public Slider timeCountUi;
+
+    protected virtual void Start()
     {
         interactionTextUI.text = prompt;
     }
     
-    void Update()
+    protected virtual void Update()
     {
-
+        
     }
     
     public virtual void Interact()
     {
         StartCoroutine(TriggerIndicators());
-        if(!Input.GetKeyDown(key)) return;
+        if (!Input.GetKeyDown(key)) return;
         // Do something when player interact
+    }
+
+    protected IEnumerator CountdownAndDestroy(float time)
+    {
+        float timeCount = 0;
+        
+        while (timeCount < time)
+        {
+            if (timeCount/time <= 0.85f)
+            {
+                if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+                {
+                    timeCountUi.gameObject.SetActive(false);
+                    yield break;
+                } 
+            }
+
+            timeCountUi.gameObject.SetActive(true);
+
+            float progress = timeCount / time;
+            timeCountUi.value = Mathf.Lerp(1f, 0f, progress);
+            
+            timeCount += Time.deltaTime;
+            yield return null;
+        }
+        GameManager.instance.AddPoint(point);
+        Destroy(gameObject);
     }
 
     IEnumerator TriggerIndicators()
@@ -39,4 +75,5 @@ public class InteractableObject : MonoBehaviour
         foreach (GameObject interactionIndicator in interactionIndicators)
             interactionIndicator.SetActive(false);
     }
+    
 }

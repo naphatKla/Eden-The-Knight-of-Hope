@@ -24,9 +24,9 @@ public class PlayerInteractSystem : MonoBehaviour
     {
         Collider2D[] collider2Ds =
             Physics2D.OverlapCircleAll(interactionPoint.position, interactionPointRadius, interactableMask);
-        
-        if (collider2Ds.Length <= 0) return;
 
+        if (collider2Ds.Length <= 0) return;
+        
         List<float> distances = new List<float>();
         foreach (Collider2D col in collider2Ds)
             distances.Add(Vector2.Distance(transform.position, col.transform.position));
