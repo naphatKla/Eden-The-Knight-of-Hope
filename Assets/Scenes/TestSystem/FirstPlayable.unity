@@ -3836,8 +3836,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46cae6132605e2a44b6f8bbe480156e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayTime: 5
-  nightTime: 10
+  dayTime: 120
+  nightTime: 180
   gameStartTime: 8
   dayPeriod: {x: 6, y: 18}
   cycleLength: 20
