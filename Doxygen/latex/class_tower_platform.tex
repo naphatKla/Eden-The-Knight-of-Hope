@@ -1,0 +1,153 @@
+\doxysection{Tower\+Platform Class Reference}
+\hypertarget{class_tower_platform}{}\label{class_tower_platform}\index{TowerPlatform@{TowerPlatform}}
+
+
+Inheritance diagram for Tower\+Platform\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_tower_platform__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tower\+Platform\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_tower_platform__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_tower_platform_adb3441dc912cc8adaa789d99cce7d286}{Interact}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_tower_platform_ab696a51c010e7989aaeb38579f800344}{Start}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_interactable_object}{Interactable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_interactable_object_a537648f0800202685d310608f58f61ce}{Update}} ()
+\item 
+IEnumerator \mbox{\hyperlink{class_interactable_object_a0480720dbbead938efa49673b23ec493}{Countdown\+And\+Destroy}} (float time)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerator \mbox{\hyperlink{class_tower_platform_a5522423b2f2304f8f02effc7eb17ee7d}{Build\+Tower}} (float duration)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_tower_platform_a23f15c9fef85ee08f1e860cbf2e2e862}{tower\+Prefab}}
+\item 
+int \mbox{\hyperlink{class_tower_platform_ab38ee5ec72021a112ceb71d17bf0dbe2}{cost}}
+\item 
+Game\+Object \mbox{\hyperlink{class_tower_platform_a687ae438502e4f95abccd8bd26590bc3}{\+\_\+tower}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_interactable_object}{Interactable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Slider \mbox{\hyperlink{class_interactable_object_a1316cef0f1c2c2bef5e7afa022004257}{time\+Count\+Ui}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_interactable_object}{Interactable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Key\+Code \mbox{\hyperlink{class_interactable_object_aac487ef156d3d6d657a699e5cfceff53}{key}}
+\item 
+string \mbox{\hyperlink{class_interactable_object_a9904e42becfe00fd6f91560715483a5e}{prompt}}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_interactable_object_a7c0fad098c2a374bb2abff254cddf381}{interaction\+Text\+UI}}
+\item 
+Game\+Object\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_interactable_object_a3fda367b1a4d9fb1260a6cae17efffae}{interaction\+Indicators}}
+\item 
+int \mbox{\hyperlink{class_interactable_object_a970183fb0477604de5016447024e24f6}{point}}
+\item 
+float \mbox{\hyperlink{class_interactable_object_a31bdcf207857832b49e0325d20e9fbce}{countdown\+Time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tower_platform_a5522423b2f2304f8f02effc7eb17ee7d}\label{class_tower_platform_a5522423b2f2304f8f02effc7eb17ee7d} 
+\index{TowerPlatform@{TowerPlatform}!BuildTower@{BuildTower}}
+\index{BuildTower@{BuildTower}!TowerPlatform@{TowerPlatform}}
+\doxysubsubsection{\texorpdfstring{BuildTower()}{BuildTower()}}
+{\footnotesize\ttfamily IEnumerator Tower\+Platform.\+Build\+Tower (\begin{DoxyParamCaption}\item[{float}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_platform_a5522423b2f2304f8f02effc7eb17ee7d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_platform_a5522423b2f2304f8f02effc7eb17ee7d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tower_platform_adb3441dc912cc8adaa789d99cce7d286}\label{class_tower_platform_adb3441dc912cc8adaa789d99cce7d286} 
+\index{TowerPlatform@{TowerPlatform}!Interact@{Interact}}
+\index{Interact@{Interact}!TowerPlatform@{TowerPlatform}}
+\doxysubsubsection{\texorpdfstring{Interact()}{Interact()}}
+{\footnotesize\ttfamily override void Tower\+Platform.\+Interact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_interactable_object_a8d24c5e90977f2f0c08f36bed0b1d021}{Interactable\+Object}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_platform_adb3441dc912cc8adaa789d99cce7d286_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tower_platform_ab696a51c010e7989aaeb38579f800344}\label{class_tower_platform_ab696a51c010e7989aaeb38579f800344} 
+\index{TowerPlatform@{TowerPlatform}!Start@{Start}}
+\index{Start@{Start}!TowerPlatform@{TowerPlatform}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily override void Tower\+Platform.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_interactable_object_a9c8224c499f20de3da4b6d4db21d20ca}{Interactable\+Object}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_tower_platform_a687ae438502e4f95abccd8bd26590bc3}\label{class_tower_platform_a687ae438502e4f95abccd8bd26590bc3} 
+\index{TowerPlatform@{TowerPlatform}!\_tower@{\_tower}}
+\index{\_tower@{\_tower}!TowerPlatform@{TowerPlatform}}
+\doxysubsubsection{\texorpdfstring{\_tower}{\_tower}}
+{\footnotesize\ttfamily Game\+Object Tower\+Platform.\+\_\+tower\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_platform_ab38ee5ec72021a112ceb71d17bf0dbe2}\label{class_tower_platform_ab38ee5ec72021a112ceb71d17bf0dbe2} 
+\index{TowerPlatform@{TowerPlatform}!cost@{cost}}
+\index{cost@{cost}!TowerPlatform@{TowerPlatform}}
+\doxysubsubsection{\texorpdfstring{cost}{cost}}
+{\footnotesize\ttfamily int Tower\+Platform.\+cost\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_platform_a23f15c9fef85ee08f1e860cbf2e2e862}\label{class_tower_platform_a23f15c9fef85ee08f1e860cbf2e2e862} 
+\index{TowerPlatform@{TowerPlatform}!towerPrefab@{towerPrefab}}
+\index{towerPrefab@{towerPrefab}!TowerPlatform@{TowerPlatform}}
+\doxysubsubsection{\texorpdfstring{towerPrefab}{towerPrefab}}
+{\footnotesize\ttfamily Game\+Object Tower\+Platform.\+tower\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\mbox{\hyperlink{_tower_platform_8cs}{Tower\+Platform.\+cs}}\end{DoxyCompactItemize}

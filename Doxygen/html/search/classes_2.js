@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['healthsystem_0',['HealthSystem',['../class_health_system.html',1,'']]]
+  ['gamemanager_0',['GameManager',['../class_game_manager.html',1,'']]],
+  ['gatheringresource_1',['GatheringResource',['../class_gathering_resource.html',1,'']]]
 ];

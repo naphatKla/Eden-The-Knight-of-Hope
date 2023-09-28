@@ -1,0 +1,162 @@
+\doxysection{Enemy\+Health\+System Class Reference}
+\hypertarget{class_enemy_health_system}{}\label{class_enemy_health_system}\index{EnemyHealthSystem@{EnemyHealthSystem}}
+
+
+Inheritance diagram for Enemy\+Health\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{class_enemy_health_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Enemy\+Health\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{class_enemy_health_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_enemy_health_system_a1521c810076fd4900be3765ee7a3b620}{Take\+Damage}} (float damage, Game\+Object attacker)
+\item 
+void \mbox{\hyperlink{class_enemy_health_system_a389e1e504b024830a5605feb034579d5}{Take\+Damage\+And\+Stun}} (float damage, Game\+Object attacker, float stun\+Duration)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_health_system_a356e8d72c9518eec6341cf1f59cda76a}{Take\+Damage}} (float damage)
+\item 
+void \mbox{\hyperlink{class_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0}{Heal}} (float Heal)
+\item 
+void \mbox{\hyperlink{class_health_system_ac33d3ea7f5200c444d3719136d840d79}{Full\+Heal}} ()
+\item 
+void \mbox{\hyperlink{class_health_system_a7101f4a3a0c68882111b6093ebbc2652}{Respawn}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_enemy_health_system_a36807e0d6d2250f01ef410d81c065336}{Start}} ()
+\item 
+override void \mbox{\hyperlink{class_enemy_health_system_a336c4bd4df3ac0fa0556f4319cad0cac}{Dead}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_health_system_a0791884f34f179bb980c0f70a5c42a71}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerator \mbox{\hyperlink{class_enemy_health_system_a0c72b24443e497097615c26f0bbabd9a}{Stun}} (float stun\+Duration)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_enemy}{Enemy}} \mbox{\hyperlink{class_enemy_health_system_a7d3caf7d6cc26185a7abb2d32ff59198}{\+\_\+enemy}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_health_system_a1dff31a9c710ce45dd4ecec2fcacf58c}{max\+Hp}}
+\item 
+float \mbox{\hyperlink{class_health_system_afbc9a8d4739ee9c4ae053cb9945741cc}{\+\_\+current\+Hp}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+Animator \mbox{\hyperlink{class_health_system_ac81c178880a765c02920b505ce933a9c}{\+\_\+animator}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_enemy_health_system_a336c4bd4df3ac0fa0556f4319cad0cac}\label{class_enemy_health_system_a336c4bd4df3ac0fa0556f4319cad0cac} 
+\index{EnemyHealthSystem@{EnemyHealthSystem}!Dead@{Dead}}
+\index{Dead@{Dead}!EnemyHealthSystem@{EnemyHealthSystem}}
+\doxysubsubsection{\texorpdfstring{Dead()}{Dead()}}
+{\footnotesize\ttfamily override void Enemy\+Health\+System.\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_health_system_aac4f95a8abcedb6718f48c066b441956}{Health\+System}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_enemy_health_system_a336c4bd4df3ac0fa0556f4319cad0cac_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_enemy_health_system_a36807e0d6d2250f01ef410d81c065336}\label{class_enemy_health_system_a36807e0d6d2250f01ef410d81c065336} 
+\index{EnemyHealthSystem@{EnemyHealthSystem}!Start@{Start}}
+\index{Start@{Start}!EnemyHealthSystem@{EnemyHealthSystem}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily override void Enemy\+Health\+System.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_health_system_aedfb8d521a69c8138eafc7af146299e9}{Health\+System}}.
+
+\Hypertarget{class_enemy_health_system_a0c72b24443e497097615c26f0bbabd9a}\label{class_enemy_health_system_a0c72b24443e497097615c26f0bbabd9a} 
+\index{EnemyHealthSystem@{EnemyHealthSystem}!Stun@{Stun}}
+\index{Stun@{Stun}!EnemyHealthSystem@{EnemyHealthSystem}}
+\doxysubsubsection{\texorpdfstring{Stun()}{Stun()}}
+{\footnotesize\ttfamily IEnumerator Enemy\+Health\+System.\+Stun (\begin{DoxyParamCaption}\item[{float}]{stun\+Duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_enemy_health_system_a0c72b24443e497097615c26f0bbabd9a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_enemy_health_system_a1521c810076fd4900be3765ee7a3b620}\label{class_enemy_health_system_a1521c810076fd4900be3765ee7a3b620} 
+\index{EnemyHealthSystem@{EnemyHealthSystem}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!EnemyHealthSystem@{EnemyHealthSystem}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily void Enemy\+Health\+System.\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage,  }\item[{Game\+Object}]{attacker }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_enemy_health_system_a1521c810076fd4900be3765ee7a3b620_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_enemy_health_system_a389e1e504b024830a5605feb034579d5}\label{class_enemy_health_system_a389e1e504b024830a5605feb034579d5} 
+\index{EnemyHealthSystem@{EnemyHealthSystem}!TakeDamageAndStun@{TakeDamageAndStun}}
+\index{TakeDamageAndStun@{TakeDamageAndStun}!EnemyHealthSystem@{EnemyHealthSystem}}
+\doxysubsubsection{\texorpdfstring{TakeDamageAndStun()}{TakeDamageAndStun()}}
+{\footnotesize\ttfamily void Enemy\+Health\+System.\+Take\+Damage\+And\+Stun (\begin{DoxyParamCaption}\item[{float}]{damage,  }\item[{Game\+Object}]{attacker,  }\item[{float}]{stun\+Duration }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_enemy_health_system_a389e1e504b024830a5605feb034579d5_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_enemy_health_system_a7d3caf7d6cc26185a7abb2d32ff59198}\label{class_enemy_health_system_a7d3caf7d6cc26185a7abb2d32ff59198} 
+\index{EnemyHealthSystem@{EnemyHealthSystem}!\_enemy@{\_enemy}}
+\index{\_enemy@{\_enemy}!EnemyHealthSystem@{EnemyHealthSystem}}
+\doxysubsubsection{\texorpdfstring{\_enemy}{\_enemy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_enemy}{Enemy}} Enemy\+Health\+System.\+\_\+enemy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\mbox{\hyperlink{_enemy_health_system_8cs}{Enemy\+Health\+System.\+cs}}\end{DoxyCompactItemize}

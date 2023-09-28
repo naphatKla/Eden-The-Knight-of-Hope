@@ -1,0 +1,5 @@
+<map id="EnemySpawner.SpawnEnemy" name="EnemySpawner.SpawnEnemy">
+<area shape="rect" id="Node000001" title=" " alt="" coords="198,5,394,32"/>
+<area shape="rect" id="Node000002" href="$class_enemy_spawner.html#a466324420d7d75410673a13b15c84d44" title=" " alt="" coords="5,5,150,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,21,150,21,150,16,182,16"/>
+</map>

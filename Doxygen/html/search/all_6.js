@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gamemanager_0',['GameManager',['../class_game_manager.html',1,'']]],
-  ['gamemanager_2ecs_1',['GameManager.cs',['../_game_manager_8cs.html',1,'']]],
-  ['gamestarttime_2',['gameStartTime',['../class_time_system.html#a269356782120908bb37f3c54102949f6',1,'TimeSystem']]]
+  ['focusontower_0',['FocusOnTower',['../class_enemy.html#a14bead85804fe8c4cfd27ea20122594da32880dab32454a7d556c9cd71382f677',1,'Enemy']]],
+  ['followtarget_1',['FollowTarget',['../class_enemy.html#a14bead85804fe8c4cfd27ea20122594da23a0d6103e6eb8265ec3203088db3c9c',1,'Enemy']]],
+  ['fullheal_2',['FullHeal',['../class_health_system.html#ac33d3ea7f5200c444d3719136d840d79',1,'HealthSystem']]]
 ];

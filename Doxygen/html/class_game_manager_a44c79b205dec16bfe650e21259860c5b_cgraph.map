@@ -1,0 +1,9 @@
+<map id="GameManager.Update" name="GameManager.Update">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,157,61"/>
+<area shape="rect" id="Node000002" href="$class_time_system.html#a82e2a51fcdb9a514a1b2a18b2b392c1b" title=" " alt="" coords="206,5,407,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,36,190,31,191,36,157,41"/>
+<area shape="rect" id="Node000004" href="$class_game_manager.html#a2f25fce454f2aa38a41b464fc120af16" title=" " alt="" coords="205,56,408,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="157,55,190,59,189,65,157,60"/>
+<area shape="rect" id="Node000003" href="$class_time_system.html#aa9fab23d98070b757d1d49f8e8acf030" title=" " alt="" coords="456,5,661,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="407,16,440,16,440,21,407,21"/>
+</map>

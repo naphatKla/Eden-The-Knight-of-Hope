@@ -33,6 +33,7 @@ enum \mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594d}{Enemy\+Stat
 enum \mbox{\hyperlink{class_enemy_a53aff336dbb3dd7847e86c3635273550}{Priority\+Tag}} \{ \mbox{\hyperlink{class_enemy_a53aff336dbb3dd7847e86c3635273550a636da1d35e805b00eae0fcd8333f9234}{Player}}
 , \mbox{\hyperlink{class_enemy_a53aff336dbb3dd7847e86c3635273550a2bda99597da06a11feafd8760b68aec6}{NPC}}
 , \mbox{\hyperlink{class_enemy_a53aff336dbb3dd7847e86c3635273550a8f8b35b2b5f50b489f1e528f89bdd6e4}{Tower}}
+, \mbox{\hyperlink{class_enemy_a53aff336dbb3dd7847e86c3635273550a095a1b43effec73955e31e790438de49}{Base}}
  \}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
@@ -48,6 +49,12 @@ void \mbox{\hyperlink{class_enemy_a8e4f86c94569ba5be94e533806441468}{Play\+Actio
 Nav\+Mesh\+Agent \mbox{\hyperlink{class_enemy_a945192ab3b423160afe30162dfd549f8}{agent}}
 \item 
 bool \mbox{\hyperlink{class_enemy_a86288aef625be6e14d6d03baf646bcc0}{night\+Mode}}
+\item 
+Sprite\+Renderer \mbox{\hyperlink{class_enemy_a3c93f98aea02cfe8ee79d3568b2dccb1}{sprite\+Renderer}}
+\item 
+Game\+Object \mbox{\hyperlink{class_enemy_a43f264a7cdb7cf1b42c55d6538532c1c}{target}}
+\item 
+bool \mbox{\hyperlink{class_enemy_a22d0e7376692fc64a18216eef498f925}{is\+Stun}}
 \item 
 \mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594d}{Enemy\+State}} \mbox{\hyperlink{class_enemy_aa7769cb5509952cdb00cc6273c607aaa}{enemy\+Action\+State}}
 \end{DoxyCompactItemize}
@@ -81,11 +88,7 @@ Vector2 \mbox{\hyperlink{class_enemy_a59442945d7cb009b80822b8b48fb3728}{roam\+Ar
 \item 
 Rigidbody2D \mbox{\hyperlink{class_enemy_a5ce7f6daf5e9f188f9854be988d951ee}{\+\_\+rigidbody2D}}
 \item 
-Sprite\+Renderer \mbox{\hyperlink{class_enemy_a15f9ec2ea439f9e4d1153b1d72dc0375}{\+\_\+sprite\+Renderer}}
-\item 
 Animator \mbox{\hyperlink{class_enemy_a537f39693d69267fbc2c32652d7f9a50}{\+\_\+animator}}
-\item 
-Game\+Object \mbox{\hyperlink{class_enemy_a4ab633efad75ee59e3b94d7a6b8a0fcb}{\+\_\+target}}
 \item 
 Vector2 \mbox{\hyperlink{class_enemy_af4b62a8d14ec736dd67563996a0846bb}{\+\_\+spawn\+Point}}
 \item 
@@ -143,6 +146,10 @@ NPC&\\
 Tower&\\
 \hline
 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Base@{Base}!Enemy@{Enemy}}\index{Enemy@{Enemy}!Base@{Base}}}\Hypertarget{class_enemy_a53aff336dbb3dd7847e86c3635273550a095a1b43effec73955e31e790438de49}\label{class_enemy_a53aff336dbb3dd7847e86c3635273550a095a1b43effec73955e31e790438de49} 
+Base&\\
+\hline
+
 \end{DoxyEnumFields}
 
 
@@ -167,11 +174,12 @@ Draw gizmos on inspector.
 
 Play enemy action and behavior follow enemy state. 
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=319pt]{class_enemy_a8e4f86c94569ba5be94e533806441468_cgraph}
+\includegraphics[width=332pt]{class_enemy_a8e4f86c94569ba5be94e533806441468_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
@@ -208,11 +216,12 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Set enemy state. 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=315pt]{class_enemy_a115c8ded4831b6e9168cfd9d634300f8_icgraph}
+\includegraphics[width=350pt]{class_enemy_a115c8ded4831b6e9168cfd9d634300f8_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{class_enemy_ae3442338205f74a157f1a311640e84eb}\label{class_enemy_ae3442338205f74a157f1a311640e84eb} 
@@ -227,7 +236,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{Update()}{Update()}}
 {\footnotesize\ttfamily void Enemy.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -277,18 +287,6 @@ Wait for a second and set enemy state to Return\+To\+Spawn.
 \doxysubsubsection{\texorpdfstring{\_spawnPoint}{\_spawnPoint}}
 {\footnotesize\ttfamily Vector2 Enemy.\+\_\+spawn\+Point\hspace{0.3cm}{\ttfamily [private]}}
 
-\Hypertarget{class_enemy_a15f9ec2ea439f9e4d1153b1d72dc0375}\label{class_enemy_a15f9ec2ea439f9e4d1153b1d72dc0375} 
-\index{Enemy@{Enemy}!\_spriteRenderer@{\_spriteRenderer}}
-\index{\_spriteRenderer@{\_spriteRenderer}!Enemy@{Enemy}}
-\doxysubsubsection{\texorpdfstring{\_spriteRenderer}{\_spriteRenderer}}
-{\footnotesize\ttfamily Sprite\+Renderer Enemy.\+\_\+sprite\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
-
-\Hypertarget{class_enemy_a4ab633efad75ee59e3b94d7a6b8a0fcb}\label{class_enemy_a4ab633efad75ee59e3b94d7a6b8a0fcb} 
-\index{Enemy@{Enemy}!\_target@{\_target}}
-\index{\_target@{\_target}!Enemy@{Enemy}}
-\doxysubsubsection{\texorpdfstring{\_target}{\_target}}
-{\footnotesize\ttfamily Game\+Object Enemy.\+\_\+target\hspace{0.3cm}{\ttfamily [private]}}
-
 \Hypertarget{class_enemy_a945192ab3b423160afe30162dfd549f8}\label{class_enemy_a945192ab3b423160afe30162dfd549f8} 
 \index{Enemy@{Enemy}!agent@{agent}}
 \index{agent@{agent}!Enemy@{Enemy}}
@@ -300,6 +298,12 @@ Wait for a second and set enemy state to Return\+To\+Spawn.
 \index{enemyActionState@{enemyActionState}!Enemy@{Enemy}}
 \doxysubsubsection{\texorpdfstring{enemyActionState}{enemyActionState}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_enemy_a14bead85804fe8c4cfd27ea20122594d}{Enemy\+State}} Enemy.\+enemy\+Action\+State}
+
+\Hypertarget{class_enemy_a22d0e7376692fc64a18216eef498f925}\label{class_enemy_a22d0e7376692fc64a18216eef498f925} 
+\index{Enemy@{Enemy}!isStun@{isStun}}
+\index{isStun@{isStun}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{isStun}{isStun}}
+{\footnotesize\ttfamily bool Enemy.\+is\+Stun}
 
 \Hypertarget{class_enemy_a86288aef625be6e14d6d03baf646bcc0}\label{class_enemy_a86288aef625be6e14d6d03baf646bcc0} 
 \index{Enemy@{Enemy}!nightMode@{nightMode}}
@@ -336,6 +340,18 @@ Wait for a second and set enemy state to Return\+To\+Spawn.
 \index{roamDuration@{roamDuration}!Enemy@{Enemy}}
 \doxysubsubsection{\texorpdfstring{roamDuration}{roamDuration}}
 {\footnotesize\ttfamily float Enemy.\+roam\+Duration\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_a3c93f98aea02cfe8ee79d3568b2dccb1}\label{class_enemy_a3c93f98aea02cfe8ee79d3568b2dccb1} 
+\index{Enemy@{Enemy}!spriteRenderer@{spriteRenderer}}
+\index{spriteRenderer@{spriteRenderer}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{spriteRenderer}{spriteRenderer}}
+{\footnotesize\ttfamily Sprite\+Renderer Enemy.\+sprite\+Renderer}
+
+\Hypertarget{class_enemy_a43f264a7cdb7cf1b42c55d6538532c1c}\label{class_enemy_a43f264a7cdb7cf1b42c55d6538532c1c} 
+\index{Enemy@{Enemy}!target@{target}}
+\index{target@{target}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily Game\+Object Enemy.\+target}
 
 \Hypertarget{class_enemy_a1e3c867cd62062f40cd6869f3f641e26}\label{class_enemy_a1e3c867cd62062f40cd6869f3f641e26} 
 \index{Enemy@{Enemy}!viewDistance@{viewDistance}}

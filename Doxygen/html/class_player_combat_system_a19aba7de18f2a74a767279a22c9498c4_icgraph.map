@@ -1,0 +1,5 @@
+<map id="PlayerCombatSystem.HeavyAttack" name="PlayerCombatSystem.HeavyAttack">
+<area shape="rect" id="Node000001" title=" " alt="" coords="247,5,434,48"/>
+<area shape="rect" id="Node000002" href="$class_player_combat_system.html#a47a6a23a4ea4a09eb30fa79c7b53bd12" title=" " alt="" coords="5,13,199,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,29,199,29,199,24,231,24"/>
+</map>

@@ -1,9 +1,11 @@
 <map id="TimeSystem.TimePeriodCheck" name="TimeSystem.TimePeriodCheck">
-<area shape="rect" id="Node000001" title=" " alt="" coords="431,31,631,57"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="431,56,631,83"/>
 <area shape="rect" id="Node000002" href="$class_time_system.html#a4fb86a5324ec855567b074f8ee7f9e08" title=" " alt="" coords="193,5,383,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="415,35,383,31,383,26,416,29"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="448,55,355,35,356,30,449,50"/>
 <area shape="rect" id="Node000004" href="$class_time_system.html#a6565c99878badb19f6127443687637ee" title=" " alt="" coords="193,56,383,83"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="416,59,384,62,383,57,415,53"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="416,72,384,72,384,67,416,67"/>
+<area shape="rect" id="Node000005" href="$class_game_manager.html#a44c79b205dec16bfe650e21259860c5b" title=" " alt="" coords="212,107,364,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="449,89,356,109,355,103,448,84"/>
 <area shape="rect" id="Node000003" href="$class_time_system.html#ab6de60d288f4ba297b658622b28092a8" title=" " alt="" coords="5,31,145,57"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="179,34,145,38,145,33,178,29"/>
 <area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="177,59,145,55,145,50,178,54"/>

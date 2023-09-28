@@ -1,0 +1,10 @@
+<map id="EnemyHealthSystem" name="EnemyHealthSystem">
+<area shape="rect" id="Node000001" title=" " alt="" coords="37,172,181,199"/>
+<area shape="rect" id="Node000002" href="$class_health_system.html" title=" " alt="" coords="5,81,109,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,120,104,170,99,173,70,123"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="54,5,164,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,46,68,83,64,79,90,43"/>
+<area shape="rect" id="Node000004" href="$class_enemy.html" title=" " alt="" coords="133,81,195,108"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="129,43,157,79,152,83,125,46"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="150,123,119,173,115,170,145,120"/>
+</map>

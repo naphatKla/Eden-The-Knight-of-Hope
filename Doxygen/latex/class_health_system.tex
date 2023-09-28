@@ -2,11 +2,12 @@
 \hypertarget{class_health_system}{}\label{class_health_system}\index{HealthSystem@{HealthSystem}}
 
 
-Inheritance diagram for Health\+System\+:\nopagebreak
+Inheritance diagram for Health\+System\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=162pt]{class_health_system__inherit__graph}
+\includegraphics[width=306pt]{class_health_system__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -21,54 +22,152 @@ Collaboration diagram for Health\+System\+:\nopagebreak
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_health_system_ad469a3ad94c9e1fbb92b9205badd3a86}{Take\+Damage}} (float damage)
+virtual void \mbox{\hyperlink{class_health_system_a356e8d72c9518eec6341cf1f59cda76a}{Take\+Damage}} (float damage)
 \item 
-void \mbox{\hyperlink{class_health_system_a5aec12b394eb71a3cc1b780527499280}{Heal}} (float damage)
+void \mbox{\hyperlink{class_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0}{Heal}} (float Heal)
+\item 
+void \mbox{\hyperlink{class_health_system_ac33d3ea7f5200c444d3719136d840d79}{Full\+Heal}} ()
+\item 
+void \mbox{\hyperlink{class_health_system_a7101f4a3a0c68882111b6093ebbc2652}{Respawn}} ()
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Private Member Functions}
+\doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_health_system_a4b1bc3e4699d109081b60320b4483993}{Start}} ()
+float \mbox{\hyperlink{class_health_system_a1dff31a9c710ce45dd4ecec2fcacf58c}{max\+Hp}}
 \item 
-void \mbox{\hyperlink{class_health_system_af51c0011365e8fac7105c547c6c539f7}{Update}} ()
+float \mbox{\hyperlink{class_health_system_afbc9a8d4739ee9c4ae053cb9945741cc}{\+\_\+current\+Hp}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_health_system_aedfb8d521a69c8138eafc7af146299e9}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{class_health_system_a0791884f34f179bb980c0f70a5c42a71}{Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_health_system_aac4f95a8abcedb6718f48c066b441956}{Dead}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Animator \mbox{\hyperlink{class_health_system_ac81c178880a765c02920b505ce933a9c}{\+\_\+animator}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Slider \mbox{\hyperlink{class_health_system_acad13f823d849553f8d0f366daa8d628}{slider\+Hp\+Player}}
-\item 
-float \mbox{\hyperlink{class_health_system_a1dff31a9c710ce45dd4ecec2fcacf58c}{max\+Hp}}
-\item 
-float \mbox{\hyperlink{class_health_system_afbc9a8d4739ee9c4ae053cb9945741cc}{\+\_\+current\+Hp}}
-\item 
-Animator \mbox{\hyperlink{class_health_system_ac81c178880a765c02920b505ce933a9c}{\+\_\+animator}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_health_system_a5aec12b394eb71a3cc1b780527499280}\label{class_health_system_a5aec12b394eb71a3cc1b780527499280} 
+\Hypertarget{class_health_system_aac4f95a8abcedb6718f48c066b441956}\label{class_health_system_aac4f95a8abcedb6718f48c066b441956} 
+\index{HealthSystem@{HealthSystem}!Dead@{Dead}}
+\index{Dead@{Dead}!HealthSystem@{HealthSystem}}
+\doxysubsubsection{\texorpdfstring{Dead()}{Dead()}}
+{\footnotesize\ttfamily virtual void Health\+System.\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_enemy_health_system_a336c4bd4df3ac0fa0556f4319cad0cac}{Enemy\+Health\+System}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{class_health_system_aac4f95a8abcedb6718f48c066b441956_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_health_system_aac4f95a8abcedb6718f48c066b441956_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_health_system_ac33d3ea7f5200c444d3719136d840d79}\label{class_health_system_ac33d3ea7f5200c444d3719136d840d79} 
+\index{HealthSystem@{HealthSystem}!FullHeal@{FullHeal}}
+\index{FullHeal@{FullHeal}!HealthSystem@{HealthSystem}}
+\doxysubsubsection{\texorpdfstring{FullHeal()}{FullHeal()}}
+{\footnotesize\ttfamily void Health\+System.\+Full\+Heal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_health_system_ac33d3ea7f5200c444d3719136d840d79_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0}\label{class_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0} 
 \index{HealthSystem@{HealthSystem}!Heal@{Heal}}
 \index{Heal@{Heal}!HealthSystem@{HealthSystem}}
 \doxysubsubsection{\texorpdfstring{Heal()}{Heal()}}
-{\footnotesize\ttfamily void Health\+System.\+Heal (\begin{DoxyParamCaption}\item[{float}]{damage }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Health\+System.\+Heal (\begin{DoxyParamCaption}\item[{float}]{Heal }\end{DoxyParamCaption})}
 
-\Hypertarget{class_health_system_a4b1bc3e4699d109081b60320b4483993}\label{class_health_system_a4b1bc3e4699d109081b60320b4483993} 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{class_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{class_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_health_system_a7101f4a3a0c68882111b6093ebbc2652}\label{class_health_system_a7101f4a3a0c68882111b6093ebbc2652} 
+\index{HealthSystem@{HealthSystem}!Respawn@{Respawn}}
+\index{Respawn@{Respawn}!HealthSystem@{HealthSystem}}
+\doxysubsubsection{\texorpdfstring{Respawn()}{Respawn()}}
+{\footnotesize\ttfamily void Health\+System.\+Respawn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_health_system_a7101f4a3a0c68882111b6093ebbc2652_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_health_system_aedfb8d521a69c8138eafc7af146299e9}\label{class_health_system_aedfb8d521a69c8138eafc7af146299e9} 
 \index{HealthSystem@{HealthSystem}!Start@{Start}}
 \index{Start@{Start}!HealthSystem@{HealthSystem}}
 \doxysubsubsection{\texorpdfstring{Start()}{Start()}}
-{\footnotesize\ttfamily void Health\+System.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily virtual void Health\+System.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
 
-\Hypertarget{class_health_system_ad469a3ad94c9e1fbb92b9205badd3a86}\label{class_health_system_ad469a3ad94c9e1fbb92b9205badd3a86} 
+
+
+Reimplemented in \mbox{\hyperlink{class_enemy_health_system_a36807e0d6d2250f01ef410d81c065336}{Enemy\+Health\+System}}.
+
+\Hypertarget{class_health_system_a356e8d72c9518eec6341cf1f59cda76a}\label{class_health_system_a356e8d72c9518eec6341cf1f59cda76a} 
 \index{HealthSystem@{HealthSystem}!TakeDamage@{TakeDamage}}
 \index{TakeDamage@{TakeDamage}!HealthSystem@{HealthSystem}}
 \doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
-{\footnotesize\ttfamily void Health\+System.\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual void Health\+System.\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-\Hypertarget{class_health_system_af51c0011365e8fac7105c547c6c539f7}\label{class_health_system_af51c0011365e8fac7105c547c6c539f7} 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_health_system_a356e8d72c9518eec6341cf1f59cda76a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_health_system_a0791884f34f179bb980c0f70a5c42a71}\label{class_health_system_a0791884f34f179bb980c0f70a5c42a71} 
 \index{HealthSystem@{HealthSystem}!Update@{Update}}
 \index{Update@{Update}!HealthSystem@{HealthSystem}}
 \doxysubsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily void Health\+System.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily virtual void Health\+System.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_base_health_system_a38fc06c4cef7a65ccf947c2b59052d09}{Base\+Health\+System}}.
 
 
 
@@ -77,19 +176,19 @@ Animator \mbox{\hyperlink{class_health_system_ac81c178880a765c02920b505ce933a9c}
 \index{HealthSystem@{HealthSystem}!\_animator@{\_animator}}
 \index{\_animator@{\_animator}!HealthSystem@{HealthSystem}}
 \doxysubsubsection{\texorpdfstring{\_animator}{\_animator}}
-{\footnotesize\ttfamily Animator Health\+System.\+\_\+animator\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily Animator Health\+System.\+\_\+animator\hspace{0.3cm}{\ttfamily [protected]}}
 
 \Hypertarget{class_health_system_afbc9a8d4739ee9c4ae053cb9945741cc}\label{class_health_system_afbc9a8d4739ee9c4ae053cb9945741cc} 
 \index{HealthSystem@{HealthSystem}!\_currentHp@{\_currentHp}}
 \index{\_currentHp@{\_currentHp}!HealthSystem@{HealthSystem}}
 \doxysubsubsection{\texorpdfstring{\_currentHp}{\_currentHp}}
-{\footnotesize\ttfamily float Health\+System.\+\_\+current\+Hp\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily float Health\+System.\+\_\+current\+Hp}
 
 \Hypertarget{class_health_system_a1dff31a9c710ce45dd4ecec2fcacf58c}\label{class_health_system_a1dff31a9c710ce45dd4ecec2fcacf58c} 
 \index{HealthSystem@{HealthSystem}!maxHp@{maxHp}}
 \index{maxHp@{maxHp}!HealthSystem@{HealthSystem}}
 \doxysubsubsection{\texorpdfstring{maxHp}{maxHp}}
-{\footnotesize\ttfamily float Health\+System.\+max\+Hp\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily float Health\+System.\+max\+Hp}
 
 \Hypertarget{class_health_system_acad13f823d849553f8d0f366daa8d628}\label{class_health_system_acad13f823d849553f8d0f366daa8d628} 
 \index{HealthSystem@{HealthSystem}!sliderHpPlayer@{sliderHpPlayer}}

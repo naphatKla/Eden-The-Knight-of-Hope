@@ -1,0 +1,5 @@
+<map id="HealthSystem.Dead" name="HealthSystem.Dead">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,143,32"/>
+<area shape="rect" id="Node000002" href="$class_health_system.html#a7101f4a3a0c68882111b6093ebbc2652" title=" " alt="" coords="191,5,351,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,16,175,16,175,21,143,21"/>
+</map>

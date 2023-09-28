@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['player_2ecs_0',['Player.cs',['../_player_8cs.html',1,'']]],
-  ['playercamera_2ecs_1',['PlayerCamera.cs',['../_player_camera_8cs.html',1,'']]],
-  ['playercombatsystem_2ecs_2',['PlayerCombatSystem.cs',['../_player_combat_system_8cs.html',1,'']]],
-  ['playerinteractsystem_2ecs_3',['PlayerInteractSystem.cs',['../_player_interact_system_8cs.html',1,'']]]
+  ['interactableobject_2ecs_0',['InteractableObject.cs',['../_interactable_object_8cs.html',1,'']]],
+  ['itemspawner_2ecs_1',['ItemSpawner.cs',['../_item_spawner_8cs.html',1,'']]]
 ];

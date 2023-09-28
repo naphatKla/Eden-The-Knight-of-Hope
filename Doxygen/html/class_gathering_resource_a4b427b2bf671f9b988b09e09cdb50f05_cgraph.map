@@ -1,0 +1,9 @@
+<map id="GatheringResource.Interact" name="GatheringResource.Interact">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,185,40"/>
+<area shape="rect" id="Node000002" href="$class_interactable_object.html#a0480720dbbead938efa49673b23ec493" title=" " alt="" coords="233,5,427,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,24,217,24,217,29,185,29"/>
+<area shape="rect" id="Node000003" href="$class_game_manager.html#a5d3c9753598caba92f5f58658a5eb1a2" title=" " alt="" coords="475,13,638,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="428,24,459,24,459,29,428,29"/>
+<area shape="rect" id="Node000004" href="$class_game_manager.html#a2f25fce454f2aa38a41b464fc120af16" title=" " alt="" coords="686,5,890,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="639,24,671,24,671,29,639,29"/>
+</map>

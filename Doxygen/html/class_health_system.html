@@ -71,7 +71,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_health_system-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">HealthSystem Class Reference</div></div>
@@ -82,9 +84,13 @@ Inheritance diagram for HealthSystem:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_health_system__inherit__graph.png" border="0" usemap="#a_health_system_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_health_system_inherit__map" id="a_health_system_inherit__map">
-<area shape="rect" title=" " alt="" coords="8,80,112,107"/>
-<area shape="rect" title=" " alt="" coords="5,5,115,32"/>
-<area shape="poly" title=" " alt="" coords="63,48,63,80,57,80,57,48"/>
+<area shape="rect" title=" " alt="" coords="102,80,205,107"/>
+<area shape="rect" href="class_base_health_system.html" title=" " alt="" coords="5,155,139,181"/>
+<area shape="poly" title=" " alt="" coords="130,119,88,156,84,152,126,115"/>
+<area shape="rect" href="class_enemy_health_system.html" title=" " alt="" coords="163,155,307,181"/>
+<area shape="poly" title=" " alt="" coords="181,115,222,152,219,156,177,119"/>
+<area shape="rect" title=" " alt="" coords="99,5,208,32"/>
+<area shape="poly" title=" " alt="" coords="156,48,156,80,151,80,151,48"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -100,32 +106,120 @@ Collaboration diagram for HealthSystem:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad469a3ad94c9e1fbb92b9205badd3a86" id="r_ad469a3ad94c9e1fbb92b9205badd3a86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#ad469a3ad94c9e1fbb92b9205badd3a86">TakeDamage</a> (float damage)</td></tr>
-<tr class="separator:ad469a3ad94c9e1fbb92b9205badd3a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aec12b394eb71a3cc1b780527499280" id="r_a5aec12b394eb71a3cc1b780527499280"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a5aec12b394eb71a3cc1b780527499280">Heal</a> (float damage)</td></tr>
-<tr class="separator:a5aec12b394eb71a3cc1b780527499280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356e8d72c9518eec6341cf1f59cda76a" id="r_a356e8d72c9518eec6341cf1f59cda76a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a356e8d72c9518eec6341cf1f59cda76a">TakeDamage</a> (float damage)</td></tr>
+<tr class="separator:a356e8d72c9518eec6341cf1f59cda76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad51bd71dca6bdc6a85c5d5efb2c4ae0" id="r_aad51bd71dca6bdc6a85c5d5efb2c4ae0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#aad51bd71dca6bdc6a85c5d5efb2c4ae0">Heal</a> (float Heal)</td></tr>
+<tr class="separator:aad51bd71dca6bdc6a85c5d5efb2c4ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac33d3ea7f5200c444d3719136d840d79" id="r_ac33d3ea7f5200c444d3719136d840d79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#ac33d3ea7f5200c444d3719136d840d79">FullHeal</a> ()</td></tr>
+<tr class="separator:ac33d3ea7f5200c444d3719136d840d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7101f4a3a0c68882111b6093ebbc2652" id="r_a7101f4a3a0c68882111b6093ebbc2652"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a7101f4a3a0c68882111b6093ebbc2652">Respawn</a> ()</td></tr>
+<tr class="separator:a7101f4a3a0c68882111b6093ebbc2652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a4b1bc3e4699d109081b60320b4483993" id="r_a4b1bc3e4699d109081b60320b4483993"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a4b1bc3e4699d109081b60320b4483993">Start</a> ()</td></tr>
-<tr class="separator:a4b1bc3e4699d109081b60320b4483993"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af51c0011365e8fac7105c547c6c539f7" id="r_af51c0011365e8fac7105c547c6c539f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#af51c0011365e8fac7105c547c6c539f7">Update</a> ()</td></tr>
-<tr class="separator:af51c0011365e8fac7105c547c6c539f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a1dff31a9c710ce45dd4ecec2fcacf58c" id="r_a1dff31a9c710ce45dd4ecec2fcacf58c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a1dff31a9c710ce45dd4ecec2fcacf58c">maxHp</a></td></tr>
+<tr class="separator:a1dff31a9c710ce45dd4ecec2fcacf58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc9a8d4739ee9c4ae053cb9945741cc" id="r_afbc9a8d4739ee9c4ae053cb9945741cc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#afbc9a8d4739ee9c4ae053cb9945741cc">_currentHp</a></td></tr>
+<tr class="separator:afbc9a8d4739ee9c4ae053cb9945741cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aedfb8d521a69c8138eafc7af146299e9" id="r_aedfb8d521a69c8138eafc7af146299e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#aedfb8d521a69c8138eafc7af146299e9">Start</a> ()</td></tr>
+<tr class="separator:aedfb8d521a69c8138eafc7af146299e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0791884f34f179bb980c0f70a5c42a71" id="r_a0791884f34f179bb980c0f70a5c42a71"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a0791884f34f179bb980c0f70a5c42a71">Update</a> ()</td></tr>
+<tr class="separator:a0791884f34f179bb980c0f70a5c42a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac4f95a8abcedb6718f48c066b441956" id="r_aac4f95a8abcedb6718f48c066b441956"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#aac4f95a8abcedb6718f48c066b441956">Dead</a> ()</td></tr>
+<tr class="separator:aac4f95a8abcedb6718f48c066b441956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ac81c178880a765c02920b505ce933a9c" id="r_ac81c178880a765c02920b505ce933a9c"><td class="memItemLeft" align="right" valign="top">Animator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#ac81c178880a765c02920b505ce933a9c">_animator</a></td></tr>
+<tr class="separator:ac81c178880a765c02920b505ce933a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:acad13f823d849553f8d0f366daa8d628" id="r_acad13f823d849553f8d0f366daa8d628"><td class="memItemLeft" align="right" valign="top">Slider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#acad13f823d849553f8d0f366daa8d628">sliderHpPlayer</a></td></tr>
 <tr class="separator:acad13f823d849553f8d0f366daa8d628"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dff31a9c710ce45dd4ecec2fcacf58c" id="r_a1dff31a9c710ce45dd4ecec2fcacf58c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a1dff31a9c710ce45dd4ecec2fcacf58c">maxHp</a></td></tr>
-<tr class="separator:a1dff31a9c710ce45dd4ecec2fcacf58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbc9a8d4739ee9c4ae053cb9945741cc" id="r_afbc9a8d4739ee9c4ae053cb9945741cc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#afbc9a8d4739ee9c4ae053cb9945741cc">_currentHp</a></td></tr>
-<tr class="separator:afbc9a8d4739ee9c4ae053cb9945741cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac81c178880a765c02920b505ce933a9c" id="r_ac81c178880a765c02920b505ce933a9c"><td class="memItemLeft" align="right" valign="top">Animator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#ac81c178880a765c02920b505ce933a9c">_animator</a></td></tr>
-<tr class="separator:ac81c178880a765c02920b505ce933a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5aec12b394eb71a3cc1b780527499280" name="a5aec12b394eb71a3cc1b780527499280"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5aec12b394eb71a3cc1b780527499280">&#9670;&#160;</a></span>Heal()</h2>
+<a id="aac4f95a8abcedb6718f48c066b441956" name="aac4f95a8abcedb6718f48c066b441956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac4f95a8abcedb6718f48c066b441956">&#9670;&#160;</a></span>Dead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void HealthSystem.Dead </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_enemy_health_system.html#a336c4bd4df3ac0fa0556f4319cad0cac">EnemyHealthSystem</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_health_system_aac4f95a8abcedb6718f48c066b441956_cgraph.png" border="0" usemap="#aclass_health_system_aac4f95a8abcedb6718f48c066b441956_cgraph" alt=""/></div>
+<map name="aclass_health_system_aac4f95a8abcedb6718f48c066b441956_cgraph" id="aclass_health_system_aac4f95a8abcedb6718f48c066b441956_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,143,32"/>
+<area shape="rect" href="class_health_system.html#a7101f4a3a0c68882111b6093ebbc2652" title=" " alt="" coords="191,5,351,32"/>
+<area shape="poly" title=" " alt="" coords="143,16,175,16,175,21,143,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_health_system_aac4f95a8abcedb6718f48c066b441956_icgraph.png" border="0" usemap="#aclass_health_system_aac4f95a8abcedb6718f48c066b441956_icgraph" alt=""/></div>
+<map name="aclass_health_system_aac4f95a8abcedb6718f48c066b441956_icgraph" id="aclass_health_system_aac4f95a8abcedb6718f48c066b441956_icgraph">
+<area shape="rect" title=" " alt="" coords="237,5,374,32"/>
+<area shape="rect" href="class_health_system.html#a356e8d72c9518eec6341cf1f59cda76a" title=" " alt="" coords="5,5,189,32"/>
+<area shape="poly" title=" " alt="" coords="221,21,189,21,189,16,221,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac33d3ea7f5200c444d3719136d840d79" name="ac33d3ea7f5200c444d3719136d840d79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac33d3ea7f5200c444d3719136d840d79">&#9670;&#160;</a></span>FullHeal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HealthSystem.FullHeal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_health_system_ac33d3ea7f5200c444d3719136d840d79_icgraph.png" border="0" usemap="#aclass_health_system_ac33d3ea7f5200c444d3719136d840d79_icgraph" alt=""/></div>
+<map name="aclass_health_system_ac33d3ea7f5200c444d3719136d840d79_icgraph" id="aclass_health_system_ac33d3ea7f5200c444d3719136d840d79_icgraph">
+<area shape="rect" title=" " alt="" coords="422,5,576,32"/>
+<area shape="rect" href="class_tower_platform.html#a5522423b2f2304f8f02effc7eb17ee7d" title=" " alt="" coords="204,5,374,32"/>
+<area shape="poly" title=" " alt="" coords="407,21,374,21,374,16,407,16"/>
+<area shape="rect" href="class_tower_platform.html#adb3441dc912cc8adaa789d99cce7d286" title=" " alt="" coords="5,5,156,32"/>
+<area shape="poly" title=" " alt="" coords="188,21,156,21,156,16,188,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aad51bd71dca6bdc6a85c5d5efb2c4ae0" name="aad51bd71dca6bdc6a85c5d5efb2c4ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad51bd71dca6bdc6a85c5d5efb2c4ae0">&#9670;&#160;</a></span>Heal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,16 +228,63 @@ Private Attributes</h2></td></tr>
           <td class="memname">void HealthSystem.Heal </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>damage</em></td><td>)</td>
+          <td class="paramname"><em>Heal</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_cgraph.png" border="0" usemap="#aclass_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_cgraph" alt=""/></div>
+<map name="aclass_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_cgraph" id="aclass_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,139,56"/>
+<area shape="poly" title=" " alt="" coords="48,30,44,21,47,11,57,5,72,3,88,5,97,12,94,16,86,10,72,8,59,10,51,14,50,20,53,28"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_icgraph.png" border="0" usemap="#aclass_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_icgraph" alt=""/></div>
+<map name="aclass_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_icgraph" id="aclass_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,139,56"/>
+<area shape="poly" title=" " alt="" coords="94,16,86,10,72,8,59,10,51,14,50,20,53,28,48,30,44,21,47,11,57,5,72,3,88,5,97,12"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a4b1bc3e4699d109081b60320b4483993" name="a4b1bc3e4699d109081b60320b4483993"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b1bc3e4699d109081b60320b4483993">&#9670;&#160;</a></span>Start()</h2>
+<a id="a7101f4a3a0c68882111b6093ebbc2652" name="a7101f4a3a0c68882111b6093ebbc2652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7101f4a3a0c68882111b6093ebbc2652">&#9670;&#160;</a></span>Respawn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HealthSystem.Respawn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_health_system_a7101f4a3a0c68882111b6093ebbc2652_icgraph.png" border="0" usemap="#aclass_health_system_a7101f4a3a0c68882111b6093ebbc2652_icgraph" alt=""/></div>
+<map name="aclass_health_system_a7101f4a3a0c68882111b6093ebbc2652_icgraph" id="aclass_health_system_a7101f4a3a0c68882111b6093ebbc2652_icgraph">
+<area shape="rect" title=" " alt="" coords="422,5,582,32"/>
+<area shape="rect" href="class_health_system.html#aac4f95a8abcedb6718f48c066b441956" title=" " alt="" coords="237,5,374,32"/>
+<area shape="poly" title=" " alt="" coords="407,21,374,21,374,16,407,16"/>
+<area shape="rect" href="class_health_system.html#a356e8d72c9518eec6341cf1f59cda76a" title=" " alt="" coords="5,5,189,32"/>
+<area shape="poly" title=" " alt="" coords="221,21,189,21,189,16,221,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aedfb8d521a69c8138eafc7af146299e9" name="aedfb8d521a69c8138eafc7af146299e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedfb8d521a69c8138eafc7af146299e9">&#9670;&#160;</a></span>Start()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -152,7 +293,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void HealthSystem.Start </td>
+          <td class="memname">virtual void HealthSystem.Start </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -160,33 +301,55 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Reimplemented in <a class="el" href="class_enemy_health_system.html#a36807e0d6d2250f01ef410d81c065336">EnemyHealthSystem</a>.</p>
+
 </div>
 </div>
-<a id="ad469a3ad94c9e1fbb92b9205badd3a86" name="ad469a3ad94c9e1fbb92b9205badd3a86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad469a3ad94c9e1fbb92b9205badd3a86">&#9670;&#160;</a></span>TakeDamage()</h2>
+<a id="a356e8d72c9518eec6341cf1f59cda76a" name="a356e8d72c9518eec6341cf1f59cda76a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a356e8d72c9518eec6341cf1f59cda76a">&#9670;&#160;</a></span>TakeDamage()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void HealthSystem.TakeDamage </td>
+          <td class="memname">virtual void HealthSystem.TakeDamage </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>damage</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_health_system_a356e8d72c9518eec6341cf1f59cda76a_cgraph.png" border="0" usemap="#aclass_health_system_a356e8d72c9518eec6341cf1f59cda76a_cgraph" alt=""/></div>
+<map name="aclass_health_system_a356e8d72c9518eec6341cf1f59cda76a_cgraph" id="aclass_health_system_a356e8d72c9518eec6341cf1f59cda76a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,189,32"/>
+<area shape="rect" href="class_health_system.html#aac4f95a8abcedb6718f48c066b441956" title=" " alt="" coords="237,5,374,32"/>
+<area shape="poly" title=" " alt="" coords="189,16,221,16,221,21,189,21"/>
+<area shape="rect" href="class_health_system.html#a7101f4a3a0c68882111b6093ebbc2652" title=" " alt="" coords="422,5,582,32"/>
+<area shape="poly" title=" " alt="" coords="375,16,406,16,406,21,375,21"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="af51c0011365e8fac7105c547c6c539f7" name="af51c0011365e8fac7105c547c6c539f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af51c0011365e8fac7105c547c6c539f7">&#9670;&#160;</a></span>Update()</h2>
+<a id="a0791884f34f179bb980c0f70a5c42a71" name="a0791884f34f179bb980c0f70a5c42a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0791884f34f179bb980c0f70a5c42a71">&#9670;&#160;</a></span>Update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,7 +358,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void HealthSystem.Update </td>
+          <td class="memname">virtual void HealthSystem.Update </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -203,10 +366,12 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_base_health_system.html#a38fc06c4cef7a65ccf947c2b59052d09">BaseHealthSystem</a>.</p>
 
 </div>
 </div>
@@ -226,7 +391,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -238,19 +403,11 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">float HealthSystem._currentHp</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -260,19 +417,11 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">float HealthSystem.maxHp</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>

@@ -1,5 +1,7 @@
 <map id="PlayerCombatSystem.Update" name="PlayerCombatSystem.Update">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,199,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,199,61"/>
 <area shape="rect" id="Node000002" href="$class_player_combat_system.html#a3480c39740badbe92ed142ea4c79603a" title=" " alt="" coords="247,5,437,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,16,231,16,231,21,199,21"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,34,231,30,232,35,199,39"/>
+<area shape="rect" id="Node000003" href="$class_player_combat_system.html#a19aba7de18f2a74a767279a22c9498c4" title=" " alt="" coords="248,56,436,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,57,233,61,232,67,199,62"/>
 </map>

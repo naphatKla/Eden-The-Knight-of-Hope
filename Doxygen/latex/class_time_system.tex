@@ -11,11 +11,12 @@ Inheritance diagram for Time\+System\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Time\+System\+:\nopagebreak
+Collaboration diagram for Time\+System\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=162pt]{class_time_system__coll__graph}
+\includegraphics[width=214pt]{class_time_system__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Types}
@@ -33,6 +34,10 @@ float \mbox{\hyperlink{class_time_system_aa9fab23d98070b757d1d49f8e8acf030}{Conv
 float \mbox{\hyperlink{class_time_system_aa6eae6aa7d7c6f53a011aaa46d231727}{Convert\+Hour\+To\+Sec}} (float hour)
 \item 
 bool \mbox{\hyperlink{class_time_system_a82e2a51fcdb9a514a1b2a18b2b392c1b}{Time\+Period\+Check}} (float x, float y)
+\item 
+float \mbox{\hyperlink{class_time_system_a7550e260f7a7d6b5f52ef75480b5cc62}{Get\+Current\+Time}} ()
+\item 
+\mbox{\hyperlink{class_time_system_a842de62f9695ad344e3567385604312d}{Time\+State}} \mbox{\hyperlink{class_time_system_ab6c62164cd0b0e9f2ca56bacc7057078}{Get\+Time\+State}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -50,6 +55,11 @@ float \mbox{\hyperlink{class_time_system_a5d84200da55d7620577f1c24c953d17d}{time
 int \mbox{\hyperlink{class_time_system_aafaa7bed4a3b1bc220c5980c464c877b}{day}}
 \item 
 \mbox{\hyperlink{class_time_system_a842de62f9695ad344e3567385604312d}{Time\+State}} \mbox{\hyperlink{class_time_system_a90910a5fcb427cd7c07669aa96ea6f89}{time\+State}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_time_system}{Time\+System}} \mbox{\hyperlink{class_time_system_ae617e0940c0aedfe161aed26afb0a567}{instance}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -128,7 +138,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ConvertSecToHour()}{ConvertSecToHour()}}
 {\footnotesize\ttfamily float Time\+System.\+Convert\+Sec\+To\+Hour (\begin{DoxyParamCaption}\item[{float}]{sec }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -175,6 +186,34 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{class_time_system_a6565c99878badb19f6127443687637ee_icgraph}
 \end{center}
 \end{figure}
+\Hypertarget{class_time_system_a7550e260f7a7d6b5f52ef75480b5cc62}\label{class_time_system_a7550e260f7a7d6b5f52ef75480b5cc62} 
+\index{TimeSystem@{TimeSystem}!GetCurrentTime@{GetCurrentTime}}
+\index{GetCurrentTime@{GetCurrentTime}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{GetCurrentTime()}{GetCurrentTime()}}
+{\footnotesize\ttfamily float Time\+System.\+Get\+Current\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_a7550e260f7a7d6b5f52ef75480b5cc62_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_time_system_ab6c62164cd0b0e9f2ca56bacc7057078}\label{class_time_system_ab6c62164cd0b0e9f2ca56bacc7057078} 
+\index{TimeSystem@{TimeSystem}!GetTimeState@{GetTimeState}}
+\index{GetTimeState@{GetTimeState}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{GetTimeState()}{GetTimeState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time_system_a842de62f9695ad344e3567385604312d}{Time\+State}} Time\+System.\+Get\+Time\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_ab6c62164cd0b0e9f2ca56bacc7057078_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{class_time_system_a1bc6bfd33a82487c0d43abf7404706d6}\label{class_time_system_a1bc6bfd33a82487c0d43abf7404706d6} 
 \index{TimeSystem@{TimeSystem}!Start@{Start}}
 \index{Start@{Start}!TimeSystem@{TimeSystem}}
@@ -201,7 +240,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{class_time_system_a82e2a51fcdb9a514a1b2a18b2b392c1b_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -289,6 +329,12 @@ Here is the call graph for this function\+:\nopagebreak
 \index{gameStartTime@{gameStartTime}!TimeSystem@{TimeSystem}}
 \doxysubsubsection{\texorpdfstring{gameStartTime}{gameStartTime}}
 {\footnotesize\ttfamily float Time\+System.\+game\+Start\+Time}
+
+\Hypertarget{class_time_system_ae617e0940c0aedfe161aed26afb0a567}\label{class_time_system_ae617e0940c0aedfe161aed26afb0a567} 
+\index{TimeSystem@{TimeSystem}!instance@{instance}}
+\index{instance@{instance}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time_system}{Time\+System}} Time\+System.\+instance\hspace{0.3cm}{\ttfamily [static]}}
 
 \Hypertarget{class_time_system_a5803ae6e1e3a112cc5df44c6c1380c05}\label{class_time_system_a5803ae6e1e3a112cc5df44c6c1380c05} 
 \index{TimeSystem@{TimeSystem}!lightDownPeriod@{lightDownPeriod}}

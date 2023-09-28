@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['offset_0',['offset',['../class_player_camera.html#a71f08dd53c8a631eb4f36eb8539ff6df',1,'PlayerCamera']]],
-  ['ondrawgizmos_1',['ondrawgizmos',['../class_enemy.html#a447a675aaf79cf23a7dbd6fac34d42b9',1,'Enemy.OnDrawGizmos()'],['../class_enemy_combat_system.html#aa575b9b742657e068216a6ad12dcbfad',1,'EnemyCombatSystem.OnDrawGizmos()'],['../class_player_interact_system.html#adfbf1a4e5a19c38af63694df9cb7e0b3',1,'PlayerInteractSystem.OnDrawGizmos()'],['../class_player_combat_system.html#a0aa3728f8b90c3bce7486164f77b215f',1,'PlayerCombatSystem.OnDrawGizmos()']]]
+  ['night_0',['Night',['../class_time_system.html#a842de62f9695ad344e3567385604312da0edc9b073397681dc9f2c479686ea0d9',1,'TimeSystem']]],
+  ['nightmode_1',['nightmode',['../class_enemy.html#a86288aef625be6e14d6d03baf646bcc0',1,'Enemy.nightMode'],['../class_enemy_spawner.html#adcab4faae23ac03cccc8c84203edcea5',1,'EnemySpawner.nightMode']]],
+  ['nighttime_2',['nightTime',['../class_time_system.html#a42af692e6df84588f5c66402d2383db1',1,'TimeSystem']]],
+  ['noofclick_3',['noOfClick',['../class_player_combat_system.html#a11ff00599f3158148fc1879792bdabf1',1,'PlayerCombatSystem']]],
+  ['npc_4',['NPC',['../class_enemy.html#a53aff336dbb3dd7847e86c3635273550a2bda99597da06a11feafd8760b68aec6',1,'Enemy']]]
 ];

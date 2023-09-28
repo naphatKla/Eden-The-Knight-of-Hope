@@ -1,0 +1,13 @@
+<map id="GameManager.AddPoint" name="GameManager.AddPoint">
+<area shape="rect" id="Node000001" title=" " alt="" coords="475,64,638,91"/>
+<area shape="rect" id="Node000002" href="$class_tower_platform.html#a5522423b2f2304f8f02effc7eb17ee7d" title=" " alt="" coords="245,5,415,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="487,62,384,35,385,30,488,57"/>
+<area shape="rect" id="Node000004" href="$class_interactable_object.html#a0480720dbbead938efa49673b23ec493" title=" " alt="" coords="233,56,427,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="459,80,428,80,428,75,459,75"/>
+<area shape="rect" id="Node000006" href="$class_enemy_health_system.html#a336c4bd4df3ac0fa0556f4319cad0cac" title=" " alt="" coords="241,123,419,149"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="488,98,385,125,384,120,487,93"/>
+<area shape="rect" id="Node000003" href="$class_tower_platform.html#adb3441dc912cc8adaa789d99cce7d286" title=" " alt="" coords="20,5,170,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,21,171,21,171,16,229,16"/>
+<area shape="rect" id="Node000005" href="$class_gathering_resource.html#a4b427b2bf671f9b988b09e09cdb50f05" title=" " alt="" coords="5,64,185,91"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="217,80,185,80,185,75,217,75"/>
+</map>

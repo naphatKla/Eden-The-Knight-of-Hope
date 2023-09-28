@@ -1,0 +1,7 @@
+<map id="HealthSystem.TakeDamage" name="HealthSystem.TakeDamage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,189,32"/>
+<area shape="rect" id="Node000002" href="$class_health_system.html#aac4f95a8abcedb6718f48c066b441956" title=" " alt="" coords="237,5,374,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,16,221,16,221,21,189,21"/>
+<area shape="rect" id="Node000003" href="$class_health_system.html#a7101f4a3a0c68882111b6093ebbc2652" title=" " alt="" coords="422,5,582,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="375,16,406,16,406,21,375,21"/>
+</map>

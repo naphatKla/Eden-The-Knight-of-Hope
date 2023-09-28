@@ -1,0 +1,125 @@
+\doxysection{Bullet Class Reference}
+\hypertarget{class_bullet}{}\label{class_bullet}\index{Bullet@{Bullet}}
+
+
+Inheritance diagram for Bullet\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_bullet__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bullet\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{class_bullet__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_bullet_afdd30df71c82e554b5e9237d6381f8e4}{Init}} (Game\+Object \mbox{\hyperlink{class_bullet_ad2e381c19d35eb17a3494bb75a2bd530}{target}}, float \mbox{\hyperlink{class_bullet_a75e914c39a4154ced3d653ae44a05539}{speed}}, float \mbox{\hyperlink{class_bullet_a7a07b8d87c70896760d578385d7c2eab}{damage}}, \mbox{\hyperlink{class_tower}{Tower}} \mbox{\hyperlink{class_bullet_a6369f48ce1b971c2dedb448c65c05285}{tower}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_bullet_ad2e381c19d35eb17a3494bb75a2bd530}{target}}
+\item 
+float \mbox{\hyperlink{class_bullet_a75e914c39a4154ced3d653ae44a05539}{speed}}
+\item 
+float \mbox{\hyperlink{class_bullet_a7a07b8d87c70896760d578385d7c2eab}{damage}}
+\item 
+\mbox{\hyperlink{class_tower}{Tower}} \mbox{\hyperlink{class_bullet_a6369f48ce1b971c2dedb448c65c05285}{tower}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_bullet_a4862c6392cf36c5c20f2ace5b1d8d484}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_bullet_ac6941e4e535a484e4b3a86b993633572}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_bullet_a984d616f502a30c039cd61ac906dbb71}{On\+Trigger\+Enter2D}} (Collider2D other)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Rigidbody2D \mbox{\hyperlink{class_bullet_a0c4401ee1961dcc862d071d8766c4be1}{rb2d}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bullet_afdd30df71c82e554b5e9237d6381f8e4}\label{class_bullet_afdd30df71c82e554b5e9237d6381f8e4} 
+\index{Bullet@{Bullet}!Init@{Init}}
+\index{Init@{Init}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Bullet.\+Init (\begin{DoxyParamCaption}\item[{Game\+Object}]{target,  }\item[{float}]{speed,  }\item[{float}]{damage,  }\item[{\mbox{\hyperlink{class_tower}{Tower}}}]{tower }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{class_bullet_afdd30df71c82e554b5e9237d6381f8e4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_bullet_a984d616f502a30c039cd61ac906dbb71}\label{class_bullet_a984d616f502a30c039cd61ac906dbb71} 
+\index{Bullet@{Bullet}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Bullet.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_bullet_a4862c6392cf36c5c20f2ace5b1d8d484}\label{class_bullet_a4862c6392cf36c5c20f2ace5b1d8d484} 
+\index{Bullet@{Bullet}!Start@{Start}}
+\index{Start@{Start}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Bullet.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_bullet_ac6941e4e535a484e4b3a86b993633572}\label{class_bullet_ac6941e4e535a484e4b3a86b993633572} 
+\index{Bullet@{Bullet}!Update@{Update}}
+\index{Update@{Update}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Bullet.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_bullet_a7a07b8d87c70896760d578385d7c2eab}\label{class_bullet_a7a07b8d87c70896760d578385d7c2eab} 
+\index{Bullet@{Bullet}!damage@{damage}}
+\index{damage@{damage}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{damage}{damage}}
+{\footnotesize\ttfamily float Bullet.\+damage}
+
+\Hypertarget{class_bullet_a0c4401ee1961dcc862d071d8766c4be1}\label{class_bullet_a0c4401ee1961dcc862d071d8766c4be1} 
+\index{Bullet@{Bullet}!rb2d@{rb2d}}
+\index{rb2d@{rb2d}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{rb2d}{rb2d}}
+{\footnotesize\ttfamily Rigidbody2D Bullet.\+rb2d\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_bullet_a75e914c39a4154ced3d653ae44a05539}\label{class_bullet_a75e914c39a4154ced3d653ae44a05539} 
+\index{Bullet@{Bullet}!speed@{speed}}
+\index{speed@{speed}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily float Bullet.\+speed}
+
+\Hypertarget{class_bullet_ad2e381c19d35eb17a3494bb75a2bd530}\label{class_bullet_ad2e381c19d35eb17a3494bb75a2bd530} 
+\index{Bullet@{Bullet}!target@{target}}
+\index{target@{target}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily Game\+Object Bullet.\+target}
+
+\Hypertarget{class_bullet_a6369f48ce1b971c2dedb448c65c05285}\label{class_bullet_a6369f48ce1b971c2dedb448c65c05285} 
+\index{Bullet@{Bullet}!tower@{tower}}
+\index{tower@{tower}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{tower}{tower}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tower}{Tower}} Bullet.\+tower}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\mbox{\hyperlink{_bullet_8cs}{Bullet.\+cs}}\end{DoxyCompactItemize}

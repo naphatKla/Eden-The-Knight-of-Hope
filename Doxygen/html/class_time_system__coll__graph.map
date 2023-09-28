@@ -1,5 +1,6 @@
 <map id="TimeSystem" name="TimeSystem">
-<area shape="rect" id="Node000001" title=" " alt="" coords="13,80,107,107"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="13,81,107,108"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="124,87,134,95,125,102,108,104,107,99,123,97,129,95,121,91"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,5,115,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,48,63,80,57,80,57,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,47,63,81,57,81,57,47"/>
 </map>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['zoommultiplier_0',['zoomMultiplier',['../class_player_camera.html#a0292920ea389a1d2573a61f0126bc91e',1,'PlayerCamera']]],
-  ['zoomsmoothtime_1',['zoomSmoothTime',['../class_player_camera.html#af8cc99cf9b44086c79fa1bb906d79d79',1,'PlayerCamera']]]
+  ['viewdistance_0',['viewDistance',['../class_enemy.html#a1e3c867cd62062f40cd6869f3f641e26',1,'Enemy']]]
 ];

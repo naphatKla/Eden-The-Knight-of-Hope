@@ -1,0 +1,170 @@
+\doxysection{Enemy\+Spawner Class Reference}
+\hypertarget{class_enemy_spawner}{}\label{class_enemy_spawner}\index{EnemySpawner@{EnemySpawner}}
+
+
+Inheritance diagram for Enemy\+Spawner\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_enemy_spawner__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Enemy\+Spawner\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_enemy_spawner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_enemy_spawner_ac5362fd936aef0058f202211f3d54f4e}{enemy\+Prefab}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_enemy_spawner_a466324420d7d75410673a13b15c84d44}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_enemy_spawner_a308cab115d1ecd6b69cc675b709de4a0}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_enemy_spawner_aea1ed725ee94b378adae8475d1dd47e7}{On\+Draw\+Gizmos}} ()
+\item 
+IEnumerator \mbox{\hyperlink{class_enemy_spawner_aaf89219b4e56d54391e7832f08cc8ec7}{Spawn\+Enemy}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{class_enemy_spawner_a7318f28c8202a80738e17b2b128b9b8a}{enemy\+Spawn\+Radius}} = new Vector2(10f, 10f)
+\item 
+float \mbox{\hyperlink{class_enemy_spawner_a981e91a811bef3c895682f64adc1a9f9}{enemy\+Spawn\+Time}}
+\item 
+int \mbox{\hyperlink{class_enemy_spawner_ac34b6a42a9d6f260ffd25eaec192f943}{max\+Enemy}} = 4
+\item 
+int \mbox{\hyperlink{class_enemy_spawner_a7685bad65142e0d0e7df0802ec2c1ea2}{current\+Enemy\+Count}}
+\item 
+bool \mbox{\hyperlink{class_enemy_spawner_adcab4faae23ac03cccc8c84203edcea5}{night\+Mode}}
+\item 
+Layer\+Mask \mbox{\hyperlink{class_enemy_spawner_a4469a380ee17f2165eb9a9658aef43e7}{player\+Mask}}
+\item 
+bool \mbox{\hyperlink{class_enemy_spawner_a420d4386c159a02e1547c00b1a0274e0}{is\+Reduce\+Rate}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_enemy_spawner_aea1ed725ee94b378adae8475d1dd47e7}\label{class_enemy_spawner_aea1ed725ee94b378adae8475d1dd47e7} 
+\index{EnemySpawner@{EnemySpawner}!OnDrawGizmos@{OnDrawGizmos}}
+\index{OnDrawGizmos@{OnDrawGizmos}!EnemySpawner@{EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{OnDrawGizmos()}{OnDrawGizmos()}}
+{\footnotesize\ttfamily void Enemy\+Spawner.\+On\+Draw\+Gizmos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_spawner_aaf89219b4e56d54391e7832f08cc8ec7}\label{class_enemy_spawner_aaf89219b4e56d54391e7832f08cc8ec7} 
+\index{EnemySpawner@{EnemySpawner}!SpawnEnemy@{SpawnEnemy}}
+\index{SpawnEnemy@{SpawnEnemy}!EnemySpawner@{EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{SpawnEnemy()}{SpawnEnemy()}}
+{\footnotesize\ttfamily IEnumerator Enemy\+Spawner.\+Spawn\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_enemy_spawner_aaf89219b4e56d54391e7832f08cc8ec7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_enemy_spawner_aaf89219b4e56d54391e7832f08cc8ec7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_enemy_spawner_a466324420d7d75410673a13b15c84d44}\label{class_enemy_spawner_a466324420d7d75410673a13b15c84d44} 
+\index{EnemySpawner@{EnemySpawner}!Start@{Start}}
+\index{Start@{Start}!EnemySpawner@{EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Enemy\+Spawner.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_enemy_spawner_a466324420d7d75410673a13b15c84d44_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_enemy_spawner_a308cab115d1ecd6b69cc675b709de4a0}\label{class_enemy_spawner_a308cab115d1ecd6b69cc675b709de4a0} 
+\index{EnemySpawner@{EnemySpawner}!Update@{Update}}
+\index{Update@{Update}!EnemySpawner@{EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Enemy\+Spawner.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_enemy_spawner_a308cab115d1ecd6b69cc675b709de4a0_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_enemy_spawner_a7685bad65142e0d0e7df0802ec2c1ea2}\label{class_enemy_spawner_a7685bad65142e0d0e7df0802ec2c1ea2} 
+\index{EnemySpawner@{EnemySpawner}!currentEnemyCount@{currentEnemyCount}}
+\index{currentEnemyCount@{currentEnemyCount}!EnemySpawner@{EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{currentEnemyCount}{currentEnemyCount}}
+{\footnotesize\ttfamily int Enemy\+Spawner.\+current\+Enemy\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_spawner_ac5362fd936aef0058f202211f3d54f4e}\label{class_enemy_spawner_ac5362fd936aef0058f202211f3d54f4e} 
+\index{EnemySpawner@{EnemySpawner}!enemyPrefab@{enemyPrefab}}
+\index{enemyPrefab@{enemyPrefab}!EnemySpawner@{EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{enemyPrefab}{enemyPrefab}}
+{\footnotesize\ttfamily Game\+Object Enemy\+Spawner.\+enemy\+Prefab}
+
+\Hypertarget{class_enemy_spawner_a7318f28c8202a80738e17b2b128b9b8a}\label{class_enemy_spawner_a7318f28c8202a80738e17b2b128b9b8a} 
+\index{EnemySpawner@{EnemySpawner}!enemySpawnRadius@{enemySpawnRadius}}
+\index{enemySpawnRadius@{enemySpawnRadius}!EnemySpawner@{EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{enemySpawnRadius}{enemySpawnRadius}}
+{\footnotesize\ttfamily Vector2 Enemy\+Spawner.\+enemy\+Spawn\+Radius = new Vector2(10f, 10f)\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_spawner_a981e91a811bef3c895682f64adc1a9f9}\label{class_enemy_spawner_a981e91a811bef3c895682f64adc1a9f9} 
+\index{EnemySpawner@{EnemySpawner}!enemySpawnTime@{enemySpawnTime}}
+\index{enemySpawnTime@{enemySpawnTime}!EnemySpawner@{EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{enemySpawnTime}{enemySpawnTime}}
+{\footnotesize\ttfamily float Enemy\+Spawner.\+enemy\+Spawn\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_spawner_a420d4386c159a02e1547c00b1a0274e0}\label{class_enemy_spawner_a420d4386c159a02e1547c00b1a0274e0} 
+\index{EnemySpawner@{EnemySpawner}!isReduceRate@{isReduceRate}}
+\index{isReduceRate@{isReduceRate}!EnemySpawner@{EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{isReduceRate}{isReduceRate}}
+{\footnotesize\ttfamily bool Enemy\+Spawner.\+is\+Reduce\+Rate = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_spawner_ac34b6a42a9d6f260ffd25eaec192f943}\label{class_enemy_spawner_ac34b6a42a9d6f260ffd25eaec192f943} 
+\index{EnemySpawner@{EnemySpawner}!maxEnemy@{maxEnemy}}
+\index{maxEnemy@{maxEnemy}!EnemySpawner@{EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{maxEnemy}{maxEnemy}}
+{\footnotesize\ttfamily int Enemy\+Spawner.\+max\+Enemy = 4\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_spawner_adcab4faae23ac03cccc8c84203edcea5}\label{class_enemy_spawner_adcab4faae23ac03cccc8c84203edcea5} 
+\index{EnemySpawner@{EnemySpawner}!nightMode@{nightMode}}
+\index{nightMode@{nightMode}!EnemySpawner@{EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{nightMode}{nightMode}}
+{\footnotesize\ttfamily bool Enemy\+Spawner.\+night\+Mode\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_enemy_spawner_a4469a380ee17f2165eb9a9658aef43e7}\label{class_enemy_spawner_a4469a380ee17f2165eb9a9658aef43e7} 
+\index{EnemySpawner@{EnemySpawner}!playerMask@{playerMask}}
+\index{playerMask@{playerMask}!EnemySpawner@{EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{playerMask}{playerMask}}
+{\footnotesize\ttfamily Layer\+Mask Enemy\+Spawner.\+player\+Mask\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\mbox{\hyperlink{_enemy_spawner_8cs}{Enemy\+Spawner.\+cs}}\end{DoxyCompactItemize}

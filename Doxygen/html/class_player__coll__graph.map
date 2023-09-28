@@ -1,5 +1,6 @@
 <map id="Player" name="Player">
-<area shape="rect" id="Node000001" title=" " alt="" coords="31,80,89,107"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="31,81,89,108"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="106,86,116,95,107,103,90,104,89,99,105,98,111,95,103,91"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,5,115,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,48,63,80,57,80,57,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,47,63,81,57,81,57,47"/>
 </map>

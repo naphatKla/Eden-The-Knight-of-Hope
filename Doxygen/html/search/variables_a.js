@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['nightmode_0',['nightMode',['../class_enemy.html#a86288aef625be6e14d6d03baf646bcc0',1,'Enemy']]],
-  ['nighttime_1',['nightTime',['../class_time_system.html#a42af692e6df84588f5c66402d2383db1',1,'TimeSystem']]]
+  ['lightdownperiod_0',['lightDownPeriod',['../class_time_system.html#a5803ae6e1e3a112cc5df44c6c1380c05',1,'TimeSystem']]],
+  ['lightupperiod_1',['lightUpPeriod',['../class_time_system.html#af7162d28565579a249f5c0f3b452a193',1,'TimeSystem']]]
 ];

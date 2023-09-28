@@ -11,11 +11,12 @@ Inheritance diagram for Player\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Player\+:\nopagebreak
+Collaboration diagram for Player\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=162pt]{class_player__coll__graph}
+\includegraphics[width=201pt]{class_player__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Types}
@@ -27,10 +28,20 @@ enum \mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9}{Player\+St
 , \mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9a3663598d5c5858b5a6040b1bbed4f187}{Dash}}
  \}
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_aa9d5e71192411f55aeb47156c009f120}{Reset\+State}} ()
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9}{Player\+State}} \mbox{\hyperlink{class_player_ab0c6e39ba2fb155e514039a4def8f8ab}{player\+State}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_player_ab6f37ee8efe0ca124019749ad8aa4587}{instance}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -75,6 +86,8 @@ Sprite\+Renderer \mbox{\hyperlink{class_player_ab5314141b233b02f551acd01dd30fa98
 float \mbox{\hyperlink{class_player_af644e90909ae1aaee282b29b3f161da2}{\+\_\+current\+Speed}}
 \item 
 bool \mbox{\hyperlink{class_player_a9f4cf12c4af9871a2bc08915659e061e}{\+\_\+is\+Dash}}
+\item 
+bool \mbox{\hyperlink{class_player_a6f5b6c07e43a0e3869a8d01cbf30201c}{\+\_\+is\+Running}}
 \end{DoxyCompactItemize}
 
 
@@ -179,13 +192,28 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=315pt]{class_player_ab9121efd0a345ec0feec9f3d39aeb4a7_icgraph}
 \end{center}
 \end{figure}
+\Hypertarget{class_player_aa9d5e71192411f55aeb47156c009f120}\label{class_player_aa9d5e71192411f55aeb47156c009f120} 
+\index{Player@{Player}!ResetState@{ResetState}}
+\index{ResetState@{ResetState}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{ResetState()}{ResetState()}}
+{\footnotesize\ttfamily void Player.\+Reset\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_player_aa9d5e71192411f55aeb47156c009f120_cgraph}
+\end{center}
+\end{figure}
 \Hypertarget{class_player_abeefe75958c0ae74e9a1f290848e5326}\label{class_player_abeefe75958c0ae74e9a1f290848e5326} 
 \index{Player@{Player}!SetPlayerState@{SetPlayerState}}
 \index{SetPlayerState@{SetPlayerState}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{SetPlayerState()}{SetPlayerState()}}
 {\footnotesize\ttfamily void Player.\+Set\+Player\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_a07fe57ec176032714d7d6de076b06ec9}{Player\+State}}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -272,6 +300,12 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{\_isDash}{\_isDash}}
 {\footnotesize\ttfamily bool Player.\+\_\+is\+Dash\hspace{0.3cm}{\ttfamily [private]}}
 
+\Hypertarget{class_player_a6f5b6c07e43a0e3869a8d01cbf30201c}\label{class_player_a6f5b6c07e43a0e3869a8d01cbf30201c} 
+\index{Player@{Player}!\_isRunning@{\_isRunning}}
+\index{\_isRunning@{\_isRunning}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{\_isRunning}{\_isRunning}}
+{\footnotesize\ttfamily bool Player.\+\_\+is\+Running\hspace{0.3cm}{\ttfamily [private]}}
+
 \Hypertarget{class_player_ae4bcf65c406614983e01f9f4ff55bc54}\label{class_player_ae4bcf65c406614983e01f9f4ff55bc54} 
 \index{Player@{Player}!\_playerRigidbody2D@{\_playerRigidbody2D}}
 \index{\_playerRigidbody2D@{\_playerRigidbody2D}!Player@{Player}}
@@ -301,6 +335,12 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{dashSpeed@{dashSpeed}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{dashSpeed}{dashSpeed}}
 {\footnotesize\ttfamily float Player.\+dash\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_ab6f37ee8efe0ca124019749ad8aa4587}\label{class_player_ab6f37ee8efe0ca124019749ad8aa4587} 
+\index{Player@{Player}!instance@{instance}}
+\index{instance@{instance}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}} Player.\+instance\hspace{0.3cm}{\ttfamily [static]}}
 
 \Hypertarget{class_player_ab0c6e39ba2fb155e514039a4def8f8ab}\label{class_player_ab0c6e39ba2fb155e514039a4def8f8ab} 
 \index{Player@{Player}!playerState@{playerState}}
