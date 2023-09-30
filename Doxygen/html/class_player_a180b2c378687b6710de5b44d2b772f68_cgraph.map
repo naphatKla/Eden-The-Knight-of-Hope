@@ -1,7 +1,7 @@
 <map id="Player.SprintHandle" name="Player.SprintHandle">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,142,57"/>
-<area shape="rect" id="Node000002" href="$class_player.html#a33d429ce060086748994165a67efa960" title=" " alt="" coords="190,5,357,32"/>
+<area shape="rect" id="Node000001" title="Sprint System." alt="" coords="5,31,142,57"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a33d429ce060086748994165a67efa960" title="Use to check the current player state." alt="" coords="190,5,357,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,33,174,29,174,34,142,38"/>
-<area shape="rect" id="Node000003" href="$class_player.html#abeefe75958c0ae74e9a1f290848e5326" title=" " alt="" coords="198,56,349,83"/>
+<area shape="rect" id="Node000003" href="$class_player.html#abeefe75958c0ae74e9a1f290848e5326" title="Use for set player state." alt="" coords="198,56,349,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="142,50,183,55,182,60,142,55"/>
 </map>

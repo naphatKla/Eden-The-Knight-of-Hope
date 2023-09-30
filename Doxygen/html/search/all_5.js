@@ -8,13 +8,10 @@ var searchData=
   ['enemyhealthsystem_5',['EnemyHealthSystem',['../class_enemy_health_system.html',1,'']]],
   ['enemyhealthsystem_2ecs_6',['EnemyHealthSystem.cs',['../_enemy_health_system_8cs.html',1,'']]],
   ['enemylayer_7',['enemyLayer',['../class_player_combat_system.html#a7d76e156496ae879da8f2d3acda8f619',1,'PlayerCombatSystem']]],
-  ['enemyprefab_8',['enemyprefab',['../class_enemy_spawner.html#ac5362fd936aef0058f202211f3d54f4e',1,'EnemySpawner.enemyPrefab'],['../class_enemy_spawner2.html#a23e9089743509ef480220b92a0724418',1,'EnemySpawner2.enemyPrefab']]],
+  ['enemyprefab_8',['enemyPrefab',['../class_enemy_spawner.html#ac5362fd936aef0058f202211f3d54f4e',1,'EnemySpawner']]],
   ['enemyspawner_9',['EnemySpawner',['../class_enemy_spawner.html',1,'']]],
   ['enemyspawner_2ecs_10',['EnemySpawner.cs',['../_enemy_spawner_8cs.html',1,'']]],
-  ['enemyspawner1_2ecs_11',['EnemySpawner1.cs',['../_enemy_spawner1_8cs.html',1,'']]],
-  ['enemyspawner2_12',['EnemySpawner2',['../class_enemy_spawner2.html',1,'']]],
-  ['enemyspawnpoint_13',['enemySpawnPoint',['../class_enemy_spawner2.html#ac70fe930a5dea0b02818ccac90c7e463',1,'EnemySpawner2']]],
-  ['enemyspawnradius_14',['enemyspawnradius',['../class_enemy_spawner.html#a7318f28c8202a80738e17b2b128b9b8a',1,'EnemySpawner.enemySpawnRadius'],['../class_enemy_spawner2.html#ab49411428b608294c0156f16933d64db',1,'EnemySpawner2.enemySpawnRadius']]],
-  ['enemyspawntime_15',['enemyspawntime',['../class_enemy_spawner.html#a981e91a811bef3c895682f64adc1a9f9',1,'EnemySpawner.enemySpawnTime'],['../class_enemy_spawner2.html#ae8efd0e22d0285075e0f63fde427c8bb',1,'EnemySpawner2.enemySpawnTime']]],
-  ['enemystate_16',['EnemyState',['../class_enemy.html#a14bead85804fe8c4cfd27ea20122594d',1,'Enemy']]]
+  ['enemyspawnradius_11',['enemySpawnRadius',['../class_enemy_spawner.html#a7318f28c8202a80738e17b2b128b9b8a',1,'EnemySpawner']]],
+  ['enemyspawntime_12',['enemySpawnTime',['../class_enemy_spawner.html#a981e91a811bef3c895682f64adc1a9f9',1,'EnemySpawner']]],
+  ['enemystate_13',['EnemyState',['../class_enemy.html#a14bead85804fe8c4cfd27ea20122594d',1,'Enemy']]]
 ];

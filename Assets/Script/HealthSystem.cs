@@ -57,7 +57,7 @@ public class HealthSystem : MonoBehaviour
     {
         transform.position = GameManager.instance.spawnPoint;
         gameObject.SetActive(true);
-        gameObject.GetComponent<Player>().ResetState();
+        gameObject.GetComponent<Player>().Reset();
         _currentHp = maxHp;
         sliderHpPlayer.value = _currentHp / maxHp;
     }

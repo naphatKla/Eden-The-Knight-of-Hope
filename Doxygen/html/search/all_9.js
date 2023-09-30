@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['idle_0',['idle',['../class_enemy.html#a14bead85804fe8c4cfd27ea20122594dae599161956d626eda4cb0a5ffb85271c',1,'Enemy.Idle'],['../class_player.html#a07fe57ec176032714d7d6de076b06ec9ae599161956d626eda4cb0a5ffb85271c',1,'Player.Idle']]],
+  ['idle_0',['idle',['../class_enemy.html#a14bead85804fe8c4cfd27ea20122594dae599161956d626eda4cb0a5ffb85271c',1,'Enemy.Idle'],['../_player_8cs.html#a3c730f37b1b3a893159bada67637fdb1ae599161956d626eda4cb0a5ffb85271c',1,'Idle:&#160;Player.cs']]],
   ['init_1',['Init',['../class_bullet.html#afdd30df71c82e554b5e9237d6381f8e4',1,'Bullet']]],
-  ['instance_2',['instance',['../class_game_manager.html#a7666e8468dac197b9eb32dd32128524f',1,'GameManager.instance'],['../class_player.html#ab6f37ee8efe0ca124019749ad8aa4587',1,'Player.instance'],['../class_time_system.html#ae617e0940c0aedfe161aed26afb0a567',1,'TimeSystem.instance']]],
+  ['instance_2',['instance',['../class_game_manager.html#a7666e8468dac197b9eb32dd32128524f',1,'GameManager.instance'],['../class_time_system.html#ae617e0940c0aedfe161aed26afb0a567',1,'TimeSystem.instance'],['../class_player.html#aff08b341c76fb1c361d87556dc552975',1,'Player.Instance']]],
   ['interact_3',['interact',['../class_gathering_resource.html#a4b427b2bf671f9b988b09e09cdb50f05',1,'GatheringResource.Interact()'],['../class_interactable_object.html#a8d24c5e90977f2f0c08f36bed0b1d021',1,'InteractableObject.Interact()'],['../class_tower_platform.html#adb3441dc912cc8adaa789d99cce7d286',1,'TowerPlatform.Interact()']]],
   ['interactablemask_4',['interactableMask',['../class_player_interact_system.html#a83427c9644da1ecec576de6373120712',1,'PlayerInteractSystem']]],
   ['interactableobject_5',['interactableobject',['../class_interactable_object.html',1,'InteractableObject'],['../class_player_interact_system.html#abbd864d3402430f5e2b7b7b0f9b97a69',1,'PlayerInteractSystem.interactableObject']]],

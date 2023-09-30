@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['instance_0',['instance',['../class_game_manager.html#a7666e8468dac197b9eb32dd32128524f',1,'GameManager.instance'],['../class_player.html#ab6f37ee8efe0ca124019749ad8aa4587',1,'Player.instance'],['../class_time_system.html#ae617e0940c0aedfe161aed26afb0a567',1,'TimeSystem.instance']]],
+  ['instance_0',['instance',['../class_game_manager.html#a7666e8468dac197b9eb32dd32128524f',1,'GameManager.instance'],['../class_time_system.html#ae617e0940c0aedfe161aed26afb0a567',1,'TimeSystem.instance'],['../class_player.html#aff08b341c76fb1c361d87556dc552975',1,'Player.Instance']]],
   ['interactablemask_1',['interactableMask',['../class_player_interact_system.html#a83427c9644da1ecec576de6373120712',1,'PlayerInteractSystem']]],
   ['interactableobject_2',['interactableObject',['../class_player_interact_system.html#abbd864d3402430f5e2b7b7b0f9b97a69',1,'PlayerInteractSystem']]],
   ['interactionindicators_3',['interactionIndicators',['../class_interactable_object.html#a3fda367b1a4d9fb1260a6cae17efffae',1,'InteractableObject']]],

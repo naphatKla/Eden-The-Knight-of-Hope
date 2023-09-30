@@ -1,7 +1,7 @@
 var searchData=
 [
   ['damage_0',['damage',['../class_bullet.html#a7a07b8d87c70896760d578385d7c2eab',1,'Bullet']]],
-  ['dash_1',['dash',['../class_player.html#a6c9cbd565959c1f4a6b78f78096a619c',1,'Player.Dash()'],['../class_player.html#a07fe57ec176032714d7d6de076b06ec9a3663598d5c5858b5a6040b1bbed4f187',1,'Player.Dash']]],
+  ['dash_1',['dash',['../class_player.html#a6c9cbd565959c1f4a6b78f78096a619c',1,'Player.Dash()'],['../_player_8cs.html#a3c730f37b1b3a893159bada67637fdb1a3663598d5c5858b5a6040b1bbed4f187',1,'Dash:&#160;Player.cs']]],
   ['dashdelay_2',['dashDelay',['../class_player.html#ae112ee8ce1be183f919f75ba72ad81f9',1,'Player']]],
   ['dashduration_3',['dashDuration',['../class_player.html#a1689b529345cf78db3cc93251f19cf19',1,'Player']]],
   ['dashhandle_4',['DashHandle',['../class_player.html#a26518807fa77390488e153617ef08cfb',1,'Player']]],

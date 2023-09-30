@@ -1,16 +1,16 @@
 <map id="Player.SetPlayerState" name="Player.SetPlayerState">
-<area shape="rect" id="Node000001" title=" " alt="" coords="726,81,876,108"/>
-<area shape="rect" id="Node000002" href="$class_player.html#a6c9cbd565959c1f4a6b78f78096a619c" title=" " alt="" coords="568,5,660,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="751,77,677,46,649,35,651,30,679,42,753,73"/>
-<area shape="rect" id="Node000006" href="$class_player.html#aa9d5e71192411f55aeb47156c009f120" title=" " alt="" coords="550,56,678,83"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="710,85,678,81,679,75,710,80"/>
-<area shape="rect" id="Node000007" href="$class_player.html#a180b2c378687b6710de5b44d2b772f68" title=" " alt="" coords="366,107,502,133"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="711,104,503,118,503,113,710,98"/>
-<area shape="rect" id="Node000008" href="$class_player.html#ab37b64ea6597e44f6738571f68f8db63" title=" " alt="" coords="368,157,500,184"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="718,114,501,160,500,154,717,109"/>
-<area shape="rect" id="Node000003" href="$class_player.html#a26518807fa77390488e153617ef08cfb" title=" " alt="" coords="368,31,500,57"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="553,30,501,37,501,32,552,25"/>
-<area shape="rect" id="Node000004" href="$class_player.html#ab9121efd0a345ec0feec9f3d39aeb4a7" title=" " alt="" coords="157,107,318,133"/>
+<area shape="rect" id="Node000001" title="Use for set player state." alt="" coords="695,81,845,108"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a6c9cbd565959c1f4a6b78f78096a619c" title="Dash behavior for start coroutine in dash system." alt="" coords="552,5,645,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="723,77,629,35,632,30,725,72"/>
+<area shape="rect" id="Node000006" href="$class_player.html#a1bfa27bdc2f0a69f157a35920a3ad3bf" title="Reset every behavior to default. ( Use when start / respawn. )" alt="" coords="550,56,647,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="679,84,647,79,648,74,679,79"/>
+<area shape="rect" id="Node000007" href="$class_player.html#a180b2c378687b6710de5b44d2b772f68" title="Sprint System." alt="" coords="366,107,502,133"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="679,104,503,118,503,112,679,99"/>
+<area shape="rect" id="Node000008" href="$class_player.html#ab37b64ea6597e44f6738571f68f8db63" title="Walk System." alt="" coords="368,157,500,184"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="693,115,497,159,496,154,692,109"/>
+<area shape="rect" id="Node000003" href="$class_player.html#a26518807fa77390488e153617ef08cfb" title="Use for handle dash system." alt="" coords="368,31,500,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="537,31,501,36,500,31,536,26"/>
+<area shape="rect" id="Node000004" href="$class_player.html#ab9121efd0a345ec0feec9f3d39aeb4a7" title="Use for control the player movement system." alt="" coords="157,107,318,133"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="384,66,275,109,273,104,382,61"/>
 <area shape="rect" id="Node000005" href="$class_player.html#aace80372e18e32fe177e295fe5d93ba8" title=" " alt="" coords="5,107,109,133"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="141,123,109,123,109,117,141,117"/>
