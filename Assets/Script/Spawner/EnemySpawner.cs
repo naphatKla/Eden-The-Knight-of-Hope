@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -22,8 +20,7 @@ public class EnemySpawner : MonoBehaviour
     
     void Update()
     {
-
-        bool isNight = TimeSystem.instance.GetTimeState() == TimeSystem.TimeState.Night;
+        bool isNight = TimeSystem.instance.GetTimeState() == TimeState.Night;
         
         if (!isNight)
         {
@@ -59,7 +56,7 @@ public class EnemySpawner : MonoBehaviour
 
         while (true)
         {
-            bool isNight = TimeSystem.instance.GetTimeState() == TimeSystem.TimeState.Night;
+            bool isNight = TimeSystem.instance.GetTimeState() == TimeState.Night;
             if (nightMode)
             {
                 if (!isNight)

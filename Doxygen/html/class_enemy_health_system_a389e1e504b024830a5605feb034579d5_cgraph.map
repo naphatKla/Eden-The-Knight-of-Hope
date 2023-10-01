@@ -2,6 +2,6 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,23,230,65"/>
 <area shape="rect" id="Node000002" href="$class_enemy_health_system.html#a0c72b24443e497097615c26f0bbabd9a" title=" " alt="" coords="302,5,478,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,31,286,26,287,31,230,36"/>
-<area shape="rect" id="Node000003" href="$class_enemy_health_system.html#a1521c810076fd4900be3765ee7a3b620" title=" " alt="" coords="278,56,502,83"/>
+<area shape="rect" id="Node000003" href="$class_enemy_health_system.html#a1283a59b0272eaa0661ff20ef0204b09" title="Take damage and reduce the current hp." alt="" coords="278,56,502,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="230,52,262,55,262,60,230,57"/>
 </map>

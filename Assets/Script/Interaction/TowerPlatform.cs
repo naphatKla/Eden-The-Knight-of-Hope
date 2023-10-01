@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class TowerPlatform : InteractableObject
 {
@@ -51,9 +49,9 @@ public class TowerPlatform : InteractableObject
         {
             HealthSystem towerHealth = _tower.GetComponent<HealthSystem>();
 
-            if (towerHealth._currentHp < towerHealth.maxHp)
+            if (towerHealth.CurrentHp < towerHealth.maxHp)
             {
-                towerHealth.FullHeal();
+                towerHealth.ResetHealth();
                 GameManager.instance.AddPoint(-1*cost);
             }
         }

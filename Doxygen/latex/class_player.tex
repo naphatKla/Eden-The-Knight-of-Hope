@@ -11,8 +11,7 @@ Inheritance diagram for Player\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Player\+:
-\nopagebreak
+Collaboration diagram for Player\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -66,7 +65,11 @@ float \mbox{\hyperlink{class_player_a7d79f1e0e885f518498a6f78320df5a8}{dash\+Spe
 \item 
 float \mbox{\hyperlink{class_player_a1689b529345cf78db3cc93251f19cf19}{dash\+Duration}}
 \item 
-float \mbox{\hyperlink{class_player_ae112ee8ce1be183f919f75ba72ad81f9}{dash\+Delay}}
+float \mbox{\hyperlink{class_player_a9efbdaf17d363eed97f3736256d8703a}{dash\+Cooldown}}
+\item 
+Key\+Code \mbox{\hyperlink{class_player_a1e478df8191dbd619cc1111dba542cea}{sprint\+Key}}
+\item 
+Key\+Code \mbox{\hyperlink{class_player_a2b8e03c81dae281155f18c712466bf97}{dash\+Key}}
 \item 
 bool \mbox{\hyperlink{class_player_a9f4cf12c4af9871a2bc08915659e061e}{\+\_\+is\+Dash}}
 \item 
@@ -103,8 +106,7 @@ Use to check the current player state.
 \begin{DoxyReturn}{Returns}
 Is current state is equal to the input state or not. (True/\+False)
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -121,16 +123,14 @@ Here is the caller graph for this function\+:
 
 Dash behavior for start coroutine in dash system. 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=298pt]{class_player_a6c9cbd565959c1f4a6b78f78096a619c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -147,16 +147,14 @@ Here is the caller graph for this function\+:
 
 Use for handle dash system. 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_player_a26518807fa77390488e153617ef08cfb_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -173,16 +171,14 @@ Here is the caller graph for this function\+:
 
 Use for control the player movement system. 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_player_ab9121efd0a345ec0feec9f3d39aeb4a7_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -199,12 +195,18 @@ Here is the caller graph for this function\+:
 
 Reset every behavior to default. ( Use when start / respawn. ) 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=301pt]{class_player_a1bfa27bdc2f0a69f157a35920a3ad3bf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{class_player_a1bfa27bdc2f0a69f157a35920a3ad3bf_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{class_player_abeefe75958c0ae74e9a1f290848e5326}\label{class_player_abeefe75958c0ae74e9a1f290848e5326} 
@@ -222,8 +224,7 @@ Use for set player state.
 {\em state} & State that you want to set.\\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -240,16 +241,14 @@ Here is the caller graph for this function\+:
 
 Sprint System. 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=344pt]{class_player_a180b2c378687b6710de5b44d2b772f68_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -262,14 +261,20 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{Start()}{Start()}}
 {\footnotesize\ttfamily void Player.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_a1a09a3ded16ac1646f6bdd4f25fe0ddd_cgraph}
+\end{center}
+\end{figure}
 \Hypertarget{class_player_aace80372e18e32fe177e295fe5d93ba8}\label{class_player_aace80372e18e32fe177e295fe5d93ba8} 
 \index{Player@{Player}!Update@{Update}}
 \index{Update@{Update}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{Update()}{Update()}}
 {\footnotesize\ttfamily void Player.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -286,16 +291,14 @@ Here is the call graph for this function\+:
 
 Walk System. 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=341pt]{class_player_ab37b64ea6597e44f6738571f68f8db63_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -347,17 +350,23 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{\_spriteRenderer}{\_spriteRenderer}}
 {\footnotesize\ttfamily Sprite\+Renderer Player.\+\_\+sprite\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
 
-\Hypertarget{class_player_ae112ee8ce1be183f919f75ba72ad81f9}\label{class_player_ae112ee8ce1be183f919f75ba72ad81f9} 
-\index{Player@{Player}!dashDelay@{dashDelay}}
-\index{dashDelay@{dashDelay}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{dashDelay}{dashDelay}}
-{\footnotesize\ttfamily float Player.\+dash\+Delay\hspace{0.3cm}{\ttfamily [private]}}
+\Hypertarget{class_player_a9efbdaf17d363eed97f3736256d8703a}\label{class_player_a9efbdaf17d363eed97f3736256d8703a} 
+\index{Player@{Player}!dashCooldown@{dashCooldown}}
+\index{dashCooldown@{dashCooldown}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{dashCooldown}{dashCooldown}}
+{\footnotesize\ttfamily float Player.\+dash\+Cooldown\hspace{0.3cm}{\ttfamily [private]}}
 
 \Hypertarget{class_player_a1689b529345cf78db3cc93251f19cf19}\label{class_player_a1689b529345cf78db3cc93251f19cf19} 
 \index{Player@{Player}!dashDuration@{dashDuration}}
 \index{dashDuration@{dashDuration}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{dashDuration}{dashDuration}}
 {\footnotesize\ttfamily float Player.\+dash\+Duration\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_a2b8e03c81dae281155f18c712466bf97}\label{class_player_a2b8e03c81dae281155f18c712466bf97} 
+\index{Player@{Player}!dashKey@{dashKey}}
+\index{dashKey@{dashKey}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{dashKey}{dashKey}}
+{\footnotesize\ttfamily Key\+Code Player.\+dash\+Key\hspace{0.3cm}{\ttfamily [private]}}
 
 \Hypertarget{class_player_a7d79f1e0e885f518498a6f78320df5a8}\label{class_player_a7d79f1e0e885f518498a6f78320df5a8} 
 \index{Player@{Player}!dashSpeed@{dashSpeed}}
@@ -376,6 +385,12 @@ Here is the caller graph for this function\+:
 \index{playerState@{playerState}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{playerState}{playerState}}
 {\footnotesize\ttfamily \mbox{\hyperlink{_player_8cs_a3c730f37b1b3a893159bada67637fdb1}{Player\+State}} Player.\+player\+State}
+
+\Hypertarget{class_player_a1e478df8191dbd619cc1111dba542cea}\label{class_player_a1e478df8191dbd619cc1111dba542cea} 
+\index{Player@{Player}!sprintKey@{sprintKey}}
+\index{sprintKey@{sprintKey}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{sprintKey}{sprintKey}}
+{\footnotesize\ttfamily Key\+Code Player.\+sprint\+Key\hspace{0.3cm}{\ttfamily [private]}}
 
 \Hypertarget{class_player_a83193946d87704a77d8568fcfd40d6c3}\label{class_player_a83193946d87704a77d8568fcfd40d6c3} 
 \index{Player@{Player}!sprintSpeed@{sprintSpeed}}

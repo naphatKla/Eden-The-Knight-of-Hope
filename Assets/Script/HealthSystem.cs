@@ -1,64 +1,79 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
+    #region Declare Variables
     [SerializeField] private Slider sliderHpPlayer;
     [SerializeField] public float maxHp;
-    public float _currentHp;
-    protected Animator _animator;
-
+    public float CurrentHp { get; protected set; }
+    private bool _isDead;
+    private Animator _animator;
+    #endregion
+    
     protected virtual void Start()
     {
-        _currentHp = maxHp;
-        _animator = GetComponent<Animator>();
+        CurrentHp = maxHp;
+        TryGetComponent(out _animator);
     }
-    
-    protected virtual void Update()
+
+    #region Methods
+    // ReSharper disable Unity.PerformanceAnalysis
+    /// <summary>
+    /// Take damage and reduce the current hp.
+    /// </summary>
+    /// <param name="damage">Damage taken.</param>
+    /// <param name="attacker">Attacker.</param>
+    public virtual void TakeDamage(float damage, GameObject attacker = null)
     {
-        _currentHp = Mathf.Clamp(_currentHp, 0, maxHp);
-        sliderHpPlayer.value = _currentHp / maxHp;
-    }
-    
-    public virtual void TakeDamage(float damage)
-    {
-        if(_animator != null)
+        CurrentHp -= damage;
+        CurrentHp = Mathf.Clamp(CurrentHp, 0, maxHp);
+        UpdateUI();
+        
+        if(!_animator.IsUnityNull())
             _animator.SetTrigger("TakeDamage");
         
-        _currentHp -= damage;
-
-        if (_currentHp <= 0)
-            Dead();
+        if (CurrentHp > 0 || _isDead) return;
+        _isDead = true;
+        Dead();
     }
 
-    protected virtual void Dead()
+    /// <summary>
+    /// Heal and increase the current hp.
+    /// </summary>
+    /// <param name="healPoint">Heal amount.</param>
+    public void Heal(float healPoint)
     {
-        if (gameObject.tag.Equals("Player"))
-        {
-            if (!gameObject.activeSelf) return;
-            gameObject.SetActive(false);
-            Invoke(nameof(Respawn), 5);
-        }
-        else
-            Destroy(gameObject);
-    }
-
-    public void Heal(float Heal)
-    {
-        _currentHp += Heal;
-    }
-
-    public void FullHeal()
-    {
-        _currentHp = maxHp;
+        CurrentHp += healPoint;
+        CurrentHp = Mathf.Clamp(CurrentHp, 0, maxHp);
+        UpdateUI();
     }
     
-    public void Respawn()
+    /// <summary>
+    /// Dead and destroy the object.
+    /// </summary>
+    protected virtual void Dead()
     {
-        transform.position = GameManager.instance.spawnPoint;
-        gameObject.SetActive(true);
-        gameObject.GetComponent<Player>().Reset();
-        _currentHp = maxHp;
-        sliderHpPlayer.value = _currentHp / maxHp;
+        Destroy(gameObject);
     }
+    
+    /// <summary>
+    /// Reset the current hp to max hp.
+    /// </summary>
+    public void ResetHealth()
+    {
+        _isDead = false;
+        CurrentHp = maxHp;
+        UpdateUI();
+    }
+    
+    /// <summary>
+    /// Update the UI.
+    /// </summary>
+    private void UpdateUI()
+    {
+        sliderHpPlayer.value = CurrentHp / maxHp;
+    }
+    #endregion
 }

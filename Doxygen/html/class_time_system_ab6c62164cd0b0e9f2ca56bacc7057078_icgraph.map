@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="442,81,620,108"/>
 <area shape="rect" id="Node000002" href="$class_enemy_spawner.html#aaf89219b4e56d54391e7832f08cc8ec7" title=" " alt="" coords="198,5,394,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="481,78,393,47,354,35,355,30,395,41,482,73"/>
-<area shape="rect" id="Node000004" href="$class_base_health_system.html#a38fc06c4cef7a65ccf947c2b59052d09" title=" " alt="" coords="207,56,385,83"/>
+<area shape="rect" id="Node000004" href="$class_base_health_system.html#a18e3effa9cd1a602d2d5c12cf3b4aab4" title=" " alt="" coords="207,56,385,83"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="427,86,385,82,386,76,427,81"/>
 <area shape="rect" id="Node000005" href="$class_enemy_spawner.html#a308cab115d1ecd6b69cc675b709de4a0" title=" " alt="" coords="217,107,375,133"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="427,109,375,114,375,109,426,103"/>

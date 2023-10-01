@@ -75,13 +75,13 @@ $(function() {
 <li>_animator&#160;:&#160;<a class="el" href="class_enemy.html#a537f39693d69267fbc2c32652d7f9a50">Enemy</a>, <a class="el" href="class_enemy_combat_system.html#ac4ff4e0bc0d2654a5c2d58043d1f3b7f">EnemyCombatSystem</a>, <a class="el" href="class_health_system.html#ac81c178880a765c02920b505ce933a9c">HealthSystem</a>, <a class="el" href="class_player.html#a457a0bed87da53eaa5397e3b629f7ac3">Player</a>, <a class="el" href="class_player_combat_system.html#a2ee62c8f0ae5f11a57df1b6f6375812c">PlayerCombatSystem</a></li>
 <li>_attackPointParent&#160;:&#160;<a class="el" href="class_enemy_combat_system.html#a93d398410dc1d26ff171f43213863a86">EnemyCombatSystem</a>, <a class="el" href="class_player_combat_system.html#a99291b9db9ee44053a34744313985713">PlayerCombatSystem</a></li>
 <li>_cam&#160;:&#160;<a class="el" href="class_player_camera.html#a6b1f06bda41b62da47da70f13380cb28">PlayerCamera</a></li>
-<li>_currentHp&#160;:&#160;<a class="el" href="class_health_system.html#afbc9a8d4739ee9c4ae053cb9945741cc">HealthSystem</a></li>
 <li>_currentSpeed&#160;:&#160;<a class="el" href="class_player.html#af644e90909ae1aaee282b29b3f161da2">Player</a></li>
 <li>_enemy&#160;:&#160;<a class="el" href="class_enemy_combat_system.html#aaa003f65aef6e8176bf5daff737d5464">EnemyCombatSystem</a>, <a class="el" href="class_enemy_health_system.html#a7d3caf7d6cc26185a7abb2d32ff59198">EnemyHealthSystem</a></li>
 <li>_heavyAttackPointParent&#160;:&#160;<a class="el" href="class_player_combat_system.html#a0bc057c45afce5b157cb99e18395abee">PlayerCombatSystem</a></li>
 <li>_isCharge&#160;:&#160;<a class="el" href="class_enemy_combat_system.html#a5400b42f5c14c4105308bf6c9e91b17c">EnemyCombatSystem</a></li>
 <li>_isDash&#160;:&#160;<a class="el" href="class_player.html#a9f4cf12c4af9871a2bc08915659e061e">Player</a></li>
 <li>_isDashCooldown&#160;:&#160;<a class="el" href="class_player.html#a6cc4599a0c1fd20d0bef5a409587056c">Player</a></li>
+<li>_isDead&#160;:&#160;<a class="el" href="class_health_system.html#a1267ea19972e6a222df008b7df1fae10">HealthSystem</a></li>
 <li>_isRoam&#160;:&#160;<a class="el" href="class_enemy.html#a4983dfae1bfd93bb3db29b1915fe6cf7">Enemy</a></li>
 <li>_isRunning&#160;:&#160;<a class="el" href="class_player.html#a6f5b6c07e43a0e3869a8d01cbf30201c">Player</a></li>
 <li>_isSpawn&#160;:&#160;<a class="el" href="class_item_spawner.html#ae8f899a2e9990b80edb904a6c4845a84">ItemSpawner</a></li>
@@ -134,8 +134,9 @@ $(function() {
 
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
 <li>damage&#160;:&#160;<a class="el" href="class_bullet.html#a7a07b8d87c70896760d578385d7c2eab">Bullet</a></li>
-<li>dashDelay&#160;:&#160;<a class="el" href="class_player.html#ae112ee8ce1be183f919f75ba72ad81f9">Player</a></li>
+<li>dashCooldown&#160;:&#160;<a class="el" href="class_player.html#a9efbdaf17d363eed97f3736256d8703a">Player</a></li>
 <li>dashDuration&#160;:&#160;<a class="el" href="class_player.html#a1689b529345cf78db3cc93251f19cf19">Player</a></li>
+<li>dashKey&#160;:&#160;<a class="el" href="class_player.html#a2b8e03c81dae281155f18c712466bf97">Player</a></li>
 <li>dashSpeed&#160;:&#160;<a class="el" href="class_player.html#a7d79f1e0e885f518498a6f78320df5a8">Player</a></li>
 <li>day&#160;:&#160;<a class="el" href="class_time_system.html#aafaa7bed4a3b1bc220c5980c464c877b">TimeSystem</a></li>
 <li>dayLight&#160;:&#160;<a class="el" href="class_time_system.html#ad99b0d7b4b5d9d6f3694612ee37a2af9">TimeSystem</a></li>
@@ -232,6 +233,7 @@ $(function() {
 
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
 <li>rb2d&#160;:&#160;<a class="el" href="class_bullet.html#a0c4401ee1961dcc862d071d8766c4be1">Bullet</a></li>
+<li>respawnTime&#160;:&#160;<a class="el" href="class_player_health_system.html#a66c926390d72808065d4f60774fd51a4">PlayerHealthSystem</a></li>
 <li>roamArea&#160;:&#160;<a class="el" href="class_enemy.html#a59442945d7cb009b80822b8b48fb3728">Enemy</a></li>
 <li>roamCooldown&#160;:&#160;<a class="el" href="class_enemy.html#a9dc01f81645b824d9e83499dd11985f2">Enemy</a></li>
 <li>roamDuration&#160;:&#160;<a class="el" href="class_enemy.html#abc66862bfd7e2296ee764a84e1efa30a">Enemy</a></li>
@@ -245,6 +247,7 @@ $(function() {
 <li>smoothTime&#160;:&#160;<a class="el" href="class_player_camera.html#a9b3e834e831de0bfea6bd16ff48495ee">PlayerCamera</a></li>
 <li>spawnPoint&#160;:&#160;<a class="el" href="class_game_manager.html#a2d411fec5f42bc8fa6d214b2ddef0b9e">GameManager</a></li>
 <li>speed&#160;:&#160;<a class="el" href="class_bullet.html#a75e914c39a4154ced3d653ae44a05539">Bullet</a></li>
+<li>sprintKey&#160;:&#160;<a class="el" href="class_player.html#a1e478df8191dbd619cc1111dba542cea">Player</a></li>
 <li>sprintSpeed&#160;:&#160;<a class="el" href="class_player.html#a83193946d87704a77d8568fcfd40d6c3">Player</a></li>
 <li>spriteRenderer&#160;:&#160;<a class="el" href="class_enemy.html#a3c93f98aea02cfe8ee79d3568b2dccb1">Enemy</a></li>
 <li>sprites&#160;:&#160;<a class="el" href="class_gathering_resource.html#aaf0bcff259fe1a98a4f8dc0767531103">GatheringResource</a></li>

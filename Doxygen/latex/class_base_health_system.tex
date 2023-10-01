@@ -18,17 +18,10 @@ Collaboration diagram for Base\+Health\+System\+:\nopagebreak
 \includegraphics[width=180pt]{class_base_health_system__coll__graph}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Protected Member Functions}
+\doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-override void \mbox{\hyperlink{class_base_health_system_a38fc06c4cef7a65ccf947c2b59052d09}{Update}} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
-\begin{DoxyCompactItemize}
-\item 
-virtual void \mbox{\hyperlink{class_health_system_aedfb8d521a69c8138eafc7af146299e9}{Start}} ()
-\item 
-virtual void \mbox{\hyperlink{class_health_system_aac4f95a8abcedb6718f48c066b441956}{Dead}} ()
+void \mbox{\hyperlink{class_base_health_system_a18e3effa9cd1a602d2d5c12cf3b4aab4}{Update}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -39,44 +32,43 @@ float \mbox{\hyperlink{class_base_health_system_a633d02ad98a9211fffc3b6c6ecbd7f3
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{class_health_system_a356e8d72c9518eec6341cf1f59cda76a}{Take\+Damage}} (float damage)
-\item 
-void \mbox{\hyperlink{class_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0}{Heal}} (float Heal)
-\item 
-void \mbox{\hyperlink{class_health_system_ac33d3ea7f5200c444d3719136d840d79}{Full\+Heal}} ()
-\item 
-void \mbox{\hyperlink{class_health_system_a7101f4a3a0c68882111b6093ebbc2652}{Respawn}} ()
-\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{class_health_system_a595f606d9869f8a65bc9e1b671a1a87b}{Take\+Damage}} (float damage, Game\+Object attacker=null)
+\begin{DoxyCompactList}\small\item\em Take damage and reduce the current hp. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_health_system_a797bd1920dbd121c266b77843e4e66b7}{Heal}} (float heal\+Point)
+\begin{DoxyCompactList}\small\item\em Heal and increase the current hp. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_health_system_af1594248544b38b43a250dde3c709693}{Reset\+Health}} ()
+\begin{DoxyCompactList}\small\item\em Reset the current hp to max hp. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
 \begin{DoxyCompactItemize}
 \item 
 float \mbox{\hyperlink{class_health_system_a1dff31a9c710ce45dd4ecec2fcacf58c}{max\+Hp}}
-\item 
-float \mbox{\hyperlink{class_health_system_afbc9a8d4739ee9c4ae053cb9945741cc}{\+\_\+current\+Hp}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
 \begin{DoxyCompactItemize}
 \item 
-Animator \mbox{\hyperlink{class_health_system_ac81c178880a765c02920b505ce933a9c}{\+\_\+animator}}
+virtual void \mbox{\hyperlink{class_health_system_aedfb8d521a69c8138eafc7af146299e9}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{class_health_system_aac4f95a8abcedb6718f48c066b441956}{Dead}} ()
+\begin{DoxyCompactList}\small\item\em Dead and destroy the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_health_system_a54fec91113f9ea5a55f4d3b034e41009}{Current\+Hp}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_base_health_system_a38fc06c4cef7a65ccf947c2b59052d09}\label{class_base_health_system_a38fc06c4cef7a65ccf947c2b59052d09} 
+\Hypertarget{class_base_health_system_a18e3effa9cd1a602d2d5c12cf3b4aab4}\label{class_base_health_system_a18e3effa9cd1a602d2d5c12cf3b4aab4} 
 \index{BaseHealthSystem@{BaseHealthSystem}!Update@{Update}}
 \index{Update@{Update}!BaseHealthSystem@{BaseHealthSystem}}
 \doxysubsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily override void Base\+Health\+System.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
-
-
-
-Reimplemented from \mbox{\hyperlink{class_health_system_a0791884f34f179bb980c0f70a5c42a71}{Health\+System}}.
+{\footnotesize\ttfamily void Base\+Health\+System.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_base_health_system_a38fc06c4cef7a65ccf947c2b59052d09_cgraph}
+\includegraphics[width=350pt]{class_base_health_system_a18e3effa9cd1a602d2d5c12cf3b4aab4_cgraph}
 \end{center}
 \end{figure}
 

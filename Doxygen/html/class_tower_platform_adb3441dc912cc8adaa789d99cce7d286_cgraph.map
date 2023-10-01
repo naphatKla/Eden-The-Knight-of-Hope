@@ -1,11 +1,13 @@
 <map id="TowerPlatform.Interact" name="TowerPlatform.Interact">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,156,65"/>
-<area shape="rect" id="Node000002" href="$class_tower_platform.html#a5522423b2f2304f8f02effc7eb17ee7d" title=" " alt="" coords="204,39,374,65"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,49,188,49,188,55,156,55"/>
-<area shape="rect" id="Node000003" href="$class_game_manager.html#a5d3c9753598caba92f5f58658a5eb1a2" title=" " alt="" coords="422,13,585,40"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="374,39,406,35,407,41,375,45"/>
-<area shape="rect" id="Node000005" href="$class_health_system.html#ac33d3ea7f5200c444d3719136d840d79" title=" " alt="" coords="427,64,581,91"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="375,59,411,64,411,69,374,65"/>
-<area shape="rect" id="Node000004" href="$class_game_manager.html#a2f25fce454f2aa38a41b464fc120af16" title=" " alt="" coords="633,5,837,48"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="586,24,618,24,618,29,586,29"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,43,156,69"/>
+<area shape="rect" id="Node000002" href="$class_tower_platform.html#a5522423b2f2304f8f02effc7eb17ee7d" title=" " alt="" coords="204,43,374,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,53,188,53,188,59,156,59"/>
+<area shape="rect" id="Node000003" href="$class_game_manager.html#a5d3c9753598caba92f5f58658a5eb1a2" title=" " alt="" coords="430,16,593,43"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="374,43,413,38,414,44,375,48"/>
+<area shape="rect" id="Node000005" href="$class_health_system.html#af1594248544b38b43a250dde3c709693" title="Reset the current hp to max hp." alt="" coords="422,68,600,95"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="375,63,407,67,406,72,374,68"/>
+<area shape="rect" id="Node000004" href="$class_game_manager.html#a2f25fce454f2aa38a41b464fc120af16" title=" " alt="" coords="648,5,852,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="593,26,633,25,633,31,593,31"/>
+<area shape="rect" id="Node000006" href="$class_health_system.html#aee86495eaff53a6f1c3570b82c757d0b" title="Update the UI." alt="" coords="670,72,830,99"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="601,80,654,81,654,86,601,85"/>
 </map>

@@ -1,0 +1,122 @@
+\doxysection{Player\+Health\+System Class Reference}
+\hypertarget{class_player_health_system}{}\label{class_player_health_system}\index{PlayerHealthSystem@{PlayerHealthSystem}}
+
+
+Inheritance diagram for Player\+Health\+System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{class_player_health_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+Health\+System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{class_player_health_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_player_health_system_a00f69deb4600297bf32cc83b8fe7f43a}{Dead}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} Dead and Respawn after a few seconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_health_system_aedfb8d521a69c8138eafc7af146299e9}{Start}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_health_system_a2ecce1fbc617a99236e611d9c0532c51}{Respawn}} ()
+\begin{DoxyCompactList}\small\item\em Respawn the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_player_health_system_a66c926390d72808065d4f60774fd51a4}{respawn\+Time}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_health_system_a595f606d9869f8a65bc9e1b671a1a87b}{Take\+Damage}} (float damage, Game\+Object attacker=null)
+\begin{DoxyCompactList}\small\item\em Take damage and reduce the current hp. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_health_system_a797bd1920dbd121c266b77843e4e66b7}{Heal}} (float heal\+Point)
+\begin{DoxyCompactList}\small\item\em Heal and increase the current hp. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_health_system_af1594248544b38b43a250dde3c709693}{Reset\+Health}} ()
+\begin{DoxyCompactList}\small\item\em Reset the current hp to max hp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_health_system_a1dff31a9c710ce45dd4ecec2fcacf58c}{max\+Hp}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_health_system_a54fec91113f9ea5a55f4d3b034e41009}{Current\+Hp}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_health_system_a00f69deb4600297bf32cc83b8fe7f43a}\label{class_player_health_system_a00f69deb4600297bf32cc83b8fe7f43a} 
+\index{PlayerHealthSystem@{PlayerHealthSystem}!Dead@{Dead}}
+\index{Dead@{Dead}!PlayerHealthSystem@{PlayerHealthSystem}}
+\doxysubsubsection{\texorpdfstring{Dead()}{Dead()}}
+{\footnotesize\ttfamily override void Player\+Health\+System.\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\doxylink{class_player}{Player} Dead and Respawn after a few seconds. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_health_system_aac4f95a8abcedb6718f48c066b441956}{Health\+System}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_health_system_a00f69deb4600297bf32cc83b8fe7f43a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_health_system_a2ecce1fbc617a99236e611d9c0532c51}\label{class_player_health_system_a2ecce1fbc617a99236e611d9c0532c51} 
+\index{PlayerHealthSystem@{PlayerHealthSystem}!Respawn@{Respawn}}
+\index{Respawn@{Respawn}!PlayerHealthSystem@{PlayerHealthSystem}}
+\doxysubsubsection{\texorpdfstring{Respawn()}{Respawn()}}
+{\footnotesize\ttfamily void Player\+Health\+System.\+Respawn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Respawn the player. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_health_system_a2ecce1fbc617a99236e611d9c0532c51_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_health_system_a2ecce1fbc617a99236e611d9c0532c51_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_player_health_system_a66c926390d72808065d4f60774fd51a4}\label{class_player_health_system_a66c926390d72808065d4f60774fd51a4} 
+\index{PlayerHealthSystem@{PlayerHealthSystem}!respawnTime@{respawnTime}}
+\index{respawnTime@{respawnTime}!PlayerHealthSystem@{PlayerHealthSystem}}
+\doxysubsubsection{\texorpdfstring{respawnTime}{respawnTime}}
+{\footnotesize\ttfamily float Player\+Health\+System.\+respawn\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\+Player/\mbox{\hyperlink{_player_health_system_8cs}{Player\+Health\+System.\+cs}}\end{DoxyCompactItemize}

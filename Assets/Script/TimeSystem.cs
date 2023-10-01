@@ -3,13 +3,14 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
+public enum TimeState
+{
+    Day,
+    Night,
+}
+
 public class TimeSystem : MonoBehaviour
 {
-    public enum TimeState
-    {
-        Day,
-        Night,
-    }
     [Header("Time")]
     public float dayTime;
     public float nightTime;

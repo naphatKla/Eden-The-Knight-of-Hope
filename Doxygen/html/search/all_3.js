@@ -9,6 +9,7 @@ var searchData=
   ['countdowntime_6',['countdownTime',['../class_interactable_object.html#a31bdcf207857832b49e0325d20e9fbce',1,'InteractableObject']]],
   ['currentcooldown_7',['currentCooldown',['../class_player_combat_system.html#a636ca9e5957eb0a519633509b56c6326',1,'PlayerCombatSystem']]],
   ['currentenemycount_8',['currentEnemyCount',['../class_enemy_spawner.html#a7685bad65142e0d0e7df0802ec2c1ea2',1,'EnemySpawner']]],
-  ['currentitemcount_9',['currentItemCount',['../class_item_spawner.html#a4f9aa52f9ae03c2e3d320ee880802572',1,'ItemSpawner']]],
-  ['cyclelength_10',['cycleLength',['../class_time_system.html#a8b22a3a3fe5ce7429521c24acef884e6',1,'TimeSystem']]]
+  ['currenthp_9',['CurrentHp',['../class_health_system.html#a54fec91113f9ea5a55f4d3b034e41009',1,'HealthSystem']]],
+  ['currentitemcount_10',['currentItemCount',['../class_item_spawner.html#a4f9aa52f9ae03c2e3d320ee880802572',1,'ItemSpawner']]],
+  ['cyclelength_11',['cycleLength',['../class_time_system.html#a8b22a3a3fe5ce7429521c24acef884e6',1,'TimeSystem']]]
 ];

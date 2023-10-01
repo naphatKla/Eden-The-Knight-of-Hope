@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
+
 
 public class ItemSpawner : MonoBehaviour
 {
@@ -21,7 +19,7 @@ public class ItemSpawner : MonoBehaviour
         currentItemCount = transform.childCount;
         
         if(currentItemCount >= maxItem) return;
-        if (TimeSystem.instance.GetTimeState() == TimeSystem.TimeState.Night)
+        if (TimeSystem.instance.GetTimeState() == TimeState.Night)
         {
             _isSpawn = false;
             return;

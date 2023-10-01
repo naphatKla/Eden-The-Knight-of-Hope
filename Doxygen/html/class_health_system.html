@@ -73,7 +73,8 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_health_system-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">HealthSystem Class Reference</div></div>
@@ -84,13 +85,15 @@ Inheritance diagram for HealthSystem:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_health_system__inherit__graph.png" border="0" usemap="#a_health_system_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_health_system_inherit__map" id="a_health_system_inherit__map">
-<area shape="rect" title=" " alt="" coords="102,80,205,107"/>
+<area shape="rect" title=" " alt="" coords="183,80,286,107"/>
 <area shape="rect" href="class_base_health_system.html" title=" " alt="" coords="5,155,139,181"/>
-<area shape="poly" title=" " alt="" coords="130,119,88,156,84,152,126,115"/>
+<area shape="poly" title=" " alt="" coords="194,116,102,156,99,152,191,111"/>
 <area shape="rect" href="class_enemy_health_system.html" title=" " alt="" coords="163,155,307,181"/>
-<area shape="poly" title=" " alt="" coords="181,115,222,152,219,156,177,119"/>
-<area shape="rect" title=" " alt="" coords="99,5,208,32"/>
-<area shape="poly" title=" " alt="" coords="156,48,156,80,151,80,151,48"/>
+<area shape="poly" title=" " alt="" coords="237,122,237,154,232,154,232,122"/>
+<area shape="rect" href="class_player_health_system.html" title=" " alt="" coords="331,155,472,181"/>
+<area shape="poly" title=" " alt="" coords="279,111,373,152,371,156,276,116"/>
+<area shape="rect" title=" " alt="" coords="180,5,289,32"/>
+<area shape="poly" title=" " alt="" coords="237,48,237,80,232,80,232,48"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -106,40 +109,48 @@ Collaboration diagram for HealthSystem:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a356e8d72c9518eec6341cf1f59cda76a" id="r_a356e8d72c9518eec6341cf1f59cda76a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a356e8d72c9518eec6341cf1f59cda76a">TakeDamage</a> (float damage)</td></tr>
-<tr class="separator:a356e8d72c9518eec6341cf1f59cda76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad51bd71dca6bdc6a85c5d5efb2c4ae0" id="r_aad51bd71dca6bdc6a85c5d5efb2c4ae0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#aad51bd71dca6bdc6a85c5d5efb2c4ae0">Heal</a> (float Heal)</td></tr>
-<tr class="separator:aad51bd71dca6bdc6a85c5d5efb2c4ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac33d3ea7f5200c444d3719136d840d79" id="r_ac33d3ea7f5200c444d3719136d840d79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#ac33d3ea7f5200c444d3719136d840d79">FullHeal</a> ()</td></tr>
-<tr class="separator:ac33d3ea7f5200c444d3719136d840d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7101f4a3a0c68882111b6093ebbc2652" id="r_a7101f4a3a0c68882111b6093ebbc2652"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a7101f4a3a0c68882111b6093ebbc2652">Respawn</a> ()</td></tr>
-<tr class="separator:a7101f4a3a0c68882111b6093ebbc2652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a595f606d9869f8a65bc9e1b671a1a87b" id="r_a595f606d9869f8a65bc9e1b671a1a87b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a595f606d9869f8a65bc9e1b671a1a87b">TakeDamage</a> (float damage, GameObject attacker=null)</td></tr>
+<tr class="memdesc:a595f606d9869f8a65bc9e1b671a1a87b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Take damage and reduce the current hp.  <br /></td></tr>
+<tr class="separator:a595f606d9869f8a65bc9e1b671a1a87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a797bd1920dbd121c266b77843e4e66b7" id="r_a797bd1920dbd121c266b77843e4e66b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a797bd1920dbd121c266b77843e4e66b7">Heal</a> (float healPoint)</td></tr>
+<tr class="memdesc:a797bd1920dbd121c266b77843e4e66b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Heal and increase the current hp.  <br /></td></tr>
+<tr class="separator:a797bd1920dbd121c266b77843e4e66b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1594248544b38b43a250dde3c709693" id="r_af1594248544b38b43a250dde3c709693"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#af1594248544b38b43a250dde3c709693">ResetHealth</a> ()</td></tr>
+<tr class="memdesc:af1594248544b38b43a250dde3c709693"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the current hp to max hp.  <br /></td></tr>
+<tr class="separator:af1594248544b38b43a250dde3c709693"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a1dff31a9c710ce45dd4ecec2fcacf58c" id="r_a1dff31a9c710ce45dd4ecec2fcacf58c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a1dff31a9c710ce45dd4ecec2fcacf58c">maxHp</a></td></tr>
 <tr class="separator:a1dff31a9c710ce45dd4ecec2fcacf58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbc9a8d4739ee9c4ae053cb9945741cc" id="r_afbc9a8d4739ee9c4ae053cb9945741cc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#afbc9a8d4739ee9c4ae053cb9945741cc">_currentHp</a></td></tr>
-<tr class="separator:afbc9a8d4739ee9c4ae053cb9945741cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aedfb8d521a69c8138eafc7af146299e9" id="r_aedfb8d521a69c8138eafc7af146299e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#aedfb8d521a69c8138eafc7af146299e9">Start</a> ()</td></tr>
 <tr class="separator:aedfb8d521a69c8138eafc7af146299e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0791884f34f179bb980c0f70a5c42a71" id="r_a0791884f34f179bb980c0f70a5c42a71"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a0791884f34f179bb980c0f70a5c42a71">Update</a> ()</td></tr>
-<tr class="separator:a0791884f34f179bb980c0f70a5c42a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac4f95a8abcedb6718f48c066b441956" id="r_aac4f95a8abcedb6718f48c066b441956"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#aac4f95a8abcedb6718f48c066b441956">Dead</a> ()</td></tr>
+<tr class="memdesc:aac4f95a8abcedb6718f48c066b441956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dead and destroy the object.  <br /></td></tr>
 <tr class="separator:aac4f95a8abcedb6718f48c066b441956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:ac81c178880a765c02920b505ce933a9c" id="r_ac81c178880a765c02920b505ce933a9c"><td class="memItemLeft" align="right" valign="top">Animator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#ac81c178880a765c02920b505ce933a9c">_animator</a></td></tr>
-<tr class="separator:ac81c178880a765c02920b505ce933a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a54fec91113f9ea5a55f4d3b034e41009" id="r_a54fec91113f9ea5a55f4d3b034e41009"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a54fec91113f9ea5a55f4d3b034e41009">CurrentHp</a><code> [get, protected set]</code></td></tr>
+<tr class="separator:a54fec91113f9ea5a55f4d3b034e41009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aee86495eaff53a6f1c3570b82c757d0b" id="r_aee86495eaff53a6f1c3570b82c757d0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#aee86495eaff53a6f1c3570b82c757d0b">UpdateUI</a> ()</td></tr>
+<tr class="memdesc:aee86495eaff53a6f1c3570b82c757d0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the UI.  <br /></td></tr>
+<tr class="separator:aee86495eaff53a6f1c3570b82c757d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:acad13f823d849553f8d0f366daa8d628" id="r_acad13f823d849553f8d0f366daa8d628"><td class="memItemLeft" align="right" valign="top">Slider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#acad13f823d849553f8d0f366daa8d628">sliderHpPlayer</a></td></tr>
 <tr class="separator:acad13f823d849553f8d0f366daa8d628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1267ea19972e6a222df008b7df1fae10" id="r_a1267ea19972e6a222df008b7df1fae10"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a1267ea19972e6a222df008b7df1fae10">_isDead</a></td></tr>
+<tr class="separator:a1267ea19972e6a222df008b7df1fae10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac81c178880a765c02920b505ce933a9c" id="r_ac81c178880a765c02920b505ce933a9c"><td class="memItemLeft" align="right" valign="top">Animator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#ac81c178880a765c02920b505ce933a9c">_animator</a></td></tr>
+<tr class="separator:ac81c178880a765c02920b505ce933a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aac4f95a8abcedb6718f48c066b441956" name="aac4f95a8abcedb6718f48c066b441956"></a>
@@ -165,61 +176,24 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_enemy_health_system.html#a336c4bd4df3ac0fa0556f4319cad0cac">EnemyHealthSystem</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_health_system_aac4f95a8abcedb6718f48c066b441956_cgraph.png" border="0" usemap="#aclass_health_system_aac4f95a8abcedb6718f48c066b441956_cgraph" alt=""/></div>
-<map name="aclass_health_system_aac4f95a8abcedb6718f48c066b441956_cgraph" id="aclass_health_system_aac4f95a8abcedb6718f48c066b441956_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,143,32"/>
-<area shape="rect" href="class_health_system.html#a7101f4a3a0c68882111b6093ebbc2652" title=" " alt="" coords="191,5,351,32"/>
-<area shape="poly" title=" " alt="" coords="143,16,175,16,175,21,143,21"/>
-</map>
-</div>
+<p>Dead and destroy the object. </p>
+
+<p>Reimplemented in <a class="el" href="class_enemy_health_system.html#a336c4bd4df3ac0fa0556f4319cad0cac">EnemyHealthSystem</a>, and <a class="el" href="class_player_health_system.html#a00f69deb4600297bf32cc83b8fe7f43a">PlayerHealthSystem</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_health_system_aac4f95a8abcedb6718f48c066b441956_icgraph.png" border="0" usemap="#aclass_health_system_aac4f95a8abcedb6718f48c066b441956_icgraph" alt=""/></div>
 <map name="aclass_health_system_aac4f95a8abcedb6718f48c066b441956_icgraph" id="aclass_health_system_aac4f95a8abcedb6718f48c066b441956_icgraph">
-<area shape="rect" title=" " alt="" coords="237,5,374,32"/>
-<area shape="rect" href="class_health_system.html#a356e8d72c9518eec6341cf1f59cda76a" title=" " alt="" coords="5,5,189,32"/>
+<area shape="rect" title="Dead and destroy the object." alt="" coords="237,5,374,32"/>
+<area shape="rect" href="class_health_system.html#a595f606d9869f8a65bc9e1b671a1a87b" title="Take damage and reduce the current hp." alt="" coords="5,5,189,32"/>
 <area shape="poly" title=" " alt="" coords="221,21,189,21,189,16,221,16"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ac33d3ea7f5200c444d3719136d840d79" name="ac33d3ea7f5200c444d3719136d840d79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac33d3ea7f5200c444d3719136d840d79">&#9670;&#160;</a></span>FullHeal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void HealthSystem.FullHeal </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_health_system_ac33d3ea7f5200c444d3719136d840d79_icgraph.png" border="0" usemap="#aclass_health_system_ac33d3ea7f5200c444d3719136d840d79_icgraph" alt=""/></div>
-<map name="aclass_health_system_ac33d3ea7f5200c444d3719136d840d79_icgraph" id="aclass_health_system_ac33d3ea7f5200c444d3719136d840d79_icgraph">
-<area shape="rect" title=" " alt="" coords="422,5,576,32"/>
-<area shape="rect" href="class_tower_platform.html#a5522423b2f2304f8f02effc7eb17ee7d" title=" " alt="" coords="204,5,374,32"/>
-<area shape="poly" title=" " alt="" coords="407,21,374,21,374,16,407,16"/>
-<area shape="rect" href="class_tower_platform.html#adb3441dc912cc8adaa789d99cce7d286" title=" " alt="" coords="5,5,156,32"/>
-<area shape="poly" title=" " alt="" coords="188,21,156,21,156,16,188,16"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="aad51bd71dca6bdc6a85c5d5efb2c4ae0" name="aad51bd71dca6bdc6a85c5d5efb2c4ae0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad51bd71dca6bdc6a85c5d5efb2c4ae0">&#9670;&#160;</a></span>Heal()</h2>
+<a id="a797bd1920dbd121c266b77843e4e66b7" name="a797bd1920dbd121c266b77843e4e66b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a797bd1920dbd121c266b77843e4e66b7">&#9670;&#160;</a></span>Heal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -228,56 +202,82 @@ Here is the caller graph for this function:</div>
           <td class="memname">void HealthSystem.Heal </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>Heal</em></td><td>)</td>
+          <td class="paramname"><em>healPoint</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Heal and increase the current hp. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">healPoint</td><td>Heal amount.</td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_cgraph.png" border="0" usemap="#aclass_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_cgraph" alt=""/></div>
-<map name="aclass_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_cgraph" id="aclass_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_cgraph">
-<area shape="rect" title=" " alt="" coords="5,29,139,56"/>
-<area shape="poly" title=" " alt="" coords="48,30,44,21,47,11,57,5,72,3,88,5,97,12,94,16,86,10,72,8,59,10,51,14,50,20,53,28"/>
+<div class="center"><img src="class_health_system_a797bd1920dbd121c266b77843e4e66b7_cgraph.png" border="0" usemap="#aclass_health_system_a797bd1920dbd121c266b77843e4e66b7_cgraph" alt=""/></div>
+<map name="aclass_health_system_a797bd1920dbd121c266b77843e4e66b7_cgraph" id="aclass_health_system_a797bd1920dbd121c266b77843e4e66b7_cgraph">
+<area shape="rect" title="Heal and increase the current hp." alt="" coords="5,5,139,32"/>
+<area shape="rect" href="class_health_system.html#aee86495eaff53a6f1c3570b82c757d0b" title="Update the UI." alt="" coords="187,5,347,32"/>
+<area shape="poly" title=" " alt="" coords="139,16,171,16,171,21,139,21"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_icgraph.png" border="0" usemap="#aclass_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_icgraph" alt=""/></div>
-<map name="aclass_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_icgraph" id="aclass_health_system_aad51bd71dca6bdc6a85c5d5efb2c4ae0_icgraph">
-<area shape="rect" title=" " alt="" coords="5,29,139,56"/>
-<area shape="poly" title=" " alt="" coords="94,16,86,10,72,8,59,10,51,14,50,20,53,28,48,30,44,21,47,11,57,5,72,3,88,5,97,12"/>
+<div class="center"><img src="class_health_system_a797bd1920dbd121c266b77843e4e66b7_icgraph.png" border="0" usemap="#aclass_health_system_a797bd1920dbd121c266b77843e4e66b7_icgraph" alt=""/></div>
+<map name="aclass_health_system_a797bd1920dbd121c266b77843e4e66b7_icgraph" id="aclass_health_system_a797bd1920dbd121c266b77843e4e66b7_icgraph">
+<area shape="rect" title="Heal and increase the current hp." alt="" coords="232,5,365,32"/>
+<area shape="rect" href="class_base_health_system.html#a18e3effa9cd1a602d2d5c12cf3b4aab4" title=" " alt="" coords="5,5,184,32"/>
+<area shape="poly" title=" " alt="" coords="216,21,184,21,184,16,216,16"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a7101f4a3a0c68882111b6093ebbc2652" name="a7101f4a3a0c68882111b6093ebbc2652"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7101f4a3a0c68882111b6093ebbc2652">&#9670;&#160;</a></span>Respawn()</h2>
+<a id="af1594248544b38b43a250dde3c709693" name="af1594248544b38b43a250dde3c709693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1594248544b38b43a250dde3c709693">&#9670;&#160;</a></span>ResetHealth()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void HealthSystem.Respawn </td>
+          <td class="memname">void HealthSystem.ResetHealth </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Reset the current hp to max hp. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_health_system_af1594248544b38b43a250dde3c709693_cgraph.png" border="0" usemap="#aclass_health_system_af1594248544b38b43a250dde3c709693_cgraph" alt=""/></div>
+<map name="aclass_health_system_af1594248544b38b43a250dde3c709693_cgraph" id="aclass_health_system_af1594248544b38b43a250dde3c709693_cgraph">
+<area shape="rect" title="Reset the current hp to max hp." alt="" coords="5,5,184,32"/>
+<area shape="rect" href="class_health_system.html#aee86495eaff53a6f1c3570b82c757d0b" title="Update the UI." alt="" coords="232,5,392,32"/>
+<area shape="poly" title=" " alt="" coords="184,16,216,16,216,21,184,21"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_health_system_a7101f4a3a0c68882111b6093ebbc2652_icgraph.png" border="0" usemap="#aclass_health_system_a7101f4a3a0c68882111b6093ebbc2652_icgraph" alt=""/></div>
-<map name="aclass_health_system_a7101f4a3a0c68882111b6093ebbc2652_icgraph" id="aclass_health_system_a7101f4a3a0c68882111b6093ebbc2652_icgraph">
-<area shape="rect" title=" " alt="" coords="422,5,582,32"/>
-<area shape="rect" href="class_health_system.html#aac4f95a8abcedb6718f48c066b441956" title=" " alt="" coords="237,5,374,32"/>
-<area shape="poly" title=" " alt="" coords="407,21,374,21,374,16,407,16"/>
-<area shape="rect" href="class_health_system.html#a356e8d72c9518eec6341cf1f59cda76a" title=" " alt="" coords="5,5,189,32"/>
-<area shape="poly" title=" " alt="" coords="221,21,189,21,189,16,221,16"/>
+<div class="center"><img src="class_health_system_af1594248544b38b43a250dde3c709693_icgraph.png" border="0" usemap="#aclass_health_system_af1594248544b38b43a250dde3c709693_icgraph" alt=""/></div>
+<map name="aclass_health_system_af1594248544b38b43a250dde3c709693_icgraph" id="aclass_health_system_af1594248544b38b43a250dde3c709693_icgraph">
+<area shape="rect" title="Reset the current hp to max hp." alt="" coords="473,31,651,57"/>
+<area shape="rect" href="class_tower_platform.html#a5522423b2f2304f8f02effc7eb17ee7d" title=" " alt="" coords="241,5,412,32"/>
+<area shape="poly" title=" " alt="" coords="457,35,412,30,412,25,458,30"/>
+<area shape="rect" href="class_player_health_system.html#a2ecce1fbc617a99236e611d9c0532c51" title="Respawn the player." alt="" coords="228,56,425,83"/>
+<area shape="poly" title=" " alt="" coords="458,58,426,61,425,56,457,53"/>
+<area shape="rect" href="class_tower_platform.html#adb3441dc912cc8adaa789d99cce7d286" title=" " alt="" coords="17,5,168,32"/>
+<area shape="poly" title=" " alt="" coords="226,21,168,21,168,16,226,16"/>
+<area shape="rect" href="class_player_health_system.html#a00f69deb4600297bf32cc83b8fe7f43a" title="Player Dead and Respawn after a few seconds." alt="" coords="5,56,180,83"/>
+<area shape="poly" title=" " alt="" coords="212,72,180,72,180,67,212,67"/>
 </map>
 </div>
 
@@ -310,8 +310,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a356e8d72c9518eec6341cf1f59cda76a" name="a356e8d72c9518eec6341cf1f59cda76a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a356e8d72c9518eec6341cf1f59cda76a">&#9670;&#160;</a></span>TakeDamage()</h2>
+<a id="a595f606d9869f8a65bc9e1b671a1a87b" name="a595f606d9869f8a65bc9e1b671a1a87b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a595f606d9869f8a65bc9e1b671a1a87b">&#9670;&#160;</a></span>TakeDamage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,8 +323,18 @@ Here is the caller graph for this function:</div>
           <td class="memname">virtual void HealthSystem.TakeDamage </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>damage</em></td><td>)</td>
+          <td class="paramname"><em>damage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>attacker</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -333,23 +343,34 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Take damage and reduce the current hp. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">damage</td><td>Damage taken.</td></tr>
+    <tr><td class="paramname">attacker</td><td>Attacker.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="class_enemy_health_system.html#a1283a59b0272eaa0661ff20ef0204b09">EnemyHealthSystem</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_health_system_a356e8d72c9518eec6341cf1f59cda76a_cgraph.png" border="0" usemap="#aclass_health_system_a356e8d72c9518eec6341cf1f59cda76a_cgraph" alt=""/></div>
-<map name="aclass_health_system_a356e8d72c9518eec6341cf1f59cda76a_cgraph" id="aclass_health_system_a356e8d72c9518eec6341cf1f59cda76a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,189,32"/>
-<area shape="rect" href="class_health_system.html#aac4f95a8abcedb6718f48c066b441956" title=" " alt="" coords="237,5,374,32"/>
-<area shape="poly" title=" " alt="" coords="189,16,221,16,221,21,189,21"/>
-<area shape="rect" href="class_health_system.html#a7101f4a3a0c68882111b6093ebbc2652" title=" " alt="" coords="422,5,582,32"/>
-<area shape="poly" title=" " alt="" coords="375,16,406,16,406,21,375,21"/>
+<div class="center"><img src="class_health_system_a595f606d9869f8a65bc9e1b671a1a87b_cgraph.png" border="0" usemap="#aclass_health_system_a595f606d9869f8a65bc9e1b671a1a87b_cgraph" alt=""/></div>
+<map name="aclass_health_system_a595f606d9869f8a65bc9e1b671a1a87b_cgraph" id="aclass_health_system_a595f606d9869f8a65bc9e1b671a1a87b_cgraph">
+<area shape="rect" title="Take damage and reduce the current hp." alt="" coords="5,31,189,57"/>
+<area shape="rect" href="class_health_system.html#aac4f95a8abcedb6718f48c066b441956" title="Dead and destroy the object." alt="" coords="248,5,386,32"/>
+<area shape="poly" title=" " alt="" coords="189,31,233,26,233,31,189,36"/>
+<area shape="rect" href="class_health_system.html#aee86495eaff53a6f1c3570b82c757d0b" title="Update the UI." alt="" coords="237,56,397,83"/>
+<area shape="poly" title=" " alt="" coords="189,52,221,56,221,61,189,57"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a0791884f34f179bb980c0f70a5c42a71" name="a0791884f34f179bb980c0f70a5c42a71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0791884f34f179bb980c0f70a5c42a71">&#9670;&#160;</a></span>Update()</h2>
+<a id="aee86495eaff53a6f1c3570b82c757d0b" name="aee86495eaff53a6f1c3570b82c757d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee86495eaff53a6f1c3570b82c757d0b">&#9670;&#160;</a></span>UpdateUI()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -358,7 +379,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void HealthSystem.Update </td>
+          <td class="memname">void HealthSystem.UpdateUI </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -366,12 +387,36 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_base_health_system.html#a38fc06c4cef7a65ccf947c2b59052d09">BaseHealthSystem</a>.</p>
+<p>Update the UI. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_health_system_aee86495eaff53a6f1c3570b82c757d0b_icgraph.png" border="0" usemap="#aclass_health_system_aee86495eaff53a6f1c3570b82c757d0b_icgraph" alt=""/></div>
+<map name="aclass_health_system_aee86495eaff53a6f1c3570b82c757d0b_icgraph" id="aclass_health_system_aee86495eaff53a6f1c3570b82c757d0b_icgraph">
+<area shape="rect" title="Update the UI." alt="" coords="704,56,865,83"/>
+<area shape="rect" href="class_health_system.html#a797bd1920dbd121c266b77843e4e66b7" title="Heal and increase the current hp." alt="" coords="498,5,631,32"/>
+<area shape="poly" title=" " alt="" coords="708,55,625,35,626,30,709,49"/>
+<area shape="rect" href="class_health_system.html#af1594248544b38b43a250dde3c709693" title="Reset the current hp to max hp." alt="" coords="476,56,654,83"/>
+<area shape="poly" title=" " alt="" coords="689,72,654,72,654,67,689,67"/>
+<area shape="rect" href="class_health_system.html#a595f606d9869f8a65bc9e1b671a1a87b" title="Take damage and reduce the current hp." alt="" coords="473,107,656,133"/>
+<area shape="poly" title=" " alt="" coords="709,89,626,109,625,103,708,84"/>
+<area shape="rect" href="class_base_health_system.html#a18e3effa9cd1a602d2d5c12cf3b4aab4" title=" " alt="" coords="237,5,416,32"/>
+<area shape="poly" title=" " alt="" coords="482,21,416,21,416,16,482,16"/>
+<area shape="rect" href="class_tower_platform.html#a5522423b2f2304f8f02effc7eb17ee7d" title=" " alt="" coords="241,56,412,83"/>
+<area shape="poly" title=" " alt="" coords="460,72,412,72,412,67,460,67"/>
+<area shape="rect" href="class_player_health_system.html#a2ecce1fbc617a99236e611d9c0532c51" title="Respawn the player." alt="" coords="228,107,425,133"/>
+<area shape="poly" title=" " alt="" coords="484,89,393,109,392,103,483,84"/>
+<area shape="rect" href="class_tower_platform.html#adb3441dc912cc8adaa789d99cce7d286" title=" " alt="" coords="17,56,168,83"/>
+<area shape="poly" title=" " alt="" coords="226,72,168,72,168,67,226,67"/>
+<area shape="rect" href="class_player_health_system.html#a00f69deb4600297bf32cc83b8fe7f43a" title="Player Dead and Respawn after a few seconds." alt="" coords="5,107,180,133"/>
+<area shape="poly" title=" " alt="" coords="212,123,180,123,180,117,212,117"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -391,23 +436,31 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="afbc9a8d4739ee9c4ae053cb9945741cc" name="afbc9a8d4739ee9c4ae053cb9945741cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbc9a8d4739ee9c4ae053cb9945741cc">&#9670;&#160;</a></span>_currentHp</h2>
+<a id="a1267ea19972e6a222df008b7df1fae10" name="a1267ea19972e6a222df008b7df1fae10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1267ea19972e6a222df008b7df1fae10">&#9670;&#160;</a></span>_isDead</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float HealthSystem._currentHp</td>
+          <td class="memname">bool HealthSystem._isDead</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -442,6 +495,29 @@ Here is the call graph for this function:</div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a54fec91113f9ea5a55f4d3b034e41009" name="a54fec91113f9ea5a55f4d3b034e41009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54fec91113f9ea5a55f4d3b034e41009">&#9670;&#160;</a></span>CurrentHp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float HealthSystem.CurrentHp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected set</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

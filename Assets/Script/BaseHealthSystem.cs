@@ -1,16 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseHealthSystem : HealthSystem
 {
     [SerializeField] private float hpRegenPercentage;
-    protected override void Update()
+    private void Update()
     {
-        base.Update();
-        
-        if(TimeSystem.instance.GetTimeState() != TimeSystem.TimeState.Day) return;
-        _currentHp +=  ((hpRegenPercentage / 100) * maxHp) * Time.deltaTime;
-        
+        // regen hp when day time.
+        if(TimeSystem.instance.GetTimeState() != TimeState.Day) return;
+        Heal((hpRegenPercentage / 100) * maxHp * Time.deltaTime);
     }
 }

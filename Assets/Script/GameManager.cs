@@ -1,9 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,8 +23,7 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
-        Debug.Log(_isWarning);
-        if (playerBase == null) SceneManager.LoadScene(0);
+        if (playerBase.IsUnityNull()) SceneManager.LoadScene(0);
         if (TimeSystem.instance.TimePeriodCheck(17,18))
         {
             if(_isWarning) return;
@@ -37,7 +35,6 @@ public class GameManager : MonoBehaviour
         _isWarning = false;
     }
     
-    // Add Poinwa
     public void AddPoint(int n)
     {
         totalPoint += n;
@@ -46,18 +43,16 @@ public class GameManager : MonoBehaviour
         StartCoroutine(ToggleSetActiveRelateWithAnimation(scoreAddAnimation.gameObject));
 
     }
-
+    
     IEnumerator ToggleSetActiveRelateWithAnimation(GameObject obj)
     {
-        Animator animator = obj.GetComponent<Animator>();
+        if (!TryGetComponent(out Animator animator)) yield break;
         
         yield return new WaitUntil(() => !obj.activeSelf);
-        
         obj.SetActive(true);
 
         yield return new WaitUntil(() =>
             animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
-        
         obj.SetActive(false);
     }
 }

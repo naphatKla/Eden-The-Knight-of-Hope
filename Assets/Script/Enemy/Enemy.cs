@@ -42,12 +42,8 @@ public class Enemy : MonoBehaviour
     private bool _isRoam;
     public bool isStun;
     public EnemyState enemyActionState;
-    
-
     #endregion
     
-    
-    #region Unity Method
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -161,10 +157,8 @@ public class Enemy : MonoBehaviour
 
         _isRoam = false;
     }
-    #endregion
-
     
-    #region Method
+    #region Methods
     
     /// <summary>
     ///  Set enemy state.
