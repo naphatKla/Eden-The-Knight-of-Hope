@@ -27,7 +27,7 @@ public class EnemyCombatSystem : MonoBehaviour
     void Update()
     {
         // stun
-        if (_enemy.isStun)
+        if (_enemy.IsStun)
         {
             //_nextAttackTime = Time.time + (1f / attackRate);
             _isCharge = false;
@@ -39,7 +39,7 @@ public class EnemyCombatSystem : MonoBehaviour
     private IEnumerator Attack(float delay)
     {
         // flip attack point
-        if (_enemy.spriteRenderer.flipX)
+        if (_enemy.SpriteRenderer.flipX)
             _attackPointParent.transform.right =
                 new Vector3(-1, 0, 0);
         else
@@ -51,9 +51,9 @@ public class EnemyCombatSystem : MonoBehaviour
             Physics2D.OverlapBoxAll(attackPoint.position, attackArea, 0, targetLayer).ToList();
         
         if (hitTargets.Count <= 0) yield break;
-        if (!hitTargets.Contains(_enemy.target.GetComponent<Collider2D>())) yield break;
+        if (!hitTargets.Contains(_enemy.Target.GetComponent<Collider2D>())) yield break;
 
-        _enemy.agent.velocity = Vector3.zero;
+        _enemy.Agent.velocity = Vector3.zero;
         
         if(Time.time < _nextAttackTime) yield break;
         
@@ -64,10 +64,10 @@ public class EnemyCombatSystem : MonoBehaviour
         while (timeCount < delay)
         {
             _isCharge = true;
-            _enemy.agent.velocity = Vector3.zero;
+            _enemy.Agent.velocity = Vector3.zero;
             
             // stun
-            if (_enemy.isStun)
+            if (_enemy.IsStun)
             {
                 _nextAttackTime = Time.time + (1f / attackRate);
                 _isCharge = false;

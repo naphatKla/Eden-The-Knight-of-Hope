@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['currenthp_0',['CurrentHp',['../class_health_system.html#a54fec91113f9ea5a55f4d3b034e41009',1,'HealthSystem']]]
+  ['agent_0',['Agent',['../class_enemy.html#a5c395431efb22d47f8fe09add9676c74',1,'Enemy']]]
 ];

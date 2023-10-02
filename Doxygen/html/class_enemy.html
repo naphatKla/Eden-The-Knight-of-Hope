@@ -72,7 +72,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_enemy-members.html">List of all members</a>  </div>
@@ -102,14 +102,10 @@ Collaboration diagram for Enemy:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a14bead85804fe8c4cfd27ea20122594d" id="r_a14bead85804fe8c4cfd27ea20122594d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594d">EnemyState</a> { <br />
-&#160;&#160;<a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594dae599161956d626eda4cb0a5ffb85271c">Idle</a>
+<tr class="memitem:a14bead85804fe8c4cfd27ea20122594d" id="r_a14bead85804fe8c4cfd27ea20122594d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594d">EnemyState</a> { <a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594dae599161956d626eda4cb0a5ffb85271c">Idle</a>
 , <a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594da23a0d6103e6eb8265ec3203088db3c9c">FollowTarget</a>
 , <a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594daf96d9446f78479a6f540762f81171394">ReturnToSpawn</a>
 , <a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594dad9225ac958a165edf1f45f12ca056ac7">WaitToReturn</a>
-, <br />
-&#160;&#160;<a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594da32880dab32454a7d556c9cd71382f677">FocusOnTower</a>
-<br />
  }</td></tr>
 <tr class="separator:a14bead85804fe8c4cfd27ea20122594d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53aff336dbb3dd7847e86c3635273550" id="r_a53aff336dbb3dd7847e86c3635273550"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a53aff336dbb3dd7847e86c3635273550">PriorityTag</a> { <a class="el" href="class_enemy.html#a53aff336dbb3dd7847e86c3635273550a636da1d35e805b00eae0fcd8333f9234">Player</a>
@@ -124,24 +120,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a115c8ded4831b6e9168cfd9d634300f8" id="r_a115c8ded4831b6e9168cfd9d634300f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a115c8ded4831b6e9168cfd9d634300f8">SetEnemyState</a> (<a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594d">EnemyState</a> state)</td></tr>
 <tr class="memdesc:a115c8ded4831b6e9168cfd9d634300f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set enemy state.  <br /></td></tr>
 <tr class="separator:a115c8ded4831b6e9168cfd9d634300f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e4f86c94569ba5be94e533806441468" id="r_a8e4f86c94569ba5be94e533806441468"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a8e4f86c94569ba5be94e533806441468">PlayAction</a> (<a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594d">EnemyState</a> enemyState)</td></tr>
-<tr class="memdesc:a8e4f86c94569ba5be94e533806441468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play enemy action and behavior follow enemy state.  <br /></td></tr>
-<tr class="separator:a8e4f86c94569ba5be94e533806441468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1289737aae15f80017fe2b441b52545e" id="r_a1289737aae15f80017fe2b441b52545e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a1289737aae15f80017fe2b441b52545e">CheckState</a> (<a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594d">EnemyState</a> state)</td></tr>
+<tr class="memdesc:a1289737aae15f80017fe2b441b52545e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check enemy state.  <br /></td></tr>
+<tr class="separator:a1289737aae15f80017fe2b441b52545e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a945192ab3b423160afe30162dfd549f8" id="r_a945192ab3b423160afe30162dfd549f8"><td class="memItemLeft" align="right" valign="top">NavMeshAgent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a945192ab3b423160afe30162dfd549f8">agent</a></td></tr>
-<tr class="separator:a945192ab3b423160afe30162dfd549f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86288aef625be6e14d6d03baf646bcc0" id="r_a86288aef625be6e14d6d03baf646bcc0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a86288aef625be6e14d6d03baf646bcc0">nightMode</a></td></tr>
-<tr class="separator:a86288aef625be6e14d6d03baf646bcc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c93f98aea02cfe8ee79d3568b2dccb1" id="r_a3c93f98aea02cfe8ee79d3568b2dccb1"><td class="memItemLeft" align="right" valign="top">SpriteRenderer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a3c93f98aea02cfe8ee79d3568b2dccb1">spriteRenderer</a></td></tr>
-<tr class="separator:a3c93f98aea02cfe8ee79d3568b2dccb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43f264a7cdb7cf1b42c55d6538532c1c" id="r_a43f264a7cdb7cf1b42c55d6538532c1c"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a43f264a7cdb7cf1b42c55d6538532c1c">target</a></td></tr>
-<tr class="separator:a43f264a7cdb7cf1b42c55d6538532c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22d0e7376692fc64a18216eef498f925" id="r_a22d0e7376692fc64a18216eef498f925"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a22d0e7376692fc64a18216eef498f925">isStun</a></td></tr>
-<tr class="separator:a22d0e7376692fc64a18216eef498f925"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7769cb5509952cdb00cc6273c607aaa" id="r_aa7769cb5509952cdb00cc6273c607aaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594d">EnemyState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#aa7769cb5509952cdb00cc6273c607aaa">enemyActionState</a></td></tr>
-<tr class="separator:aa7769cb5509952cdb00cc6273c607aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:afa7828301322b6ee7eff7d2ef52bef02" id="r_afa7828301322b6ee7eff7d2ef52bef02"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#afa7828301322b6ee7eff7d2ef52bef02">NightMode</a><code> [get, set]</code></td></tr>
+<tr class="separator:afa7828301322b6ee7eff7d2ef52bef02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94e5227a605c9b77eb453bc53862a103" id="r_a94e5227a605c9b77eb453bc53862a103"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a94e5227a605c9b77eb453bc53862a103">IsStun</a><code> [get, set]</code></td></tr>
+<tr class="separator:a94e5227a605c9b77eb453bc53862a103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeaa116c64ee8c537dbc79a0f3b9d516" id="r_aaeaa116c64ee8c537dbc79a0f3b9d516"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#aaeaa116c64ee8c537dbc79a0f3b9d516">Target</a><code> [get, set]</code></td></tr>
+<tr class="separator:aaeaa116c64ee8c537dbc79a0f3b9d516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c395431efb22d47f8fe09add9676c74" id="r_a5c395431efb22d47f8fe09add9676c74"><td class="memItemLeft" align="right" valign="top">NavMeshAgent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a5c395431efb22d47f8fe09add9676c74">Agent</a><code> [get]</code></td></tr>
+<tr class="separator:a5c395431efb22d47f8fe09add9676c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0163629948dc157f71cf0ab30a9a97d6" id="r_a0163629948dc157f71cf0ab30a9a97d6"><td class="memItemLeft" align="right" valign="top">SpriteRenderer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a0163629948dc157f71cf0ab30a9a97d6">SpriteRenderer</a><code> [get]</code></td></tr>
+<tr class="separator:a0163629948dc157f71cf0ab30a9a97d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -149,40 +143,72 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:ae3442338205f74a157f1a311640e84eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80560cd7c04c1c0846715740bad699d1" id="r_a80560cd7c04c1c0846715740bad699d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a80560cd7c04c1c0846715740bad699d1">Update</a> ()</td></tr>
 <tr class="separator:a80560cd7c04c1c0846715740bad699d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acda7f22098a4bdb1c1ef0ab919df76e5" id="r_acda7f22098a4bdb1c1ef0ab919df76e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#acda7f22098a4bdb1c1ef0ab919df76e5">BehaviorHandle</a> ()</td></tr>
+<tr class="memdesc:acda7f22098a4bdb1c1ef0ab919df76e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle enemy behavior.  <br /></td></tr>
+<tr class="separator:acda7f22098a4bdb1c1ef0ab919df76e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56a5a14455ca67f9b7f5bf59ce530c12" id="r_a56a5a14455ca67f9b7f5bf59ce530c12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a56a5a14455ca67f9b7f5bf59ce530c12">SelectTarget</a> ()</td></tr>
+<tr class="memdesc:a56a5a14455ca67f9b7f5bf59ce530c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select target with the first priority tag found in the target list.  <br /></td></tr>
+<tr class="separator:a56a5a14455ca67f9b7f5bf59ce530c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a4d19f208ed4190cef84bbe9394314" id="r_a11a4d19f208ed4190cef84bbe9394314"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a11a4d19f208ed4190cef84bbe9394314">FollowTargetHandle</a> ()</td></tr>
+<tr class="memdesc:a11a4d19f208ed4190cef84bbe9394314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Follow target.  <br /></td></tr>
+<tr class="separator:a11a4d19f208ed4190cef84bbe9394314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1213ae57de8b75133c7032a666b0a5f" id="r_af1213ae57de8b75133c7032a666b0a5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#af1213ae57de8b75133c7032a666b0a5f">ReturnToSpawnHandle</a> ()</td></tr>
+<tr class="memdesc:af1213ae57de8b75133c7032a666b0a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return to spawn point.  <br /></td></tr>
+<tr class="separator:af1213ae57de8b75133c7032a666b0a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c19d16a5dd3bec159c1f520a563ba2" id="r_af9c19d16a5dd3bec159c1f520a563ba2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#af9c19d16a5dd3bec159c1f520a563ba2">IdleHandle</a> ()</td></tr>
+<tr class="memdesc:af9c19d16a5dd3bec159c1f520a563ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Idle and roam around spawn point.  <br /></td></tr>
+<tr class="separator:af9c19d16a5dd3bec159c1f520a563ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29e61ecac108d24ec2bc510d6b999f7b" id="r_a29e61ecac108d24ec2bc510d6b999f7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a29e61ecac108d24ec2bc510d6b999f7b">AnimationUpdate</a> ()</td></tr>
+<tr class="memdesc:a29e61ecac108d24ec2bc510d6b999f7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update enemy animation.  <br /></td></tr>
+<tr class="separator:a29e61ecac108d24ec2bc510d6b999f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19b7e5420567e77301f3259cbaa42b68" id="r_a19b7e5420567e77301f3259cbaa42b68"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a19b7e5420567e77301f3259cbaa42b68">WaitToReturn</a> (float time=0)</td></tr>
+<tr class="memdesc:a19b7e5420567e77301f3259cbaa42b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for a while and return to spawn point.  <br /></td></tr>
+<tr class="separator:a19b7e5420567e77301f3259cbaa42b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7785bbf93d2f79ecac9424e729d48d7" id="r_af7785bbf93d2f79ecac9424e729d48d7"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#af7785bbf93d2f79ecac9424e729d48d7">RoamAround</a> (float time)</td></tr>
+<tr class="memdesc:af7785bbf93d2f79ecac9424e729d48d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roam around spawn point.  <br /></td></tr>
+<tr class="separator:af7785bbf93d2f79ecac9424e729d48d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a447a675aaf79cf23a7dbd6fac34d42b9" id="r_a447a675aaf79cf23a7dbd6fac34d42b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a447a675aaf79cf23a7dbd6fac34d42b9">OnDrawGizmos</a> ()</td></tr>
 <tr class="memdesc:a447a675aaf79cf23a7dbd6fac34d42b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw gizmos on inspector.  <br /></td></tr>
 <tr class="separator:a447a675aaf79cf23a7dbd6fac34d42b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19b7e5420567e77301f3259cbaa42b68" id="r_a19b7e5420567e77301f3259cbaa42b68"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a19b7e5420567e77301f3259cbaa42b68">WaitToReturn</a> (float time=0)</td></tr>
-<tr class="memdesc:a19b7e5420567e77301f3259cbaa42b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for a second and set enemy state to ReturnToSpawn.  <br /></td></tr>
-<tr class="separator:a19b7e5420567e77301f3259cbaa42b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7785bbf93d2f79ecac9424e729d48d7" id="r_af7785bbf93d2f79ecac9424e729d48d7"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#af7785bbf93d2f79ecac9424e729d48d7">RoamAround</a> (float time)</td></tr>
-<tr class="memdesc:af7785bbf93d2f79ecac9424e729d48d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roam an enemy around enemy's spawn point.  <br /></td></tr>
-<tr class="separator:af7785bbf93d2f79ecac9424e729d48d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a1e3c867cd62062f40cd6869f3f641e26" id="r_a1e3c867cd62062f40cd6869f3f641e26"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a1e3c867cd62062f40cd6869f3f641e26">viewDistance</a></td></tr>
 <tr class="separator:a1e3c867cd62062f40cd6869f3f641e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2498137b3324147bce199212f353ce7" id="r_aa2498137b3324147bce199212f353ce7"><td class="memItemLeft" align="right" valign="top">LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#aa2498137b3324147bce199212f353ce7">playerLayerMask</a></td></tr>
-<tr class="separator:aa2498137b3324147bce199212f353ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a297c3ba2ad660472128fb5a99f7c1006" id="r_a297c3ba2ad660472128fb5a99f7c1006"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_enemy.html#a53aff336dbb3dd7847e86c3635273550">PriorityTag</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a297c3ba2ad660472128fb5a99f7c1006">priorityTags</a></td></tr>
-<tr class="separator:a297c3ba2ad660472128fb5a99f7c1006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc66862bfd7e2296ee764a84e1efa30a" id="r_abc66862bfd7e2296ee764a84e1efa30a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#abc66862bfd7e2296ee764a84e1efa30a">roamDuration</a></td></tr>
 <tr class="separator:abc66862bfd7e2296ee764a84e1efa30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dc01f81645b824d9e83499dd11985f2" id="r_a9dc01f81645b824d9e83499dd11985f2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a9dc01f81645b824d9e83499dd11985f2">roamCooldown</a></td></tr>
 <tr class="separator:a9dc01f81645b824d9e83499dd11985f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59442945d7cb009b80822b8b48fb3728" id="r_a59442945d7cb009b80822b8b48fb3728"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a59442945d7cb009b80822b8b48fb3728">roamArea</a></td></tr>
 <tr class="separator:a59442945d7cb009b80822b8b48fb3728"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ce7f6daf5e9f188f9854be988d951ee" id="r_a5ce7f6daf5e9f188f9854be988d951ee"><td class="memItemLeft" align="right" valign="top">Rigidbody2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a5ce7f6daf5e9f188f9854be988d951ee">_rigidbody2D</a></td></tr>
-<tr class="separator:a5ce7f6daf5e9f188f9854be988d951ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a537f39693d69267fbc2c32652d7f9a50" id="r_a537f39693d69267fbc2c32652d7f9a50"><td class="memItemLeft" align="right" valign="top">Animator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a537f39693d69267fbc2c32652d7f9a50">_animator</a></td></tr>
-<tr class="separator:a537f39693d69267fbc2c32652d7f9a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86288aef625be6e14d6d03baf646bcc0" id="r_a86288aef625be6e14d6d03baf646bcc0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a86288aef625be6e14d6d03baf646bcc0">nightMode</a></td></tr>
+<tr class="separator:a86288aef625be6e14d6d03baf646bcc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2498137b3324147bce199212f353ce7" id="r_aa2498137b3324147bce199212f353ce7"><td class="memItemLeft" align="right" valign="top">LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#aa2498137b3324147bce199212f353ce7">playerLayerMask</a></td></tr>
+<tr class="separator:aa2498137b3324147bce199212f353ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a297c3ba2ad660472128fb5a99f7c1006" id="r_a297c3ba2ad660472128fb5a99f7c1006"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_enemy.html#a53aff336dbb3dd7847e86c3635273550">PriorityTag</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a297c3ba2ad660472128fb5a99f7c1006">priorityTags</a></td></tr>
+<tr class="separator:a297c3ba2ad660472128fb5a99f7c1006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7769cb5509952cdb00cc6273c607aaa" id="r_aa7769cb5509952cdb00cc6273c607aaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594d">EnemyState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#aa7769cb5509952cdb00cc6273c607aaa">enemyActionState</a></td></tr>
+<tr class="separator:aa7769cb5509952cdb00cc6273c607aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd360b93128cfaa7f3058095c6505b0" id="r_abbd360b93128cfaa7f3058095c6505b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#abbd360b93128cfaa7f3058095c6505b0">_isStun</a></td></tr>
+<tr class="separator:abbd360b93128cfaa7f3058095c6505b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a2c998bc8b8561f8ddc72088185e6a6" id="r_a7a2c998bc8b8561f8ddc72088185e6a6"><td class="memItemLeft" align="right" valign="top">List&lt; Collider2D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a7a2c998bc8b8561f8ddc72088185e6a6">_targetInDistances</a></td></tr>
+<tr class="separator:a7a2c998bc8b8561f8ddc72088185e6a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5614f21806a2507184bcf7ac08cbf94a" id="r_a5614f21806a2507184bcf7ac08cbf94a"><td class="memItemLeft" align="right" valign="top">Coroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a5614f21806a2507184bcf7ac08cbf94a">_waitToReturnCoroutine</a></td></tr>
+<tr class="separator:a5614f21806a2507184bcf7ac08cbf94a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94de4671b7794499952703d3a5483c67" id="r_a94de4671b7794499952703d3a5483c67"><td class="memItemLeft" align="right" valign="top">Coroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a94de4671b7794499952703d3a5483c67">_roamAroundCoroutine</a></td></tr>
+<tr class="separator:a94de4671b7794499952703d3a5483c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4b62a8d14ec736dd67563996a0846bb" id="r_af4b62a8d14ec736dd67563996a0846bb"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#af4b62a8d14ec736dd67563996a0846bb">_spawnPoint</a></td></tr>
 <tr class="separator:af4b62a8d14ec736dd67563996a0846bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ea39b82af76301f03f3e7cecb76fd19" id="r_a1ea39b82af76301f03f3e7cecb76fd19"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a1ea39b82af76301f03f3e7cecb76fd19">_isWait</a></td></tr>
-<tr class="separator:a1ea39b82af76301f03f3e7cecb76fd19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4983dfae1bfd93bb3db29b1915fe6cf7" id="r_a4983dfae1bfd93bb3db29b1915fe6cf7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a4983dfae1bfd93bb3db29b1915fe6cf7">_isRoam</a></td></tr>
-<tr class="separator:a4983dfae1bfd93bb3db29b1915fe6cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab633efad75ee59e3b94d7a6b8a0fcb" id="r_a4ab633efad75ee59e3b94d7a6b8a0fcb"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a4ab633efad75ee59e3b94d7a6b8a0fcb">_target</a></td></tr>
+<tr class="separator:a4ab633efad75ee59e3b94d7a6b8a0fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537f39693d69267fbc2c32652d7f9a50" id="r_a537f39693d69267fbc2c32652d7f9a50"><td class="memItemLeft" align="right" valign="top">Animator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a537f39693d69267fbc2c32652d7f9a50">_animator</a></td></tr>
+<tr class="separator:a537f39693d69267fbc2c32652d7f9a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ee9983de6603fafa2f81881ac5c8653" id="r_a0ee9983de6603fafa2f81881ac5c8653"><td class="memItemLeft" align="right" valign="top">NavMeshAgent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a0ee9983de6603fafa2f81881ac5c8653">_agent</a></td></tr>
+<tr class="separator:a0ee9983de6603fafa2f81881ac5c8653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ce7f6daf5e9f188f9854be988d951ee" id="r_a5ce7f6daf5e9f188f9854be988d951ee"><td class="memItemLeft" align="right" valign="top">Rigidbody2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a5ce7f6daf5e9f188f9854be988d951ee">_rigidbody2D</a></td></tr>
+<tr class="separator:a5ce7f6daf5e9f188f9854be988d951ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f9ec2ea439f9e4d1153b1d72dc0375" id="r_a15f9ec2ea439f9e4d1153b1d72dc0375"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_enemy.html#a0163629948dc157f71cf0ab30a9a97d6">SpriteRenderer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a15f9ec2ea439f9e4d1153b1d72dc0375">_spriteRenderer</a></td></tr>
+<tr class="separator:a15f9ec2ea439f9e4d1153b1d72dc0375"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a14bead85804fe8c4cfd27ea20122594d" name="a14bead85804fe8c4cfd27ea20122594d"></a>
@@ -201,7 +227,6 @@ Private Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="a14bead85804fe8c4cfd27ea20122594da23a0d6103e6eb8265ec3203088db3c9c" name="a14bead85804fe8c4cfd27ea20122594da23a0d6103e6eb8265ec3203088db3c9c"></a>FollowTarget&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a14bead85804fe8c4cfd27ea20122594daf96d9446f78479a6f540762f81171394" name="a14bead85804fe8c4cfd27ea20122594daf96d9446f78479a6f540762f81171394"></a>ReturnToSpawn&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a14bead85804fe8c4cfd27ea20122594dad9225ac958a165edf1f45f12ca056ac7" name="a14bead85804fe8c4cfd27ea20122594dad9225ac958a165edf1f45f12ca056ac7"></a>WaitToReturn&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a14bead85804fe8c4cfd27ea20122594da32880dab32454a7d556c9cd71382f677" name="a14bead85804fe8c4cfd27ea20122594da32880dab32454a7d556c9cd71382f677"></a>FocusOnTower&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -227,6 +252,253 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a29e61ecac108d24ec2bc510d6b999f7b" name="a29e61ecac108d24ec2bc510d6b999f7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29e61ecac108d24ec2bc510d6b999f7b">&#9670;&#160;</a></span>AnimationUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy.AnimationUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update enemy animation. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_enemy_a29e61ecac108d24ec2bc510d6b999f7b_icgraph.png" border="0" usemap="#aclass_enemy_a29e61ecac108d24ec2bc510d6b999f7b_icgraph" alt=""/></div>
+<map name="aclass_enemy_a29e61ecac108d24ec2bc510d6b999f7b_icgraph" id="aclass_enemy_a29e61ecac108d24ec2bc510d6b999f7b_icgraph">
+<area shape="rect" title="Update enemy animation." alt="" coords="161,5,326,32"/>
+<area shape="rect" href="class_enemy.html#a80560cd7c04c1c0846715740bad699d1" title=" " alt="" coords="5,5,113,32"/>
+<area shape="poly" title=" " alt="" coords="145,21,113,21,113,16,145,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acda7f22098a4bdb1c1ef0ab919df76e5" name="acda7f22098a4bdb1c1ef0ab919df76e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acda7f22098a4bdb1c1ef0ab919df76e5">&#9670;&#160;</a></span>BehaviorHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy.BehaviorHandle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handle enemy behavior. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_enemy_acda7f22098a4bdb1c1ef0ab919df76e5_cgraph.png" border="0" usemap="#aclass_enemy_acda7f22098a4bdb1c1ef0ab919df76e5_cgraph" alt=""/></div>
+<map name="aclass_enemy_acda7f22098a4bdb1c1ef0ab919df76e5_cgraph" id="aclass_enemy_acda7f22098a4bdb1c1ef0ab919df76e5_cgraph">
+<area shape="rect" title="Handle enemy behavior." alt="" coords="5,70,161,96"/>
+<area shape="rect" href="class_enemy.html#a1289737aae15f80017fe2b441b52545e" title="Check enemy state." alt="" coords="660,70,795,96"/>
+<area shape="poly" title=" " alt="" coords="109,67,154,46,208,30,321,10,411,3,500,9,613,30,654,43,691,60,688,64,652,48,612,35,500,14,411,8,322,15,209,35,156,51,111,72"/>
+<area shape="rect" href="class_enemy.html#a11a4d19f208ed4190cef84bbe9394314" title="Follow target." alt="" coords="218,44,397,71"/>
+<area shape="poly" title=" " alt="" coords="161,72,202,67,202,72,162,77"/>
+<area shape="rect" href="class_enemy.html#af9c19d16a5dd3bec159c1f520a563ba2" title="Idle and roam around spawn point." alt="" coords="244,146,371,172"/>
+<area shape="poly" title=" " alt="" coords="116,94,210,131,234,139,232,144,208,136,114,99"/>
+<area shape="rect" href="class_enemy.html#af1213ae57de8b75133c7032a666b0a5f" title="Return to spawn point." alt="" coords="209,95,406,122"/>
+<area shape="poly" title=" " alt="" coords="162,89,193,93,193,98,161,95"/>
+<area shape="rect" href="class_enemy.html#a56a5a14455ca67f9b7f5bf59ce530c12" title="Select target with the first priority tag found in the target list." alt="" coords="464,44,603,71"/>
+<area shape="poly" title=" " alt="" coords="398,55,448,55,448,60,398,60"/>
+<area shape="rect" href="class_enemy.html#a115c8ded4831b6e9168cfd9d634300f8" title="Set enemy state." alt="" coords="454,95,612,122"/>
+<area shape="poly" title=" " alt="" coords="371,69,456,89,455,94,370,74"/>
+<area shape="poly" title=" " alt="" coords="370,143,455,123,456,128,371,148"/>
+<area shape="rect" href="class_enemy.html#af7785bbf93d2f79ecac9424e729d48d7" title="Roam around spawn point." alt="" coords="463,146,604,172"/>
+<area shape="poly" title=" " alt="" coords="371,156,447,156,447,162,371,162"/>
+<area shape="poly" title=" " alt="" coords="579,143,611,131,682,101,684,106,613,136,581,148"/>
+<area shape="poly" title=" " alt="" coords="407,106,438,106,438,111,407,111"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_enemy_acda7f22098a4bdb1c1ef0ab919df76e5_icgraph.png" border="0" usemap="#aclass_enemy_acda7f22098a4bdb1c1ef0ab919df76e5_icgraph" alt=""/></div>
+<map name="aclass_enemy_acda7f22098a4bdb1c1ef0ab919df76e5_icgraph" id="aclass_enemy_acda7f22098a4bdb1c1ef0ab919df76e5_icgraph">
+<area shape="rect" title="Handle enemy behavior." alt="" coords="161,5,316,32"/>
+<area shape="rect" href="class_enemy.html#a80560cd7c04c1c0846715740bad699d1" title=" " alt="" coords="5,5,113,32"/>
+<area shape="poly" title=" " alt="" coords="145,21,113,21,113,16,145,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1289737aae15f80017fe2b441b52545e" name="a1289737aae15f80017fe2b441b52545e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1289737aae15f80017fe2b441b52545e">&#9670;&#160;</a></span>CheckState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Enemy.CheckState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594d">EnemyState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check enemy state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>State that you want to check.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_enemy_a1289737aae15f80017fe2b441b52545e_icgraph.png" border="0" usemap="#aclass_enemy_a1289737aae15f80017fe2b441b52545e_icgraph" alt=""/></div>
+<map name="aclass_enemy_a1289737aae15f80017fe2b441b52545e_icgraph" id="aclass_enemy_a1289737aae15f80017fe2b441b52545e_icgraph">
+<area shape="rect" title="Check enemy state." alt="" coords="728,5,862,32"/>
+<area shape="rect" href="class_enemy.html#acda7f22098a4bdb1c1ef0ab919df76e5" title="Handle enemy behavior." alt="" coords="161,5,316,32"/>
+<area shape="poly" title=" " alt="" coords="712,21,317,21,317,16,712,16"/>
+<area shape="rect" href="class_enemy.html#af7785bbf93d2f79ecac9424e729d48d7" title="Roam around spawn point." alt="" coords="538,31,680,57"/>
+<area shape="poly" title=" " alt="" coords="713,33,680,37,680,32,712,27"/>
+<area shape="rect" href="class_enemy.html#a80560cd7c04c1c0846715740bad699d1" title=" " alt="" coords="5,5,113,32"/>
+<area shape="poly" title=" " alt="" coords="145,21,113,21,113,16,145,16"/>
+<area shape="rect" href="class_enemy.html#af9c19d16a5dd3bec159c1f520a563ba2" title="Idle and roam around spawn point." alt="" coords="364,31,490,57"/>
+<area shape="poly" title=" " alt="" coords="523,47,491,47,491,41,523,41"/>
+<area shape="poly" title=" " alt="" coords="349,36,316,32,317,26,349,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a11a4d19f208ed4190cef84bbe9394314" name="a11a4d19f208ed4190cef84bbe9394314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a4d19f208ed4190cef84bbe9394314">&#9670;&#160;</a></span>FollowTargetHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy.FollowTargetHandle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Follow target. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_enemy_a11a4d19f208ed4190cef84bbe9394314_cgraph.png" border="0" usemap="#aclass_enemy_a11a4d19f208ed4190cef84bbe9394314_cgraph" alt=""/></div>
+<map name="aclass_enemy_a11a4d19f208ed4190cef84bbe9394314_cgraph" id="aclass_enemy_a11a4d19f208ed4190cef84bbe9394314_cgraph">
+<area shape="rect" title="Follow target." alt="" coords="5,31,185,57"/>
+<area shape="rect" href="class_enemy.html#a56a5a14455ca67f9b7f5bf59ce530c12" title="Select target with the first priority tag found in the target list." alt="" coords="242,5,382,32"/>
+<area shape="poly" title=" " alt="" coords="185,31,226,26,227,31,186,36"/>
+<area shape="rect" href="class_enemy.html#a115c8ded4831b6e9168cfd9d634300f8" title="Set enemy state." alt="" coords="233,56,391,83"/>
+<area shape="poly" title=" " alt="" coords="186,52,217,56,217,61,185,57"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_enemy_a11a4d19f208ed4190cef84bbe9394314_icgraph.png" border="0" usemap="#aclass_enemy_a11a4d19f208ed4190cef84bbe9394314_icgraph" alt=""/></div>
+<map name="aclass_enemy_a11a4d19f208ed4190cef84bbe9394314_icgraph" id="aclass_enemy_a11a4d19f208ed4190cef84bbe9394314_icgraph">
+<area shape="rect" title="Follow target." alt="" coords="364,5,543,32"/>
+<area shape="rect" href="class_enemy.html#acda7f22098a4bdb1c1ef0ab919df76e5" title="Handle enemy behavior." alt="" coords="161,5,316,32"/>
+<area shape="poly" title=" " alt="" coords="348,21,316,21,316,16,348,16"/>
+<area shape="rect" href="class_enemy.html#a80560cd7c04c1c0846715740bad699d1" title=" " alt="" coords="5,5,113,32"/>
+<area shape="poly" title=" " alt="" coords="145,21,113,21,113,16,145,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af9c19d16a5dd3bec159c1f520a563ba2" name="af9c19d16a5dd3bec159c1f520a563ba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9c19d16a5dd3bec159c1f520a563ba2">&#9670;&#160;</a></span>IdleHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy.IdleHandle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Idle and roam around spawn point. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_enemy_af9c19d16a5dd3bec159c1f520a563ba2_cgraph.png" border="0" usemap="#aclass_enemy_af9c19d16a5dd3bec159c1f520a563ba2_cgraph" alt=""/></div>
+<map name="aclass_enemy_af9c19d16a5dd3bec159c1f520a563ba2_cgraph" id="aclass_enemy_af9c19d16a5dd3bec159c1f520a563ba2_cgraph">
+<area shape="rect" title="Idle and roam around spawn point." alt="" coords="5,31,132,57"/>
+<area shape="rect" href="class_enemy.html#af7785bbf93d2f79ecac9424e729d48d7" title="Roam around spawn point." alt="" coords="188,5,330,32"/>
+<area shape="poly" title=" " alt="" coords="132,33,172,28,173,33,133,38"/>
+<area shape="rect" href="class_enemy.html#a115c8ded4831b6e9168cfd9d634300f8" title="Set enemy state." alt="" coords="180,56,338,83"/>
+<area shape="poly" title=" " alt="" coords="133,50,165,54,164,59,132,55"/>
+<area shape="rect" href="class_enemy.html#a1289737aae15f80017fe2b441b52545e" title="Check enemy state." alt="" coords="386,5,520,32"/>
+<area shape="poly" title=" " alt="" coords="330,16,371,16,371,21,330,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_enemy_af9c19d16a5dd3bec159c1f520a563ba2_icgraph.png" border="0" usemap="#aclass_enemy_af9c19d16a5dd3bec159c1f520a563ba2_icgraph" alt=""/></div>
+<map name="aclass_enemy_af9c19d16a5dd3bec159c1f520a563ba2_icgraph" id="aclass_enemy_af9c19d16a5dd3bec159c1f520a563ba2_icgraph">
+<area shape="rect" title="Idle and roam around spawn point." alt="" coords="364,5,490,32"/>
+<area shape="rect" href="class_enemy.html#acda7f22098a4bdb1c1ef0ab919df76e5" title="Handle enemy behavior." alt="" coords="161,5,316,32"/>
+<area shape="poly" title=" " alt="" coords="349,21,316,21,316,16,349,16"/>
+<area shape="rect" href="class_enemy.html#a80560cd7c04c1c0846715740bad699d1" title=" " alt="" coords="5,5,113,32"/>
+<area shape="poly" title=" " alt="" coords="145,21,113,21,113,16,145,16"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a447a675aaf79cf23a7dbd6fac34d42b9" name="a447a675aaf79cf23a7dbd6fac34d42b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a447a675aaf79cf23a7dbd6fac34d42b9">&#9670;&#160;</a></span>OnDrawGizmos()</h2>
 
@@ -254,41 +526,48 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8e4f86c94569ba5be94e533806441468" name="a8e4f86c94569ba5be94e533806441468"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e4f86c94569ba5be94e533806441468">&#9670;&#160;</a></span>PlayAction()</h2>
+<a id="af1213ae57de8b75133c7032a666b0a5f" name="af1213ae57de8b75133c7032a666b0a5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1213ae57de8b75133c7032a666b0a5f">&#9670;&#160;</a></span>ReturnToSpawnHandle()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Enemy.PlayAction </td>
+          <td class="memname">void Enemy.ReturnToSpawnHandle </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594d">EnemyState</a>&#160;</td>
-          <td class="paramname"><em>enemyState</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Play enemy action and behavior follow enemy state. </p>
+<p>Return to spawn point. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_enemy_a8e4f86c94569ba5be94e533806441468_cgraph.png" border="0" usemap="#aclass_enemy_a8e4f86c94569ba5be94e533806441468_cgraph" alt=""/></div>
-<map name="aclass_enemy_a8e4f86c94569ba5be94e533806441468_cgraph" id="aclass_enemy_a8e4f86c94569ba5be94e533806441468_cgraph">
-<area shape="rect" title="Play enemy action and behavior follow enemy state." alt="" coords="5,31,135,57"/>
-<area shape="rect" href="class_enemy.html#af7785bbf93d2f79ecac9424e729d48d7" title="Roam an enemy around enemy&#39;s spawn point." alt="" coords="191,5,333,32"/>
-<area shape="poly" title=" " alt="" coords="134,33,176,27,176,33,135,38"/>
-<area shape="rect" href="class_enemy.html#a115c8ded4831b6e9168cfd9d634300f8" title="Set enemy state." alt="" coords="183,56,341,83"/>
-<area shape="poly" title=" " alt="" coords="135,50,168,54,167,59,134,55"/>
+<div class="center"><img src="class_enemy_af1213ae57de8b75133c7032a666b0a5f_cgraph.png" border="0" usemap="#aclass_enemy_af1213ae57de8b75133c7032a666b0a5f_cgraph" alt=""/></div>
+<map name="aclass_enemy_af1213ae57de8b75133c7032a666b0a5f_cgraph" id="aclass_enemy_af1213ae57de8b75133c7032a666b0a5f_cgraph">
+<area shape="rect" title="Return to spawn point." alt="" coords="5,5,203,32"/>
+<area shape="rect" href="class_enemy.html#a115c8ded4831b6e9168cfd9d634300f8" title="Set enemy state." alt="" coords="251,5,409,32"/>
+<area shape="poly" title=" " alt="" coords="203,16,235,16,235,21,203,21"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_enemy_a8e4f86c94569ba5be94e533806441468_icgraph.png" border="0" usemap="#aclass_enemy_a8e4f86c94569ba5be94e533806441468_icgraph" alt=""/></div>
-<map name="aclass_enemy_a8e4f86c94569ba5be94e533806441468_icgraph" id="aclass_enemy_a8e4f86c94569ba5be94e533806441468_icgraph">
-<area shape="rect" title="Play enemy action and behavior follow enemy state." alt="" coords="161,5,290,32"/>
+<div class="center"><img src="class_enemy_af1213ae57de8b75133c7032a666b0a5f_icgraph.png" border="0" usemap="#aclass_enemy_af1213ae57de8b75133c7032a666b0a5f_icgraph" alt=""/></div>
+<map name="aclass_enemy_af1213ae57de8b75133c7032a666b0a5f_icgraph" id="aclass_enemy_af1213ae57de8b75133c7032a666b0a5f_icgraph">
+<area shape="rect" title="Return to spawn point." alt="" coords="364,5,561,32"/>
+<area shape="rect" href="class_enemy.html#acda7f22098a4bdb1c1ef0ab919df76e5" title="Handle enemy behavior." alt="" coords="161,5,316,32"/>
+<area shape="poly" title=" " alt="" coords="348,21,316,21,316,16,348,16"/>
 <area shape="rect" href="class_enemy.html#a80560cd7c04c1c0846715740bad699d1" title=" " alt="" coords="5,5,113,32"/>
 <area shape="poly" title=" " alt="" coords="145,21,113,21,113,16,145,16"/>
 </map>
@@ -320,15 +599,75 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Roam an enemy around enemy's spawn point. </p>
+<p>Roam around spawn point. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>Roam duration.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_enemy_af7785bbf93d2f79ecac9424e729d48d7_cgraph.png" border="0" usemap="#aclass_enemy_af7785bbf93d2f79ecac9424e729d48d7_cgraph" alt=""/></div>
+<map name="aclass_enemy_af7785bbf93d2f79ecac9424e729d48d7_cgraph" id="aclass_enemy_af7785bbf93d2f79ecac9424e729d48d7_cgraph">
+<area shape="rect" title="Roam around spawn point." alt="" coords="5,5,147,32"/>
+<area shape="rect" href="class_enemy.html#a1289737aae15f80017fe2b441b52545e" title="Check enemy state." alt="" coords="195,5,329,32"/>
+<area shape="poly" title=" " alt="" coords="147,16,179,16,179,21,147,21"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_enemy_af7785bbf93d2f79ecac9424e729d48d7_icgraph.png" border="0" usemap="#aclass_enemy_af7785bbf93d2f79ecac9424e729d48d7_icgraph" alt=""/></div>
 <map name="aclass_enemy_af7785bbf93d2f79ecac9424e729d48d7_icgraph" id="aclass_enemy_af7785bbf93d2f79ecac9424e729d48d7_icgraph">
-<area shape="rect" title="Roam an enemy around enemy&#39;s spawn point." alt="" coords="338,5,479,32"/>
-<area shape="rect" href="class_enemy.html#a8e4f86c94569ba5be94e533806441468" title="Play enemy action and behavior follow enemy state." alt="" coords="161,5,290,32"/>
-<area shape="poly" title=" " alt="" coords="322,21,290,21,290,16,322,16"/>
+<area shape="rect" title="Roam around spawn point." alt="" coords="538,5,680,32"/>
+<area shape="rect" href="class_enemy.html#af9c19d16a5dd3bec159c1f520a563ba2" title="Idle and roam around spawn point." alt="" coords="364,5,490,32"/>
+<area shape="poly" title=" " alt="" coords="523,21,491,21,491,16,523,16"/>
+<area shape="rect" href="class_enemy.html#acda7f22098a4bdb1c1ef0ab919df76e5" title="Handle enemy behavior." alt="" coords="161,5,316,32"/>
+<area shape="poly" title=" " alt="" coords="349,21,316,21,316,16,349,16"/>
+<area shape="rect" href="class_enemy.html#a80560cd7c04c1c0846715740bad699d1" title=" " alt="" coords="5,5,113,32"/>
+<area shape="poly" title=" " alt="" coords="145,21,113,21,113,16,145,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a56a5a14455ca67f9b7f5bf59ce530c12" name="a56a5a14455ca67f9b7f5bf59ce530c12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56a5a14455ca67f9b7f5bf59ce530c12">&#9670;&#160;</a></span>SelectTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy.SelectTarget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Select target with the first priority tag found in the target list. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_enemy_a56a5a14455ca67f9b7f5bf59ce530c12_icgraph.png" border="0" usemap="#aclass_enemy_a56a5a14455ca67f9b7f5bf59ce530c12_icgraph" alt=""/></div>
+<map name="aclass_enemy_a56a5a14455ca67f9b7f5bf59ce530c12_icgraph" id="aclass_enemy_a56a5a14455ca67f9b7f5bf59ce530c12_icgraph">
+<area shape="rect" title="Select target with the first priority tag found in the target list." alt="" coords="591,5,731,32"/>
+<area shape="rect" href="class_enemy.html#a11a4d19f208ed4190cef84bbe9394314" title="Follow target." alt="" coords="364,5,543,32"/>
+<area shape="poly" title=" " alt="" coords="576,21,544,21,544,16,576,16"/>
+<area shape="rect" href="class_enemy.html#acda7f22098a4bdb1c1ef0ab919df76e5" title="Handle enemy behavior." alt="" coords="161,5,316,32"/>
+<area shape="poly" title=" " alt="" coords="348,21,316,21,316,16,348,16"/>
 <area shape="rect" href="class_enemy.html#a80560cd7c04c1c0846715740bad699d1" title=" " alt="" coords="5,5,113,32"/>
 <area shape="poly" title=" " alt="" coords="145,21,113,21,113,16,145,16"/>
 </map>
@@ -353,17 +692,30 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Set enemy state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>State that you want to set.</td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_enemy_a115c8ded4831b6e9168cfd9d634300f8_icgraph.png" border="0" usemap="#aclass_enemy_a115c8ded4831b6e9168cfd9d634300f8_icgraph" alt=""/></div>
 <map name="aclass_enemy_a115c8ded4831b6e9168cfd9d634300f8_icgraph" id="aclass_enemy_a115c8ded4831b6e9168cfd9d634300f8_icgraph">
-<area shape="rect" title="Set enemy state." alt="" coords="338,31,496,57"/>
-<area shape="rect" href="class_enemy.html#a8e4f86c94569ba5be94e533806441468" title="Play enemy action and behavior follow enemy state." alt="" coords="161,5,290,32"/>
-<area shape="poly" title=" " alt="" coords="322,34,290,30,290,25,323,29"/>
-<area shape="rect" href="class_enemy.html#a80560cd7c04c1c0846715740bad699d1" title=" " alt="" coords="5,31,113,57"/>
-<area shape="poly" title=" " alt="" coords="322,47,113,47,113,41,322,41"/>
-<area shape="poly" title=" " alt="" coords="146,33,113,38,113,33,145,28"/>
+<area shape="rect" title="Set enemy state." alt="" coords="609,56,768,83"/>
+<area shape="rect" href="class_enemy.html#a11a4d19f208ed4190cef84bbe9394314" title="Follow target." alt="" coords="373,5,552,32"/>
+<area shape="poly" title=" " alt="" coords="610,55,525,35,526,30,612,49"/>
+<area shape="rect" href="class_enemy.html#af9c19d16a5dd3bec159c1f520a563ba2" title="Idle and roam around spawn point." alt="" coords="400,56,526,83"/>
+<area shape="poly" title=" " alt="" coords="594,72,526,72,526,67,594,67"/>
+<area shape="rect" href="class_enemy.html#af1213ae57de8b75133c7032a666b0a5f" title="Return to spawn point." alt="" coords="364,107,561,133"/>
+<area shape="poly" title=" " alt="" coords="612,89,526,109,525,103,610,84"/>
+<area shape="rect" href="class_enemy.html#acda7f22098a4bdb1c1ef0ab919df76e5" title="Handle enemy behavior." alt="" coords="161,56,316,83"/>
+<area shape="poly" title=" " alt="" coords="386,39,301,58,300,53,385,33"/>
+<area shape="rect" href="class_enemy.html#a80560cd7c04c1c0846715740bad699d1" title=" " alt="" coords="5,56,113,83"/>
+<area shape="poly" title=" " alt="" coords="145,72,113,72,113,67,145,67"/>
+<area shape="poly" title=" " alt="" coords="384,72,317,72,317,67,384,67"/>
+<area shape="poly" title=" " alt="" coords="385,105,300,86,301,81,386,100"/>
 </map>
 </div>
 
@@ -421,14 +773,28 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_enemy_a80560cd7c04c1c0846715740bad699d1_cgraph.png" border="0" usemap="#aclass_enemy_a80560cd7c04c1c0846715740bad699d1_cgraph" alt=""/></div>
 <map name="aclass_enemy_a80560cd7c04c1c0846715740bad699d1_cgraph" id="aclass_enemy_a80560cd7c04c1c0846715740bad699d1_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,113,57"/>
-<area shape="rect" href="class_enemy.html#a8e4f86c94569ba5be94e533806441468" title="Play enemy action and behavior follow enemy state." alt="" coords="161,5,290,32"/>
-<area shape="poly" title=" " alt="" coords="113,33,145,28,146,33,113,38"/>
-<area shape="rect" href="class_enemy.html#a115c8ded4831b6e9168cfd9d634300f8" title="Set enemy state." alt="" coords="338,56,496,83"/>
-<area shape="poly" title=" " alt="" coords="113,45,322,60,322,65,113,50"/>
-<area shape="rect" href="class_enemy.html#af7785bbf93d2f79ecac9424e729d48d7" title="Roam an enemy around enemy&#39;s spawn point." alt="" coords="347,5,488,32"/>
-<area shape="poly" title=" " alt="" coords="290,16,331,16,331,21,290,21"/>
-<area shape="poly" title=" " alt="" coords="280,30,350,49,348,54,278,35"/>
+<area shape="rect" title=" " alt="" coords="5,48,113,75"/>
+<area shape="rect" href="class_enemy.html#a29e61ecac108d24ec2bc510d6b999f7b" title="Update enemy animation." alt="" coords="161,23,326,49"/>
+<area shape="poly" title=" " alt="" coords="113,51,145,47,145,52,113,57"/>
+<area shape="rect" href="class_enemy.html#acda7f22098a4bdb1c1ef0ab919df76e5" title="Handle enemy behavior." alt="" coords="166,73,321,100"/>
+<area shape="poly" title=" " alt="" coords="113,66,151,71,150,76,113,71"/>
+<area shape="rect" href="class_enemy.html#a1289737aae15f80017fe2b441b52545e" title="Check enemy state." alt="" coords="826,73,960,100"/>
+<area shape="poly" title=" " alt="" coords="294,70,325,59,348,45,373,33,485,10,575,3,665,11,778,33,819,46,856,63,854,68,817,51,777,38,665,17,575,8,486,15,375,38,351,50,327,64,296,75"/>
+<area shape="rect" href="class_enemy.html#a11a4d19f208ed4190cef84bbe9394314" title="Follow target." alt="" coords="383,48,562,75"/>
+<area shape="poly" title=" " alt="" coords="321,75,367,70,368,75,322,81"/>
+<area shape="rect" href="class_enemy.html#af9c19d16a5dd3bec159c1f520a563ba2" title="Idle and roam around spawn point." alt="" coords="410,149,536,176"/>
+<area shape="poly" title=" " alt="" coords="278,98,375,135,400,142,398,147,373,140,276,103"/>
+<area shape="rect" href="class_enemy.html#af1213ae57de8b75133c7032a666b0a5f" title="Return to spawn point." alt="" coords="374,99,571,125"/>
+<area shape="poly" title=" " alt="" coords="322,92,359,97,358,102,321,98"/>
+<area shape="rect" href="class_enemy.html#a56a5a14455ca67f9b7f5bf59ce530c12" title="Select target with the first priority tag found in the target list." alt="" coords="629,48,768,75"/>
+<area shape="poly" title=" " alt="" coords="563,59,613,59,613,64,563,64"/>
+<area shape="rect" href="class_enemy.html#a115c8ded4831b6e9168cfd9d634300f8" title="Set enemy state." alt="" coords="619,99,778,125"/>
+<area shape="poly" title=" " alt="" coords="536,73,622,92,621,97,535,78"/>
+<area shape="poly" title=" " alt="" coords="535,146,621,127,622,132,536,151"/>
+<area shape="rect" href="class_enemy.html#af7785bbf93d2f79ecac9424e729d48d7" title="Roam around spawn point." alt="" coords="628,149,769,176"/>
+<area shape="poly" title=" " alt="" coords="536,160,612,160,612,165,536,165"/>
+<area shape="poly" title=" " alt="" coords="744,146,777,135,848,104,850,109,779,140,746,151"/>
+<area shape="poly" title=" " alt="" coords="572,109,604,109,604,115,572,115"/>
 </map>
 </div>
 
@@ -458,11 +824,40 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Wait for a second and set enemy state to ReturnToSpawn. </p>
+<p>Wait for a while and return to spawn point. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>Time to wait.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a0ee9983de6603fafa2f81881ac5c8653" name="a0ee9983de6603fafa2f81881ac5c8653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ee9983de6603fafa2f81881ac5c8653">&#9670;&#160;</a></span>_agent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NavMeshAgent Enemy._agent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a537f39693d69267fbc2c32652d7f9a50" name="a537f39693d69267fbc2c32652d7f9a50"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a537f39693d69267fbc2c32652d7f9a50">&#9670;&#160;</a></span>_animator</h2>
 
@@ -485,8 +880,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a4983dfae1bfd93bb3db29b1915fe6cf7" name="a4983dfae1bfd93bb3db29b1915fe6cf7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4983dfae1bfd93bb3db29b1915fe6cf7">&#9670;&#160;</a></span>_isRoam</h2>
+<a id="abbd360b93128cfaa7f3058095c6505b0" name="abbd360b93128cfaa7f3058095c6505b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbd360b93128cfaa7f3058095c6505b0">&#9670;&#160;</a></span>_isStun</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -495,29 +890,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Enemy._isRoam</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1ea39b82af76301f03f3e7cecb76fd19" name="a1ea39b82af76301f03f3e7cecb76fd19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ea39b82af76301f03f3e7cecb76fd19">&#9670;&#160;</a></span>_isWait</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Enemy._isWait</td>
+          <td class="memname">bool Enemy._isStun</td>
         </tr>
       </table>
   </td>
@@ -551,6 +924,28 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a94de4671b7794499952703d3a5483c67" name="a94de4671b7794499952703d3a5483c67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94de4671b7794499952703d3a5483c67">&#9670;&#160;</a></span>_roamAroundCoroutine</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Coroutine Enemy._roamAroundCoroutine</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af4b62a8d14ec736dd67563996a0846bb" name="af4b62a8d14ec736dd67563996a0846bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af4b62a8d14ec736dd67563996a0846bb">&#9670;&#160;</a></span>_spawnPoint</h2>
 
@@ -573,16 +968,90 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a945192ab3b423160afe30162dfd549f8" name="a945192ab3b423160afe30162dfd549f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a945192ab3b423160afe30162dfd549f8">&#9670;&#160;</a></span>agent</h2>
+<a id="a15f9ec2ea439f9e4d1153b1d72dc0375" name="a15f9ec2ea439f9e4d1153b1d72dc0375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f9ec2ea439f9e4d1153b1d72dc0375">&#9670;&#160;</a></span>_spriteRenderer</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">NavMeshAgent Enemy.agent</td>
+          <td class="memname"><a class="el" href="class_enemy.html#a0163629948dc157f71cf0ab30a9a97d6">SpriteRenderer</a> Enemy._spriteRenderer</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ab633efad75ee59e3b94d7a6b8a0fcb" name="a4ab633efad75ee59e3b94d7a6b8a0fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab633efad75ee59e3b94d7a6b8a0fcb">&#9670;&#160;</a></span>_target</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject Enemy._target</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a2c998bc8b8561f8ddc72088185e6a6" name="a7a2c998bc8b8561f8ddc72088185e6a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a2c998bc8b8561f8ddc72088185e6a6">&#9670;&#160;</a></span>_targetInDistances</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Collider2D&gt; Enemy._targetInDistances</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5614f21806a2507184bcf7ac08cbf94a" name="a5614f21806a2507184bcf7ac08cbf94a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5614f21806a2507184bcf7ac08cbf94a">&#9670;&#160;</a></span>_waitToReturnCoroutine</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Coroutine Enemy._waitToReturnCoroutine</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -592,25 +1061,19 @@ Here is the call graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_enemy.html#a14bead85804fe8c4cfd27ea20122594d">EnemyState</a> Enemy.enemyActionState</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a22d0e7376692fc64a18216eef498f925" name="a22d0e7376692fc64a18216eef498f925"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22d0e7376692fc64a18216eef498f925">&#9670;&#160;</a></span>isStun</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Enemy.isStun</td>
-        </tr>
-      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -620,11 +1083,19 @@ Here is the call graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Enemy.nightMode</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -739,34 +1210,6 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a3c93f98aea02cfe8ee79d3568b2dccb1" name="a3c93f98aea02cfe8ee79d3568b2dccb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c93f98aea02cfe8ee79d3568b2dccb1">&#9670;&#160;</a></span>spriteRenderer</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SpriteRenderer Enemy.spriteRenderer</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a43f264a7cdb7cf1b42c55d6538532c1c" name="a43f264a7cdb7cf1b42c55d6538532c1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43f264a7cdb7cf1b42c55d6538532c1c">&#9670;&#160;</a></span>target</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GameObject Enemy.target</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a1e3c867cd62062f40cd6869f3f641e26" name="a1e3c867cd62062f40cd6869f3f641e26"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e3c867cd62062f40cd6869f3f641e26">&#9670;&#160;</a></span>viewDistance</h2>
 
@@ -783,6 +1226,117 @@ Here is the call graph for this function:</div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a5c395431efb22d47f8fe09add9676c74" name="a5c395431efb22d47f8fe09add9676c74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c395431efb22d47f8fe09add9676c74">&#9670;&#160;</a></span>Agent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NavMeshAgent Enemy.Agent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94e5227a605c9b77eb453bc53862a103" name="a94e5227a605c9b77eb453bc53862a103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94e5227a605c9b77eb453bc53862a103">&#9670;&#160;</a></span>IsStun</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Enemy.IsStun</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa7828301322b6ee7eff7d2ef52bef02" name="afa7828301322b6ee7eff7d2ef52bef02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa7828301322b6ee7eff7d2ef52bef02">&#9670;&#160;</a></span>NightMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Enemy.NightMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0163629948dc157f71cf0ab30a9a97d6" name="a0163629948dc157f71cf0ab30a9a97d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0163629948dc157f71cf0ab30a9a97d6">&#9670;&#160;</a></span>SpriteRenderer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SpriteRenderer Enemy.SpriteRenderer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaeaa116c64ee8c537dbc79a0f3b9d516" name="aaeaa116c64ee8c537dbc79a0f3b9d516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeaa116c64ee8c537dbc79a0f3b9d516">&#9670;&#160;</a></span>Target</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject Enemy.Target</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

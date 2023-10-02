@@ -1,5 +1,5 @@
 <map id="EnemyHealthSystem.Stun" name="EnemyHealthSystem.Stun">
-<area shape="rect" id="Node000001" title=" " alt="" coords="278,13,453,40"/>
-<area shape="rect" id="Node000002" href="$class_enemy_health_system.html#a389e1e504b024830a5605feb034579d5" title=" " alt="" coords="5,5,230,48"/>
+<area shape="rect" id="Node000001" title="stun the enemy." alt="" coords="278,13,453,40"/>
+<area shape="rect" id="Node000002" href="$class_enemy_health_system.html#a389e1e504b024830a5605feb034579d5" title="Take damage and stun the enemy." alt="" coords="5,5,230,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,29,230,29,230,24,262,24"/>
 </map>

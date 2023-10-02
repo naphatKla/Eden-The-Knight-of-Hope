@@ -12,7 +12,7 @@ public class EnemyHealthSystem : HealthSystem
     
     public override void TakeDamage(float damage, GameObject attacker)
     {
-        _enemy.target = attacker;
+        _enemy.Target = attacker;
         base.TakeDamage(damage);
     }
     
@@ -46,8 +46,8 @@ public class EnemyHealthSystem : HealthSystem
     /// <returns></returns>
     IEnumerator Stun(float stunDuration)
     {
-        _enemy.isStun = true;
+        _enemy.IsStun = true;
         yield return new WaitForSeconds(stunDuration);
-        _enemy.isStun = false;
+        _enemy.IsStun = false;
     }
 }

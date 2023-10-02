@@ -8,6 +8,5 @@ var searchData=
   ['speed_5',['speed',['../class_bullet.html#a75e914c39a4154ced3d653ae44a05539',1,'Bullet']]],
   ['sprintkey_6',['sprintKey',['../class_player.html#a1e478df8191dbd619cc1111dba542cea',1,'Player']]],
   ['sprintspeed_7',['sprintSpeed',['../class_player.html#a83193946d87704a77d8568fcfd40d6c3',1,'Player']]],
-  ['spriterenderer_8',['spriteRenderer',['../class_enemy.html#a3c93f98aea02cfe8ee79d3568b2dccb1',1,'Enemy']]],
-  ['sprites_9',['sprites',['../class_gathering_resource.html#aaf0bcff259fe1a98a4f8dc0767531103',1,'GatheringResource']]]
+  ['sprites_8',['sprites',['../class_gathering_resource.html#aaf0bcff259fe1a98a4f8dc0767531103',1,'GatheringResource']]]
 ];

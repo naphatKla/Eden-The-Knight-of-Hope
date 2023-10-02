@@ -112,6 +112,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1283a59b0272eaa0661ff20ef0204b09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Take damage and reduce the current hp.  <br /></td></tr>
 <tr class="separator:a1283a59b0272eaa0661ff20ef0204b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a389e1e504b024830a5605feb034579d5" id="r_a389e1e504b024830a5605feb034579d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_health_system.html#a389e1e504b024830a5605feb034579d5">TakeDamageAndStun</a> (float damage, GameObject attacker, float stunDuration)</td></tr>
+<tr class="memdesc:a389e1e504b024830a5605feb034579d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Take damage and stun the enemy.  <br /></td></tr>
 <tr class="separator:a389e1e504b024830a5605feb034579d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_health_system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_health_system')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_health_system.html">HealthSystem</a></td></tr>
 <tr class="memitem:a797bd1920dbd121c266b77843e4e66b7 inherit pub_methods_class_health_system" id="r_a797bd1920dbd121c266b77843e4e66b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system.html#a797bd1920dbd121c266b77843e4e66b7">Heal</a> (float healPoint)</td></tr>
@@ -126,12 +127,13 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a36807e0d6d2250f01ef410d81c065336" id="r_a36807e0d6d2250f01ef410d81c065336"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_health_system.html#a36807e0d6d2250f01ef410d81c065336">Start</a> ()</td></tr>
 <tr class="separator:a36807e0d6d2250f01ef410d81c065336"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a336c4bd4df3ac0fa0556f4319cad0cac" id="r_a336c4bd4df3ac0fa0556f4319cad0cac"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_health_system.html#a336c4bd4df3ac0fa0556f4319cad0cac">Dead</a> ()</td></tr>
-<tr class="memdesc:a336c4bd4df3ac0fa0556f4319cad0cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dead and destroy the object.  <br /></td></tr>
+<tr class="memdesc:a336c4bd4df3ac0fa0556f4319cad0cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dead and add point to the player score.  <br /></td></tr>
 <tr class="separator:a336c4bd4df3ac0fa0556f4319cad0cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a0c72b24443e497097615c26f0bbabd9a" id="r_a0c72b24443e497097615c26f0bbabd9a"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_health_system.html#a0c72b24443e497097615c26f0bbabd9a">Stun</a> (float stunDuration)</td></tr>
+<tr class="memdesc:a0c72b24443e497097615c26f0bbabd9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">stun the enemy.  <br /></td></tr>
 <tr class="separator:a0c72b24443e497097615c26f0bbabd9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -172,7 +174,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Dead and destroy the object. </p>
+<p>Dead and add point to the player score. </p>
 
 <p>Reimplemented from <a class="el" href="class_health_system.html#aac4f95a8abcedb6718f48c066b441956">HealthSystem</a>.</p>
 <div class="dynheader">
@@ -180,7 +182,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_enemy_health_system_a336c4bd4df3ac0fa0556f4319cad0cac_cgraph.png" border="0" usemap="#aclass_enemy_health_system_a336c4bd4df3ac0fa0556f4319cad0cac_cgraph" alt=""/></div>
 <map name="aclass_enemy_health_system_a336c4bd4df3ac0fa0556f4319cad0cac_cgraph" id="aclass_enemy_health_system_a336c4bd4df3ac0fa0556f4319cad0cac_cgraph">
-<area shape="rect" title="Dead and destroy the object." alt="" coords="5,13,184,40"/>
+<area shape="rect" title="Dead and add point to the player score." alt="" coords="5,13,184,40"/>
 <area shape="rect" href="class_game_manager.html#a5d3c9753598caba92f5f58658a5eb1a2" title=" " alt="" coords="232,13,395,40"/>
 <area shape="poly" title=" " alt="" coords="184,24,216,24,216,29,184,29"/>
 <area shape="rect" href="class_game_manager.html#a2f25fce454f2aa38a41b464fc120af16" title=" " alt="" coords="443,5,646,48"/>
@@ -240,13 +242,22 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>stun the enemy. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stunDuration</td><td>Stun duration (sec).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_enemy_health_system_a0c72b24443e497097615c26f0bbabd9a_icgraph.png" border="0" usemap="#aclass_enemy_health_system_a0c72b24443e497097615c26f0bbabd9a_icgraph" alt=""/></div>
 <map name="aclass_enemy_health_system_a0c72b24443e497097615c26f0bbabd9a_icgraph" id="aclass_enemy_health_system_a0c72b24443e497097615c26f0bbabd9a_icgraph">
-<area shape="rect" title=" " alt="" coords="278,13,453,40"/>
-<area shape="rect" href="class_enemy_health_system.html#a389e1e504b024830a5605feb034579d5" title=" " alt="" coords="5,5,230,48"/>
+<area shape="rect" title="stun the enemy." alt="" coords="278,13,453,40"/>
+<area shape="rect" href="class_enemy_health_system.html#a389e1e504b024830a5605feb034579d5" title="Take damage and stun the enemy." alt="" coords="5,5,230,48"/>
 <area shape="poly" title=" " alt="" coords="262,29,230,29,230,24,262,24"/>
 </map>
 </div>
@@ -303,7 +314,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_enemy_health_system_a1283a59b0272eaa0661ff20ef0204b09_icgraph.png" border="0" usemap="#aclass_enemy_health_system_a1283a59b0272eaa0661ff20ef0204b09_icgraph" alt=""/></div>
 <map name="aclass_enemy_health_system_a1283a59b0272eaa0661ff20ef0204b09_icgraph" id="aclass_enemy_health_system_a1283a59b0272eaa0661ff20ef0204b09_icgraph">
 <area shape="rect" title="Take damage and reduce the current hp." alt="" coords="278,13,502,40"/>
-<area shape="rect" href="class_enemy_health_system.html#a389e1e504b024830a5605feb034579d5" title=" " alt="" coords="5,5,230,48"/>
+<area shape="rect" href="class_enemy_health_system.html#a389e1e504b024830a5605feb034579d5" title="Take damage and stun the enemy." alt="" coords="5,5,230,48"/>
 <area shape="poly" title=" " alt="" coords="262,29,230,29,230,24,262,24"/>
 </map>
 </div>
@@ -341,13 +352,23 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Take damage and stun the enemy. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">damage</td><td>Damage taken.</td></tr>
+    <tr><td class="paramname">attacker</td><td>Attacker.</td></tr>
+    <tr><td class="paramname">stunDuration</td><td>Stun duration (sec).</td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_enemy_health_system_a389e1e504b024830a5605feb034579d5_cgraph.png" border="0" usemap="#aclass_enemy_health_system_a389e1e504b024830a5605feb034579d5_cgraph" alt=""/></div>
 <map name="aclass_enemy_health_system_a389e1e504b024830a5605feb034579d5_cgraph" id="aclass_enemy_health_system_a389e1e504b024830a5605feb034579d5_cgraph">
-<area shape="rect" title=" " alt="" coords="5,23,230,65"/>
-<area shape="rect" href="class_enemy_health_system.html#a0c72b24443e497097615c26f0bbabd9a" title=" " alt="" coords="302,5,478,32"/>
+<area shape="rect" title="Take damage and stun the enemy." alt="" coords="5,23,230,65"/>
+<area shape="rect" href="class_enemy_health_system.html#a0c72b24443e497097615c26f0bbabd9a" title="stun the enemy." alt="" coords="302,5,478,32"/>
 <area shape="poly" title=" " alt="" coords="230,31,286,26,287,31,230,36"/>
 <area shape="rect" href="class_enemy_health_system.html#a1283a59b0272eaa0661ff20ef0204b09" title="Take damage and reduce the current hp." alt="" coords="278,56,502,83"/>
 <area shape="poly" title=" " alt="" coords="230,52,262,55,262,60,230,57"/>

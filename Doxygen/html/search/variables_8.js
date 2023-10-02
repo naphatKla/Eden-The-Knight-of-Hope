@@ -8,7 +8,6 @@ var searchData=
   ['interactionpointradius_5',['interactionPointRadius',['../class_player_interact_system.html#a394ca13009875a8ec4b7e40ca2c085f4',1,'PlayerInteractSystem']]],
   ['interactiontextui_6',['interactionTextUI',['../class_interactable_object.html#a7c0fad098c2a374bb2abff254cddf381',1,'InteractableObject']]],
   ['isreducerate_7',['isReduceRate',['../class_enemy_spawner.html#a420d4386c159a02e1547c00b1a0274e0',1,'EnemySpawner']]],
-  ['isstun_8',['isStun',['../class_enemy.html#a22d0e7376692fc64a18216eef498f925',1,'Enemy']]],
-  ['itemprefab_9',['itemPrefab',['../class_item_spawner.html#a7d7253cc5ff6036ed8abce56be49ff32',1,'ItemSpawner']]],
-  ['itemspawnarea_10',['itemSpawnArea',['../class_item_spawner.html#ae6d5099953de1bc3eea89d908cbba32c',1,'ItemSpawner']]]
+  ['itemprefab_8',['itemPrefab',['../class_item_spawner.html#a7d7253cc5ff6036ed8abce56be49ff32',1,'ItemSpawner']]],
+  ['itemspawnarea_9',['itemSpawnArea',['../class_item_spawner.html#ae6d5099953de1bc3eea89d908cbba32c',1,'ItemSpawner']]]
 ];

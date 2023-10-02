@@ -76,7 +76,7 @@ public class EnemySpawner : MonoBehaviour
             
                     // สร้างศัตรูที่ตำแหน่งที่คำนวณได้
                     Enemy newEnemy = Instantiate(enemyPrefab, transform.position + (Vector3)spawnPosition, Quaternion.identity,transform).GetComponent<Enemy>();
-                    newEnemy.nightMode = true;
+                    newEnemy.NightMode = true;
                 }
         
                 // update จำนวนศัตรู

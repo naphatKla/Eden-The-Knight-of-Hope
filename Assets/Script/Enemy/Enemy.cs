@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
@@ -14,7 +15,6 @@ public class Enemy : MonoBehaviour
         FollowTarget,
         ReturnToSpawn,
         WaitToReturn,
-        FocusOnTower,
     }
 
     public enum PriorityTag
@@ -25,33 +25,39 @@ public class Enemy : MonoBehaviour
         Base
     }
     
-    [SerializeField] private float viewDistance; 
-    [SerializeField] private LayerMask playerLayerMask;  
-    [SerializeField] private List<PriorityTag> priorityTags; 
+    [SerializeField] private float viewDistance;
     [SerializeField] private float roamDuration; 
     [SerializeField] private float roamCooldown; 
     [SerializeField] private Vector2 roamArea; 
-    public NavMeshAgent agent;
-    public bool nightMode;
-    private Rigidbody2D _rigidbody2D;
-    [HideInInspector] public SpriteRenderer spriteRenderer;
-    private Animator _animator;
-    public GameObject target;
+    [SerializeField] private bool nightMode;
+    [SerializeField] private LayerMask playerLayerMask;  
+    [SerializeField] private List<PriorityTag> priorityTags;
+    [SerializeField] private EnemyState enemyActionState;
+    private bool _isStun;
+    private List<Collider2D> _targetInDistances;
+    private Coroutine _waitToReturnCoroutine;
+    private Coroutine _roamAroundCoroutine;
     private Vector2 _spawnPoint;
-    private bool _isWait;
-    private bool _isRoam;
-    public bool isStun;
-    public EnemyState enemyActionState;
+    private GameObject _target;
+    private Animator _animator;
+    private NavMeshAgent _agent;
+    private Rigidbody2D _rigidbody2D;
+    private SpriteRenderer _spriteRenderer;
+    
+    public bool NightMode { get => nightMode; set => nightMode = value; }
+    public bool IsStun { get => _isStun; set => _isStun = value; }
+    public GameObject Target { get => _target; set => _target = value; }
+    public NavMeshAgent Agent { get => _agent;}
+    public SpriteRenderer SpriteRenderer { get => _spriteRenderer; }
     #endregion
     
     void Start()
     {
         _animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        agent = GetComponent<NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
-        _isWait = false;
+        _agent = GetComponent<NavMeshAgent>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _agent.updateUpAxis = false;
+        _agent.updateRotation = false;
         _spawnPoint = transform.position;
         enemyActionState = EnemyState.Idle;
     }
@@ -59,52 +65,155 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         if(_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt")) return;
-        if(isStun) return;
+        if(_isStun) return;
 
-        Collider2D[] targetInDistances = Physics2D.OverlapCircleAll(transform.position, viewDistance, playerLayerMask);
+        BehaviorHandle();
+        AnimationUpdate();
+    }
+    
+    #region Methods
+    
+    /// <summary>
+    /// Handle enemy behavior.
+    /// </summary>
+    private void BehaviorHandle()
+    {
+        _targetInDistances = Physics2D.OverlapCircleAll(transform.position, viewDistance, playerLayerMask).ToList();
 
-        if (targetInDistances.Length > 0)
-        {
-            if (enemyActionState != EnemyState.FollowTarget)
-            {
-                // Detect targets only on the first priority tag found
-                for (int i = 0; i < priorityTags.Count; i++)
-                {
-                    foreach (Collider2D col in targetInDistances)
-                    {
-                        if (!col.gameObject.CompareTag(priorityTags[i].ToString())) continue;
-
-                        target = col.gameObject;
-                        i += priorityTags.Count; // break out the loop
-                        break;
-                    }
-                }
-            }
-
-            SetEnemyState(EnemyState.FollowTarget);
-        }
-        else if (enemyActionState == EnemyState.FollowTarget)
-        {
-            SetEnemyState(EnemyState.WaitToReturn);
-        }
+        if (_targetInDistances.Count > 0)
+            FollowTargetHandle();
+        
+        else if (CheckState(EnemyState.FollowTarget))
+            ReturnToSpawnHandle();
+        
         else if ((Vector2)transform.position == _spawnPoint)
-        {
-            SetEnemyState(EnemyState.Idle);
-        }
+            IdleHandle();
+        
         else if (nightMode)
+            _agent.SetDestination(GameManager.instance.playerBase.position);
+    }
+    
+    /// <summary>
+    /// Select target with the first priority tag found in the target list.
+    /// </summary>
+    private void SelectTarget()
+    {
+        if (enemyActionState == EnemyState.FollowTarget) return;
+        
+        // Detect and set target only on the first priority tag found 
+        foreach (PriorityTag priorityTag in priorityTags)
         {
-            SetEnemyState(EnemyState.FocusOnTower);
+            Collider2D target = _targetInDistances.FirstOrDefault(target => target.CompareTag(priorityTag.ToString()));
+            if(target.IsUnityNull()) continue;
+            _target = target.gameObject;
+            break;
         }
-        
-        PlayAction(enemyActionState);
-        _animator.SetFloat("Speed",agent.velocity.magnitude);
-        
-        // flip horizontal direction relate with enemy direction
-        if (Mathf.Abs(agent.velocity.x) > 1)
-            spriteRenderer.flipX = agent.velocity.x < 0f;
+    }
+    
+    /// <summary>
+    /// Follow target.
+    /// </summary>
+    private void FollowTargetHandle()
+    {
+        SelectTarget();
+        SetEnemyState(EnemyState.FollowTarget);
+        _agent.SetDestination(_target.transform.position);
+    }
+    
+    /// <summary>
+    /// Return to spawn point.
+    /// </summary>
+    private void ReturnToSpawnHandle()
+    {
+        SetEnemyState(EnemyState.WaitToReturn);
 
+        if (_target.IsUnityNull() || !_target.gameObject.activeSelf)
+        {
+            SetEnemyState(EnemyState.ReturnToSpawn);
+            _agent.SetDestination(_spawnPoint);
+            return;
+        }
+
+        _agent.SetDestination(_target.transform.position);
+
+        if (_waitToReturnCoroutine != null) return;
+        _waitToReturnCoroutine = StartCoroutine(WaitToReturn(3));
+    }
+    
+    /// <summary>
+    /// Idle and roam around spawn point.
+    /// </summary>
+    private void IdleHandle()
+    {
+        SetEnemyState(EnemyState.Idle);
+        if (_roamAroundCoroutine != null) return;
+        _roamAroundCoroutine = StartCoroutine(RoamAround(roamDuration));
+    }
+    
+    /// <summary>
+    /// Update enemy animation.
+    /// </summary>
+    private void AnimationUpdate()
+    {
+        _animator.SetFloat("Speed", _agent.velocity.magnitude);
+
+        // flip horizontal direction relate with enemy direction
+        if (Mathf.Abs(_agent.velocity.x) > 1)
+            _spriteRenderer.flipX = _agent.velocity.x < 0f;
     }
 
+    /// <summary>
+    /// Set enemy state.
+    /// </summary>
+    /// <param name="state">State that you want to set.</param>
+    public void SetEnemyState(EnemyState state)
+    {
+        enemyActionState = state;
+    }
+    
+    /// <summary>
+    /// Check enemy state.
+    /// </summary>
+    /// <param name="state">State that you want to check.</param>
+    /// <returns></returns>
+    public bool CheckState(EnemyState state)
+    {
+        return state == enemyActionState;
+    }
+    
+    /// <summary>
+    /// Wait for a while and return to spawn point.
+    /// </summary>
+    /// <param name="time">Time to wait.</param>
+    /// <returns></returns>
+    private IEnumerator WaitToReturn(float time = 0)
+    {
+        yield return new WaitForSeconds(time);
+        enemyActionState = EnemyState.ReturnToSpawn;
+    }
+    
+    /// <summary>
+    /// Roam around spawn point.
+    /// </summary>
+    /// <param name="time">Roam duration.</param>
+    /// <returns></returns>
+    private IEnumerator RoamAround(float time)
+    {
+        float timeCount = 0;
+        Vector2 randomPos = new Vector2(_spawnPoint.x + Random.Range(roamArea.x, roamArea.y),
+            _spawnPoint.y + Random.Range(roamArea.x, roamArea.y));
+
+        yield return new WaitForSeconds(roamCooldown);
+
+        while (timeCount < time)
+        {
+            timeCount += Time.deltaTime;
+            _agent.SetDestination(randomPos);
+
+            if (!CheckState(EnemyState.Idle)) yield break;
+            yield return null;
+        }
+    }
     
     /// <summary>
     ///  Draw gizmos on inspector
@@ -113,109 +222,6 @@ public class Enemy : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, viewDistance);
-    }
-
-    
-    /// <summary>
-    ///  Wait for a second and set enemy state to ReturnToSpawn.
-    /// </summary>
-    private IEnumerator WaitToReturn(float time = 0)
-    {
-        _isWait = true;
-        yield return new WaitForSeconds(time);
-        _isWait = false;
-        enemyActionState = EnemyState.ReturnToSpawn;
-    }
-    
-    
-    /// <summary>
-    ///  Roam an enemy around enemy's spawn point.
-    /// </summary>
-    private IEnumerator RoamAround(float time)
-    {
-        float _timeCount = 0;
-        Vector2 randomPos = new Vector2(_spawnPoint.x + Random.Range(roamArea.x, roamArea.y),
-            _spawnPoint.y + Random.Range(roamArea.x, roamArea.y));
-        _isRoam = true;
-
-        yield return new WaitForSeconds(roamCooldown);
-
-        while (_timeCount < time)
-        {
-            _isRoam = true;
-            _timeCount += Time.deltaTime;
-            agent.SetDestination(randomPos);
-
-            if (enemyActionState != EnemyState.Idle)
-            {
-                _isRoam = false;
-                yield break;
-            }
-
-            yield return null;
-        }
-
-        _isRoam = false;
-    }
-    
-    #region Methods
-    
-    /// <summary>
-    ///  Set enemy state.
-    /// </summary>
-    public void SetEnemyState(EnemyState state)
-    {
-        enemyActionState = state;
-    }
-
-    
-    /// <summary>
-    ///  Play enemy action and behavior follow enemy state.
-    /// </summary>
-    public void PlayAction(EnemyState enemyState)
-    {
-        switch (enemyState)
-        {
-            case EnemyState.Idle:
-            {
-                if (_isRoam) return;
-                StartCoroutine(RoamAround(roamDuration));
-                break;
-            }
-            case EnemyState.FollowTarget:
-            {
-                if (target == null || !target.gameObject.activeSelf)
-                {
-                    SetEnemyState(EnemyState.ReturnToSpawn);
-                    return;
-                }
-                agent.SetDestination(target.transform.position);
-                break;
-            }
-            case EnemyState.ReturnToSpawn:
-            {
-                agent.SetDestination(_spawnPoint);
-                break;
-            }
-            case EnemyState.WaitToReturn:
-            {
-                if (target == null || !target.gameObject.activeSelf)
-                {
-                    SetEnemyState(EnemyState.ReturnToSpawn);
-                    return;
-                }
-                agent.SetDestination(target.transform.position);
-                
-                if (!_isWait)
-                    StartCoroutine(WaitToReturn(3));
-                break;
-            }
-            case EnemyState.FocusOnTower:
-            {
-                agent.SetDestination(GameManager.instance.playerBase.position);
-                break;
-            }
-        }
     }
     #endregion
 }

@@ -1,0 +1,20 @@
+<map id="Enemy.BehaviorHandle" name="Enemy.BehaviorHandle">
+<area shape="rect" id="Node000001" title="Handle enemy behavior." alt="" coords="5,70,161,96"/>
+<area shape="rect" id="Node000002" href="$class_enemy.html#a1289737aae15f80017fe2b441b52545e" title="Check enemy state." alt="" coords="660,70,795,96"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,67,154,46,208,30,321,10,411,3,500,9,613,30,654,43,691,60,688,64,652,48,612,35,500,14,411,8,322,15,209,35,156,51,111,72"/>
+<area shape="rect" id="Node000003" href="$class_enemy.html#a11a4d19f208ed4190cef84bbe9394314" title="Follow target." alt="" coords="218,44,397,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,72,202,67,202,72,162,77"/>
+<area shape="rect" id="Node000006" href="$class_enemy.html#af9c19d16a5dd3bec159c1f520a563ba2" title="Idle and roam around spawn point." alt="" coords="244,146,371,172"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="116,94,210,131,234,139,232,144,208,136,114,99"/>
+<area shape="rect" id="Node000008" href="$class_enemy.html#af1213ae57de8b75133c7032a666b0a5f" title="Return to spawn point." alt="" coords="209,95,406,122"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="162,89,193,93,193,98,161,95"/>
+<area shape="rect" id="Node000004" href="$class_enemy.html#a56a5a14455ca67f9b7f5bf59ce530c12" title="Select target with the first priority tag found in the target list." alt="" coords="464,44,603,71"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="398,55,448,55,448,60,398,60"/>
+<area shape="rect" id="Node000005" href="$class_enemy.html#a115c8ded4831b6e9168cfd9d634300f8" title="Set enemy state." alt="" coords="454,95,612,122"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="371,69,456,89,455,94,370,74"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="370,143,455,123,456,128,371,148"/>
+<area shape="rect" id="Node000007" href="$class_enemy.html#af7785bbf93d2f79ecac9424e729d48d7" title="Roam around spawn point." alt="" coords="463,146,604,172"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="371,156,447,156,447,162,371,162"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="579,143,611,131,682,101,684,106,613,136,581,148"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="407,106,438,106,438,111,407,111"/>
+</map>

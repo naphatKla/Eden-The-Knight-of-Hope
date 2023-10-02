@@ -24,7 +24,7 @@ Collaboration diagram for Enemy\+Health\+System\+:\nopagebreak
 override void \mbox{\hyperlink{class_enemy_health_system_a1283a59b0272eaa0661ff20ef0204b09}{Take\+Damage}} (float damage, Game\+Object attacker)
 \begin{DoxyCompactList}\small\item\em Take damage and reduce the current hp. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_enemy_health_system_a389e1e504b024830a5605feb034579d5}{Take\+Damage\+And\+Stun}} (float damage, Game\+Object attacker, float stun\+Duration)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Take damage and stun the enemy. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,12 +38,12 @@ void \mbox{\hyperlink{class_health_system_af1594248544b38b43a250dde3c709693}{Res
 override void \mbox{\hyperlink{class_enemy_health_system_a36807e0d6d2250f01ef410d81c065336}{Start}} ()
 \item 
 override void \mbox{\hyperlink{class_enemy_health_system_a336c4bd4df3ac0fa0556f4319cad0cac}{Dead}} ()
-\begin{DoxyCompactList}\small\item\em Dead and destroy the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Dead and add point to the player score. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 IEnumerator \mbox{\hyperlink{class_enemy_health_system_a0c72b24443e497097615c26f0bbabd9a}{Stun}} (float stun\+Duration)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em stun the enemy. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -71,7 +71,7 @@ float \mbox{\hyperlink{class_health_system_a54fec91113f9ea5a55f4d3b034e41009}{Cu
 
 
 
-Dead and destroy the object. 
+Dead and add point to the player score. 
 
 
 
@@ -100,6 +100,18 @@ Reimplemented from \mbox{\hyperlink{class_health_system_aedfb8d521a69c8138eafc7a
 \doxysubsubsection{\texorpdfstring{Stun()}{Stun()}}
 {\footnotesize\ttfamily IEnumerator Enemy\+Health\+System.\+Stun (\begin{DoxyParamCaption}\item[{float}]{stun\+Duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+stun the enemy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stun\+Duration} & Stun duration (sec).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -141,6 +153,19 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{TakeDamageAndStun()}{TakeDamageAndStun()}}
 {\footnotesize\ttfamily void Enemy\+Health\+System.\+Take\+Damage\+And\+Stun (\begin{DoxyParamCaption}\item[{float}]{damage,  }\item[{Game\+Object}]{attacker,  }\item[{float}]{stun\+Duration }\end{DoxyParamCaption})}
 
+
+
+Take damage and stun the enemy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & Damage taken.\\
+\hline
+{\em attacker} & Attacker.\\
+\hline
+{\em stun\+Duration} & Stun duration (sec).\\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
