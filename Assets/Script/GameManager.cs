@@ -46,13 +46,15 @@ public class GameManager : MonoBehaviour
     
     IEnumerator ToggleSetActiveRelateWithAnimation(GameObject obj)
     {
-        if (!TryGetComponent(out Animator animator)) yield break;
+        if (!obj.TryGetComponent(out Animator animator))
+            yield break;
         
         yield return new WaitUntil(() => !obj.activeSelf);
         obj.SetActive(true);
 
         yield return new WaitUntil(() =>
             animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+        
         obj.SetActive(false);
     }
 }

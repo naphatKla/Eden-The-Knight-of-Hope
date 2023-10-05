@@ -64,7 +64,12 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        if(_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt")) return;
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt") ||
+            _animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttack"))
+        {
+            _agent.velocity = Vector2.zero;
+            return;
+        }
         if(_isStun) return;
 
         BehaviorHandle();
@@ -72,7 +77,6 @@ public class Enemy : MonoBehaviour
     }
     
     #region Methods
-    
     /// <summary>
     /// Handle enemy behavior.
     /// </summary>
@@ -83,22 +87,23 @@ public class Enemy : MonoBehaviour
         if (_targetInDistances.Count > 0)
             FollowTargetHandle();
         
-        else if (CheckState(EnemyState.FollowTarget))
-            ReturnToSpawnHandle();
-        
-        else if ((Vector2)transform.position == _spawnPoint)
-            IdleHandle();
-        
         else if (nightMode)
             _agent.SetDestination(GameManager.instance.playerBase.position);
+        
+        else if (!CheckState(EnemyState.Idle))
+            ReturnToSpawnHandle();
+        
+        else
+            IdleHandle();
     }
+    
     
     /// <summary>
     /// Select target with the first priority tag found in the target list.
     /// </summary>
     private void SelectTarget()
     {
-        if (enemyActionState == EnemyState.FollowTarget) return;
+        if (CheckState(EnemyState.FollowTarget)) return;
         
         // Detect and set target only on the first priority tag found 
         foreach (PriorityTag priorityTag in priorityTags)
@@ -110,6 +115,7 @@ public class Enemy : MonoBehaviour
         }
     }
     
+    
     /// <summary>
     /// Follow target.
     /// </summary>
@@ -119,26 +125,20 @@ public class Enemy : MonoBehaviour
         SetEnemyState(EnemyState.FollowTarget);
         _agent.SetDestination(_target.transform.position);
     }
+
     
     /// <summary>
     /// Return to spawn point.
     /// </summary>
     private void ReturnToSpawnHandle()
     {
-        SetEnemyState(EnemyState.WaitToReturn);
-
-        if (_target.IsUnityNull() || !_target.gameObject.activeSelf)
-        {
-            SetEnemyState(EnemyState.ReturnToSpawn);
-            _agent.SetDestination(_spawnPoint);
-            return;
-        }
-
-        _agent.SetDestination(_target.transform.position);
-
+        if(!_target.IsUnityNull() && !_target.activeSelf)
+            _agent.SetDestination(_target.transform.position);
+        
         if (_waitToReturnCoroutine != null) return;
-        _waitToReturnCoroutine = StartCoroutine(WaitToReturn(3));
+        _waitToReturnCoroutine = StartCoroutine(WaitAndReturn(3));
     }
+    
     
     /// <summary>
     /// Idle and roam around spawn point.
@@ -150,6 +150,7 @@ public class Enemy : MonoBehaviour
         _roamAroundCoroutine = StartCoroutine(RoamAround(roamDuration));
     }
     
+    
     /// <summary>
     /// Update enemy animation.
     /// </summary>
@@ -158,10 +159,11 @@ public class Enemy : MonoBehaviour
         _animator.SetFloat("Speed", _agent.velocity.magnitude);
 
         // flip horizontal direction relate with enemy direction
-        if (Mathf.Abs(_agent.velocity.x) > 1)
-            _spriteRenderer.flipX = _agent.velocity.x < 0f;
+        if (Mathf.Abs(_agent.velocity.x) > 0)
+            transform.right = _agent.velocity.x < 0 ? Vector2.left : Vector2.right;
     }
 
+    
     /// <summary>
     /// Set enemy state.
     /// </summary>
@@ -170,6 +172,7 @@ public class Enemy : MonoBehaviour
     {
         enemyActionState = state;
     }
+    
     
     /// <summary>
     /// Check enemy state.
@@ -181,16 +184,31 @@ public class Enemy : MonoBehaviour
         return state == enemyActionState;
     }
     
+    
     /// <summary>
     /// Wait for a while and return to spawn point.
     /// </summary>
     /// <param name="time">Time to wait.</param>
     /// <returns></returns>
-    private IEnumerator WaitToReturn(float time = 0)
+    private IEnumerator WaitAndReturn(float time = 0)
     {
+        SetEnemyState(EnemyState.WaitToReturn);
         yield return new WaitForSeconds(time);
-        enemyActionState = EnemyState.ReturnToSpawn;
+        
+        SetEnemyState(EnemyState.ReturnToSpawn);
+        while (CheckState(EnemyState.ReturnToSpawn))
+        {
+            _agent.SetDestination(_spawnPoint);
+            if ((Vector2)transform.position == _spawnPoint)
+            {
+                SetEnemyState(EnemyState.Idle);
+                break;
+            }
+            yield return null;
+        }
+        _waitToReturnCoroutine = null;
     }
+    
     
     /// <summary>
     /// Roam around spawn point.
@@ -207,13 +225,14 @@ public class Enemy : MonoBehaviour
 
         while (timeCount < time)
         {
+            if (!CheckState(EnemyState.Idle)) break;
             timeCount += Time.deltaTime;
             _agent.SetDestination(randomPos);
-
-            if (!CheckState(EnemyState.Idle)) yield break;
             yield return null;
         }
+        _roamAroundCoroutine = null;
     }
+    
     
     /// <summary>
     ///  Draw gizmos on inspector

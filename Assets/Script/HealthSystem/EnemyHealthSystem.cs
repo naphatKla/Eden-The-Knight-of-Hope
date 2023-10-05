@@ -13,21 +13,13 @@ public class EnemyHealthSystem : HealthSystem
     public override void TakeDamage(float damage, GameObject attacker)
     {
         _enemy.Target = attacker;
+        
+        if (attacker.CompareTag("Player"))
+            StartCoroutine(Stun(0.5f));
+        
         base.TakeDamage(damage);
     }
     
-    /// <summary>
-    /// Take damage and stun the enemy.
-    /// </summary>
-    /// <param name="damage">Damage taken.</param>
-    /// <param name="attacker">Attacker.</param>
-    /// <param name="stunDuration">Stun duration (sec).</param>
-    public void TakeDamageAndStun(float damage, GameObject attacker, float stunDuration)
-    {
-        StartCoroutine(Stun(stunDuration));
-        TakeDamage(damage,attacker);
-    }
-
     /// <summary>
     /// Dead and add point to the player score.
     /// </summary>

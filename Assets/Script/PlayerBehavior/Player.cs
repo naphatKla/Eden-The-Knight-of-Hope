@@ -72,9 +72,10 @@ public class Player : MonoBehaviour
 
         // flip player horizontal direction
         if (Input.GetAxisRaw("Horizontal") != 0)
-            _spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") < 0;
+            transform.right = Input.GetAxisRaw("Horizontal") < 0 ? Vector2.left : Vector2.right;
     }
 
+    
     /// <summary>
     /// Walk System 
     /// </summary>
@@ -92,6 +93,7 @@ public class Player : MonoBehaviour
         SetPlayerState(PlayerState.Walk);
     }
 
+    
     /// <summary>
     /// Sprint System
     /// </summary>
@@ -106,6 +108,7 @@ public class Player : MonoBehaviour
         SetPlayerState(PlayerState.Sprint);
     }
 
+    
     /// <summary>
     /// Use for handle dash system.
     /// </summary>
@@ -117,6 +120,7 @@ public class Player : MonoBehaviour
         StartCoroutine(Dash());
     }
 
+    
     /// <summary>
     /// Dash behavior for start coroutine in dash system.
     /// </summary>
@@ -135,6 +139,7 @@ public class Player : MonoBehaviour
         _isDashCooldown = false;
     }
     
+    
     /// <summary>
     /// Use for set player state.
     /// </summary>
@@ -144,6 +149,7 @@ public class Player : MonoBehaviour
         playerState = state;
     }
 
+    
     /// <summary>
     /// Use to check the current player state.
     /// </summary>
@@ -154,6 +160,7 @@ public class Player : MonoBehaviour
         return playerState == state;
     }
 
+    
     /// <summary>
     /// Reset every behavior to default. ( Use when start / respawn. )
     /// </summary>

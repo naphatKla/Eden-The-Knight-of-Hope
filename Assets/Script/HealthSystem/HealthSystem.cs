@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +18,13 @@ public class HealthSystem : MonoBehaviour
     {
         CurrentHp = maxHp;
         TryGetComponent(out _animator);
+    }
+
+    private void LateUpdate()
+    {
+        // Lock the canvas UI rotation.
+        Transform canvasTransform = sliderHpPlayer.transform.parent;
+        canvasTransform.right = Vector3.right;
     }
 
     #region Methods
