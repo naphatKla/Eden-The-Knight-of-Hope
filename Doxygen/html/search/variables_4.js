@@ -9,5 +9,6 @@ var searchData=
   ['daylight_6',['dayLight',['../class_time_system.html#ad99b0d7b4b5d9d6f3694612ee37a2af9',1,'TimeSystem']]],
   ['dayperiod_7',['dayPeriod',['../class_time_system.html#a702efea2807268924cb70f1a1f84dad8',1,'TimeSystem']]],
   ['daytext_8',['dayText',['../class_time_system.html#a4b8d90aeae5709ba4ccbdac6e241e08f',1,'TimeSystem']]],
-  ['daytime_9',['dayTime',['../class_time_system.html#ab53470ec05deaecf41cfcd1600f7dff7',1,'TimeSystem']]]
+  ['daytime_9',['dayTime',['../class_time_system.html#ab53470ec05deaecf41cfcd1600f7dff7',1,'TimeSystem']]],
+  ['delay_10',['delay',['../struct_attack_pattern.html#aa67344eb670dfdcac12f2d1fd2cf5fa7',1,'AttackPattern']]]
 ];

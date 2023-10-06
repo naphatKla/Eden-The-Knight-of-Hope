@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['returntospawn_0',['ReturnToSpawn',['../class_enemy.html#a14bead85804fe8c4cfd27ea20122594daf96d9446f78479a6f540762f81171394',1,'Enemy']]]
+  ['player_0',['Player',['../class_enemy.html#a53aff336dbb3dd7847e86c3635273550a636da1d35e805b00eae0fcd8333f9234',1,'Enemy']]]
 ];

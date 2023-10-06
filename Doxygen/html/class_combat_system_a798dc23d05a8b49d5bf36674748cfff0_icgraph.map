@@ -1,0 +1,5 @@
+<map id="CombatSystem.CancelAttacking" name="CombatSystem.CancelAttacking">
+<area shape="rect" id="Node000001" title="Cancel attacking." alt="" coords="248,13,458,40"/>
+<area shape="rect" id="Node000002" href="$class_enemy_combat_system.html#a813bae87e119820b54f680dce6d7a61a" title="use for handle the attack system. Please override this method with attack condition before call this ..." alt="" coords="5,5,200,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,29,200,29,200,24,232,24"/>
+</map>

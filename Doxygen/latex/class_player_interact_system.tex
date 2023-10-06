@@ -21,22 +21,22 @@ Collaboration diagram for Player\+Interact\+System\+:\nopagebreak
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_player_interact_system_a21432be3fc872667ff87170d9a11c5e5}{Start}} ()
-\item 
 void \mbox{\hyperlink{class_player_interact_system_ab9deb39e9b13b50d4f6b1454c2946e94}{Update}} ()
 \item 
 void \mbox{\hyperlink{class_player_interact_system_ab6171a3a6775c2c01fc0eef9c37d9217}{Interact\+Handle}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Interact with the nearest object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_player_interact_system_adfbf1a4e5a19c38af63694df9cb7e0b3}{On\+Draw\+Gizmos}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em draw interaction radius in the inspector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Transform \mbox{\hyperlink{class_player_interact_system_a91be621051e1a3f6c2a444e72460f892}{interaction\+Point}}
 \item 
-float \mbox{\hyperlink{class_player_interact_system_a394ca13009875a8ec4b7e40ca2c085f4}{interaction\+Point\+Radius}} = 0.\+5f
+float \mbox{\hyperlink{class_player_interact_system_a394ca13009875a8ec4b7e40ca2c085f4}{interaction\+Point\+Radius}}
 \item 
 Layer\+Mask \mbox{\hyperlink{class_player_interact_system_a83427c9644da1ecec576de6373120712}{interactable\+Mask}}
+\item 
+List$<$ Collider2D $>$ \mbox{\hyperlink{class_player_interact_system_a6c73af6c63faa99b28f1d471f88fe3c0}{\+\_\+objects\+In\+Area}}
 \item 
 \mbox{\hyperlink{class_interactable_object}{Interactable\+Object}} \mbox{\hyperlink{class_player_interact_system_abbd864d3402430f5e2b7b7b0f9b97a69}{interactable\+Object}}
 \end{DoxyCompactItemize}
@@ -49,14 +49,20 @@ Layer\+Mask \mbox{\hyperlink{class_player_interact_system_a83427c9644da1ecec576d
 \doxysubsubsection{\texorpdfstring{InteractHandle()}{InteractHandle()}}
 {\footnotesize\ttfamily void Player\+Interact\+System.\+Interact\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Interact with the nearest object. 
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_player_interact_system_ab6171a3a6775c2c01fc0eef9c37d9217_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -69,11 +75,9 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{OnDrawGizmos()}{OnDrawGizmos()}}
 {\footnotesize\ttfamily void Player\+Interact\+System.\+On\+Draw\+Gizmos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-\Hypertarget{class_player_interact_system_a21432be3fc872667ff87170d9a11c5e5}\label{class_player_interact_system_a21432be3fc872667ff87170d9a11c5e5} 
-\index{PlayerInteractSystem@{PlayerInteractSystem}!Start@{Start}}
-\index{Start@{Start}!PlayerInteractSystem@{PlayerInteractSystem}}
-\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
-{\footnotesize\ttfamily void Player\+Interact\+System.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+draw interaction radius in the inspector. 
 
 \Hypertarget{class_player_interact_system_ab9deb39e9b13b50d4f6b1454c2946e94}\label{class_player_interact_system_ab9deb39e9b13b50d4f6b1454c2946e94} 
 \index{PlayerInteractSystem@{PlayerInteractSystem}!Update@{Update}}
@@ -81,7 +85,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{Update()}{Update()}}
 {\footnotesize\ttfamily void Player\+Interact\+System.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -91,6 +96,12 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 \doxysubsection{Member Data Documentation}
+\Hypertarget{class_player_interact_system_a6c73af6c63faa99b28f1d471f88fe3c0}\label{class_player_interact_system_a6c73af6c63faa99b28f1d471f88fe3c0} 
+\index{PlayerInteractSystem@{PlayerInteractSystem}!\_objectsInArea@{\_objectsInArea}}
+\index{\_objectsInArea@{\_objectsInArea}!PlayerInteractSystem@{PlayerInteractSystem}}
+\doxysubsubsection{\texorpdfstring{\_objectsInArea}{\_objectsInArea}}
+{\footnotesize\ttfamily List$<$Collider2D$>$ Player\+Interact\+System.\+\_\+objects\+In\+Area\hspace{0.3cm}{\ttfamily [private]}}
+
 \Hypertarget{class_player_interact_system_a83427c9644da1ecec576de6373120712}\label{class_player_interact_system_a83427c9644da1ecec576de6373120712} 
 \index{PlayerInteractSystem@{PlayerInteractSystem}!interactableMask@{interactableMask}}
 \index{interactableMask@{interactableMask}!PlayerInteractSystem@{PlayerInteractSystem}}
@@ -113,10 +124,10 @@ Here is the call graph for this function\+:\nopagebreak
 \index{PlayerInteractSystem@{PlayerInteractSystem}!interactionPointRadius@{interactionPointRadius}}
 \index{interactionPointRadius@{interactionPointRadius}!PlayerInteractSystem@{PlayerInteractSystem}}
 \doxysubsubsection{\texorpdfstring{interactionPointRadius}{interactionPointRadius}}
-{\footnotesize\ttfamily float Player\+Interact\+System.\+interaction\+Point\+Radius = 0.\+5f\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily float Player\+Interact\+System.\+interaction\+Point\+Radius\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\+Player/\mbox{\hyperlink{_player_interact_system_8cs}{Player\+Interact\+System.\+cs}}\end{DoxyCompactItemize}
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\+Player\+Behavior/\mbox{\hyperlink{_player_interact_system_8cs}{Player\+Interact\+System.\+cs}}\end{DoxyCompactItemize}

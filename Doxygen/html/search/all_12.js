@@ -1,9 +1,9 @@
 var searchData=
 [
   ['takedamage_0',['takedamage',['../class_enemy_health_system.html#a1283a59b0272eaa0661ff20ef0204b09',1,'EnemyHealthSystem.TakeDamage()'],['../class_health_system.html#a595f606d9869f8a65bc9e1b671a1a87b',1,'HealthSystem.TakeDamage()']]],
-  ['takedamageandstun_1',['TakeDamageAndStun',['../class_enemy_health_system.html#a389e1e504b024830a5605feb034579d5',1,'EnemyHealthSystem']]],
-  ['target_2',['target',['../class_bullet.html#ad2e381c19d35eb17a3494bb75a2bd530',1,'Bullet.target'],['../class_enemy.html#aaeaa116c64ee8c537dbc79a0f3b9d516',1,'Enemy.Target']]],
-  ['targetlayer_3',['targetLayer',['../class_enemy_combat_system.html#af57d3d411774fe03f173ca9ecbd95c4d',1,'EnemyCombatSystem']]],
+  ['target_1',['target',['../class_bullet.html#ad2e381c19d35eb17a3494bb75a2bd530',1,'Bullet.target'],['../class_enemy.html#aaeaa116c64ee8c537dbc79a0f3b9d516',1,'Enemy.Target']]],
+  ['targetinattackarea_2',['targetInAttackArea',['../class_combat_system.html#afceffe10a01d9ce58f51315b6045c4ef',1,'CombatSystem']]],
+  ['targetlayer_3',['targetLayer',['../class_combat_system.html#ac0f69e29ff3912396d5205b2fd8eb64d',1,'CombatSystem']]],
   ['targetlayermask_4',['targetLayerMask',['../class_tower.html#a87a09199185506257ff6a6ec2825d9aa',1,'Tower']]],
   ['time_5',['time',['../class_time_system.html#a5d84200da55d7620577f1c24c953d17d',1,'TimeSystem']]],
   ['timecountui_6',['timeCountUi',['../class_interactable_object.html#a1316cef0f1c2c2bef5e7afa022004257',1,'InteractableObject']]],

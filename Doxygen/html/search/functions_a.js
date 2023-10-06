@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['reset_0',['Reset',['../class_player.html#a1bfa27bdc2f0a69f157a35920a3ad3bf',1,'Player']]],
-  ['resethealth_1',['ResetHealth',['../class_health_system.html#af1594248544b38b43a250dde3c709693',1,'HealthSystem']]],
-  ['respawn_2',['Respawn',['../class_player_health_system.html#a2ecce1fbc617a99236e611d9c0532c51',1,'PlayerHealthSystem']]],
-  ['returntospawnhandle_3',['ReturnToSpawnHandle',['../class_enemy.html#af1213ae57de8b75133c7032a666b0a5f',1,'Enemy']]],
-  ['roamaround_4',['RoamAround',['../class_enemy.html#af7785bbf93d2f79ecac9424e729d48d7',1,'Enemy']]]
+  ['ondestroy_0',['OnDestroy',['../class_singleton.html#a81a4ea792b927aeae3f52c1e0d2036af',1,'Singleton']]],
+  ['ondrawgizmos_1',['ondrawgizmos',['../class_combat_system.html#a7ab6c51042c30c7ec8b269fca2b6040a',1,'CombatSystem.OnDrawGizmos()'],['../class_enemy.html#a447a675aaf79cf23a7dbd6fac34d42b9',1,'Enemy.OnDrawGizmos()'],['../class_player_interact_system.html#adfbf1a4e5a19c38af63694df9cb7e0b3',1,'PlayerInteractSystem.OnDrawGizmos()'],['../class_enemy_spawner.html#aea1ed725ee94b378adae8475d1dd47e7',1,'EnemySpawner.OnDrawGizmos()'],['../class_item_spawner.html#adac9bafbc839470fed229a87b9e78e32',1,'ItemSpawner.OnDrawGizmos()'],['../class_tower.html#a6e76e28fa1dc7e002942c5d05c829ad4',1,'Tower.OnDrawGizmos()']]],
+  ['ontriggerenter2d_2',['OnTriggerEnter2D',['../class_bullet.html#a984d616f502a30c039cd61ac906dbb71',1,'Bullet']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sprint_0',['Sprint',['../_player_8cs.html#a3c730f37b1b3a893159bada67637fdb1affc3dc096e3578a9474b7976953f0ef9',1,'Player.cs']]]
+  ['returntospawn_0',['ReturnToSpawn',['../class_enemy.html#a14bead85804fe8c4cfd27ea20122594daf96d9446f78479a6f540762f81171394',1,'Enemy']]]
 ];

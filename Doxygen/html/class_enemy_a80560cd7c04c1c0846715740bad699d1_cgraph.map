@@ -1,24 +1,28 @@
 <map id="Enemy.Update" name="Enemy.Update">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,48,113,75"/>
-<area shape="rect" id="Node000002" href="$class_enemy.html#a29e61ecac108d24ec2bc510d6b999f7b" title="Update enemy animation." alt="" coords="161,23,326,49"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,51,145,47,145,52,113,57"/>
-<area shape="rect" id="Node000003" href="$class_enemy.html#acda7f22098a4bdb1c1ef0ab919df76e5" title="Handle enemy behavior." alt="" coords="166,73,321,100"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="113,66,151,71,150,76,113,71"/>
-<area shape="rect" id="Node000004" href="$class_enemy.html#a1289737aae15f80017fe2b441b52545e" title="Check enemy state." alt="" coords="826,73,960,100"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="294,70,325,59,348,45,373,33,485,10,575,3,665,11,778,33,819,46,856,63,854,68,817,51,777,38,665,17,575,8,486,15,375,38,351,50,327,64,296,75"/>
-<area shape="rect" id="Node000005" href="$class_enemy.html#a11a4d19f208ed4190cef84bbe9394314" title="Follow target." alt="" coords="383,48,562,75"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="321,75,367,70,368,75,322,81"/>
-<area shape="rect" id="Node000008" href="$class_enemy.html#af9c19d16a5dd3bec159c1f520a563ba2" title="Idle and roam around spawn point." alt="" coords="410,149,536,176"/>
-<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="278,98,375,135,400,142,398,147,373,140,276,103"/>
-<area shape="rect" id="Node000010" href="$class_enemy.html#af1213ae57de8b75133c7032a666b0a5f" title="Return to spawn point." alt="" coords="374,99,571,125"/>
-<area shape="poly" id="edge11_Node000003_Node000010" title=" " alt="" coords="322,92,359,97,358,102,321,98"/>
-<area shape="rect" id="Node000006" href="$class_enemy.html#a56a5a14455ca67f9b7f5bf59ce530c12" title="Select target with the first priority tag found in the target list." alt="" coords="629,48,768,75"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="563,59,613,59,613,64,563,64"/>
-<area shape="rect" id="Node000007" href="$class_enemy.html#a115c8ded4831b6e9168cfd9d634300f8" title="Set enemy state." alt="" coords="619,99,778,125"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="536,73,622,92,621,97,535,78"/>
-<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="535,146,621,127,622,132,536,151"/>
-<area shape="rect" id="Node000009" href="$class_enemy.html#af7785bbf93d2f79ecac9424e729d48d7" title="Roam around spawn point." alt="" coords="628,149,769,176"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="536,160,612,160,612,165,536,165"/>
-<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="744,146,777,135,848,104,850,109,779,140,746,151"/>
-<area shape="poly" id="edge12_Node000010_Node000007" title=" " alt="" coords="572,109,604,109,604,115,572,115"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,90,113,117"/>
+<area shape="rect" id="Node000002" href="$class_enemy.html#a29e61ecac108d24ec2bc510d6b999f7b" title="Update enemy animation." alt="" coords="161,65,326,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,93,145,89,145,94,113,99"/>
+<area shape="rect" id="Node000003" href="$class_enemy.html#acda7f22098a4bdb1c1ef0ab919df76e5" title="Handle enemy behavior." alt="" coords="166,115,321,142"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="113,108,151,113,150,119,113,113"/>
+<area shape="rect" id="Node000004" href="$class_enemy.html#a1289737aae15f80017fe2b441b52545e" title="Check enemy state." alt="" coords="834,90,968,117"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="294,112,325,101,349,88,373,76,482,35,572,9,616,4,662,4,714,11,774,25,802,35,829,49,873,78,870,83,826,53,800,40,773,30,713,16,662,9,616,9,573,15,484,40,375,80,351,93,327,106,296,117"/>
+<area shape="rect" id="Node000005" href="$class_enemy.html#a11a4d19f208ed4190cef84bbe9394314" title="Follow target." alt="" coords="383,90,562,117"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="321,117,367,112,368,118,322,123"/>
+<area shape="rect" id="Node000008" href="$class_enemy.html#af9c19d16a5dd3bec159c1f520a563ba2" title="Idle and roam around spawn point." alt="" coords="410,141,536,167"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="322,135,394,143,394,148,321,140"/>
+<area shape="rect" id="Node000010" href="$class_enemy.html#af1213ae57de8b75133c7032a666b0a5f" title="Return to spawn point." alt="" coords="374,191,571,218"/>
+<area shape="poly" id="edge12_Node000003_Node000010" title=" " alt="" coords="278,140,375,177,400,184,398,189,373,182,276,145"/>
+<area shape="rect" id="Node000006" href="$class_enemy.html#a56a5a14455ca67f9b7f5bf59ce530c12" title="Select target with the first priority tag found in the target list." alt="" coords="627,39,766,66"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="534,87,619,67,620,73,536,92"/>
+<area shape="rect" id="Node000007" href="$class_enemy.html#a115c8ded4831b6e9168cfd9d634300f8" title="Set enemy state." alt="" coords="822,191,980,218"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="563,98,666,104,721,112,775,126,828,150,872,179,869,184,825,155,773,131,720,118,665,109,562,103"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="754,64,830,83,829,88,753,69"/>
+<area shape="poly" id="edge11_Node000008_Node000007" title=" " alt="" coords="537,162,573,177,588,190,597,205,605,217,621,228,649,237,679,242,740,243,798,234,848,221,849,226,799,239,741,248,678,248,648,242,618,232,602,221,592,207,584,194,570,182,535,167"/>
+<area shape="rect" id="Node000009" href="$class_enemy.html#af7785bbf93d2f79ecac9424e729d48d7" title="Roam around spawn point." alt="" coords="626,141,767,167"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="536,151,610,151,610,157,536,157"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="753,137,829,118,830,124,754,143"/>
+<area shape="rect" id="Node000011" href="$class_enemy.html#af965e27ede7de8090c48cd3ed8d50dea" title="Wait for a while and return to spawn point." alt="" coords="619,191,774,218"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="572,202,604,202,604,207,572,207"/>
+<area shape="poly" id="edge14_Node000011_Node000004" title=" " alt="" coords="744,188,773,177,822,151,866,123,869,128,825,155,775,182,746,193"/>
+<area shape="poly" id="edge15_Node000011_Node000007" title=" " alt="" coords="774,202,806,202,806,207,774,207"/>
 </map>

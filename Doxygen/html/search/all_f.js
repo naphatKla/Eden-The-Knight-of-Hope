@@ -15,7 +15,8 @@ var searchData=
   ['playermask_12',['playerMask',['../class_enemy_spawner.html#a4469a380ee17f2165eb9a9658aef43e7',1,'EnemySpawner']]],
   ['playerstate_13',['playerstate',['../class_player.html#ab0c6e39ba2fb155e514039a4def8f8ab',1,'Player.playerState'],['../_player_8cs.html#a3c730f37b1b3a893159bada67637fdb1',1,'PlayerState:&#160;Player.cs']]],
   ['point_14',['point',['../class_interactable_object.html#a970183fb0477604de5016447024e24f6',1,'InteractableObject']]],
-  ['prioritytag_15',['PriorityTag',['../class_enemy.html#a53aff336dbb3dd7847e86c3635273550',1,'Enemy']]],
-  ['prioritytags_16',['priorityTags',['../class_enemy.html#a297c3ba2ad660472128fb5a99f7c1006',1,'Enemy']]],
-  ['prompt_17',['prompt',['../class_interactable_object.html#a9904e42becfe00fd6f91560715483a5e',1,'InteractableObject']]]
+  ['power_15',['power',['../struct_attack_pattern.html#a6e7a673ef20985509d3e36c434cb254a',1,'AttackPattern']]],
+  ['prioritytag_16',['PriorityTag',['../class_enemy.html#a53aff336dbb3dd7847e86c3635273550',1,'Enemy']]],
+  ['prioritytags_17',['priorityTags',['../class_enemy.html#a297c3ba2ad660472128fb5a99f7c1006',1,'Enemy']]],
+  ['prompt_18',['prompt',['../class_interactable_object.html#a9904e42becfe00fd6f91560715483a5e',1,'InteractableObject']]]
 ];

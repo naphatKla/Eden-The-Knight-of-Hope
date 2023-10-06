@@ -73,13 +73,14 @@ $(function() {
 
 <h3><a id="index__5F" name="index__5F"></a>- _ -</h3><ul>
 <li>_agent&#160;:&#160;<a class="el" href="class_enemy.html#a0ee9983de6603fafa2f81881ac5c8653">Enemy</a></li>
-<li>_animator&#160;:&#160;<a class="el" href="class_enemy.html#a537f39693d69267fbc2c32652d7f9a50">Enemy</a>, <a class="el" href="class_enemy_combat_system.html#ac4ff4e0bc0d2654a5c2d58043d1f3b7f">EnemyCombatSystem</a>, <a class="el" href="class_health_system.html#ac81c178880a765c02920b505ce933a9c">HealthSystem</a>, <a class="el" href="class_player.html#a457a0bed87da53eaa5397e3b629f7ac3">Player</a>, <a class="el" href="class_player_combat_system.html#a2ee62c8f0ae5f11a57df1b6f6375812c">PlayerCombatSystem</a></li>
-<li>_attackPointParent&#160;:&#160;<a class="el" href="class_enemy_combat_system.html#a93d398410dc1d26ff171f43213863a86">EnemyCombatSystem</a>, <a class="el" href="class_player_combat_system.html#a99291b9db9ee44053a34744313985713">PlayerCombatSystem</a></li>
+<li>_animator&#160;:&#160;<a class="el" href="class_combat_system.html#a274f860aa8aef0e4b5ca7099ce423a5c">CombatSystem</a>, <a class="el" href="class_enemy.html#a537f39693d69267fbc2c32652d7f9a50">Enemy</a>, <a class="el" href="class_health_system.html#ac81c178880a765c02920b505ce933a9c">HealthSystem</a>, <a class="el" href="class_player.html#a457a0bed87da53eaa5397e3b629f7ac3">Player</a></li>
+<li>_attackCoroutine&#160;:&#160;<a class="el" href="class_combat_system.html#a4f6f79053b0b33b839a8aab98533fb96">CombatSystem</a></li>
+<li>_attackState&#160;:&#160;<a class="el" href="class_combat_system.html#a163161130693f68732677c5ef06f45a2">CombatSystem</a></li>
 <li>_cam&#160;:&#160;<a class="el" href="class_player_camera.html#a6b1f06bda41b62da47da70f13380cb28">PlayerCamera</a></li>
+<li>_currentAttackPattern&#160;:&#160;<a class="el" href="class_combat_system.html#acdfed02ea92ca967ec58430d0a7f78d5">CombatSystem</a></li>
 <li>_currentSpeed&#160;:&#160;<a class="el" href="class_player.html#af644e90909ae1aaee282b29b3f161da2">Player</a></li>
 <li>_enemy&#160;:&#160;<a class="el" href="class_enemy_combat_system.html#aaa003f65aef6e8176bf5daff737d5464">EnemyCombatSystem</a>, <a class="el" href="class_enemy_health_system.html#a7d3caf7d6cc26185a7abb2d32ff59198">EnemyHealthSystem</a></li>
-<li>_heavyAttackPointParent&#160;:&#160;<a class="el" href="class_player_combat_system.html#a0bc057c45afce5b157cb99e18395abee">PlayerCombatSystem</a></li>
-<li>_isCharge&#160;:&#160;<a class="el" href="class_enemy_combat_system.html#a5400b42f5c14c4105308bf6c9e91b17c">EnemyCombatSystem</a></li>
+<li>_instance&#160;:&#160;<a class="el" href="class_singleton.html#a948282bcd2c7847940d101bd5be85094">Singleton&lt; T &gt;</a></li>
 <li>_isDash&#160;:&#160;<a class="el" href="class_player.html#a9f4cf12c4af9871a2bc08915659e061e">Player</a></li>
 <li>_isDashCooldown&#160;:&#160;<a class="el" href="class_player.html#a6cc4599a0c1fd20d0bef5a409587056c">Player</a></li>
 <li>_isDead&#160;:&#160;<a class="el" href="class_health_system.html#a1267ea19972e6a222df008b7df1fae10">HealthSystem</a></li>
@@ -87,9 +88,12 @@ $(function() {
 <li>_isSpawn&#160;:&#160;<a class="el" href="class_item_spawner.html#ae8f899a2e9990b80edb904a6c4845a84">ItemSpawner</a></li>
 <li>_isStun&#160;:&#160;<a class="el" href="class_enemy.html#abbd360b93128cfaa7f3058095c6505b0">Enemy</a></li>
 <li>_isWarning&#160;:&#160;<a class="el" href="class_game_manager.html#af409cae632f264d4e0c2469dbc11be99">GameManager</a></li>
+<li>_lastAttackTime&#160;:&#160;<a class="el" href="class_combat_system.html#a3e20666e082d894788f07cb209b23669">CombatSystem</a></li>
 <li>_lightDownDuration&#160;:&#160;<a class="el" href="class_time_system.html#a880e3c71e4e02b7e6959268497d0f197">TimeSystem</a></li>
 <li>_lightUpDuration&#160;:&#160;<a class="el" href="class_time_system.html#a47654c930b11d832d604bf9ac1497f6a">TimeSystem</a></li>
-<li>_nextAttackTime&#160;:&#160;<a class="el" href="class_enemy_combat_system.html#ab7efaf1cf6c49eb0285ae6fbb1b77820">EnemyCombatSystem</a>, <a class="el" href="class_player_combat_system.html#af869b625e80d7b44144f6085bda6bbd9">PlayerCombatSystem</a>, <a class="el" href="class_tower.html#af7867d395d70e6779431444587c732b7">Tower</a></li>
+<li>_lock&#160;:&#160;<a class="el" href="class_singleton.html#ad3326274294a2759b6d5a39b8afab5cf">Singleton&lt; T &gt;</a></li>
+<li>_nextAttackTime&#160;:&#160;<a class="el" href="class_tower.html#af7867d395d70e6779431444587c732b7">Tower</a></li>
+<li>_objectsInArea&#160;:&#160;<a class="el" href="class_player_interact_system.html#a6c73af6c63faa99b28f1d471f88fe3c0">PlayerInteractSystem</a></li>
 <li>_playerRigidbody2D&#160;:&#160;<a class="el" href="class_player.html#ae4bcf65c406614983e01f9f4ff55bc54">Player</a></li>
 <li>_rigidbody2D&#160;:&#160;<a class="el" href="class_enemy.html#a5ce7f6daf5e9f188f9854be988d951ee">Enemy</a></li>
 <li>_roamAroundCoroutine&#160;:&#160;<a class="el" href="class_enemy.html#a94de4671b7794499952703d3a5483c67">Enemy</a></li>
@@ -107,11 +111,14 @@ $(function() {
 
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
-<li>attackArea&#160;:&#160;<a class="el" href="class_enemy_combat_system.html#ac131345f1a7638766d80f4f3abc62c5d">EnemyCombatSystem</a>, <a class="el" href="class_player_combat_system.html#acc9ae8bcf3aad106204896df6bd94432">PlayerCombatSystem</a></li>
-<li>attackDamage&#160;:&#160;<a class="el" href="class_enemy_combat_system.html#ad7adda93bdb1a7a018d62f5767e5189e">EnemyCombatSystem</a>, <a class="el" href="class_player_combat_system.html#aff6818b993e397e96034c17c8bf6041e">PlayerCombatSystem</a></li>
-<li>attackPoint&#160;:&#160;<a class="el" href="class_enemy_combat_system.html#a4ad5f38b5f6a835bf2f318ac8240ee5f">EnemyCombatSystem</a>, <a class="el" href="class_player_combat_system.html#a7fb123d7b2c0ef068bb0abe162ce48d1">PlayerCombatSystem</a>, <a class="el" href="class_tower.html#af3ecc6d49bdbd483a1a673cd59a87b36">Tower</a></li>
+<li>applicationIsQuitting&#160;:&#160;<a class="el" href="class_singleton.html#a003c575e164c5239c377187995c88e38">Singleton&lt; T &gt;</a></li>
+<li>attackArea&#160;:&#160;<a class="el" href="class_combat_system.html#aef3cf3f107c72aad6f199af67266f2d1">CombatSystem</a></li>
+<li>attackPatterns&#160;:&#160;<a class="el" href="class_combat_system.html#a616750933eccd659bc14cdff0ccfdd45">CombatSystem</a></li>
+<li>attackPoint&#160;:&#160;<a class="el" href="class_combat_system.html#a1d980fd8c7da3a47c6b9d7d8e2ec5b4c">CombatSystem</a>, <a class="el" href="class_tower.html#af3ecc6d49bdbd483a1a673cd59a87b36">Tower</a></li>
 <li>attackRadius&#160;:&#160;<a class="el" href="class_tower.html#a11cca3ccc67048e397e4f6334dff2b3a">Tower</a></li>
-<li>attackRate&#160;:&#160;<a class="el" href="class_enemy_combat_system.html#a0e8711ad73b04d70cf11e183666a7cdb">EnemyCombatSystem</a>, <a class="el" href="class_player_combat_system.html#a18212a719f3c483e8ccf06f3eab207c1">PlayerCombatSystem</a>, <a class="el" href="class_tower.html#a230fd17ec88e359c768ff1a2a056e63c">Tower</a></li>
+<li>attackRate&#160;:&#160;<a class="el" href="class_tower.html#a230fd17ec88e359c768ff1a2a056e63c">Tower</a></li>
+<li>attackStat&#160;:&#160;<a class="el" href="class_combat_system.html#a31c777b126104521c60451b190e663a7">CombatSystem</a></li>
+<li>attackState&#160;:&#160;<a class="el" href="struct_attack_pattern.html#ab16f860a06adc3e4aaa6dca9767424c2">AttackPattern</a></li>
 </ul>
 
 
@@ -125,9 +132,9 @@ $(function() {
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>clock&#160;:&#160;<a class="el" href="class_time_system.html#af58174a10ca129f9f27871740aee1d55">TimeSystem</a></li>
+<li>cooldown&#160;:&#160;<a class="el" href="struct_attack_pattern.html#ae83f75c81227f2ea83a287cce38df5d2">AttackPattern</a></li>
 <li>cost&#160;:&#160;<a class="el" href="class_tower_platform.html#ab38ee5ec72021a112ceb71d17bf0dbe2">TowerPlatform</a></li>
 <li>countdownTime&#160;:&#160;<a class="el" href="class_interactable_object.html#a31bdcf207857832b49e0325d20e9fbce">InteractableObject</a></li>
-<li>currentCooldown&#160;:&#160;<a class="el" href="class_player_combat_system.html#a636ca9e5957eb0a519633509b56c6326">PlayerCombatSystem</a></li>
 <li>currentEnemyCount&#160;:&#160;<a class="el" href="class_enemy_spawner.html#a7685bad65142e0d0e7df0802ec2c1ea2">EnemySpawner</a></li>
 <li>currentItemCount&#160;:&#160;<a class="el" href="class_item_spawner.html#a4f9aa52f9ae03c2e3d320ee880802572">ItemSpawner</a></li>
 <li>cycleLength&#160;:&#160;<a class="el" href="class_time_system.html#a8b22a3a3fe5ce7429521c24acef884e6">TimeSystem</a></li>
@@ -145,12 +152,12 @@ $(function() {
 <li>dayPeriod&#160;:&#160;<a class="el" href="class_time_system.html#a702efea2807268924cb70f1a1f84dad8">TimeSystem</a></li>
 <li>dayText&#160;:&#160;<a class="el" href="class_time_system.html#a4b8d90aeae5709ba4ccbdac6e241e08f">TimeSystem</a></li>
 <li>dayTime&#160;:&#160;<a class="el" href="class_time_system.html#ab53470ec05deaecf41cfcd1600f7dff7">TimeSystem</a></li>
+<li>delay&#160;:&#160;<a class="el" href="struct_attack_pattern.html#aa67344eb670dfdcac12f2d1fd2cf5fa7">AttackPattern</a></li>
 </ul>
 
 
 <h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
 <li>enemyActionState&#160;:&#160;<a class="el" href="class_enemy.html#aa7769cb5509952cdb00cc6273c607aaa">Enemy</a></li>
-<li>enemyLayer&#160;:&#160;<a class="el" href="class_player_combat_system.html#a7d76e156496ae879da8f2d3acda8f619">PlayerCombatSystem</a></li>
 <li>enemyPrefab&#160;:&#160;<a class="el" href="class_enemy_spawner.html#ac5362fd936aef0058f202211f3d54f4e">EnemySpawner</a></li>
 <li>enemySpawnRadius&#160;:&#160;<a class="el" href="class_enemy_spawner.html#a7318f28c8202a80738e17b2b128b9b8a">EnemySpawner</a></li>
 <li>enemySpawnTime&#160;:&#160;<a class="el" href="class_enemy_spawner.html#a981e91a811bef3c895682f64adc1a9f9">EnemySpawner</a></li>
@@ -163,9 +170,6 @@ $(function() {
 
 
 <h3><a id="index_h" name="index_h"></a>- h -</h3><ul>
-<li>heavyAttackDamage&#160;:&#160;<a class="el" href="class_player_combat_system.html#a6e6be3303c2d43518caf4130d7e91ae8">PlayerCombatSystem</a></li>
-<li>heavyAttackPoint&#160;:&#160;<a class="el" href="class_player_combat_system.html#ad05e85582a80da3b278af388bfedb00d">PlayerCombatSystem</a></li>
-<li>heavyAttackRange&#160;:&#160;<a class="el" href="class_player_combat_system.html#afc462a2e57d8507c40f87408aa411f51">PlayerCombatSystem</a></li>
 <li>hpRegenPercentage&#160;:&#160;<a class="el" href="class_base_health_system.html#a633d02ad98a9211fffc3b6c6ecbd7f36">BaseHealthSystem</a></li>
 </ul>
 
@@ -211,7 +215,6 @@ $(function() {
 <h3><a id="index_n" name="index_n"></a>- n -</h3><ul>
 <li>nightMode&#160;:&#160;<a class="el" href="class_enemy.html#a86288aef625be6e14d6d03baf646bcc0">Enemy</a>, <a class="el" href="class_enemy_spawner.html#adcab4faae23ac03cccc8c84203edcea5">EnemySpawner</a></li>
 <li>nightTime&#160;:&#160;<a class="el" href="class_time_system.html#a42af692e6df84588f5c66402d2383db1">TimeSystem</a></li>
-<li>noOfClick&#160;:&#160;<a class="el" href="class_player_combat_system.html#a11ff00599f3158148fc1879792bdabf1">PlayerCombatSystem</a></li>
 </ul>
 
 
@@ -227,6 +230,7 @@ $(function() {
 <li>playerMask&#160;:&#160;<a class="el" href="class_enemy_spawner.html#a4469a380ee17f2165eb9a9658aef43e7">EnemySpawner</a></li>
 <li>playerState&#160;:&#160;<a class="el" href="class_player.html#ab0c6e39ba2fb155e514039a4def8f8ab">Player</a></li>
 <li>point&#160;:&#160;<a class="el" href="class_interactable_object.html#a970183fb0477604de5016447024e24f6">InteractableObject</a></li>
+<li>power&#160;:&#160;<a class="el" href="struct_attack_pattern.html#a6e7a673ef20985509d3e36c434cb254a">AttackPattern</a></li>
 <li>priorityTags&#160;:&#160;<a class="el" href="class_enemy.html#a297c3ba2ad660472128fb5a99f7c1006">Enemy</a></li>
 <li>prompt&#160;:&#160;<a class="el" href="class_interactable_object.html#a9904e42becfe00fd6f91560715483a5e">InteractableObject</a></li>
 </ul>
@@ -256,7 +260,8 @@ $(function() {
 
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
 <li>target&#160;:&#160;<a class="el" href="class_bullet.html#ad2e381c19d35eb17a3494bb75a2bd530">Bullet</a></li>
-<li>targetLayer&#160;:&#160;<a class="el" href="class_enemy_combat_system.html#af57d3d411774fe03f173ca9ecbd95c4d">EnemyCombatSystem</a></li>
+<li>targetInAttackArea&#160;:&#160;<a class="el" href="class_combat_system.html#afceffe10a01d9ce58f51315b6045c4ef">CombatSystem</a></li>
+<li>targetLayer&#160;:&#160;<a class="el" href="class_combat_system.html#ac0f69e29ff3912396d5205b2fd8eb64d">CombatSystem</a></li>
 <li>targetLayerMask&#160;:&#160;<a class="el" href="class_tower.html#a87a09199185506257ff6a6ec2825d9aa">Tower</a></li>
 <li>time&#160;:&#160;<a class="el" href="class_time_system.html#a5d84200da55d7620577f1c24c953d17d">TimeSystem</a></li>
 <li>timeCountUi&#160;:&#160;<a class="el" href="class_interactable_object.html#a1316cef0f1c2c2bef5e7afa022004257">InteractableObject</a></li>

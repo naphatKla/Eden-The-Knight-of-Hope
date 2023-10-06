@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['timestate_0',['TimeState',['../_time_system_8cs.html#a39d47f8339ce6930e84c743209fcb1a7',1,'TimeSystem.cs']]]
+  ['playerstate_0',['PlayerState',['../_player_8cs.html#a3c730f37b1b3a893159bada67637fdb1',1,'Player.cs']]],
+  ['prioritytag_1',['PriorityTag',['../class_enemy.html#a53aff336dbb3dd7847e86c3635273550',1,'Enemy']]]
 ];

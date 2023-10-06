@@ -1,0 +1,45 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,335,115,361"/>
+<area shape="rect" id="Node000001" href="$class_bullet.html" title=" " alt="" coords="209,5,263,32"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="60,319,67,261,83,188,96,149,113,110,134,74,161,42,183,27,207,20,209,25,185,32,164,46,139,77,118,113,101,151,88,189,72,262,65,319"/>
+<area shape="rect" id="Node000002" href="$class_combat_system.html" title=" " alt="" coords="180,56,292,83"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="62,319,72,270,90,210,119,148,138,119,161,93,178,81,181,85,164,97,142,122,123,150,95,212,77,272,68,320"/>
+<area shape="rect" id="Node000005" href="$class_enemy.html" title=" " alt="" coords="205,107,267,133"/>
+<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="66,319,78,280,97,233,125,185,161,143,181,130,203,123,205,128,184,135,164,147,129,188,102,235,83,282,71,321"/>
+<area shape="rect" id="Node000006" href="$class_enemy_spawner.html" title=" " alt="" coords="180,157,292,184"/>
+<area shape="poly" id="edge6_Node000000_Node000006" title=" " alt="" coords="71,319,105,257,131,223,161,194,181,182,184,187,164,198,135,227,110,259,75,322"/>
+<area shape="rect" id="Node000007" href="$class_game_manager.html" title=" " alt="" coords="183,208,289,235"/>
+<area shape="poly" id="edge7_Node000000_Node000007" title=" " alt="" coords="79,321,115,282,161,244,184,233,187,238,164,249,118,286,83,325"/>
+<area shape="rect" id="Node000008" href="$class_health_system.html" title=" " alt="" coords="184,259,288,285"/>
+<area shape="poly" id="edge8_Node000000_Node000008" title=" " alt="" coords="99,325,162,295,191,283,193,288,164,300,101,330"/>
+<area shape="rect" id="Node000012" href="$class_interactable_object.html" title=" " alt="" coords="173,309,299,336"/>
+<area shape="poly" id="edge12_Node000000_Node000012" title=" " alt="" coords="130,335,172,329,173,334,130,341"/>
+<area shape="rect" id="Node000015" href="$class_item_spawner.html" title=" " alt="" coords="188,360,284,387"/>
+<area shape="poly" id="edge15_Node000000_Node000015" title=" " alt="" coords="131,355,188,364,187,369,130,361"/>
+<area shape="rect" id="Node000016" href="$class_player.html" title=" " alt="" coords="207,411,265,437"/>
+<area shape="poly" id="edge16_Node000000_Node000016" title=" " alt="" coords="101,366,164,396,207,412,205,417,162,401,99,371"/>
+<area shape="rect" id="Node000017" href="$class_player_camera.html" title=" " alt="" coords="184,461,288,488"/>
+<area shape="poly" id="edge17_Node000000_Node000017" title=" " alt="" coords="83,371,118,410,164,447,187,458,184,463,161,452,115,414,79,375"/>
+<area shape="rect" id="Node000018" href="$class_player_interact_system.html" title=" " alt="" coords="163,512,309,539"/>
+<area shape="poly" id="edge18_Node000000_Node000018" title=" " alt="" coords="75,374,110,437,135,469,164,498,184,509,181,514,161,502,131,473,105,439,71,377"/>
+<area shape="rect" id="Node000019" href="$class_singleton.html" title="Be aware this will not prevent a non singleton constructor such as T myT = new T(); To prevent that,..." alt="" coords="183,563,289,589"/>
+<area shape="poly" id="edge19_Node000000_Node000019" title=" " alt="" coords="71,375,83,414,102,461,129,508,164,549,183,561,181,565,161,553,125,511,97,463,78,416,66,377"/>
+<area shape="rect" id="Node000020" href="$class_time_system.html" title=" " alt="" coords="189,613,283,640"/>
+<area shape="poly" id="edge20_Node000000_Node000020" title=" " alt="" coords="68,376,77,424,95,484,123,546,142,574,164,599,190,615,187,619,161,603,138,577,119,548,90,486,72,426,62,377"/>
+<area shape="rect" id="Node000021" href="$class_tower.html" title=" " alt="" coords="208,664,264,691"/>
+<area shape="poly" id="edge21_Node000000_Node000021" title=" " alt="" coords="65,377,72,434,88,507,101,545,118,583,139,619,164,650,185,664,209,671,207,676,183,669,161,654,134,622,113,586,96,547,83,508,67,435,60,377"/>
+<area shape="rect" id="Node000003" href="$class_enemy_combat_system.html" title=" " alt="" coords="357,31,509,57"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="307,58,356,51,357,56,307,63"/>
+<area shape="rect" id="Node000004" href="$class_player_combat_system.html" title=" " alt="" coords="359,81,507,108"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="307,76,359,82,358,88,307,81"/>
+<area shape="rect" id="Node000009" href="$class_base_health_system.html" title=" " alt="" coords="367,157,500,184"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="299,249,307,244,322,232,331,220,340,207,356,194,379,182,381,187,358,198,344,210,335,223,326,236,311,249,302,254"/>
+<area shape="rect" id="Node000010" href="$class_enemy_health_system.html" title=" " alt="" coords="361,208,505,235"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="302,252,378,233,379,238,303,258"/>
+<area shape="rect" id="Node000011" href="$class_player_health_system.html" title=" " alt="" coords="363,259,503,285"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="303,269,362,269,362,275,303,275"/>
+<area shape="rect" id="Node000013" href="$class_gathering_resource.html" title=" " alt="" coords="367,309,499,336"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="314,320,367,320,367,325,314,325"/>
+<area shape="rect" id="Node000014" href="$class_tower_platform.html" title=" " alt="" coords="382,360,485,387"/>
+<area shape="poly" id="edge14_Node000012_Node000014" title=" " alt="" coords="306,338,382,358,380,363,305,343"/>
+</map>

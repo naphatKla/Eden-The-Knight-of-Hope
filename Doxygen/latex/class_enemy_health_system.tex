@@ -22,9 +22,7 @@ Collaboration diagram for Enemy\+Health\+System\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 override void \mbox{\hyperlink{class_enemy_health_system_a1283a59b0272eaa0661ff20ef0204b09}{Take\+Damage}} (float damage, Game\+Object attacker)
-\begin{DoxyCompactList}\small\item\em Take damage and reduce the current hp. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_enemy_health_system_a389e1e504b024830a5605feb034579d5}{Take\+Damage\+And\+Stun}} (float damage, Game\+Object attacker, float stun\+Duration)
-\begin{DoxyCompactList}\small\item\em Take damage and stun the enemy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Take damage and reduce the current hp. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -54,6 +52,11 @@ IEnumerator \mbox{\hyperlink{class_enemy_health_system_a0c72b24443e497097615c26f
 \begin{DoxyCompactItemize}
 \item 
 float \mbox{\hyperlink{class_health_system_a1dff31a9c710ce45dd4ecec2fcacf58c}{max\+Hp}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+Slider \mbox{\hyperlink{class_health_system_acad13f823d849553f8d0f366daa8d628}{slider\+Hp\+Player}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Properties inherited from \mbox{\hyperlink{class_health_system}{Health\+System}}}
 \begin{DoxyCompactItemize}
@@ -112,7 +115,8 @@ stun the enemy.
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -140,37 +144,12 @@ Take damage and reduce the current hp.
 
 Reimplemented from \mbox{\hyperlink{class_health_system_a595f606d9869f8a65bc9e1b671a1a87b}{Health\+System}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_enemy_health_system_a1283a59b0272eaa0661ff20ef0204b09_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{class_enemy_health_system_a389e1e504b024830a5605feb034579d5}\label{class_enemy_health_system_a389e1e504b024830a5605feb034579d5} 
-\index{EnemyHealthSystem@{EnemyHealthSystem}!TakeDamageAndStun@{TakeDamageAndStun}}
-\index{TakeDamageAndStun@{TakeDamageAndStun}!EnemyHealthSystem@{EnemyHealthSystem}}
-\doxysubsubsection{\texorpdfstring{TakeDamageAndStun()}{TakeDamageAndStun()}}
-{\footnotesize\ttfamily void Enemy\+Health\+System.\+Take\+Damage\+And\+Stun (\begin{DoxyParamCaption}\item[{float}]{damage,  }\item[{Game\+Object}]{attacker,  }\item[{float}]{stun\+Duration }\end{DoxyParamCaption})}
-
-
-
-Take damage and stun the enemy. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em damage} & Damage taken.\\
-\hline
-{\em attacker} & Attacker.\\
-\hline
-{\em stun\+Duration} & Stun duration (sec).\\
-\hline
-\end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_enemy_health_system_a389e1e504b024830a5605feb034579d5_cgraph}
+\includegraphics[width=350pt]{class_enemy_health_system_a1283a59b0272eaa0661ff20ef0204b09_cgraph}
 \end{center}
 \end{figure}
 
@@ -186,4 +165,4 @@ Here is the call graph for this function\+:\nopagebreak
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\+Enemy/\mbox{\hyperlink{_enemy_health_system_8cs}{Enemy\+Health\+System.\+cs}}\end{DoxyCompactItemize}
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\+Health\+System/\mbox{\hyperlink{_enemy_health_system_8cs}{Enemy\+Health\+System.\+cs}}\end{DoxyCompactItemize}

@@ -14,5 +14,6 @@ var searchData=
   ['daytext_11',['dayText',['../class_time_system.html#a4b8d90aeae5709ba4ccbdac6e241e08f',1,'TimeSystem']]],
   ['daytime_12',['dayTime',['../class_time_system.html#ab53470ec05deaecf41cfcd1600f7dff7',1,'TimeSystem']]],
   ['daytimeupdate_13',['DayTimeUpdate',['../class_time_system.html#a6565c99878badb19f6127443687637ee',1,'TimeSystem']]],
-  ['dead_14',['dead',['../class_enemy_health_system.html#a336c4bd4df3ac0fa0556f4319cad0cac',1,'EnemyHealthSystem.Dead()'],['../class_health_system.html#aac4f95a8abcedb6718f48c066b441956',1,'HealthSystem.Dead()'],['../class_player_health_system.html#a00f69deb4600297bf32cc83b8fe7f43a',1,'PlayerHealthSystem.Dead()']]]
+  ['dead_14',['dead',['../class_enemy_health_system.html#a336c4bd4df3ac0fa0556f4319cad0cac',1,'EnemyHealthSystem.Dead()'],['../class_health_system.html#aac4f95a8abcedb6718f48c066b441956',1,'HealthSystem.Dead()'],['../class_player_health_system.html#a00f69deb4600297bf32cc83b8fe7f43a',1,'PlayerHealthSystem.Dead()']]],
+  ['delay_15',['delay',['../struct_attack_pattern.html#aa67344eb670dfdcac12f2d1fd2cf5fa7',1,'AttackPattern']]]
 ];

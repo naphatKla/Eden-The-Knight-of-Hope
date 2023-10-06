@@ -2,6 +2,8 @@
 <area shape="rect" id="Node000001" title="Follow target." alt="" coords="5,31,185,57"/>
 <area shape="rect" id="Node000002" href="$class_enemy.html#a56a5a14455ca67f9b7f5bf59ce530c12" title="Select target with the first priority tag found in the target list." alt="" coords="242,5,382,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,31,226,26,227,31,186,36"/>
-<area shape="rect" id="Node000003" href="$class_enemy.html#a115c8ded4831b6e9168cfd9d634300f8" title="Set enemy state." alt="" coords="233,56,391,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,52,217,56,217,61,185,57"/>
+<area shape="rect" id="Node000004" href="$class_enemy.html#a115c8ded4831b6e9168cfd9d634300f8" title="Set enemy state." alt="" coords="233,56,391,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,52,217,56,217,61,185,57"/>
+<area shape="rect" id="Node000003" href="$class_enemy.html#a1289737aae15f80017fe2b441b52545e" title="Check enemy state." alt="" coords="439,5,573,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="382,16,423,16,423,21,382,21"/>
 </map>

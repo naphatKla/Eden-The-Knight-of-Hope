@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['waittoreturn_0',['WaitToReturn',['../class_enemy.html#a19b7e5420567e77301f3259cbaa42b68',1,'Enemy']]],
-  ['walkhandle_1',['WalkHandle',['../class_player.html#ab37b64ea6597e44f6738571f68f8db63',1,'Player']]]
+  ['update_0',['update',['../class_combat_system.html#a92e93ff66b511f5cb5040ea3fb486723',1,'CombatSystem.Update()'],['../class_enemy.html#a80560cd7c04c1c0846715740bad699d1',1,'Enemy.Update()'],['../class_game_manager.html#a44c79b205dec16bfe650e21259860c5b',1,'GameManager.Update()'],['../class_base_health_system.html#a18e3effa9cd1a602d2d5c12cf3b4aab4',1,'BaseHealthSystem.Update()'],['../class_player.html#aace80372e18e32fe177e295fe5d93ba8',1,'Player.Update()'],['../class_player_camera.html#a48c696962efd8f9943b92ed8f857e1fe',1,'PlayerCamera.Update()'],['../class_player_interact_system.html#ab9deb39e9b13b50d4f6b1454c2946e94',1,'PlayerInteractSystem.Update()'],['../class_enemy_spawner.html#a308cab115d1ecd6b69cc675b709de4a0',1,'EnemySpawner.Update()'],['../class_item_spawner.html#a70c81d0ba5132fe95be58fe28876d2b6',1,'ItemSpawner.Update()'],['../class_time_system.html#ab6de60d288f4ba297b658622b28092a8',1,'TimeSystem.Update()'],['../class_bullet.html#ac6941e4e535a484e4b3a86b993633572',1,'Bullet.Update()'],['../class_tower.html#a41489230338a01a06ea1b2e4d8eb9e90',1,'Tower.Update()']]],
+  ['updateui_1',['UpdateUI',['../class_health_system.html#aee86495eaff53a6f1c3570b82c757d0b',1,'HealthSystem']]]
 ];

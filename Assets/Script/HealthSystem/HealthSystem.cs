@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class HealthSystem : MonoBehaviour
 {
     #region Declare Variables
-    [SerializeField] private Slider sliderHpPlayer;
+    [SerializeField] protected Slider sliderHpPlayer;
     [SerializeField] public float maxHp;
     public float CurrentHp { get; protected set; }
     private bool _isDead;

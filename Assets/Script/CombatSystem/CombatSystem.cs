@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public enum AttackState
 {
@@ -31,7 +32,7 @@ public class CombatSystem : MonoBehaviour
     [Header("Normal Attack")]
     [SerializeField] protected List<AttackPattern> attackPatterns;
     private AttackPattern _currentAttackPattern;
-    [SerializeField] private AttackState _attackState;
+    [SerializeField] private AttackState attackState;
     private Coroutine _attackCoroutine;
     private Animator _animator;
     private float _lastAttackTime;
@@ -39,7 +40,7 @@ public class CombatSystem : MonoBehaviour
     
     protected virtual void Start()
     {
-        _attackState = AttackState.AttackState0;
+        attackState = AttackState.AttackState0;
         _currentAttackPattern = attackPatterns[0];
         _animator = GetComponent<Animator>();
     }
@@ -61,8 +62,9 @@ public class CombatSystem : MonoBehaviour
     {
         if (Time.time < _lastAttackTime + _currentAttackPattern.cooldown) return;   // cooldown check.
         if (_attackCoroutine != null) return;
-        
-        _currentAttackPattern = attackPatterns[(int)_attackState];
+      
+        attackState = Time.time - _lastAttackTime > 2 ? AttackState.AttackState0 : attackState;
+        _currentAttackPattern = attackPatterns[(int)attackState];
         _attackCoroutine = StartCoroutine(Attack(_currentAttackPattern.delay));
     }
     
@@ -76,19 +78,15 @@ public class CombatSystem : MonoBehaviour
     protected virtual IEnumerator Attack(float delay)
     {
         _lastAttackTime = Time.time;
-        _animator.SetTrigger(_attackState.ToString());
+        _animator.SetTrigger(attackState.ToString());
         
         yield return new WaitForSeconds(delay);
         
         List<HealthSystem> targetHealthSystems = targetInAttackArea.Select(target => target.GetComponent<HealthSystem>()).ToList();
         targetHealthSystems.ForEach(target => target.TakeDamage(_currentAttackPattern.power * attackStat,gameObject));
         
-        // if attackState is the last state or the last attack is longer than 2 second, reset attackState to 0.
-        if ((int)_attackState >= attackPatterns.Count-1 || Time.time - _lastAttackTime > 2)
-            _attackState = AttackState.AttackState0;
-        else
-            _attackState++;
-        
+        // Change attack stage to next stage, if attack state is the last state, change to the first state.
+        attackState = (int)attackState >= attackPatterns.Count - 1 ? AttackState.AttackState0 : attackState + 1;
         _attackCoroutine = null;
     }
     

@@ -70,8 +70,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_enemy_combat_system-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">EnemyCombatSystem Class Reference</div></div>
@@ -82,7 +81,9 @@ Inheritance diagram for EnemyCombatSystem:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_enemy_combat_system__inherit__graph.png" border="0" usemap="#a_enemy_combat_system_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_enemy_combat_system_inherit__map" id="a_enemy_combat_system_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,158,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,158,181"/>
+<area shape="rect" href="class_combat_system.html" title=" " alt="" coords="26,80,137,107"/>
+<area shape="poly" title=" " alt="" coords="84,122,84,154,79,154,79,122"/>
 <area shape="rect" title=" " alt="" coords="27,5,136,32"/>
 <area shape="poly" title=" " alt="" coords="84,48,84,80,79,80,79,48"/>
 </map>
@@ -92,55 +93,60 @@ Collaboration diagram for EnemyCombatSystem:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_enemy_combat_system__coll__graph.png" border="0" usemap="#a_enemy_combat_system_coll__map" alt="Collaboration graph"/></div>
 <map name="a_enemy_combat_system_coll__map" id="a_enemy_combat_system_coll__map">
-<area shape="rect" title=" " alt="" coords="5,172,158,199"/>
-<area shape="rect" title=" " alt="" coords="22,5,131,32"/>
-<area shape="poly" title=" " alt="" coords="80,47,84,171,78,172,74,47"/>
-<area shape="rect" href="class_enemy.html" title=" " alt="" coords="97,81,159,108"/>
-<area shape="poly" title=" " alt="" coords="96,43,122,79,117,83,91,46"/>
-<area shape="poly" title=" " alt="" coords="117,123,91,173,86,170,112,121"/>
+<area shape="rect" title=" " alt="" coords="44,187,196,213"/>
+<area shape="rect" href="class_combat_system.html" title=" " alt="" coords="115,96,226,123"/>
+<area shape="poly" title=" " alt="" coords="158,138,130,187,125,185,154,135"/>
+<area shape="rect" title=" " alt="" coords="5,5,115,32"/>
+<area shape="poly" title=" " alt="" coords="89,40,156,93,153,98,86,44"/>
+<area shape="rect" href="class_enemy.html" title=" " alt="" coords="29,96,91,123"/>
+<area shape="poly" title=" " alt="" coords="63,48,63,95,57,95,57,48"/>
+<area shape="rect" href="struct_attack_pattern.html" title=" " alt="" coords="139,5,240,32"/>
+<area shape="poly" title=" " alt="" coords="186,48,176,96,171,95,181,47"/>
+<area shape="poly" title=" " alt="" coords="74,136,88,161,108,184,104,188,84,164,69,139"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:af57d3d411774fe03f173ca9ecbd95c4d" id="r_af57d3d411774fe03f173ca9ecbd95c4d"><td class="memItemLeft" align="right" valign="top">LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#af57d3d411774fe03f173ca9ecbd95c4d">targetLayer</a></td></tr>
-<tr class="separator:af57d3d411774fe03f173ca9ecbd95c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ad5f38b5f6a835bf2f318ac8240ee5f" id="r_a4ad5f38b5f6a835bf2f318ac8240ee5f"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#a4ad5f38b5f6a835bf2f318ac8240ee5f">attackPoint</a></td></tr>
-<tr class="separator:a4ad5f38b5f6a835bf2f318ac8240ee5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7adda93bdb1a7a018d62f5767e5189e" id="r_ad7adda93bdb1a7a018d62f5767e5189e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#ad7adda93bdb1a7a018d62f5767e5189e">attackDamage</a> = 40</td></tr>
-<tr class="separator:ad7adda93bdb1a7a018d62f5767e5189e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac131345f1a7638766d80f4f3abc62c5d" id="r_ac131345f1a7638766d80f4f3abc62c5d"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#ac131345f1a7638766d80f4f3abc62c5d">attackArea</a></td></tr>
-<tr class="separator:ac131345f1a7638766d80f4f3abc62c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e8711ad73b04d70cf11e183666a7cdb" id="r_a0e8711ad73b04d70cf11e183666a7cdb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#a0e8711ad73b04d70cf11e183666a7cdb">attackRate</a> = 2f</td></tr>
-<tr class="separator:a0e8711ad73b04d70cf11e183666a7cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a07327cde1ed378f77555d2d3ac7f5235" id="r_a07327cde1ed378f77555d2d3ac7f5235"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#a07327cde1ed378f77555d2d3ac7f5235">Start</a> ()</td></tr>
-<tr class="separator:a07327cde1ed378f77555d2d3ac7f5235"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e03a99abd2b76b9d6a5723a4f718d31" id="r_a9e03a99abd2b76b9d6a5723a4f718d31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#a9e03a99abd2b76b9d6a5723a4f718d31">Update</a> ()</td></tr>
-<tr class="separator:a9e03a99abd2b76b9d6a5723a4f718d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac84931d8f2a702aeb6d76a70817ed347" id="r_ac84931d8f2a702aeb6d76a70817ed347"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#ac84931d8f2a702aeb6d76a70817ed347">Attack</a> (float delay)</td></tr>
-<tr class="separator:ac84931d8f2a702aeb6d76a70817ed347"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa575b9b742657e068216a6ad12dcbfad" id="r_aa575b9b742657e068216a6ad12dcbfad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#aa575b9b742657e068216a6ad12dcbfad">OnDrawGizmos</a> ()</td></tr>
-<tr class="separator:aa575b9b742657e068216a6ad12dcbfad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ac33e2202a5624727fe8941b65dc7be58" id="r_ac33e2202a5624727fe8941b65dc7be58"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#ac33e2202a5624727fe8941b65dc7be58">Start</a> ()</td></tr>
+<tr class="separator:ac33e2202a5624727fe8941b65dc7be58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a813bae87e119820b54f680dce6d7a61a" id="r_a813bae87e119820b54f680dce6d7a61a"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#a813bae87e119820b54f680dce6d7a61a">AttackHandle</a> ()</td></tr>
+<tr class="memdesc:a813bae87e119820b54f680dce6d7a61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">use for handle the attack system. Please override this method with attack condition before call this method.  <br /></td></tr>
+<tr class="separator:a813bae87e119820b54f680dce6d7a61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_combat_system"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_combat_system')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_combat_system.html">CombatSystem</a></td></tr>
+<tr class="memitem:a92e93ff66b511f5cb5040ea3fb486723 inherit pro_methods_class_combat_system" id="r_a92e93ff66b511f5cb5040ea3fb486723"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system.html#a92e93ff66b511f5cb5040ea3fb486723">Update</a> ()</td></tr>
+<tr class="separator:a92e93ff66b511f5cb5040ea3fb486723 inherit pro_methods_class_combat_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a154dc9f68e7252c136e1db0f753ef6e0 inherit pro_methods_class_combat_system" id="r_a154dc9f68e7252c136e1db0f753ef6e0"><td class="memItemLeft" align="right" valign="top">virtual IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system.html#a154dc9f68e7252c136e1db0f753ef6e0">Attack</a> (float delay)</td></tr>
+<tr class="memdesc:a154dc9f68e7252c136e1db0f753ef6e0 inherit pro_methods_class_combat_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attack target with delay.  <br /></td></tr>
+<tr class="separator:a154dc9f68e7252c136e1db0f753ef6e0 inherit pro_methods_class_combat_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a798dc23d05a8b49d5bf36674748cfff0 inherit pro_methods_class_combat_system" id="r_a798dc23d05a8b49d5bf36674748cfff0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system.html#a798dc23d05a8b49d5bf36674748cfff0">CancelAttacking</a> ()</td></tr>
+<tr class="memdesc:a798dc23d05a8b49d5bf36674748cfff0 inherit pro_methods_class_combat_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel attacking.  <br /></td></tr>
+<tr class="separator:a798dc23d05a8b49d5bf36674748cfff0 inherit pro_methods_class_combat_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ac4ff4e0bc0d2654a5c2d58043d1f3b7f" id="r_ac4ff4e0bc0d2654a5c2d58043d1f3b7f"><td class="memItemLeft" align="right" valign="top">Animator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#ac4ff4e0bc0d2654a5c2d58043d1f3b7f">_animator</a></td></tr>
-<tr class="separator:ac4ff4e0bc0d2654a5c2d58043d1f3b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa003f65aef6e8176bf5daff737d5464" id="r_aaa003f65aef6e8176bf5daff737d5464"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_enemy.html">Enemy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#aaa003f65aef6e8176bf5daff737d5464">_enemy</a></td></tr>
 <tr class="separator:aaa003f65aef6e8176bf5daff737d5464"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7efaf1cf6c49eb0285ae6fbb1b77820" id="r_ab7efaf1cf6c49eb0285ae6fbb1b77820"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#ab7efaf1cf6c49eb0285ae6fbb1b77820">_nextAttackTime</a> = 0f</td></tr>
-<tr class="separator:ab7efaf1cf6c49eb0285ae6fbb1b77820"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93d398410dc1d26ff171f43213863a86" id="r_a93d398410dc1d26ff171f43213863a86"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#a93d398410dc1d26ff171f43213863a86">_attackPointParent</a></td></tr>
-<tr class="separator:a93d398410dc1d26ff171f43213863a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5400b42f5c14c4105308bf6c9e91b17c" id="r_a5400b42f5c14c4105308bf6c9e91b17c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_combat_system.html#a5400b42f5c14c4105308bf6c9e91b17c">_isCharge</a></td></tr>
-<tr class="separator:a5400b42f5c14c4105308bf6c9e91b17c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_combat_system"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_combat_system')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_combat_system.html">CombatSystem</a></td></tr>
+<tr class="memitem:a31c777b126104521c60451b190e663a7 inherit pro_attribs_class_combat_system" id="r_a31c777b126104521c60451b190e663a7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system.html#a31c777b126104521c60451b190e663a7">attackStat</a></td></tr>
+<tr class="separator:a31c777b126104521c60451b190e663a7 inherit pro_attribs_class_combat_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d980fd8c7da3a47c6b9d7d8e2ec5b4c inherit pro_attribs_class_combat_system" id="r_a1d980fd8c7da3a47c6b9d7d8e2ec5b4c"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system.html#a1d980fd8c7da3a47c6b9d7d8e2ec5b4c">attackPoint</a></td></tr>
+<tr class="separator:a1d980fd8c7da3a47c6b9d7d8e2ec5b4c inherit pro_attribs_class_combat_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef3cf3f107c72aad6f199af67266f2d1 inherit pro_attribs_class_combat_system" id="r_aef3cf3f107c72aad6f199af67266f2d1"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system.html#aef3cf3f107c72aad6f199af67266f2d1">attackArea</a></td></tr>
+<tr class="separator:aef3cf3f107c72aad6f199af67266f2d1 inherit pro_attribs_class_combat_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f69e29ff3912396d5205b2fd8eb64d inherit pro_attribs_class_combat_system" id="r_ac0f69e29ff3912396d5205b2fd8eb64d"><td class="memItemLeft" align="right" valign="top">LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system.html#ac0f69e29ff3912396d5205b2fd8eb64d">targetLayer</a></td></tr>
+<tr class="separator:ac0f69e29ff3912396d5205b2fd8eb64d inherit pro_attribs_class_combat_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afceffe10a01d9ce58f51315b6045c4ef inherit pro_attribs_class_combat_system" id="r_afceffe10a01d9ce58f51315b6045c4ef"><td class="memItemLeft" align="right" valign="top">List&lt; Collider2D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system.html#afceffe10a01d9ce58f51315b6045c4ef">targetInAttackArea</a></td></tr>
+<tr class="separator:afceffe10a01d9ce58f51315b6045c4ef inherit pro_attribs_class_combat_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a616750933eccd659bc14cdff0ccfdd45 inherit pro_attribs_class_combat_system" id="r_a616750933eccd659bc14cdff0ccfdd45"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="struct_attack_pattern.html">AttackPattern</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system.html#a616750933eccd659bc14cdff0ccfdd45">attackPatterns</a></td></tr>
+<tr class="separator:a616750933eccd659bc14cdff0ccfdd45 inherit pro_attribs_class_combat_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac84931d8f2a702aeb6d76a70817ed347" name="ac84931d8f2a702aeb6d76a70817ed347"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac84931d8f2a702aeb6d76a70817ed347">&#9670;&#160;</a></span>Attack()</h2>
+<a id="a813bae87e119820b54f680dce6d7a61a" name="a813bae87e119820b54f680dce6d7a61a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a813bae87e119820b54f680dce6d7a61a">&#9670;&#160;</a></span>AttackHandle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -149,43 +155,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerator EnemyCombatSystem.Attack </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>delay</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_enemy_combat_system_ac84931d8f2a702aeb6d76a70817ed347_icgraph.png" border="0" usemap="#aclass_enemy_combat_system_ac84931d8f2a702aeb6d76a70817ed347_icgraph" alt=""/></div>
-<map name="aclass_enemy_combat_system_ac84931d8f2a702aeb6d76a70817ed347_icgraph" id="aclass_enemy_combat_system_ac84931d8f2a702aeb6d76a70817ed347_icgraph">
-<area shape="rect" title=" " alt="" coords="251,5,445,32"/>
-<area shape="rect" href="class_enemy_combat_system.html#a9e03a99abd2b76b9d6a5723a4f718d31" title=" " alt="" coords="5,5,203,32"/>
-<area shape="poly" title=" " alt="" coords="235,21,203,21,203,16,235,16"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="aa575b9b742657e068216a6ad12dcbfad" name="aa575b9b742657e068216a6ad12dcbfad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa575b9b742657e068216a6ad12dcbfad">&#9670;&#160;</a></span>OnDrawGizmos()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void EnemyCombatSystem.OnDrawGizmos </td>
+          <td class="memname">override void EnemyCombatSystem.AttackHandle </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -193,118 +163,55 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a07327cde1ed378f77555d2d3ac7f5235" name="a07327cde1ed378f77555d2d3ac7f5235"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07327cde1ed378f77555d2d3ac7f5235">&#9670;&#160;</a></span>Start()</h2>
+<p>use for handle the attack system. Please override this method with attack condition before call this method. </p>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void EnemyCombatSystem.Start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9e03a99abd2b76b9d6a5723a4f718d31" name="a9e03a99abd2b76b9d6a5723a4f718d31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e03a99abd2b76b9d6a5723a4f718d31">&#9670;&#160;</a></span>Update()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void EnemyCombatSystem.Update </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Reimplemented from <a class="el" href="class_combat_system.html#a3310f589c408f0b303eb4b022ba8f467">CombatSystem</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_enemy_combat_system_a9e03a99abd2b76b9d6a5723a4f718d31_cgraph.png" border="0" usemap="#aclass_enemy_combat_system_a9e03a99abd2b76b9d6a5723a4f718d31_cgraph" alt=""/></div>
-<map name="aclass_enemy_combat_system_a9e03a99abd2b76b9d6a5723a4f718d31_cgraph" id="aclass_enemy_combat_system_a9e03a99abd2b76b9d6a5723a4f718d31_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,203,32"/>
-<area shape="rect" href="class_enemy_combat_system.html#ac84931d8f2a702aeb6d76a70817ed347" title=" " alt="" coords="251,5,445,32"/>
-<area shape="poly" title=" " alt="" coords="203,16,235,16,235,21,203,21"/>
+<div class="center"><img src="class_enemy_combat_system_a813bae87e119820b54f680dce6d7a61a_cgraph.png" border="0" usemap="#aclass_enemy_combat_system_a813bae87e119820b54f680dce6d7a61a_cgraph" alt=""/></div>
+<map name="aclass_enemy_combat_system_a813bae87e119820b54f680dce6d7a61a_cgraph" id="aclass_enemy_combat_system_a813bae87e119820b54f680dce6d7a61a_cgraph">
+<area shape="rect" title="use for handle the attack system. Please override this method with attack condition before call this ..." alt="" coords="5,5,200,48"/>
+<area shape="rect" href="class_combat_system.html#a798dc23d05a8b49d5bf36674748cfff0" title="Cancel attacking." alt="" coords="248,13,458,40"/>
+<area shape="poly" title=" " alt="" coords="200,24,232,24,232,29,200,29"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="ac33e2202a5624727fe8941b65dc7be58" name="ac33e2202a5624727fe8941b65dc7be58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac33e2202a5624727fe8941b65dc7be58">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void EnemyCombatSystem.Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_combat_system.html#ae036206d734f1e13cac0b19d8243972d">CombatSystem</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac4ff4e0bc0d2654a5c2d58043d1f3b7f" name="ac4ff4e0bc0d2654a5c2d58043d1f3b7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4ff4e0bc0d2654a5c2d58043d1f3b7f">&#9670;&#160;</a></span>_animator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Animator EnemyCombatSystem._animator</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a93d398410dc1d26ff171f43213863a86" name="a93d398410dc1d26ff171f43213863a86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93d398410dc1d26ff171f43213863a86">&#9670;&#160;</a></span>_attackPointParent</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">GameObject EnemyCombatSystem._attackPointParent</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aaa003f65aef6e8176bf5daff737d5464" name="aaa003f65aef6e8176bf5daff737d5464"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaa003f65aef6e8176bf5daff737d5464">&#9670;&#160;</a></span>_enemy</h2>
 
@@ -327,122 +234,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a5400b42f5c14c4105308bf6c9e91b17c" name="a5400b42f5c14c4105308bf6c9e91b17c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5400b42f5c14c4105308bf6c9e91b17c">&#9670;&#160;</a></span>_isCharge</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool EnemyCombatSystem._isCharge</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab7efaf1cf6c49eb0285ae6fbb1b77820" name="ab7efaf1cf6c49eb0285ae6fbb1b77820"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7efaf1cf6c49eb0285ae6fbb1b77820">&#9670;&#160;</a></span>_nextAttackTime</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float EnemyCombatSystem._nextAttackTime = 0f</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac131345f1a7638766d80f4f3abc62c5d" name="ac131345f1a7638766d80f4f3abc62c5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac131345f1a7638766d80f4f3abc62c5d">&#9670;&#160;</a></span>attackArea</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector2 EnemyCombatSystem.attackArea</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad7adda93bdb1a7a018d62f5767e5189e" name="ad7adda93bdb1a7a018d62f5767e5189e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7adda93bdb1a7a018d62f5767e5189e">&#9670;&#160;</a></span>attackDamage</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int EnemyCombatSystem.attackDamage = 40</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4ad5f38b5f6a835bf2f318ac8240ee5f" name="a4ad5f38b5f6a835bf2f318ac8240ee5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ad5f38b5f6a835bf2f318ac8240ee5f">&#9670;&#160;</a></span>attackPoint</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Transform EnemyCombatSystem.attackPoint</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0e8711ad73b04d70cf11e183666a7cdb" name="a0e8711ad73b04d70cf11e183666a7cdb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e8711ad73b04d70cf11e183666a7cdb">&#9670;&#160;</a></span>attackRate</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float EnemyCombatSystem.attackRate = 2f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af57d3d411774fe03f173ca9ecbd95c4d" name="af57d3d411774fe03f173ca9ecbd95c4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af57d3d411774fe03f173ca9ecbd95c4d">&#9670;&#160;</a></span>targetLayer</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">LayerMask EnemyCombatSystem.targetLayer</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/mynig/Desktop/Eden-The-Knight-of-Hope/Assets/Script/Enemy/<a class="el" href="_enemy_combat_system_8cs.html">EnemyCombatSystem.cs</a></li>
+<li>C:/Users/mynig/Desktop/Eden-The-Knight-of-Hope/Assets/Script/CombatSystem/<a class="el" href="_enemy_combat_system_8cs.html">EnemyCombatSystem.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
