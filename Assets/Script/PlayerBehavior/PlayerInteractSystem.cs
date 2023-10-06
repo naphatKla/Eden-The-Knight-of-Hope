@@ -10,12 +10,18 @@ public class PlayerInteractSystem : MonoBehaviour
     [SerializeField] private float interactionPointRadius;
     [SerializeField] private LayerMask interactableMask;
     private List<Collider2D> _objectsInArea;
-    private InteractableObject interactableObject;
+    private InteractableObject _targetObject;
+    private InteractableObject _lastTargetObject;
     #endregion
     private void Update()
     {
         _objectsInArea = Physics2D.OverlapCircleAll(interactionPoint.position, interactionPointRadius, interactableMask).ToList();
-        if (_objectsInArea.Count <= 0) return;
+        if (_objectsInArea.Count <= 0)
+        {
+            _targetObject?.OnTarget(false);
+            _targetObject = null;
+            return;
+        }
         
         InteractHandle();
     }
@@ -34,10 +40,14 @@ public class PlayerInteractSystem : MonoBehaviour
             float objectDistance = Vector2.Distance(transform.position, obj.transform.position);
             objectDistances.Add(objectDistance);
         }
+        // Target only the nearest object
+        _targetObject = _objectsInArea[objectDistances.IndexOf(objectDistances.Min())].gameObject.GetComponent<InteractableObject>();
+        _targetObject.OnTarget(true);
+
+        if (_lastTargetObject != _targetObject)
+            _lastTargetObject?.OnTarget(false);
         
-        // interact only the nearest object
-        interactableObject = _objectsInArea[objectDistances.IndexOf(objectDistances.Min())].gameObject.GetComponent<InteractableObject>();
-        interactableObject.Interact();
+        _lastTargetObject = _targetObject;
     }
 
     

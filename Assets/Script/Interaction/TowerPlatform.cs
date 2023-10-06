@@ -6,22 +6,14 @@ public class TowerPlatform : InteractableObject
     [SerializeField] private GameObject towerPrefab;
     [SerializeField] private int cost;
     private GameObject _tower;
-
-    protected override void Start()
+    
+    public override void InteractHandler()
     {
-        base.Start();
-    }
-
-    public override void Interact()
-    {
-        base.Interact();
-        
         if(!Input.GetKeyDown(key)) return;
         if(GameManager.instance.totalPoint < cost) return;
         StartCoroutine(BuildTower(countdownTime));
-
     }
-
+    
     private IEnumerator BuildTower(float duration)
     {
         float timeCount = 0;

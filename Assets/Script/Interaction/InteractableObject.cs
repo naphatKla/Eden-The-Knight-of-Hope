@@ -11,15 +11,11 @@ using UnityEngine.UI;
 public class InteractableObject : MonoBehaviour
 {
     [SerializeField] protected KeyCode key;
+    [SerializeField] protected int point;
     [SerializeField] protected string prompt;
     [SerializeField] protected TextMeshProUGUI interactionTextUI;
     [SerializeField] protected GameObject[] interactionIndicators;
-    [SerializeField] protected int point;
-    
-    //countdownTime 
     [SerializeField] protected float countdownTime;
-
-    // UI Bar TimeCount
     [SerializeField] public Slider timeCountUi;
 
     protected virtual void Start()
@@ -32,11 +28,18 @@ public class InteractableObject : MonoBehaviour
         
     }
     
-    public virtual void Interact()
+    public virtual void OnTarget(bool isTarget)
     {
-        StartCoroutine(TriggerIndicators());
-        if (!Input.GetKeyDown(key)) return;
-        // Do something when player interact
+        foreach (GameObject interactionIndicator in interactionIndicators)
+            interactionIndicator.SetActive(isTarget);
+        
+        InteractHandler();
+    }
+
+    public virtual void InteractHandler()
+    {
+        // Pls override this method
+        // Do something when interact
     }
 
     protected IEnumerator CountdownAndDestroy(float time)
@@ -65,15 +68,4 @@ public class InteractableObject : MonoBehaviour
         GameManager.instance.AddPoint(point);
         Destroy(gameObject);
     }
-
-    IEnumerator TriggerIndicators()
-    {
-        foreach (GameObject interactionIndicator in interactionIndicators)
-            interactionIndicator.SetActive(true);
-
-        yield return new WaitForEndOfFrame();
-        foreach (GameObject interactionIndicator in interactionIndicators)
-            interactionIndicator.SetActive(false);
-    }
-    
 }

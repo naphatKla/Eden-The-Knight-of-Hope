@@ -13,10 +13,8 @@ public class GatheringResource : InteractableObject
         gameObject.AddComponent<PolygonCollider2D>();
     }
 
-    public override void Interact()
+    public override void InteractHandler()
     {
-        base.Interact();
-        
         if(!Input.GetKeyDown(key)) return;
         StartCoroutine(CountdownAndDestroy(countdownTime));
     }
