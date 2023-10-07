@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 2070534257285300202}
   - component: {fileID: 7325326020842072738}
   m_Layer: 5
-  m_Name: TimeCountUI
+  m_Name: ProgressionBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -578,14 +578,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 101
+  point: 0
   prompt: Press 'E' to build the tower
   interactionTextUI: {fileID: 1493151231341518125}
   interactionIndicators:
   - {fileID: 3849690142682474951}
   - {fileID: 4985006355007062428}
-  point: 0
   countdownTime: 0.5
-  timeCountUi: {fileID: 7325326020842072738}
+  progressBar: {fileID: 7325326020842072738}
   towerPrefab: {fileID: 1220393125980194530, guid: 54351d679020be840b2bad54c4228904, type: 3}
   cost: 50
 --- !u!1 &4985006355007062428

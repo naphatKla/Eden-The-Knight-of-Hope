@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6887017298415830055}
   - component: {fileID: 1343498073486773355}
   m_Layer: 5
-  m_Name: TimeCountUI
+  m_Name: ProgressionBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -604,14 +604,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 101
+  point: 30
   prompt: Press 'E' to Harvest
   interactionTextUI: {fileID: 1330138664384701320}
   interactionIndicators:
   - {fileID: 7335403721613920197}
   - {fileID: 5067326833207498990}
-  point: 30
   countdownTime: 0.5
-  timeCountUi: {fileID: 1343498073486773355}
+  progressBar: {fileID: 1343498073486773355}
   sprites:
   - {fileID: 509728100, guid: 262b25c57deae174ca513504431ad414, type: 3}
   - {fileID: 1548973923, guid: 262b25c57deae174ca513504431ad414, type: 3}
