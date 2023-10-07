@@ -66,14 +66,12 @@ namespace EnemyBehavior
 
         void Update()
         {
-            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt") ||
-                _animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttack"))
+            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttack") || _isStun)
             {
                 _agent.velocity = Vector2.zero;
                 return;
             }
-            if(_isStun) return;
-
+            
             BehaviorHandle();
             AnimationUpdate();
         }
@@ -134,7 +132,7 @@ namespace EnemyBehavior
         /// </summary>
         private void ReturnToSpawnHandle()
         {
-            if(!_target.IsUnityNull() && !_target.activeSelf)
+            if(_target && _target.activeSelf)
                 _agent.SetDestination(_target.transform.position);
         
             if (_waitToReturnCoroutine != null) return;

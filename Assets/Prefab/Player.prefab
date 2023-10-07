@@ -308,7 +308,7 @@ MonoBehaviour:
     delay: 0.1
     cooldown: 3
     attackState: 2
-  _attackState: 0
+  attackState: 0
 --- !u!114 &1049984963322112933
 MonoBehaviour:
   m_ObjectHideFlags: 0
