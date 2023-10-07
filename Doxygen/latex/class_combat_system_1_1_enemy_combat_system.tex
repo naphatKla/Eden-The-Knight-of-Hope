@@ -1,0 +1,108 @@
+\doxysection{Combat\+System.\+Enemy\+Combat\+System Class Reference}
+\hypertarget{class_combat_system_1_1_enemy_combat_system}{}\label{class_combat_system_1_1_enemy_combat_system}\index{CombatSystem.EnemyCombatSystem@{CombatSystem.EnemyCombatSystem}}
+
+
+Inheritance diagram for Combat\+System.\+Enemy\+Combat\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{class_combat_system_1_1_enemy_combat_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Combat\+System.\+Enemy\+Combat\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_combat_system_1_1_enemy_combat_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_combat_system_1_1_enemy_combat_system_ac9ca19513272599729fec09ec60bd352}{Start}} ()
+\item 
+override void \mbox{\hyperlink{class_combat_system_1_1_enemy_combat_system_ac3de0e9e01abbc62a0379e49d1bc5eb5}{Attack\+Handle}} ()
+\begin{DoxyCompactList}\small\item\em use for handle the attack system. Please override this method with attack condition before call this method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_combat_system_1_1_combat_system}{Combat\+System.\+Combat\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_combat_system_1_1_combat_system_ad4456e34fc5129b9928103c359431c74}{Update}} ()
+\item 
+virtual IEnumerator \mbox{\hyperlink{class_combat_system_1_1_combat_system_af13c90ed2204d6579e5cfd0fe16df29d}{Attack}} (float delay)
+\begin{DoxyCompactList}\small\item\em Attack target with delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_combat_system_1_1_combat_system_a67f3523e245ef5e061c020905072737a}{Cancel\+Attacking}} ()
+\begin{DoxyCompactList}\small\item\em Cancel attacking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_enemy_behavior_1_1_enemy}{Enemy}} \mbox{\hyperlink{class_combat_system_1_1_enemy_combat_system_afe12d9b259a2a414b1f442554771e906}{\+\_\+enemy}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_combat_system_1_1_combat_system}{Combat\+System.\+Combat\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_combat_system_1_1_combat_system_a0140ba87345cb34088fed96f6f021535}{attack\+Stat}}
+\item 
+Transform \mbox{\hyperlink{class_combat_system_1_1_combat_system_a09513a9fc2438e1a16a0cfa836707798}{attack\+Point}}
+\item 
+Vector2 \mbox{\hyperlink{class_combat_system_1_1_combat_system_a6807d366d0d40ba3e9176114153e0d13}{attack\+Area}}
+\item 
+Layer\+Mask \mbox{\hyperlink{class_combat_system_1_1_combat_system_a1c8b52ea2fbd18f043495e0d544682d4}{target\+Layer}}
+\item 
+List$<$ Collider2D $>$ \mbox{\hyperlink{class_combat_system_1_1_combat_system_a48146e1c039f1fe7786b45e091cdc150}{target\+In\+Attack\+Area}}
+\item 
+List$<$ \mbox{\hyperlink{struct_combat_system_1_1_attack_pattern}{Attack\+Pattern}} $>$ \mbox{\hyperlink{class_combat_system_1_1_combat_system_afcac2014a8521044e394ca4d705c4397}{attack\+Patterns}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_combat_system_1_1_enemy_combat_system_ac3de0e9e01abbc62a0379e49d1bc5eb5}\label{class_combat_system_1_1_enemy_combat_system_ac3de0e9e01abbc62a0379e49d1bc5eb5} 
+\index{CombatSystem.EnemyCombatSystem@{CombatSystem.EnemyCombatSystem}!AttackHandle@{AttackHandle}}
+\index{AttackHandle@{AttackHandle}!CombatSystem.EnemyCombatSystem@{CombatSystem.EnemyCombatSystem}}
+\doxysubsubsection{\texorpdfstring{AttackHandle()}{AttackHandle()}}
+{\footnotesize\ttfamily override void Combat\+System.\+Enemy\+Combat\+System.\+Attack\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+use for handle the attack system. Please override this method with attack condition before call this method. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_combat_system_1_1_combat_system_a9a7cccf6fac18b75a9d119e3ca202581}{Combat\+System.\+Combat\+System}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_combat_system_1_1_enemy_combat_system_ac3de0e9e01abbc62a0379e49d1bc5eb5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_combat_system_1_1_enemy_combat_system_ac9ca19513272599729fec09ec60bd352}\label{class_combat_system_1_1_enemy_combat_system_ac9ca19513272599729fec09ec60bd352} 
+\index{CombatSystem.EnemyCombatSystem@{CombatSystem.EnemyCombatSystem}!Start@{Start}}
+\index{Start@{Start}!CombatSystem.EnemyCombatSystem@{CombatSystem.EnemyCombatSystem}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily override void Combat\+System.\+Enemy\+Combat\+System.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_combat_system_1_1_combat_system_a1c567885da1dea6615aacb9ab59f9eb5}{Combat\+System.\+Combat\+System}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_combat_system_1_1_enemy_combat_system_afe12d9b259a2a414b1f442554771e906}\label{class_combat_system_1_1_enemy_combat_system_afe12d9b259a2a414b1f442554771e906} 
+\index{CombatSystem.EnemyCombatSystem@{CombatSystem.EnemyCombatSystem}!\_enemy@{\_enemy}}
+\index{\_enemy@{\_enemy}!CombatSystem.EnemyCombatSystem@{CombatSystem.EnemyCombatSystem}}
+\doxysubsubsection{\texorpdfstring{\_enemy}{\_enemy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_enemy_behavior_1_1_enemy}{Enemy}} Combat\+System.\+Enemy\+Combat\+System.\+\_\+enemy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Scripts/\+Combat\+System/\mbox{\hyperlink{_enemy_combat_system_8cs}{Enemy\+Combat\+System.\+cs}}\end{DoxyCompactItemize}

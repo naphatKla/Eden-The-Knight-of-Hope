@@ -1,0 +1,5 @@
+<map id="PlayerBehavior.Player.Dash" name="PlayerBehavior.Player.Dash">
+<area shape="rect" id="Node000001" title="Dash behavior for start coroutine in dash system." alt="" coords="5,13,188,40"/>
+<area shape="rect" id="Node000002" href="$class_player_behavior_1_1_player.html#a85de384558f93285ffb2ca2a5176006b" title="Use for set player state." alt="" coords="236,5,408,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,24,220,24,220,29,188,29"/>
+</map>

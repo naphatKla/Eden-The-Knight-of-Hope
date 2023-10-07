@@ -1,0 +1,5 @@
+<map id="HealthSystem.HealthSystem.Heal" name="HealthSystem.HealthSystem.Heal">
+<area shape="rect" id="Node000001" title="Heal and increase the current hp." alt="" coords="277,13,496,40"/>
+<area shape="rect" id="Node000002" href="$class_health_system_1_1_base_health_system.html#ae1b8683238a1a919b5d7a0c44a9c9870" title=" " alt="" coords="5,5,229,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="261,29,229,29,229,24,261,24"/>
+</map>

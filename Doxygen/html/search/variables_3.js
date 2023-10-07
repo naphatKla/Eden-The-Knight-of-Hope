@@ -1,10 +1,10 @@
 var searchData=
 [
   ['clock_0',['clock',['../class_time_system.html#af58174a10ca129f9f27871740aee1d55',1,'TimeSystem']]],
-  ['cooldown_1',['cooldown',['../struct_attack_pattern.html#ae83f75c81227f2ea83a287cce38df5d2',1,'AttackPattern']]],
-  ['cost_2',['cost',['../class_tower_platform.html#ab38ee5ec72021a112ceb71d17bf0dbe2',1,'TowerPlatform']]],
-  ['countdowntime_3',['countdownTime',['../class_interactable_object.html#a31bdcf207857832b49e0325d20e9fbce',1,'InteractableObject']]],
-  ['currentenemycount_4',['currentEnemyCount',['../class_enemy_spawner.html#a7685bad65142e0d0e7df0802ec2c1ea2',1,'EnemySpawner']]],
-  ['currentitemcount_5',['currentItemCount',['../class_item_spawner.html#a4f9aa52f9ae03c2e3d320ee880802572',1,'ItemSpawner']]],
+  ['cooldown_1',['cooldown',['../struct_combat_system_1_1_attack_pattern.html#a7023bd1a11decc0970be6491472bc1c9',1,'CombatSystem::AttackPattern']]],
+  ['cost_2',['cost',['../class_interaction_1_1_tower_platform.html#a7b45086ecceffd072d754b5d44498184',1,'Interaction::TowerPlatform']]],
+  ['countdowntime_3',['countdownTime',['../class_interaction_1_1_interactable_object.html#a29ab06f2211cb4d4bdadb338341fe979',1,'Interaction::InteractableObject']]],
+  ['currentenemycount_4',['currentEnemyCount',['../class_spawner_1_1_enemy_spawner.html#a788ea55ebda72dad290ff4cc0999b1b8',1,'Spawner::EnemySpawner']]],
+  ['currentitemcount_5',['currentItemCount',['../class_spawner_1_1_item_spawner.html#ac7adc3726580b4df215b8624bd121873',1,'Spawner::ItemSpawner']]],
   ['cyclelength_6',['cycleLength',['../class_time_system.html#a8b22a3a3fe5ce7429521c24acef884e6',1,'TimeSystem']]]
 ];

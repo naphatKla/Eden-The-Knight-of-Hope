@@ -1,0 +1,213 @@
+\doxysection{Health\+System.\+Health\+System Class Reference}
+\hypertarget{class_health_system_1_1_health_system}{}\label{class_health_system_1_1_health_system}\index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
+
+
+Inheritance diagram for Health\+System.\+Health\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_health_system_1_1_health_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Health\+System.\+Health\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{class_health_system_1_1_health_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_health_system_1_1_health_system_a3a267200e5749e4b931038076fed1deb}{Take\+Damage}} (float damage, Game\+Object attacker=null)
+\begin{DoxyCompactList}\small\item\em Take damage and reduce the current hp. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_health_system_1_1_health_system_a2e2a07a077808515447922570ab4ff29}{Heal}} (float heal\+Point)
+\begin{DoxyCompactList}\small\item\em Heal and increase the current hp. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_health_system_1_1_health_system_a0ed4c60e8d2cd69fe6bccf70bf07d4e7}{Reset\+Health}} ()
+\begin{DoxyCompactList}\small\item\em Reset the current hp to max hp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_health_system_1_1_health_system_afffac0008b23a7e88c3e8a6ddcb45b70}{max\+Hp}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_health_system_1_1_health_system_a9206b51833b78cbb003832eb800ecf7f}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{class_health_system_1_1_health_system_a9151782314f5407f5edf7678593a5137}{Dead}} ()
+\begin{DoxyCompactList}\small\item\em Dead and destroy the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Slider \mbox{\hyperlink{class_health_system_1_1_health_system_afbad83a908f12f18ad81c9140fae05cc}{slider\+Hp\+Player}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_health_system_1_1_health_system_ab7ff0c0a74693e7f1fd0e772efe8e47a}{Current\+Hp}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_health_system_1_1_health_system_a68e6303a7b3280f3d42b8b66491c81fd}{Late\+Update}} ()
+\item 
+void \mbox{\hyperlink{class_health_system_1_1_health_system_a20b369b14d1011eddfd198dab638174d}{Update\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Update the UI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_health_system_1_1_health_system_aa1394c40f00ca88dbed1067b7255dc47}{\+\_\+is\+Dead}}
+\item 
+Animator \mbox{\hyperlink{class_health_system_1_1_health_system_ac4a697d6384dae06849c6f14c78ad030}{\+\_\+animator}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_health_system_1_1_health_system_a9151782314f5407f5edf7678593a5137}\label{class_health_system_1_1_health_system_a9151782314f5407f5edf7678593a5137} 
+\index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!Dead@{Dead}}
+\index{Dead@{Dead}!HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
+\doxysubsubsection{\texorpdfstring{Dead()}{Dead()}}
+{\footnotesize\ttfamily virtual void Health\+System.\+Health\+System.\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Dead and destroy the object. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_health_system_1_1_enemy_health_system_aabda054513f980e1d2f78aad766b8f5f}{Health\+System.\+Enemy\+Health\+System}}, and \mbox{\hyperlink{class_health_system_1_1_player_health_system_a6b9be6f2b2d6a5e6399b226618f340a9}{Health\+System.\+Player\+Health\+System}}.
+
+\Hypertarget{class_health_system_1_1_health_system_a2e2a07a077808515447922570ab4ff29}\label{class_health_system_1_1_health_system_a2e2a07a077808515447922570ab4ff29} 
+\index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!Heal@{Heal}}
+\index{Heal@{Heal}!HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
+\doxysubsubsection{\texorpdfstring{Heal()}{Heal()}}
+{\footnotesize\ttfamily void Health\+System.\+Health\+System.\+Heal (\begin{DoxyParamCaption}\item[{float}]{heal\+Point }\end{DoxyParamCaption})}
+
+
+
+Heal and increase the current hp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em heal\+Point} & Heal amount.\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_health_system_1_1_health_system_a2e2a07a077808515447922570ab4ff29_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_health_system_1_1_health_system_a68e6303a7b3280f3d42b8b66491c81fd}\label{class_health_system_1_1_health_system_a68e6303a7b3280f3d42b8b66491c81fd} 
+\index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!LateUpdate@{LateUpdate}}
+\index{LateUpdate@{LateUpdate}!HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
+\doxysubsubsection{\texorpdfstring{LateUpdate()}{LateUpdate()}}
+{\footnotesize\ttfamily void Health\+System.\+Health\+System.\+Late\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_health_system_1_1_health_system_a0ed4c60e8d2cd69fe6bccf70bf07d4e7}\label{class_health_system_1_1_health_system_a0ed4c60e8d2cd69fe6bccf70bf07d4e7} 
+\index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!ResetHealth@{ResetHealth}}
+\index{ResetHealth@{ResetHealth}!HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
+\doxysubsubsection{\texorpdfstring{ResetHealth()}{ResetHealth()}}
+{\footnotesize\ttfamily void Health\+System.\+Health\+System.\+Reset\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the current hp to max hp. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_health_system_1_1_health_system_a0ed4c60e8d2cd69fe6bccf70bf07d4e7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_health_system_1_1_health_system_a9206b51833b78cbb003832eb800ecf7f}\label{class_health_system_1_1_health_system_a9206b51833b78cbb003832eb800ecf7f} 
+\index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!Start@{Start}}
+\index{Start@{Start}!HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily virtual void Health\+System.\+Health\+System.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_health_system_1_1_enemy_health_system_aa40ff93785868e2a7ee8753006fa184b}{Health\+System.\+Enemy\+Health\+System}}.
+
+\Hypertarget{class_health_system_1_1_health_system_a3a267200e5749e4b931038076fed1deb}\label{class_health_system_1_1_health_system_a3a267200e5749e4b931038076fed1deb} 
+\index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily virtual void Health\+System.\+Health\+System.\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage,  }\item[{Game\+Object}]{attacker = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Take damage and reduce the current hp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & Damage taken.\\
+\hline
+{\em attacker} & Attacker.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_health_system_1_1_enemy_health_system_abcfa763537d0d33cdddafc9d4996c7d6}{Health\+System.\+Enemy\+Health\+System}}.
+
+\Hypertarget{class_health_system_1_1_health_system_a20b369b14d1011eddfd198dab638174d}\label{class_health_system_1_1_health_system_a20b369b14d1011eddfd198dab638174d} 
+\index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!UpdateUI@{UpdateUI}}
+\index{UpdateUI@{UpdateUI}!HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
+\doxysubsubsection{\texorpdfstring{UpdateUI()}{UpdateUI()}}
+{\footnotesize\ttfamily void Health\+System.\+Health\+System.\+Update\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the UI. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_health_system_1_1_health_system_ac4a697d6384dae06849c6f14c78ad030}\label{class_health_system_1_1_health_system_ac4a697d6384dae06849c6f14c78ad030} 
+\index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!\_animator@{\_animator}}
+\index{\_animator@{\_animator}!HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
+\doxysubsubsection{\texorpdfstring{\_animator}{\_animator}}
+{\footnotesize\ttfamily Animator Health\+System.\+Health\+System.\+\_\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_health_system_1_1_health_system_aa1394c40f00ca88dbed1067b7255dc47}\label{class_health_system_1_1_health_system_aa1394c40f00ca88dbed1067b7255dc47} 
+\index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!\_isDead@{\_isDead}}
+\index{\_isDead@{\_isDead}!HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
+\doxysubsubsection{\texorpdfstring{\_isDead}{\_isDead}}
+{\footnotesize\ttfamily bool Health\+System.\+Health\+System.\+\_\+is\+Dead\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_health_system_1_1_health_system_afffac0008b23a7e88c3e8a6ddcb45b70}\label{class_health_system_1_1_health_system_afffac0008b23a7e88c3e8a6ddcb45b70} 
+\index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!maxHp@{maxHp}}
+\index{maxHp@{maxHp}!HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
+\doxysubsubsection{\texorpdfstring{maxHp}{maxHp}}
+{\footnotesize\ttfamily float Health\+System.\+Health\+System.\+max\+Hp}
+
+\Hypertarget{class_health_system_1_1_health_system_afbad83a908f12f18ad81c9140fae05cc}\label{class_health_system_1_1_health_system_afbad83a908f12f18ad81c9140fae05cc} 
+\index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!sliderHpPlayer@{sliderHpPlayer}}
+\index{sliderHpPlayer@{sliderHpPlayer}!HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
+\doxysubsubsection{\texorpdfstring{sliderHpPlayer}{sliderHpPlayer}}
+{\footnotesize\ttfamily Slider Health\+System.\+Health\+System.\+slider\+Hp\+Player\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_health_system_1_1_health_system_ab7ff0c0a74693e7f1fd0e772efe8e47a}\label{class_health_system_1_1_health_system_ab7ff0c0a74693e7f1fd0e772efe8e47a} 
+\index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!CurrentHp@{CurrentHp}}
+\index{CurrentHp@{CurrentHp}!HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
+\doxysubsubsection{\texorpdfstring{CurrentHp}{CurrentHp}}
+{\footnotesize\ttfamily float Health\+System.\+Health\+System.\+Current\+Hp\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Scripts/\+Health\+System/\mbox{\hyperlink{_health_system_8cs}{Health\+System.\+cs}}\end{DoxyCompactItemize}

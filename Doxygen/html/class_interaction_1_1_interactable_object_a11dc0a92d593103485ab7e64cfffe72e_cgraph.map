@@ -1,0 +1,9 @@
+<map id="Interaction.InteractableObject.CountDownAndInteract" name="Interaction.InteractableObject.CountDownAndInteract">
+<area shape="rect" id="Node000001" title="Performs a countdown timer and triggers an interaction when the timer reaches zero." alt="" coords="5,5,201,48"/>
+<area shape="rect" id="Node000002" href="$class_interaction_1_1_interactable_object.html#ae0c84bcbffebccfc5c0ab2d9e5ed0353" title="Action of the interaction." alt="" coords="249,5,401,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,24,233,24,233,29,201,29"/>
+<area shape="rect" id="Node000003" href="$class_game_manager.html#a5d3c9753598caba92f5f58658a5eb1a2" title=" " alt="" coords="449,13,612,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="401,24,433,24,433,29,401,29"/>
+<area shape="rect" id="Node000004" href="$class_game_manager.html#a2f25fce454f2aa38a41b464fc120af16" title=" " alt="" coords="660,5,864,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="613,24,645,24,645,29,613,29"/>
+</map>

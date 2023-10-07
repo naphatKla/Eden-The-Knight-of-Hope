@@ -1,0 +1,11 @@
+<map id="HealthSystem.HealthSystem" name="HealthSystem.HealthSystem">
+<area shape="rect" id="Node000001" title=" " alt="" coords="163,64,352,91"/>
+<area shape="rect" id="Node000003" href="$class_health_system_1_1_base_health_system.html" title=" " alt="" coords="400,5,619,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="332,57,399,41,448,30,449,35,401,47,333,62"/>
+<area shape="rect" id="Node000004" href="$class_health_system_1_1_enemy_health_system.html" title=" " alt="" coords="417,56,602,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="367,75,417,75,417,80,367,80"/>
+<area shape="rect" id="Node000005" href="$class_health_system_1_1_player_health_system.html" title=" " alt="" coords="419,123,600,165"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="326,93,427,119,425,125,325,98"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,64,115,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,75,162,75,162,80,130,80"/>
+</map>

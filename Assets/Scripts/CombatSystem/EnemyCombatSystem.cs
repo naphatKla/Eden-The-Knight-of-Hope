@@ -1,26 +1,28 @@
-using Unity.VisualScripting;
-using UnityEngine;
+using EnemyBehavior;
 
-public class EnemyCombatSystem : CombatSystem
+namespace CombatSystem
 {
-    private Enemy _enemy;
-
-    protected override void Start()
+    public class EnemyCombatSystem : CombatSystem
     {
-        _enemy = GetComponent<Enemy>();
-        base.Start();
-    }
+        private Enemy _enemy;
 
-    protected override void AttackHandle()
-    {
-        if (targetInAttackArea.Count <= 0) return;
-        
-        if (_enemy.IsStun)
+        protected override void Start()
         {
-            CancelAttacking();
-            return;
+            _enemy = GetComponent<Enemy>();
+            base.Start();
         }
 
-        base.AttackHandle();
+        protected override void AttackHandle()
+        {
+            if (targetInAttackArea.Count <= 0) return;
+        
+            if (_enemy.IsStun)
+            {
+                CancelAttacking();
+                return;
+            }
+
+            base.AttackHandle();
+        }
     }
 }

@@ -1,0 +1,5 @@
+<map id="PlayerBehavior.Player.MovementHandle" name="PlayerBehavior.Player.MovementHandle">
+<area shape="rect" id="Node000001" title="Use for control the player movement system." alt="" coords="247,5,458,48"/>
+<area shape="rect" id="Node000002" href="$class_player_behavior_1_1_player.html#a15df74500f415fe3158cb29ffb01f1c4" title=" " alt="" coords="5,13,199,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,29,199,29,199,24,231,24"/>
+</map>

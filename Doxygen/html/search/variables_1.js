@@ -1,11 +1,11 @@
 var searchData=
 [
   ['applicationisquitting_0',['applicationIsQuitting',['../class_singleton.html#a003c575e164c5239c377187995c88e38',1,'Singleton']]],
-  ['attackarea_1',['attackArea',['../class_combat_system.html#aef3cf3f107c72aad6f199af67266f2d1',1,'CombatSystem']]],
-  ['attackpatterns_2',['attackPatterns',['../class_combat_system.html#a616750933eccd659bc14cdff0ccfdd45',1,'CombatSystem']]],
-  ['attackpoint_3',['attackpoint',['../class_combat_system.html#a1d980fd8c7da3a47c6b9d7d8e2ec5b4c',1,'CombatSystem.attackPoint'],['../class_tower.html#af3ecc6d49bdbd483a1a673cd59a87b36',1,'Tower.attackPoint']]],
-  ['attackradius_4',['attackRadius',['../class_tower.html#a11cca3ccc67048e397e4f6334dff2b3a',1,'Tower']]],
-  ['attackrate_5',['attackRate',['../class_tower.html#a230fd17ec88e359c768ff1a2a056e63c',1,'Tower']]],
-  ['attackstat_6',['attackStat',['../class_combat_system.html#a31c777b126104521c60451b190e663a7',1,'CombatSystem']]],
-  ['attackstate_7',['attackState',['../struct_attack_pattern.html#ab16f860a06adc3e4aaa6dca9767424c2',1,'AttackPattern']]]
+  ['attackarea_1',['attackArea',['../class_combat_system_1_1_combat_system.html#a6807d366d0d40ba3e9176114153e0d13',1,'CombatSystem::CombatSystem']]],
+  ['attackcooldown_2',['attackCooldown',['../class_tower_1_1_tower.html#a072fb894050386bfbc4d97fe7dd3f21c',1,'Tower::Tower']]],
+  ['attackpatterns_3',['attackPatterns',['../class_combat_system_1_1_combat_system.html#afcac2014a8521044e394ca4d705c4397',1,'CombatSystem::CombatSystem']]],
+  ['attackpoint_4',['attackpoint',['../class_combat_system_1_1_combat_system.html#a09513a9fc2438e1a16a0cfa836707798',1,'CombatSystem.CombatSystem.attackPoint'],['../class_tower_1_1_tower.html#ad5b8efead479df2deba95786cbc6413c',1,'Tower.Tower.attackPoint']]],
+  ['attackradius_5',['attackRadius',['../class_tower_1_1_tower.html#ac4c01a60f875f0bdb610b39b3f410631',1,'Tower::Tower']]],
+  ['attackstat_6',['attackStat',['../class_combat_system_1_1_combat_system.html#a0140ba87345cb34088fed96f6f021535',1,'CombatSystem::CombatSystem']]],
+  ['attackstate_7',['attackstate',['../struct_combat_system_1_1_attack_pattern.html#a5ed73d5524a24283a7a721f56bdfb1b5',1,'CombatSystem.AttackPattern.attackState'],['../class_combat_system_1_1_combat_system.html#a20d420abc177b30bc298abe737cf0f45',1,'CombatSystem.CombatSystem.attackState']]]
 ];

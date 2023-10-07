@@ -1,0 +1,19 @@
+<map id="PlayerBehavior.Player.MovementHandle" name="PlayerBehavior.Player.MovementHandle">
+<area shape="rect" id="Node000001" title="Use for control the player movement system." alt="" coords="5,81,217,124"/>
+<area shape="rect" id="Node000002" href="$class_player_behavior_1_1_player.html#a9c147630b797b907ef25149159750fc8" title="Use for handle dash system." alt="" coords="267,15,449,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,78,261,59,262,65,193,83"/>
+<area shape="rect" id="Node000006" href="$class_player_behavior_1_1_player.html#a468d82a12d537bb6bae4d2b3fa4521de" title="Sprint System." alt="" coords="265,81,451,124"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="217,100,249,100,249,105,217,105"/>
+<area shape="rect" id="Node000007" href="$class_player_behavior_1_1_player.html#ad38e49c84b55a1404a43eec39ce78080" title="Walk System." alt="" coords="267,148,449,191"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="193,122,262,141,261,146,192,127"/>
+<area shape="rect" id="Node000003" href="$class_player_behavior_1_1_player.html#a0d75e642e04f4c5f2d172a9a3570191c" title="Use to check the current player state." alt="" coords="499,56,688,99"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="450,49,484,55,483,61,449,55"/>
+<area shape="rect" id="Node000004" href="$class_player_behavior_1_1_player.html#ac748262020d2ffea04ca850f782fca45" title="Dash behavior for start coroutine in dash system." alt="" coords="503,5,685,32"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="449,27,487,24,487,29,450,32"/>
+<area shape="rect" id="Node000005" href="$class_player_behavior_1_1_player.html#a85de384558f93285ffb2ca2a5176006b" title="Use for set player state." alt="" coords="736,115,909,157"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="659,30,689,42,741,71,785,103,782,107,738,75,687,46,657,35"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="451,90,483,87,484,92,452,95"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="452,107,721,126,721,131,451,112"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="420,145,450,134,527,102,529,107,452,138,422,150"/>
+<area shape="poly" id="edge10_Node000007_Node000005" title=" " alt="" coords="449,160,720,141,721,146,450,165"/>
+</map>

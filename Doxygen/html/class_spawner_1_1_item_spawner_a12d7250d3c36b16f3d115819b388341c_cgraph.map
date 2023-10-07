@@ -1,0 +1,7 @@
+<map id="Spawner.ItemSpawner.Update" name="Spawner.ItemSpawner.Update">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,201,57"/>
+<area shape="rect" id="Node000002" href="$class_time_system.html#ab6c62164cd0b0e9f2ca56bacc7057078" title=" " alt="" coords="269,5,447,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,32,253,26,254,32,201,37"/>
+<area shape="rect" id="Node000003" href="$class_spawner_1_1_item_spawner.html#a773a03a053b9566a1e888f05cc41e690" title=" " alt="" coords="249,56,467,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="201,51,233,54,233,60,201,56"/>
+</map>

@@ -1,0 +1,108 @@
+\doxysection{Interaction.\+Gathering\+Resource Class Reference}
+\hypertarget{class_interaction_1_1_gathering_resource}{}\label{class_interaction_1_1_gathering_resource}\index{Interaction.GatheringResource@{Interaction.GatheringResource}}
+
+
+Inheritance diagram for Interaction.\+Gathering\+Resource\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_interaction_1_1_gathering_resource__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Interaction.\+Gathering\+Resource\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_interaction_1_1_gathering_resource__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_interaction_1_1_gathering_resource_ad56371cbda7596532b90685551e73629}{Start}} ()
+\item 
+override void \mbox{\hyperlink{class_interaction_1_1_gathering_resource_ad860240aff488a1272fa5d23256903f1}{Interact\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Condition and interaction logic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_interaction_1_1_interactable_object}{Interaction.\+Interactable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_interaction_1_1_interactable_object_ae0c84bcbffebccfc5c0ab2d9e5ed0353}{Interact\+Action}} ()
+\begin{DoxyCompactList}\small\item\em Action of the interaction. \end{DoxyCompactList}\item 
+virtual IEnumerator \mbox{\hyperlink{class_interaction_1_1_interactable_object_a11dc0a92d593103485ab7e64cfffe72e}{Count\+Down\+And\+Interact}} (float time)
+\begin{DoxyCompactList}\small\item\em Performs a countdown timer and triggers an interaction when the timer reaches zero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Sprite\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_interaction_1_1_gathering_resource_a55c4fe55b1fc279357a168c4f282fe6c}{sprites}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_interaction_1_1_interactable_object}{Interaction.\+Interactable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_interaction_1_1_interactable_object_ac0c4455312d7b9d3bd74520b388bf4da}{On\+Target}} (bool is\+Target)
+\begin{DoxyCompactList}\small\item\em Event when the object is targeted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_interaction_1_1_interactable_object}{Interaction.\+Interactable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Slider \mbox{\hyperlink{class_interaction_1_1_interactable_object_a92e8c9102cfd95b1be2b663e53fa1b39}{progress\+Bar}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_interaction_1_1_interactable_object}{Interaction.\+Interactable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Key\+Code \mbox{\hyperlink{class_interaction_1_1_interactable_object_a2a6eba2eea842b29831fdf16f914757f}{key}}
+\item 
+int \mbox{\hyperlink{class_interaction_1_1_interactable_object_a196b35d2b0def8e2bc5f0a59ab71e644}{point}}
+\item 
+string \mbox{\hyperlink{class_interaction_1_1_interactable_object_ae15cfede0859568c4314dbf8ffd2cd1d}{prompt}}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_interaction_1_1_interactable_object_af0c598bf98ba69f9811f05a9f5cbbb90}{interaction\+Text\+UI}}
+\item 
+Game\+Object\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_interaction_1_1_interactable_object_aad3f9eece63ea7fe6493cfee8749bb23}{interaction\+Indicators}}
+\item 
+float \mbox{\hyperlink{class_interaction_1_1_interactable_object_a29ab06f2211cb4d4bdadb338341fe979}{countdown\+Time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_interaction_1_1_gathering_resource_ad860240aff488a1272fa5d23256903f1}\label{class_interaction_1_1_gathering_resource_ad860240aff488a1272fa5d23256903f1} 
+\index{Interaction.GatheringResource@{Interaction.GatheringResource}!InteractHandler@{InteractHandler}}
+\index{InteractHandler@{InteractHandler}!Interaction.GatheringResource@{Interaction.GatheringResource}}
+\doxysubsubsection{\texorpdfstring{InteractHandler()}{InteractHandler()}}
+{\footnotesize\ttfamily override void Interaction.\+Gathering\+Resource.\+Interact\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Condition and interaction logic. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_interaction_1_1_interactable_object_a4a2aac0d809efa17c3dc29dfa4c26bcd}{Interaction.\+Interactable\+Object}}.
+
+\Hypertarget{class_interaction_1_1_gathering_resource_ad56371cbda7596532b90685551e73629}\label{class_interaction_1_1_gathering_resource_ad56371cbda7596532b90685551e73629} 
+\index{Interaction.GatheringResource@{Interaction.GatheringResource}!Start@{Start}}
+\index{Start@{Start}!Interaction.GatheringResource@{Interaction.GatheringResource}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily override void Interaction.\+Gathering\+Resource.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_interaction_1_1_interactable_object_ab010ce9ee3e558bb5120af1b3c040421}{Interaction.\+Interactable\+Object}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_interaction_1_1_gathering_resource_a55c4fe55b1fc279357a168c4f282fe6c}\label{class_interaction_1_1_gathering_resource_a55c4fe55b1fc279357a168c4f282fe6c} 
+\index{Interaction.GatheringResource@{Interaction.GatheringResource}!sprites@{sprites}}
+\index{sprites@{sprites}!Interaction.GatheringResource@{Interaction.GatheringResource}}
+\doxysubsubsection{\texorpdfstring{sprites}{sprites}}
+{\footnotesize\ttfamily Sprite \mbox{[}$\,$\mbox{]} Interaction.\+Gathering\+Resource.\+sprites\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Scripts/\+Interaction/\mbox{\hyperlink{_gathering_resource_8cs}{Gathering\+Resource.\+cs}}\end{DoxyCompactItemize}

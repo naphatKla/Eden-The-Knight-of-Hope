@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['behaviorhandle_0',['BehaviorHandle',['../class_enemy.html#acda7f22098a4bdb1c1ef0ab919df76e5',1,'Enemy']]],
-  ['buildtower_1',['BuildTower',['../class_tower_platform.html#a5522423b2f2304f8f02effc7eb17ee7d',1,'TowerPlatform']]]
+  ['behaviorhandle_0',['BehaviorHandle',['../class_enemy_behavior_1_1_enemy.html#adb481122a0b4f1e7a86271deeae2326c',1,'EnemyBehavior::Enemy']]]
 ];

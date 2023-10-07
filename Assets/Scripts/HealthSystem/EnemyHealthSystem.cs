@@ -1,45 +1,49 @@
 using System.Collections;
+using EnemyBehavior;
 using UnityEngine;
 
-public class EnemyHealthSystem : HealthSystem
+namespace HealthSystem
 {
-    private Enemy _enemy;
-    protected override void Start()
+    public class EnemyHealthSystem : HealthSystem
     {
-        _enemy = GetComponent<Enemy>();
-        base.Start();
-    }
+        private Enemy _enemy;
+        protected override void Start()
+        {
+            _enemy = GetComponent<Enemy>();
+            base.Start();
+        }
     
-    public override void TakeDamage(float damage, GameObject attacker)
-    {
-        _enemy.Target = attacker;
+        public override void TakeDamage(float damage, GameObject attacker)
+        {
+            _enemy.Target = attacker;
         
-        if (attacker.CompareTag("Player"))
-            StartCoroutine(Stun(0.5f));
+            if (attacker.CompareTag("Player"))
+                StartCoroutine(Stun(0.5f));
         
-        base.TakeDamage(damage);
-    }
+            base.TakeDamage(damage);
+        }
     
-    /// <summary>
-    /// Dead and add point to the player score.
-    /// </summary>
-    protected override void Dead()
-    {
-        if(Random.Range(0,101) >= 90)
-            GameManager.instance.AddPoint(10);
+        /// <summary>
+        /// Dead and add point to the player score.
+        /// </summary>
+        protected override void Dead()
+        {
+            if(Random.Range(0,101) >= 90)
+                GameManager.instance.AddPoint(10);
         
-        base.Dead();
-    }
+            base.Dead();
+        }
 
-    /// <summary>
-    /// stun the enemy.
-    /// </summary>
-    /// <param name="stunDuration">Stun duration (sec).</param>
-    /// <returns></returns>
-    IEnumerator Stun(float stunDuration)
-    {
-        _enemy.IsStun = true;
-        yield return new WaitForSeconds(stunDuration);
-        _enemy.IsStun = false;
+        /// <summary>
+        /// stun the enemy.
+        /// </summary>
+        /// <param name="stunDuration">Stun duration (sec).</param>
+        /// <returns></returns>
+        IEnumerator Stun(float stunDuration)
+        {
+            _enemy.IsStun = true;
+            yield return new WaitForSeconds(stunDuration);
+            _enemy.IsStun = false;
+        }
     }
 }

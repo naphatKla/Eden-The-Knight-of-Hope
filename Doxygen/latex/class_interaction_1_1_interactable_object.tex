@@ -1,0 +1,254 @@
+\doxysection{Interaction.\+Interactable\+Object Class Reference}
+\hypertarget{class_interaction_1_1_interactable_object}{}\label{class_interaction_1_1_interactable_object}\index{Interaction.InteractableObject@{Interaction.InteractableObject}}
+
+
+Inheritance diagram for Interaction.\+Interactable\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interaction_1_1_interactable_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Interaction.\+Interactable\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{class_interaction_1_1_interactable_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_interaction_1_1_interactable_object_ac0c4455312d7b9d3bd74520b388bf4da}{On\+Target}} (bool is\+Target)
+\begin{DoxyCompactList}\small\item\em Event when the object is targeted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Slider \mbox{\hyperlink{class_interaction_1_1_interactable_object_a92e8c9102cfd95b1be2b663e53fa1b39}{progress\+Bar}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_interaction_1_1_interactable_object_ab010ce9ee3e558bb5120af1b3c040421}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{class_interaction_1_1_interactable_object_a4a2aac0d809efa17c3dc29dfa4c26bcd}{Interact\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Condition and interaction logic. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interaction_1_1_interactable_object_ae0c84bcbffebccfc5c0ab2d9e5ed0353}{Interact\+Action}} ()
+\begin{DoxyCompactList}\small\item\em Action of the interaction. \end{DoxyCompactList}\item 
+virtual IEnumerator \mbox{\hyperlink{class_interaction_1_1_interactable_object_a11dc0a92d593103485ab7e64cfffe72e}{Count\+Down\+And\+Interact}} (float time)
+\begin{DoxyCompactList}\small\item\em Performs a countdown timer and triggers an interaction when the timer reaches zero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Key\+Code \mbox{\hyperlink{class_interaction_1_1_interactable_object_a2a6eba2eea842b29831fdf16f914757f}{key}}
+\item 
+int \mbox{\hyperlink{class_interaction_1_1_interactable_object_a196b35d2b0def8e2bc5f0a59ab71e644}{point}}
+\item 
+string \mbox{\hyperlink{class_interaction_1_1_interactable_object_ae15cfede0859568c4314dbf8ffd2cd1d}{prompt}}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_interaction_1_1_interactable_object_af0c598bf98ba69f9811f05a9f5cbbb90}{interaction\+Text\+UI}}
+\item 
+Game\+Object\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_interaction_1_1_interactable_object_aad3f9eece63ea7fe6493cfee8749bb23}{interaction\+Indicators}}
+\item 
+float \mbox{\hyperlink{class_interaction_1_1_interactable_object_a29ab06f2211cb4d4bdadb338341fe979}{countdown\+Time}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Coroutine \mbox{\hyperlink{class_interaction_1_1_interactable_object_ad64f6b123b0bc3d524b03c2420154d9d}{\+\_\+interact\+Coroutine}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_interaction_1_1_interactable_object_a11dc0a92d593103485ab7e64cfffe72e}\label{class_interaction_1_1_interactable_object_a11dc0a92d593103485ab7e64cfffe72e} 
+\index{Interaction.InteractableObject@{Interaction.InteractableObject}!CountDownAndInteract@{CountDownAndInteract}}
+\index{CountDownAndInteract@{CountDownAndInteract}!Interaction.InteractableObject@{Interaction.InteractableObject}}
+\doxysubsubsection{\texorpdfstring{CountDownAndInteract()}{CountDownAndInteract()}}
+{\footnotesize\ttfamily virtual IEnumerator Interaction.\+Interactable\+Object.\+Count\+Down\+And\+Interact (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Performs a countdown timer and triggers an interaction when the timer reaches zero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Countdown time before interact.\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interaction_1_1_interactable_object_a11dc0a92d593103485ab7e64cfffe72e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interaction_1_1_interactable_object_a11dc0a92d593103485ab7e64cfffe72e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_interaction_1_1_interactable_object_ae0c84bcbffebccfc5c0ab2d9e5ed0353}\label{class_interaction_1_1_interactable_object_ae0c84bcbffebccfc5c0ab2d9e5ed0353} 
+\index{Interaction.InteractableObject@{Interaction.InteractableObject}!InteractAction@{InteractAction}}
+\index{InteractAction@{InteractAction}!Interaction.InteractableObject@{Interaction.InteractableObject}}
+\doxysubsubsection{\texorpdfstring{InteractAction()}{InteractAction()}}
+{\footnotesize\ttfamily virtual void Interaction.\+Interactable\+Object.\+Interact\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Action of the interaction. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_interaction_1_1_tower_platform_aa7f42872ee4750219453678ef6cd5c10}{Interaction.\+Tower\+Platform}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interaction_1_1_interactable_object_ae0c84bcbffebccfc5c0ab2d9e5ed0353_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interaction_1_1_interactable_object_ae0c84bcbffebccfc5c0ab2d9e5ed0353_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_interaction_1_1_interactable_object_a4a2aac0d809efa17c3dc29dfa4c26bcd}\label{class_interaction_1_1_interactable_object_a4a2aac0d809efa17c3dc29dfa4c26bcd} 
+\index{Interaction.InteractableObject@{Interaction.InteractableObject}!InteractHandler@{InteractHandler}}
+\index{InteractHandler@{InteractHandler}!Interaction.InteractableObject@{Interaction.InteractableObject}}
+\doxysubsubsection{\texorpdfstring{InteractHandler()}{InteractHandler()}}
+{\footnotesize\ttfamily virtual void Interaction.\+Interactable\+Object.\+Interact\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Condition and interaction logic. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_interaction_1_1_gathering_resource_ad860240aff488a1272fa5d23256903f1}{Interaction.\+Gathering\+Resource}}, and \mbox{\hyperlink{class_interaction_1_1_tower_platform_af32a3ca65970d728f16f788e977051f8}{Interaction.\+Tower\+Platform}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interaction_1_1_interactable_object_a4a2aac0d809efa17c3dc29dfa4c26bcd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interaction_1_1_interactable_object_a4a2aac0d809efa17c3dc29dfa4c26bcd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_interaction_1_1_interactable_object_ac0c4455312d7b9d3bd74520b388bf4da}\label{class_interaction_1_1_interactable_object_ac0c4455312d7b9d3bd74520b388bf4da} 
+\index{Interaction.InteractableObject@{Interaction.InteractableObject}!OnTarget@{OnTarget}}
+\index{OnTarget@{OnTarget}!Interaction.InteractableObject@{Interaction.InteractableObject}}
+\doxysubsubsection{\texorpdfstring{OnTarget()}{OnTarget()}}
+{\footnotesize\ttfamily virtual void Interaction.\+Interactable\+Object.\+On\+Target (\begin{DoxyParamCaption}\item[{bool}]{is\+Target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Event when the object is targeted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Target} & Is player target this object or not.\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interaction_1_1_interactable_object_ac0c4455312d7b9d3bd74520b388bf4da_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interaction_1_1_interactable_object_ac0c4455312d7b9d3bd74520b388bf4da_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_interaction_1_1_interactable_object_ab010ce9ee3e558bb5120af1b3c040421}\label{class_interaction_1_1_interactable_object_ab010ce9ee3e558bb5120af1b3c040421} 
+\index{Interaction.InteractableObject@{Interaction.InteractableObject}!Start@{Start}}
+\index{Start@{Start}!Interaction.InteractableObject@{Interaction.InteractableObject}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily virtual void Interaction.\+Interactable\+Object.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_interaction_1_1_gathering_resource_ad56371cbda7596532b90685551e73629}{Interaction.\+Gathering\+Resource}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_interaction_1_1_interactable_object_ad64f6b123b0bc3d524b03c2420154d9d}\label{class_interaction_1_1_interactable_object_ad64f6b123b0bc3d524b03c2420154d9d} 
+\index{Interaction.InteractableObject@{Interaction.InteractableObject}!\_interactCoroutine@{\_interactCoroutine}}
+\index{\_interactCoroutine@{\_interactCoroutine}!Interaction.InteractableObject@{Interaction.InteractableObject}}
+\doxysubsubsection{\texorpdfstring{\_interactCoroutine}{\_interactCoroutine}}
+{\footnotesize\ttfamily Coroutine Interaction.\+Interactable\+Object.\+\_\+interact\+Coroutine\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_interaction_1_1_interactable_object_a29ab06f2211cb4d4bdadb338341fe979}\label{class_interaction_1_1_interactable_object_a29ab06f2211cb4d4bdadb338341fe979} 
+\index{Interaction.InteractableObject@{Interaction.InteractableObject}!countdownTime@{countdownTime}}
+\index{countdownTime@{countdownTime}!Interaction.InteractableObject@{Interaction.InteractableObject}}
+\doxysubsubsection{\texorpdfstring{countdownTime}{countdownTime}}
+{\footnotesize\ttfamily float Interaction.\+Interactable\+Object.\+countdown\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_interaction_1_1_interactable_object_aad3f9eece63ea7fe6493cfee8749bb23}\label{class_interaction_1_1_interactable_object_aad3f9eece63ea7fe6493cfee8749bb23} 
+\index{Interaction.InteractableObject@{Interaction.InteractableObject}!interactionIndicators@{interactionIndicators}}
+\index{interactionIndicators@{interactionIndicators}!Interaction.InteractableObject@{Interaction.InteractableObject}}
+\doxysubsubsection{\texorpdfstring{interactionIndicators}{interactionIndicators}}
+{\footnotesize\ttfamily Game\+Object \mbox{[}$\,$\mbox{]} Interaction.\+Interactable\+Object.\+interaction\+Indicators\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_interaction_1_1_interactable_object_af0c598bf98ba69f9811f05a9f5cbbb90}\label{class_interaction_1_1_interactable_object_af0c598bf98ba69f9811f05a9f5cbbb90} 
+\index{Interaction.InteractableObject@{Interaction.InteractableObject}!interactionTextUI@{interactionTextUI}}
+\index{interactionTextUI@{interactionTextUI}!Interaction.InteractableObject@{Interaction.InteractableObject}}
+\doxysubsubsection{\texorpdfstring{interactionTextUI}{interactionTextUI}}
+{\footnotesize\ttfamily Text\+Mesh\+Pro\+UGUI Interaction.\+Interactable\+Object.\+interaction\+Text\+UI\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_interaction_1_1_interactable_object_a2a6eba2eea842b29831fdf16f914757f}\label{class_interaction_1_1_interactable_object_a2a6eba2eea842b29831fdf16f914757f} 
+\index{Interaction.InteractableObject@{Interaction.InteractableObject}!key@{key}}
+\index{key@{key}!Interaction.InteractableObject@{Interaction.InteractableObject}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily Key\+Code Interaction.\+Interactable\+Object.\+key\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_interaction_1_1_interactable_object_a196b35d2b0def8e2bc5f0a59ab71e644}\label{class_interaction_1_1_interactable_object_a196b35d2b0def8e2bc5f0a59ab71e644} 
+\index{Interaction.InteractableObject@{Interaction.InteractableObject}!point@{point}}
+\index{point@{point}!Interaction.InteractableObject@{Interaction.InteractableObject}}
+\doxysubsubsection{\texorpdfstring{point}{point}}
+{\footnotesize\ttfamily int Interaction.\+Interactable\+Object.\+point\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_interaction_1_1_interactable_object_a92e8c9102cfd95b1be2b663e53fa1b39}\label{class_interaction_1_1_interactable_object_a92e8c9102cfd95b1be2b663e53fa1b39} 
+\index{Interaction.InteractableObject@{Interaction.InteractableObject}!progressBar@{progressBar}}
+\index{progressBar@{progressBar}!Interaction.InteractableObject@{Interaction.InteractableObject}}
+\doxysubsubsection{\texorpdfstring{progressBar}{progressBar}}
+{\footnotesize\ttfamily Slider Interaction.\+Interactable\+Object.\+progress\+Bar}
+
+\Hypertarget{class_interaction_1_1_interactable_object_ae15cfede0859568c4314dbf8ffd2cd1d}\label{class_interaction_1_1_interactable_object_ae15cfede0859568c4314dbf8ffd2cd1d} 
+\index{Interaction.InteractableObject@{Interaction.InteractableObject}!prompt@{prompt}}
+\index{prompt@{prompt}!Interaction.InteractableObject@{Interaction.InteractableObject}}
+\doxysubsubsection{\texorpdfstring{prompt}{prompt}}
+{\footnotesize\ttfamily string Interaction.\+Interactable\+Object.\+prompt\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Scripts/\+Interaction/\mbox{\hyperlink{_interactable_object_8cs}{Interactable\+Object.\+cs}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nightmode_0',['NightMode',['../class_enemy.html#afa7828301322b6ee7eff7d2ef52bef02',1,'Enemy']]]
+  ['nightmode_0',['NightMode',['../class_enemy_behavior_1_1_enemy.html#a97bd02fe4adfc53bfd3999870b019172',1,'EnemyBehavior::Enemy']]]
 ];

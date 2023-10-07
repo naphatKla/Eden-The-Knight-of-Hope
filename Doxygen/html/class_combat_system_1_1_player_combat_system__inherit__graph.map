@@ -1,0 +1,7 @@
+<map id="CombatSystem.PlayerCombatSystem" name="CombatSystem.PlayerCombatSystem">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,155,203,197"/>
+<area shape="rect" id="Node000002" href="$class_combat_system_1_1_combat_system.html" title=" " alt="" coords="48,80,160,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,122,107,154,101,154,101,122"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="49,5,159,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,48,107,80,101,80,101,48"/>
+</map>

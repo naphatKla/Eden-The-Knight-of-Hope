@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['waitandreturn_0',['WaitAndReturn',['../class_enemy.html#af965e27ede7de8090c48cd3ed8d50dea',1,'Enemy']]],
-  ['walkhandle_1',['WalkHandle',['../class_player.html#ab37b64ea6597e44f6738571f68f8db63',1,'Player']]]
+  ['waitandreturn_0',['WaitAndReturn',['../class_enemy_behavior_1_1_enemy.html#a574ca0dd76303b8fe9e7041e8818d11d',1,'EnemyBehavior::Enemy']]],
+  ['walkhandle_1',['WalkHandle',['../class_player_behavior_1_1_player.html#ad38e49c84b55a1404a43eec39ce78080',1,'PlayerBehavior::Player']]]
 ];

@@ -1,42 +1,61 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+namespace Tower
 {
-    public GameObject target;
-    public float speed;
-    public float damage;
-    public Tower tower;
-    private Rigidbody2D rb2d;
-    void Start()
+    public class Bullet : MonoBehaviour
     {
-        rb2d = GetComponent<Rigidbody2D>();
-    }
+        #region Declare Variables
+        private float _speed;
+        private float _damage;
+        private Tower _parentTower;
+        private Rigidbody2D _rb2d;
+        private Transform _target;
+        private Transform _thisTransform;
+        #endregion
 
-   
-    void Update()
-    {
-        if(target == null || tower == null) Destroy(gameObject);
-        Vector2 direction = target.transform.position - transform.position;
-        transform.up = direction;
-        rb2d.velocity = direction.normalized * speed;
-    }
+        private void Start()
+        {
+            _rb2d = GetComponent<Rigidbody2D>();
+            _thisTransform = transform;
+        }
+    
+        private void Update()
+        {
+            if(!_target || !_parentTower) 
+                Destroy(gameObject);
+            
+            Vector2 direction = _target.position - _thisTransform.position;
+            _thisTransform.up = direction;
+            _rb2d.velocity = direction.normalized * _speed;
+        }
 
-    public void Init(GameObject target, float speed, float damage, Tower tower)
-    {
-        this.target = target;
-        this.speed = speed;
-        this.damage = damage;
-        this.tower = tower;
-    }
+        #region Methods
+        /// <summary>
+        /// Initialize the bullet when it spawned.
+        /// </summary>
+        /// <param name="speed">bullet speed.</param>
+        /// <param name="damage">bullet damage.</param>
+        /// <param name="tower">parent tower.</param>
+        public void Init(float speed, float damage,Tower tower)
+        {
+            _speed = speed;
+            _damage = damage;
+            _parentTower = tower;
+            _target = tower.CurrentTarget.transform;
+        }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject != target.gameObject) return;
         
-        target.GetComponent<EnemyHealthSystem>().TakeDamage(damage,tower.gameObject);
-        Destroy(gameObject);
+        /// <summary>
+        /// When the bullet hit the target, the target will take damage.
+        /// </summary>
+        /// <param name="other">target hit.</param>
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if(other.gameObject != _target.gameObject) return;
+        
+            _target.GetComponent<HealthSystem.HealthSystem>().TakeDamage(_damage,_parentTower.gameObject);
+            Destroy(gameObject);
+        }
+        #endregion
     }
 }

@@ -1,0 +1,152 @@
+\doxysection{Tower.\+Bullet Class Reference}
+\hypertarget{class_tower_1_1_bullet}{}\label{class_tower_1_1_bullet}\index{Tower.Bullet@{Tower.Bullet}}
+
+
+Inheritance diagram for Tower.\+Bullet\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_tower_1_1_bullet__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tower.\+Bullet\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{class_tower_1_1_bullet__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tower_1_1_bullet_a533d2b58640b86328be9af48cfd39bbc}{Init}} (float speed, float damage, \mbox{\hyperlink{class_tower_1_1_tower}{Tower}} tower)
+\begin{DoxyCompactList}\small\item\em Initialize the bullet when it spawned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tower_1_1_bullet_a4741297b16c5d5b00b97b768839cbfc6}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_tower_1_1_bullet_a018cb2288f81add19b06eb97adf45100}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_tower_1_1_bullet_a560dd35631f50b4c6f683fb4abcfd483}{On\+Trigger\+Enter2D}} (Collider2D other)
+\begin{DoxyCompactList}\small\item\em When the bullet hit the target, the target will take damage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_tower_1_1_bullet_a915264ae1ed35c778028bf352b2f09cc}{\+\_\+speed}}
+\item 
+float \mbox{\hyperlink{class_tower_1_1_bullet_a47469cfed21f2bf7a8bc30211225336c}{\+\_\+damage}}
+\item 
+\mbox{\hyperlink{class_tower_1_1_tower}{Tower}} \mbox{\hyperlink{class_tower_1_1_bullet_acf49c01ce7245567624a554a1aff59bf}{\+\_\+parent\+Tower}}
+\item 
+Rigidbody2D \mbox{\hyperlink{class_tower_1_1_bullet_aec2ed8424e3fa66a514a9bc20ffe13a4}{\+\_\+rb2d}}
+\item 
+Transform \mbox{\hyperlink{class_tower_1_1_bullet_ab06643fcc98e9c3ca65a4ef466391fc8}{\+\_\+target}}
+\item 
+Transform \mbox{\hyperlink{class_tower_1_1_bullet_afeaddb60b1d0a26eb26646f643f859ff}{\+\_\+this\+Transform}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tower_1_1_bullet_a533d2b58640b86328be9af48cfd39bbc}\label{class_tower_1_1_bullet_a533d2b58640b86328be9af48cfd39bbc} 
+\index{Tower.Bullet@{Tower.Bullet}!Init@{Init}}
+\index{Init@{Init}!Tower.Bullet@{Tower.Bullet}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Tower.\+Bullet.\+Init (\begin{DoxyParamCaption}\item[{float}]{speed,  }\item[{float}]{damage,  }\item[{\mbox{\hyperlink{class_tower_1_1_tower}{Tower}}}]{tower }\end{DoxyParamCaption})}
+
+
+
+Initialize the bullet when it spawned. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & bullet speed.\\
+\hline
+{\em damage} & bullet damage.\\
+\hline
+{\em tower} & parent tower.\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_1_1_bullet_a533d2b58640b86328be9af48cfd39bbc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tower_1_1_bullet_a560dd35631f50b4c6f683fb4abcfd483}\label{class_tower_1_1_bullet_a560dd35631f50b4c6f683fb4abcfd483} 
+\index{Tower.Bullet@{Tower.Bullet}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!Tower.Bullet@{Tower.Bullet}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Tower.\+Bullet.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+When the bullet hit the target, the target will take damage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & target hit.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_tower_1_1_bullet_a4741297b16c5d5b00b97b768839cbfc6}\label{class_tower_1_1_bullet_a4741297b16c5d5b00b97b768839cbfc6} 
+\index{Tower.Bullet@{Tower.Bullet}!Start@{Start}}
+\index{Start@{Start}!Tower.Bullet@{Tower.Bullet}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Tower.\+Bullet.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_bullet_a018cb2288f81add19b06eb97adf45100}\label{class_tower_1_1_bullet_a018cb2288f81add19b06eb97adf45100} 
+\index{Tower.Bullet@{Tower.Bullet}!Update@{Update}}
+\index{Update@{Update}!Tower.Bullet@{Tower.Bullet}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Tower.\+Bullet.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_tower_1_1_bullet_a47469cfed21f2bf7a8bc30211225336c}\label{class_tower_1_1_bullet_a47469cfed21f2bf7a8bc30211225336c} 
+\index{Tower.Bullet@{Tower.Bullet}!\_damage@{\_damage}}
+\index{\_damage@{\_damage}!Tower.Bullet@{Tower.Bullet}}
+\doxysubsubsection{\texorpdfstring{\_damage}{\_damage}}
+{\footnotesize\ttfamily float Tower.\+Bullet.\+\_\+damage\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_bullet_acf49c01ce7245567624a554a1aff59bf}\label{class_tower_1_1_bullet_acf49c01ce7245567624a554a1aff59bf} 
+\index{Tower.Bullet@{Tower.Bullet}!\_parentTower@{\_parentTower}}
+\index{\_parentTower@{\_parentTower}!Tower.Bullet@{Tower.Bullet}}
+\doxysubsubsection{\texorpdfstring{\_parentTower}{\_parentTower}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tower_1_1_tower}{Tower}} Tower.\+Bullet.\+\_\+parent\+Tower\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_bullet_aec2ed8424e3fa66a514a9bc20ffe13a4}\label{class_tower_1_1_bullet_aec2ed8424e3fa66a514a9bc20ffe13a4} 
+\index{Tower.Bullet@{Tower.Bullet}!\_rb2d@{\_rb2d}}
+\index{\_rb2d@{\_rb2d}!Tower.Bullet@{Tower.Bullet}}
+\doxysubsubsection{\texorpdfstring{\_rb2d}{\_rb2d}}
+{\footnotesize\ttfamily Rigidbody2D Tower.\+Bullet.\+\_\+rb2d\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_bullet_a915264ae1ed35c778028bf352b2f09cc}\label{class_tower_1_1_bullet_a915264ae1ed35c778028bf352b2f09cc} 
+\index{Tower.Bullet@{Tower.Bullet}!\_speed@{\_speed}}
+\index{\_speed@{\_speed}!Tower.Bullet@{Tower.Bullet}}
+\doxysubsubsection{\texorpdfstring{\_speed}{\_speed}}
+{\footnotesize\ttfamily float Tower.\+Bullet.\+\_\+speed\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_bullet_ab06643fcc98e9c3ca65a4ef466391fc8}\label{class_tower_1_1_bullet_ab06643fcc98e9c3ca65a4ef466391fc8} 
+\index{Tower.Bullet@{Tower.Bullet}!\_target@{\_target}}
+\index{\_target@{\_target}!Tower.Bullet@{Tower.Bullet}}
+\doxysubsubsection{\texorpdfstring{\_target}{\_target}}
+{\footnotesize\ttfamily Transform Tower.\+Bullet.\+\_\+target\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_bullet_afeaddb60b1d0a26eb26646f643f859ff}\label{class_tower_1_1_bullet_afeaddb60b1d0a26eb26646f643f859ff} 
+\index{Tower.Bullet@{Tower.Bullet}!\_thisTransform@{\_thisTransform}}
+\index{\_thisTransform@{\_thisTransform}!Tower.Bullet@{Tower.Bullet}}
+\doxysubsubsection{\texorpdfstring{\_thisTransform}{\_thisTransform}}
+{\footnotesize\ttfamily Transform Tower.\+Bullet.\+\_\+this\+Transform\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Scripts/\+Tower/\mbox{\hyperlink{_bullet_8cs}{Bullet.\+cs}}\end{DoxyCompactItemize}

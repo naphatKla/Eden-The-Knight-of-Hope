@@ -1,0 +1,7 @@
+<map id="PlayerBehavior.Player.WalkHandle" name="PlayerBehavior.Player.WalkHandle">
+<area shape="rect" id="Node000001" title="Walk System." alt="" coords="5,39,188,81"/>
+<area shape="rect" id="Node000002" href="$class_player_behavior_1_1_player.html#a0d75e642e04f4c5f2d172a9a3570191c" title="Use to check the current player state." alt="" coords="236,5,425,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,44,220,40,220,45,188,50"/>
+<area shape="rect" id="Node000003" href="$class_player_behavior_1_1_player.html#a85de384558f93285ffb2ca2a5176006b" title="Use for set player state." alt="" coords="244,72,417,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,70,229,76,228,81,187,76"/>
+</map>

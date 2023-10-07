@@ -1,11 +1,13 @@
-using System.Collections;
 using UnityEngine;
 
-public class PlayerCombatSystem : CombatSystem
+namespace CombatSystem
 {
-    protected override void AttackHandle()
+    public class PlayerCombatSystem : CombatSystem
     {
-        if(!Input.GetMouseButtonDown(0)) return;
-        base.AttackHandle();
+        protected override void AttackHandle()
+        {
+            if(!Input.GetMouseButtonDown(0)) return;
+            base.AttackHandle();
+        }
     }
 }

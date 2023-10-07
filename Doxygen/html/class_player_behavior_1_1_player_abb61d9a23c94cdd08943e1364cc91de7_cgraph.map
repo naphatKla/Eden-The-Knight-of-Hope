@@ -1,0 +1,5 @@
+<map id="PlayerBehavior.Player.Reset" name="PlayerBehavior.Player.Reset">
+<area shape="rect" id="Node000001" title="Reset every behavior to default. ( Use when start / respawn. )" alt="" coords="5,13,192,40"/>
+<area shape="rect" id="Node000002" href="$class_player_behavior_1_1_player.html#a85de384558f93285ffb2ca2a5176006b" title="Use for set player state." alt="" coords="240,5,412,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,24,224,24,224,29,192,29"/>
+</map>

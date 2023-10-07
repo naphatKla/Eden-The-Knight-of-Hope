@@ -6,7 +6,7 @@ namespace Interaction
     {
         [SerializeField] private GameObject towerPrefab;
         [SerializeField] private int cost;
-        private HealthSystem _towerHealthSystem;
+        private HealthSystem.HealthSystem _towerHealthSystem;
         private GameObject _tower;
 
         protected override void InteractHandler()
@@ -28,7 +28,7 @@ namespace Interaction
         
             Transform thisTransform = transform;
             _tower = Instantiate(towerPrefab,thisTransform.position + new Vector3(0,-0.5f,0),Quaternion.identity,thisTransform);
-            _towerHealthSystem = _tower.GetComponent<HealthSystem>();
+            _towerHealthSystem = _tower.GetComponent<HealthSystem.HealthSystem>();
             GameManager.instance.AddPoint(-1*cost);
         }
     }

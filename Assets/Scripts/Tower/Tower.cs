@@ -1,48 +1,75 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Tower : MonoBehaviour
+namespace Tower
 {
-    [SerializeField] private float attackRadius;
-    [SerializeField] private Transform attackPoint;
-    [SerializeField] private LayerMask targetLayerMask;
-    [SerializeField] private Transform bulletSpawnPoint;
-    [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private float bulletDamage;
-    [SerializeField] private float bulletSpeed;
-    [SerializeField] private float attackRate;
-    private float _nextAttackTime;
-    private GameObject _target;
-    void Start()
+    public class Tower : MonoBehaviour
     {
-        
-    }
+        #region Declare Variables
+        [Header("Tower Stats & Config")] 
+        [SerializeField] private float attackRadius;
+        [SerializeField] private float attackCooldown;
+        [SerializeField] private Transform attackPoint;
+        [SerializeField] private LayerMask targetLayerMask;
+
+        [Header("Bullet")] 
+        [SerializeField] private GameObject bulletPrefab;
+        [SerializeField] private Transform bulletSpawnPoint;
+        [SerializeField] private float bulletDamage;
+        [SerializeField] private float bulletSpeed;
+
+        private readonly Collider2D[] _targetInAttackAreas = new Collider2D[1];
+        private float _nextAttackTime;
+        private GameObject _currentTarget;
+        public GameObject CurrentTarget => _currentTarget;
+
+        #endregion
+
+        private void Update()
+        {
+            float targetCount = Physics2D.OverlapCircleNonAlloc(attackPoint.position, attackRadius, _targetInAttackAreas, targetLayerMask);
+            if (targetCount <= 0) return;
+
+            TargetHandler();
+            ShootBulletHandler();
+        }
+
+        #region Methods
+        /// <summary>
+        /// Target the nearest enemy in the attack radius.
+        /// </summary>
+        private void TargetHandler()
+        {
+            var targetDistances = new List<float>();
+            foreach (var target in _targetInAttackAreas)
+                targetDistances.Add(Vector2.Distance(transform.position, target.transform.position));
+            _currentTarget = _targetInAttackAreas[targetDistances.IndexOf(targetDistances.Min())].gameObject;
+        }
 
 
-    void Update()
-    {
-        Collider2D[] targetInAttackArea = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius,targetLayerMask);
-        
-        if (targetInAttackArea.Length <= 0) return;
+        // ReSharper disable Unity.PerformanceAnalysis
+        /// <summary>
+        /// Logic Shoot bullet to the current target.
+        /// </summary>
+        private void ShootBulletHandler()
+        {
+            if (Time.time < _nextAttackTime) return;
+            var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity)
+                .GetComponent<Bullet>();
+            bullet.Init(bulletSpeed, bulletDamage, this);
+            _nextAttackTime = Time.time + attackCooldown;
+        }
 
-        List<float> distances = new List<float>();
-        foreach (Collider2D col in targetInAttackArea)
-            distances.Add(Vector2.Distance(transform.position, col.transform.position));
 
-        _target = targetInAttackArea[distances.IndexOf(distances.Min())].gameObject;
-        
-        if (Time.time < _nextAttackTime) return;
-        Bullet bulletSpawn =  Instantiate(bulletPrefab, bulletSpawnPoint.position,Quaternion.identity).GetComponent<Bullet>();
-        bulletSpawn.Init(_target,bulletSpeed,bulletDamage,this);
-        
-        _nextAttackTime = Time.time + (1f / attackRate);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
+        /// <summary>
+        /// Draw attack radius in the inspector.
+        /// </summary>
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
+        }
+        #endregion
     }
 }
+
