@@ -53,8 +53,6 @@ namespace CombatSystem
         }
 
         #region Methods
-    
-    
         /// <summary>
         /// use for handle the attack system.
         /// Please override this method with attack condition before call this method.

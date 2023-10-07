@@ -12,7 +12,7 @@ namespace Spawner
         [SerializeField] private int currentEnemyCount;
         [SerializeField] private bool nightMode;
         [SerializeField] private LayerMask playerMask;
-        bool isReduceRate = false;
+        private bool _isReduceRate;
         public GameObject enemyPrefab;
     
         void Start()
@@ -27,7 +27,7 @@ namespace Spawner
         
             if (!isNight)
             {
-                isReduceRate = false;
+                _isReduceRate = false;
             }
 
             switch (TimeSystem.instance.day)
