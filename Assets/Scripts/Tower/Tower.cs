@@ -19,7 +19,7 @@ namespace Tower
         [SerializeField] private float bulletDamage;
         [SerializeField] private float bulletSpeed;
 
-        private readonly Collider2D[] _targetInAttackAreas = new Collider2D[1];
+        private Collider2D[] _targetInAttackAreas;
         private float _nextAttackTime;
         private GameObject _currentTarget;
         public GameObject CurrentTarget => _currentTarget;
@@ -28,8 +28,8 @@ namespace Tower
 
         private void Update()
         {
-            float targetCount = Physics2D.OverlapCircleNonAlloc(attackPoint.position, attackRadius, _targetInAttackAreas, targetLayerMask);
-            if (targetCount <= 0) return;
+            _targetInAttackAreas = Physics2D.OverlapCircleAll(transform.position, attackRadius, targetLayerMask);   
+            if (_targetInAttackAreas.Length <= 0) return;
 
             TargetHandler();
             ShootBulletHandler();

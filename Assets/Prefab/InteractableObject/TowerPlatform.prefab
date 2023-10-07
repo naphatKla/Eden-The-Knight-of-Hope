@@ -211,8 +211,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2275327801966150991}
   - component: {fileID: 3814182161509867291}
-  m_Layer: 9
-  m_Name: Light 2D (1)
+  m_Layer: 10
+  m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

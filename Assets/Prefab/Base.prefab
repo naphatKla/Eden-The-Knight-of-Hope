@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7730372830304123148}
   - component: {fileID: 95032171649255969}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,7 +540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7858508900659508613}
   - component: {fileID: 2901582677401360805}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Light 2D (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -596,8 +596,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.07500076, y: 1.1508999, z: 0}
-    m_Extent: {x: 37.8475, y: 40.097603, z: 0}
+    m_Center: {x: 0.07865143, y: 1.1479988, z: 0}
+    m_Extent: {x: 37.84795, y: 40.1072, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1
@@ -643,8 +643,8 @@ Transform:
   m_GameObject: {fileID: 8740244016509549289}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0513, y: 5.8358, z: 0}
-  m_LocalScale: {x: 13.663376, y: 11.681975, z: 1}
+  m_LocalPosition: {x: -0.0219, y: 5.37, z: 0}
+  m_LocalScale: {x: 14.697968, y: 12.613154, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 130547260422068490}

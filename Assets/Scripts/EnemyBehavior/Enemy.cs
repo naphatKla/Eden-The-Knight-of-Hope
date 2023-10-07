@@ -103,7 +103,7 @@ namespace EnemyBehavior
         /// </summary>
         private void SelectTarget()
         {
-            if (CheckState(EnemyState.FollowTarget)) return;
+            if (_target) return;
         
             // Detect and set target only on the first priority tag found 
             foreach (PriorityTag priorityTag in priorityTags)

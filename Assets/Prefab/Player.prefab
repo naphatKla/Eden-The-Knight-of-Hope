@@ -839,7 +839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7000580293569115590}
   - component: {fileID: 7707077571977357671}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
