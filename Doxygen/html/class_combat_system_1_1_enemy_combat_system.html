@@ -115,7 +115,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac9ca19513272599729fec09ec60bd352" id="r_ac9ca19513272599729fec09ec60bd352"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system_1_1_enemy_combat_system.html#ac9ca19513272599729fec09ec60bd352">Start</a> ()</td></tr>
 <tr class="separator:ac9ca19513272599729fec09ec60bd352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3de0e9e01abbc62a0379e49d1bc5eb5" id="r_ac3de0e9e01abbc62a0379e49d1bc5eb5"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system_1_1_enemy_combat_system.html#ac3de0e9e01abbc62a0379e49d1bc5eb5">AttackHandle</a> ()</td></tr>
-<tr class="memdesc:ac3de0e9e01abbc62a0379e49d1bc5eb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">use for handle the attack system. Please override this method with attack condition before call this method.  <br /></td></tr>
+<tr class="memdesc:ac3de0e9e01abbc62a0379e49d1bc5eb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attack when the target is in attack area.  <br /></td></tr>
 <tr class="separator:ac3de0e9e01abbc62a0379e49d1bc5eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_combat_system_1_1_combat_system"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_combat_system_1_1_combat_system')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_combat_system_1_1_combat_system.html">CombatSystem.CombatSystem</a></td></tr>
 <tr class="memitem:ad4456e34fc5129b9928103c359431c74 inherit pro_methods_class_combat_system_1_1_combat_system" id="r_ad4456e34fc5129b9928103c359431c74"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system_1_1_combat_system.html#ad4456e34fc5129b9928103c359431c74">Update</a> ()</td></tr>
@@ -143,8 +143,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a6807d366d0d40ba3e9176114153e0d13 inherit pro_attribs_class_combat_system_1_1_combat_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c8b52ea2fbd18f043495e0d544682d4 inherit pro_attribs_class_combat_system_1_1_combat_system" id="r_a1c8b52ea2fbd18f043495e0d544682d4"><td class="memItemLeft" align="right" valign="top">LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system_1_1_combat_system.html#a1c8b52ea2fbd18f043495e0d544682d4">targetLayer</a></td></tr>
 <tr class="separator:a1c8b52ea2fbd18f043495e0d544682d4 inherit pro_attribs_class_combat_system_1_1_combat_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48146e1c039f1fe7786b45e091cdc150 inherit pro_attribs_class_combat_system_1_1_combat_system" id="r_a48146e1c039f1fe7786b45e091cdc150"><td class="memItemLeft" align="right" valign="top">List&lt; Collider2D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system_1_1_combat_system.html#a48146e1c039f1fe7786b45e091cdc150">targetInAttackArea</a></td></tr>
-<tr class="separator:a48146e1c039f1fe7786b45e091cdc150 inherit pro_attribs_class_combat_system_1_1_combat_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a159a3dddaa874d0688a0815b9fe47410 inherit pro_attribs_class_combat_system_1_1_combat_system" id="r_a159a3dddaa874d0688a0815b9fe47410"><td class="memItemLeft" align="right" valign="top">List&lt; Collider2D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system_1_1_combat_system.html#a159a3dddaa874d0688a0815b9fe47410">TargetInAttackArea</a></td></tr>
+<tr class="separator:a159a3dddaa874d0688a0815b9fe47410 inherit pro_attribs_class_combat_system_1_1_combat_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcac2014a8521044e394ca4d705c4397 inherit pro_attribs_class_combat_system_1_1_combat_system" id="r_afcac2014a8521044e394ca4d705c4397"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="struct_combat_system_1_1_attack_pattern.html">AttackPattern</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_combat_system_1_1_combat_system.html#afcac2014a8521044e394ca4d705c4397">attackPatterns</a></td></tr>
 <tr class="separator:afcac2014a8521044e394ca4d705c4397 inherit pro_attribs_class_combat_system_1_1_combat_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -172,7 +172,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>use for handle the attack system. Please override this method with attack condition before call this method. </p>
+<p>Attack when the target is in attack area. </p>
 
 <p>Reimplemented from <a class="el" href="class_combat_system_1_1_combat_system.html#a9a7cccf6fac18b75a9d119e3ca202581">CombatSystem.CombatSystem</a>.</p>
 <div class="dynheader">
@@ -180,7 +180,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_combat_system_1_1_enemy_combat_system_ac3de0e9e01abbc62a0379e49d1bc5eb5_cgraph.png" border="0" usemap="#aclass_combat_system_1_1_enemy_combat_system_ac3de0e9e01abbc62a0379e49d1bc5eb5_cgraph" alt=""/></div>
 <map name="aclass_combat_system_1_1_enemy_combat_system_ac3de0e9e01abbc62a0379e49d1bc5eb5_cgraph" id="aclass_combat_system_1_1_enemy_combat_system_ac3de0e9e01abbc62a0379e49d1bc5eb5_cgraph">
-<area shape="rect" title="use for handle the attack system. Please override this method with attack condition before call this ..." alt="" coords="5,5,207,48"/>
+<area shape="rect" title="Attack when the target is in attack area." alt="" coords="5,5,207,48"/>
 <area shape="rect" href="class_combat_system_1_1_combat_system.html#a67f3523e245ef5e061c020905072737a" title="Cancel attacking." alt="" coords="255,5,464,48"/>
 <area shape="poly" title=" " alt="" coords="207,24,239,24,239,29,207,29"/>
 </map>

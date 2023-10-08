@@ -29,7 +29,6 @@ namespace PlayerBehavior
         private float _currentSpeed;
         private Animator _animator;
         private Rigidbody2D _playerRigidbody2D;
-        private SpriteRenderer _spriteRenderer;
         public static Player Instance;
         #endregion
     
@@ -37,7 +36,6 @@ namespace PlayerBehavior
         {
             _animator = GetComponent<Animator>();
             _playerRigidbody2D = GetComponent<Rigidbody2D>();
-            _spriteRenderer = GetComponent<SpriteRenderer>();
             Reset();
             Instance = this;
         }

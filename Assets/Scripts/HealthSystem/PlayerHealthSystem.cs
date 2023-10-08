@@ -22,7 +22,7 @@ namespace HealthSystem
         {
             gameObject.SetActive(true);
             ResetHealth();
-            transform.position = GameManager.instance.spawnPoint;
+            transform.position = GameManager.Instance.spawnPoint;
         }
     }
 }

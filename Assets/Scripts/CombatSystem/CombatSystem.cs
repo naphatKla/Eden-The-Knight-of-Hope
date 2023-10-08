@@ -28,7 +28,7 @@ namespace CombatSystem
         [SerializeField] protected Transform attackPoint;
         [SerializeField] protected Vector2 attackArea;
         [SerializeField] protected LayerMask targetLayer;
-        protected List<Collider2D> targetInAttackArea;
+        protected List<Collider2D> TargetInAttackArea;
     
         [Header("Normal Attack")]
         [SerializeField] protected List<AttackPattern> attackPatterns;
@@ -48,7 +48,7 @@ namespace CombatSystem
     
         protected virtual void Update()
         {
-            targetInAttackArea = Physics2D.OverlapBoxAll(attackPoint.position, attackArea, 0, targetLayer).ToList();
+            TargetInAttackArea = Physics2D.OverlapBoxAll(attackPoint.position, attackArea, 0, targetLayer).ToList();
             AttackHandle();
         }
 
@@ -81,7 +81,7 @@ namespace CombatSystem
         
             yield return new WaitForSeconds(delay);
         
-            List<HealthSystem.HealthSystem> targetHealthSystems = targetInAttackArea.Select(target => target.GetComponent<HealthSystem.HealthSystem>()).ToList();
+            List<HealthSystem.HealthSystem> targetHealthSystems = TargetInAttackArea.Select(target => target.GetComponent<HealthSystem.HealthSystem>()).ToList();
             targetHealthSystems.ForEach(target => target.TakeDamage(_currentAttackPattern.power * attackStat,gameObject));
         
             // Change attack stage to next stage, if attack state is the last state, change to the first state.

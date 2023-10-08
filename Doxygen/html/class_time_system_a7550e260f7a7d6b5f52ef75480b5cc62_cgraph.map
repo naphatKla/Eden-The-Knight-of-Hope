@@ -1,5 +1,5 @@
 <map id="TimeSystem.GetCurrentTime" name="TimeSystem.GetCurrentTime">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,195,32"/>
-<area shape="rect" id="Node000002" href="$class_time_system.html#aa9fab23d98070b757d1d49f8e8acf030" title=" " alt="" coords="243,5,448,32"/>
+<area shape="rect" id="Node000001" title="Get current time (hour)." alt="" coords="5,5,195,32"/>
+<area shape="rect" id="Node000002" href="$class_time_system.html#aa9fab23d98070b757d1d49f8e8acf030" title="Convert second to hour." alt="" coords="243,5,448,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,16,227,16,227,21,195,21"/>
 </map>

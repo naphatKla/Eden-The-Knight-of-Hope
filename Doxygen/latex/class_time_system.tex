@@ -21,16 +21,8 @@ Collaboration diagram for Time\+System\+:\nopagebreak
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-float \mbox{\hyperlink{class_time_system_aa9fab23d98070b757d1d49f8e8acf030}{Convert\+Sec\+To\+Hour}} (float sec)
-\item 
-float \mbox{\hyperlink{class_time_system_aa6eae6aa7d7c6f53a011aaa46d231727}{Convert\+Hour\+To\+Sec}} (float hour)
-\item 
 bool \mbox{\hyperlink{class_time_system_a82e2a51fcdb9a514a1b2a18b2b392c1b}{Time\+Period\+Check}} (float x, float y)
-\item 
-float \mbox{\hyperlink{class_time_system_a7550e260f7a7d6b5f52ef75480b5cc62}{Get\+Current\+Time}} ()
-\item 
-\mbox{\hyperlink{_time_system_8cs_a39d47f8339ce6930e84c743209fcb1a7}{Time\+State}} \mbox{\hyperlink{class_time_system_ab6c62164cd0b0e9f2ca56bacc7057078}{Get\+Time\+State}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if current time is in the period of x time and y time or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,23 +39,42 @@ float \mbox{\hyperlink{class_time_system_a5d84200da55d7620577f1c24c953d17d}{time
 int \mbox{\hyperlink{class_time_system_aafaa7bed4a3b1bc220c5980c464c877b}{day}}
 \item 
 \mbox{\hyperlink{_time_system_8cs_a39d47f8339ce6930e84c743209fcb1a7}{Time\+State}} \mbox{\hyperlink{class_time_system_a90910a5fcb427cd7c07669aa96ea6f89}{time\+State}}
+\item 
+Action \mbox{\hyperlink{class_time_system_a50048c11152e9a42dda8f97837f8e469}{On\+Day}}
+\item 
+Action \mbox{\hyperlink{class_time_system_a5767a6fbbd894f261096266ecd3c94f3}{On\+Night}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{class_time_system}{Time\+System}} \mbox{\hyperlink{class_time_system_ae617e0940c0aedfe161aed26afb0a567}{instance}}
+static \mbox{\hyperlink{class_time_system}{Time\+System}} \mbox{\hyperlink{class_time_system_adeddbf08c28709d579a966c3827fb136}{Instance}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Action \mbox{\hyperlink{class_time_system_a91e101225aa3aeae21dfa84f325b136a}{On\+New\+Day}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_time_system_a8cb9e08bc6be6507c470e68266ecee18}{Awake}} ()
 \item 
 void \mbox{\hyperlink{class_time_system_a1bc6bfd33a82487c0d43abf7404706d6}{Start}} ()
 \item 
 void \mbox{\hyperlink{class_time_system_ab6de60d288f4ba297b658622b28092a8}{Update}} ()
 \item 
-void \mbox{\hyperlink{class_time_system_a6565c99878badb19f6127443687637ee}{Day\+Time\+Update}} ()
-\item 
+void \mbox{\hyperlink{class_time_system_af8c80116b8f70701e76da5a8215cbf89}{Time\+Update\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Update time and day. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_system_ad3888f69729d36baf3cfdecc13d9822c}{Update\+Time\+Multiplier}} ()
+\begin{DoxyCompactList}\small\item\em Update time multiplier and time state. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_time_system_a4fb86a5324ec855567b074f8ee7f9e08}{Day\+Light\+Handle}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handle day light intensity. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_time_system_aa9fab23d98070b757d1d49f8e8acf030}{Convert\+Sec\+To\+Hour}} (float sec)
+\begin{DoxyCompactList}\small\item\em Convert second to hour. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_time_system_aa6eae6aa7d7c6f53a011aaa46d231727}{Convert\+Hour\+To\+Sec}} (float hour)
+\begin{DoxyCompactList}\small\item\em Convert hour to second. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_time_system_a7550e260f7a7d6b5f52ef75480b5cc62}{Get\+Current\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Get current time (hour). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -92,12 +103,30 @@ Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_time_system_a4b8d90aeae5709ba4ccbda
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_time_system_a8cb9e08bc6be6507c470e68266ecee18}\label{class_time_system_a8cb9e08bc6be6507c470e68266ecee18} 
+\index{TimeSystem@{TimeSystem}!Awake@{Awake}}
+\index{Awake@{Awake}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Time\+System.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \Hypertarget{class_time_system_aa6eae6aa7d7c6f53a011aaa46d231727}\label{class_time_system_aa6eae6aa7d7c6f53a011aaa46d231727} 
 \index{TimeSystem@{TimeSystem}!ConvertHourToSec@{ConvertHourToSec}}
 \index{ConvertHourToSec@{ConvertHourToSec}!TimeSystem@{TimeSystem}}
 \doxysubsubsection{\texorpdfstring{ConvertHourToSec()}{ConvertHourToSec()}}
-{\footnotesize\ttfamily float Time\+System.\+Convert\+Hour\+To\+Sec (\begin{DoxyParamCaption}\item[{float}]{hour }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily float Time\+System.\+Convert\+Hour\+To\+Sec (\begin{DoxyParamCaption}\item[{float}]{hour }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Convert hour to second. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hour} & time to convert (hour).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+time converted (sec)
+\end{DoxyReturn}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -109,9 +138,22 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{TimeSystem@{TimeSystem}!ConvertSecToHour@{ConvertSecToHour}}
 \index{ConvertSecToHour@{ConvertSecToHour}!TimeSystem@{TimeSystem}}
 \doxysubsubsection{\texorpdfstring{ConvertSecToHour()}{ConvertSecToHour()}}
-{\footnotesize\ttfamily float Time\+System.\+Convert\+Sec\+To\+Hour (\begin{DoxyParamCaption}\item[{float}]{sec }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily float Time\+System.\+Convert\+Sec\+To\+Hour (\begin{DoxyParamCaption}\item[{float}]{sec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the caller graph for this function\+:\nopagebreak
+
+
+Convert second to hour. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sec} & time to convert (sec).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+time converted (hour)
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -123,6 +165,10 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{DayLightHandle@{DayLightHandle}!TimeSystem@{TimeSystem}}
 \doxysubsubsection{\texorpdfstring{DayLightHandle()}{DayLightHandle()}}
 {\footnotesize\ttfamily void Time\+System.\+Day\+Light\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handle day light intensity. 
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -138,32 +184,19 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{class_time_system_a4fb86a5324ec855567b074f8ee7f9e08_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{class_time_system_a6565c99878badb19f6127443687637ee}\label{class_time_system_a6565c99878badb19f6127443687637ee} 
-\index{TimeSystem@{TimeSystem}!DayTimeUpdate@{DayTimeUpdate}}
-\index{DayTimeUpdate@{DayTimeUpdate}!TimeSystem@{TimeSystem}}
-\doxysubsubsection{\texorpdfstring{DayTimeUpdate()}{DayTimeUpdate()}}
-{\footnotesize\ttfamily void Time\+System.\+Day\+Time\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_time_system_a6565c99878badb19f6127443687637ee_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_time_system_a6565c99878badb19f6127443687637ee_icgraph}
-\end{center}
-\end{figure}
 \Hypertarget{class_time_system_a7550e260f7a7d6b5f52ef75480b5cc62}\label{class_time_system_a7550e260f7a7d6b5f52ef75480b5cc62} 
 \index{TimeSystem@{TimeSystem}!GetCurrentTime@{GetCurrentTime}}
 \index{GetCurrentTime@{GetCurrentTime}!TimeSystem@{TimeSystem}}
 \doxysubsubsection{\texorpdfstring{GetCurrentTime()}{GetCurrentTime()}}
-{\footnotesize\ttfamily float Time\+System.\+Get\+Current\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily float Time\+System.\+Get\+Current\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Get current time (hour). 
+
+\begin{DoxyReturn}{Returns}
+Current Time (hour).
+\end{DoxyReturn}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -171,18 +204,12 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{class_time_system_a7550e260f7a7d6b5f52ef75480b5cc62_cgraph}
 \end{center}
 \end{figure}
-\Hypertarget{class_time_system_ab6c62164cd0b0e9f2ca56bacc7057078}\label{class_time_system_ab6c62164cd0b0e9f2ca56bacc7057078} 
-\index{TimeSystem@{TimeSystem}!GetTimeState@{GetTimeState}}
-\index{GetTimeState@{GetTimeState}!TimeSystem@{TimeSystem}}
-\doxysubsubsection{\texorpdfstring{GetTimeState()}{GetTimeState()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_time_system_8cs_a39d47f8339ce6930e84c743209fcb1a7}{Time\+State}} Time\+System.\+Get\+Time\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_time_system_ab6c62164cd0b0e9f2ca56bacc7057078_icgraph}
+\includegraphics[width=350pt]{class_time_system_a7550e260f7a7d6b5f52ef75480b5cc62_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{class_time_system_a1bc6bfd33a82487c0d43abf7404706d6}\label{class_time_system_a1bc6bfd33a82487c0d43abf7404706d6} 
@@ -204,6 +231,20 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{TimePeriodCheck()}{TimePeriodCheck()}}
 {\footnotesize\ttfamily bool Time\+System.\+Time\+Period\+Check (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
 
+
+
+Check if current time is in the period of x time and y time or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Start time period (hour).\\
+\hline
+{\em y} & End time period (hour).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -211,11 +252,36 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{class_time_system_a82e2a51fcdb9a514a1b2a18b2b392c1b_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_time_system_a82e2a51fcdb9a514a1b2a18b2b392c1b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_time_system_af8c80116b8f70701e76da5a8215cbf89}\label{class_time_system_af8c80116b8f70701e76da5a8215cbf89} 
+\index{TimeSystem@{TimeSystem}!TimeUpdateHandler@{TimeUpdateHandler}}
+\index{TimeUpdateHandler@{TimeUpdateHandler}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{TimeUpdateHandler()}{TimeUpdateHandler()}}
+{\footnotesize\ttfamily void Time\+System.\+Time\+Update\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update time and day. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_af8c80116b8f70701e76da5a8215cbf89_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_af8c80116b8f70701e76da5a8215cbf89_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{class_time_system_ab6de60d288f4ba297b658622b28092a8}\label{class_time_system_ab6de60d288f4ba297b658622b28092a8} 
@@ -229,6 +295,30 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_time_system_ab6de60d288f4ba297b658622b28092a8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_time_system_ad3888f69729d36baf3cfdecc13d9822c}\label{class_time_system_ad3888f69729d36baf3cfdecc13d9822c} 
+\index{TimeSystem@{TimeSystem}!UpdateTimeMultiplier@{UpdateTimeMultiplier}}
+\index{UpdateTimeMultiplier@{UpdateTimeMultiplier}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{UpdateTimeMultiplier()}{UpdateTimeMultiplier()}}
+{\footnotesize\ttfamily void Time\+System.\+Update\+Time\+Multiplier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update time multiplier and time state. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_ad3888f69729d36baf3cfdecc13d9822c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_system_ad3888f69729d36baf3cfdecc13d9822c_icgraph}
 \end{center}
 \end{figure}
 
@@ -300,11 +390,11 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{gameStartTime}{gameStartTime}}
 {\footnotesize\ttfamily float Time\+System.\+game\+Start\+Time}
 
-\Hypertarget{class_time_system_ae617e0940c0aedfe161aed26afb0a567}\label{class_time_system_ae617e0940c0aedfe161aed26afb0a567} 
-\index{TimeSystem@{TimeSystem}!instance@{instance}}
-\index{instance@{instance}!TimeSystem@{TimeSystem}}
-\doxysubsubsection{\texorpdfstring{instance}{instance}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_time_system}{Time\+System}} Time\+System.\+instance\hspace{0.3cm}{\ttfamily [static]}}
+\Hypertarget{class_time_system_adeddbf08c28709d579a966c3827fb136}\label{class_time_system_adeddbf08c28709d579a966c3827fb136} 
+\index{TimeSystem@{TimeSystem}!Instance@{Instance}}
+\index{Instance@{Instance}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time_system}{Time\+System}} Time\+System.\+Instance\hspace{0.3cm}{\ttfamily [static]}}
 
 \Hypertarget{class_time_system_a5803ae6e1e3a112cc5df44c6c1380c05}\label{class_time_system_a5803ae6e1e3a112cc5df44c6c1380c05} 
 \index{TimeSystem@{TimeSystem}!lightDownPeriod@{lightDownPeriod}}
@@ -336,6 +426,18 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{nightTime}{nightTime}}
 {\footnotesize\ttfamily float Time\+System.\+night\+Time}
 
+\Hypertarget{class_time_system_a50048c11152e9a42dda8f97837f8e469}\label{class_time_system_a50048c11152e9a42dda8f97837f8e469} 
+\index{TimeSystem@{TimeSystem}!OnDay@{OnDay}}
+\index{OnDay@{OnDay}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{OnDay}{OnDay}}
+{\footnotesize\ttfamily Action Time\+System.\+On\+Day}
+
+\Hypertarget{class_time_system_a5767a6fbbd894f261096266ecd3c94f3}\label{class_time_system_a5767a6fbbd894f261096266ecd3c94f3} 
+\index{TimeSystem@{TimeSystem}!OnNight@{OnNight}}
+\index{OnNight@{OnNight}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{OnNight}{OnNight}}
+{\footnotesize\ttfamily Action Time\+System.\+On\+Night}
+
 \Hypertarget{class_time_system_a5d84200da55d7620577f1c24c953d17d}\label{class_time_system_a5d84200da55d7620577f1c24c953d17d} 
 \index{TimeSystem@{TimeSystem}!time@{time}}
 \index{time@{time}!TimeSystem@{TimeSystem}}
@@ -347,6 +449,15 @@ Here is the call graph for this function\+:\nopagebreak
 \index{timeState@{timeState}!TimeSystem@{TimeSystem}}
 \doxysubsubsection{\texorpdfstring{timeState}{timeState}}
 {\footnotesize\ttfamily \mbox{\hyperlink{_time_system_8cs_a39d47f8339ce6930e84c743209fcb1a7}{Time\+State}} Time\+System.\+time\+State}
+
+
+
+\doxysubsection{Event Documentation}
+\Hypertarget{class_time_system_a91e101225aa3aeae21dfa84f325b136a}\label{class_time_system_a91e101225aa3aeae21dfa84f325b136a} 
+\index{TimeSystem@{TimeSystem}!OnNewDay@{OnNewDay}}
+\index{OnNewDay@{OnNewDay}!TimeSystem@{TimeSystem}}
+\doxysubsubsection{\texorpdfstring{OnNewDay}{OnNewDay}}
+{\footnotesize\ttfamily Action Time\+System.\+On\+New\+Day}
 
 
 

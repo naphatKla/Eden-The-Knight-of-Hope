@@ -9,9 +9,10 @@ namespace HealthSystem
         #region Declare Variables
         [SerializeField] protected Slider sliderHpPlayer;
         [SerializeField] public float maxHp;
-        public float CurrentHp { get; protected set; }
+        public float CurrentHp { get; private set; }
         private bool _isDead;
         private Animator _animator;
+        private static readonly int TakDamage = Animator.StringToHash("TakeDamage");
         #endregion
     
         protected virtual void Start()
@@ -41,7 +42,7 @@ namespace HealthSystem
             UpdateUI();
         
             if(!_animator.IsUnityNull())
-                _animator.SetTrigger("TakeDamage");
+                _animator.SetTrigger(TakDamage);
         
             if (CurrentHp > 0 || _isDead) return;
             _isDead = true;
@@ -52,7 +53,7 @@ namespace HealthSystem
         /// Heal and increase the current hp.
         /// </summary>
         /// <param name="healPoint">Heal amount.</param>
-        public void Heal(float healPoint)
+        protected void Heal(float healPoint)
         {
             CurrentHp += healPoint;
             CurrentHp = Mathf.Clamp(CurrentHp, 0, maxHp);

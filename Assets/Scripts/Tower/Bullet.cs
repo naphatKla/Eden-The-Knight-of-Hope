@@ -21,8 +21,11 @@ namespace Tower
     
         private void Update()
         {
-            if(!_target || !_parentTower) 
+            if (!_target || !_parentTower)
+            {
                 Destroy(gameObject);
+                return;
+            }
             
             Vector2 direction = _target.position - _thisTransform.position;
             _thisTransform.up = direction;
@@ -33,9 +36,9 @@ namespace Tower
         /// <summary>
         /// Initialize the bullet when it spawned.
         /// </summary>
-        /// <param name="speed">bullet speed.</param>
-        /// <param name="damage">bullet damage.</param>
-        /// <param name="tower">parent tower.</param>
+        /// <param name="speed">Bullet speed.</param>
+        /// <param name="damage">Bullet damage.</param>
+        /// <param name="tower">Parent tower.</param>
         public void Init(float speed, float damage,Tower tower)
         {
             _speed = speed;
@@ -48,7 +51,7 @@ namespace Tower
         /// <summary>
         /// When the bullet hit the target, the target will take damage.
         /// </summary>
-        /// <param name="other">target hit.</param>
+        /// <param name="other">Target hit.</param>
         private void OnTriggerEnter2D(Collider2D other)
         {
             if(other.gameObject != _target.gameObject) return;

@@ -1,0 +1,175 @@
+\doxysection{Spawner.\+Spawner Class Reference}
+\hypertarget{class_spawner_1_1_spawner}{}\label{class_spawner_1_1_spawner}\index{Spawner.Spawner@{Spawner.Spawner}}
+
+
+Inheritance diagram for Spawner.\+Spawner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_spawner_1_1_spawner__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Spawner.\+Spawner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{class_spawner_1_1_spawner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_spawner_1_1_spawner_a53dbaa17874ea188e67f511998822566}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{class_spawner_1_1_spawner_a2753060d89dc4f9fbeea531f710026cb}{Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_spawner_1_1_spawner_a0409b70123c8da2b1e133313768bd421}{Spawn\+Object\+Handler}} ()
+\item 
+virtual void \mbox{\hyperlink{class_spawner_1_1_spawner_a542fceadb57972ff2592d224722c3a56}{Spawn\+Object}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{class_spawner_1_1_spawner_a22c93f2b8fe787f97817f2e0c73eb83c}{spawn\+Area}}
+\item 
+float \mbox{\hyperlink{class_spawner_1_1_spawner_ac81840f00877f65bc175347f6405ff5c}{spawn\+Cooldown}}
+\item 
+bool \mbox{\hyperlink{class_spawner_1_1_spawner_a7f20e1a3cec8ca4d0deb0015e3776ba5}{Is\+Spawning\+Complete}}
+\item 
+Game\+Object \mbox{\hyperlink{class_spawner_1_1_spawner_ad7cb31ee61d01b7d8240c556001922ce}{Last\+Spawned\+Object}}
+\item 
+float \mbox{\hyperlink{class_spawner_1_1_spawner_a9f6bbc3947c47cdc26bc43154a642ee2}{Next\+Spawn\+Time}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_spawner_1_1_spawner_a9f6f716f625a8af436e6ad628c9ee028}{On\+Draw\+Gizmos}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_spawner_1_1_spawner_a3648526d13bc21f7b2c32f3596349693}{spawn\+Offset}}
+\item 
+int \mbox{\hyperlink{class_spawner_1_1_spawner_ac1ab43333d4ed89f02ea82d7c2317749}{max\+Object}}
+\item 
+\mbox{\hyperlink{namespace_spawner_ab9a44c5894a912b6f7a697de5adf18a7}{Spawn\+Mode}} \mbox{\hyperlink{class_spawner_1_1_spawner_a3e27512e56e9cbee2ca59fa4bd6d4b90}{spawn\+Mode}}
+\item 
+List$<$ \mbox{\hyperlink{struct_spawner_1_1_priority_object}{Priority\+Object}}$<$ Game\+Object $>$ $>$ \mbox{\hyperlink{class_spawner_1_1_spawner_a2d368a48d957172d767c0d5743b2164f}{objects\+To\+Spawn}}
+\item 
+Color \mbox{\hyperlink{class_spawner_1_1_spawner_a0345b16f27a961969d873b1244d87ef6}{gizmos\+Color}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_spawner_1_1_spawner_a9f6f716f625a8af436e6ad628c9ee028}\label{class_spawner_1_1_spawner_a9f6f716f625a8af436e6ad628c9ee028} 
+\index{Spawner.Spawner@{Spawner.Spawner}!OnDrawGizmos@{OnDrawGizmos}}
+\index{OnDrawGizmos@{OnDrawGizmos}!Spawner.Spawner@{Spawner.Spawner}}
+\doxysubsubsection{\texorpdfstring{OnDrawGizmos()}{OnDrawGizmos()}}
+{\footnotesize\ttfamily void Spawner.\+Spawner.\+On\+Draw\+Gizmos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_spawner_1_1_spawner_a542fceadb57972ff2592d224722c3a56}\label{class_spawner_1_1_spawner_a542fceadb57972ff2592d224722c3a56} 
+\index{Spawner.Spawner@{Spawner.Spawner}!SpawnObject@{SpawnObject}}
+\index{SpawnObject@{SpawnObject}!Spawner.Spawner@{Spawner.Spawner}}
+\doxysubsubsection{\texorpdfstring{SpawnObject()}{SpawnObject()}}
+{\footnotesize\ttfamily virtual void Spawner.\+Spawner.\+Spawn\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_spawner_1_1_enemy_spawner_af0e9fbdf0af88a0e7a54e5c85a7e2f29}{Spawner.\+Enemy\+Spawner}}.
+
+\Hypertarget{class_spawner_1_1_spawner_a0409b70123c8da2b1e133313768bd421}\label{class_spawner_1_1_spawner_a0409b70123c8da2b1e133313768bd421} 
+\index{Spawner.Spawner@{Spawner.Spawner}!SpawnObjectHandler@{SpawnObjectHandler}}
+\index{SpawnObjectHandler@{SpawnObjectHandler}!Spawner.Spawner@{Spawner.Spawner}}
+\doxysubsubsection{\texorpdfstring{SpawnObjectHandler()}{SpawnObjectHandler()}}
+{\footnotesize\ttfamily virtual void Spawner.\+Spawner.\+Spawn\+Object\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_spawner_1_1_enemy_spawner_a03ca6de41201ff11cf53fa2e17d1996c}{Spawner.\+Enemy\+Spawner}}, and \mbox{\hyperlink{class_spawner_1_1_item_spawner_a374a6dc9b560a56a36d45cdccd18428c}{Spawner.\+Item\+Spawner}}.
+
+\Hypertarget{class_spawner_1_1_spawner_a53dbaa17874ea188e67f511998822566}\label{class_spawner_1_1_spawner_a53dbaa17874ea188e67f511998822566} 
+\index{Spawner.Spawner@{Spawner.Spawner}!Start@{Start}}
+\index{Start@{Start}!Spawner.Spawner@{Spawner.Spawner}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily virtual void Spawner.\+Spawner.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_spawner_1_1_enemy_spawner_a0a69b3cd14757e7b4b21e5f8f066cc9c}{Spawner.\+Enemy\+Spawner}}.
+
+\Hypertarget{class_spawner_1_1_spawner_a2753060d89dc4f9fbeea531f710026cb}\label{class_spawner_1_1_spawner_a2753060d89dc4f9fbeea531f710026cb} 
+\index{Spawner.Spawner@{Spawner.Spawner}!Update@{Update}}
+\index{Update@{Update}!Spawner.Spawner@{Spawner.Spawner}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Spawner.\+Spawner.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_spawner_1_1_spawner_a0345b16f27a961969d873b1244d87ef6}\label{class_spawner_1_1_spawner_a0345b16f27a961969d873b1244d87ef6} 
+\index{Spawner.Spawner@{Spawner.Spawner}!gizmosColor@{gizmosColor}}
+\index{gizmosColor@{gizmosColor}!Spawner.Spawner@{Spawner.Spawner}}
+\doxysubsubsection{\texorpdfstring{gizmosColor}{gizmosColor}}
+{\footnotesize\ttfamily Color Spawner.\+Spawner.\+gizmos\+Color\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_spawner_1_1_spawner_a7f20e1a3cec8ca4d0deb0015e3776ba5}\label{class_spawner_1_1_spawner_a7f20e1a3cec8ca4d0deb0015e3776ba5} 
+\index{Spawner.Spawner@{Spawner.Spawner}!IsSpawningComplete@{IsSpawningComplete}}
+\index{IsSpawningComplete@{IsSpawningComplete}!Spawner.Spawner@{Spawner.Spawner}}
+\doxysubsubsection{\texorpdfstring{IsSpawningComplete}{IsSpawningComplete}}
+{\footnotesize\ttfamily bool Spawner.\+Spawner.\+Is\+Spawning\+Complete\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_spawner_1_1_spawner_ad7cb31ee61d01b7d8240c556001922ce}\label{class_spawner_1_1_spawner_ad7cb31ee61d01b7d8240c556001922ce} 
+\index{Spawner.Spawner@{Spawner.Spawner}!LastSpawnedObject@{LastSpawnedObject}}
+\index{LastSpawnedObject@{LastSpawnedObject}!Spawner.Spawner@{Spawner.Spawner}}
+\doxysubsubsection{\texorpdfstring{LastSpawnedObject}{LastSpawnedObject}}
+{\footnotesize\ttfamily Game\+Object Spawner.\+Spawner.\+Last\+Spawned\+Object\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_spawner_1_1_spawner_ac1ab43333d4ed89f02ea82d7c2317749}\label{class_spawner_1_1_spawner_ac1ab43333d4ed89f02ea82d7c2317749} 
+\index{Spawner.Spawner@{Spawner.Spawner}!maxObject@{maxObject}}
+\index{maxObject@{maxObject}!Spawner.Spawner@{Spawner.Spawner}}
+\doxysubsubsection{\texorpdfstring{maxObject}{maxObject}}
+{\footnotesize\ttfamily int Spawner.\+Spawner.\+max\+Object\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_spawner_1_1_spawner_a9f6bbc3947c47cdc26bc43154a642ee2}\label{class_spawner_1_1_spawner_a9f6bbc3947c47cdc26bc43154a642ee2} 
+\index{Spawner.Spawner@{Spawner.Spawner}!NextSpawnTime@{NextSpawnTime}}
+\index{NextSpawnTime@{NextSpawnTime}!Spawner.Spawner@{Spawner.Spawner}}
+\doxysubsubsection{\texorpdfstring{NextSpawnTime}{NextSpawnTime}}
+{\footnotesize\ttfamily float Spawner.\+Spawner.\+Next\+Spawn\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_spawner_1_1_spawner_a2d368a48d957172d767c0d5743b2164f}\label{class_spawner_1_1_spawner_a2d368a48d957172d767c0d5743b2164f} 
+\index{Spawner.Spawner@{Spawner.Spawner}!objectsToSpawn@{objectsToSpawn}}
+\index{objectsToSpawn@{objectsToSpawn}!Spawner.Spawner@{Spawner.Spawner}}
+\doxysubsubsection{\texorpdfstring{objectsToSpawn}{objectsToSpawn}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{struct_spawner_1_1_priority_object}{Priority\+Object}}$<$Game\+Object$>$ $>$ Spawner.\+Spawner.\+objects\+To\+Spawn\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_spawner_1_1_spawner_a22c93f2b8fe787f97817f2e0c73eb83c}\label{class_spawner_1_1_spawner_a22c93f2b8fe787f97817f2e0c73eb83c} 
+\index{Spawner.Spawner@{Spawner.Spawner}!spawnArea@{spawnArea}}
+\index{spawnArea@{spawnArea}!Spawner.Spawner@{Spawner.Spawner}}
+\doxysubsubsection{\texorpdfstring{spawnArea}{spawnArea}}
+{\footnotesize\ttfamily Vector2 Spawner.\+Spawner.\+spawn\+Area\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_spawner_1_1_spawner_ac81840f00877f65bc175347f6405ff5c}\label{class_spawner_1_1_spawner_ac81840f00877f65bc175347f6405ff5c} 
+\index{Spawner.Spawner@{Spawner.Spawner}!spawnCooldown@{spawnCooldown}}
+\index{spawnCooldown@{spawnCooldown}!Spawner.Spawner@{Spawner.Spawner}}
+\doxysubsubsection{\texorpdfstring{spawnCooldown}{spawnCooldown}}
+{\footnotesize\ttfamily float Spawner.\+Spawner.\+spawn\+Cooldown\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_spawner_1_1_spawner_a3e27512e56e9cbee2ca59fa4bd6d4b90}\label{class_spawner_1_1_spawner_a3e27512e56e9cbee2ca59fa4bd6d4b90} 
+\index{Spawner.Spawner@{Spawner.Spawner}!spawnMode@{spawnMode}}
+\index{spawnMode@{spawnMode}!Spawner.Spawner@{Spawner.Spawner}}
+\doxysubsubsection{\texorpdfstring{spawnMode}{spawnMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_spawner_ab9a44c5894a912b6f7a697de5adf18a7}{Spawn\+Mode}} Spawner.\+Spawner.\+spawn\+Mode\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_spawner_1_1_spawner_a3648526d13bc21f7b2c32f3596349693}\label{class_spawner_1_1_spawner_a3648526d13bc21f7b2c32f3596349693} 
+\index{Spawner.Spawner@{Spawner.Spawner}!spawnOffset@{spawnOffset}}
+\index{spawnOffset@{spawnOffset}!Spawner.Spawner@{Spawner.Spawner}}
+\doxysubsubsection{\texorpdfstring{spawnOffset}{spawnOffset}}
+{\footnotesize\ttfamily float Spawner.\+Spawner.\+spawn\+Offset\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Scripts/\+Spawner/\mbox{\hyperlink{_spawner_8cs}{Spawner.\+cs}}\end{DoxyCompactItemize}

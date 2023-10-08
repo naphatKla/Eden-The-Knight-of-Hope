@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['base_0',['Base',['../class_enemy_behavior_1_1_enemy.html#ac658c07f88a8614c43c4fe460645e578a095a1b43effec73955e31e790438de49',1,'EnemyBehavior::Enemy']]],
+  ['base_0',['Base',['../namespace_enemy_behavior.html#ab55b1f4872e57c8c8c1ab57fd6589e58a095a1b43effec73955e31e790438de49',1,'EnemyBehavior']]],
   ['basehealthsystem_1',['BaseHealthSystem',['../class_health_system_1_1_base_health_system.html',1,'HealthSystem']]],
   ['basehealthsystem_2ecs_2',['BaseHealthSystem.cs',['../_base_health_system_8cs.html',1,'']]],
   ['behaviorhandle_3',['BehaviorHandle',['../class_enemy_behavior_1_1_enemy.html#adb481122a0b4f1e7a86271deeae2326c',1,'EnemyBehavior::Enemy']]],

@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
@@ -11,6 +12,7 @@ public enum TimeState
 
 public class TimeSystem : MonoBehaviour
 {
+    #region MyRegion
     [Header("Time")]
     public float dayTime;
     public float nightTime;
@@ -34,48 +36,79 @@ public class TimeSystem : MonoBehaviour
     [SerializeField] private Image clock;
     [SerializeField] private TextMeshProUGUI dayText;
     public TimeState timeState;
+    public event Action OnNewDay, OnDay, OnNight;
+    public static TimeSystem Instance;
+    #endregion
 
-    public static TimeSystem instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
 
-    void Start()
+    private void Start()
     {
         day = 0;
         cycleLength = dayTime + nightTime;
         _lightUpDuration = lightUpPeriod.y - lightUpPeriod.x;
         _lightDownDuration = lightDownPeriod.y - lightDownPeriod.x;
         time = ConvertHourToSec(gameStartTime);
-        instance = this;
     }
     
-    void Update()
+    private void Update()
     {
-        DayTimeUpdate();
+        TimeUpdateHandler();
         DayLightHandle();
-        
+
         clock.rectTransform.rotation = Quaternion.Euler(0,0,(time / cycleLength )*720);
     }
 
-    private void DayTimeUpdate()
+    #region Methoos
+    // ReSharper disable Unity.PerformanceAnalysis
+    /// <summary>
+    /// Update time and day.
+    /// </summary>
+    private void TimeUpdateHandler()
     {
+        UpdateTimeMultiplier();
         time += Time.deltaTime * _timeMultiplier;
-        dayText.text = $"Day {day}\n {ConvertSecToHour(time):F0}:00";
-
-        if (TimePeriodCheck(dayPeriod.x,dayPeriod.y))
-        {
-            timeState = TimeState.Day;
-            _timeMultiplier = 1;
-        }
-        else
-        {
-            timeState = TimeState.Night;
-            _timeMultiplier = dayTime / nightTime;
-        }
+        dayText.text = $"Day {day}\n {Mathf.Floor(GetCurrentTime()):F0}:00";
         
+        // new day
         if (time < cycleLength) return;
         time = 0;
         day += 1;
+        OnNewDay?.Invoke();
     }
     
+    
+    /// <summary>
+    /// Update time multiplier and time state.
+    /// </summary>
+    private void UpdateTimeMultiplier()
+    {
+        const float dayTimeMultiplier = 1;
+        float nightTimeMultiplier = dayTime / nightTime;
+        
+        if (TimePeriodCheck(dayPeriod.x, dayPeriod.y))
+        {
+            if (TimeSystem.Instance.timeState == TimeState.Day) return;
+            _timeMultiplier = dayTimeMultiplier;
+            timeState = TimeState.Day;
+            OnDay?.Invoke();
+        }
+        else
+        {
+            if (TimeSystem.Instance.timeState == TimeState.Night) return;
+            _timeMultiplier = nightTimeMultiplier;
+            timeState = TimeState.Night;
+            OnNight?.Invoke();
+        }
+    }
+
+    
+    /// <summary>
+    /// Handle day light intensity.
+    /// </summary>
     private void DayLightHandle()
     {
         float lightDownTimeCounter= ConvertSecToHour(time) - lightDownPeriod.x ,
@@ -90,12 +123,36 @@ public class TimeSystem : MonoBehaviour
                 lightUpTimeCounter / _lightUpDuration);
     }
     
-    public float ConvertSecToHour(float sec)
+    
+    /// <summary>
+    /// Check if current time is in the period of x time and y time or not.
+    /// </summary>
+    /// <param name="x">Start time period (hour).</param>
+    /// <param name="y">End time period (hour).</param>
+    /// <returns></returns>
+    public bool TimePeriodCheck(float x, float y)
+    {
+        return GetCurrentTime() >= x && GetCurrentTime() <= y;
+    }
+    
+    
+    /// <summary>
+    /// Convert second to hour.
+    /// </summary>
+    /// <param name="sec">time to convert (sec).</param>
+    /// <returns>time converted (hour)</returns>
+    private float ConvertSecToHour(float sec)
     {
         return sec / (3600 / (86400 / cycleLength));
     }
+
     
-    public float ConvertHourToSec(float hour)
+    /// <summary>
+    /// Convert hour to second.
+    /// </summary>
+    /// <param name="hour">time to convert (hour).</param>
+    /// <returns>time converted (sec)</returns>
+    private float ConvertHourToSec(float hour)
     {
         if (timeState == TimeState.Night)
             _timeMultiplier = dayTime / nightTime;
@@ -104,19 +161,15 @@ public class TimeSystem : MonoBehaviour
         
         return hour * (3600 / (86400 / cycleLength));
     }
+    
 
-    public bool TimePeriodCheck(float x, float y)
-    {
-        return ConvertSecToHour(time) >= x && ConvertSecToHour(time) <= y;
-    }
-
-    public float GetCurrentTime()
+    /// <summary>
+    /// Get current time (hour). 
+    /// </summary>
+    /// <returns>Current Time (hour).</returns>
+    private float GetCurrentTime()
     {
         return ConvertSecToHour(time);
     }
-
-    public TimeState GetTimeState()
-    {
-        return timeState;
-    }
+    #endregion
 }

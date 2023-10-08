@@ -2,8 +2,7 @@
 \hypertarget{class_health_system_1_1_health_system}{}\label{class_health_system_1_1_health_system}\index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
 
 
-Inheritance diagram for Health\+System.\+Health\+System\+:
-\nopagebreak
+Inheritance diagram for Health\+System.\+Health\+System\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Health\+System.\+Health\+System\+:
 \end{figure}
 
 
-Collaboration diagram for Health\+System.\+Health\+System\+:
-\nopagebreak
+Collaboration diagram for Health\+System.\+Health\+System\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,8 +23,6 @@ Collaboration diagram for Health\+System.\+Health\+System\+:
 \item 
 virtual void \mbox{\hyperlink{class_health_system_1_1_health_system_a3a267200e5749e4b931038076fed1deb}{Take\+Damage}} (float damage, Game\+Object attacker=null)
 \begin{DoxyCompactList}\small\item\em Take damage and reduce the current hp. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_health_system_1_1_health_system_a2e2a07a077808515447922570ab4ff29}{Heal}} (float heal\+Point)
-\begin{DoxyCompactList}\small\item\em Heal and increase the current hp. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_health_system_1_1_health_system_a0ed4c60e8d2cd69fe6bccf70bf07d4e7}{Reset\+Health}} ()
 \begin{DoxyCompactList}\small\item\em Reset the current hp to max hp. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
@@ -39,6 +35,8 @@ float \mbox{\hyperlink{class_health_system_1_1_health_system_afffac0008b23a7e88c
 \item 
 virtual void \mbox{\hyperlink{class_health_system_1_1_health_system_a9206b51833b78cbb003832eb800ecf7f}{Start}} ()
 \item 
+void \mbox{\hyperlink{class_health_system_1_1_health_system_a2e2a07a077808515447922570ab4ff29}{Heal}} (float heal\+Point)
+\begin{DoxyCompactList}\small\item\em Heal and increase the current hp. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_health_system_1_1_health_system_a9151782314f5407f5edf7678593a5137}{Dead}} ()
 \begin{DoxyCompactList}\small\item\em Dead and destroy the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
@@ -49,7 +47,7 @@ Slider \mbox{\hyperlink{class_health_system_1_1_health_system_afbad83a908f12f18a
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-float \mbox{\hyperlink{class_health_system_1_1_health_system_ab7ff0c0a74693e7f1fd0e772efe8e47a}{Current\+Hp}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+float \mbox{\hyperlink{class_health_system_1_1_health_system_ab7ff0c0a74693e7f1fd0e772efe8e47a}{Current\+Hp}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -64,6 +62,11 @@ void \mbox{\hyperlink{class_health_system_1_1_health_system_a20b369b14d1011eddfd
 bool \mbox{\hyperlink{class_health_system_1_1_health_system_aa1394c40f00ca88dbed1067b7255dc47}{\+\_\+is\+Dead}}
 \item 
 Animator \mbox{\hyperlink{class_health_system_1_1_health_system_ac4a697d6384dae06849c6f14c78ad030}{\+\_\+animator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly int \mbox{\hyperlink{class_health_system_1_1_health_system_a81d4e10a7a086409b311b7c7ceae5e21}{Tak\+Damage}} = Animator.\+String\+To\+Hash("{}Take\+Damage"{})
 \end{DoxyCompactItemize}
 
 
@@ -86,7 +89,7 @@ Reimplemented in \mbox{\hyperlink{class_health_system_1_1_enemy_health_system_aa
 \index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!Heal@{Heal}}
 \index{Heal@{Heal}!HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
 \doxysubsubsection{\texorpdfstring{Heal()}{Heal()}}
-{\footnotesize\ttfamily void Health\+System.\+Health\+System.\+Heal (\begin{DoxyParamCaption}\item[{float}]{heal\+Point }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Health\+System.\+Health\+System.\+Heal (\begin{DoxyParamCaption}\item[{float}]{heal\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -97,8 +100,7 @@ Heal and increase the current hp.
 {\em heal\+Point} & Heal amount.\\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -121,8 +123,7 @@ Here is the caller graph for this function\+:
 
 Reset the current hp to max hp. 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -158,7 +159,7 @@ Take damage and reduce the current hp.
 \end{DoxyParams}
 
 
-Reimplemented in \mbox{\hyperlink{class_health_system_1_1_enemy_health_system_abcfa763537d0d33cdddafc9d4996c7d6}{Health\+System.\+Enemy\+Health\+System}}.
+Reimplemented in \mbox{\hyperlink{class_health_system_1_1_enemy_health_system_a7fcfeb6343b369c883c1ff7013b2101f}{Health\+System.\+Enemy\+Health\+System}}.
 
 \Hypertarget{class_health_system_1_1_health_system_a20b369b14d1011eddfd198dab638174d}\label{class_health_system_1_1_health_system_a20b369b14d1011eddfd198dab638174d} 
 \index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!UpdateUI@{UpdateUI}}
@@ -197,6 +198,12 @@ Update the UI.
 \doxysubsubsection{\texorpdfstring{sliderHpPlayer}{sliderHpPlayer}}
 {\footnotesize\ttfamily Slider Health\+System.\+Health\+System.\+slider\+Hp\+Player\hspace{0.3cm}{\ttfamily [protected]}}
 
+\Hypertarget{class_health_system_1_1_health_system_a81d4e10a7a086409b311b7c7ceae5e21}\label{class_health_system_1_1_health_system_a81d4e10a7a086409b311b7c7ceae5e21} 
+\index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!TakDamage@{TakDamage}}
+\index{TakDamage@{TakDamage}!HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
+\doxysubsubsection{\texorpdfstring{TakDamage}{TakDamage}}
+{\footnotesize\ttfamily readonly int Health\+System.\+Health\+System.\+Tak\+Damage = Animator.\+String\+To\+Hash("{}Take\+Damage"{})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
 
 
 \doxysubsection{Property Documentation}
@@ -204,7 +211,7 @@ Update the UI.
 \index{HealthSystem.HealthSystem@{HealthSystem.HealthSystem}!CurrentHp@{CurrentHp}}
 \index{CurrentHp@{CurrentHp}!HealthSystem.HealthSystem@{HealthSystem.HealthSystem}}
 \doxysubsubsection{\texorpdfstring{CurrentHp}{CurrentHp}}
-{\footnotesize\ttfamily float Health\+System.\+Health\+System.\+Current\+Hp\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+{\footnotesize\ttfamily float Health\+System.\+Health\+System.\+Current\+Hp\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
 
 
 

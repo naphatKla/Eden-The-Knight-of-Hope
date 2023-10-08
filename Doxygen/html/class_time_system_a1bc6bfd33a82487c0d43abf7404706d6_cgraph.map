@@ -1,5 +1,5 @@
 <map id="TimeSystem.Start" name="TimeSystem.Start">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,5,132,32"/>
-<area shape="rect" id="Node000002" href="$class_time_system.html#aa6eae6aa7d7c6f53a011aaa46d231727" title=" " alt="" coords="180,5,385,32"/>
+<area shape="rect" id="Node000002" href="$class_time_system.html#aa6eae6aa7d7c6f53a011aaa46d231727" title="Convert hour to second." alt="" coords="180,5,385,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,16,164,16,164,21,132,21"/>
 </map>

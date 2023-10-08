@@ -202,7 +202,7 @@ MonoBehaviour:
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 576
-  priorityTags: 00000000010000000200000003000000
+  priorityTags: 000000000200000003000000
   enemyActionState: 0
 --- !u!114 &3604576800329324049
 MonoBehaviour:
@@ -241,7 +241,7 @@ MonoBehaviour:
     delay: 0.45
     cooldown: 1
     attackState: 0
-  _attackState: 0
+  attackState: 0
 --- !u!195 &3338019295559380173
 NavMeshAgent:
   m_ObjectHideFlags: 0

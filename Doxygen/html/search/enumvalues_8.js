@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sprint_0',['Sprint',['../namespace_player_behavior.html#aedc9e849ec59dbbc9036a353ca4a0596affc3dc096e3578a9474b7976953f0ef9',1,'PlayerBehavior']]]
+  ['returntospawn_0',['ReturnToSpawn',['../namespace_enemy_behavior.html#ad2d0f2009098236b7e6ae2f150c23923af96d9446f78479a6f540762f81171394',1,'EnemyBehavior']]]
 ];

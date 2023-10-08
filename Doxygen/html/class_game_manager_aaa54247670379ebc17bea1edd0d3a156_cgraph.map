@@ -1,0 +1,11 @@
+<map id="GameManager.EvenWarningHandler" name="GameManager.EvenWarningHandler">
+<area shape="rect" id="Node000001" title="Warning player when the enemy wave are coming (17:00 &#45; 19:00)." alt="" coords="5,35,236,61"/>
+<area shape="rect" id="Node000002" href="$class_time_system.html#a82e2a51fcdb9a514a1b2a18b2b392c1b" title="Check if current time is in the period of x time and y time or not." alt="" coords="285,5,486,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,33,269,29,270,34,236,38"/>
+<area shape="rect" id="Node000005" href="$class_game_manager.html#a2f25fce454f2aa38a41b464fc120af16" title="Toggle set active game object relate with animation. Set active game object and wait until the animat..." alt="" coords="284,56,487,99"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="236,58,269,62,268,67,236,63"/>
+<area shape="rect" id="Node000003" href="$class_time_system.html#a7550e260f7a7d6b5f52ef75480b5cc62" title="Get current time (hour)." alt="" coords="535,5,724,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="486,16,519,16,519,21,486,21"/>
+<area shape="rect" id="Node000004" href="$class_time_system.html#aa9fab23d98070b757d1d49f8e8acf030" title="Convert second to hour." alt="" coords="772,5,978,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="725,16,757,16,757,21,725,21"/>
+</map>

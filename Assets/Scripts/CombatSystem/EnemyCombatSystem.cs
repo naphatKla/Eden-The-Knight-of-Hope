@@ -14,15 +14,20 @@ namespace CombatSystem
             base.Start();
         }
 
+        /// <summary>
+        /// Attack when the target is in attack area.
+        /// </summary>
         protected override void AttackHandle()
         {
-            if (targetInAttackArea.Count <= 0) return;
+            if (TargetInAttackArea.Count <= 0) return;
             if (_enemy.IsStun)
             {
                 CancelAttacking();
                 return;
             }
-            if (targetInAttackArea.All(target => target.gameObject != _enemy.Target)) return;
+            
+            // if the target is not in attack area, cancel attacking and follow the target.
+            if (TargetInAttackArea.All(target => target.gameObject != _enemy.Target)) return;
             
             _enemy.Agent.velocity = Vector2.zero;
             base.AttackHandle();

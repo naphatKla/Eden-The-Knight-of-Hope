@@ -156,10 +156,10 @@ Transform:
   - {fileID: 1064494681}
   - {fileID: 1475199319}
   - {fileID: 1052815475}
-  - {fileID: 2028981287}
-  - {fileID: 1600582183}
-  - {fileID: 2068988624}
-  - {fileID: 981439173}
+  - {fileID: 643755483}
+  - {fileID: 2067741317}
+  - {fileID: 1037114508}
+  - {fileID: 2030676561}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &80296721
@@ -206,115 +206,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea6fc9ce5565214d898bbc74385460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSpawnArea: {x: 28, y: 8}
-  maxItem: 8
-  currentItemCount: 0
-  itemPrefab: {fileID: 5215402581640511839, guid: 40c235ac6a24eb84da3a89b069f5f394, type: 3}
---- !u!1 &112505617
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 112505618}
-  - component: {fileID: 112505619}
-  m_Layer: 0
-  m_Name: ItemSpawner (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &112505618
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112505617}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.8, y: 7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 945744151}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &112505619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112505617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dea6fc9ce5565214d898bbc74385460e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemSpawnArea: {x: 10, y: 7}
-  maxItem: 3
-  currentItemCount: 0
-  itemPrefab: {fileID: 1652201029327280216, guid: 4e9d80b6a1dbb9240bfe1396341f58e4, type: 3}
---- !u!1001 &121690105
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 36648306}
-    m_Modifications:
-    - target: {fileID: 1189787221261914576, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_Name
-      value: 'NightEnemySpawner '
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 68.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+  spawnArea: {x: 30, y: 10}
+  spawnCooldown: 0
+  spawnOffset: 5
+  maxObject: 15
+  spawnMode: 1
+  objectsToSpawn:
+  - obj: {fileID: 5215402581640511839, guid: 40c235ac6a24eb84da3a89b069f5f394, type: 3}
+    spawnRate: 100
+  gizmosColor: {r: 0.92024183, g: 1, b: 0, a: 1}
 --- !u!1001 &124270892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -397,6 +297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1189787221261914576, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41.7
@@ -442,8 +346,44 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: maxObject
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: nightMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnOffset
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnCooldown
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: enemySpawnTime
@@ -460,6 +400,18 @@ PrefabInstance:
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: enemySpawnRadius.y
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].obj
+      value: 
+      objectReference: {fileID: 3982792202371823300, guid: 6ec4834ef71f58e459b9c24f3c971814, type: 3}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].spawnRate
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -915,6 +867,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawer (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1189787221261914576, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -960,8 +916,44 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: maxObject
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: nightMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnOffset
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnCooldown
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: enemySpawnTime
@@ -970,6 +962,18 @@ PrefabInstance:
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: playerMask.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].obj
+      value: 
+      objectReference: {fileID: 3982792202371823300, guid: 6ec4834ef71f58e459b9c24f3c971814, type: 3}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].spawnRate
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -987,6 +991,10 @@ PrefabInstance:
     - target: {fileID: 1189787221261914576, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: m_Name
       value: EnemySpawer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189787221261914576, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1033,8 +1041,44 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: maxObject
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: nightMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnOffset
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnCooldown
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: enemySpawnTime
@@ -1051,6 +1095,18 @@ PrefabInstance:
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: enemySpawnRadius.y
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].obj
+      value: 
+      objectReference: {fileID: 3982792202371823300, guid: 6ec4834ef71f58e459b9c24f3c971814, type: 3}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].spawnRate
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1472,54 +1528,180 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453419574}
   m_CullTransparentMesh: 1
---- !u!1 &581736850
-GameObject:
+--- !u!1001 &643755482
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 581736851}
-  - component: {fileID: 581736852}
-  m_Layer: 0
-  m_Name: ItemSpawner (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &581736851
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 581736850}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.2, y: 7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 945744151}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &581736852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 36648306}
+    m_Modifications:
+    - target: {fileID: 1189787221261914576, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_Name
+      value: NightModeEnemySpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 68.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: maxEnemy
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: maxObject
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnOffset
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.r
+      value: 0.099043846
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnCooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: enemySpawnTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].obj
+      value: 
+      objectReference: {fileID: 3982792202371823300, guid: 6ec4834ef71f58e459b9c24f3c971814, type: 3}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[1].day
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[2].day
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[3].day
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].spawnRate
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[0].spawnRate
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[1].spawnRate
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[2].spawnRate
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[3].spawnRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[0].spawnCoolDown
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[1].spawnCoolDown
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[2].spawnCoolDown
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[3].spawnCoolDown
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+--- !u!4 &643755483 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+  m_PrefabInstance: {fileID: 643755482}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 581736850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dea6fc9ce5565214d898bbc74385460e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemSpawnArea: {x: 10, y: 7}
-  maxItem: 3
-  currentItemCount: 0
-  itemPrefab: {fileID: 1652201029327280216, guid: 4e9d80b6a1dbb9240bfe1396341f58e4, type: 3}
 --- !u!1 &713615804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,10 +2098,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea6fc9ce5565214d898bbc74385460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSpawnArea: {x: 8, y: 28}
-  maxItem: 8
-  currentItemCount: 0
-  itemPrefab: {fileID: 5215402581640511839, guid: 40c235ac6a24eb84da3a89b069f5f394, type: 3}
+  spawnArea: {x: 10, y: 30}
+  spawnCooldown: 0
+  spawnOffset: 5
+  maxObject: 15
+  spawnMode: 1
+  objectsToSpawn:
+  - obj: {fileID: 5215402581640511839, guid: 40c235ac6a24eb84da3a89b069f5f394, type: 3}
+    spawnRate: 100
+  gizmosColor: {r: 0.92024183, g: 1, b: 0, a: 1}
+--- !u!1 &924886924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 924886925}
+  - component: {fileID: 924886926}
+  m_Layer: 0
+  m_Name: ItemSpawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &924886925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924886924}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.1, y: 6.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 945744151}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &924886926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924886924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea6fc9ce5565214d898bbc74385460e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnArea: {x: 6, y: 11}
+  spawnCooldown: 0
+  spawnOffset: 5
+  maxObject: 5
+  spawnMode: 1
+  objectsToSpawn:
+  - obj: {fileID: 1652201029327280216, guid: 4e9d80b6a1dbb9240bfe1396341f58e4, type: 3}
+    spawnRate: 85
+  - obj: {fileID: 5215402581640511839, guid: 40c235ac6a24eb84da3a89b069f5f394, type: 3}
+    spawnRate: 15
+  gizmosColor: {r: 0, g: 1, b: 0.09689784, a: 1}
 --- !u!1 &945744150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,20 +2192,15 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2104953969}
-  - {fileID: 1911742951}
-  - {fileID: 581736851}
-  - {fileID: 112505618}
+  - {fileID: 1498978915}
+  - {fileID: 924886925}
+  - {fileID: 1623722614}
   - {fileID: 842300997}
   - {fileID: 1953134456}
   - {fileID: 80296722}
   - {fileID: 1569470186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &981439173 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-  m_PrefabInstance: {fileID: 2040343189}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &984849370
 GameObject:
   m_ObjectHideFlags: 0
@@ -3641,7 +3878,6 @@ GameObject:
   - component: {fileID: 1018605129}
   - component: {fileID: 1018605128}
   - component: {fileID: 1018605127}
-  - component: {fileID: 1018605130}
   m_Layer: 0
   m_Name: Gamemanager
   m_TagString: Untagged
@@ -3710,30 +3946,188 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1018605130
-MonoBehaviour:
+--- !u!1001 &1037114507
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 36648306}
+    m_Modifications:
+    - target: {fileID: 1189787221261914576, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_Name
+      value: NightModeEnemySpawn (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -41.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: maxEnemy
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: maxObject
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnOffset
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.r
+      value: 0.099043846
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnCooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: enemySpawnTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: enemySpawnRadius.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: enemySpawnRadius.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].obj
+      value: 
+      objectReference: {fileID: 3982792202371823300, guid: 6ec4834ef71f58e459b9c24f3c971814, type: 3}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[1].day
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[2].day
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[3].day
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].spawnRate
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[0].spawnRate
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[1].spawnRate
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[2].spawnRate
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[3].spawnRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[0].spawnCoolDown
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[1].spawnCoolDown
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[2].spawnCoolDown
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[3].spawnCoolDown
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+--- !u!4 &1037114508 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+  m_PrefabInstance: {fileID: 1037114507}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018605126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e32f365d48c814149ad4ad850c0ba3c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnArea: {x: 15, y: 15}
-  spawnCooldown: 0
-  spawnOffset: 5
-  maxObject: 5
-  objectsToSpawn:
-  - obj: {fileID: 6008912329773076683, guid: a11cbeb6ada0aff4285f9d3cab60ba56, type: 3}
-    spawnRate: 30
-  - obj: {fileID: 9175779923745224691, guid: b59b237477ef9a54fbb10b30ac9dbaaf, type: 3}
-    spawnRate: 40
-  - obj: {fileID: 3880065700372439265, guid: 97fadb5e9226179438d8cdfccd92618e, type: 3}
-    spawnRate: 30
-  spawnedObjects: []
 --- !u!4 &1048040836 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
@@ -4440,6 +4834,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
   m_PrefabInstance: {fileID: 412826601}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1498978914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1498978915}
+  - component: {fileID: 1498978916}
+  m_Layer: 0
+  m_Name: ItemSpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1498978915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498978914}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.9, y: -11.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 945744151}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1498978916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498978914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea6fc9ce5565214d898bbc74385460e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnArea: {x: 30, y: 5.5}
+  spawnCooldown: 0
+  spawnOffset: 5
+  maxObject: 15
+  spawnMode: 1
+  objectsToSpawn:
+  - obj: {fileID: 1652201029327280216, guid: 4e9d80b6a1dbb9240bfe1396341f58e4, type: 3}
+    spawnRate: 85
+  - obj: {fileID: 5215402581640511839, guid: 40c235ac6a24eb84da3a89b069f5f394, type: 3}
+    spawnRate: 15
+  gizmosColor: {r: 0, g: 1, b: 0.09689784, a: 1}
 --- !u!1001 &1555169648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4451,6 +4900,10 @@ PrefabInstance:
     - target: {fileID: 1189787221261914576, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: m_Name
       value: EnemySpawer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189787221261914576, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4497,8 +4950,44 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: maxObject
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: nightMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnOffset
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnCooldown
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: enemySpawnTime
@@ -4507,6 +4996,18 @@ PrefabInstance:
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: playerMask.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].obj
+      value: 
+      objectReference: {fileID: 3982792202371823300, guid: 6ec4834ef71f58e459b9c24f3c971814, type: 3}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].spawnRate
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4704,15 +5205,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea6fc9ce5565214d898bbc74385460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSpawnArea: {x: 28, y: 8}
-  maxItem: 8
-  currentItemCount: 0
-  itemPrefab: {fileID: 5215402581640511839, guid: 40c235ac6a24eb84da3a89b069f5f394, type: 3}
---- !u!4 &1600582183 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-  m_PrefabInstance: {fileID: 1933339351}
+  spawnArea: {x: 30, y: 10}
+  spawnCooldown: 0
+  spawnOffset: 5
+  maxObject: 15
+  spawnMode: 1
+  objectsToSpawn:
+  - obj: {fileID: 5215402581640511839, guid: 40c235ac6a24eb84da3a89b069f5f394, type: 3}
+    spawnRate: 100
+  gizmosColor: {r: 0.92024183, g: 1, b: 0, a: 1}
+--- !u!1 &1623722613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1623722614}
+  - component: {fileID: 1623722615}
+  m_Layer: 0
+  m_Name: ItemSpawner (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1623722614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623722613}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.3, y: 6.3999996, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 945744151}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1623722615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623722613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea6fc9ce5565214d898bbc74385460e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnArea: {x: 5.5, y: 11}
+  spawnCooldown: 0
+  spawnOffset: 5
+  maxObject: 5
+  spawnMode: 1
+  objectsToSpawn:
+  - obj: {fileID: 1652201029327280216, guid: 4e9d80b6a1dbb9240bfe1396341f58e4, type: 3}
+    spawnRate: 85
+  - obj: {fileID: 5215402581640511839, guid: 40c235ac6a24eb84da3a89b069f5f394, type: 3}
+    spawnRate: 15
+  gizmosColor: {r: 0, g: 1, b: 0.09689784, a: 1}
 --- !u!4 &1639813980 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8878054084227812120, guid: bf59aec49af8c7e49888a87bcd664a0e, type: 3}
@@ -5102,83 +5658,6 @@ Transform:
   - {fileID: 1938085327}
   m_Father: {fileID: 1825899641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1800181812
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 36648306}
-    m_Modifications:
-    - target: {fileID: 1189787221261914576, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_Name
-      value: NightEnemySpawner (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -41.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: maxEnemy
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: nightMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: enemySpawnTime
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: enemySpawnRadius.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: enemySpawnRadius.y
-      value: 30
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
 --- !u!1 &1825899640
 GameObject:
   m_ObjectHideFlags: 0
@@ -5428,136 +5907,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887884197}
   m_CullTransparentMesh: 1
---- !u!1 &1911742950
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1911742951}
-  - component: {fileID: 1911742952}
-  m_Layer: 0
-  m_Name: ItemSpawner (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1911742951
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911742950}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.9, y: -10.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 945744151}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1911742952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911742950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dea6fc9ce5565214d898bbc74385460e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemSpawnArea: {x: 29, y: 5.5}
-  maxItem: 7
-  currentItemCount: 0
-  itemPrefab: {fileID: 1652201029327280216, guid: 4e9d80b6a1dbb9240bfe1396341f58e4, type: 3}
 --- !u!4 &1928323379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8878054084227812120, guid: bf59aec49af8c7e49888a87bcd664a0e, type: 3}
   m_PrefabInstance: {fileID: 8782473919801510964}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1933339351
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 36648306}
-    m_Modifications:
-    - target: {fileID: 1189787221261914576, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_Name
-      value: NightEnemySpawner (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 41.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: maxEnemy
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: nightMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: enemySpawnTime
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: enemySpawnRadius.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-      propertyPath: enemySpawnRadius.y
-      value: 30
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
 --- !u!4 &1938085327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8878054084227812120, guid: bf59aec49af8c7e49888a87bcd664a0e, type: 3}
@@ -5607,14 +5961,188 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea6fc9ce5565214d898bbc74385460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSpawnArea: {x: 8, y: 28}
-  maxItem: 8
-  currentItemCount: 0
-  itemPrefab: {fileID: 5215402581640511839, guid: 40c235ac6a24eb84da3a89b069f5f394, type: 3}
---- !u!4 &2028981287 stripped
+  spawnArea: {x: 10, y: 30}
+  spawnCooldown: 0
+  spawnOffset: 5
+  maxObject: 15
+  spawnMode: 1
+  objectsToSpawn:
+  - obj: {fileID: 5215402581640511839, guid: 40c235ac6a24eb84da3a89b069f5f394, type: 3}
+    spawnRate: 100
+  gizmosColor: {r: 0.92024183, g: 1, b: 0, a: 1}
+--- !u!1001 &2030676560
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 36648306}
+    m_Modifications:
+    - target: {fileID: 1189787221261914576, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_Name
+      value: NightModeEnemySpawn (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: maxEnemy
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: maxObject
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnOffset
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.r
+      value: 0.099043846
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnCooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: enemySpawnTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].obj
+      value: 
+      objectReference: {fileID: 3982792202371823300, guid: 6ec4834ef71f58e459b9c24f3c971814, type: 3}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[1].day
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[2].day
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[3].day
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].spawnRate
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[0].spawnRate
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[1].spawnRate
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[2].spawnRate
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[3].spawnRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[0].spawnCoolDown
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[1].spawnCoolDown
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[2].spawnCoolDown
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[3].spawnCoolDown
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+--- !u!4 &2030676561 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-  m_PrefabInstance: {fileID: 121690105}
+  m_PrefabInstance: {fileID: 2030676560}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2034471637
 PrefabInstance:
@@ -5673,7 +6201,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf59aec49af8c7e49888a87bcd664a0e, type: 3}
---- !u!1001 &2040343189
+--- !u!4 &2044856265 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8878054084227812120, guid: bf59aec49af8c7e49888a87bcd664a0e, type: 3}
+  m_PrefabInstance: {fileID: 2133266209}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2067741316
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -5683,15 +6216,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1189787221261914576, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: m_Name
-      value: NightEnemySpawner (3)
+      value: NightModeEnemySpawn (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 41.7
       objectReference: {fileID: 0}
     - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5727,30 +6260,133 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: maxEnemy
-      value: 20
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: maxObject
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: nightMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnArea.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnOffset
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: gizmosColor.r
+      value: 0.099043846
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: spawnCooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
       propertyPath: enemySpawnTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: enemySpawnRadius.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: enemySpawnRadius.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].obj
+      value: 
+      objectReference: {fileID: 3982792202371823300, guid: 6ec4834ef71f58e459b9c24f3c971814, type: 3}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[1].day
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[2].day
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[3].day
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: objectsToSpawn.Array.data[0].spawnRate
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[0].spawnRate
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[1].spawnRate
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[2].spawnRate
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[3].spawnRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[0].spawnCoolDown
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[1].spawnCoolDown
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[2].spawnCoolDown
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156840242956057740, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
+      propertyPath: nightModeSpawnRates.Array.data[3].spawnCoolDown
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
---- !u!4 &2044856265 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8878054084227812120, guid: bf59aec49af8c7e49888a87bcd664a0e, type: 3}
-  m_PrefabInstance: {fileID: 2133266209}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2068988624 stripped
+--- !u!4 &2067741317 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3076847670176742401, guid: f3a9e46fab392764b8589f0b2a2a77ec, type: 3}
-  m_PrefabInstance: {fileID: 1800181812}
+  m_PrefabInstance: {fileID: 2067741316}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2104953968
 GameObject:
@@ -5778,7 +6414,7 @@ Transform:
   m_GameObject: {fileID: 2104953968}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.9, y: 23.6, z: 0}
+  m_LocalPosition: {x: 5.9, y: 23.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5796,10 +6432,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea6fc9ce5565214d898bbc74385460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSpawnArea: {x: 29, y: 5.5}
-  maxItem: 7
-  currentItemCount: 0
-  itemPrefab: {fileID: 1652201029327280216, guid: 4e9d80b6a1dbb9240bfe1396341f58e4, type: 3}
+  spawnArea: {x: 30, y: 5}
+  spawnCooldown: 0
+  spawnOffset: 5
+  maxObject: 15
+  spawnMode: 1
+  objectsToSpawn:
+  - obj: {fileID: 1652201029327280216, guid: 4e9d80b6a1dbb9240bfe1396341f58e4, type: 3}
+    spawnRate: 85
+  - obj: {fileID: 5215402581640511839, guid: 40c235ac6a24eb84da3a89b069f5f394, type: 3}
+    spawnRate: 15
+  gizmosColor: {r: 0, g: 1, b: 0.09689784, a: 1}
 --- !u!1001 &2133266209
 PrefabInstance:
   m_ObjectHideFlags: 0

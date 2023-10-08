@@ -2,8 +2,7 @@
 \hypertarget{class_health_system_1_1_player_health_system}{}\label{class_health_system_1_1_player_health_system}\index{HealthSystem.PlayerHealthSystem@{HealthSystem.PlayerHealthSystem}}
 
 
-Inheritance diagram for Health\+System.\+Player\+Health\+System\+:
-\nopagebreak
+Inheritance diagram for Health\+System.\+Player\+Health\+System\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Health\+System.\+Player\+Health\+System\+:
 \end{figure}
 
 
-Collaboration diagram for Health\+System.\+Player\+Health\+System\+:
-\nopagebreak
+Collaboration diagram for Health\+System.\+Player\+Health\+System\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,7 +27,9 @@ override void \mbox{\hyperlink{class_health_system_1_1_player_health_system_a6b9
 \begin{DoxyCompactItemize}
 \item 
 virtual void \mbox{\hyperlink{class_health_system_1_1_health_system_a9206b51833b78cbb003832eb800ecf7f}{Start}} ()
-\end{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_health_system_1_1_health_system_a2e2a07a077808515447922570ab4ff29}{Heal}} (float heal\+Point)
+\begin{DoxyCompactList}\small\item\em Heal and increase the current hp. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,8 +46,6 @@ float \mbox{\hyperlink{class_health_system_1_1_player_health_system_a64028c7f4ae
 \item 
 virtual void \mbox{\hyperlink{class_health_system_1_1_health_system_a3a267200e5749e4b931038076fed1deb}{Take\+Damage}} (float damage, Game\+Object attacker=null)
 \begin{DoxyCompactList}\small\item\em Take damage and reduce the current hp. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_health_system_1_1_health_system_a2e2a07a077808515447922570ab4ff29}{Heal}} (float heal\+Point)
-\begin{DoxyCompactList}\small\item\em Heal and increase the current hp. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_health_system_1_1_health_system_a0ed4c60e8d2cd69fe6bccf70bf07d4e7}{Reset\+Health}} ()
 \begin{DoxyCompactList}\small\item\em Reset the current hp to max hp. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_health_system_1_1_health_system}{Health\+System.\+Health\+System}}}
@@ -63,7 +61,7 @@ Slider \mbox{\hyperlink{class_health_system_1_1_health_system_afbad83a908f12f18a
 \doxysubsection*{Properties inherited from \mbox{\hyperlink{class_health_system_1_1_health_system}{Health\+System.\+Health\+System}}}
 \begin{DoxyCompactItemize}
 \item 
-float \mbox{\hyperlink{class_health_system_1_1_health_system_ab7ff0c0a74693e7f1fd0e772efe8e47a}{Current\+Hp}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+float \mbox{\hyperlink{class_health_system_1_1_health_system_ab7ff0c0a74693e7f1fd0e772efe8e47a}{Current\+Hp}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
 \end{DoxyCompactItemize}
 
 
@@ -82,8 +80,7 @@ Player Dead and Respawn after a few seconds.
 
 Reimplemented from \mbox{\hyperlink{class_health_system_1_1_health_system_a9151782314f5407f5edf7678593a5137}{Health\+System.\+Health\+System}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -100,16 +97,14 @@ Here is the call graph for this function\+:
 
 Respawn the player. 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_health_system_1_1_player_health_system_a8029cb725e05eaac7de03ed63c4db9e1_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

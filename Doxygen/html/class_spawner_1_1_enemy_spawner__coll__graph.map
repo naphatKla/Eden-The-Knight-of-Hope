@@ -1,5 +1,9 @@
 <map id="Spawner.EnemySpawner" name="Spawner.EnemySpawner">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,172,107"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="34,5,143,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,48,91,80,86,80,86,48"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="50,172,217,199"/>
+<area shape="rect" id="Node000002" href="$class_spawner_1_1_spawner.html" title=" " alt="" coords="24,81,96,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,118,125,170,121,173,78,122"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,115,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="63,47,63,81,57,81,57,47"/>
+<area shape="rect" id="Node000004" href="$struct_spawner_1_1_night_mode_spawn.html" title=" " alt="" coords="120,81,296,108"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="190,122,146,173,142,170,185,118"/>
 </map>

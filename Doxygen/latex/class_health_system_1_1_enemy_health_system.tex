@@ -2,8 +2,7 @@
 \hypertarget{class_health_system_1_1_enemy_health_system}{}\label{class_health_system_1_1_enemy_health_system}\index{HealthSystem.EnemyHealthSystem@{HealthSystem.EnemyHealthSystem}}
 
 
-Inheritance diagram for Health\+System.\+Enemy\+Health\+System\+:
-\nopagebreak
+Inheritance diagram for Health\+System.\+Enemy\+Health\+System\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Health\+System.\+Enemy\+Health\+System\+:
 \end{figure}
 
 
-Collaboration diagram for Health\+System.\+Enemy\+Health\+System\+:
-\nopagebreak
+Collaboration diagram for Health\+System.\+Enemy\+Health\+System\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,13 +21,11 @@ Collaboration diagram for Health\+System.\+Enemy\+Health\+System\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-override void \mbox{\hyperlink{class_health_system_1_1_enemy_health_system_abcfa763537d0d33cdddafc9d4996c7d6}{Take\+Damage}} (float damage, Game\+Object attacker)
-\begin{DoxyCompactList}\small\item\em Take damage and reduce the current hp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+override void \mbox{\hyperlink{class_health_system_1_1_enemy_health_system_a7fcfeb6343b369c883c1ff7013b2101f}{Take\+Damage}} (float damage, Game\+Object attacker=null)
+\begin{DoxyCompactList}\small\item\em Take damage and stun the enemy if the attacker is the player. And then set enemy target to the attacker. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_health_system_1_1_health_system}{Health\+System.\+Health\+System}}}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_health_system_1_1_health_system_a2e2a07a077808515447922570ab4ff29}{Heal}} (float heal\+Point)
-\begin{DoxyCompactList}\small\item\em Heal and increase the current hp. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_health_system_1_1_health_system_a0ed4c60e8d2cd69fe6bccf70bf07d4e7}{Reset\+Health}} ()
 \begin{DoxyCompactList}\small\item\em Reset the current hp to max hp. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
@@ -39,6 +35,11 @@ override void \mbox{\hyperlink{class_health_system_1_1_enemy_health_system_aa40f
 \item 
 override void \mbox{\hyperlink{class_health_system_1_1_enemy_health_system_aabda054513f980e1d2f78aad766b8f5f}{Dead}} ()
 \begin{DoxyCompactList}\small\item\em Dead and add point to the player score. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_health_system_1_1_health_system}{Health\+System.\+Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_health_system_1_1_health_system_a2e2a07a077808515447922570ab4ff29}{Heal}} (float heal\+Point)
+\begin{DoxyCompactList}\small\item\em Heal and increase the current hp. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -63,7 +64,7 @@ Slider \mbox{\hyperlink{class_health_system_1_1_health_system_afbad83a908f12f18a
 \doxysubsection*{Properties inherited from \mbox{\hyperlink{class_health_system_1_1_health_system}{Health\+System.\+Health\+System}}}
 \begin{DoxyCompactItemize}
 \item 
-float \mbox{\hyperlink{class_health_system_1_1_health_system_ab7ff0c0a74693e7f1fd0e772efe8e47a}{Current\+Hp}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+float \mbox{\hyperlink{class_health_system_1_1_health_system_ab7ff0c0a74693e7f1fd0e772efe8e47a}{Current\+Hp}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
 \end{DoxyCompactItemize}
 
 
@@ -118,41 +119,39 @@ stun the enemy.
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_health_system_1_1_enemy_health_system_aab911964b3572367e76ab9e1fd9c60bd_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{class_health_system_1_1_enemy_health_system_abcfa763537d0d33cdddafc9d4996c7d6}\label{class_health_system_1_1_enemy_health_system_abcfa763537d0d33cdddafc9d4996c7d6} 
+\Hypertarget{class_health_system_1_1_enemy_health_system_a7fcfeb6343b369c883c1ff7013b2101f}\label{class_health_system_1_1_enemy_health_system_a7fcfeb6343b369c883c1ff7013b2101f} 
 \index{HealthSystem.EnemyHealthSystem@{HealthSystem.EnemyHealthSystem}!TakeDamage@{TakeDamage}}
 \index{TakeDamage@{TakeDamage}!HealthSystem.EnemyHealthSystem@{HealthSystem.EnemyHealthSystem}}
 \doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
-{\footnotesize\ttfamily override void Health\+System.\+Enemy\+Health\+System.\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage,  }\item[{Game\+Object}]{attacker }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily override void Health\+System.\+Enemy\+Health\+System.\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage,  }\item[{Game\+Object}]{attacker = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Take damage and reduce the current hp. 
+Take damage and stun the enemy if the attacker is the player. And then set enemy target to the attacker. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em damage} & Damage taken.\\
 \hline
-{\em attacker} & Attacker.\\
+{\em attacker} & The Attacker.\\
 \hline
 \end{DoxyParams}
 
 
 Reimplemented from \mbox{\hyperlink{class_health_system_1_1_health_system_a3a267200e5749e4b931038076fed1deb}{Health\+System.\+Health\+System}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_health_system_1_1_enemy_health_system_abcfa763537d0d33cdddafc9d4996c7d6_cgraph}
+\includegraphics[width=350pt]{class_health_system_1_1_enemy_health_system_a7fcfeb6343b369c883c1ff7013b2101f_cgraph}
 \end{center}
 \end{figure}
 

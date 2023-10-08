@@ -1,24 +1,22 @@
 var searchData=
 [
-  ['idle_0',['idle',['../class_enemy_behavior_1_1_enemy.html#abc6231d5ba60a68deaae0a5578ae8656ae599161956d626eda4cb0a5ffb85271c',1,'EnemyBehavior.Enemy.Idle'],['../namespace_player_behavior.html#aedc9e849ec59dbbc9036a353ca4a0596ae599161956d626eda4cb0a5ffb85271c',1,'PlayerBehavior.Idle']]],
+  ['idle_0',['idle',['../namespace_enemy_behavior.html#ad2d0f2009098236b7e6ae2f150c23923ae599161956d626eda4cb0a5ffb85271c',1,'EnemyBehavior.Idle'],['../namespace_player_behavior.html#aedc9e849ec59dbbc9036a353ca4a0596ae599161956d626eda4cb0a5ffb85271c',1,'PlayerBehavior.Idle']]],
   ['idlehandle_1',['IdleHandle',['../class_enemy_behavior_1_1_enemy.html#a082f327c926a9ada07d386c6efee1eab',1,'EnemyBehavior::Enemy']]],
   ['init_2',['Init',['../class_tower_1_1_bullet.html#a533d2b58640b86328be9af48cfd39bbc',1,'Tower::Bullet']]],
-  ['instance_3',['instance',['../class_game_manager.html#a7666e8468dac197b9eb32dd32128524f',1,'GameManager.instance'],['../class_time_system.html#ae617e0940c0aedfe161aed26afb0a567',1,'TimeSystem.instance'],['../class_player_behavior_1_1_player.html#a4e93681640148a44065976f73fbb1ae3',1,'PlayerBehavior.Player.Instance'],['../class_singleton.html#a54103e8475b2a352ee759d5732307534',1,'Singleton.Instance']]],
+  ['instance_3',['instance',['../class_game_manager.html#ad3e717f4fb0f378b969f4457de81f23e',1,'GameManager.Instance'],['../class_player_behavior_1_1_player.html#a4e93681640148a44065976f73fbb1ae3',1,'PlayerBehavior.Player.Instance'],['../class_singleton.html#a54103e8475b2a352ee759d5732307534',1,'Singleton.Instance'],['../class_time_system.html#adeddbf08c28709d579a966c3827fb136',1,'TimeSystem.Instance']]],
   ['interactablemask_4',['interactableMask',['../class_player_behavior_1_1_player_interact_system.html#a84df53b259d5ef30975ab98efcbe4728',1,'PlayerBehavior::PlayerInteractSystem']]],
   ['interactableobject_5',['InteractableObject',['../class_interaction_1_1_interactable_object.html',1,'Interaction']]],
   ['interactableobject_2ecs_6',['InteractableObject.cs',['../_interactable_object_8cs.html',1,'']]],
   ['interactaction_7',['interactaction',['../class_interaction_1_1_interactable_object.html#ae0c84bcbffebccfc5c0ab2d9e5ed0353',1,'Interaction.InteractableObject.InteractAction()'],['../class_interaction_1_1_tower_platform.html#aa7f42872ee4750219453678ef6cd5c10',1,'Interaction.TowerPlatform.InteractAction()']]],
   ['interacthandle_8',['InteractHandle',['../class_player_behavior_1_1_player_interact_system.html#a9a02ba7e7f59f4b96c2e1b1d6ee7442f',1,'PlayerBehavior::PlayerInteractSystem']]],
-  ['interacthandler_9',['interacthandler',['../class_interaction_1_1_gathering_resource.html#ad860240aff488a1272fa5d23256903f1',1,'Interaction.GatheringResource.InteractHandler()'],['../class_interaction_1_1_interactable_object.html#a4a2aac0d809efa17c3dc29dfa4c26bcd',1,'Interaction.InteractableObject.InteractHandler()'],['../class_interaction_1_1_tower_platform.html#af32a3ca65970d728f16f788e977051f8',1,'Interaction.TowerPlatform.InteractHandler()']]],
+  ['interacthandler_9',['interacthandler',['../class_interaction_1_1_interactable_object.html#a4a2aac0d809efa17c3dc29dfa4c26bcd',1,'Interaction.InteractableObject.InteractHandler()'],['../class_interaction_1_1_tower_platform.html#af32a3ca65970d728f16f788e977051f8',1,'Interaction.TowerPlatform.InteractHandler()']]],
   ['interaction_10',['Interaction',['../namespace_interaction.html',1,'']]],
   ['interactionindicators_11',['interactionIndicators',['../class_interaction_1_1_interactable_object.html#aad3f9eece63ea7fe6493cfee8749bb23',1,'Interaction::InteractableObject']]],
   ['interactionpoint_12',['interactionPoint',['../class_player_behavior_1_1_player_interact_system.html#a61b9491e9ede792e7884500b76e89344',1,'PlayerBehavior::PlayerInteractSystem']]],
   ['interactionpointradius_13',['interactionPointRadius',['../class_player_behavior_1_1_player_interact_system.html#abe149e34921b813b9234a1b668ce4d81',1,'PlayerBehavior::PlayerInteractSystem']]],
   ['interactiontextui_14',['interactionTextUI',['../class_interaction_1_1_interactable_object.html#af0c598bf98ba69f9811f05a9f5cbbb90',1,'Interaction::InteractableObject']]],
-  ['isreducerate_15',['isReduceRate',['../class_spawner_1_1_enemy_spawner.html#a29cc32e79800ecdbb1507a93eed67a52',1,'Spawner::EnemySpawner']]],
+  ['isspawningcomplete_15',['IsSpawningComplete',['../class_spawner_1_1_spawner.html#a7f20e1a3cec8ca4d0deb0015e3776ba5',1,'Spawner::Spawner']]],
   ['isstun_16',['IsStun',['../class_enemy_behavior_1_1_enemy.html#a8fe2c7e03f96f6d2c6e559d96d45faa1',1,'EnemyBehavior::Enemy']]],
-  ['itemprefab_17',['itemPrefab',['../class_spawner_1_1_item_spawner.html#a07313dadc5b01b9772162bb79242fbe9',1,'Spawner::ItemSpawner']]],
-  ['itemspawnarea_18',['itemSpawnArea',['../class_spawner_1_1_item_spawner.html#ae030863d2105e993713a401a7fc45cf9',1,'Spawner::ItemSpawner']]],
-  ['itemspawner_19',['ItemSpawner',['../class_spawner_1_1_item_spawner.html',1,'Spawner']]],
-  ['itemspawner_2ecs_20',['ItemSpawner.cs',['../_item_spawner_8cs.html',1,'']]]
+  ['itemspawner_17',['ItemSpawner',['../class_spawner_1_1_item_spawner.html',1,'Spawner']]],
+  ['itemspawner_2ecs_18',['ItemSpawner.cs',['../_item_spawner_8cs.html',1,'']]]
 ];

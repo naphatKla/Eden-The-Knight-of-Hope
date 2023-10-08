@@ -13,14 +13,20 @@ namespace HealthSystem
             base.Start();
         }
     
-        public override void TakeDamage(float damage, GameObject attacker)
+        /// <summary>
+        /// Take damage and stun the enemy if the attacker is the player.
+        /// And then set enemy target to the attacker.
+        /// </summary>
+        /// <param name="damage">Damage taken.</param>
+        /// <param name="attacker">The Attacker.</param>
+        public override void TakeDamage(float damage, GameObject attacker = null)
         {
             _enemy.Target = attacker;
         
-            if (attacker.CompareTag("Player"))
+            if (attacker && attacker.CompareTag("Player"))
                 StartCoroutine(Stun(0.5f));
         
-            base.TakeDamage(damage);
+            base.TakeDamage(damage, attacker);
         }
     
         /// <summary>
@@ -29,7 +35,7 @@ namespace HealthSystem
         protected override void Dead()
         {
             if(Random.Range(0,101) >= 90)
-                GameManager.instance.AddPoint(10);
+                GameManager.Instance.AddPoint(10);
         
             base.Dead();
         }

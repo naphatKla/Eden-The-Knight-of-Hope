@@ -81,6 +81,7 @@ $(function() {
 <a href="#properties">Properties</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_health_system_1_1_health_system-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">HealthSystem.HealthSystem Class Reference</div></div>
 </div><!--header-->
@@ -117,9 +118,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3a267200e5749e4b931038076fed1deb" id="r_a3a267200e5749e4b931038076fed1deb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#a3a267200e5749e4b931038076fed1deb">TakeDamage</a> (float damage, GameObject attacker=null)</td></tr>
 <tr class="memdesc:a3a267200e5749e4b931038076fed1deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Take damage and reduce the current hp.  <br /></td></tr>
 <tr class="separator:a3a267200e5749e4b931038076fed1deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e2a07a077808515447922570ab4ff29" id="r_a2e2a07a077808515447922570ab4ff29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#a2e2a07a077808515447922570ab4ff29">Heal</a> (float healPoint)</td></tr>
-<tr class="memdesc:a2e2a07a077808515447922570ab4ff29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Heal and increase the current hp.  <br /></td></tr>
-<tr class="separator:a2e2a07a077808515447922570ab4ff29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ed4c60e8d2cd69fe6bccf70bf07d4e7" id="r_a0ed4c60e8d2cd69fe6bccf70bf07d4e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#a0ed4c60e8d2cd69fe6bccf70bf07d4e7">ResetHealth</a> ()</td></tr>
 <tr class="memdesc:a0ed4c60e8d2cd69fe6bccf70bf07d4e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the current hp to max hp.  <br /></td></tr>
 <tr class="separator:a0ed4c60e8d2cd69fe6bccf70bf07d4e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,6 +131,9 @@ Public Attributes</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a9206b51833b78cbb003832eb800ecf7f" id="r_a9206b51833b78cbb003832eb800ecf7f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#a9206b51833b78cbb003832eb800ecf7f">Start</a> ()</td></tr>
 <tr class="separator:a9206b51833b78cbb003832eb800ecf7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e2a07a077808515447922570ab4ff29" id="r_a2e2a07a077808515447922570ab4ff29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#a2e2a07a077808515447922570ab4ff29">Heal</a> (float healPoint)</td></tr>
+<tr class="memdesc:a2e2a07a077808515447922570ab4ff29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Heal and increase the current hp.  <br /></td></tr>
+<tr class="separator:a2e2a07a077808515447922570ab4ff29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9151782314f5407f5edf7678593a5137" id="r_a9151782314f5407f5edf7678593a5137"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#a9151782314f5407f5edf7678593a5137">Dead</a> ()</td></tr>
 <tr class="memdesc:a9151782314f5407f5edf7678593a5137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dead and destroy the object.  <br /></td></tr>
 <tr class="separator:a9151782314f5407f5edf7678593a5137"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,7 +145,7 @@ Protected Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:ab7ff0c0a74693e7f1fd0e772efe8e47a" id="r_ab7ff0c0a74693e7f1fd0e772efe8e47a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#ab7ff0c0a74693e7f1fd0e772efe8e47a">CurrentHp</a><code> [get, protected set]</code></td></tr>
+<tr class="memitem:ab7ff0c0a74693e7f1fd0e772efe8e47a" id="r_ab7ff0c0a74693e7f1fd0e772efe8e47a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#ab7ff0c0a74693e7f1fd0e772efe8e47a">CurrentHp</a><code> [get, private set]</code></td></tr>
 <tr class="separator:ab7ff0c0a74693e7f1fd0e772efe8e47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
@@ -161,6 +162,11 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aa1394c40f00ca88dbed1067b7255dc47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4a697d6384dae06849c6f14c78ad030" id="r_ac4a697d6384dae06849c6f14c78ad030"><td class="memItemLeft" align="right" valign="top">Animator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#ac4a697d6384dae06849c6f14c78ad030">_animator</a></td></tr>
 <tr class="separator:ac4a697d6384dae06849c6f14c78ad030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a81d4e10a7a086409b311b7c7ceae5e21" id="r_a81d4e10a7a086409b311b7c7ceae5e21"><td class="memItemLeft" align="right" valign="top">static readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#a81d4e10a7a086409b311b7c7ceae5e21">TakDamage</a> = Animator.StringToHash(&quot;TakeDamage&quot;)</td></tr>
+<tr class="separator:a81d4e10a7a086409b311b7c7ceae5e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9151782314f5407f5edf7678593a5137" name="a9151782314f5407f5edf7678593a5137"></a>
@@ -197,6 +203,9 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void HealthSystem.HealthSystem.Heal </td>
@@ -206,6 +215,11 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Heal and increase the current hp. </p>
@@ -354,7 +368,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_health_system_1_1_enemy_health_system.html#abcfa763537d0d33cdddafc9d4996c7d6">HealthSystem.EnemyHealthSystem</a>.</p>
+<p>Reimplemented in <a class="el" href="class_health_system_1_1_enemy_health_system.html#a7fcfeb6343b369c883c1ff7013b2101f">HealthSystem.EnemyHealthSystem</a>.</p>
 
 </div>
 </div>
@@ -466,6 +480,28 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a81d4e10a7a086409b311b7c7ceae5e21" name="a81d4e10a7a086409b311b7c7ceae5e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81d4e10a7a086409b311b7c7ceae5e21">&#9670;&#160;</a></span>TakDamage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly int HealthSystem.HealthSystem.TakDamage = Animator.StringToHash(&quot;TakeDamage&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Property Documentation</h2>
 <a id="ab7ff0c0a74693e7f1fd0e772efe8e47a" name="ab7ff0c0a74693e7f1fd0e772efe8e47a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7ff0c0a74693e7f1fd0e772efe8e47a">&#9670;&#160;</a></span>CurrentHp</h2>
@@ -482,7 +518,7 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

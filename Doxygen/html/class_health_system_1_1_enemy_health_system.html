@@ -112,13 +112,10 @@ Collaboration diagram for HealthSystem.EnemyHealthSystem:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abcfa763537d0d33cdddafc9d4996c7d6" id="r_abcfa763537d0d33cdddafc9d4996c7d6"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_enemy_health_system.html#abcfa763537d0d33cdddafc9d4996c7d6">TakeDamage</a> (float damage, GameObject attacker)</td></tr>
-<tr class="memdesc:abcfa763537d0d33cdddafc9d4996c7d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Take damage and reduce the current hp.  <br /></td></tr>
-<tr class="separator:abcfa763537d0d33cdddafc9d4996c7d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fcfeb6343b369c883c1ff7013b2101f" id="r_a7fcfeb6343b369c883c1ff7013b2101f"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_enemy_health_system.html#a7fcfeb6343b369c883c1ff7013b2101f">TakeDamage</a> (float damage, GameObject attacker=null)</td></tr>
+<tr class="memdesc:a7fcfeb6343b369c883c1ff7013b2101f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Take damage and stun the enemy if the attacker is the player. And then set enemy target to the attacker.  <br /></td></tr>
+<tr class="separator:a7fcfeb6343b369c883c1ff7013b2101f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_health_system_1_1_health_system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_health_system_1_1_health_system')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_health_system_1_1_health_system.html">HealthSystem.HealthSystem</a></td></tr>
-<tr class="memitem:a2e2a07a077808515447922570ab4ff29 inherit pub_methods_class_health_system_1_1_health_system" id="r_a2e2a07a077808515447922570ab4ff29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#a2e2a07a077808515447922570ab4ff29">Heal</a> (float healPoint)</td></tr>
-<tr class="memdesc:a2e2a07a077808515447922570ab4ff29 inherit pub_methods_class_health_system_1_1_health_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Heal and increase the current hp.  <br /></td></tr>
-<tr class="separator:a2e2a07a077808515447922570ab4ff29 inherit pub_methods_class_health_system_1_1_health_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ed4c60e8d2cd69fe6bccf70bf07d4e7 inherit pub_methods_class_health_system_1_1_health_system" id="r_a0ed4c60e8d2cd69fe6bccf70bf07d4e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#a0ed4c60e8d2cd69fe6bccf70bf07d4e7">ResetHealth</a> ()</td></tr>
 <tr class="memdesc:a0ed4c60e8d2cd69fe6bccf70bf07d4e7 inherit pub_methods_class_health_system_1_1_health_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the current hp to max hp.  <br /></td></tr>
 <tr class="separator:a0ed4c60e8d2cd69fe6bccf70bf07d4e7 inherit pub_methods_class_health_system_1_1_health_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,6 +127,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aabda054513f980e1d2f78aad766b8f5f" id="r_aabda054513f980e1d2f78aad766b8f5f"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_enemy_health_system.html#aabda054513f980e1d2f78aad766b8f5f">Dead</a> ()</td></tr>
 <tr class="memdesc:aabda054513f980e1d2f78aad766b8f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dead and add point to the player score.  <br /></td></tr>
 <tr class="separator:aabda054513f980e1d2f78aad766b8f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_health_system_1_1_health_system"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_health_system_1_1_health_system')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_health_system_1_1_health_system.html">HealthSystem.HealthSystem</a></td></tr>
+<tr class="memitem:a2e2a07a077808515447922570ab4ff29 inherit pro_methods_class_health_system_1_1_health_system" id="r_a2e2a07a077808515447922570ab4ff29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#a2e2a07a077808515447922570ab4ff29">Heal</a> (float healPoint)</td></tr>
+<tr class="memdesc:a2e2a07a077808515447922570ab4ff29 inherit pro_methods_class_health_system_1_1_health_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Heal and increase the current hp.  <br /></td></tr>
+<tr class="separator:a2e2a07a077808515447922570ab4ff29 inherit pro_methods_class_health_system_1_1_health_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -151,7 +152,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:afbad83a908f12f18ad81c9140fae05cc inherit pro_attribs_class_health_system_1_1_health_system" id="r_afbad83a908f12f18ad81c9140fae05cc"><td class="memItemLeft" align="right" valign="top">Slider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#afbad83a908f12f18ad81c9140fae05cc">sliderHpPlayer</a></td></tr>
 <tr class="separator:afbad83a908f12f18ad81c9140fae05cc inherit pro_attribs_class_health_system_1_1_health_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_class_health_system_1_1_health_system"><td colspan="2" onclick="javascript:toggleInherit('properties_class_health_system_1_1_health_system')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_health_system_1_1_health_system.html">HealthSystem.HealthSystem</a></td></tr>
-<tr class="memitem:ab7ff0c0a74693e7f1fd0e772efe8e47a inherit properties_class_health_system_1_1_health_system" id="r_ab7ff0c0a74693e7f1fd0e772efe8e47a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#ab7ff0c0a74693e7f1fd0e772efe8e47a">CurrentHp</a><code> [get, protected set]</code></td></tr>
+<tr class="memitem:ab7ff0c0a74693e7f1fd0e772efe8e47a inherit properties_class_health_system_1_1_health_system" id="r_ab7ff0c0a74693e7f1fd0e772efe8e47a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health_system_1_1_health_system.html#ab7ff0c0a74693e7f1fd0e772efe8e47a">CurrentHp</a><code> [get, private set]</code></td></tr>
 <tr class="separator:ab7ff0c0a74693e7f1fd0e772efe8e47a inherit properties_class_health_system_1_1_health_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -187,9 +188,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="class_health_system_1_1_enemy_health_system_aabda054513f980e1d2f78aad766b8f5f_cgraph.png" border="0" usemap="#aclass_health_system_1_1_enemy_health_system_aabda054513f980e1d2f78aad766b8f5f_cgraph" alt=""/></div>
 <map name="aclass_health_system_1_1_enemy_health_system_aabda054513f980e1d2f78aad766b8f5f_cgraph" id="aclass_health_system_1_1_enemy_health_system_aabda054513f980e1d2f78aad766b8f5f_cgraph">
 <area shape="rect" title="Dead and add point to the player score." alt="" coords="5,5,191,48"/>
-<area shape="rect" href="class_game_manager.html#a5d3c9753598caba92f5f58658a5eb1a2" title=" " alt="" coords="239,13,402,40"/>
+<area shape="rect" href="class_game_manager.html#a5d3c9753598caba92f5f58658a5eb1a2" title="Add point to the total point." alt="" coords="239,13,402,40"/>
 <area shape="poly" title=" " alt="" coords="191,24,223,24,223,29,191,29"/>
-<area shape="rect" href="class_game_manager.html#a2f25fce454f2aa38a41b464fc120af16" title=" " alt="" coords="450,5,653,48"/>
+<area shape="rect" href="class_game_manager.html#a2f25fce454f2aa38a41b464fc120af16" title="Toggle set active game object relate with animation. Set active game object and wait until the animat..." alt="" coords="450,5,653,48"/>
 <area shape="poly" title=" " alt="" coords="402,24,434,24,434,29,402,29"/>
 </map>
 </div>
@@ -261,15 +262,15 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_health_system_1_1_enemy_health_system_aab911964b3572367e76ab9e1fd9c60bd_icgraph.png" border="0" usemap="#aclass_health_system_1_1_enemy_health_system_aab911964b3572367e76ab9e1fd9c60bd_icgraph" alt=""/></div>
 <map name="aclass_health_system_1_1_enemy_health_system_aab911964b3572367e76ab9e1fd9c60bd_icgraph" id="aclass_health_system_1_1_enemy_health_system_aab911964b3572367e76ab9e1fd9c60bd_icgraph">
 <area shape="rect" title="stun the enemy." alt="" coords="239,5,424,48"/>
-<area shape="rect" href="class_health_system_1_1_enemy_health_system.html#abcfa763537d0d33cdddafc9d4996c7d6" title="Take damage and reduce the current hp." alt="" coords="5,5,191,48"/>
+<area shape="rect" href="class_health_system_1_1_enemy_health_system.html#a7fcfeb6343b369c883c1ff7013b2101f" title="Take damage and stun the enemy if the attacker is the player. And then set enemy target to the attack..." alt="" coords="5,5,191,48"/>
 <area shape="poly" title=" " alt="" coords="223,29,191,29,191,24,223,24"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="abcfa763537d0d33cdddafc9d4996c7d6" name="abcfa763537d0d33cdddafc9d4996c7d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcfa763537d0d33cdddafc9d4996c7d6">&#9670;&#160;</a></span>TakeDamage()</h2>
+<a id="a7fcfeb6343b369c883c1ff7013b2101f" name="a7fcfeb6343b369c883c1ff7013b2101f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fcfeb6343b369c883c1ff7013b2101f">&#9670;&#160;</a></span>TakeDamage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,7 +288,7 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">GameObject&#160;</td>
-          <td class="paramname"><em>attacker</em>&#160;</td>
+          <td class="paramname"><em>attacker</em> = <code>null</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -302,11 +303,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Take damage and reduce the current hp. </p>
+<p>Take damage and stun the enemy if the attacker is the player. And then set enemy target to the attacker. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">damage</td><td>Damage taken.</td></tr>
-    <tr><td class="paramname">attacker</td><td>Attacker.</td></tr>
+    <tr><td class="paramname">attacker</td><td>The Attacker.</td></tr>
   </table>
   </dd>
 </dl>
@@ -315,9 +316,9 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_health_system_1_1_enemy_health_system_abcfa763537d0d33cdddafc9d4996c7d6_cgraph.png" border="0" usemap="#aclass_health_system_1_1_enemy_health_system_abcfa763537d0d33cdddafc9d4996c7d6_cgraph" alt=""/></div>
-<map name="aclass_health_system_1_1_enemy_health_system_abcfa763537d0d33cdddafc9d4996c7d6_cgraph" id="aclass_health_system_1_1_enemy_health_system_abcfa763537d0d33cdddafc9d4996c7d6_cgraph">
-<area shape="rect" title="Take damage and reduce the current hp." alt="" coords="5,5,191,48"/>
+<div class="center"><img src="class_health_system_1_1_enemy_health_system_a7fcfeb6343b369c883c1ff7013b2101f_cgraph.png" border="0" usemap="#aclass_health_system_1_1_enemy_health_system_a7fcfeb6343b369c883c1ff7013b2101f_cgraph" alt=""/></div>
+<map name="aclass_health_system_1_1_enemy_health_system_a7fcfeb6343b369c883c1ff7013b2101f_cgraph" id="aclass_health_system_1_1_enemy_health_system_a7fcfeb6343b369c883c1ff7013b2101f_cgraph">
+<area shape="rect" title="Take damage and stun the enemy if the attacker is the player. And then set enemy target to the attack..." alt="" coords="5,5,191,48"/>
 <area shape="rect" href="class_health_system_1_1_enemy_health_system.html#aab911964b3572367e76ab9e1fd9c60bd" title="stun the enemy." alt="" coords="239,5,424,48"/>
 <area shape="poly" title=" " alt="" coords="191,24,223,24,223,29,191,29"/>
 </map>

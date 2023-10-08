@@ -46,6 +46,7 @@ namespace Interaction
         {
             // Pls override this method
             // Do something when interact
+            if(!Input.GetKeyDown(key)) return;
             if(_interactCoroutine != null) return;
             _interactCoroutine = StartCoroutine(CountDownAndInteract(countdownTime));
         }
@@ -56,7 +57,7 @@ namespace Interaction
         /// </summary>
         protected virtual void InteractAction()
         {
-            GameManager.instance.AddPoint(point);
+            GameManager.Instance.AddPoint(point);
             Destroy(gameObject);
         }
     

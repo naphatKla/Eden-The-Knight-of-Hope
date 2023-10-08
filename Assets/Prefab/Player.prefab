@@ -306,7 +306,7 @@ MonoBehaviour:
     attackState: 1
   - power: 1.5
     delay: 0.1
-    cooldown: 3
+    cooldown: 1.5
     attackState: 2
   attackState: 0
 --- !u!114 &1049984963322112933

@@ -16,5 +16,6 @@ var searchData=
   ['attackstate_13',['attackstate',['../struct_combat_system_1_1_attack_pattern.html#a5ed73d5524a24283a7a721f56bdfb1b5',1,'CombatSystem.AttackPattern.attackState'],['../class_combat_system_1_1_combat_system.html#a20d420abc177b30bc298abe737cf0f45',1,'CombatSystem.CombatSystem.attackState'],['../namespace_combat_system.html#ae33d2cd9c278bbfe6ba5eed0a01f8623',1,'CombatSystem.AttackState']]],
   ['attackstate0_14',['AttackState0',['../namespace_combat_system.html#ae33d2cd9c278bbfe6ba5eed0a01f8623aa6f14a49a2025ae1f86a4179c2172b36',1,'CombatSystem']]],
   ['attackstate1_15',['AttackState1',['../namespace_combat_system.html#ae33d2cd9c278bbfe6ba5eed0a01f8623adbc0fb4969e5e23177e6a688b53183be',1,'CombatSystem']]],
-  ['attackstate2_16',['AttackState2',['../namespace_combat_system.html#ae33d2cd9c278bbfe6ba5eed0a01f8623ab60a45719bb307993e022380b1a05cd2',1,'CombatSystem']]]
+  ['attackstate2_16',['AttackState2',['../namespace_combat_system.html#ae33d2cd9c278bbfe6ba5eed0a01f8623ab60a45719bb307993e022380b1a05cd2',1,'CombatSystem']]],
+  ['awake_17',['Awake',['../class_time_system.html#a8cb9e08bc6be6507c470e68266ecee18',1,'TimeSystem']]]
 ];

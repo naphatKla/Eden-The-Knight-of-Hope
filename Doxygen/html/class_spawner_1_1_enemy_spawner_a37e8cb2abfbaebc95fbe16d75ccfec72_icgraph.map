@@ -1,0 +1,5 @@
+<map id="Spawner.EnemySpawner.ReduceSpawnRateOnTheNewDay" name="Spawner.EnemySpawner.ReduceSpawnRateOnTheNewDay">
+<area shape="rect" id="Node000001" title="Reduce spawn rate on the new day." alt="" coords="252,5,466,48"/>
+<area shape="rect" id="Node000002" href="$class_spawner_1_1_enemy_spawner.html#a0a69b3cd14757e7b4b21e5f8f066cc9c" title=" " alt="" coords="5,13,204,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,29,204,29,204,24,236,24"/>
+</map>

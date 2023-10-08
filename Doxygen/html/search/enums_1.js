@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enemystate_0',['EnemyState',['../class_enemy_behavior_1_1_enemy.html#abc6231d5ba60a68deaae0a5578ae8656',1,'EnemyBehavior::Enemy']]]
+  ['enemystate_0',['EnemyState',['../namespace_enemy_behavior.html#ad2d0f2009098236b7e6ae2f150c23923',1,'EnemyBehavior']]]
 ];

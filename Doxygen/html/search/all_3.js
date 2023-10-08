@@ -12,9 +12,7 @@ var searchData=
   ['cost_9',['cost',['../class_interaction_1_1_tower_platform.html#a7b45086ecceffd072d754b5d44498184',1,'Interaction::TowerPlatform']]],
   ['countdownandinteract_10',['CountDownAndInteract',['../class_interaction_1_1_interactable_object.html#a11dc0a92d593103485ab7e64cfffe72e',1,'Interaction::InteractableObject']]],
   ['countdowntime_11',['countdownTime',['../class_interaction_1_1_interactable_object.html#a29ab06f2211cb4d4bdadb338341fe979',1,'Interaction::InteractableObject']]],
-  ['currentenemycount_12',['currentEnemyCount',['../class_spawner_1_1_enemy_spawner.html#a788ea55ebda72dad290ff4cc0999b1b8',1,'Spawner::EnemySpawner']]],
-  ['currenthp_13',['CurrentHp',['../class_health_system_1_1_health_system.html#ab7ff0c0a74693e7f1fd0e772efe8e47a',1,'HealthSystem::HealthSystem']]],
-  ['currentitemcount_14',['currentItemCount',['../class_spawner_1_1_item_spawner.html#ac7adc3726580b4df215b8624bd121873',1,'Spawner::ItemSpawner']]],
-  ['currenttarget_15',['CurrentTarget',['../class_tower_1_1_tower.html#a16810ebba24fd064b68b84388d1bb0c3',1,'Tower::Tower']]],
-  ['cyclelength_16',['cycleLength',['../class_time_system.html#a8b22a3a3fe5ce7429521c24acef884e6',1,'TimeSystem']]]
+  ['currenthp_12',['CurrentHp',['../class_health_system_1_1_health_system.html#ab7ff0c0a74693e7f1fd0e772efe8e47a',1,'HealthSystem::HealthSystem']]],
+  ['currenttarget_13',['CurrentTarget',['../class_tower_1_1_tower.html#a16810ebba24fd064b68b84388d1bb0c3',1,'Tower::Tower']]],
+  ['cyclelength_14',['cycleLength',['../class_time_system.html#a8b22a3a3fe5ce7429521c24acef884e6',1,'TimeSystem']]]
 ];
