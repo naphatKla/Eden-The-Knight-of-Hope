@@ -22,11 +22,11 @@ Collaboration diagram for Game\+Manager\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_game_manager_a5d3c9753598caba92f5f58658a5eb1a2}{Add\+Point}} (int n)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Add point to the total point. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{class_game_manager_a42266428fb51e0babbeeb9b993c39713}{total\+Point}} = 0
+int \mbox{\hyperlink{class_game_manager_a42266428fb51e0babbeeb9b993c39713}{total\+Point}}
 \item 
 Vector2 \mbox{\hyperlink{class_game_manager_a2d411fec5f42bc8fa6d214b2ddef0b9e}{spawn\+Point}}
 \item 
@@ -37,7 +37,7 @@ Transform \mbox{\hyperlink{class_game_manager_a81a5562333289fa9406098e4a2b615c9}
 \doxysubsubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{class_game_manager}{Game\+Manager}} \mbox{\hyperlink{class_game_manager_a7666e8468dac197b9eb32dd32128524f}{instance}}
+static \mbox{\hyperlink{class_game_manager}{Game\+Manager}} \mbox{\hyperlink{class_game_manager_ad3e717f4fb0f378b969f4457de81f23e}{Instance}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -46,8 +46,10 @@ void \mbox{\hyperlink{class_game_manager_a5ccfacd027ad08eeb4ff1f25a7f59c98}{Star
 \item 
 void \mbox{\hyperlink{class_game_manager_a44c79b205dec16bfe650e21259860c5b}{Update}} ()
 \item 
+void \mbox{\hyperlink{class_game_manager_aaa54247670379ebc17bea1edd0d3a156}{Even\+Warning\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Warning player when the enemy wave are coming (17\+:00 -\/ 19\+:00). \end{DoxyCompactList}\item 
 IEnumerator \mbox{\hyperlink{class_game_manager_a2f25fce454f2aa38a41b464fc120af16}{Toggle\+Set\+Active\+Relate\+With\+Animation}} (Game\+Object obj)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Toggle set active game object relate with animation. Set active game object and wait until the animation is done. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -56,8 +58,6 @@ Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_game_manager_a7b08871a77b3b6442f881
 Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_game_manager_a458be1d7e668f0479ab55c713f5f9e02}{score\+Add\+Animation}}
 \item 
 Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_game_manager_a88218bc81d33308f08ab0b86986cadb0}{warning\+Text}}
-\item 
-bool \mbox{\hyperlink{class_game_manager_af409cae632f264d4e0c2469dbc11be99}{\+\_\+is\+Warning}}
 \end{DoxyCompactItemize}
 
 
@@ -68,6 +68,15 @@ bool \mbox{\hyperlink{class_game_manager_af409cae632f264d4e0c2469dbc11be99}{\+\_
 \doxysubsubsection{\texorpdfstring{AddPoint()}{AddPoint()}}
 {\footnotesize\ttfamily void Game\+Manager.\+Add\+Point (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
+
+
+Add point to the total point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Point amount.\\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -84,6 +93,32 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_game_manager_a5d3c9753598caba92f5f58658a5eb1a2_icgraph}
 \end{center}
 \end{figure}
+\Hypertarget{class_game_manager_aaa54247670379ebc17bea1edd0d3a156}\label{class_game_manager_aaa54247670379ebc17bea1edd0d3a156} 
+\index{GameManager@{GameManager}!EvenWarningHandler@{EvenWarningHandler}}
+\index{EvenWarningHandler@{EvenWarningHandler}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{EvenWarningHandler()}{EvenWarningHandler()}}
+{\footnotesize\ttfamily void Game\+Manager.\+Even\+Warning\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Warning player when the enemy wave are coming (17\+:00 -\/ 19\+:00). 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_manager_aaa54247670379ebc17bea1edd0d3a156_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_manager_aaa54247670379ebc17bea1edd0d3a156_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{class_game_manager_a5ccfacd027ad08eeb4ff1f25a7f59c98}\label{class_game_manager_a5ccfacd027ad08eeb4ff1f25a7f59c98} 
 \index{GameManager@{GameManager}!Start@{Start}}
 \index{Start@{Start}!GameManager@{GameManager}}
@@ -96,6 +131,18 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{ToggleSetActiveRelateWithAnimation()}{ToggleSetActiveRelateWithAnimation()}}
 {\footnotesize\ttfamily IEnumerator Game\+Manager.\+Toggle\+Set\+Active\+Relate\+With\+Animation (\begin{DoxyParamCaption}\item[{Game\+Object}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Toggle set active game object relate with animation. Set active game object and wait until the animation is done. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Object to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -121,17 +168,11 @@ Here is the call graph for this function\+:
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{class_game_manager_af409cae632f264d4e0c2469dbc11be99}\label{class_game_manager_af409cae632f264d4e0c2469dbc11be99} 
-\index{GameManager@{GameManager}!\_isWarning@{\_isWarning}}
-\index{\_isWarning@{\_isWarning}!GameManager@{GameManager}}
-\doxysubsubsection{\texorpdfstring{\_isWarning}{\_isWarning}}
-{\footnotesize\ttfamily bool Game\+Manager.\+\_\+is\+Warning\hspace{0.3cm}{\ttfamily [private]}}
-
-\Hypertarget{class_game_manager_a7666e8468dac197b9eb32dd32128524f}\label{class_game_manager_a7666e8468dac197b9eb32dd32128524f} 
-\index{GameManager@{GameManager}!instance@{instance}}
-\index{instance@{instance}!GameManager@{GameManager}}
-\doxysubsubsection{\texorpdfstring{instance}{instance}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_game_manager}{Game\+Manager}} Game\+Manager.\+instance\hspace{0.3cm}{\ttfamily [static]}}
+\Hypertarget{class_game_manager_ad3e717f4fb0f378b969f4457de81f23e}\label{class_game_manager_ad3e717f4fb0f378b969f4457de81f23e} 
+\index{GameManager@{GameManager}!Instance@{Instance}}
+\index{Instance@{Instance}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_manager}{Game\+Manager}} Game\+Manager.\+Instance\hspace{0.3cm}{\ttfamily [static]}}
 
 \Hypertarget{class_game_manager_a1760b3efacc56c69b641f0f7fda6387f}\label{class_game_manager_a1760b3efacc56c69b641f0f7fda6387f} 
 \index{GameManager@{GameManager}!player@{player}}
@@ -167,7 +208,7 @@ Here is the call graph for this function\+:
 \index{GameManager@{GameManager}!totalPoint@{totalPoint}}
 \index{totalPoint@{totalPoint}!GameManager@{GameManager}}
 \doxysubsubsection{\texorpdfstring{totalPoint}{totalPoint}}
-{\footnotesize\ttfamily int Game\+Manager.\+total\+Point = 0}
+{\footnotesize\ttfamily int Game\+Manager.\+total\+Point}
 
 \Hypertarget{class_game_manager_a88218bc81d33308f08ab0b86986cadb0}\label{class_game_manager_a88218bc81d33308f08ab0b86986cadb0} 
 \index{GameManager@{GameManager}!warningText@{warningText}}
@@ -179,4 +220,4 @@ Here is the call graph for this function\+:
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\mbox{\hyperlink{_game_manager_8cs}{Game\+Manager.\+cs}}\end{DoxyCompactItemize}
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Scripts/\mbox{\hyperlink{_game_manager_8cs}{Game\+Manager.\+cs}}\end{DoxyCompactItemize}

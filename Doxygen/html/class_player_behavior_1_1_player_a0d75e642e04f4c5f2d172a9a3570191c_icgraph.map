@@ -1,0 +1,15 @@
+<map id="PlayerBehavior.Player.CheckPlayerState" name="PlayerBehavior.Player.CheckPlayerState">
+<area shape="rect" id="Node000001" title="Use to check the current player state." alt="" coords="740,72,930,115"/>
+<area shape="rect" id="Node000002" href="$class_player_behavior_1_1_player.html#a9c147630b797b907ef25149159750fc8" title="Use for handle dash system." alt="" coords="508,5,690,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="742,70,677,51,678,46,743,65"/>
+<area shape="rect" id="Node000005" href="$class_player_behavior_1_1_player.html#a468d82a12d537bb6bae4d2b3fa4521de" title="Sprint System." alt="" coords="506,72,692,115"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="725,96,693,96,693,91,725,91"/>
+<area shape="rect" id="Node000006" href="$class_player_behavior_1_1_player.html#ad38e49c84b55a1404a43eec39ce78080" title="Walk System." alt="" coords="508,139,690,181"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="743,122,678,141,677,135,742,117"/>
+<area shape="rect" id="Node000003" href="$class_player_behavior_1_1_player.html#a63f4355fd793c64dc9345e22ff1886e3" title="Use for control the player movement system." alt="" coords="247,72,458,115"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="504,55,435,74,433,69,502,50"/>
+<area shape="rect" id="Node000004" href="$class_player_behavior_1_1_player.html#a15df74500f415fe3158cb29ffb01f1c4" title=" " alt="" coords="5,80,199,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="231,96,199,96,199,91,231,91"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="490,96,458,96,458,91,490,91"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="502,137,433,118,435,113,504,131"/>
+</map>

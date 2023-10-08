@@ -1,0 +1,19 @@
+<map id="HealthSystem.UpdateUI" name="HealthSystem.UpdateUI">
+<area shape="rect" id="Node000001" title="Update the UI." alt="" coords="704,56,865,83"/>
+<area shape="rect" id="Node000002" href="$class_health_system.html#a797bd1920dbd121c266b77843e4e66b7" title="Heal and increase the current hp." alt="" coords="498,5,631,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="708,55,625,35,626,30,709,49"/>
+<area shape="rect" id="Node000004" href="$class_health_system.html#af1594248544b38b43a250dde3c709693" title="Reset the current hp to max hp." alt="" coords="476,56,654,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="689,72,654,72,654,67,689,67"/>
+<area shape="rect" id="Node000009" href="$class_health_system.html#a595f606d9869f8a65bc9e1b671a1a87b" title="Take damage and reduce the current hp." alt="" coords="473,107,656,133"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="709,89,626,109,625,103,708,84"/>
+<area shape="rect" id="Node000003" href="$class_base_health_system.html#a18e3effa9cd1a602d2d5c12cf3b4aab4" title=" " alt="" coords="237,5,416,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="482,21,416,21,416,16,482,16"/>
+<area shape="rect" id="Node000005" href="$class_tower_platform.html#a5522423b2f2304f8f02effc7eb17ee7d" title=" " alt="" coords="241,56,412,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="460,72,412,72,412,67,460,67"/>
+<area shape="rect" id="Node000007" href="$class_player_health_system.html#a2ecce1fbc617a99236e611d9c0532c51" title="Respawn the player." alt="" coords="228,107,425,133"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="484,89,393,109,392,103,483,84"/>
+<area shape="rect" id="Node000006" href="$class_tower_platform.html#adb3441dc912cc8adaa789d99cce7d286" title=" " alt="" coords="17,56,168,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="226,72,168,72,168,67,226,67"/>
+<area shape="rect" id="Node000008" href="$class_player_health_system.html#a00f69deb4600297bf32cc83b8fe7f43a" title="Player Dead and Respawn after a few seconds." alt="" coords="5,107,180,133"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="212,123,180,123,180,117,212,117"/>
+</map>

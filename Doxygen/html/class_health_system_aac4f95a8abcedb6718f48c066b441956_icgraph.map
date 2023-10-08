@@ -1,5 +1,5 @@
 <map id="HealthSystem.Dead" name="HealthSystem.Dead">
-<area shape="rect" id="Node000001" title=" " alt="" coords="237,5,374,32"/>
-<area shape="rect" id="Node000002" href="$class_health_system.html#a356e8d72c9518eec6341cf1f59cda76a" title=" " alt="" coords="5,5,189,32"/>
+<area shape="rect" id="Node000001" title="Dead and destroy the object." alt="" coords="237,5,374,32"/>
+<area shape="rect" id="Node000002" href="$class_health_system.html#a595f606d9869f8a65bc9e1b671a1a87b" title="Take damage and reduce the current hp." alt="" coords="5,5,189,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,21,189,21,189,16,221,16"/>
 </map>

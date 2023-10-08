@@ -1,0 +1,7 @@
+<map id="HealthSystem.PlayerHealthSystem.Dead" name="HealthSystem.PlayerHealthSystem.Dead">
+<area shape="rect" id="Node000001" title="Player Dead and Respawn after a few seconds." alt="" coords="5,5,187,48"/>
+<area shape="rect" id="Node000002" href="$class_health_system_1_1_player_health_system.html#a8029cb725e05eaac7de03ed63c4db9e1" title="Respawn the player." alt="" coords="235,5,416,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,24,219,24,219,29,187,29"/>
+<area shape="rect" id="Node000003" href="$class_health_system_1_1_health_system.html#a0ed4c60e8d2cd69fe6bccf70bf07d4e7" title="Reset the current hp to max hp." alt="" coords="464,5,657,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="417,24,448,24,448,29,417,29"/>
+</map>

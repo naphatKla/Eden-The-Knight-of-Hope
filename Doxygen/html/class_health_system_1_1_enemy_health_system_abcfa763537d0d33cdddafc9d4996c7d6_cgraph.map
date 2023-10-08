@@ -1,0 +1,5 @@
+<map id="HealthSystem.EnemyHealthSystem.TakeDamage" name="HealthSystem.EnemyHealthSystem.TakeDamage">
+<area shape="rect" id="Node000001" title="Take damage and reduce the current hp." alt="" coords="5,5,191,48"/>
+<area shape="rect" id="Node000002" href="$class_health_system_1_1_enemy_health_system.html#aab911964b3572367e76ab9e1fd9c60bd" title="stun the enemy." alt="" coords="239,5,424,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,24,223,24,223,29,191,29"/>
+</map>

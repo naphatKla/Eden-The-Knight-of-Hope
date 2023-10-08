@@ -1,0 +1,11 @@
+<map id="HealthSystem.ResetHealth" name="HealthSystem.ResetHealth">
+<area shape="rect" id="Node000001" title="Reset the current hp to max hp." alt="" coords="473,31,651,57"/>
+<area shape="rect" id="Node000002" href="$class_tower_platform.html#a5522423b2f2304f8f02effc7eb17ee7d" title=" " alt="" coords="241,5,412,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="457,35,412,30,412,25,458,30"/>
+<area shape="rect" id="Node000004" href="$class_player_health_system.html#a2ecce1fbc617a99236e611d9c0532c51" title="Respawn the player." alt="" coords="228,56,425,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="458,58,426,61,425,56,457,53"/>
+<area shape="rect" id="Node000003" href="$class_tower_platform.html#adb3441dc912cc8adaa789d99cce7d286" title=" " alt="" coords="17,5,168,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="226,21,168,21,168,16,226,16"/>
+<area shape="rect" id="Node000005" href="$class_player_health_system.html#a00f69deb4600297bf32cc83b8fe7f43a" title="Player Dead and Respawn after a few seconds." alt="" coords="5,56,180,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="212,72,180,72,180,67,212,67"/>
+</map>

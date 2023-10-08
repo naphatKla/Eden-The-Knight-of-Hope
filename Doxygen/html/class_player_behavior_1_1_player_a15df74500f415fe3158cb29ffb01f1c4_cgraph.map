@@ -1,0 +1,21 @@
+<map id="PlayerBehavior.Player.Update" name="PlayerBehavior.Player.Update">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,89,199,116"/>
+<area shape="rect" id="Node000002" href="$class_player_behavior_1_1_player.html#a63f4355fd793c64dc9345e22ff1886e3" title="Use for control the player movement system." alt="" coords="247,81,458,124"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,100,231,100,231,105,199,105"/>
+<area shape="rect" id="Node000003" href="$class_player_behavior_1_1_player.html#a9c147630b797b907ef25149159750fc8" title="Use for handle dash system." alt="" coords="508,15,690,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="433,78,502,59,503,65,435,83"/>
+<area shape="rect" id="Node000007" href="$class_player_behavior_1_1_player.html#a468d82a12d537bb6bae4d2b3fa4521de" title="Sprint System." alt="" coords="506,81,692,124"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="459,100,490,100,490,105,459,105"/>
+<area shape="rect" id="Node000008" href="$class_player_behavior_1_1_player.html#ad38e49c84b55a1404a43eec39ce78080" title="Walk System." alt="" coords="508,148,690,191"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="435,122,503,141,502,146,433,127"/>
+<area shape="rect" id="Node000004" href="$class_player_behavior_1_1_player.html#a0d75e642e04f4c5f2d172a9a3570191c" title="Use to check the current player state." alt="" coords="740,56,930,99"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="691,49,725,55,724,61,691,55"/>
+<area shape="rect" id="Node000005" href="$class_player_behavior_1_1_player.html#ac748262020d2ffea04ca850f782fca45" title="Dash behavior for start coroutine in dash system." alt="" coords="744,5,926,32"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="691,27,728,24,728,29,691,32"/>
+<area shape="rect" id="Node000006" href="$class_player_behavior_1_1_player.html#a85de384558f93285ffb2ca2a5176006b" title="Use for set player state." alt="" coords="978,115,1150,157"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="900,30,931,42,982,71,1027,103,1023,107,979,75,929,46,898,35"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="693,90,725,87,725,92,693,95"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="693,107,962,126,962,131,693,112"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="661,145,691,134,768,102,770,107,693,138,663,150"/>
+<area shape="poly" id="edge11_Node000008_Node000006" title=" " alt="" coords="690,160,962,141,962,146,691,165"/>
+</map>

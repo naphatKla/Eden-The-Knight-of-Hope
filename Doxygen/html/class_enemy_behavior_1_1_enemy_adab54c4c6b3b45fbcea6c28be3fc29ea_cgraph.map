@@ -1,0 +1,5 @@
+<map id="EnemyBehavior.Enemy.RoamAround" name="EnemyBehavior.Enemy.RoamAround">
+<area shape="rect" id="Node000001" title="Roam around spawn point." alt="" coords="5,5,200,48"/>
+<area shape="rect" id="Node000002" href="$class_enemy_behavior_1_1_enemy.html#a06c155a565c2b1e7801f16d1b245b2a7" title="Check enemy state." alt="" coords="248,5,445,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,24,232,24,232,29,200,29"/>
+</map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['zoommultiplier_0',['zoomMultiplier',['../class_player_camera.html#a0292920ea389a1d2573a61f0126bc91e',1,'PlayerCamera']]],
-  ['zoomsmoothtime_1',['zoomSmoothTime',['../class_player_camera.html#af8cc99cf9b44086c79fa1bb906d79d79',1,'PlayerCamera']]]
+  ['zoommultiplier_0',['zoomMultiplier',['../class_player_behavior_1_1_player_camera.html#a69660b19cfe729d20d8756d3f738f256',1,'PlayerBehavior::PlayerCamera']]],
+  ['zoomsmoothtime_1',['zoomSmoothTime',['../class_player_behavior_1_1_player_camera.html#a46ee9425734db4cdde0a1ccac7ba5835',1,'PlayerBehavior::PlayerCamera']]]
 ];

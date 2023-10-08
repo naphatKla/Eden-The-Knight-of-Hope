@@ -2,7 +2,8 @@
 \hypertarget{class_enemy_combat_system}{}\label{class_enemy_combat_system}\index{EnemyCombatSystem@{EnemyCombatSystem}}
 
 
-Inheritance diagram for Enemy\+Combat\+System\+:\nopagebreak
+Inheritance diagram for Enemy\+Combat\+System\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,156 +12,97 @@ Inheritance diagram for Enemy\+Combat\+System\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Enemy\+Combat\+System\+:\nopagebreak
+Collaboration diagram for Enemy\+Combat\+System\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=196pt]{class_enemy_combat_system__coll__graph}
+\includegraphics[width=311pt]{class_enemy_combat_system__coll__graph}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Public Attributes}
+\doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-Layer\+Mask \mbox{\hyperlink{class_enemy_combat_system_af57d3d411774fe03f173ca9ecbd95c4d}{target\+Layer}}
+override void \mbox{\hyperlink{class_enemy_combat_system_ac33e2202a5624727fe8941b65dc7be58}{Start}} ()
 \item 
-Transform \mbox{\hyperlink{class_enemy_combat_system_a4ad5f38b5f6a835bf2f318ac8240ee5f}{attack\+Point}}
-\item 
-int \mbox{\hyperlink{class_enemy_combat_system_ad7adda93bdb1a7a018d62f5767e5189e}{attack\+Damage}} = 40
-\item 
-Vector2 \mbox{\hyperlink{class_enemy_combat_system_ac131345f1a7638766d80f4f3abc62c5d}{attack\+Area}}
-\item 
-float \mbox{\hyperlink{class_enemy_combat_system_a0e8711ad73b04d70cf11e183666a7cdb}{attack\+Rate}} = 2f
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Private Member Functions}
+override void \mbox{\hyperlink{class_enemy_combat_system_a813bae87e119820b54f680dce6d7a61a}{Attack\+Handle}} ()
+\begin{DoxyCompactList}\small\item\em use for handle the attack system. Please override this method with attack condition before call this method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_combat_system}{Combat\+System}}}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_enemy_combat_system_a07327cde1ed378f77555d2d3ac7f5235}{Start}} ()
+virtual void \mbox{\hyperlink{class_combat_system_a92e93ff66b511f5cb5040ea3fb486723}{Update}} ()
 \item 
-void \mbox{\hyperlink{class_enemy_combat_system_a9e03a99abd2b76b9d6a5723a4f718d31}{Update}} ()
-\item 
-IEnumerator \mbox{\hyperlink{class_enemy_combat_system_ac84931d8f2a702aeb6d76a70817ed347}{Attack}} (float delay)
-\item 
-void \mbox{\hyperlink{class_enemy_combat_system_aa575b9b742657e068216a6ad12dcbfad}{On\+Draw\+Gizmos}} ()
-\end{DoxyCompactItemize}
+virtual IEnumerator \mbox{\hyperlink{class_combat_system_a154dc9f68e7252c136e1db0f753ef6e0}{Attack}} (float delay)
+\begin{DoxyCompactList}\small\item\em Attack target with delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_combat_system_a798dc23d05a8b49d5bf36674748cfff0}{Cancel\+Attacking}} ()
+\begin{DoxyCompactList}\small\item\em Cancel attacking. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Animator \mbox{\hyperlink{class_enemy_combat_system_ac4ff4e0bc0d2654a5c2d58043d1f3b7f}{\+\_\+animator}}
-\item 
 \mbox{\hyperlink{class_enemy}{Enemy}} \mbox{\hyperlink{class_enemy_combat_system_aaa003f65aef6e8176bf5daff737d5464}{\+\_\+enemy}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_combat_system}{Combat\+System}}}
+\begin{DoxyCompactItemize}
 \item 
-float \mbox{\hyperlink{class_enemy_combat_system_ab7efaf1cf6c49eb0285ae6fbb1b77820}{\+\_\+next\+Attack\+Time}} = 0f
+float \mbox{\hyperlink{class_combat_system_a31c777b126104521c60451b190e663a7}{attack\+Stat}}
 \item 
-Game\+Object \mbox{\hyperlink{class_enemy_combat_system_a93d398410dc1d26ff171f43213863a86}{\+\_\+attack\+Point\+Parent}}
+Transform \mbox{\hyperlink{class_combat_system_a1d980fd8c7da3a47c6b9d7d8e2ec5b4c}{attack\+Point}}
 \item 
-bool \mbox{\hyperlink{class_enemy_combat_system_a5400b42f5c14c4105308bf6c9e91b17c}{\+\_\+is\+Charge}}
+Vector2 \mbox{\hyperlink{class_combat_system_aef3cf3f107c72aad6f199af67266f2d1}{attack\+Area}}
+\item 
+Layer\+Mask \mbox{\hyperlink{class_combat_system_ac0f69e29ff3912396d5205b2fd8eb64d}{target\+Layer}}
+\item 
+List$<$ Collider2D $>$ \mbox{\hyperlink{class_combat_system_afceffe10a01d9ce58f51315b6045c4ef}{target\+In\+Attack\+Area}}
+\item 
+List$<$ \mbox{\hyperlink{struct_attack_pattern}{Attack\+Pattern}} $>$ \mbox{\hyperlink{class_combat_system_a616750933eccd659bc14cdff0ccfdd45}{attack\+Patterns}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_enemy_combat_system_ac84931d8f2a702aeb6d76a70817ed347}\label{class_enemy_combat_system_ac84931d8f2a702aeb6d76a70817ed347} 
-\index{EnemyCombatSystem@{EnemyCombatSystem}!Attack@{Attack}}
-\index{Attack@{Attack}!EnemyCombatSystem@{EnemyCombatSystem}}
-\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
-{\footnotesize\ttfamily IEnumerator Enemy\+Combat\+System.\+Attack (\begin{DoxyParamCaption}\item[{float}]{delay }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\Hypertarget{class_enemy_combat_system_a813bae87e119820b54f680dce6d7a61a}\label{class_enemy_combat_system_a813bae87e119820b54f680dce6d7a61a} 
+\index{EnemyCombatSystem@{EnemyCombatSystem}!AttackHandle@{AttackHandle}}
+\index{AttackHandle@{AttackHandle}!EnemyCombatSystem@{EnemyCombatSystem}}
+\doxysubsubsection{\texorpdfstring{AttackHandle()}{AttackHandle()}}
+{\footnotesize\ttfamily override void Enemy\+Combat\+System.\+Attack\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
 
-Here is the caller graph for this function\+:\nopagebreak
+
+
+use for handle the attack system. Please override this method with attack condition before call this method. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_combat_system_a3310f589c408f0b303eb4b022ba8f467}{Combat\+System}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_enemy_combat_system_ac84931d8f2a702aeb6d76a70817ed347_icgraph}
+\includegraphics[width=350pt]{class_enemy_combat_system_a813bae87e119820b54f680dce6d7a61a_cgraph}
 \end{center}
 \end{figure}
-\Hypertarget{class_enemy_combat_system_aa575b9b742657e068216a6ad12dcbfad}\label{class_enemy_combat_system_aa575b9b742657e068216a6ad12dcbfad} 
-\index{EnemyCombatSystem@{EnemyCombatSystem}!OnDrawGizmos@{OnDrawGizmos}}
-\index{OnDrawGizmos@{OnDrawGizmos}!EnemyCombatSystem@{EnemyCombatSystem}}
-\doxysubsubsection{\texorpdfstring{OnDrawGizmos()}{OnDrawGizmos()}}
-{\footnotesize\ttfamily void Enemy\+Combat\+System.\+On\+Draw\+Gizmos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-\Hypertarget{class_enemy_combat_system_a07327cde1ed378f77555d2d3ac7f5235}\label{class_enemy_combat_system_a07327cde1ed378f77555d2d3ac7f5235} 
+\Hypertarget{class_enemy_combat_system_ac33e2202a5624727fe8941b65dc7be58}\label{class_enemy_combat_system_ac33e2202a5624727fe8941b65dc7be58} 
 \index{EnemyCombatSystem@{EnemyCombatSystem}!Start@{Start}}
 \index{Start@{Start}!EnemyCombatSystem@{EnemyCombatSystem}}
 \doxysubsubsection{\texorpdfstring{Start()}{Start()}}
-{\footnotesize\ttfamily void Enemy\+Combat\+System.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily override void Enemy\+Combat\+System.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
 
-\Hypertarget{class_enemy_combat_system_a9e03a99abd2b76b9d6a5723a4f718d31}\label{class_enemy_combat_system_a9e03a99abd2b76b9d6a5723a4f718d31} 
-\index{EnemyCombatSystem@{EnemyCombatSystem}!Update@{Update}}
-\index{Update@{Update}!EnemyCombatSystem@{EnemyCombatSystem}}
-\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily void Enemy\+Combat\+System.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_enemy_combat_system_a9e03a99abd2b76b9d6a5723a4f718d31_cgraph}
-\end{center}
-\end{figure}
+
+Reimplemented from \mbox{\hyperlink{class_combat_system_ae036206d734f1e13cac0b19d8243972d}{Combat\+System}}.
+
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{class_enemy_combat_system_ac4ff4e0bc0d2654a5c2d58043d1f3b7f}\label{class_enemy_combat_system_ac4ff4e0bc0d2654a5c2d58043d1f3b7f} 
-\index{EnemyCombatSystem@{EnemyCombatSystem}!\_animator@{\_animator}}
-\index{\_animator@{\_animator}!EnemyCombatSystem@{EnemyCombatSystem}}
-\doxysubsubsection{\texorpdfstring{\_animator}{\_animator}}
-{\footnotesize\ttfamily Animator Enemy\+Combat\+System.\+\_\+animator\hspace{0.3cm}{\ttfamily [private]}}
-
-\Hypertarget{class_enemy_combat_system_a93d398410dc1d26ff171f43213863a86}\label{class_enemy_combat_system_a93d398410dc1d26ff171f43213863a86} 
-\index{EnemyCombatSystem@{EnemyCombatSystem}!\_attackPointParent@{\_attackPointParent}}
-\index{\_attackPointParent@{\_attackPointParent}!EnemyCombatSystem@{EnemyCombatSystem}}
-\doxysubsubsection{\texorpdfstring{\_attackPointParent}{\_attackPointParent}}
-{\footnotesize\ttfamily Game\+Object Enemy\+Combat\+System.\+\_\+attack\+Point\+Parent\hspace{0.3cm}{\ttfamily [private]}}
-
 \Hypertarget{class_enemy_combat_system_aaa003f65aef6e8176bf5daff737d5464}\label{class_enemy_combat_system_aaa003f65aef6e8176bf5daff737d5464} 
 \index{EnemyCombatSystem@{EnemyCombatSystem}!\_enemy@{\_enemy}}
 \index{\_enemy@{\_enemy}!EnemyCombatSystem@{EnemyCombatSystem}}
 \doxysubsubsection{\texorpdfstring{\_enemy}{\_enemy}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_enemy}{Enemy}} Enemy\+Combat\+System.\+\_\+enemy\hspace{0.3cm}{\ttfamily [private]}}
 
-\Hypertarget{class_enemy_combat_system_a5400b42f5c14c4105308bf6c9e91b17c}\label{class_enemy_combat_system_a5400b42f5c14c4105308bf6c9e91b17c} 
-\index{EnemyCombatSystem@{EnemyCombatSystem}!\_isCharge@{\_isCharge}}
-\index{\_isCharge@{\_isCharge}!EnemyCombatSystem@{EnemyCombatSystem}}
-\doxysubsubsection{\texorpdfstring{\_isCharge}{\_isCharge}}
-{\footnotesize\ttfamily bool Enemy\+Combat\+System.\+\_\+is\+Charge\hspace{0.3cm}{\ttfamily [private]}}
-
-\Hypertarget{class_enemy_combat_system_ab7efaf1cf6c49eb0285ae6fbb1b77820}\label{class_enemy_combat_system_ab7efaf1cf6c49eb0285ae6fbb1b77820} 
-\index{EnemyCombatSystem@{EnemyCombatSystem}!\_nextAttackTime@{\_nextAttackTime}}
-\index{\_nextAttackTime@{\_nextAttackTime}!EnemyCombatSystem@{EnemyCombatSystem}}
-\doxysubsubsection{\texorpdfstring{\_nextAttackTime}{\_nextAttackTime}}
-{\footnotesize\ttfamily float Enemy\+Combat\+System.\+\_\+next\+Attack\+Time = 0f\hspace{0.3cm}{\ttfamily [private]}}
-
-\Hypertarget{class_enemy_combat_system_ac131345f1a7638766d80f4f3abc62c5d}\label{class_enemy_combat_system_ac131345f1a7638766d80f4f3abc62c5d} 
-\index{EnemyCombatSystem@{EnemyCombatSystem}!attackArea@{attackArea}}
-\index{attackArea@{attackArea}!EnemyCombatSystem@{EnemyCombatSystem}}
-\doxysubsubsection{\texorpdfstring{attackArea}{attackArea}}
-{\footnotesize\ttfamily Vector2 Enemy\+Combat\+System.\+attack\+Area}
-
-\Hypertarget{class_enemy_combat_system_ad7adda93bdb1a7a018d62f5767e5189e}\label{class_enemy_combat_system_ad7adda93bdb1a7a018d62f5767e5189e} 
-\index{EnemyCombatSystem@{EnemyCombatSystem}!attackDamage@{attackDamage}}
-\index{attackDamage@{attackDamage}!EnemyCombatSystem@{EnemyCombatSystem}}
-\doxysubsubsection{\texorpdfstring{attackDamage}{attackDamage}}
-{\footnotesize\ttfamily int Enemy\+Combat\+System.\+attack\+Damage = 40}
-
-\Hypertarget{class_enemy_combat_system_a4ad5f38b5f6a835bf2f318ac8240ee5f}\label{class_enemy_combat_system_a4ad5f38b5f6a835bf2f318ac8240ee5f} 
-\index{EnemyCombatSystem@{EnemyCombatSystem}!attackPoint@{attackPoint}}
-\index{attackPoint@{attackPoint}!EnemyCombatSystem@{EnemyCombatSystem}}
-\doxysubsubsection{\texorpdfstring{attackPoint}{attackPoint}}
-{\footnotesize\ttfamily Transform Enemy\+Combat\+System.\+attack\+Point}
-
-\Hypertarget{class_enemy_combat_system_a0e8711ad73b04d70cf11e183666a7cdb}\label{class_enemy_combat_system_a0e8711ad73b04d70cf11e183666a7cdb} 
-\index{EnemyCombatSystem@{EnemyCombatSystem}!attackRate@{attackRate}}
-\index{attackRate@{attackRate}!EnemyCombatSystem@{EnemyCombatSystem}}
-\doxysubsubsection{\texorpdfstring{attackRate}{attackRate}}
-{\footnotesize\ttfamily float Enemy\+Combat\+System.\+attack\+Rate = 2f}
-
-\Hypertarget{class_enemy_combat_system_af57d3d411774fe03f173ca9ecbd95c4d}\label{class_enemy_combat_system_af57d3d411774fe03f173ca9ecbd95c4d} 
-\index{EnemyCombatSystem@{EnemyCombatSystem}!targetLayer@{targetLayer}}
-\index{targetLayer@{targetLayer}!EnemyCombatSystem@{EnemyCombatSystem}}
-\doxysubsubsection{\texorpdfstring{targetLayer}{targetLayer}}
-{\footnotesize\ttfamily Layer\+Mask Enemy\+Combat\+System.\+target\+Layer}
-
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\mbox{\hyperlink{_enemy_combat_system_8cs}{Enemy\+Combat\+System.\+cs}}\end{DoxyCompactItemize}
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Script/\+Combat\+System/\mbox{\hyperlink{_enemy_combat_system_8cs}{Enemy\+Combat\+System.\+cs}}\end{DoxyCompactItemize}

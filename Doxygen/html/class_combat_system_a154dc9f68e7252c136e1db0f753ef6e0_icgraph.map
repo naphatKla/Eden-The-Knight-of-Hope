@@ -1,0 +1,7 @@
+<map id="CombatSystem.Attack" name="CombatSystem.Attack">
+<area shape="rect" id="Node000001" title="Attack target with delay." alt="" coords="451,5,604,32"/>
+<area shape="rect" id="Node000002" href="$class_combat_system.html#a3310f589c408f0b303eb4b022ba8f467" title="use for handle the attack system. Please override this method with attack condition before call this ..." alt="" coords="210,5,403,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="435,21,403,21,403,16,435,16"/>
+<area shape="rect" id="Node000003" href="$class_combat_system.html#a92e93ff66b511f5cb5040ea3fb486723" title=" " alt="" coords="5,5,162,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="194,21,162,21,162,16,194,16"/>
+</map>

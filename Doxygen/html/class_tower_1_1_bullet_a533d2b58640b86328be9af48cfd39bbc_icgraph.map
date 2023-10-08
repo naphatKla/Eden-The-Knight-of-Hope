@@ -1,0 +1,5 @@
+<map id="Tower.Bullet.Init" name="Tower.Bullet.Init">
+<area shape="rect" id="Node000001" title="Initialize the bullet when it spawned." alt="" coords="262,5,375,32"/>
+<area shape="rect" id="Node000002" href="$class_tower_1_1_tower.html#ad42b6a2ae3a317e18fad03fad202b4e2" title="Logic Shoot bullet to the current target." alt="" coords="5,5,214,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,21,214,21,214,16,246,16"/>
+</map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['idle_0',['idle',['../class_enemy.html#a14bead85804fe8c4cfd27ea20122594dae599161956d626eda4cb0a5ffb85271c',1,'Enemy.Idle'],['../class_player.html#a07fe57ec176032714d7d6de076b06ec9ae599161956d626eda4cb0a5ffb85271c',1,'Player.Idle']]]
+  ['followtarget_0',['FollowTarget',['../namespace_enemy_behavior.html#ad2d0f2009098236b7e6ae2f150c23923a23a0d6103e6eb8265ec3203088db3c9c',1,'EnemyBehavior']]]
 ];

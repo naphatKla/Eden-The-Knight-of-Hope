@@ -1,0 +1,142 @@
+\doxysection{Interaction.\+Tower\+Platform Class Reference}
+\hypertarget{class_interaction_1_1_tower_platform}{}\label{class_interaction_1_1_tower_platform}\index{Interaction.TowerPlatform@{Interaction.TowerPlatform}}
+
+
+Inheritance diagram for Interaction.\+Tower\+Platform\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_interaction_1_1_tower_platform__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Interaction.\+Tower\+Platform\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_interaction_1_1_tower_platform__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_interaction_1_1_tower_platform_af32a3ca65970d728f16f788e977051f8}{Interact\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em If point is not enough, do not interact. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_interaction_1_1_tower_platform_aa7f42872ee4750219453678ef6cd5c10}{Interact\+Action}} ()
+\begin{DoxyCompactList}\small\item\em Create tower if the tower is not exist, else reset the tower health. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_interaction_1_1_interactable_object}{Interaction.\+Interactable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_interaction_1_1_interactable_object_ab010ce9ee3e558bb5120af1b3c040421}{Start}} ()
+\item 
+virtual IEnumerator \mbox{\hyperlink{class_interaction_1_1_interactable_object_a11dc0a92d593103485ab7e64cfffe72e}{Count\+Down\+And\+Interact}} (float time)
+\begin{DoxyCompactList}\small\item\em Performs a countdown timer and triggers an interaction when the timer reaches zero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_interaction_1_1_tower_platform_afd44a4ec18b923c7f130784a2a646e52}{tower\+Prefab}}
+\item 
+int \mbox{\hyperlink{class_interaction_1_1_tower_platform_a7b45086ecceffd072d754b5d44498184}{cost}}
+\item 
+\mbox{\hyperlink{class_health_system_1_1_health_system}{Health\+System.\+Health\+System}} \mbox{\hyperlink{class_interaction_1_1_tower_platform_a5ef0ebff8f7ef67a6252d08ad8e2b3d7}{\+\_\+tower\+Health\+System}}
+\item 
+Game\+Object \mbox{\hyperlink{class_interaction_1_1_tower_platform_ad9dfb9f625f29a2eb52fcaf18760aeb8}{\+\_\+tower}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_interaction_1_1_interactable_object}{Interaction.\+Interactable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_interaction_1_1_interactable_object_ac0c4455312d7b9d3bd74520b388bf4da}{On\+Target}} (bool is\+Target)
+\begin{DoxyCompactList}\small\item\em Event when the object is targeted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_interaction_1_1_interactable_object}{Interaction.\+Interactable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Slider \mbox{\hyperlink{class_interaction_1_1_interactable_object_a92e8c9102cfd95b1be2b663e53fa1b39}{progress\+Bar}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_interaction_1_1_interactable_object}{Interaction.\+Interactable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Key\+Code \mbox{\hyperlink{class_interaction_1_1_interactable_object_a2a6eba2eea842b29831fdf16f914757f}{key}}
+\item 
+int \mbox{\hyperlink{class_interaction_1_1_interactable_object_a196b35d2b0def8e2bc5f0a59ab71e644}{point}}
+\item 
+string \mbox{\hyperlink{class_interaction_1_1_interactable_object_ae15cfede0859568c4314dbf8ffd2cd1d}{prompt}}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_interaction_1_1_interactable_object_af0c598bf98ba69f9811f05a9f5cbbb90}{interaction\+Text\+UI}}
+\item 
+Game\+Object\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_interaction_1_1_interactable_object_aad3f9eece63ea7fe6493cfee8749bb23}{interaction\+Indicators}}
+\item 
+float \mbox{\hyperlink{class_interaction_1_1_interactable_object_a29ab06f2211cb4d4bdadb338341fe979}{countdown\+Time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_interaction_1_1_tower_platform_aa7f42872ee4750219453678ef6cd5c10}\label{class_interaction_1_1_tower_platform_aa7f42872ee4750219453678ef6cd5c10} 
+\index{Interaction.TowerPlatform@{Interaction.TowerPlatform}!InteractAction@{InteractAction}}
+\index{InteractAction@{InteractAction}!Interaction.TowerPlatform@{Interaction.TowerPlatform}}
+\doxysubsubsection{\texorpdfstring{InteractAction()}{InteractAction()}}
+{\footnotesize\ttfamily override void Interaction.\+Tower\+Platform.\+Interact\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Create tower if the tower is not exist, else reset the tower health. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_interaction_1_1_interactable_object_ae0c84bcbffebccfc5c0ab2d9e5ed0353}{Interaction.\+Interactable\+Object}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interaction_1_1_tower_platform_aa7f42872ee4750219453678ef6cd5c10_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_interaction_1_1_tower_platform_af32a3ca65970d728f16f788e977051f8}\label{class_interaction_1_1_tower_platform_af32a3ca65970d728f16f788e977051f8} 
+\index{Interaction.TowerPlatform@{Interaction.TowerPlatform}!InteractHandler@{InteractHandler}}
+\index{InteractHandler@{InteractHandler}!Interaction.TowerPlatform@{Interaction.TowerPlatform}}
+\doxysubsubsection{\texorpdfstring{InteractHandler()}{InteractHandler()}}
+{\footnotesize\ttfamily override void Interaction.\+Tower\+Platform.\+Interact\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+If point is not enough, do not interact. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_interaction_1_1_interactable_object_a4a2aac0d809efa17c3dc29dfa4c26bcd}{Interaction.\+Interactable\+Object}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_interaction_1_1_tower_platform_ad9dfb9f625f29a2eb52fcaf18760aeb8}\label{class_interaction_1_1_tower_platform_ad9dfb9f625f29a2eb52fcaf18760aeb8} 
+\index{Interaction.TowerPlatform@{Interaction.TowerPlatform}!\_tower@{\_tower}}
+\index{\_tower@{\_tower}!Interaction.TowerPlatform@{Interaction.TowerPlatform}}
+\doxysubsubsection{\texorpdfstring{\_tower}{\_tower}}
+{\footnotesize\ttfamily Game\+Object Interaction.\+Tower\+Platform.\+\_\+tower\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_interaction_1_1_tower_platform_a5ef0ebff8f7ef67a6252d08ad8e2b3d7}\label{class_interaction_1_1_tower_platform_a5ef0ebff8f7ef67a6252d08ad8e2b3d7} 
+\index{Interaction.TowerPlatform@{Interaction.TowerPlatform}!\_towerHealthSystem@{\_towerHealthSystem}}
+\index{\_towerHealthSystem@{\_towerHealthSystem}!Interaction.TowerPlatform@{Interaction.TowerPlatform}}
+\doxysubsubsection{\texorpdfstring{\_towerHealthSystem}{\_towerHealthSystem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_health_system_1_1_health_system}{Health\+System.\+Health\+System}} Interaction.\+Tower\+Platform.\+\_\+tower\+Health\+System\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_interaction_1_1_tower_platform_a7b45086ecceffd072d754b5d44498184}\label{class_interaction_1_1_tower_platform_a7b45086ecceffd072d754b5d44498184} 
+\index{Interaction.TowerPlatform@{Interaction.TowerPlatform}!cost@{cost}}
+\index{cost@{cost}!Interaction.TowerPlatform@{Interaction.TowerPlatform}}
+\doxysubsubsection{\texorpdfstring{cost}{cost}}
+{\footnotesize\ttfamily int Interaction.\+Tower\+Platform.\+cost\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_interaction_1_1_tower_platform_afd44a4ec18b923c7f130784a2a646e52}\label{class_interaction_1_1_tower_platform_afd44a4ec18b923c7f130784a2a646e52} 
+\index{Interaction.TowerPlatform@{Interaction.TowerPlatform}!towerPrefab@{towerPrefab}}
+\index{towerPrefab@{towerPrefab}!Interaction.TowerPlatform@{Interaction.TowerPlatform}}
+\doxysubsubsection{\texorpdfstring{towerPrefab}{towerPrefab}}
+{\footnotesize\ttfamily Game\+Object Interaction.\+Tower\+Platform.\+tower\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Scripts/\+Interaction/\mbox{\hyperlink{_tower_platform_8cs}{Tower\+Platform.\+cs}}\end{DoxyCompactItemize}

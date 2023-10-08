@@ -1,9 +1,11 @@
 <map id="TowerPlatform.BuildTower" name="TowerPlatform.BuildTower">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,176,65"/>
-<area shape="rect" id="Node000002" href="$class_game_manager.html#a5d3c9753598caba92f5f58658a5eb1a2" title=" " alt="" coords="224,13,387,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,39,208,35,209,41,177,45"/>
-<area shape="rect" id="Node000004" href="$class_health_system.html#ac33d3ea7f5200c444d3719136d840d79" title=" " alt="" coords="228,64,383,91"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="177,59,213,64,212,69,176,65"/>
-<area shape="rect" id="Node000003" href="$class_game_manager.html#a2f25fce454f2aa38a41b464fc120af16" title=" " alt="" coords="435,5,638,48"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="387,24,419,24,419,29,387,29"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,43,176,69"/>
+<area shape="rect" id="Node000002" href="$class_game_manager.html#a5d3c9753598caba92f5f58658a5eb1a2" title=" " alt="" coords="231,16,395,43"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,43,215,38,216,44,176,48"/>
+<area shape="rect" id="Node000004" href="$class_health_system.html#af1594248544b38b43a250dde3c709693" title="Reset the current hp to max hp." alt="" coords="224,68,402,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="176,63,208,67,208,72,176,68"/>
+<area shape="rect" id="Node000003" href="$class_game_manager.html#a2f25fce454f2aa38a41b464fc120af16" title=" " alt="" coords="450,5,653,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="395,26,434,25,435,31,395,31"/>
+<area shape="rect" id="Node000005" href="$class_health_system.html#aee86495eaff53a6f1c3570b82c757d0b" title="Update the UI." alt="" coords="472,72,632,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="402,80,456,81,456,86,402,85"/>
 </map>

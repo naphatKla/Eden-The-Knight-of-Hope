@@ -1,0 +1,170 @@
+\doxysection{Health\+System.\+Enemy\+Health\+System Class Reference}
+\hypertarget{class_health_system_1_1_enemy_health_system}{}\label{class_health_system_1_1_enemy_health_system}\index{HealthSystem.EnemyHealthSystem@{HealthSystem.EnemyHealthSystem}}
+
+
+Inheritance diagram for Health\+System.\+Enemy\+Health\+System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{class_health_system_1_1_enemy_health_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Health\+System.\+Enemy\+Health\+System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{class_health_system_1_1_enemy_health_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_health_system_1_1_enemy_health_system_a7fcfeb6343b369c883c1ff7013b2101f}{Take\+Damage}} (float damage, Game\+Object attacker=null)
+\begin{DoxyCompactList}\small\item\em Take damage and stun the enemy if the attacker is the player. And then set enemy target to the attacker. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_health_system_1_1_health_system}{Health\+System.\+Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_health_system_1_1_health_system_a0ed4c60e8d2cd69fe6bccf70bf07d4e7}{Reset\+Health}} ()
+\begin{DoxyCompactList}\small\item\em Reset the current hp to max hp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_health_system_1_1_enemy_health_system_aa40ff93785868e2a7ee8753006fa184b}{Start}} ()
+\item 
+override void \mbox{\hyperlink{class_health_system_1_1_enemy_health_system_aabda054513f980e1d2f78aad766b8f5f}{Dead}} ()
+\begin{DoxyCompactList}\small\item\em Dead and add point to the player score. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_health_system_1_1_health_system}{Health\+System.\+Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_health_system_1_1_health_system_a2e2a07a077808515447922570ab4ff29}{Heal}} (float heal\+Point)
+\begin{DoxyCompactList}\small\item\em Heal and increase the current hp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerator \mbox{\hyperlink{class_health_system_1_1_enemy_health_system_aab911964b3572367e76ab9e1fd9c60bd}{Stun}} (float stun\+Duration)
+\begin{DoxyCompactList}\small\item\em stun the enemy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_enemy_behavior_1_1_enemy}{Enemy}} \mbox{\hyperlink{class_health_system_1_1_enemy_health_system_a866bd3106fb64526699b40d857b2bd7f}{\+\_\+enemy}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_health_system_1_1_health_system}{Health\+System.\+Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_health_system_1_1_health_system_afffac0008b23a7e88c3e8a6ddcb45b70}{max\+Hp}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_health_system_1_1_health_system}{Health\+System.\+Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+Slider \mbox{\hyperlink{class_health_system_1_1_health_system_afbad83a908f12f18ad81c9140fae05cc}{slider\+Hp\+Player}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_health_system_1_1_health_system}{Health\+System.\+Health\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_health_system_1_1_health_system_ab7ff0c0a74693e7f1fd0e772efe8e47a}{Current\+Hp}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_health_system_1_1_enemy_health_system_aabda054513f980e1d2f78aad766b8f5f}\label{class_health_system_1_1_enemy_health_system_aabda054513f980e1d2f78aad766b8f5f} 
+\index{HealthSystem.EnemyHealthSystem@{HealthSystem.EnemyHealthSystem}!Dead@{Dead}}
+\index{Dead@{Dead}!HealthSystem.EnemyHealthSystem@{HealthSystem.EnemyHealthSystem}}
+\doxysubsubsection{\texorpdfstring{Dead()}{Dead()}}
+{\footnotesize\ttfamily override void Health\+System.\+Enemy\+Health\+System.\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Dead and add point to the player score. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_health_system_1_1_health_system_a9151782314f5407f5edf7678593a5137}{Health\+System.\+Health\+System}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_health_system_1_1_enemy_health_system_aabda054513f980e1d2f78aad766b8f5f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_health_system_1_1_enemy_health_system_aa40ff93785868e2a7ee8753006fa184b}\label{class_health_system_1_1_enemy_health_system_aa40ff93785868e2a7ee8753006fa184b} 
+\index{HealthSystem.EnemyHealthSystem@{HealthSystem.EnemyHealthSystem}!Start@{Start}}
+\index{Start@{Start}!HealthSystem.EnemyHealthSystem@{HealthSystem.EnemyHealthSystem}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily override void Health\+System.\+Enemy\+Health\+System.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_health_system_1_1_health_system_a9206b51833b78cbb003832eb800ecf7f}{Health\+System.\+Health\+System}}.
+
+\Hypertarget{class_health_system_1_1_enemy_health_system_aab911964b3572367e76ab9e1fd9c60bd}\label{class_health_system_1_1_enemy_health_system_aab911964b3572367e76ab9e1fd9c60bd} 
+\index{HealthSystem.EnemyHealthSystem@{HealthSystem.EnemyHealthSystem}!Stun@{Stun}}
+\index{Stun@{Stun}!HealthSystem.EnemyHealthSystem@{HealthSystem.EnemyHealthSystem}}
+\doxysubsubsection{\texorpdfstring{Stun()}{Stun()}}
+{\footnotesize\ttfamily IEnumerator Health\+System.\+Enemy\+Health\+System.\+Stun (\begin{DoxyParamCaption}\item[{float}]{stun\+Duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+stun the enemy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stun\+Duration} & Stun duration (sec).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_health_system_1_1_enemy_health_system_aab911964b3572367e76ab9e1fd9c60bd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_health_system_1_1_enemy_health_system_a7fcfeb6343b369c883c1ff7013b2101f}\label{class_health_system_1_1_enemy_health_system_a7fcfeb6343b369c883c1ff7013b2101f} 
+\index{HealthSystem.EnemyHealthSystem@{HealthSystem.EnemyHealthSystem}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!HealthSystem.EnemyHealthSystem@{HealthSystem.EnemyHealthSystem}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily override void Health\+System.\+Enemy\+Health\+System.\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage,  }\item[{Game\+Object}]{attacker = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Take damage and stun the enemy if the attacker is the player. And then set enemy target to the attacker. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & Damage taken.\\
+\hline
+{\em attacker} & The Attacker.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_health_system_1_1_health_system_a3a267200e5749e4b931038076fed1deb}{Health\+System.\+Health\+System}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_health_system_1_1_enemy_health_system_a7fcfeb6343b369c883c1ff7013b2101f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_health_system_1_1_enemy_health_system_a866bd3106fb64526699b40d857b2bd7f}\label{class_health_system_1_1_enemy_health_system_a866bd3106fb64526699b40d857b2bd7f} 
+\index{HealthSystem.EnemyHealthSystem@{HealthSystem.EnemyHealthSystem}!\_enemy@{\_enemy}}
+\index{\_enemy@{\_enemy}!HealthSystem.EnemyHealthSystem@{HealthSystem.EnemyHealthSystem}}
+\doxysubsubsection{\texorpdfstring{\_enemy}{\_enemy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_enemy_behavior_1_1_enemy}{Enemy}} Health\+System.\+Enemy\+Health\+System.\+\_\+enemy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Scripts/\+Health\+System/\mbox{\hyperlink{_enemy_health_system_8cs}{Enemy\+Health\+System.\+cs}}\end{DoxyCompactItemize}

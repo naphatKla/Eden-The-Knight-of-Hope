@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['agent_0',['agent',['../class_enemy.html#a945192ab3b423160afe30162dfd549f8',1,'Enemy']]],
-  ['attackarea_1',['attackarea',['../class_enemy_combat_system.html#ac131345f1a7638766d80f4f3abc62c5d',1,'EnemyCombatSystem.attackArea'],['../class_player_combat_system.html#acc9ae8bcf3aad106204896df6bd94432',1,'PlayerCombatSystem.attackArea']]],
-  ['attackdamage_2',['attackdamage',['../class_enemy_combat_system.html#ad7adda93bdb1a7a018d62f5767e5189e',1,'EnemyCombatSystem.attackDamage'],['../class_player_combat_system.html#aff6818b993e397e96034c17c8bf6041e',1,'PlayerCombatSystem.attackDamage']]],
-  ['attackpoint_3',['attackpoint',['../class_enemy_combat_system.html#a4ad5f38b5f6a835bf2f318ac8240ee5f',1,'EnemyCombatSystem.attackPoint'],['../class_player_combat_system.html#a7fb123d7b2c0ef068bb0abe162ce48d1',1,'PlayerCombatSystem.attackPoint'],['../class_tower.html#af3ecc6d49bdbd483a1a673cd59a87b36',1,'Tower.attackPoint']]],
-  ['attackradius_4',['attackRadius',['../class_tower.html#a11cca3ccc67048e397e4f6334dff2b3a',1,'Tower']]],
-  ['attackrate_5',['attackrate',['../class_enemy_combat_system.html#a0e8711ad73b04d70cf11e183666a7cdb',1,'EnemyCombatSystem.attackRate'],['../class_player_combat_system.html#a18212a719f3c483e8ccf06f3eab207c1',1,'PlayerCombatSystem.attackRate'],['../class_tower.html#a230fd17ec88e359c768ff1a2a056e63c',1,'Tower.attackRate']]]
+  ['applicationisquitting_0',['applicationIsQuitting',['../class_singleton.html#a003c575e164c5239c377187995c88e38',1,'Singleton']]],
+  ['attackarea_1',['attackArea',['../class_combat_system_1_1_combat_system.html#a6807d366d0d40ba3e9176114153e0d13',1,'CombatSystem::CombatSystem']]],
+  ['attackcooldown_2',['attackCooldown',['../class_tower_1_1_tower.html#a072fb894050386bfbc4d97fe7dd3f21c',1,'Tower::Tower']]],
+  ['attackpatterns_3',['attackPatterns',['../class_combat_system_1_1_combat_system.html#afcac2014a8521044e394ca4d705c4397',1,'CombatSystem::CombatSystem']]],
+  ['attackpoint_4',['attackpoint',['../class_combat_system_1_1_combat_system.html#a09513a9fc2438e1a16a0cfa836707798',1,'CombatSystem.CombatSystem.attackPoint'],['../class_tower_1_1_tower.html#ad5b8efead479df2deba95786cbc6413c',1,'Tower.Tower.attackPoint']]],
+  ['attackradius_5',['attackRadius',['../class_tower_1_1_tower.html#ac4c01a60f875f0bdb610b39b3f410631',1,'Tower::Tower']]],
+  ['attackstat_6',['attackStat',['../class_combat_system_1_1_combat_system.html#a0140ba87345cb34088fed96f6f021535',1,'CombatSystem::CombatSystem']]],
+  ['attackstate_7',['attackstate',['../struct_combat_system_1_1_attack_pattern.html#a5ed73d5524a24283a7a721f56bdfb1b5',1,'CombatSystem.AttackPattern.attackState'],['../class_combat_system_1_1_combat_system.html#a20d420abc177b30bc298abe737cf0f45',1,'CombatSystem.CombatSystem.attackState']]]
 ];

@@ -1,0 +1,9 @@
+<map id="PlayerBehavior.Player" name="PlayerBehavior.Player">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,172,154,199"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="20,5,129,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,47,82,171,76,172,72,47"/>
+<area shape="rect" id="Node000003" href="$class_player_behavior_1_1_player.html" title=" " alt="" coords="96,81,244,108"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="104,39,156,79,153,83,101,44"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,121,94,173,91,170,144,117"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="261,87,271,95,263,102,245,104,244,99,261,97,266,95,258,92"/>
+</map>

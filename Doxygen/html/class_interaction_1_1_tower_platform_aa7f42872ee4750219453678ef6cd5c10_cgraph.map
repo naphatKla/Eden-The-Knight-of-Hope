@@ -1,0 +1,7 @@
+<map id="Interaction.TowerPlatform.InteractAction" name="Interaction.TowerPlatform.InteractAction">
+<area shape="rect" id="Node000001" title="Create tower if the tower is not exist, else reset the tower health." alt="" coords="5,5,177,48"/>
+<area shape="rect" id="Node000002" href="$class_game_manager.html#a5d3c9753598caba92f5f58658a5eb1a2" title="Add point to the total point." alt="" coords="225,13,388,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,24,209,24,209,29,177,29"/>
+<area shape="rect" id="Node000003" href="$class_game_manager.html#a2f25fce454f2aa38a41b464fc120af16" title="Toggle set active game object relate with animation. Set active game object and wait until the animat..." alt="" coords="436,5,639,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="388,24,420,24,420,29,388,29"/>
+</map>

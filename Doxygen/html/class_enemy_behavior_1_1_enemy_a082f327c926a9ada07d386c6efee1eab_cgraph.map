@@ -1,0 +1,9 @@
+<map id="EnemyBehavior.Enemy.IdleHandle" name="EnemyBehavior.Enemy.IdleHandle">
+<area shape="rect" id="Node000001" title="Idle and roam around spawn point." alt="" coords="5,39,186,81"/>
+<area shape="rect" id="Node000002" href="$class_enemy_behavior_1_1_enemy.html#adab54c4c6b3b45fbcea6c28be3fc29ea" title="Roam around spawn point." alt="" coords="247,5,442,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,45,231,39,232,44,186,51"/>
+<area shape="rect" id="Node000004" href="$class_enemy_behavior_1_1_enemy.html#a9f13a199783e451e28591590f2bbf377" title="Set enemy state." alt="" coords="234,72,455,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,69,218,74,218,79,186,75"/>
+<area shape="rect" id="Node000003" href="$class_enemy_behavior_1_1_enemy.html#a06c155a565c2b1e7801f16d1b245b2a7" title="Check enemy state." alt="" coords="503,5,700,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="442,24,488,24,488,29,442,29"/>
+</map>

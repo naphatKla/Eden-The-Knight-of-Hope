@@ -1,9 +1,9 @@
 <map id="Player.DashHandle" name="Player.DashHandle">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,138,57"/>
-<area shape="rect" id="Node000002" href="$class_player.html#a33d429ce060086748994165a67efa960" title=" " alt="" coords="186,5,353,32"/>
+<area shape="rect" id="Node000001" title="Use for handle dash system." alt="" coords="5,31,138,57"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a33d429ce060086748994165a67efa960" title="Use to check the current player state." alt="" coords="186,5,353,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,33,170,29,171,34,138,38"/>
-<area shape="rect" id="Node000003" href="$class_player.html#a6c9cbd565959c1f4a6b78f78096a619c" title=" " alt="" coords="223,56,316,83"/>
+<area shape="rect" id="Node000003" href="$class_player.html#a6c9cbd565959c1f4a6b78f78096a619c" title="Dash behavior for start coroutine in dash system." alt="" coords="223,56,316,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,50,208,59,208,64,137,55"/>
-<area shape="rect" id="Node000004" href="$class_player.html#abeefe75958c0ae74e9a1f290848e5326" title=" " alt="" coords="401,56,551,83"/>
+<area shape="rect" id="Node000004" href="$class_player.html#abeefe75958c0ae74e9a1f290848e5326" title="Use for set player state." alt="" coords="401,56,551,83"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="316,67,385,67,385,72,316,72"/>
 </map>

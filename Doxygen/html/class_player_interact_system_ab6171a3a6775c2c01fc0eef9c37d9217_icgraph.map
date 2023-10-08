@@ -1,5 +1,5 @@
 <map id="PlayerInteractSystem.InteractHandle" name="PlayerInteractSystem.InteractHandle">
-<area shape="rect" id="Node000001" title=" " alt="" coords="245,5,438,48"/>
+<area shape="rect" id="Node000001" title="Interact with the nearest object." alt="" coords="245,5,438,48"/>
 <area shape="rect" id="Node000002" href="$class_player_interact_system.html#ab9deb39e9b13b50d4f6b1454c2946e94" title=" " alt="" coords="5,13,197,40"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,29,197,29,197,24,229,24"/>
 </map>

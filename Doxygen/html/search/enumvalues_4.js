@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['night_0',['Night',['../class_time_system.html#a842de62f9695ad344e3567385604312da0edc9b073397681dc9f2c479686ea0d9',1,'TimeSystem']]],
-  ['npc_1',['NPC',['../class_enemy.html#a53aff336dbb3dd7847e86c3635273550a2bda99597da06a11feafd8760b68aec6',1,'Enemy']]]
+  ['idle_0',['idle',['../namespace_enemy_behavior.html#ad2d0f2009098236b7e6ae2f150c23923ae599161956d626eda4cb0a5ffb85271c',1,'EnemyBehavior.Idle'],['../namespace_player_behavior.html#aedc9e849ec59dbbc9036a353ca4a0596ae599161956d626eda4cb0a5ffb85271c',1,'PlayerBehavior.Idle']]]
 ];

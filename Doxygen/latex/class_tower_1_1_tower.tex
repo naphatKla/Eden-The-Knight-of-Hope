@@ -1,0 +1,190 @@
+\doxysection{Tower.\+Tower Class Reference}
+\hypertarget{class_tower_1_1_tower}{}\label{class_tower_1_1_tower}\index{Tower.Tower@{Tower.Tower}}
+
+
+Inheritance diagram for Tower.\+Tower\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_tower_1_1_tower__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tower.\+Tower\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_tower_1_1_tower__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_tower_1_1_tower_a16810ebba24fd064b68b84388d1bb0c3}{Current\+Target}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tower_1_1_tower_ae7381443f7bfb3a79484af2e9736a6c2}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_tower_1_1_tower_a0bb0df3744c4091e52542f3847318677}{Target\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Target the nearest enemy in the attack radius. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tower_1_1_tower_ad42b6a2ae3a317e18fad03fad202b4e2}{Shoot\+Bullet\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Logic Shoot bullet to the current target. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tower_1_1_tower_a2d35f9e43611f551ba6b4fad40c371af}{On\+Draw\+Gizmos}} ()
+\begin{DoxyCompactList}\small\item\em Draw attack radius in the inspector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_tower_1_1_tower_ac4c01a60f875f0bdb610b39b3f410631}{attack\+Radius}}
+\item 
+float \mbox{\hyperlink{class_tower_1_1_tower_a072fb894050386bfbc4d97fe7dd3f21c}{attack\+Cooldown}}
+\item 
+Transform \mbox{\hyperlink{class_tower_1_1_tower_ad5b8efead479df2deba95786cbc6413c}{attack\+Point}}
+\item 
+Layer\+Mask \mbox{\hyperlink{class_tower_1_1_tower_a4b31150dc056362e7340cdbb3ffdb8da}{target\+Layer\+Mask}}
+\item 
+Game\+Object \mbox{\hyperlink{class_tower_1_1_tower_ad8566b70563b9d4aa407f08b234f3681}{bullet\+Prefab}}
+\item 
+Transform \mbox{\hyperlink{class_tower_1_1_tower_aa172f7ff4a3471b0c315f5bde7fcd969}{bullet\+Spawn\+Point}}
+\item 
+float \mbox{\hyperlink{class_tower_1_1_tower_a82d3b682f9c4654b78cd53d544f54b8e}{bullet\+Damage}}
+\item 
+float \mbox{\hyperlink{class_tower_1_1_tower_a0cc58f53748d1255b75927b7ab18fe7a}{bullet\+Speed}}
+\item 
+Collider2D\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_tower_1_1_tower_a7e63b56bb916ef21cdb4db4cbb662f7b}{\+\_\+target\+In\+Attack\+Areas}}
+\item 
+float \mbox{\hyperlink{class_tower_1_1_tower_a8363e8f4bd0d761928dc11994a3c06b8}{\+\_\+next\+Attack\+Time}}
+\item 
+Game\+Object \mbox{\hyperlink{class_tower_1_1_tower_ac264944062e94622e6214497cb1e22b4}{\+\_\+current\+Target}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tower_1_1_tower_a2d35f9e43611f551ba6b4fad40c371af}\label{class_tower_1_1_tower_a2d35f9e43611f551ba6b4fad40c371af} 
+\index{Tower.Tower@{Tower.Tower}!OnDrawGizmos@{OnDrawGizmos}}
+\index{OnDrawGizmos@{OnDrawGizmos}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{OnDrawGizmos()}{OnDrawGizmos()}}
+{\footnotesize\ttfamily void Tower.\+Tower.\+On\+Draw\+Gizmos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Draw attack radius in the inspector. 
+
+\Hypertarget{class_tower_1_1_tower_ad42b6a2ae3a317e18fad03fad202b4e2}\label{class_tower_1_1_tower_ad42b6a2ae3a317e18fad03fad202b4e2} 
+\index{Tower.Tower@{Tower.Tower}!ShootBulletHandler@{ShootBulletHandler}}
+\index{ShootBulletHandler@{ShootBulletHandler}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{ShootBulletHandler()}{ShootBulletHandler()}}
+{\footnotesize\ttfamily void Tower.\+Tower.\+Shoot\+Bullet\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Logic Shoot bullet to the current target. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tower_1_1_tower_ad42b6a2ae3a317e18fad03fad202b4e2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tower_1_1_tower_a0bb0df3744c4091e52542f3847318677}\label{class_tower_1_1_tower_a0bb0df3744c4091e52542f3847318677} 
+\index{Tower.Tower@{Tower.Tower}!TargetHandler@{TargetHandler}}
+\index{TargetHandler@{TargetHandler}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{TargetHandler()}{TargetHandler()}}
+{\footnotesize\ttfamily void Tower.\+Tower.\+Target\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Target the nearest enemy in the attack radius. 
+
+\Hypertarget{class_tower_1_1_tower_ae7381443f7bfb3a79484af2e9736a6c2}\label{class_tower_1_1_tower_ae7381443f7bfb3a79484af2e9736a6c2} 
+\index{Tower.Tower@{Tower.Tower}!Update@{Update}}
+\index{Update@{Update}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Tower.\+Tower.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_tower_1_1_tower_ac264944062e94622e6214497cb1e22b4}\label{class_tower_1_1_tower_ac264944062e94622e6214497cb1e22b4} 
+\index{Tower.Tower@{Tower.Tower}!\_currentTarget@{\_currentTarget}}
+\index{\_currentTarget@{\_currentTarget}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{\_currentTarget}{\_currentTarget}}
+{\footnotesize\ttfamily Game\+Object Tower.\+Tower.\+\_\+current\+Target\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_tower_a8363e8f4bd0d761928dc11994a3c06b8}\label{class_tower_1_1_tower_a8363e8f4bd0d761928dc11994a3c06b8} 
+\index{Tower.Tower@{Tower.Tower}!\_nextAttackTime@{\_nextAttackTime}}
+\index{\_nextAttackTime@{\_nextAttackTime}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{\_nextAttackTime}{\_nextAttackTime}}
+{\footnotesize\ttfamily float Tower.\+Tower.\+\_\+next\+Attack\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_tower_a7e63b56bb916ef21cdb4db4cbb662f7b}\label{class_tower_1_1_tower_a7e63b56bb916ef21cdb4db4cbb662f7b} 
+\index{Tower.Tower@{Tower.Tower}!\_targetInAttackAreas@{\_targetInAttackAreas}}
+\index{\_targetInAttackAreas@{\_targetInAttackAreas}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{\_targetInAttackAreas}{\_targetInAttackAreas}}
+{\footnotesize\ttfamily Collider2D \mbox{[}$\,$\mbox{]} Tower.\+Tower.\+\_\+target\+In\+Attack\+Areas\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_tower_a072fb894050386bfbc4d97fe7dd3f21c}\label{class_tower_1_1_tower_a072fb894050386bfbc4d97fe7dd3f21c} 
+\index{Tower.Tower@{Tower.Tower}!attackCooldown@{attackCooldown}}
+\index{attackCooldown@{attackCooldown}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{attackCooldown}{attackCooldown}}
+{\footnotesize\ttfamily float Tower.\+Tower.\+attack\+Cooldown\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_tower_ad5b8efead479df2deba95786cbc6413c}\label{class_tower_1_1_tower_ad5b8efead479df2deba95786cbc6413c} 
+\index{Tower.Tower@{Tower.Tower}!attackPoint@{attackPoint}}
+\index{attackPoint@{attackPoint}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{attackPoint}{attackPoint}}
+{\footnotesize\ttfamily Transform Tower.\+Tower.\+attack\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_tower_ac4c01a60f875f0bdb610b39b3f410631}\label{class_tower_1_1_tower_ac4c01a60f875f0bdb610b39b3f410631} 
+\index{Tower.Tower@{Tower.Tower}!attackRadius@{attackRadius}}
+\index{attackRadius@{attackRadius}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{attackRadius}{attackRadius}}
+{\footnotesize\ttfamily float Tower.\+Tower.\+attack\+Radius\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_tower_a82d3b682f9c4654b78cd53d544f54b8e}\label{class_tower_1_1_tower_a82d3b682f9c4654b78cd53d544f54b8e} 
+\index{Tower.Tower@{Tower.Tower}!bulletDamage@{bulletDamage}}
+\index{bulletDamage@{bulletDamage}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{bulletDamage}{bulletDamage}}
+{\footnotesize\ttfamily float Tower.\+Tower.\+bullet\+Damage\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_tower_ad8566b70563b9d4aa407f08b234f3681}\label{class_tower_1_1_tower_ad8566b70563b9d4aa407f08b234f3681} 
+\index{Tower.Tower@{Tower.Tower}!bulletPrefab@{bulletPrefab}}
+\index{bulletPrefab@{bulletPrefab}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{bulletPrefab}{bulletPrefab}}
+{\footnotesize\ttfamily Game\+Object Tower.\+Tower.\+bullet\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_tower_aa172f7ff4a3471b0c315f5bde7fcd969}\label{class_tower_1_1_tower_aa172f7ff4a3471b0c315f5bde7fcd969} 
+\index{Tower.Tower@{Tower.Tower}!bulletSpawnPoint@{bulletSpawnPoint}}
+\index{bulletSpawnPoint@{bulletSpawnPoint}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{bulletSpawnPoint}{bulletSpawnPoint}}
+{\footnotesize\ttfamily Transform Tower.\+Tower.\+bullet\+Spawn\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_tower_a0cc58f53748d1255b75927b7ab18fe7a}\label{class_tower_1_1_tower_a0cc58f53748d1255b75927b7ab18fe7a} 
+\index{Tower.Tower@{Tower.Tower}!bulletSpeed@{bulletSpeed}}
+\index{bulletSpeed@{bulletSpeed}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{bulletSpeed}{bulletSpeed}}
+{\footnotesize\ttfamily float Tower.\+Tower.\+bullet\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_tower_1_1_tower_a4b31150dc056362e7340cdbb3ffdb8da}\label{class_tower_1_1_tower_a4b31150dc056362e7340cdbb3ffdb8da} 
+\index{Tower.Tower@{Tower.Tower}!targetLayerMask@{targetLayerMask}}
+\index{targetLayerMask@{targetLayerMask}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{targetLayerMask}{targetLayerMask}}
+{\footnotesize\ttfamily Layer\+Mask Tower.\+Tower.\+target\+Layer\+Mask\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_tower_1_1_tower_a16810ebba24fd064b68b84388d1bb0c3}\label{class_tower_1_1_tower_a16810ebba24fd064b68b84388d1bb0c3} 
+\index{Tower.Tower@{Tower.Tower}!CurrentTarget@{CurrentTarget}}
+\index{CurrentTarget@{CurrentTarget}!Tower.Tower@{Tower.Tower}}
+\doxysubsubsection{\texorpdfstring{CurrentTarget}{CurrentTarget}}
+{\footnotesize\ttfamily Game\+Object Tower.\+Tower.\+Current\+Target\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Scripts/\+Tower/\mbox{\hyperlink{_tower_8cs}{Tower.\+cs}}\end{DoxyCompactItemize}

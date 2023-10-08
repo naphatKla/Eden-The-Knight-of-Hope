@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['maxenemy_0',['maxEnemy',['../class_enemy_spawner.html#ac34b6a42a9d6f260ffd25eaec192f943',1,'EnemySpawner']]],
-  ['maxhp_1',['maxHp',['../class_health_system.html#a1dff31a9c710ce45dd4ecec2fcacf58c',1,'HealthSystem']]],
-  ['maxitem_2',['maxItem',['../class_item_spawner.html#aa84c55d0575afe9794ae71a29e93c243',1,'ItemSpawner']]],
-  ['maxlight_3',['maxLight',['../class_time_system.html#a2f3961d6da3384774813da12d95c5492',1,'TimeSystem']]],
-  ['maxzoom_4',['maxZoom',['../class_player_camera.html#af8c5f560980ae0e3ff0d3083b0505cc1',1,'PlayerCamera']]],
-  ['minlight_5',['minLight',['../class_time_system.html#ac9333e0514786aed276d6d3e7cdbe90a',1,'TimeSystem']]],
-  ['minzoom_6',['minZoom',['../class_player_camera.html#ae0a7019bb577c5996a829d0daf2256c5',1,'PlayerCamera']]],
-  ['movementhandle_7',['MovementHandle',['../class_player.html#ab9121efd0a345ec0feec9f3d39aeb4a7',1,'Player']]]
+  ['maxhp_0',['maxHp',['../class_health_system_1_1_health_system.html#afffac0008b23a7e88c3e8a6ddcb45b70',1,'HealthSystem::HealthSystem']]],
+  ['maxlight_1',['maxLight',['../class_time_system.html#a2f3961d6da3384774813da12d95c5492',1,'TimeSystem']]],
+  ['maxobject_2',['maxObject',['../class_spawner_1_1_spawner.html#ac1ab43333d4ed89f02ea82d7c2317749',1,'Spawner::Spawner']]],
+  ['maxzoom_3',['maxZoom',['../class_player_behavior_1_1_player_camera.html#ae364fc971ed490e1a59fa9531293007d',1,'PlayerBehavior::PlayerCamera']]],
+  ['minlight_4',['minLight',['../class_time_system.html#ac9333e0514786aed276d6d3e7cdbe90a',1,'TimeSystem']]],
+  ['minzoom_5',['minZoom',['../class_player_behavior_1_1_player_camera.html#a5763b5ecdf9f703dd731d3bae566cf2b',1,'PlayerBehavior::PlayerCamera']]],
+  ['movementhandle_6',['MovementHandle',['../class_player_behavior_1_1_player.html#a63f4355fd793c64dc9345e22ff1886e3',1,'PlayerBehavior::Player']]]
 ];

@@ -1,0 +1,9 @@
+<map id="Interaction.InteractableObject" name="Interaction.InteractableObject">
+<area shape="rect" id="Node000001" title=" " alt="" coords="130,80,282,123"/>
+<area shape="rect" id="Node000003" href="$class_interaction_1_1_gathering_resource.html" title=" " alt="" coords="5,171,202,197"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="170,135,121,172,118,168,166,130"/>
+<area shape="rect" id="Node000004" href="$class_interaction_1_1_tower_platform.html" title=" " alt="" coords="225,171,393,197"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="246,130,294,168,291,172,243,135"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="152,5,261,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,48,209,80,204,80,204,48"/>
+</map>

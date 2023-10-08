@@ -1,6 +1,6 @@
 <map id="PlayerInteractSystem.Update" name="PlayerInteractSystem.Update">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,13,197,40"/>
-<area shape="rect" id="Node000002" href="$class_player_interact_system.html#ab6171a3a6775c2c01fc0eef9c37d9217" title=" " alt="" coords="245,5,438,48"/>
+<area shape="rect" id="Node000002" href="$class_player_interact_system.html#ab6171a3a6775c2c01fc0eef9c37d9217" title="Interact with the nearest object." alt="" coords="245,5,438,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,24,229,24,229,29,197,29"/>
 <area shape="rect" id="Node000003" href="$class_interactable_object.html#a8d24c5e90977f2f0c08f36bed0b1d021" title=" " alt="" coords="486,13,659,40"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="438,24,471,24,471,29,438,29"/>

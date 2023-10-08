@@ -1,0 +1,7 @@
+<map id="EnemyBehavior.Enemy.FollowTargetHandle" name="EnemyBehavior.Enemy.FollowTargetHandle">
+<area shape="rect" id="Node000001" title="Follow target." alt="" coords="5,39,203,81"/>
+<area shape="rect" id="Node000002" href="$class_enemy_behavior_1_1_enemy.html#a0553be39edcc606ac62a4c0a9e95f91d" title="Select target with the first priority tag found in the target list." alt="" coords="263,5,460,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,45,247,39,247,44,203,50"/>
+<area shape="rect" id="Node000003" href="$class_enemy_behavior_1_1_enemy.html#a9f13a199783e451e28591590f2bbf377" title="Set enemy state." alt="" coords="251,72,472,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="203,70,235,74,235,80,203,75"/>
+</map>

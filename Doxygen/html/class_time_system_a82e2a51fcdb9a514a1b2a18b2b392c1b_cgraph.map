@@ -1,5 +1,7 @@
 <map id="TimeSystem.TimePeriodCheck" name="TimeSystem.TimePeriodCheck">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,206,32"/>
-<area shape="rect" id="Node000002" href="$class_time_system.html#aa9fab23d98070b757d1d49f8e8acf030" title=" " alt="" coords="254,5,459,32"/>
+<area shape="rect" id="Node000001" title="Check if current time is in the period of x time and y time or not." alt="" coords="5,5,206,32"/>
+<area shape="rect" id="Node000002" href="$class_time_system.html#a7550e260f7a7d6b5f52ef75480b5cc62" title="Get current time (hour)." alt="" coords="254,5,443,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,16,238,16,238,21,206,21"/>
+<area shape="rect" id="Node000003" href="$class_time_system.html#aa9fab23d98070b757d1d49f8e8acf030" title="Convert second to hour." alt="" coords="491,5,696,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="443,16,476,16,476,21,443,21"/>
 </map>

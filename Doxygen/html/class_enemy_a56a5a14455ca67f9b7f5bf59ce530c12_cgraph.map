@@ -1,0 +1,5 @@
+<map id="Enemy.SelectTarget" name="Enemy.SelectTarget">
+<area shape="rect" id="Node000001" title="Select target with the first priority tag found in the target list." alt="" coords="5,5,145,32"/>
+<area shape="rect" id="Node000002" href="$class_enemy.html#a1289737aae15f80017fe2b441b52545e" title="Check enemy state." alt="" coords="193,5,327,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,16,177,16,177,21,145,21"/>
+</map>

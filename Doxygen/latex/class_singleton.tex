@@ -1,0 +1,101 @@
+\doxysection{Singleton\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_singleton}{}\label{class_singleton}\index{Singleton$<$ T $>$@{Singleton$<$ T $>$}}
+
+
+Be aware this will not prevent a non singleton constructor such as {\ttfamily T myT = new T();} To prevent that, add {\ttfamily protected T () \{\}} to your singleton class.  
+
+
+
+
+Inheritance diagram for Singleton\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_singleton__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Singleton\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_singleton__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_singleton_a81a4ea792b927aeae3f52c1e0d2036af}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em When Unity quits, it destroys objects in a random order. In principle, a \doxylink{class_singleton}{Singleton} is only destroyed when application quits. If any script calls Instance after it have been destroyed, it will create a buggy ghost object that will stay on the Editor scene even after stopping playing the Application. Really bad! So, this was made to be sure we\textquotesingle{}re not creating that buggy ghost object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static T \mbox{\hyperlink{class_singleton_a54103e8475b2a352ee759d5732307534}{Instance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static T \mbox{\hyperlink{class_singleton_a948282bcd2c7847940d101bd5be85094}{\+\_\+instance}}
+\item 
+static object \mbox{\hyperlink{class_singleton_ad3326274294a2759b6d5a39b8afab5cf}{\+\_\+lock}} = new object()
+\item 
+static bool \mbox{\hyperlink{class_singleton_a003c575e164c5239c377187995c88e38}{application\+Is\+Quitting}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Be aware this will not prevent a non singleton constructor such as {\ttfamily T myT = new T();} To prevent that, add {\ttfamily protected T () \{\}} to your singleton class. 
+
+As a note, this is made as Mono\+Behaviour because we need Coroutines. \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em Mono\+Behaviour}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_singleton_a81a4ea792b927aeae3f52c1e0d2036af}\label{class_singleton_a81a4ea792b927aeae3f52c1e0d2036af} 
+\index{Singleton$<$ T $>$@{Singleton$<$ T $>$}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!Singleton$<$ T $>$@{Singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_singleton}{Singleton}}$<$ T $>$.On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+When Unity quits, it destroys objects in a random order. In principle, a \doxylink{class_singleton}{Singleton} is only destroyed when application quits. If any script calls Instance after it have been destroyed, it will create a buggy ghost object that will stay on the Editor scene even after stopping playing the Application. Really bad! So, this was made to be sure we\textquotesingle{}re not creating that buggy ghost object. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_singleton_a948282bcd2c7847940d101bd5be85094}\label{class_singleton_a948282bcd2c7847940d101bd5be85094} 
+\index{Singleton$<$ T $>$@{Singleton$<$ T $>$}!\_instance@{\_instance}}
+\index{\_instance@{\_instance}!Singleton$<$ T $>$@{Singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_instance}{\_instance}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_singleton}{Singleton}}$<$ T $>$.\+\_\+instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{class_singleton_ad3326274294a2759b6d5a39b8afab5cf}\label{class_singleton_ad3326274294a2759b6d5a39b8afab5cf} 
+\index{Singleton$<$ T $>$@{Singleton$<$ T $>$}!\_lock@{\_lock}}
+\index{\_lock@{\_lock}!Singleton$<$ T $>$@{Singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_lock}{\_lock}}
+{\footnotesize\ttfamily object \mbox{\hyperlink{class_singleton}{Singleton}}$<$ T $>$.\+\_\+lock = new object()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{class_singleton_a003c575e164c5239c377187995c88e38}\label{class_singleton_a003c575e164c5239c377187995c88e38} 
+\index{Singleton$<$ T $>$@{Singleton$<$ T $>$}!applicationIsQuitting@{applicationIsQuitting}}
+\index{applicationIsQuitting@{applicationIsQuitting}!Singleton$<$ T $>$@{Singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{applicationIsQuitting}{applicationIsQuitting}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_singleton}{Singleton}}$<$ T $>$.application\+Is\+Quitting = false\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_singleton_a54103e8475b2a352ee759d5732307534}\label{class_singleton_a54103e8475b2a352ee759d5732307534} 
+\index{Singleton$<$ T $>$@{Singleton$<$ T $>$}!Instance@{Instance}}
+\index{Instance@{Instance}!Singleton$<$ T $>$@{Singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_singleton}{Singleton}}$<$ T $>$.Instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mynig/\+Desktop/\+Eden-\/\+The-\/\+Knight-\/of-\/\+Hope/\+Assets/\+Scripts/\mbox{\hyperlink{_singleton_8cs}{Singleton.\+cs}}\end{DoxyCompactItemize}

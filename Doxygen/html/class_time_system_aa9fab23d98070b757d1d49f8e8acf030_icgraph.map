@@ -1,17 +1,21 @@
 <map id="TimeSystem.ConvertSecToHour" name="TimeSystem.ConvertSecToHour">
-<area shape="rect" id="Node000001" title=" " alt="" coords="679,31,885,57"/>
-<area shape="rect" id="Node000002" href="$class_time_system.html#a4fb86a5324ec855567b074f8ee7f9e08" title=" " alt="" coords="193,5,383,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="698,30,631,21,502,16,383,17,383,12,502,10,632,16,699,25"/>
-<area shape="rect" id="Node000004" href="$class_time_system.html#a7550e260f7a7d6b5f52ef75480b5cc62" title=" " alt="" coords="437,31,626,57"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="664,47,626,47,626,41,664,41"/>
-<area shape="rect" id="Node000005" href="$class_time_system.html#a82e2a51fcdb9a514a1b2a18b2b392c1b" title=" " alt="" coords="431,81,631,108"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="698,64,601,83,600,78,697,58"/>
-<area shape="rect" id="Node000003" href="$class_time_system.html#ab6de60d288f4ba297b658622b28092a8" title=" " alt="" coords="5,31,145,57"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="179,34,145,38,145,33,178,29"/>
-<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="451,79,430,72,406,59,382,46,348,35,350,30,384,42,408,54,432,67,453,74"/>
-<area shape="rect" id="Node000006" href="$class_time_system.html#a6565c99878badb19f6127443687637ee" title=" " alt="" coords="193,56,383,83"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="415,85,383,82,384,77,416,80"/>
-<area shape="rect" id="Node000007" href="$class_game_manager.html#a44c79b205dec16bfe650e21259860c5b" title=" " alt="" coords="212,107,364,133"/>
-<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="416,109,364,115,364,109,415,104"/>
-<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="177,59,145,55,145,50,178,54"/>
+<area shape="rect" id="Node000001" title="Convert second to hour." alt="" coords="1216,31,1421,57"/>
+<area shape="rect" id="Node000002" href="$class_time_system.html#a4fb86a5324ec855567b074f8ee7f9e08" title="Handle day light intensity." alt="" coords="473,5,662,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1201,43,662,25,662,19,1201,37"/>
+<area shape="rect" id="Node000004" href="$class_time_system.html#a7550e260f7a7d6b5f52ef75480b5cc62" title="Get current time (hour)." alt="" coords="979,56,1168,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1201,59,1169,62,1168,57,1200,54"/>
+<area shape="rect" id="Node000003" href="$class_time_system.html#ab6de60d288f4ba297b658622b28092a8" title=" " alt="" coords="5,56,145,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="457,25,330,32,193,47,133,58,132,53,192,41,330,27,457,19"/>
+<area shape="rect" id="Node000005" href="$class_time_system.html#a82e2a51fcdb9a514a1b2a18b2b392c1b" title="Check if current time is in the period of x time and y time or not." alt="" coords="730,56,931,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="963,72,931,72,931,67,963,67"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="742,55,640,35,641,30,743,50"/>
+<area shape="rect" id="Node000006" href="$class_game_manager.html#aaa54247670379ebc17bea1edd0d3a156" title="Warning player when the enemy wave are coming (17:00 &#45; 19:00)." alt="" coords="452,56,682,83"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="715,72,683,72,683,67,715,67"/>
+<area shape="rect" id="Node000008" href="$class_time_system.html#ad3888f69729d36baf3cfdecc13d9822c" title="Update time multiplier and time state." alt="" coords="458,107,677,133"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="743,89,641,109,640,103,742,84"/>
+<area shape="rect" id="Node000007" href="$class_game_manager.html#a44c79b205dec16bfe650e21259860c5b" title=" " alt="" coords="223,56,374,83"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="437,72,374,72,374,67,437,67"/>
+<area shape="rect" id="Node000009" href="$class_time_system.html#af8c80116b8f70701e76da5a8215cbf89" title="Update time and day." alt="" coords="193,107,404,133"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="442,123,405,123,405,117,442,117"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="221,105,136,86,138,81,222,100"/>
 </map>

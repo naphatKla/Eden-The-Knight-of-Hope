@@ -1,0 +1,9 @@
+<map id="Enemy.ReturnToSpawnHandle" name="Enemy.ReturnToSpawnHandle">
+<area shape="rect" id="Node000001" title="Return to spawn point." alt="" coords="5,31,203,57"/>
+<area shape="rect" id="Node000002" href="$class_enemy.html#af965e27ede7de8090c48cd3ed8d50dea" title="Wait for a while and return to spawn point." alt="" coords="251,31,405,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,41,236,41,236,47,203,47"/>
+<area shape="rect" id="Node000003" href="$class_enemy.html#a1289737aae15f80017fe2b441b52545e" title="Check enemy state." alt="" coords="465,5,599,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="405,32,449,26,450,32,406,37"/>
+<area shape="rect" id="Node000004" href="$class_enemy.html#a115c8ded4831b6e9168cfd9d634300f8" title="Set enemy state." alt="" coords="453,56,611,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="406,51,438,55,437,60,405,56"/>
+</map>

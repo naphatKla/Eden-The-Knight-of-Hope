@@ -1,0 +1,5 @@
+<map id="HealthSystem.ResetHealth" name="HealthSystem.ResetHealth">
+<area shape="rect" id="Node000001" title="Reset the current hp to max hp." alt="" coords="5,5,184,32"/>
+<area shape="rect" id="Node000002" href="$class_health_system.html#aee86495eaff53a6f1c3570b82c757d0b" title="Update the UI." alt="" coords="232,5,392,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,16,216,16,216,21,184,21"/>
+</map>
