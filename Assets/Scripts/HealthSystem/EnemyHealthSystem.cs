@@ -13,6 +13,7 @@ namespace HealthSystem
             base.Start();
         }
     
+        
         /// <summary>
         /// Take damage and stun the enemy if the attacker is the player.
         /// And then set enemy target to the attacker.
@@ -29,6 +30,7 @@ namespace HealthSystem
             base.TakeDamage(damage, attacker);
         }
     
+        
         /// <summary>
         /// Dead and add point to the player score.
         /// </summary>
@@ -40,6 +42,7 @@ namespace HealthSystem
             base.Dead();
         }
 
+        
         /// <summary>
         /// stun the enemy.
         /// </summary>

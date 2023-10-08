@@ -48,7 +48,7 @@ namespace EnemyBehavior
         public NavMeshAgent Agent { get; private set; }
         #endregion
     
-        void Start()
+        protected void Start()
         {
             _animator = GetComponent<Animator>();
             Agent = GetComponent<NavMeshAgent>();
@@ -59,7 +59,7 @@ namespace EnemyBehavior
             enemyActionState = EnemyState.Idle;
         }
 
-        void Update()
+        protected void Update()
         {
             if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttack") || IsStun)
             {

@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -41,7 +40,7 @@ namespace HealthSystem
             CurrentHp = Mathf.Clamp(CurrentHp, 0, maxHp);
             UpdateUI();
         
-            if(!_animator.IsUnityNull())
+            if(_animator)
                 _animator.SetTrigger(TakDamage);
         
             if (CurrentHp > 0 || _isDead) return;
@@ -49,6 +48,7 @@ namespace HealthSystem
             Dead();
         }
 
+        
         /// <summary>
         /// Heal and increase the current hp.
         /// </summary>
@@ -60,6 +60,7 @@ namespace HealthSystem
             UpdateUI();
         }
     
+        
         /// <summary>
         /// Dead and destroy the object.
         /// </summary>
@@ -68,6 +69,7 @@ namespace HealthSystem
             Destroy(gameObject);
         }
     
+        
         /// <summary>
         /// Reset the current hp to max hp.
         /// </summary>
@@ -78,6 +80,7 @@ namespace HealthSystem
             UpdateUI();
         }
     
+        
         /// <summary>
         /// Update the UI.
         /// </summary>
