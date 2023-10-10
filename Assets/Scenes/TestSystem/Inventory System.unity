@@ -951,6 +951,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6416425911627999613, guid: 76c50d2fbf103974ea0966f4894a30a1, type: 3}
+      propertyPath: m_text
+      value: Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla
+        Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla
+        Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla
+        Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla
+        Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla Kuykla
+        Kuykla Kuykla
+      objectReference: {fileID: 0}
     - target: {fileID: 6480044370929557231, guid: 76c50d2fbf103974ea0966f4894a30a1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1120,6 +1129,15 @@ MonoBehaviour:
   inventoryUI: {fileID: 499317416}
   inventoryData: {fileID: 11400000, guid: 7c8a5a2af1efac84c8cafb5edf47f58d, type: 2}
   Key: 105
+  initialItems:
+  - quantity: 5
+    item: {fileID: 11400000, guid: c69619735d1d8b14c982ff1c96b11f74, type: 2}
+  - quantity: 0
+    item: {fileID: 0}
+  - quantity: 1
+    item: {fileID: 11400000, guid: fa8bd95525f24394ea519057f38158b6, type: 2}
+  - quantity: 2
+    item: {fileID: 11400000, guid: c69619735d1d8b14c982ff1c96b11f74, type: 2}
 --- !u!1001 &1871461708
 PrefabInstance:
   m_ObjectHideFlags: 0

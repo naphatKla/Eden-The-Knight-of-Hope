@@ -133,9 +133,9 @@ namespace Inventory.UI
         gameObject.SetActive(false);
     }
 
-    public void UpdateDescription(int itemIndex, Sprite itemItemImage, string itemName, string description)
+    public void UpdateDescription(int itemIndex, Sprite itemImage, string name ,string description)
     {
-        itemDescription.SetDescription(itemItemImage, name, description);
+        itemDescription.SetDescription(itemImage, name, description);
         DeselectAllItem();
         listOfUIItems[itemIndex].Select();
     }

@@ -100,7 +100,6 @@ namespace Inventory
                 else
                 {
                     inventoryUI.Hide();
-                    
                 }
             }
         }
