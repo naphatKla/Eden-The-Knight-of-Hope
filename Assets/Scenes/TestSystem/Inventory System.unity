@@ -1118,8 +1118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 499317416}
+  inventoryData: {fileID: 11400000, guid: 7c8a5a2af1efac84c8cafb5edf47f58d, type: 2}
   Key: 105
-  inventorySize: 30
 --- !u!1001 &1871461708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1194,5 +1194,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 310304973}
   - {fileID: 1871461708}
-  - {fileID: 449014004}
   - {fileID: 72948017}
+  - {fileID: 449014004}
