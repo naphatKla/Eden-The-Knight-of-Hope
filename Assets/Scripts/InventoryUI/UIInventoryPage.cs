@@ -5,7 +5,9 @@ using UnityEngine;
 using UnityEngine.Rendering.VirtualTexturing;
 using UnityEngine.UI;
 
-public class UIInventoryPage : MonoBehaviour
+namespace Inventory.UI
+{ 
+    public class UIInventoryPage : MonoBehaviour
 {
     [SerializeField] private UIInventoryItem itemprefab;
     [SerializeField] private RectTransform contentPanel;
@@ -22,7 +24,7 @@ public class UIInventoryPage : MonoBehaviour
     OnItemActionRequested,
     OnStarDragging;
 
-    public event Action<int, int> OnSwapItem; 
+    public event Action<int, int> OnSwapItem;
 
     public void Awake()
     {
@@ -137,4 +139,15 @@ public class UIInventoryPage : MonoBehaviour
         DeselectAllItem();
         listOfUIItems[itemIndex].Select();
     }
+
+    public void ResetAllItems()
+    {
+        foreach (var item in listOfUIItems)
+        {
+            item.ResetData();
+            item.Deselect();
+        }
+    }
 }
+}
+

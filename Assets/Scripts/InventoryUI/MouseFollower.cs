@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Inventory.UI;
 using UnityEngine;
 
 public class MouseFollower : MonoBehaviour
