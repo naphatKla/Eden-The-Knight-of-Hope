@@ -30,6 +30,10 @@ namespace PlayerBehavior
         private Animator _animator;
         private Rigidbody2D _playerRigidbody2D;
         public static Player Instance;
+        private static readonly int IsDashAnimation = Animator.StringToHash("IsDash");
+        public Animator Animator => _animator;
+        public bool IsDash => _isDash;
+
         #endregion
     
         private void Start()
@@ -69,6 +73,7 @@ namespace PlayerBehavior
             _playerRigidbody2D.velocity = playerVelocity;
 
             _animator.SetTrigger(playerState.ToString());
+            _animator.SetBool(IsDashAnimation,_isDash);
 
             // flip player horizontal direction
             if (Input.GetAxisRaw("Horizontal") != 0)
@@ -116,7 +121,7 @@ namespace PlayerBehavior
         {
             if (CheckPlayerState(PlayerState.Idle) || _isDash || _isDashCooldown) return;
             if (!Input.GetKeyDown(dashKey)) return;
-
+            
             StartCoroutine(Dash());
         }
 
