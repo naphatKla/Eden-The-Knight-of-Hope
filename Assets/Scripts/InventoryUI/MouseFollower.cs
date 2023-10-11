@@ -13,7 +13,7 @@ public class MouseFollower : MonoBehaviour
 
     public void Awake()
     {
-        canvas = transform.root.GetComponent<Canvas>();
+        canvas = transform.parent.GetComponent<Canvas>();
         mainCam = Camera.main;
         item = GetComponentInChildren<UIInventoryItem>();
     }

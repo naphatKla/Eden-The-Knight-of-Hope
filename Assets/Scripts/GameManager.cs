@@ -28,7 +28,8 @@ public class GameManager : MonoBehaviour
         if (!playerBase) SceneManager.LoadScene(0);
         EvenWarningHandler();
     }
-
+    
+    
     #region Methods
     /// <summary>
     /// Warning player when the enemy wave are coming (17:00 - 19:00).

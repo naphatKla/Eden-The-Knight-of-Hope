@@ -23,6 +23,7 @@ namespace PlayerBehavior
         [SerializeField] private float dashCooldown;
         [SerializeField] private KeyCode sprintKey;
         [SerializeField] private KeyCode dashKey;
+        [SerializeField] private Transform canvasTransform;
         private bool _isDash;
         private bool _isRunning;
         private bool _isDashCooldown;
@@ -47,6 +48,12 @@ namespace PlayerBehavior
         private void Update()
         {
             MovementHandle();
+        }
+        
+        private void LateUpdate()
+        {
+            // Lock the canvas UI rotation.
+            canvasTransform.right = Vector3.right;
         }
     
     
