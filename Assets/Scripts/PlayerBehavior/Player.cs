@@ -23,6 +23,7 @@ namespace PlayerBehavior
         [SerializeField] private float dashCooldown;
         [SerializeField] private KeyCode sprintKey;
         [SerializeField] private KeyCode dashKey;
+        [SerializeField] private Transform canvasTransform;
         private bool _isDash;
         private bool _isRunning;
         private bool _isDashCooldown;
@@ -30,6 +31,10 @@ namespace PlayerBehavior
         private Animator _animator;
         private Rigidbody2D _playerRigidbody2D;
         public static Player Instance;
+        private static readonly int IsDashAnimation = Animator.StringToHash("IsDash");
+        public Animator Animator => _animator;
+        public bool IsDash => _isDash;
+
         #endregion
     
         private void Start()
@@ -43,6 +48,12 @@ namespace PlayerBehavior
         private void Update()
         {
             MovementHandle();
+        }
+        
+        private void LateUpdate()
+        {
+            // Lock the canvas UI rotation.
+            canvasTransform.right = Vector3.right;
         }
     
     
@@ -69,6 +80,7 @@ namespace PlayerBehavior
             _playerRigidbody2D.velocity = playerVelocity;
 
             _animator.SetTrigger(playerState.ToString());
+            _animator.SetBool(IsDashAnimation,_isDash);
 
             // flip player horizontal direction
             if (Input.GetAxisRaw("Horizontal") != 0)
@@ -116,7 +128,7 @@ namespace PlayerBehavior
         {
             if (CheckPlayerState(PlayerState.Idle) || _isDash || _isDashCooldown) return;
             if (!Input.GetKeyDown(dashKey)) return;
-
+            
             StartCoroutine(Dash());
         }
 

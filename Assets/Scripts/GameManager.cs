@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class GameManager : MonoBehaviour
     public int totalPoint;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI scoreAddAnimation;
-    [SerializeField] private TextMeshProUGUI warningText;
+    [SerializeField] private GameObject warningText;
     public Vector2 spawnPoint;
     public Transform player;
     public Transform playerBase;
@@ -27,7 +28,8 @@ public class GameManager : MonoBehaviour
         if (!playerBase) SceneManager.LoadScene(0);
         EvenWarningHandler();
     }
-
+    
+    
     #region Methods
     /// <summary>
     /// Warning player when the enemy wave are coming (17:00 - 19:00).
@@ -47,7 +49,7 @@ public class GameManager : MonoBehaviour
     public void AddPoint(int n)
     {
         totalPoint += n;
-        scoreText.text = $"Score: {totalPoint}";
+        scoreText.text = $"{totalPoint}";
         scoreAddAnimation.text = $"+ {n}";
         StartCoroutine(ToggleSetActiveRelateWithAnimation(scoreAddAnimation.gameObject));
     }

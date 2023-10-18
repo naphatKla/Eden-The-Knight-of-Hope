@@ -1,3 +1,4 @@
+using PlayerBehavior;
 using UnityEngine;
 
 namespace CombatSystem
@@ -9,6 +10,7 @@ namespace CombatSystem
         /// </summary>
         protected override void AttackHandle()
         {
+            if (Player.Instance.Animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDash")) return;
             if(!Input.GetMouseButtonDown(0)) return;
             base.AttackHandle();
         }

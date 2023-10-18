@@ -1,4 +1,5 @@
 using System;
+using System.Net.Mime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
@@ -35,6 +36,10 @@ public class TimeSystem : MonoBehaviour
     [Header("Time UI")]
     [SerializeField] private Image clock;
     [SerializeField] private TextMeshProUGUI dayText;
+    [SerializeField] private TextMeshProUGUI timeText;
+    [SerializeField] private Image dayAndNightIcon;
+    [SerializeField] private Sprite dayIcon;
+    [SerializeField] private Sprite nightIcon;
     public TimeState timeState;
     public event Action OnNewDay, OnDay, OnNight;
     public static TimeSystem Instance;
@@ -71,7 +76,8 @@ public class TimeSystem : MonoBehaviour
     {
         UpdateTimeMultiplier();
         time += Time.deltaTime * _timeMultiplier;
-        dayText.text = $"Day {day}\n {Mathf.Floor(GetCurrentTime()):F0}:00";
+        dayText.text = $"Day {day}";
+        timeText.text = $"{Mathf.Floor(GetCurrentTime()):F0}:00";
         
         // new day
         if (time < cycleLength) return;
@@ -94,6 +100,7 @@ public class TimeSystem : MonoBehaviour
             if (TimeSystem.Instance.timeState == TimeState.Day) return;
             _timeMultiplier = dayTimeMultiplier;
             timeState = TimeState.Day;
+            dayAndNightIcon.sprite = dayIcon;
             OnDay?.Invoke();
         }
         else
@@ -101,6 +108,7 @@ public class TimeSystem : MonoBehaviour
             if (TimeSystem.Instance.timeState == TimeState.Night) return;
             _timeMultiplier = nightTimeMultiplier;
             timeState = TimeState.Night;
+            dayAndNightIcon.sprite = nightIcon;
             OnNight?.Invoke();
         }
     }
