@@ -6607,9 +6607,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5928065848129705251, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
+      propertyPath: maxStamina
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928065848129705251, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
       propertyPath: canvasTransform
       value: 
       objectReference: {fileID: 1014944188}
+    - target: {fileID: 5928065848129705251, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
+      propertyPath: dashStaminaDrain
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928065848129705251, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
+      propertyPath: staminaRegenSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928065848129705251, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
+      propertyPath: sprintStaminaDrain
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7230888628965848483, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
       propertyPath: Key
       value: 105
