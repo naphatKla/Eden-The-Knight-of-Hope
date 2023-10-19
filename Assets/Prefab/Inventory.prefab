@@ -1349,6 +1349,7 @@ MonoBehaviour:
   itemprefab: {fileID: 188508115531417914, guid: 8cab3fcf30c011942ad94ca7a88e9f30, type: 3}
   contentPanel: {fileID: 7737338365230397778}
   itemDescription: {fileID: 9177034042447995587}
+  mouseFollower: {fileID: 0}
 --- !u!1 &7561596938324508617
 GameObject:
   m_ObjectHideFlags: 0

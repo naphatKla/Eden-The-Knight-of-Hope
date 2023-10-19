@@ -130,6 +130,7 @@ namespace Inventory.UI
 
     public void Hide()
     {
+        if (!gameObject.activeSelf) return;
         gameObject.SetActive(false);
     }
 
