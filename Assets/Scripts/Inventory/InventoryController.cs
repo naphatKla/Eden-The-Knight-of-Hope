@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using Inventory.Model;
-using Inventory.UI;
 using UnityEngine;
 
 namespace Inventory
@@ -10,7 +6,7 @@ namespace Inventory
     public class InventoryController : MonoBehaviour
     {
         [SerializeField] private UIInventoryPage inventoryUI;
-        [SerializeField] private InventorySO inventoryData;
+        [SerializeField] private InventorySo inventoryData;
         [SerializeField] private KeyCode Key;
 
         public List<InventoryItem> initialItems = new List<InventoryItem>();
@@ -78,7 +74,7 @@ namespace Inventory
                 inventoryUI.ResetSeliction();
                 return;
             }
-            ItemSO item = inventoryItem.item;
+            ItemSo item = inventoryItem.item;
             inventoryUI.UpdateDescription(itemIndex, item.ItemImage,
                 item.name, item.Description);
         }

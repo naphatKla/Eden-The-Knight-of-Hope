@@ -1,11 +1,8 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.VirtualTexturing;
-using UnityEngine.UI;
 
-namespace Inventory.UI
+namespace Inventory
 { 
     public class UIInventoryPage : MonoBehaviour
 {
@@ -28,7 +25,6 @@ namespace Inventory.UI
 
     public void Awake()
     {
-        Hide();
         mouseFollower.Toggle(false);
         itemDescription.ResetDescription();
     }
@@ -130,7 +126,6 @@ namespace Inventory.UI
 
     public void Hide()
     {
-        if (!gameObject.activeSelf) return;
         gameObject.SetActive(false);
     }
 

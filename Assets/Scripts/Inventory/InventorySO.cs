@@ -1,13 +1,11 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
 
-namespace Inventory.Model
+namespace Inventory
 {
     [CreateAssetMenu]
-    public class InventorySO : ScriptableObject
+    public class InventorySo : ScriptableObject
     {
         [SerializeField] 
         private List<InventoryItem> inventoryItem;
@@ -25,7 +23,7 @@ namespace Inventory.Model
                 inventoryItem.Add(InventoryItem.GetEmptyItem());
             }
         }
-        public void  AddItem(ItemSO item, int quantity)
+        public void  AddItem(ItemSo item, int quantity)
         {
             for (int i = 0; i < inventoryItem.Count; i++)
             {
@@ -82,7 +80,7 @@ namespace Inventory.Model
     public struct InventoryItem
     {
         public int quantity;
-        public ItemSO item;
+        public ItemSo item;
         
         public bool IsEmpty => item == null;
         

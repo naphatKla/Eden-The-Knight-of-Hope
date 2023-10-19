@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Inventory.Model
+namespace Inventory
 {
     [CreateAssetMenu]
-    public class ItemSO : ScriptableObject
+    public class ItemSo : ScriptableObject
     {
         [field: SerializeField] 
         public bool IsStackable { get; set; }
