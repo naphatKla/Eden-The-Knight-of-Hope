@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace PlayerBehavior
 {
@@ -24,8 +25,9 @@ namespace PlayerBehavior
         [SerializeField] private KeyCode sprintKey;
         [SerializeField] private KeyCode dashKey;
         [SerializeField] private Transform canvasTransform;
+        [Header("Player Stamina")]
+        [SerializeField] private Slider sliderStaminaPlayer;
         [SerializeField] private float maxStamina;
-        [SerializeField] private float currentStamina;
         [SerializeField] private float staminaRegenSpeed;
         [SerializeField] private float sprintStaminaDrain;
         [SerializeField] private float dashStaminaDrain;
@@ -34,7 +36,7 @@ namespace PlayerBehavior
         private bool _isRunning;
         private bool _isDashCooldown;
         private float _currentSpeed;
-        //private float _currentStamina;
+        [SerializeField] private float _currentStamina;
         private Animator _animator;
         private Rigidbody2D _playerRigidbody2D;
         public static Player Instance;
@@ -50,7 +52,7 @@ namespace PlayerBehavior
             _playerRigidbody2D = GetComponent<Rigidbody2D>();
             Reset();
             Instance = this;
-            currentStamina = maxStamina;
+            _currentStamina = maxStamina;
         }
 
         private void Update()
@@ -121,16 +123,16 @@ namespace PlayerBehavior
         private void SprintHandle()
         {
             if (CheckPlayerState(PlayerState.Dash) || CheckPlayerState(PlayerState.Idle)) return;
-            if (Input.GetKeyDown(sprintKey) && currentStamina > 0)
+            if (Input.GetKeyDown(sprintKey) && _currentStamina > 0)
                 _isRunning = !_isRunning;
         
             if (!_isRunning) return;
             _currentSpeed = sprintSpeed;
             SetPlayerState(PlayerState.Sprint);
-            
-            if (currentStamina > 0)
+
+            if (_currentStamina > 0)
             {
-                currentStamina -= sprintStaminaDrain * Time.deltaTime;
+                _currentStamina -= sprintStaminaDrain * Time.deltaTime;
             }
             else
             {
@@ -145,11 +147,11 @@ namespace PlayerBehavior
         /// </summary>
         private void DashHandle()
         {
-            if (CheckPlayerState(PlayerState.Idle) || _isDash || _isDashCooldown || currentStamina < dashStaminaDrain) return;
+            if (CheckPlayerState(PlayerState.Idle) || _isDash || _isDashCooldown || _currentStamina < dashStaminaDrain) return;
             if (!Input.GetKeyDown(dashKey)) return;
             
             StartCoroutine(Dash());
-            currentStamina -= dashStaminaDrain;
+            _currentStamina -= dashStaminaDrain;
         }
 
     
@@ -202,15 +204,13 @@ namespace PlayerBehavior
             _isDash = false;
             _currentSpeed = walkSpeed;
         }
+        
         private void UpdateStamina()
         {
-            if (!Input.GetKey(sprintKey) && !Input.GetKey(dashKey) && currentStamina < maxStamina)
-            {
-                currentStamina += staminaRegenSpeed * Time.deltaTime;
-                currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
-            }
+            _currentStamina += staminaRegenSpeed * Time.deltaTime;
+            _currentStamina = Mathf.Clamp(_currentStamina, 0, maxStamina);
+            sliderStaminaPlayer.value = _currentStamina / maxStamina;
         }
-
         #endregion
     }
 }

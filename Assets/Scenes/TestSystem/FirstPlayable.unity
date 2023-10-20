@@ -367,8 +367,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -48, y: 0}
+  m_SizeDelta: {x: -96, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &50864363
 MonoBehaviour:
@@ -6626,6 +6626,10 @@ PrefabInstance:
       propertyPath: sprintStaminaDrain
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5928065848129705251, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
+      propertyPath: sliderStaminaPlayer
+      value: 
+      objectReference: {fileID: 1076563371}
     - target: {fileID: 7230888628965848483, guid: 5cf6400daf701ea4891ae3e5265f9dc6, type: 3}
       propertyPath: Key
       value: 105
