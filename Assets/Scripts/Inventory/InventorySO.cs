@@ -46,12 +46,11 @@ namespace Inventory
     
         public Dictionary<int, InventoryItem> GetCurrentInventoryState()
         {
-            Dictionary<int, InventoryItem> returnValue = 
-                new Dictionary<int, InventoryItem>();
+            Dictionary<int, InventoryItem> returnValue = new Dictionary<int, InventoryItem>();
+            
             for (int i = 0; i < inventoryItem.Count; i++)
             {
-                if (inventoryItem[i].IsEmpty)
-                    continue;
+                if (inventoryItem[i].IsEmpty) continue;
                 returnValue[i] = inventoryItem[i];
             }
     

@@ -3201,6 +3201,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9029851852755653342, guid: 76c50d2fbf103974ea0966f4894a30a1, type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 188508115531417914, guid: 8cab3fcf30c011942ad94ca7a88e9f30, type: 3}
+    - target: {fileID: 9029851852755653342, guid: 76c50d2fbf103974ea0966f4894a30a1, type: 3}
       propertyPath: description
       value: Cuts
       objectReference: {fileID: 0}
@@ -6274,7 +6278,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.538
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

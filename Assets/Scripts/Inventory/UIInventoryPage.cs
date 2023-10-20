@@ -6,7 +6,7 @@ namespace Inventory
 { 
     public class UIInventoryPage : MonoBehaviour
 {
-    [SerializeField] private UIInventoryItem itemprefab;
+    [SerializeField] private UIInventoryItem itemPrefab;
     [SerializeField] private RectTransform contentPanel;
     [SerializeField] private UIInventoryDescription itemDescription;
     [SerializeField] private MouseFollower mouseFollower;
@@ -33,7 +33,7 @@ namespace Inventory
     {
         for (int i = 0; i < inventorysize; i++)
         {
-            UIInventoryItem uiItem = Instantiate(itemprefab, Vector3.zero, Quaternion.identity);
+            UIInventoryItem uiItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
             uiItem.transform.SetParent(contentPanel);
             listOfUIItems.Add(uiItem);
 

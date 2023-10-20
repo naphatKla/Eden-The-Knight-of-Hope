@@ -188,6 +188,7 @@ MonoBehaviour:
   dashCooldown: 1
   sprintKey: 304
   dashKey: 32
+  canvasTransform: {fileID: 0}
 --- !u!114 &1899462294495903435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 0}
   inventoryData: {fileID: 11400000, guid: 7c8a5a2af1efac84c8cafb5edf47f58d, type: 2}
-  Key: 105
+  key: 105
   initialItems:
   - quantity: 5
     item: {fileID: 11400000, guid: c69619735d1d8b14c982ff1c96b11f74, type: 2}
