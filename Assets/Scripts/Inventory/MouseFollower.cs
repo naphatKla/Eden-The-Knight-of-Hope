@@ -6,7 +6,6 @@ namespace Inventory
     {
         [SerializeField] private Canvas canvas;
         [SerializeField] private Camera mainCam;
-
         [SerializeField] private UIInventoryItem item;
 
         public void Awake()
@@ -15,26 +14,31 @@ namespace Inventory
             mainCam = Camera.main;
             item = GetComponentInChildren<UIInventoryItem>();
         }
+        
+        private void Update()
+        {
+            RectTransformUtility.ScreenPointToLocalPointInRectangle((RectTransform)canvas.transform,
+                Input.mousePosition, canvas.worldCamera, out Vector2 position);
+            transform.position = canvas.transform.TransformPoint(position);
+        }
     
+        /// <summary>
+        /// Set the data of the item.
+        /// </summary>
+        /// <param name="sprite">Item sprite.</param>
+        /// <param name="quantity">Item amount.</param>
         public void SetData(Sprite sprite, int quantity)
         {
             item.SetData(sprite, quantity);
         }
-
-        private void Update()
-        {
-            Vector2 position;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                (RectTransform)canvas.transform, 
-                Input.mousePosition, 
-                canvas.worldCamera, 
-                out position);
-            transform.position = canvas.transform.TransformPoint(position);
-        }
-    
+        
+        
+        /// <summary>
+        /// Toggle active of the mouse follower.
+        /// </summary>
+        /// <param name="val">Is active or not.</param>
         public void Toggle(bool val)
         {
-            Debug.Log($"Item toggled {val}"); 
             gameObject.SetActive(val);
         }
     }

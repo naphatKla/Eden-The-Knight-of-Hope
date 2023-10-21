@@ -80,10 +80,10 @@ namespace Inventory
         /// <param name="itemIndex">Item index in the inventory</param>
         private void HandleDescriptionRequest(int itemIndex)
         {
-            InventoryItem inventoryItem = inventoryData.GetItemAT(itemIndex);
+            InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
             if (inventoryItem.IsEmpty)
             {
-                inventoryUI.ResetSeliction();
+                inventoryUI.ResetSelection();
                 return;
             }
             ItemSo item = inventoryItem.item;
@@ -109,7 +109,7 @@ namespace Inventory
         /// <param name="itemIndex">Index of dragging item.</param>
         private void HandleDragging(int itemIndex)
         {
-            InventoryItem inventoryItem = inventoryData.GetItemAT(itemIndex);
+            InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
             if (inventoryItem.IsEmpty) return;
             inventoryUI.CreateDraggedItem(inventoryItem.item.ItemImage, inventoryItem.quantity);
         }

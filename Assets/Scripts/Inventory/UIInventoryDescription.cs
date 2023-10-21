@@ -15,19 +15,29 @@ namespace Inventory
             ResetDescription();
         }
 
+        /// <summary>
+        /// Reset the description in the inventory UI page.
+        /// </summary>
         public void ResetDescription()
         {
-            this.itemImage.gameObject.SetActive(false);
-            this.title.text = "";
-            this.description.text = "";
+            itemImage.gameObject.SetActive(false);
+            title.text = "";
+            description.text = "";
         }
 
+        
+        /// <summary>
+        /// Set the description in the inventory UI page.
+        /// </summary>
+        /// <param name="sprite">Item sprite.</param>
+        /// <param name="itemName">Item name.</param>
+        /// <param name="itemDescription">Item description.</param>
         public void SetDescription(Sprite sprite, string itemName, string itemDescription)
         {
-            this.itemImage.gameObject.SetActive(true);
-            this.itemImage.sprite = sprite;
-            this.title.text = itemName;
-            this.description.text = itemDescription;
+            itemImage.gameObject.SetActive(true);
+            itemImage.sprite = sprite;
+            title.text = itemName;
+            description.text = itemDescription;
         }
     }
 }
