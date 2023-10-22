@@ -36,7 +36,7 @@ namespace PlayerBehavior
         private bool _isRunning;
         private bool _isDashCooldown;
         private float _currentSpeed;
-        [SerializeField] private float _currentStamina;
+        [SerializeField] private float _currentStamina; //When stamina bar is done, delete [SerializeField] 
         private Animator _animator;
         private Rigidbody2D _playerRigidbody2D;
         public static Player Instance;
@@ -125,7 +125,7 @@ namespace PlayerBehavior
             if (CheckPlayerState(PlayerState.Dash) || CheckPlayerState(PlayerState.Idle)) return;
             if (Input.GetKeyDown(sprintKey) && _currentStamina > 0)
                 _isRunning = !_isRunning;
-        
+
             if (!_isRunning) return;
             _currentSpeed = sprintSpeed;
             SetPlayerState(PlayerState.Sprint);
@@ -207,9 +207,12 @@ namespace PlayerBehavior
         
         private void UpdateStamina()
         {
-            _currentStamina += staminaRegenSpeed * Time.deltaTime;
-            _currentStamina = Mathf.Clamp(_currentStamina, 0, maxStamina);
-            sliderStaminaPlayer.value = _currentStamina / maxStamina;
+            if (!_isRunning)
+            {
+                _currentStamina += staminaRegenSpeed * Time.deltaTime;
+                _currentStamina = Mathf.Clamp(_currentStamina, 0, maxStamina);
+                sliderStaminaPlayer.value = _currentStamina;
+            }
         }
         #endregion
     }
