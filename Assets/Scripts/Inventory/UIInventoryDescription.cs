@@ -25,7 +25,6 @@ namespace Inventory
             description.text = "";
         }
 
-        
         /// <summary>
         /// Set the description in the inventory UI page.
         /// </summary>
@@ -41,4 +40,3 @@ namespace Inventory
         }
     }
 }
-

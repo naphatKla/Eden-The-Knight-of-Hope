@@ -22,7 +22,7 @@ namespace Inventory
         }
 
         #region Methods
-        
+
         /// <summary>
         /// Initialize items in the inventory UI page and subscribe to its events.
         /// </summary>
@@ -54,8 +54,7 @@ namespace Inventory
             if (_listOfUIItems.Count <= itemIndex) return;
             _listOfUIItems[itemIndex].SetData(itemImage, itemQuantity);
         }
-                
-        
+
         /// <summary>
         /// Create the dragged item.
         /// </summary>
@@ -66,8 +65,7 @@ namespace Inventory
             mouseFollower.Toggle(true);
             mouseFollower.SetData(sprite, quantity);
         }
-        
-        
+
         /// <summary>
         /// Reset the selection in the inventory UI page.
         /// </summary>
@@ -76,8 +74,7 @@ namespace Inventory
             itemDescription.ResetDescription();
             DeselectAllItem();
         }
-        
-        
+
         /// <summary>
         /// Show the inventory UI page.
         /// </summary>
@@ -86,8 +83,7 @@ namespace Inventory
             gameObject.SetActive(true);
             ResetSelection();
         }
-        
-        
+
         /// <summary>
         /// Hide the inventory UI page.
         /// </summary>
@@ -95,8 +91,7 @@ namespace Inventory
         {
             gameObject.SetActive(false);
         }
-        
-        
+
         /// <summary>
         /// Update the description in the inventory UI page.
         /// </summary>
@@ -111,7 +106,6 @@ namespace Inventory
             _listOfUIItems[itemIndex].Select();
         }
 
-        
         /// <summary>
         /// Reset all items in the inventory UI page.
         /// </summary>
@@ -123,7 +117,7 @@ namespace Inventory
                 item.Deselect();
             }
         }
-        
+
         /// <summary>
         /// Handle the item selection.
         /// </summary>
@@ -134,8 +128,7 @@ namespace Inventory
             if (index == -1) return;
             OnDescriptionRequested?.Invoke(index);
         }
-        
-        
+
         /// <summary>
         /// Handle the item begin drag.
         /// </summary>
@@ -148,8 +141,7 @@ namespace Inventory
             HandleItemSelection(inventoryItemUI);
             OnStarDragging?.Invoke(index);
         }
-        
-        
+
         /// <summary>
         /// Handle the item swap.
         /// </summary>
@@ -160,8 +152,7 @@ namespace Inventory
             if (index == -1 || _currentlyDraggedItemIndex == -1) return;
             OnSwapItem?.Invoke(_currentlyDraggedItemIndex, index);
         }
-        
-        
+
         /// <summary>
         /// Handle the item end drag.
         /// </summary>
@@ -170,13 +161,11 @@ namespace Inventory
         {
             ResetDraggedItem();
         }
-        
-        
+
         private void HandleShowItemActions(UIInventoryItem inventoryItemUI)
         {
         }
 
-        
         /// <summary>
         /// Reset the dragged item.
         /// </summary>
@@ -185,17 +174,15 @@ namespace Inventory
             mouseFollower.Toggle(false);
             _currentlyDraggedItemIndex = -1;
         }
-        
-        
+
         /// <summary>
         /// Deselect all items in the inventory UI page.
         /// </summary>
         private void DeselectAllItem()
         {
-            foreach (UIInventoryItem item in _listOfUIItems)
-                item.Deselect();
+            foreach (UIInventoryItem item in _listOfUIItems) item.Deselect();
         }
+
         #endregion
     }
 }
-

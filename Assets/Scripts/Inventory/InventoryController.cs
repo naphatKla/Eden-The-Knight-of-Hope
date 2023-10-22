@@ -15,22 +15,30 @@ namespace Inventory
             PrepareUIEvent();
             PrepareInventoryData();
         }
-        
+
         public void Update()
         {
+            // press 0 to add item for testing
+            if (Input.GetKeyDown(KeyCode.Alpha0))
+            {
+                inventoryData.AddItem(initialItems[0].item, 20);
+                Debug.Log("Add");
+            }
+
             if (!Input.GetKeyDown(key)) return;
             if (inventoryUI.isActiveAndEnabled)
             {
                 inventoryUI.Hide();
                 return;
             }
+
             inventoryUI.Show();
             foreach (var item in inventoryData.GetCurrentInventoryState())
                 inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity);
         }
 
         #region Methods
-        
+
         /// <summary>
         /// Initialize the inventory UI page and subscribe to its events.
         /// </summary>
@@ -42,8 +50,7 @@ namespace Inventory
             inventoryUI.OnStarDragging += HandleDragging;
             inventoryUI.OnItemActionRequested += HandleItemActionRequest;
         }
-        
-        
+
         /// <summary>
         /// Initialize the inventory data and subscribe to its events.
         /// </summary>
@@ -58,7 +65,6 @@ namespace Inventory
             }
         }
 
-        
         /// <summary>
         /// Update the inventory UI page.
         /// </summary>
@@ -68,12 +74,10 @@ namespace Inventory
             inventoryUI.ResetAllItems();
             foreach (var item in inventoryState)
             {
-                inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, 
-                    item.Value.quantity);
+                inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity);
             }
         }
-        
-        
+
         /// <summary>
         /// send the description of the item to the inventory UI page.
         /// </summary>
@@ -86,12 +90,11 @@ namespace Inventory
                 inventoryUI.ResetSelection();
                 return;
             }
+
             ItemSo item = inventoryItem.item;
             inventoryUI.UpdateDescription(itemIndex, item.ItemImage, item.name, item.Description);
         }
-        
-        
-        
+
         /// <summary>
         /// Swap 2 items in the inventory.
         /// </summary>
@@ -101,8 +104,7 @@ namespace Inventory
         {
             inventoryData.SwapItems(itemIndex1, itemIndex2);
         }
-        
-        
+
         /// <summary>
         /// Handle the dragging of the item.
         /// </summary>
@@ -113,12 +115,11 @@ namespace Inventory
             if (inventoryItem.IsEmpty) return;
             inventoryUI.CreateDraggedItem(inventoryItem.item.ItemImage, inventoryItem.quantity);
         }
-        
+
         private void HandleItemActionRequest(int itemIndex)
         {
-            
         }
+
         #endregion
     }
 }
-

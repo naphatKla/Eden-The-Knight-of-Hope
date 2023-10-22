@@ -11,20 +11,17 @@ namespace Inventory
         [field: SerializeField] public int Size { get; private set; } = 10;
         public event Action<Dictionary<int, InventoryItem>> OnInventoryUpdated;
 
-
         #region Methods
-        
+
         /// <summary>
         /// Initialize the inventory data.
         /// </summary>
         public void Initialize()
         {
             inventoryItem = new List<InventoryItem>();
-            for (int i = 0; i < Size; i++)
-                inventoryItem.Add(InventoryItem.GetEmptyItem());
+            for (int i = 0; i < Size; i++) inventoryItem.Add(InventoryItem.GetEmptyItem());
         }
-        
-        
+
         /// <summary>
         /// Add an item to the inventory.
         /// </summary>
@@ -32,20 +29,46 @@ namespace Inventory
         /// <param name="quantity">Amount of added item.</param>
         public void AddItem(ItemSo item, int quantity)
         {
+            if (quantity == 0) return;
+            int quantityLeftToAdd = quantity;
+
             for (int i = 0; i < inventoryItem.Count; i++)
             {
+                if (item == inventoryItem[i].item)
+                {
+                    int addedQuantity = inventoryItem[i].quantity + quantity;
+                    if (addedQuantity <= item.MaxStackSize)
+                    {
+                        inventoryItem[i] = inventoryItem[i].ChangeQuantity(addedQuantity);
+                        InformAboutChange();
+                        return;
+                    }
+
+                    quantityLeftToAdd = addedQuantity - item.MaxStackSize;
+                    inventoryItem[i] = inventoryItem[i].ChangeQuantity(item.MaxStackSize);
+                    InformAboutChange();
+                }
+
                 if (!inventoryItem[i].IsEmpty) continue;
-                inventoryItem[i] = new InventoryItem { item = item, quantity = quantity };
+                if (quantityLeftToAdd > item.MaxStackSize)
+                {
+                    inventoryItem[i] = new InventoryItem { item = item, quantity = item.MaxStackSize };
+                    InformAboutChange();
+                    quantityLeftToAdd -= item.MaxStackSize;
+                    continue;
+                }
+
+                inventoryItem[i] = new InventoryItem { item = item, quantity = quantityLeftToAdd };
+                InformAboutChange();
                 return;
             }
         }
-        
+
         public void AddItem(InventoryItem item)
         {
             AddItem(item.item, item.quantity);
         }
-   
-        
+
         /// <summary>
         /// Get the current inventory state (What items and how many item in the inventory).
         /// </summary>
@@ -53,17 +76,16 @@ namespace Inventory
         public Dictionary<int, InventoryItem> GetCurrentInventoryState()
         {
             Dictionary<int, InventoryItem> returnValue = new Dictionary<int, InventoryItem>();
-            
+
             for (int i = 0; i < inventoryItem.Count; i++)
             {
                 if (inventoryItem[i].IsEmpty) continue;
                 returnValue[i] = inventoryItem[i];
             }
-            
+
             return returnValue;
         }
-    
-        
+
         /// <summary>
         /// Get the item from the inventory at the given index.
         /// </summary>
@@ -74,7 +96,6 @@ namespace Inventory
             return inventoryItem[itemIndex];
         }
 
-        
         /// <summary>
         /// Swap 2 items in the inventory (Include moving one item to the empty slot).
         /// </summary>
@@ -83,11 +104,11 @@ namespace Inventory
         public void SwapItems(int itemIndex1, int itemIndex2)
         {
             Debug.Log($"{itemIndex1},{itemIndex2}");
-            (inventoryItem[itemIndex1], inventoryItem[itemIndex2]) = (inventoryItem[itemIndex2], inventoryItem[itemIndex1]);
+            (inventoryItem[itemIndex1], inventoryItem[itemIndex2]) =
+                (inventoryItem[itemIndex2], inventoryItem[itemIndex1]);
             InformAboutChange();
         }
-        
-        
+
         /// <summary>
         /// Update the inventory data.
         /// </summary>
@@ -95,23 +116,22 @@ namespace Inventory
         {
             OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
         }
+
         #endregion
     }
-    
+
     [Serializable]
     public struct InventoryItem
     {
         public int quantity;
         public ItemSo item;
         public bool IsEmpty => item == null;
-        
+
         public InventoryItem ChangeQuantity(int newQuantity)
         {
             return new InventoryItem { item = this.item, quantity = newQuantity };
         }
-        
-        public static InventoryItem GetEmptyItem()
-        => new InventoryItem { item = null, quantity = 0, };
+
+        public static InventoryItem GetEmptyItem() => new InventoryItem { item = null, quantity = 0, };
     }
 }
-

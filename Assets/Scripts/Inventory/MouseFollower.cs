@@ -14,14 +14,14 @@ namespace Inventory
             mainCam = Camera.main;
             item = GetComponentInChildren<UIInventoryItem>();
         }
-        
+
         private void Update()
         {
             RectTransformUtility.ScreenPointToLocalPointInRectangle((RectTransform)canvas.transform,
                 Input.mousePosition, canvas.worldCamera, out Vector2 position);
             transform.position = canvas.transform.TransformPoint(position);
         }
-    
+
         /// <summary>
         /// Set the data of the item.
         /// </summary>
@@ -31,8 +31,7 @@ namespace Inventory
         {
             item.SetData(sprite, quantity);
         }
-        
-        
+
         /// <summary>
         /// Toggle active of the mouse follower.
         /// </summary>
