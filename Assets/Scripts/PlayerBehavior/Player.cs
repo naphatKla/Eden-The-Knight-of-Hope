@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,6 +30,7 @@ namespace PlayerBehavior
         [SerializeField] private Slider sliderStaminaPlayer;
         [SerializeField] private float maxStamina;
         [SerializeField] private float staminaRegenSpeed;
+        [SerializeField] private float staminaRegenCooldown;
         [SerializeField] private float sprintStaminaDrain;
         [SerializeField] private float dashStaminaDrain;
 
@@ -36,7 +38,8 @@ namespace PlayerBehavior
         private bool _isRunning;
         private bool _isDashCooldown;
         private float _currentSpeed;
-        [SerializeField] private float _currentStamina; //When stamina bar is done, delete [SerializeField] 
+        [SerializeField] private float _currentStamina; //When stamina bar is done, delete [SerializeField] this code
+        private float _staminaRegenCooldown;
         private Animator _animator;
         private Rigidbody2D _playerRigidbody2D;
         public static Player Instance;
@@ -59,6 +62,7 @@ namespace PlayerBehavior
         {
             MovementHandle();
             UpdateStamina();
+            
         }
         
         private void LateUpdate()
@@ -207,11 +211,20 @@ namespace PlayerBehavior
         
         private void UpdateStamina()
         {
-            if (!_isRunning)
+            if (_isRunning || _isDash)
             {
-                _currentStamina += staminaRegenSpeed * Time.deltaTime;
-                _currentStamina = Mathf.Clamp(_currentStamina, 0, maxStamina);
-                sliderStaminaPlayer.value = _currentStamina;
+                _currentStamina -= sprintStaminaDrain * Time.deltaTime;
+                _staminaRegenCooldown = 0f;
+            }
+            else
+            {
+                _staminaRegenCooldown += Time.deltaTime;
+                if (_staminaRegenCooldown >= staminaRegenCooldown)
+                {
+                    _currentStamina += staminaRegenSpeed * Time.deltaTime;
+                    _currentStamina = Mathf.Clamp(_currentStamina, 0, maxStamina);
+                    sliderStaminaPlayer.value = _currentStamina;
+                }
             }
         }
         #endregion
