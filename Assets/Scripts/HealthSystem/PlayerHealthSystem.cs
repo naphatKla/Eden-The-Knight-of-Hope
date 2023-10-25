@@ -5,7 +5,14 @@ namespace HealthSystem
     public class PlayerHealthSystem : HealthSystem
     {
         [SerializeField] private float respawnTime;
-    
+        public static PlayerHealthSystem Instance;
+
+        protected override void Start()
+        {
+            base.Start();
+            Instance = this;
+        }
+
         /// <summary>
         /// Player Dead and Respawn after a few seconds.
         /// </summary>

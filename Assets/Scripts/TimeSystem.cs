@@ -1,5 +1,4 @@
 using System;
-using System.Net.Mime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
@@ -64,7 +63,7 @@ public class TimeSystem : MonoBehaviour
         TimeUpdateHandler();
         DayLightHandle();
 
-        clock.rectTransform.rotation = Quaternion.Euler(0,0,(time / cycleLength )*720);
+        clock.rectTransform.rotation = Quaternion.Euler(0, 0, (time / cycleLength) * 360);
     }
 
     #region Methoos

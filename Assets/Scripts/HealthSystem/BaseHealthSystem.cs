@@ -5,6 +5,14 @@ namespace HealthSystem
     public class BaseHealthSystem : HealthSystem
     {
         [SerializeField] private float hpRegenPercentage;
+        public static BaseHealthSystem Instance;
+
+        protected override void Start()
+        {
+            base.Start();
+            Instance = this;
+        }
+
         private void Update()
         {
             // regen hp when day time.

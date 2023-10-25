@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using HealthSystem;
 using TMPro;
 using UnityEngine;
@@ -7,28 +6,28 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private HealthSystem.HealthSystem Base;
-    [SerializeField] private HealthSystem.HealthSystem Player;
-    [SerializeField] private TextMeshProUGUI BaseHPText;
-    [SerializeField] private TextMeshProUGUI PlayerHPText;
-    [SerializeField] private TextMeshProUGUI PlayerStaminaText;
-    private float baseHP;
-    private float baseMaxHP;
-    [SerializeField] private Slider baseHPSlider;
+    [SerializeField] private Slider playerBaseHpSlider;
+    [SerializeField] private Slider playerHpSlider;
     [SerializeField] private Slider playerStaminaSlider;
+    [Space]
+    [SerializeField] private TextMeshProUGUI playerBaseHpText;
+    [SerializeField] private TextMeshProUGUI playerHpText;
+    [SerializeField] private TextMeshProUGUI playerStaminaText;
+    public static UIManager Instance;
     
     void Start()
     {
-        
+        Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        baseHPSlider.value = Base.CurrentHp / Base.maxHp;
-        BaseHPText.text = $"{Base.CurrentHp} / {Base.maxHp}";
-        PlayerHPText.text = $"{Player.CurrentHp} / {Player.maxHp}";
-        //PlayerStaminaText.text = $"{Base.CurrentHp} / {Base.maxHp}"; stamina
+        playerBaseHpSlider.value = BaseHealthSystem.Instance.CurrentHp / BaseHealthSystem.Instance.maxHp;
+        playerHpSlider.value = PlayerHealthSystem.Instance.CurrentHp / PlayerHealthSystem.Instance.maxHp;
+        //playerStaminaSlider.value = PlayerManager.Instance.PlayerStamina;
         
+        playerBaseHpText.text = $"{BaseHealthSystem.Instance.CurrentHp} / {BaseHealthSystem.Instance.maxHp}";
+        playerHpText.text = $"{PlayerHealthSystem.Instance.CurrentHp} / {PlayerHealthSystem.Instance.maxHp}";
+        //playerStaminaText.text = $"{PlayerManager.Instance.PlayerStamina} / {PlayerManager.Instance.PlayerStaminaMax}";
     }
 }

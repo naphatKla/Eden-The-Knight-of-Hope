@@ -613,8 +613,14 @@ MonoBehaviour:
   countdownTime: 0.5
   progressBar: {fileID: 1343498073486773355}
   sprites:
-  - {fileID: 509728100, guid: 262b25c57deae174ca513504431ad414, type: 3}
-  - {fileID: 1548973923, guid: 262b25c57deae174ca513504431ad414, type: 3}
+  - {fileID: 1813725164, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: 520093597, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: 1541525305, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: 1465081311, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: 840306578, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: 1654418091, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: 399651653, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: -616708732, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
 --- !u!61 &525955464144991036
 BoxCollider2D:
   m_ObjectHideFlags: 0
