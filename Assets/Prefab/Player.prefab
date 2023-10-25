@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7170810262454737404}
   - component: {fileID: 1090296706133578731}
   - component: {fileID: 7230888628965848483}
+  - component: {fileID: 5482898029961405059}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -85,7 +86,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2058931514, guid: 3105f9d55682b5c4aa88e43036d6d991, type: 3}
+  m_Sprite: {fileID: 1567854851, guid: bb9686ed9253ecc4489259b418222eb6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,18 +129,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3403654}
+  m_Offset: {x: 0.022091866, y: 0.5265646}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1.26, y: 2.74}
+    oldSize: {x: 2.12, y: 2.8803148}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.26, y: 0.6807308}
+  m_Size: {x: 0.68562317, y: 0.30833244}
   m_EdgeRadius: 0
 --- !u!50 &1665133763799733532
 Rigidbody2D:
@@ -181,14 +182,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerState: 0
-  walkSpeed: 3
-  sprintSpeed: 6
-  dashSpeed: 15
+  walkSpeed: 4
+  sprintSpeed: 9
+  dashSpeed: 25
   dashDuration: 0.25
   dashCooldown: 1
   sprintKey: 304
   dashKey: 32
-  canvasTransform: {fileID: 0}
+  canvasTransform: {fileID: 2254507535340655425}
+  maxStamina: 100
+  staminaRegenSpeed: 25
+  staminaRegenCooldown: 3
+  sprintStaminaDrain: 5
+  dashStaminaDrain: 20
+  _currentStamina: 0
 --- !u!114 &1899462294495903435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,16 +295,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 0}
   inventoryData: {fileID: 11400000, guid: 7c8a5a2af1efac84c8cafb5edf47f58d, type: 2}
-  key: 105
   initialItems:
-  - quantity: 5
+  - quantity: 16
     item: {fileID: 11400000, guid: c69619735d1d8b14c982ff1c96b11f74, type: 2}
+  - quantity: 3
+    item: {fileID: 11400000, guid: fa8bd95525f24394ea519057f38158b6, type: 2}
+  - quantity: 14
+    item: {fileID: 11400000, guid: c69619735d1d8b14c982ff1c96b11f74, type: 2}
+  key: 105
+--- !u!114 &5482898029961405059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2961274887369379640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a849600d6e5e047a258a6f2c135a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryUI: {fileID: 0}
+  inventoryData: {fileID: 11400000, guid: a7f81510dc600eb4e8d2f462dfe860f5, type: 2}
+  initialItems:
   - quantity: 0
     item: {fileID: 0}
-  - quantity: 1
-    item: {fileID: 11400000, guid: fa8bd95525f24394ea519057f38158b6, type: 2}
-  - quantity: 2
-    item: {fileID: 11400000, guid: c69619735d1d8b14c982ff1c96b11f74, type: 2}
+  - quantity: 0
+    item: {fileID: 0}
+  - quantity: 0
+    item: {fileID: 0}
+  - quantity: 0
+    item: {fileID: 0}
+  - quantity: 0
+    item: {fileID: 0}
+  - quantity: 0
+    item: {fileID: 0}
+  - quantity: 0
+    item: {fileID: 0}
+  - quantity: 0
+    item: {fileID: 0}
 --- !u!1 &3420976649831448392
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,7 +704,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000

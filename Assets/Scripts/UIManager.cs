@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour
         playerHpSlider.value = PlayerHealthSystem.Instance.CurrentHp / PlayerHealthSystem.Instance.maxHp;
         playerStaminaSlider.value = Player.Instance.CurrentStamina/ Player.Instance.MaxStamina;
         
-        playerBaseHpText.text = $"{BaseHealthSystem.Instance.CurrentHp} / {BaseHealthSystem.Instance.maxHp}";
+        playerBaseHpText.text = $"{BaseHealthSystem.Instance.CurrentHp:F0} / {BaseHealthSystem.Instance.maxHp:F0}";
         playerHpText.text = $"{PlayerHealthSystem.Instance.CurrentHp} / {PlayerHealthSystem.Instance.maxHp}";
         playerStaminaText.text = $"{Player.Instance.CurrentStamina:F0} / {Player.Instance.MaxStamina:F0}";
     }

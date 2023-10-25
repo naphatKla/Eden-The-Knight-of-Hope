@@ -604,7 +604,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 101
-  point: 30
   prompt: Press 'E' to Harvest
   interactionTextUI: {fileID: 1330138664384701320}
   interactionIndicators:
@@ -612,15 +611,10 @@ MonoBehaviour:
   - {fileID: 5067326833207498990}
   countdownTime: 0.5
   progressBar: {fileID: 1343498073486773355}
+  point: 60
   sprites:
-  - {fileID: 1813725164, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: 520093597, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: 1541525305, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: 1465081311, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: 840306578, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: 1654418091, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: 399651653, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: -616708732, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: -2146916619, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: -1311370179, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
 --- !u!61 &525955464144991036
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -926,7 +920,7 @@ Transform:
   m_GameObject: {fileID: 8181702534134663802}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.62, z: 0}
   m_LocalScale: {x: 0.31579998, y: 0.31579998, z: 0.31579998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -948,7 +942,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9935299, b: 0, a: 1}
   m_Intensity: 0.3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -970,7 +964,7 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 1
+  m_PointLightInnerRadius: 1.602892
   m_PointLightOuterRadius: 5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0

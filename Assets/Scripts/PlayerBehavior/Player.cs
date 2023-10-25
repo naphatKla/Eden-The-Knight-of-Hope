@@ -46,7 +46,7 @@ namespace PlayerBehavior
         public Animator Animator => _animator;
         public bool IsDash => _isDash;
         public float MaxStamina => maxStamina;
-        public float CurrentStamina => _currentStamina;
+        public float CurrentStamina { get => _currentStamina; set => _currentStamina = value; }
 
         #endregion
 
@@ -93,8 +93,8 @@ namespace PlayerBehavior
 
             Vector2 playerVelocity =
                 new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * _currentSpeed;
-            _playerRigidbody2D.velocity = playerVelocity;
-
+            _playerRigidbody2D.velocity = Vector2.ClampMagnitude(playerVelocity, _currentSpeed);
+            
             _animator.SetTrigger(playerState.ToString());
             _animator.SetBool(IsDashAnimation, _isDash);
 

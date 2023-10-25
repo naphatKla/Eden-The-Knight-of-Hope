@@ -9,7 +9,6 @@ namespace Interaction
     {
         #region MyRegion
         [SerializeField] protected KeyCode key;
-        [SerializeField] protected int point; // maybe change to any item in future
         [SerializeField] protected string prompt;
         [SerializeField] protected TextMeshProUGUI interactionTextUI;
         [SerializeField] protected GameObject[] interactionIndicators;
@@ -57,7 +56,6 @@ namespace Interaction
         /// </summary>
         protected virtual void InteractAction()
         {
-            GameManager.Instance.AddPoint(point);
             Destroy(gameObject);
         }
     

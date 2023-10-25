@@ -53,7 +53,7 @@ namespace HealthSystem
         /// Heal and increase the current hp.
         /// </summary>
         /// <param name="healPoint">Heal amount.</param>
-        protected void Heal(float healPoint)
+        public void Heal(float healPoint)
         {
             CurrentHp += healPoint;
             CurrentHp = Mathf.Clamp(CurrentHp, 0, maxHp);

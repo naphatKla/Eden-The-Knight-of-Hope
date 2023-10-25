@@ -99,10 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f99511d0e117a4aa6496fbac8f679c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 10
-  damage: 10
-  tower: {fileID: 0}
 --- !u!50 &6506630234985379252
 Rigidbody2D:
   serializedVersion: 4
@@ -165,7 +161,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.31, y: 2.3302495}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5

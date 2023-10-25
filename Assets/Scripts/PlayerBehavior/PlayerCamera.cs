@@ -24,7 +24,7 @@ namespace PlayerBehavior
         private void Start()
         {
             _cam = GetComponent<Camera>();
-            _zoom = minZoom;
+            _zoom = (minZoom + maxZoom) / 2;
         }
         private void Update()
         {

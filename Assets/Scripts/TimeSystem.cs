@@ -25,10 +25,14 @@ public class TimeSystem : MonoBehaviour
     
     [Header("Light")] 
     [SerializeField] private Light2D dayLight;
-    [SerializeField] [Range(0, 1)] private float maxLight;
-    [SerializeField] [Range(0,1)] private float minLight;
+    [SerializeField] [Range(0, 2)] private float maxLight;
+    [SerializeField] [Range(0,2)] private float minLight;
     [SerializeField] private Vector2 lightUpPeriod;
     [SerializeField] private Vector2 lightDownPeriod;
+    [SerializeField] private Color lightUpColor;
+    [SerializeField] private Color dayLightColor;
+    [SerializeField] private Color lightDownColor;
+    [SerializeField] private Color nightLightColor;
     private float _lightUpDuration;
     private float _lightDownDuration;
     
@@ -120,14 +124,29 @@ public class TimeSystem : MonoBehaviour
     {
         float lightDownTimeCounter= ConvertSecToHour(time) - lightDownPeriod.x ,
               lightUpTimeCounter = ConvertSecToHour(time) - lightUpPeriod.x ;
- 
+
         if (TimePeriodCheck(lightDownPeriod.x, lightDownPeriod.y))
+        {
             dayLight.intensity = Mathf.Lerp(maxLight, minLight,
                 lightDownTimeCounter / _lightDownDuration);
-        
+            
+            if (lightDownTimeCounter < _lightDownDuration / 2)
+                dayLight.color = Color.Lerp(dayLightColor, lightDownColor,lightDownTimeCounter / (_lightDownDuration/2));
+            else
+                dayLight.color = Color.Lerp(lightDownColor, nightLightColor,(lightDownTimeCounter-(_lightDownDuration/2)) / (_lightDownDuration/2));
+        }
         else if (TimePeriodCheck(lightUpPeriod.x, lightUpPeriod.y))
+        {
             dayLight.intensity = Mathf.Lerp(minLight, maxLight,
                 lightUpTimeCounter / _lightUpDuration);
+            
+            dayLight.color = Color.Lerp(lightUpColor, dayLightColor,lightUpTimeCounter / _lightUpDuration);
+        }
+        else if (TimePeriodCheck(4, 6))
+        {
+            dayLight.color = Color.Lerp(nightLightColor, lightUpColor,(GetCurrentTime()-4) / 2);
+        }
+        
     }
     
     
