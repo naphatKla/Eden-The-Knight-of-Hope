@@ -35,7 +35,6 @@ namespace PlayerBehavior
         [SerializeField] private float dashStaminaDrain;
 
         private bool _isDash;
-        private bool _isRunning;
         private bool _isDashCooldown;
         private float _currentSpeed;
         [SerializeField] private float _currentStamina; //When stamina bar is done, delete [SerializeField] this code
@@ -127,13 +126,9 @@ namespace PlayerBehavior
         private void SprintHandle()
         {
             if (CheckPlayerState(PlayerState.Dash) || CheckPlayerState(PlayerState.Idle)) return;
-            if (Input.GetKeyDown(sprintKey)) _isRunning = !_isRunning;
-            if (!_isRunning) return;
-            if (_currentStamina <= 0)
-            {
-                _isRunning = false;
-                return;
-            }
+            if (_currentStamina <= 0) return;
+            if (!Input.GetKey(sprintKey)) return;
+      
             _currentSpeed = sprintSpeed;
             SetPlayerState(PlayerState.Sprint);
             _currentStamina -= sprintStaminaDrain * Time.deltaTime;

@@ -28,6 +28,6 @@ public class UIManager : MonoBehaviour
         
         playerBaseHpText.text = $"{BaseHealthSystem.Instance.CurrentHp} / {BaseHealthSystem.Instance.maxHp}";
         playerHpText.text = $"{PlayerHealthSystem.Instance.CurrentHp} / {PlayerHealthSystem.Instance.maxHp}";
-        //playerStaminaText.text = $"{PlayerManager.Instance.PlayerStamina} / {PlayerManager.Instance.PlayerStaminaMax}";
+        playerStaminaText.text = $"{Player.Instance.CurrentStamina:F0} / {Player.Instance.MaxStamina:F0}";
     }
 }
