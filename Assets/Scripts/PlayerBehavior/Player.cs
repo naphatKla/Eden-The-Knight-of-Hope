@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+
 namespace PlayerBehavior
 {
     public enum PlayerState
@@ -14,6 +15,7 @@ namespace PlayerBehavior
     public class Player : MonoBehaviour
     {
         #region Declare Variables
+
         [Header("Player Movement")] 
         public PlayerState playerState;
         [SerializeField] private float walkSpeed;
@@ -24,40 +26,54 @@ namespace PlayerBehavior
         [SerializeField] private KeyCode sprintKey;
         [SerializeField] private KeyCode dashKey;
         [SerializeField] private Transform canvasTransform;
+
+        [Header("Player Stamina")] 
+        [SerializeField] private float maxStamina;
+        [SerializeField] private float staminaRegenSpeed;
+        [SerializeField] private float staminaRegenCooldown;
+        [SerializeField] private float sprintStaminaDrain;
+        [SerializeField] private float dashStaminaDrain;
+
         private bool _isDash;
         private bool _isRunning;
         private bool _isDashCooldown;
         private float _currentSpeed;
+        [SerializeField] private float _currentStamina; //When stamina bar is done, delete [SerializeField] this code
+        private float _staminaRegenCurrentCooldown;
         private Animator _animator;
         private Rigidbody2D _playerRigidbody2D;
         public static Player Instance;
         private static readonly int IsDashAnimation = Animator.StringToHash("IsDash");
         public Animator Animator => _animator;
         public bool IsDash => _isDash;
+        public float MaxStamina => maxStamina;
+        public float CurrentStamina => _currentStamina;
 
         #endregion
-    
+
         private void Start()
         {
             _animator = GetComponent<Animator>();
             _playerRigidbody2D = GetComponent<Rigidbody2D>();
-            Reset();
+            ResetState();
             Instance = this;
+            _currentStamina = maxStamina;
         }
 
         private void Update()
         {
             MovementHandle();
+            RegenStaminaHandle();
         }
-        
+
         private void LateUpdate()
         {
             // Lock the canvas UI rotation.
             canvasTransform.right = Vector3.right;
         }
-    
-    
+
         #region Methods
+
         /// <summary>
         /// Use for control the player movement system.
         /// </summary>
@@ -66,28 +82,28 @@ namespace PlayerBehavior
             if (_animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttackState_1") ||
                 _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttackState_2") ||
                 _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttackState_3") ||
-                _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerHeavyAttack") )
+                _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerHeavyAttack"))
             {
                 _playerRigidbody2D.velocity = Vector2.zero;
                 return;
             }
-        
+
             WalkHandle();
             SprintHandle();
             DashHandle();
 
-            Vector2 playerVelocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * _currentSpeed;
+            Vector2 playerVelocity =
+                new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * _currentSpeed;
             _playerRigidbody2D.velocity = playerVelocity;
 
             _animator.SetTrigger(playerState.ToString());
-            _animator.SetBool(IsDashAnimation,_isDash);
+            _animator.SetBool(IsDashAnimation, _isDash);
 
             // flip player horizontal direction
             if (Input.GetAxisRaw("Horizontal") != 0)
                 transform.right = Input.GetAxisRaw("Horizontal") < 0 ? Vector2.left : Vector2.right;
         }
 
-    
         /// <summary>
         /// Walk System 
         /// </summary>
@@ -105,34 +121,37 @@ namespace PlayerBehavior
             SetPlayerState(PlayerState.Walk);
         }
 
-    
         /// <summary>
         /// Sprint System
         /// </summary>
         private void SprintHandle()
         {
             if (CheckPlayerState(PlayerState.Dash) || CheckPlayerState(PlayerState.Idle)) return;
-            if (Input.GetKeyDown(sprintKey))
-                _isRunning = !_isRunning;
-        
+            if (Input.GetKeyDown(sprintKey)) _isRunning = !_isRunning;
             if (!_isRunning) return;
+            if (_currentStamina <= 0)
+            {
+                _isRunning = false;
+                return;
+            }
             _currentSpeed = sprintSpeed;
             SetPlayerState(PlayerState.Sprint);
+            _currentStamina -= sprintStaminaDrain * Time.deltaTime;
         }
 
-    
         /// <summary>
         /// Use for handle dash system.
         /// </summary>
         private void DashHandle()
         {
-            if (CheckPlayerState(PlayerState.Idle) || _isDash || _isDashCooldown) return;
+            if (CheckPlayerState(PlayerState.Idle) || _isDash) return;
+            if (_isDashCooldown || _currentStamina < dashStaminaDrain) return;
             if (!Input.GetKeyDown(dashKey)) return;
-            
+
             StartCoroutine(Dash());
+            _currentStamina -= dashStaminaDrain;
         }
 
-    
         /// <summary>
         /// Dash behavior for start coroutine in dash system.
         /// </summary>
@@ -142,7 +161,7 @@ namespace PlayerBehavior
             _isDashCooldown = true;
             _currentSpeed = dashSpeed;
             SetPlayerState(PlayerState.Dash);
-        
+
             yield return new WaitForSeconds(dashDuration);
             _isDash = false;
             SetPlayerState(PlayerState.Idle);
@@ -150,8 +169,7 @@ namespace PlayerBehavior
             yield return new WaitForSeconds(dashCooldown);
             _isDashCooldown = false;
         }
-    
-    
+
         /// <summary>
         /// Use for set player state.
         /// </summary>
@@ -161,7 +179,23 @@ namespace PlayerBehavior
             playerState = state;
         }
 
-    
+        /// <summary>
+        /// Regen stamina when player is not running or dashing.
+        /// </summary>
+        private void RegenStaminaHandle()
+        {
+            _currentStamina = Mathf.Clamp(_currentStamina, 0, maxStamina);
+            if (CheckPlayerState(PlayerState.Sprint) || CheckPlayerState(PlayerState.Dash))
+            {
+                _staminaRegenCurrentCooldown = 0f;
+                return;
+            }
+
+            _staminaRegenCurrentCooldown += Time.deltaTime;
+            if (_staminaRegenCurrentCooldown < staminaRegenCooldown) return;
+            _currentStamina += staminaRegenSpeed * Time.deltaTime;
+        }
+        
         /// <summary>
         /// Use to check the current player state.
         /// </summary>
@@ -172,11 +206,10 @@ namespace PlayerBehavior
             return playerState == state;
         }
 
-    
         /// <summary>
         /// Reset every behavior to default. ( Use when start / respawn. )
         /// </summary>
-        public void Reset()
+        private void ResetState()
         {
             SetPlayerState(PlayerState.Idle);
             _isDash = false;
