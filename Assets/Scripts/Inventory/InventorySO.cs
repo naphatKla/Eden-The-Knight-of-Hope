@@ -104,9 +104,18 @@ namespace Inventory
         public void SwapItems(int itemIndex1, int itemIndex2)
         {
             Debug.Log($"{itemIndex1},{itemIndex2}");
+            Debug.Log(inventoryItem[itemIndex2].IsEmpty);
             (inventoryItem[itemIndex1], inventoryItem[itemIndex2]) =
                 (inventoryItem[itemIndex2], inventoryItem[itemIndex1]);
             InformAboutChange();
+        }
+        
+        public void SwapItemsMoveBetweenInventories(InventorySo otherInventory, int itemIndex1, int itemIndex2)
+        {
+            (inventoryItem[itemIndex1], otherInventory.inventoryItem[itemIndex2]) =
+                (otherInventory.inventoryItem[itemIndex2], inventoryItem[itemIndex1]);
+            InformAboutChange();
+            otherInventory.InformAboutChange();
         }
 
         /// <summary>

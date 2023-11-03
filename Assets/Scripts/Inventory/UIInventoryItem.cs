@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Inventory
@@ -12,14 +13,15 @@ namespace Inventory
         [SerializeField] private Image itemImage;
         [SerializeField] private TMP_Text quantityText;
         [SerializeField] private Image borderImage;
-
+        public InventorySo ParentInventoryData { get; set; }
+        public int Index { get; set; }
         public event Action<UIInventoryItem> OnItemClicked,
             OnItemDroppedOn,
             OnItemBeginDrag,
             OnItemEndDrag,
             OnRightMouseBtnClick;
 
-        private bool _isEmpty = true;
+        public bool isEmpty = true;
 
         public void Awake()
         {
@@ -37,7 +39,7 @@ namespace Inventory
 
         public void OnBeginDrag(PointerEventData eventData)
         {
-            if (_isEmpty) return;
+            if (isEmpty) return;
             OnItemBeginDrag?.Invoke(this);
         }
 
@@ -48,6 +50,14 @@ namespace Inventory
 
         public void OnDrop(PointerEventData eventData)
         {
+            UIInventoryItem droppedItem = eventData.pointerDrag.GetComponent<UIInventoryItem>();
+            if (droppedItem.ParentInventoryData != ParentInventoryData)
+            { 
+                if (droppedItem.isEmpty) return;
+                droppedItem.ParentInventoryData.SwapItemsMoveBetweenInventories(ParentInventoryData, droppedItem.Index, Index);
+                return;
+            }
+            
             OnItemDroppedOn?.Invoke(this);
         }
 
@@ -63,7 +73,7 @@ namespace Inventory
         public void ResetData()
         {
             itemImage.gameObject.SetActive(false);
-            _isEmpty = true;
+            isEmpty = true;
         }
 
         /// <summary>
@@ -84,7 +94,7 @@ namespace Inventory
             itemImage.gameObject.SetActive(true);
             itemImage.sprite = sprite;
             quantityText.text = quantity + "";
-            _isEmpty = false;
+            isEmpty = false;
         }
 
         /// <summary>

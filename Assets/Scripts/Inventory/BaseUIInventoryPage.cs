@@ -13,7 +13,6 @@ namespace Inventory
         protected int _currentlyDraggedItemIndex = -1; // -1 means no item is being dragged
         public event Action<int> OnDescriptionRequested, OnItemActionRequested, OnStarDragging;
         public event Action<int, int> OnSwapItem;
-
         public virtual void Awake()
         {
             mouseFollower.Toggle(false);
@@ -24,13 +23,15 @@ namespace Inventory
         /// <summary>
         /// Initialize items in the inventory UI page and subscribe to its events.
         /// </summary>
-        /// <param name="inventorySize">Size of the inventory.</param>
-        public void InitializeInventoryUI(int inventorySize)
+        /// <param name="inventoryData">Inventory SO of the inventory.</param>
+        public void InitializeInventoryUI(InventorySo inventoryData)
         {
-            for (int i = 0; i < inventorySize; i++)
+            for (int i = 0; i < inventoryData.Size; i++)
             {
                 UIInventoryItem uiItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
                 uiItem.transform.SetParent(contentPanel);
+                uiItem.ParentInventoryData = inventoryData;
+                uiItem.Index = i;
                 _listOfUIItems.Add(uiItem);
 
                 uiItem.OnItemClicked += HandleItemSelection;
@@ -135,7 +136,7 @@ namespace Inventory
             if (index == -1 || _currentlyDraggedItemIndex == -1) return;
             OnSwapItem?.Invoke(_currentlyDraggedItemIndex, index);
         }
-
+        
         /// <summary>
         /// Handle the item end drag.
         /// </summary>

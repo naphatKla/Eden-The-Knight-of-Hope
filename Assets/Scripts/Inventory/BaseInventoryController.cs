@@ -23,7 +23,7 @@ namespace Inventory
         /// </summary>
         protected virtual void PrepareUIEvent()
         {
-            inventoryUI.InitializeInventoryUI(inventoryData.Size);
+            inventoryUI.InitializeInventoryUI(inventoryData);
             inventoryUI.OnSwapItem += HandleSwapItem;
             inventoryUI.OnStarDragging += HandleDragging;
             inventoryUI.OnItemActionRequested += HandleItemActionRequest;
@@ -65,7 +65,7 @@ namespace Inventory
         {
             inventoryData.SwapItems(itemIndex1, itemIndex2);
         }
-
+        
         /// <summary>
         /// Handle the dragging of the item.
         /// </summary>
