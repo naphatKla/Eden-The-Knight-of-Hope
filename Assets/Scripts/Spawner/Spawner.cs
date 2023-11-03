@@ -2,15 +2,15 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+[System.Serializable]
+public struct PriorityObject<T>
+{
+    public T obj;
+    public float spawnRate;
+}
+
 namespace Spawner
 {
-    [System.Serializable]
-    public struct PriorityObject<T>
-    {
-        public T obj;
-        public float spawnRate;
-    }
-
     public enum SpawnMode
     {
         Loop,
@@ -56,7 +56,7 @@ namespace Spawner
         {
             Vector2 randomPosition = new Vector2(Random.Range(-spawnArea.x, spawnArea.x), Random.Range(-spawnArea.y, spawnArea.y));
             Vector2 spawnPosition = randomPosition + (Vector2)transform.position;
-            GameObject pickObject = ProjectExtensions.PickOneFromList(objectsToSpawn).obj;
+            GameObject pickObject = ProjectExtensions.RandomPickOne(objectsToSpawn).obj;
             List<GameObject> spawnedObjects = new List<GameObject>();
             
             for (int i = 0; i < transform.childCount; i++)

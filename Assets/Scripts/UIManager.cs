@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI playerHpText;
     [SerializeField] private TextMeshProUGUI playerStaminaText;
     public static UIManager Instance;
+    public bool isAnyUIOpen;
     
     private void Start()
     {

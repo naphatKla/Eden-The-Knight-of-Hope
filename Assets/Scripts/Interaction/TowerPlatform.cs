@@ -9,12 +9,23 @@ namespace Interaction
         private HealthSystem.HealthSystem _towerHealthSystem;
         private GameObject _tower;
 
+        protected override void Start()
+        {
+            base.Start();
+            interactionTextUI.text = $"Press E to build the tower.\n<color=blue>Cost: {cost} coins</color>";
+        }
+
         /// <summary>
         /// If point is not enough, do not interact.
         /// </summary>
         protected override void InteractHandler()
         {
             if(GameManager.Instance.totalPoint < cost) return;
+            if (_tower)
+            {
+                interactionTextUI.text = $"Press E to repair the tower.\n<color=blue>Cost: {cost/2} coins</color>";
+                if (_towerHealthSystem.CurrentHp >= _towerHealthSystem.maxHp) return;
+            }
             base.InteractHandler();
         }
         
@@ -25,9 +36,8 @@ namespace Interaction
         {
             if (_tower)
             {
-                if (_towerHealthSystem.CurrentHp >= _towerHealthSystem.maxHp) return;
                 _towerHealthSystem.ResetHealth();
-                GameManager.Instance.AddPoint(-cost);
+                GameManager.Instance.AddPoint(-cost/2);
                 return;
             }
         

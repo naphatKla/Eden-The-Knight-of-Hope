@@ -4,7 +4,7 @@ namespace Interaction
 {
     public class GatheringResource : InteractableObject
     {
-        [SerializeField] private int point;
+        [SerializeField] private Vector2 point;
         [SerializeField] private Sprite[] sprites;
 
         protected override void Start()
@@ -16,7 +16,7 @@ namespace Interaction
 
         protected override void InteractAction()
         {
-            GameManager.Instance.AddPoint(point);
+            GameManager.Instance.AddPoint((int)Random.Range(point.x, point.y));
             base.InteractAction();
         }
     }

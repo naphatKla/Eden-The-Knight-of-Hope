@@ -24,25 +24,29 @@ namespace CombatSystem
     {
         #region Declare Variable
         [Header("Attack Stats & Config")]
-        [SerializeField] protected float attackStat;
+        [SerializeField] protected float baseAttackStat;
         [SerializeField] protected Transform attackPoint;
         [SerializeField] protected Vector2 attackArea;
         [SerializeField] protected LayerMask targetLayer;
         protected List<Collider2D> TargetInAttackArea;
-    
+        protected float currentAttackCooldown;
+        public float ReduceCoolDownPercent { get; set; }
+        protected float attackStat;
+
         [Header("Normal Attack")]
         [SerializeField] protected List<AttackPattern> attackPatterns;
-        private AttackPattern _currentAttackPattern;
+        protected AttackPattern currentAttackPattern;
         [SerializeField] private AttackState attackState;
         private Coroutine _attackCoroutine;
         private Animator _animator;
-        private float _lastAttackTime;
+        protected float lastAttackTime;
         #endregion
     
         protected virtual void Start()
         {
+            attackStat = baseAttackStat;
             attackState = AttackState.AttackState0;
-            _currentAttackPattern = attackPatterns[0];
+            currentAttackPattern = attackPatterns[0];
             _animator = GetComponent<Animator>();
         }
     
@@ -59,12 +63,13 @@ namespace CombatSystem
         /// </summary>
         protected virtual void AttackHandle()
         {
-            if (Time.time < _lastAttackTime + _currentAttackPattern.cooldown) return;   // cooldown check.
+            if (Time.time < lastAttackTime + currentAttackCooldown) return;   // cooldown check.
             if (_attackCoroutine != null) return;
       
-            attackState = Time.time - _lastAttackTime > 2 ? AttackState.AttackState0 : attackState;
-            _currentAttackPattern = attackPatterns[(int)attackState];
-            _attackCoroutine = StartCoroutine(Attack(_currentAttackPattern.delay));
+            attackState = Time.time - lastAttackTime > 2 ? AttackState.AttackState0 : attackState;
+            currentAttackPattern = attackPatterns[(int)attackState];
+            currentAttackCooldown = currentAttackPattern.cooldown - (currentAttackPattern.cooldown * ReduceCoolDownPercent);
+            _attackCoroutine = StartCoroutine(Attack(currentAttackPattern.delay));
         }
     
     
@@ -76,13 +81,13 @@ namespace CombatSystem
         /// <returns></returns>
         protected virtual IEnumerator Attack(float delay)
         {
-            _lastAttackTime = Time.time;
+            lastAttackTime = Time.time;
             _animator.SetTrigger(attackState.ToString());
         
             yield return new WaitForSeconds(delay);
         
             List<HealthSystem.HealthSystem> targetHealthSystems = TargetInAttackArea.Select(target => target.GetComponent<HealthSystem.HealthSystem>()).ToList();
-            targetHealthSystems.ForEach(target => target.TakeDamage(_currentAttackPattern.power * attackStat,gameObject));
+            targetHealthSystems.ForEach(target => target.TakeDamage(currentAttackPattern.power * attackStat,gameObject));
         
             // Change attack stage to next stage, if attack state is the last state, change to the first state.
             attackState = (int)attackState >= attackPatterns.Count - 1 ? AttackState.AttackState0 : attackState + 1;

@@ -611,7 +611,7 @@ MonoBehaviour:
   - {fileID: 5067326833207498990}
   countdownTime: 0.5
   progressBar: {fileID: 1343498073486773355}
-  point: 60
+  point: {x: 50, y: 70}
   sprites:
   - {fileID: -2146916619, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
   - {fileID: -1311370179, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
@@ -718,7 +718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.94911015, b: 0.28773582, a: 1}
+  m_Color: {r: 1, g: 0.94911015, b: 0.28773582, a: 0.8}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0.5372549}
+  m_Color: {r: 0.7176471, g: 0.7176471, b: 0.7176471, a: 0.5372549}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -946,7 +946,7 @@ MonoBehaviour:
   m_Intensity: 0.3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 75d1e8db03267fef00000000
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0

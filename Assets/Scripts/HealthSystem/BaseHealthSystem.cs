@@ -16,6 +16,7 @@ namespace HealthSystem
         private void Update()
         {
             // regen hp when day time.
+            sliderHpPlayer.gameObject.SetActive(CurrentHp < maxHp);
             if(TimeSystem.Instance.timeState != TimeState.Day) return;
             Heal((hpRegenPercentage / 100) * maxHp * Time.deltaTime);
         }

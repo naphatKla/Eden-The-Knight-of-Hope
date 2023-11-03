@@ -16,7 +16,7 @@ public static class ProjectExtensions
         }
     }
 
-    public static PriorityObject<T> PickOneFromList<T>(List<PriorityObject<T>> list)
+    public static PriorityObject<T> RandomPickOne<T>(List<PriorityObject<T>> list)
     {
         float totalSpawnRate = list.Sum(spawnObject => spawnObject.spawnRate);
         float randomSpawnRate = Random.Range(0, totalSpawnRate);

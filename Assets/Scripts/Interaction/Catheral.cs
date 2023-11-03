@@ -8,6 +8,12 @@ public class Catheral : InteractableObject
     //[SerializeField] private float healAmount;
     [SerializeField] private int cost;
     
+    protected override void Start()
+    {
+        base.Start();
+        interactionTextUI.text = $"Press 'E' to maximum heal.\n<color=blue>Cost: {cost} coins</color>";
+    }
+    
     protected override void InteractHandler()
     {
         if (GameManager.Instance.totalPoint < cost) return;

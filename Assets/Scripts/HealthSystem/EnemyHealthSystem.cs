@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using EnemyBehavior;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace HealthSystem
 {
@@ -12,8 +14,12 @@ namespace HealthSystem
             _enemy = GetComponent<Enemy>();
             base.Start();
         }
-    
-        
+
+        private void Update()
+        {
+            sliderHpPlayer.gameObject.SetActive(CurrentHp < maxHp);
+        }
+
         /// <summary>
         /// Take damage and stun the enemy if the attacker is the player.
         /// And then set enemy target to the attacker.
