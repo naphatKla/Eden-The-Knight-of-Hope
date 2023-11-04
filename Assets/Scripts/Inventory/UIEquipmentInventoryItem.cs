@@ -1,4 +1,5 @@
 using Inventory;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public enum ItemSlotType
@@ -9,12 +10,28 @@ public enum ItemSlotType
     Other
 }
 
-public class UIEquipmentInventoryItem : UIInventoryItem
+public class UIEquipmentInventoryItem : BaseUIInventoryItem
 {
+    public override void OnBeginDrag(PointerEventData eventData)
+    {
+        if (isEmpty) return;
+        base.OnBeginDrag(eventData);
+        EquipmentItemSO equipmentItemData = ItemData as EquipmentItemSO;
+        equipmentItemData?.RemoveStats();
+    }
+
     public override void OnDrop(PointerEventData eventData)
     {
-        UIInventoryItem droppedItem = eventData.pointerDrag.GetComponent<UIInventoryItem>();
-        if(droppedItem.itemSlotType != itemSlotType) return;
+        BaseUIInventoryItem droppedItem = eventData.pointerDrag.GetComponent<BaseUIInventoryItem>();
+        EquipmentItemSO equipmentItemData = ItemData as EquipmentItemSO;
+        if (droppedItem.itemSlotType != itemSlotType) return;
+        if (!isEmpty)
+        {
+            equipmentItemData?.RemoveStats();
+            Debug.Log("Not Empty");
+        }
         base.OnDrop(eventData);
+        equipmentItemData = ItemData as EquipmentItemSO;
+        equipmentItemData?.AddStats();
     }
 }

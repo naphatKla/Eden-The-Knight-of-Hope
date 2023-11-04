@@ -11,6 +11,13 @@ namespace Inventory
             if (Input.GetKeyDown(KeyCode.Alpha0))
                 inventoryData.AddItem(initialItems[0].item, 20);
             
+            UIManager.Instance.isAnyUIOpen = inventoryUI.isActiveAndEnabled;
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                inventoryUI.Hide();
+                return;
+            }
+            
             if (!Input.GetKeyDown(key)) return;
             if (inventoryUI.isActiveAndEnabled)
             {
@@ -20,7 +27,7 @@ namespace Inventory
 
             inventoryUI.Show();
             foreach (var item in inventoryData.GetCurrentInventoryState())
-                inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity, item.Value.item.ItemSlotType);
+                inventoryUI.UpdateData(item.Key, item.Value.item, item.Value.quantity);
         }
 
         protected override void PrepareUIEvent()

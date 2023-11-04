@@ -9,11 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 300af892909d98d41a5577c6e749adc1, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a724c2aa55f61b49b057b49c8ae7735, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Sword
-  <Description>k__BackingField: Cuts Nar Mung A I Susss.
+  <Description>k__BackingField: Ching ching ching
   <ItemImage>k__BackingField: {fileID: 21300000, guid: dd3631e297d7ef341bfc48751be7ca9d, type: 3}
+  <ItemSlotType>k__BackingField: 0
+  hp: 100
+  atkPercent: 100
+  atkSpeedPercent: 10

@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
-
 namespace Inventory
 {
     public class BaseInventoryController<T> : MonoBehaviour where T : BaseUIInventoryPage
@@ -52,7 +50,7 @@ namespace Inventory
             inventoryUI.ResetAllItems();
             foreach (var item in inventoryState)
             {
-                inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity, item.Value.item.ItemSlotType);
+                inventoryUI.UpdateData(item.Key, item.Value.item, item.Value.quantity);
             }
         }
         

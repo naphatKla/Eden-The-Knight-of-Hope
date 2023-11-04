@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Inventory
@@ -16,6 +17,21 @@ namespace Inventory
             itemDescription?.ResetDescription();
             equipmentButton?.onClick.AddListener(() => {itemDescription.gameObject.SetActive(false); equipmentPanel.SetActive(true);});
             descriptionButton?.onClick.AddListener(() => {itemDescription.gameObject.SetActive(true); equipmentPanel.SetActive(false);});
+        }
+
+        private void Update()
+        {
+            if(!Input.GetMouseButtonDown(1)) return;
+            if (itemDescription.gameObject.activeSelf)
+            {
+                itemDescription.gameObject.SetActive(false); 
+                equipmentPanel.SetActive(true);
+            }
+            else
+            {
+                itemDescription.gameObject.SetActive(true); 
+                equipmentPanel.SetActive(false);
+            }
         }
 
         #region Methods
@@ -40,7 +56,7 @@ namespace Inventory
         {
             itemDescription.SetDescription(itemImage, name, description);
             DeselectAllItem();
-            _listOfUIItems[itemIndex].Select();
+            listOfUIItems[itemIndex].Select();
         }
         #endregion
     }

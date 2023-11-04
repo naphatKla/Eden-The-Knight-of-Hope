@@ -6,10 +6,10 @@ namespace Inventory
 {
     public class BaseUIInventoryPage : MonoBehaviour
     {
-        [SerializeField] protected UIInventoryItem itemPrefab;
+        [SerializeField] protected BaseUIInventoryItem itemPrefab;
         [Header("Panel")] [SerializeField] protected RectTransform contentPanel;
         [SerializeField] protected MouseFollower mouseFollower;
-        protected List<UIInventoryItem> _listOfUIItems = new List<UIInventoryItem>();
+        protected List<BaseUIInventoryItem> listOfUIItems = new List<BaseUIInventoryItem>();
         protected int currentlyDraggedItemIndex = -1; // -1 means no item is being dragged
         public event Action<int> OnDescriptionRequested, OnItemActionRequested, OnStarDragging;
         public event Action<int, int> OnSwapItem;
@@ -28,17 +28,17 @@ namespace Inventory
         {
             for (int i = 0; i < inventoryData.Size; i++)
             {
-                UIInventoryItem uiItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
-                uiItem.transform.SetParent(contentPanel);
-                uiItem.ParentInventoryData = inventoryData;
-                uiItem.Index = i;
-                _listOfUIItems.Add(uiItem);
+                BaseUIInventoryItem baseUIItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
+                baseUIItem.transform.SetParent(contentPanel);
+                baseUIItem.ParentInventoryData = inventoryData;
+                baseUIItem.Index = i;
+                listOfUIItems.Add(baseUIItem);
 
-                uiItem.OnItemClicked += HandleItemSelection;
-                uiItem.OnItemBeginDrag += HandleBeginDrag;
-                uiItem.OnItemDroppedOn += HandleSwap;
-                uiItem.OnItemEndDrag += HandleEndDrag;
-                uiItem.OnRightMouseBtnClick += HandleShowItemActions;
+                baseUIItem.OnItemClicked += HandleItemSelection;
+                baseUIItem.OnItemBeginDrag += HandleBeginDrag;
+                baseUIItem.OnItemDroppedOn += HandleSwap;
+                baseUIItem.OnItemEndDrag += HandleEndDrag;
+                baseUIItem.OnRightMouseBtnClick += HandleShowItemActions;
             }
         }
 
@@ -46,13 +46,12 @@ namespace Inventory
         /// Update the item data in the inventory UI page.
         /// </summary>
         /// <param name="itemIndex">Item index.</param>
-        /// <param name="itemImage">Item image.</param>
+        /// <param name="itemData">Item SO</param>
         /// <param name="itemQuantity">Item amount.</param>
-        /// <param name="itemSlotType">Item type.</param>
-        public void UpdateData(int itemIndex, Sprite itemImage, int itemQuantity, ItemSlotType itemSlotType)
+        public void UpdateData(int itemIndex, ItemSo itemData, int itemQuantity)
         {
-            if (_listOfUIItems.Count <= itemIndex) return;
-            _listOfUIItems[itemIndex].SetData(itemImage, itemQuantity, itemSlotType);
+            if (listOfUIItems.Count <= itemIndex) return;
+            listOfUIItems[itemIndex].SetData(itemData, itemQuantity);
         }
 
         /// <summary>
@@ -96,7 +95,7 @@ namespace Inventory
         /// </summary>
         public void ResetAllItems()
         {
-            foreach (var item in _listOfUIItems)
+            foreach (var item in listOfUIItems)
             {
                 item.ResetData();
                 item.Deselect();
@@ -106,10 +105,10 @@ namespace Inventory
         /// <summary>
         /// Handle the item selection.
         /// </summary>
-        /// <param name="inventoryItemUI">Item target</param>
-        private void HandleItemSelection(UIInventoryItem inventoryItemUI)
+        /// <param name="inventoryItemBaseUI">Item target</param>
+        private void HandleItemSelection(BaseUIInventoryItem inventoryItemBaseUI)
         {
-            int index = _listOfUIItems.IndexOf(inventoryItemUI);
+            int index = listOfUIItems.IndexOf(inventoryItemBaseUI);
             if (index == -1) return;
             OnDescriptionRequested?.Invoke(index);
         }
@@ -117,23 +116,23 @@ namespace Inventory
         /// <summary>
         /// Handle the item begin drag.
         /// </summary>
-        /// <param name="inventoryItemUI">Item target</param>
-        private void HandleBeginDrag(UIInventoryItem inventoryItemUI)
+        /// <param name="inventoryItemBaseUI">Item target</param>
+        private void HandleBeginDrag(BaseUIInventoryItem inventoryItemBaseUI)
         {
-            int index = _listOfUIItems.IndexOf(inventoryItemUI);
+            int index = listOfUIItems.IndexOf(inventoryItemBaseUI);
             if (index == -1) return;
             currentlyDraggedItemIndex = index;
-            HandleItemSelection(inventoryItemUI);
+            HandleItemSelection(inventoryItemBaseUI);
             OnStarDragging?.Invoke(index);
         }
 
         /// <summary>
         /// Handle the item swap.
         /// </summary>
-        /// <param name="inventoryItemUI">Item target</param>
-        private void HandleSwap(UIInventoryItem inventoryItemUI)
+        /// <param name="inventoryItemBaseUI">Item target</param>
+        private void HandleSwap(BaseUIInventoryItem inventoryItemBaseUI)
         {
-            int index = _listOfUIItems.IndexOf(inventoryItemUI);
+            int index = listOfUIItems.IndexOf(inventoryItemBaseUI);
             if (index == -1 || currentlyDraggedItemIndex == -1) return;
             OnSwapItem?.Invoke(currentlyDraggedItemIndex, index);
         }
@@ -141,13 +140,13 @@ namespace Inventory
         /// <summary>
         /// Handle the item end drag.
         /// </summary>
-        /// <param name="inventoryItemUI">Item target</param>
-        private void HandleEndDrag(UIInventoryItem inventoryItemUI)
+        /// <param name="inventoryItemBaseUI">Item target</param>
+        private void HandleEndDrag(BaseUIInventoryItem inventoryItemBaseUI)
         {
             ResetDraggedItem();
         }
 
-        private void HandleShowItemActions(UIInventoryItem inventoryItemUI)
+        private void HandleShowItemActions(BaseUIInventoryItem inventoryItemBaseUI)
         {
         }
 
@@ -165,7 +164,7 @@ namespace Inventory
         /// </summary>
         protected void DeselectAllItem()
         {
-            foreach (UIInventoryItem item in _listOfUIItems) item.Deselect();
+            foreach (BaseUIInventoryItem item in listOfUIItems) item.Deselect();
         }
 
         #endregion

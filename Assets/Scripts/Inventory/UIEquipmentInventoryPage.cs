@@ -11,7 +11,7 @@ public class UIEquipmentInventoryPage : BaseUIInventoryPage
         base.InitializeInventoryUI(inventoryData);
         for (int i = 0; i < inventoryData.Size; i++)
         {
-            _listOfUIItems[i].itemSlotType = listOfItemTypes[i];
+            listOfUIItems[i].itemSlotType = listOfItemTypes[i];
         }
     }
 }

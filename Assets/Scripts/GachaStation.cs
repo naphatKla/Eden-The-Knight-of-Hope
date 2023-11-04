@@ -39,6 +39,8 @@ public class GachaStation : InteractableObject
 
     protected void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            CloseGachaUI();
         if(_lastOpenTime + 1.5f > Time.time) return;
         if (Physics2D.OverlapBoxNonAlloc(transform.position, gachaArea, 0,new Collider2D[1],playerLayer) == 0)
             CloseGachaUI();
