@@ -20,7 +20,7 @@ namespace Inventory
 
             inventoryUI.Show();
             foreach (var item in inventoryData.GetCurrentInventoryState())
-                inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity);
+                inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity, item.Value.item.ItemSlotType);
         }
 
         protected override void PrepareUIEvent()

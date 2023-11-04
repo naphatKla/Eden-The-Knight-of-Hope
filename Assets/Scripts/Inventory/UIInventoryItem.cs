@@ -15,6 +15,7 @@ namespace Inventory
         [SerializeField] private Image borderImage;
         public InventorySo ParentInventoryData { get; set; }
         public int Index { get; set; }
+        public ItemSlotType itemSlotType;
         public event Action<UIInventoryItem> OnItemClicked,
             OnItemDroppedOn,
             OnItemBeginDrag,
@@ -48,7 +49,7 @@ namespace Inventory
             OnItemEndDrag?.Invoke(this);
         }
 
-        public void OnDrop(PointerEventData eventData)
+        public virtual void OnDrop(PointerEventData eventData)
         {
             UIInventoryItem droppedItem = eventData.pointerDrag.GetComponent<UIInventoryItem>();
             if (droppedItem.ParentInventoryData != ParentInventoryData)
@@ -89,6 +90,15 @@ namespace Inventory
         /// </summary>
         /// <param name="sprite">Item sprite.</param>
         /// <param name="quantity">Item amount.</param>
+        public void SetData(Sprite sprite, int quantity, ItemSlotType itemSlotType)
+        {
+            itemImage.gameObject.SetActive(true);
+            this.itemSlotType = itemSlotType;
+            itemImage.sprite = sprite;
+            quantityText.text = quantity + "";
+            isEmpty = false;
+        }
+        
         public void SetData(Sprite sprite, int quantity)
         {
             itemImage.gameObject.SetActive(true);

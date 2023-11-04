@@ -10,7 +10,7 @@ namespace Inventory
         [Header("Panel")] [SerializeField] protected RectTransform contentPanel;
         [SerializeField] protected MouseFollower mouseFollower;
         protected List<UIInventoryItem> _listOfUIItems = new List<UIInventoryItem>();
-        protected int _currentlyDraggedItemIndex = -1; // -1 means no item is being dragged
+        protected int currentlyDraggedItemIndex = -1; // -1 means no item is being dragged
         public event Action<int> OnDescriptionRequested, OnItemActionRequested, OnStarDragging;
         public event Action<int, int> OnSwapItem;
         public virtual void Awake()
@@ -24,7 +24,7 @@ namespace Inventory
         /// Initialize items in the inventory UI page and subscribe to its events.
         /// </summary>
         /// <param name="inventoryData">Inventory SO of the inventory.</param>
-        public void InitializeInventoryUI(InventorySo inventoryData)
+        public virtual void InitializeInventoryUI(InventorySo inventoryData)
         {
             for (int i = 0; i < inventoryData.Size; i++)
             {
@@ -48,10 +48,11 @@ namespace Inventory
         /// <param name="itemIndex">Item index.</param>
         /// <param name="itemImage">Item image.</param>
         /// <param name="itemQuantity">Item amount.</param>
-        public void UpdateData(int itemIndex, Sprite itemImage, int itemQuantity)
+        /// <param name="itemSlotType">Item type.</param>
+        public void UpdateData(int itemIndex, Sprite itemImage, int itemQuantity, ItemSlotType itemSlotType)
         {
             if (_listOfUIItems.Count <= itemIndex) return;
-            _listOfUIItems[itemIndex].SetData(itemImage, itemQuantity);
+            _listOfUIItems[itemIndex].SetData(itemImage, itemQuantity, itemSlotType);
         }
 
         /// <summary>
@@ -121,7 +122,7 @@ namespace Inventory
         {
             int index = _listOfUIItems.IndexOf(inventoryItemUI);
             if (index == -1) return;
-            _currentlyDraggedItemIndex = index;
+            currentlyDraggedItemIndex = index;
             HandleItemSelection(inventoryItemUI);
             OnStarDragging?.Invoke(index);
         }
@@ -133,8 +134,8 @@ namespace Inventory
         private void HandleSwap(UIInventoryItem inventoryItemUI)
         {
             int index = _listOfUIItems.IndexOf(inventoryItemUI);
-            if (index == -1 || _currentlyDraggedItemIndex == -1) return;
-            OnSwapItem?.Invoke(_currentlyDraggedItemIndex, index);
+            if (index == -1 || currentlyDraggedItemIndex == -1) return;
+            OnSwapItem?.Invoke(currentlyDraggedItemIndex, index);
         }
         
         /// <summary>
@@ -156,7 +157,7 @@ namespace Inventory
         private void ResetDraggedItem()
         {
             mouseFollower.Toggle(false);
-            _currentlyDraggedItemIndex = -1;
+            currentlyDraggedItemIndex = -1;
         }
 
         /// <summary>
