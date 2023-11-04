@@ -45,7 +45,7 @@ namespace Inventory
             OnItemBeginDrag?.Invoke(this);
         }
 
-        public void OnEndDrag(PointerEventData eventData)
+        public virtual void OnEndDrag(PointerEventData eventData)
         {
             OnItemEndDrag?.Invoke(this);
         }

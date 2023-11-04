@@ -2,7 +2,6 @@ using CombatSystem;
 using HealthSystem;
 using Inventory;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 [CreateAssetMenu]
 public class EquipmentItemSO : ItemSo

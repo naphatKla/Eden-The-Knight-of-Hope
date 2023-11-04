@@ -18,6 +18,14 @@ public class UIEquipmentInventoryItem : BaseUIInventoryItem
         base.OnBeginDrag(eventData);
         EquipmentItemSO equipmentItemData = ItemData as EquipmentItemSO;
         equipmentItemData?.RemoveStats();
+        ItemData = null;
+    }
+
+    public override void OnEndDrag(PointerEventData eventData)
+    {
+        EquipmentItemSO equipmentItemData = ItemData as EquipmentItemSO;
+        equipmentItemData?.AddStats();
+        base.OnEndDrag(eventData);
     }
 
     public override void OnDrop(PointerEventData eventData)
