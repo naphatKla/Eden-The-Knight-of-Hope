@@ -96,7 +96,7 @@ namespace Inventory
         public void SetData(ItemSo itemData, int quantity)
         {
             itemImage.gameObject.SetActive(true);
-            itemSlotType = itemData.ItemSlotType;
+            //itemSlotType = itemData.ItemSlotType;
             itemImage.sprite = itemData.ItemImage;
             quantityText.text = quantity + "";
             ItemData = itemData;

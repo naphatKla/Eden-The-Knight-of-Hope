@@ -23,7 +23,6 @@ public class UIEquipmentInventoryItem : BaseUIInventoryItem
         base.OnBeginDrag(eventData);
         EquipmentItemSO equipmentItemData = ItemData as EquipmentItemSO;
         equipmentItemData?.RemoveStats();
-        ItemData = null;
     }
 
     public override void OnEndDrag(PointerEventData eventData)
@@ -37,7 +36,7 @@ public class UIEquipmentInventoryItem : BaseUIInventoryItem
     {
         BaseUIInventoryItem droppedItem = eventData.pointerDrag.GetComponent<BaseUIInventoryItem>();
         EquipmentItemSO equipmentItemData = ItemData as EquipmentItemSO;
-        if (droppedItem.itemSlotType != itemSlotType) return;
+        if (droppedItem.ItemData.ItemSlotType != itemSlotType) return;
         if (!isEmpty)
         {
             equipmentItemData?.RemoveStats();

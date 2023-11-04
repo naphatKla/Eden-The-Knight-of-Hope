@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Inventory;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class UIEquipmentInventoryPage : BaseUIInventoryPage
 {
@@ -14,4 +13,5 @@ public class UIEquipmentInventoryPage : BaseUIInventoryPage
             listOfUIItems[i].itemSlotType = listOfItemTypes[i];
         }
     }
+    
 }
