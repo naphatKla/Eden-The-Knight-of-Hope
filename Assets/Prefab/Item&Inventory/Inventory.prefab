@@ -1346,10 +1346,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9c1634d90397b547b793ccec9998645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemprefab: {fileID: 188508115531417914, guid: 8cab3fcf30c011942ad94ca7a88e9f30, type: 3}
+  itemPrefab: {fileID: 0}
   contentPanel: {fileID: 7737338365230397778}
-  itemDescription: {fileID: 9177034042447995587}
   mouseFollower: {fileID: 0}
+  itemDescription: {fileID: 9177034042447995587}
+  equipmentPanel: {fileID: 0}
+  equipmentButton: {fileID: 0}
+  descriptionButton: {fileID: 0}
 --- !u!1 &7561596938324508617
 GameObject:
   m_ObjectHideFlags: 0

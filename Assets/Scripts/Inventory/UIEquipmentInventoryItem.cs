@@ -5,8 +5,13 @@ using UnityEngine.EventSystems;
 public enum ItemSlotType
 {
     Weapon,
+    Helmet,
     Armor,
-    QuickSlot,
+    Leggings,
+    Boots,
+    QuickSlot1,
+    QuickSlot2,
+    QuickSlot3,
     Other
 }
 

@@ -92,7 +92,7 @@ MonoBehaviour:
   itemImage: {fileID: 3184238502548903279}
   quantityText: {fileID: 2511206729587454490}
   borderImage: {fileID: 2163889471937947778}
-  itemSlotType: 3
+  itemSlotType: 8
   isEmpty: 1
 --- !u!1 &1417940665945594286
 GameObject:
