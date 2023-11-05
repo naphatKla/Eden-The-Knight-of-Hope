@@ -13,20 +13,28 @@ public class EquipmentItemSO : ItemSo
     
     public void AddStats()
     {
+        Debug.LogWarning("Add Stats");
         float baseAttackStat = PlayerCombatSystem.Instance.BaseAttackStat;
         
-        PlayerCombatSystem.Instance.AttackStat = baseAttackStat + (baseAttackStat * (atkPercent/100));
-        PlayerCombatSystem.Instance.ReduceCoolDownPercent = (atkSpeedPercent/100);
+        PlayerCombatSystem.Instance.AttackStat += (baseAttackStat * (atkPercent/100));
+        PlayerCombatSystem.Instance.ReduceCoolDownPercent += (atkSpeedPercent/100);
         PlayerHealthSystem.Instance.maxHp += hp;
+        Debug.Log($"atk : {PlayerCombatSystem.Instance.AttackStat}");
+        Debug.Log($"atk speed : {PlayerCombatSystem.Instance.CurrentAttackCooldown}");
+        Debug.Log($"hp : {PlayerHealthSystem.Instance.maxHp}");
     }
     
     public void RemoveStats()
     {
+        Debug.LogWarning("Remove Stats");
         float baseAttackStat = PlayerCombatSystem.Instance.BaseAttackStat;
 
-        PlayerCombatSystem.Instance.AttackStat = baseAttackStat;
-        PlayerCombatSystem.Instance.ReduceCoolDownPercent = 0;
+        PlayerCombatSystem.Instance.AttackStat -=  (baseAttackStat * (atkPercent/100));
+        PlayerCombatSystem.Instance.ReduceCoolDownPercent -= (atkSpeedPercent/100);
         PlayerHealthSystem.Instance.maxHp -= hp;
+        Debug.Log($"atk : {PlayerCombatSystem.Instance.AttackStat}");
+        Debug.Log($"atk speed : {PlayerCombatSystem.Instance.CurrentAttackCooldown}");
+        Debug.Log($"hp : {PlayerHealthSystem.Instance.maxHp}");
     }
 }
 

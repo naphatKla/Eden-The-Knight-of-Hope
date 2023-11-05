@@ -103,8 +103,6 @@ namespace Inventory
         /// <param name="itemIndex2">Item two</param>
         public void SwapItems(int itemIndex1, int itemIndex2)
         {
-            Debug.Log($"{itemIndex1},{itemIndex2}");
-            Debug.Log(inventoryItem[itemIndex2].IsEmpty);
             (inventoryItem[itemIndex1], inventoryItem[itemIndex2]) =
                 (inventoryItem[itemIndex2], inventoryItem[itemIndex1]);
             InformAboutChange();
@@ -116,6 +114,18 @@ namespace Inventory
                 (otherInventory.inventoryItem[itemIndex2], inventoryItem[itemIndex1]);
             InformAboutChange();
             otherInventory.InformAboutChange();
+        }
+        
+        public void SortInventory()
+        {
+            inventoryItem.Sort((item1, item2) =>
+            {
+                if (item1.IsEmpty && item2.IsEmpty) return 0;
+                if (item1.IsEmpty) return 1;
+                if (item2.IsEmpty) return -1;
+                return item1.item.name.CompareTo(item2.item.name);
+            });
+            InformAboutChange();
         }
 
         /// <summary>

@@ -1,5 +1,5 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Inventory
@@ -56,6 +56,7 @@ namespace Inventory
         {
             itemDescription.SetDescription(itemImage, name, description);
             DeselectAllItem();
+            otherPages.ForEach(page => page.DeselectAllItem());
             listOfUIItems[itemIndex].Select();
         }
         #endregion

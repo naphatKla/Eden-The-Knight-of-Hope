@@ -9,6 +9,7 @@ namespace Inventory
         [SerializeField] protected BaseUIInventoryItem itemPrefab;
         [Header("Panel")] [SerializeField] protected RectTransform contentPanel;
         [SerializeField] protected MouseFollower mouseFollower;
+        [SerializeField] protected List<BaseUIInventoryPage> otherPages; // inventory pages that open when this page is open
         protected List<BaseUIInventoryItem> listOfUIItems = new List<BaseUIInventoryItem>();
         protected int currentlyDraggedItemIndex = -1; // -1 means no item is being dragged
         public event Action<int> OnDescriptionRequested, OnItemActionRequested, OnStarDragging;
@@ -162,7 +163,7 @@ namespace Inventory
         /// <summary>
         /// Deselect all items in the inventory UI page.
         /// </summary>
-        protected void DeselectAllItem()
+        public void DeselectAllItem()
         {
             foreach (BaseUIInventoryItem item in listOfUIItems) item.Deselect();
         }

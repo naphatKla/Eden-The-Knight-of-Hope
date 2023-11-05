@@ -34,8 +34,10 @@ namespace Inventory
         {
             if (pointerData.button == PointerEventData.InputButton.Right)
                 OnRightMouseBtnClick?.Invoke(this);
-            else
+            else if (pointerData.button == PointerEventData.InputButton.Left)
                 OnItemClicked?.Invoke(this);
+            else if (pointerData.button == PointerEventData.InputButton.Middle)
+                ParentInventoryData.SortInventory();
         }
 
         public virtual void OnBeginDrag(PointerEventData eventData)
