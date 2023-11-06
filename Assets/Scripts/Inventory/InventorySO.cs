@@ -127,6 +127,20 @@ namespace Inventory
             });
             InformAboutChange();
         }
+        
+        public void RemoveItem(int itemIndex, int quantity)
+        {
+            if (inventoryItem[itemIndex].IsEmpty) return;
+            if (inventoryItem[itemIndex].quantity <= quantity)
+            {
+                inventoryItem[itemIndex] = InventoryItem.GetEmptyItem();
+                InformAboutChange();
+                return;
+            }
+
+            inventoryItem[itemIndex] = inventoryItem[itemIndex].ChangeQuantity(inventoryItem[itemIndex].quantity - quantity);
+            InformAboutChange();
+        }
 
         /// <summary>
         /// Update the inventory data.

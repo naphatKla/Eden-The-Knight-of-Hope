@@ -1,17 +1,22 @@
 using System.Collections.Generic;
 using Inventory;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIEquipmentInventoryPage : BaseUIInventoryPage
 {
     [SerializeField] private UIInventoryDescription itemDescription; 
     [SerializeField] private List<ItemSlotType> listOfItemTypes = new List<ItemSlotType>();
+    [HideInInspector] public List<UIEquipmentInventoryItem> lisOfQuickSlots = new List<UIEquipmentInventoryItem>();
+
     public override void InitializeInventoryUI(InventorySo inventoryData)
     {
         base.InitializeInventoryUI(inventoryData);
         for (int i = 0; i < inventoryData.Size; i++)
         {
             listOfUIItems[i].itemSlotType = listOfItemTypes[i];
+            if (listOfItemTypes[i] != ItemSlotType.QuickSlot) continue;
+            lisOfQuickSlots.Add(listOfUIItems[i] as UIEquipmentInventoryItem);
         }
     }
     

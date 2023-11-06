@@ -10,7 +10,7 @@ namespace Inventory
         IDropHandler, IDragHandler 
     {
         [SerializeField] private Image itemImage;
-        [SerializeField] private TMP_Text quantityText;
+        [SerializeField] public TMP_Text quantityText;
         [SerializeField] private Image borderImage;
         public ItemSo ItemData { get; set; }
         public InventorySo ParentInventoryData { get; set; }

@@ -18,6 +18,8 @@ MonoBehaviour:
   <Description>k__BackingField: Sword long and big
   <ItemImage>k__BackingField: {fileID: 21300000, guid: d10fd5976bfa4064da85ad27435fc45f, type: 3}
   <ItemSlotType>k__BackingField: 0
-  hp: 300
+  maxHp: 300
+  hp: 0
+  stamina: 0
   atkPercent: 300
   atkSpeedPercent: -100

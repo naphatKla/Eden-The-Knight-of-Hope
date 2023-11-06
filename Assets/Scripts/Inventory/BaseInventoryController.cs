@@ -45,7 +45,7 @@ namespace Inventory
         /// Update the inventory UI page.
         /// </summary>
         /// <param name="inventoryState"></param>
-        private void UpdateInventoryUI(Dictionary<int, InventoryItem> inventoryState)
+        protected virtual void UpdateInventoryUI(Dictionary<int, InventoryItem> inventoryState)
         {
             inventoryUI.ResetAllItems();
             foreach (var item in inventoryState)

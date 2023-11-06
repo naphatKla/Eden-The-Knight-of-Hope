@@ -18,6 +18,8 @@ MonoBehaviour:
   <Description>k__BackingField: Just a leggings
   <ItemImage>k__BackingField: {fileID: 21300000, guid: 5053a9bf6d412f344b4b14138cc1c748, type: 3}
   <ItemSlotType>k__BackingField: 3
-  hp: 100
+  maxHp: 100
+  hp: 0
+  stamina: 0
   atkPercent: 0
   atkSpeedPercent: 0

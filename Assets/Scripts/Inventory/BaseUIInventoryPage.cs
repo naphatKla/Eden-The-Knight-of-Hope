@@ -10,7 +10,7 @@ namespace Inventory
         [Header("Panel")] [SerializeField] protected RectTransform contentPanel;
         [SerializeField] protected MouseFollower mouseFollower;
         [SerializeField] protected List<BaseUIInventoryPage> otherPages; // inventory pages that open when this page is open
-        protected List<BaseUIInventoryItem> listOfUIItems = new List<BaseUIInventoryItem>();
+        [HideInInspector] public List<BaseUIInventoryItem> listOfUIItems = new List<BaseUIInventoryItem>();
         protected int currentlyDraggedItemIndex = -1; // -1 means no item is being dragged
         public event Action<int> OnDescriptionRequested, OnItemActionRequested, OnStarDragging;
         public event Action<int, int> OnSwapItem;

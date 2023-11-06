@@ -1,3 +1,4 @@
+using System;
 using Inventory;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -9,9 +10,7 @@ public enum ItemSlotType
     Armor,
     Leggings,
     Boots,
-    QuickSlot1,
-    QuickSlot2,
-    QuickSlot3,
+    QuickSlot,
     Other
 }
 
@@ -22,13 +21,15 @@ public class UIEquipmentInventoryItem : BaseUIInventoryItem
         if (isEmpty) return;
         base.OnBeginDrag(eventData);
         EquipmentItemSO equipmentItemData = ItemData as EquipmentItemSO;
+        if (itemSlotType == ItemSlotType.QuickSlot) return;
         equipmentItemData?.RemoveStats();
     }
 
     public override void OnEndDrag(PointerEventData eventData)
     {
         EquipmentItemSO equipmentItemData = ItemData as EquipmentItemSO;
-        equipmentItemData?.AddStats();
+        if (itemSlotType != ItemSlotType.QuickSlot)
+            equipmentItemData?.AddStats();
         base.OnEndDrag(eventData);
     }
 
@@ -37,12 +38,13 @@ public class UIEquipmentInventoryItem : BaseUIInventoryItem
         BaseUIInventoryItem droppedItem = eventData.pointerDrag.GetComponent<BaseUIInventoryItem>();
         EquipmentItemSO equipmentItemData = ItemData as EquipmentItemSO;
         if (droppedItem.ItemData.ItemSlotType != itemSlotType) return;
-        if (!isEmpty)
+        if (!isEmpty && itemSlotType != ItemSlotType.QuickSlot)
         {
             equipmentItemData?.RemoveStats();
             Debug.Log("Not Empty");
         }
         base.OnDrop(eventData);
+        if (itemSlotType == ItemSlotType.QuickSlot) return;
         equipmentItemData = ItemData as EquipmentItemSO;
         equipmentItemData?.AddStats();
     }
