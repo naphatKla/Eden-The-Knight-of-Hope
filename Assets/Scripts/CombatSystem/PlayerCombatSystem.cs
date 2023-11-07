@@ -7,6 +7,8 @@ namespace CombatSystem
     public class PlayerCombatSystem : CombatSystem
     {
         [SerializeField] private Slider attackCooldownSlider;
+        [SerializeField] private Image weaponSlot;
+        [SerializeField] private Image weaponSlotCooldown;
         public static PlayerCombatSystem Instance { get; private set;}
         public float AttackStat {get => attackStat; set => attackStat = value;}
         public float BaseAttackStat {get => baseAttackStat;}
@@ -29,6 +31,8 @@ namespace CombatSystem
             {
                 attackCooldownSlider.gameObject.SetActive((progress <= 1));
                 attackCooldownSlider.value = progress;
+                weaponSlotCooldown.gameObject.SetActive((weaponSlot.isActiveAndEnabled));
+                weaponSlotCooldown.fillAmount = 1-progress;
             }
             
             if (UIManager.Instance.isAnyUIOpen) return;

@@ -1,16 +1,20 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Inventory;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class EquipmentInventoryController : BaseInventoryController<UIEquipmentInventoryPage>
 {
     [SerializeField] private Image weaponSlot;
     [SerializeField] private List<Image> quickSlots = new List<Image>();
+    [SerializeField] private List<Image> quickSlotsCooldown = new List<Image>();
     [SerializeField] private List<TextMeshProUGUI> quickSlotQuantityTexts= new List<TextMeshProUGUI>();
-    private float _quickSlot1CoolDown, _quickSlot2CoolDown, _quickSlot3CoolDown;
+    private float _quickSlot1CurrentCooldown, _quickSlot2CurrentCooldown, _quickSlot3CurrentCooldown;
+    private float _quickSlot1Cooldown, _quickSlot2Cooldown, _quickSlot3Cooldown;
     
     protected void Update()
     {
@@ -24,8 +28,9 @@ public class EquipmentInventoryController : BaseInventoryController<UIEquipmentI
             UIEquipmentInventoryItem quickSlot = inventoryUI.lisOfQuickSlots[0];
             EquipmentItemSO equipmentItemData =  quickSlot.ItemData as EquipmentItemSO;
             if (!equipmentItemData) return;
-            if (_quickSlot1CoolDown > 0) return;
-            _quickSlot1CoolDown = equipmentItemData.coolDown;
+            if (_quickSlot1CurrentCooldown > 0) return;
+            _quickSlot1CurrentCooldown = equipmentItemData.coolDown;
+            _quickSlot1Cooldown = equipmentItemData.coolDown;
             equipmentItemData.AddStats();
             quickSlot.ParentInventoryData.RemoveItem(quickSlot.Index, 1);
         }
@@ -35,8 +40,9 @@ public class EquipmentInventoryController : BaseInventoryController<UIEquipmentI
             UIEquipmentInventoryItem quickSlot = inventoryUI.lisOfQuickSlots[1];
             EquipmentItemSO equipmentItemData =  quickSlot.ItemData as EquipmentItemSO;
             if (!equipmentItemData) return;
-            if (_quickSlot2CoolDown > 0) return;
-            _quickSlot2CoolDown = equipmentItemData.coolDown;
+            if (_quickSlot2CurrentCooldown > 0) return;
+            _quickSlot2CurrentCooldown = equipmentItemData.coolDown;
+            _quickSlot2Cooldown = equipmentItemData.coolDown;
             equipmentItemData.AddStats();
             quickSlot.ParentInventoryData.RemoveItem(quickSlot.Index, 1);
         }
@@ -46,15 +52,23 @@ public class EquipmentInventoryController : BaseInventoryController<UIEquipmentI
             UIEquipmentInventoryItem quickSlot = inventoryUI.lisOfQuickSlots[2];
             EquipmentItemSO equipmentItemData =  quickSlot.ItemData as EquipmentItemSO;
             if (!equipmentItemData) return;
-            if (_quickSlot3CoolDown > 0) return;
-            _quickSlot3CoolDown = equipmentItemData.coolDown;
+            if (_quickSlot3CurrentCooldown > 0) return;
+            _quickSlot3CurrentCooldown = equipmentItemData.coolDown;
+            _quickSlot3Cooldown = equipmentItemData.coolDown;
             equipmentItemData.AddStats();
             quickSlot.ParentInventoryData.RemoveItem(quickSlot.Index, 1);
         }
         
-        _quickSlot1CoolDown = _quickSlot1CoolDown <= 0? 0 : _quickSlot1CoolDown - Time.deltaTime;
-        _quickSlot2CoolDown = _quickSlot2CoolDown <= 0? 0 : _quickSlot2CoolDown - Time.deltaTime;
-        _quickSlot3CoolDown = _quickSlot3CoolDown <= 0? 0 : _quickSlot3CoolDown - Time.deltaTime;
+        _quickSlot1CurrentCooldown = _quickSlot1CurrentCooldown <= 0 || double.IsNaN(_quickSlot1CurrentCooldown)? 0 : _quickSlot1CurrentCooldown - Time.deltaTime;
+        _quickSlot2CurrentCooldown = _quickSlot2CurrentCooldown <= 0 || double.IsNaN(_quickSlot2CurrentCooldown)? 0 : _quickSlot2CurrentCooldown - Time.deltaTime;
+        _quickSlot3CurrentCooldown = _quickSlot3CurrentCooldown <= 0 || double.IsNaN(_quickSlot1CurrentCooldown)? 0 : _quickSlot3CurrentCooldown - Time.deltaTime;
+        quickSlotsCooldown[0].gameObject.SetActive(_quickSlot1CurrentCooldown > 0);
+        quickSlotsCooldown[1].gameObject.SetActive(_quickSlot2CurrentCooldown > 0);
+        quickSlotsCooldown[2].gameObject.SetActive(_quickSlot3CurrentCooldown > 0);
+        quickSlotsCooldown[0].fillAmount = _quickSlot1CurrentCooldown / _quickSlot1Cooldown;
+        quickSlotsCooldown[1].fillAmount = _quickSlot2CurrentCooldown / _quickSlot2Cooldown;
+        quickSlotsCooldown[2].fillAmount = _quickSlot3CurrentCooldown / _quickSlot3Cooldown;
+        
     }
 
     protected override void UpdateInventoryUI(Dictionary<int, InventoryItem> inventoryState)
