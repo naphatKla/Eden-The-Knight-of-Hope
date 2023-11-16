@@ -1,4 +1,3 @@
-using System;
 using Inventory;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -31,6 +30,11 @@ public class UIEquipmentInventoryItem : BaseUIInventoryItem
         if (itemSlotType != ItemSlotType.QuickSlot)
             equipmentItemData?.AddStats();
         base.OnEndDrag(eventData);
+    }
+
+    public override void OnPointerClick(PointerEventData pointerData)
+    {
+        HandleClick(pointerData);
     }
 
     public override void OnDrop(PointerEventData eventData)

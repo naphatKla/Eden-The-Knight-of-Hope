@@ -30,13 +30,10 @@ namespace Inventory
             Deselect();
         }
 
-        public void OnPointerClick(PointerEventData pointerData)
+        public virtual void OnPointerClick(PointerEventData pointerData)
         {
-            if (pointerData.button == PointerEventData.InputButton.Right)
-                OnRightMouseBtnClick?.Invoke(this);
-            else if (pointerData.button == PointerEventData.InputButton.Left)
-                OnItemClicked?.Invoke(this);
-            else if (pointerData.button == PointerEventData.InputButton.Middle)
+            HandleClick(pointerData);
+            if (pointerData.button == PointerEventData.InputButton.Middle)
                 ParentInventoryData.SortInventory();
         }
 
@@ -68,6 +65,14 @@ namespace Inventory
 
         public void OnDrag(PointerEventData eventData)
         {
+        }
+
+        protected void HandleClick(PointerEventData pointerData)
+        {
+            if (pointerData.button == PointerEventData.InputButton.Right)
+                OnRightMouseBtnClick?.Invoke(this);
+            else if (pointerData.button == PointerEventData.InputButton.Left)
+                OnItemClicked?.Invoke(this);
         }
 
         #region Methods

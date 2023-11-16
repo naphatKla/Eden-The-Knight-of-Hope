@@ -8,7 +8,7 @@ namespace Inventory
         [SerializeField] protected InventorySo inventoryData;
         public List<InventoryItem> initialItems = new List<InventoryItem>();
 
-        public void Start()
+        public virtual void Start()
         {
             PrepareUIEvent();
             PrepareInventoryData();

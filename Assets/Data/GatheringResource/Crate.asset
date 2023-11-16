@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13d9b7fd7374604890f6ede16e79abd, type: 3}
+  m_Name: Crate
+  m_EditorClassIdentifier: 
+  sprite:
+  - {fileID: -2146916619, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  point: {x: 0, y: 0}
+  gatheringTime: 0.5
+  itemDrop1:
+  - obj:
+      item: {fileID: 11400000, guid: b9fba1e7e896ddd4ca6086a672e7cea1, type: 2}
+      quantityDrop: {x: 3, y: 5}
+    spawnRate: 18.33
+  - obj:
+      item: {fileID: 11400000, guid: 32aa7818c26150f47847018c7092d664, type: 2}
+      quantityDrop: {x: 2, y: 5}
+    spawnRate: 18.33
+  - obj:
+      item: {fileID: 11400000, guid: 02ff19e1303e2d84ba0b08b594a190cd, type: 2}
+      quantityDrop: {x: 2, y: 6}
+    spawnRate: 18.33
+  - obj:
+      item: {fileID: 11400000, guid: df58ffd9ac59a784d8cfe90c0a4d6a0d, type: 2}
+      quantityDrop: {x: 1, y: 5}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 11400000, guid: 6d8bc375e8fce664da80bde038bd1f87, type: 2}
+      quantityDrop: {x: 1, y: 1}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 11400000, guid: e7ee4d449bcaeb54fab29587eeb8c875, type: 2}
+      quantityDrop: {x: 1, y: 2}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 11400000, guid: c66a64f6ae57d424e86060f50ad990c5, type: 2}
+      quantityDrop: {x: 2, y: 2}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 11400000, guid: 193081f2264733944919661d1a662086, type: 2}
+      quantityDrop: {x: 1, y: 2}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 11400000, guid: 3706363fac94c644e85c25f16a43ac69, type: 2}
+      quantityDrop: {x: 1, y: 1}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 0}
+      quantityDrop: {x: 0, y: 0}
+    spawnRate: 10
+  itemDrop2:
+  - obj:
+      item: {fileID: 11400000, guid: b9fba1e7e896ddd4ca6086a672e7cea1, type: 2}
+      quantityDrop: {x: 3, y: 5}
+    spawnRate: 18.33
+  - obj:
+      item: {fileID: 11400000, guid: 32aa7818c26150f47847018c7092d664, type: 2}
+      quantityDrop: {x: 2, y: 5}
+    spawnRate: 18.33
+  - obj:
+      item: {fileID: 11400000, guid: 02ff19e1303e2d84ba0b08b594a190cd, type: 2}
+      quantityDrop: {x: 2, y: 6}
+    spawnRate: 18.33
+  - obj:
+      item: {fileID: 11400000, guid: df58ffd9ac59a784d8cfe90c0a4d6a0d, type: 2}
+      quantityDrop: {x: 1, y: 5}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 11400000, guid: 6d8bc375e8fce664da80bde038bd1f87, type: 2}
+      quantityDrop: {x: 1, y: 1}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 11400000, guid: e7ee4d449bcaeb54fab29587eeb8c875, type: 2}
+      quantityDrop: {x: 1, y: 2}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 11400000, guid: c66a64f6ae57d424e86060f50ad990c5, type: 2}
+      quantityDrop: {x: 2, y: 2}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 11400000, guid: 193081f2264733944919661d1a662086, type: 2}
+      quantityDrop: {x: 1, y: 2}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 11400000, guid: 3706363fac94c644e85c25f16a43ac69, type: 2}
+      quantityDrop: {x: 1, y: 1}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 0}
+      quantityDrop: {x: 0, y: 0}
+    spawnRate: 10
+  itemDrop3:
+  - obj:
+      item: {fileID: 11400000, guid: b9fba1e7e896ddd4ca6086a672e7cea1, type: 2}
+      quantityDrop: {x: 3, y: 5}
+    spawnRate: 18.33
+  - obj:
+      item: {fileID: 11400000, guid: 32aa7818c26150f47847018c7092d664, type: 2}
+      quantityDrop: {x: 2, y: 5}
+    spawnRate: 18.33
+  - obj:
+      item: {fileID: 11400000, guid: 02ff19e1303e2d84ba0b08b594a190cd, type: 2}
+      quantityDrop: {x: 2, y: 6}
+    spawnRate: 18.33
+  - obj:
+      item: {fileID: 11400000, guid: df58ffd9ac59a784d8cfe90c0a4d6a0d, type: 2}
+      quantityDrop: {x: 1, y: 5}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 11400000, guid: 6d8bc375e8fce664da80bde038bd1f87, type: 2}
+      quantityDrop: {x: 1, y: 1}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 11400000, guid: e7ee4d449bcaeb54fab29587eeb8c875, type: 2}
+      quantityDrop: {x: 1, y: 2}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 11400000, guid: c66a64f6ae57d424e86060f50ad990c5, type: 2}
+      quantityDrop: {x: 2, y: 2}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 11400000, guid: 193081f2264733944919661d1a662086, type: 2}
+      quantityDrop: {x: 1, y: 2}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 11400000, guid: 3706363fac94c644e85c25f16a43ac69, type: 2}
+      quantityDrop: {x: 1, y: 1}
+    spawnRate: 5.83
+  - obj:
+      item: {fileID: 0}
+      quantityDrop: {x: 0, y: 0}
+    spawnRate: 10
+  itemDrop4: []
+  itemDrop5: []

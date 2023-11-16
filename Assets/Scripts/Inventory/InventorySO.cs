@@ -30,6 +30,7 @@ namespace Inventory
         public void AddItem(ItemSo item, int quantity)
         {
             if (quantity == 0) return;
+            if (!item) return;
             int quantityLeftToAdd = quantity;
 
             for (int i = 0; i < inventoryItem.Count; i++)

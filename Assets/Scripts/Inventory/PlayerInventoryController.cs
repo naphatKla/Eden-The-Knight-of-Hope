@@ -5,6 +5,15 @@ namespace Inventory
     public class PlayerInventoryController : BaseInventoryController<PlayerUIInventoryPage>
     {
         [SerializeField] private KeyCode key;
+        public static PlayerInventoryController Instance;
+        public InventorySo InventoryData => inventoryData;
+
+        public override void Start()
+        {
+            base.Start();
+            Instance = this;
+        }
+
         public void Update()
         {
             // press 0 to add item for testing

@@ -7,7 +7,7 @@ namespace Interaction
 {
     public class InteractableObject : MonoBehaviour
     {
-        #region MyRegion
+        #region Declare Variables
         [SerializeField] protected KeyCode key;
         [SerializeField] protected string prompt;
         [SerializeField] protected TextMeshProUGUI interactionTextUI;

@@ -13,7 +13,7 @@ public class EquipmentItemSO : ItemSo
     [SerializeField] private float maxHp;
     [SerializeField] private float hp;
     [SerializeField] private float stamina;
-    [SerializeField] private float atkPercent;
+    [SerializeField] private float atk;
     [SerializeField] private float atkSpeedPercent;
     [Header("For Usable Item(Quick Slot) Only")]
     public float coolDown;
@@ -22,8 +22,8 @@ public class EquipmentItemSO : ItemSo
     {
         Debug.LogWarning("Add Stats");
         float baseAttackStat = PlayerCombatSystem.Instance.BaseAttackStat;
-        
-        PlayerCombatSystem.Instance.AttackStat += (baseAttackStat * (atkPercent/100));
+
+        PlayerCombatSystem.Instance.AttackStat += atk;
         PlayerCombatSystem.Instance.ReduceCoolDownPercent += (atkSpeedPercent/100);
         PlayerHealthSystem.Instance.Heal(hp);
         Player.Instance.CurrentStamina += stamina;
@@ -38,7 +38,7 @@ public class EquipmentItemSO : ItemSo
         Debug.LogWarning("Remove Stats");
         float baseAttackStat = PlayerCombatSystem.Instance.BaseAttackStat;
 
-        PlayerCombatSystem.Instance.AttackStat -=  (baseAttackStat * (atkPercent/100));
+        PlayerCombatSystem.Instance.AttackStat -= atk;
         PlayerCombatSystem.Instance.ReduceCoolDownPercent -= (atkSpeedPercent/100);
         PlayerHealthSystem.Instance.maxHp -= maxHp;
         PlayerHealthSystem.Instance.Heal(-hp);
