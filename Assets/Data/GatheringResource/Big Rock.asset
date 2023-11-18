@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13d9b7fd7374604890f6ede16e79abd, type: 3}
+  m_Name: Big Rock
+  m_EditorClassIdentifier: 
+  sprite:
+  - {fileID: 1824295214, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  point: {x: 0, y: 0}
+  gatheringTime: 0.5
+  itemDrop1:
+  - obj:
+      item: {fileID: 11400000, guid: 0227960a72cc3ca4fa58804eb0be4d3b, type: 2}
+      quantityDrop: {x: 3, y: 6}
+    spawnRate: 100
+  itemDrop2:
+  - obj:
+      item: {fileID: 11400000, guid: df58ffd9ac59a784d8cfe90c0a4d6a0d, type: 2}
+      quantityDrop: {x: 1, y: 2}
+    spawnRate: 35
+  - obj:
+      item: {fileID: 0}
+      quantityDrop: {x: 0, y: 0}
+    spawnRate: 65
+  itemDrop3: []
+  itemDrop4: []
+  itemDrop5: []

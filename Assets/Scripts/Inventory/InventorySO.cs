@@ -41,6 +41,7 @@ namespace Inventory
                     if (addedQuantity <= item.MaxStackSize)
                     {
                         inventoryItem[i] = inventoryItem[i].ChangeQuantity(addedQuantity);
+                        InventoryFeedback.Instance.ShowFeedback(item.ItemImage, quantity);
                         InformAboutChange();
                         return;
                     }
@@ -60,6 +61,7 @@ namespace Inventory
                 }
 
                 inventoryItem[i] = new InventoryItem { item = item, quantity = quantityLeftToAdd };
+                InventoryFeedback.Instance.ShowFeedback(item.ItemImage, quantity);
                 InformAboutChange();
                 return;
             }

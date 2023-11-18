@@ -16,10 +16,6 @@ namespace Inventory
 
         public void Update()
         {
-            // press 0 to add item for testing
-            if (Input.GetKeyDown(KeyCode.Alpha0))
-                inventoryData.AddItem(initialItems[0].item, 20);
-            
             UIManager.Instance.isAnyUIOpen = inventoryUI.isActiveAndEnabled;
             if (Input.GetKeyDown(KeyCode.Escape))
             {

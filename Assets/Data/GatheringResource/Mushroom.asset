@@ -17,6 +17,8 @@ MonoBehaviour:
   - {fileID: -1801970525, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
   - {fileID: -1148125805, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
   - {fileID: 2003467419, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: -1046089948, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: 1681812640, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
   point: {x: 0, y: 0}
   gatheringTime: 0.5
   itemDrop1:
