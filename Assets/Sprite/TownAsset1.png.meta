@@ -1,0 +1,418 @@
+fileFormatVersion: 2
+guid: db6b97b451609844fa092e61a2d8d6d3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TownAsset1_0
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 1643
+        width: 383
+        height: 648
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1663c84e570daab4cbd877b870b175a9
+      internalID: 1338969011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownAsset1_1
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 1676
+        width: 454
+        height: 404
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -211, y: -183}
+        - {x: -211, y: -31}
+        - {x: 202, y: -31}
+        - {x: 202, y: -183}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf086c9c07c8fc543b9061ebc6a35a04
+      internalID: 360890908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownAsset1_3
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1718
+        width: 706
+        height: 266
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -120, y: -29}
+        - {x: -120, y: -29}
+        - {x: -120, y: -29}
+        - {x: -120, y: -29}
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac7d5ab57b688847b552502001cc267
+      internalID: 1562715568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownAsset1_4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1374
+        width: 132
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb415b868c47d4408534ced138f4b38
+      internalID: 736913519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownAsset1_5
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 1374
+        width: 133
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0aa7d2ea14173d4b855d5728fb505e5
+      internalID: -802912519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownAsset1_6
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 150
+        width: 1374
+        height: 1492
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 183, y: -674}
+        - {x: 184, y: -705}
+        - {x: -188, y: -706}
+        - {x: -186, y: -674}
+        - {x: -687, y: -676}
+        - {x: -678.40186, y: -523.73914}
+        - {x: -667, y: -525}
+        - {x: -666, y: -457}
+        - {x: -672, y: -456}
+        - {x: -661, y: -315}
+        - {x: 663, y: -312}
+        - {x: 665, y: -525}
+        - {x: 678.0332, y: -524.00085}
+        - {x: 679, y: -611}
+        - {x: 683, y: -676}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1433d6f8ea84f5f4997f8c2de17877d5
+      internalID: -2086678888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownAsset1_7
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 178
+        width: 488
+        height: 1039
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 104, y: -464.5}
+        - {x: 35, y: -474.5}
+        - {x: -56, y: -472.5}
+        - {x: -109, y: -458.5}
+        - {x: -160, y: -432.5}
+        - {x: -159, y: -407.5}
+        - {x: -149, y: -389.5}
+        - {x: -7, y: -378.5}
+        - {x: 157, y: -389.5}
+        - {x: 167, y: -404.5}
+        - {x: 166, y: -427.5}
+        - {x: 150, y: -445.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189e51b95b4af93438442f491290fe97
+      internalID: 664070334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownAsset1_8
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 206
+        width: 488
+        height: 1061
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -173, y: -511.5}
+        - {x: -161, y: -482.5}
+        - {x: -161, y: -444.5}
+        - {x: -8, y: -432.5}
+        - {x: 170, y: -444.5}
+        - {x: 167, y: -486.5}
+        - {x: 183, y: -514.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e02e4bad743f4345a2137935ef13dee
+      internalID: -138820848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownAsset1_9
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 206
+        width: 487
+        height: 1059
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -222.5, y: -513.5}
+        - {x: -216.5, y: -451.5}
+        - {x: -191.5, y: -417.5}
+        - {x: -13.5, y: -407.5}
+        - {x: 187.5, y: -419.5}
+        - {x: 214.5, y: -452.5}
+        - {x: 229.5, y: -511.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fcf3c7ea1aa114f9817a0a6a6f2e04
+      internalID: -1823168046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownAsset1_10
+      rect:
+        serializedVersion: 2
+        x: 3352
+        y: 273
+        width: 4
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f3ca4dbe6fc1f42b4b026f344f997f
+      internalID: 1764970561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownAsset1_2
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 1898
+        width: 6
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36b8f954a77c704087f56e961b0724d
+      internalID: -1220197492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TownAsset1_0: 1338969011
+      TownAsset1_1: 360890908
+      TownAsset1_10: 1764970561
+      TownAsset1_2: -1220197492
+      TownAsset1_3: 1562715568
+      TownAsset1_4: 736913519
+      TownAsset1_5: -802912519
+      TownAsset1_6: -2086678888
+      TownAsset1_7: 664070334
+      TownAsset1_8: -138820848
+      TownAsset1_9: -1823168046
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

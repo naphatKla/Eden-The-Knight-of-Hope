@@ -28,7 +28,7 @@ namespace Tower
             }
             
             Vector2 direction = _target.position - _thisTransform.position;
-            _thisTransform.up = direction;
+            _thisTransform.right = direction;
             _rb2d.velocity = direction.normalized * _speed;
         }
 

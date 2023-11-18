@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite:
   - {fileID: -2146916619, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  point: {x: 0, y: 0}
+  point: {x: 20, y: 30}
   gatheringTime: 0.5
   itemDrop1:
   - obj:

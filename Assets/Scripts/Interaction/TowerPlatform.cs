@@ -42,7 +42,7 @@ namespace Interaction
             }
         
             Transform thisTransform = transform;
-            _tower = Instantiate(towerPrefab,thisTransform.position + new Vector3(0,-0.5f,0),Quaternion.identity,thisTransform);
+            _tower = Instantiate(towerPrefab,thisTransform.position + new Vector3(0,-0.28f,0),Quaternion.identity,thisTransform);
             _towerHealthSystem = _tower.GetComponent<HealthSystem.HealthSystem>();
             GameManager.Instance.AddPoint(-cost);
         }
