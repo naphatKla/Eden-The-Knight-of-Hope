@@ -143,9 +143,9 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -211, y: -183}
-        - {x: -211, y: -31}
-        - {x: 202, y: -31}
+      - - {x: -203, y: -183}
+        - {x: -203, y: -101}
+        - {x: 200, y: -102}
         - {x: 202, y: -183}
       tessellationDetail: 0
       bones: []
