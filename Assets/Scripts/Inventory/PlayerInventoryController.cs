@@ -16,7 +16,6 @@ namespace Inventory
 
         public void Update()
         {
-            UIManager.Instance.isAnyUIOpen = inventoryUI.isActiveAndEnabled;
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 inventoryUI.Hide();

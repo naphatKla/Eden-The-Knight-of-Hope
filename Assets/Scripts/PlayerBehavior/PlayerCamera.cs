@@ -33,7 +33,7 @@ namespace PlayerBehavior
             Vector3 targetPosition = player.position + offset;
             transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref _velocity, smoothTime);
         
-            if (UIManager.Instance.isAnyUIOpen) return;
+            if (UIManager.Instance.CheckIsAnyUIOpen()) return;
             //Zoom
             float scroll = Input.GetAxis("Mouse ScrollWheel");
             _zoom -= scroll * zoomMultiplier;

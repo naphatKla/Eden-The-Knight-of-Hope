@@ -79,6 +79,7 @@ namespace Inventory
         /// </summary>
         public void Show()
         {
+            if (UIManager.Instance.CheckIsAnyUIOpen()) return;
             gameObject.SetActive(true);
             ResetSelection();
         }

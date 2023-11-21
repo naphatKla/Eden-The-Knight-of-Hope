@@ -98,6 +98,11 @@ namespace Inventory
         {
             return inventoryItem[itemIndex];
         }
+        
+        public List<InventoryItem> GetAllItems()
+        {
+            return inventoryItem;
+        }
 
         /// <summary>
         /// Swap 2 items in the inventory (Include moving one item to the empty slot).

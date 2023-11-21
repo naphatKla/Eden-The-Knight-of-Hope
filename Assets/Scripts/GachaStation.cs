@@ -53,7 +53,7 @@ public class GachaStation : InteractableObject
 
     private void OpenGachaUI()
     {
-        UIManager.Instance.isAnyUIOpen = true;
+        if (UIManager.Instance.CheckIsAnyUIOpen()) return;
         ResetGachaUI();
         if (_currentGachaSelect) equipZoneUI.SetActive(true);
         gachaNameText.text = $"Feel lucky today? \nTry your luck for <color=red>{cost}</color> coins!";
@@ -66,7 +66,6 @@ public class GachaStation : InteractableObject
     {
         ResetGachaUI();
         gachaStationUI.SetActive(false);
-        UIManager.Instance.isAnyUIOpen = false;
     }
 
     private void ResetGachaUI()

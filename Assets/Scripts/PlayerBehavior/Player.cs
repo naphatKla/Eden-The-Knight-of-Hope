@@ -231,6 +231,7 @@ namespace PlayerBehavior
             float timeCout = 0;
             while (timeCout < time)
             {
+                if(!spriteRenderer) yield break;
                 Color color = spriteRenderer.color;
                 color.a = Mathf.Lerp(color.a, destination, timeCout / time);
                 spriteRenderer.color = color;

@@ -35,7 +35,7 @@ namespace CombatSystem
                 weaponSlotCooldown.fillAmount = 1-progress;
             }
             
-            if (UIManager.Instance.isAnyUIOpen) return;
+            if (UIManager.Instance.CheckIsAnyUIOpen()) return;
             if (Player.Instance.Animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDash")) return;
             if(!Input.GetMouseButtonDown(0)) return;
             base.AttackHandle();

@@ -1,7 +1,10 @@
+using System.Collections.Generic;
+using System.Linq;
 using HealthSystem;
 using PlayerBehavior;
 using TMPro;
 using UnityEngine;
+
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -13,9 +16,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI playerBaseHpText;
     [SerializeField] private TextMeshProUGUI playerHpText;
     [SerializeField] private TextMeshProUGUI playerStaminaText;
+    [SerializeField] private List<Image> allUIPages;
     public static UIManager Instance;
-    public bool isAnyUIOpen;
-    
+
+
     private void Start()
     {
         Instance = this;
@@ -30,5 +34,10 @@ public class UIManager : MonoBehaviour
         playerBaseHpText.text = $"{BaseHealthSystem.Instance.CurrentHp:F0} / {BaseHealthSystem.Instance.maxHp:F0}";
         playerHpText.text = $"{PlayerHealthSystem.Instance.CurrentHp} / {PlayerHealthSystem.Instance.maxHp}";
         playerStaminaText.text = $"{Player.Instance.CurrentStamina:F0} / {Player.Instance.MaxStamina:F0}";
+    }
+
+    public bool CheckIsAnyUIOpen()
+    {
+        return allUIPages.Any(ui => ui.gameObject.activeSelf);
     }
 }
