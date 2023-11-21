@@ -33,7 +33,7 @@ public class InventoryFeedback : MonoBehaviour
             if(indicatorImages[i].gameObject.activeSelf) continue;
             indicatorImages[i].gameObject.SetActive(true); 
             itemImages[i].sprite = itemSprite;
-            quantityTexts[i].text = $"<color=green>+{quantity}</color>";
+            quantityTexts[i].text = quantity > 0 ? $"<color=green>+{quantity}</color>" : $"<color=red>{quantity}</color>";
             yield return new WaitForSeconds(3f);
             indicatorImages[i].gameObject.SetActive(false);
             yield break;

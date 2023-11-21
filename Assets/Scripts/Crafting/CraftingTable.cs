@@ -7,11 +7,17 @@ public class CraftingTable : InteractableObject
 {
     [Header("================= Crafting ================= ")] 
     [SerializeField] private Image craftingUI;
+    [SerializeField] Button materialButton;
     [SerializeField] Button armorButton;
     [SerializeField] Button weaponButton;
-    [SerializeField] Button materialButton;
+    [SerializeField] Button potionButton;
+    [SerializeField] Button closeButton;
     [Space]
 
+    [SerializeField] private CraftingUIPage materialPage;
+    [SerializeField] private List<CraftingItem> materialCraftingItems;
+    [Space]
+    
     [SerializeField] private CraftingUIPage armorPage;
     [SerializeField] private List<CraftingItem> armorCraftingItems;
     [Space]
@@ -19,21 +25,27 @@ public class CraftingTable : InteractableObject
     [SerializeField] private CraftingUIPage weaponPage;
     [SerializeField] private List<CraftingItem> weaponCraftingItems;
     [Space]
-  
-    [SerializeField] private CraftingUIPage materialPage;
-    [SerializeField] private List<CraftingItem> materialCraftingItems;
+    
+    [SerializeField] private CraftingUIPage potionPage;
+    [SerializeField] private List<CraftingItem> potionItems;
+    [Space]
+    
     private float _lastOpenTime;
     [SerializeField] private LayerMask playerLayer;
     
     protected override void Start()
     {
         base.Start();
-        /*armorButton.onClick.AddListener(() => {armorPage.gameObject.SetActive(true); weaponPage.gameObject.SetActive(false); materialPage.gameObject.SetActive(false);});
-        weaponButton.onClick.AddListener(() => {armorPage.gameObject.SetActive(false); weaponPage.gameObject.SetActive(true); materialPage.gameObject.SetActive(false);});
-        materialButton.onClick.AddListener(() => {armorPage.gameObject.SetActive(false); weaponPage.gameObject.SetActive(false); materialPage.gameObject.SetActive(true);});*/
+        materialButton.onClick.AddListener(() => {materialPage.gameObject.SetActive(true); armorPage.gameObject.SetActive(false); weaponPage.gameObject.SetActive(false); potionPage.gameObject.SetActive(false); materialPage.UpdatePage();});
+        armorButton.onClick.AddListener(() => {materialPage.gameObject.SetActive(false); armorPage.gameObject.SetActive(true); weaponPage.gameObject.SetActive(false); potionPage.gameObject.SetActive(false); armorPage.UpdatePage();});
+        weaponButton.onClick.AddListener(() => {materialPage.gameObject.SetActive(false); armorPage.gameObject.SetActive(false); weaponPage.gameObject.SetActive(true); potionPage.gameObject.SetActive(false); weaponPage.UpdatePage();});
+        potionButton.onClick.AddListener(() => {materialPage.gameObject.SetActive(false); armorPage.gameObject.SetActive(false); weaponPage.gameObject.SetActive(false); potionPage.gameObject.SetActive(true); potionPage.UpdatePage();});
+
+        closeButton.onClick.AddListener(CloseCraftingUI);
+        materialPage.Initialize(materialCraftingItems);
         armorPage.Initialize(armorCraftingItems);
         weaponPage.Initialize(weaponCraftingItems);
-        materialPage.Initialize(materialCraftingItems);
+        potionPage.Initialize(potionItems);
     }
     
     protected void Update()
@@ -54,9 +66,10 @@ public class CraftingTable : InteractableObject
     {
         if (UIManager.Instance.CheckIsAnyUIOpen()) return;
         craftingUI.gameObject.SetActive(true);
+        materialPage.UpdatePage();
         armorPage.UpdatePage();
         weaponPage.UpdatePage();
-        materialPage.UpdatePage();
+        potionPage.UpdatePage();
         _lastOpenTime = Time.time;
     }
 

@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Inventory
 {
     [CreateAssetMenu]
     public class InventorySo : ScriptableObject
     {
-        [SerializeField] private List<InventoryItem> inventoryItem;
+        [SerializeField] private List<InventoryItem> inventoryItems;
         [field: SerializeField] public int Size { get; private set; } = 10;
         public event Action<Dictionary<int, InventoryItem>> OnInventoryUpdated;
 
@@ -18,8 +20,8 @@ namespace Inventory
         /// </summary>
         public void Initialize()
         {
-            inventoryItem = new List<InventoryItem>();
-            for (int i = 0; i < Size; i++) inventoryItem.Add(InventoryItem.GetEmptyItem());
+            inventoryItems = new List<InventoryItem>();
+            for (int i = 0; i < Size; i++) inventoryItems.Add(InventoryItem.GetEmptyItem());
         }
 
         /// <summary>
@@ -33,34 +35,34 @@ namespace Inventory
             if (!item) return;
             int quantityLeftToAdd = quantity;
 
-            for (int i = 0; i < inventoryItem.Count; i++)
+            for (int i = 0; i < inventoryItems.Count; i++)
             {
-                if (item == inventoryItem[i].item)
+                if (item == inventoryItems[i].item)
                 {
-                    int addedQuantity = inventoryItem[i].quantity + quantity;
+                    int addedQuantity = inventoryItems[i].quantity + quantity;
                     if (addedQuantity <= item.MaxStackSize)
                     {
-                        inventoryItem[i] = inventoryItem[i].ChangeQuantity(addedQuantity);
+                        inventoryItems[i] = inventoryItems[i].ChangeQuantity(addedQuantity);
                         InventoryFeedback.Instance.ShowFeedback(item.ItemImage, quantity);
                         InformAboutChange();
                         return;
                     }
 
                     quantityLeftToAdd = addedQuantity - item.MaxStackSize;
-                    inventoryItem[i] = inventoryItem[i].ChangeQuantity(item.MaxStackSize);
+                    inventoryItems[i] = inventoryItems[i].ChangeQuantity(item.MaxStackSize);
                     InformAboutChange();
                 }
 
-                if (!inventoryItem[i].IsEmpty) continue;
+                if (!inventoryItems[i].IsEmpty) continue;
                 if (quantityLeftToAdd > item.MaxStackSize)
                 {
-                    inventoryItem[i] = new InventoryItem { item = item, quantity = item.MaxStackSize };
+                    inventoryItems[i] = new InventoryItem { item = item, quantity = item.MaxStackSize };
                     InformAboutChange();
                     quantityLeftToAdd -= item.MaxStackSize;
                     continue;
                 }
 
-                inventoryItem[i] = new InventoryItem { item = item, quantity = quantityLeftToAdd };
+                inventoryItems[i] = new InventoryItem { item = item, quantity = quantityLeftToAdd };
                 InventoryFeedback.Instance.ShowFeedback(item.ItemImage, quantity);
                 InformAboutChange();
                 return;
@@ -80,10 +82,10 @@ namespace Inventory
         {
             Dictionary<int, InventoryItem> returnValue = new Dictionary<int, InventoryItem>();
 
-            for (int i = 0; i < inventoryItem.Count; i++)
+            for (int i = 0; i < inventoryItems.Count; i++)
             {
-                if (inventoryItem[i].IsEmpty) continue;
-                returnValue[i] = inventoryItem[i];
+                if (inventoryItems[i].IsEmpty) continue;
+                returnValue[i] = inventoryItems[i];
             }
 
             return returnValue;
@@ -96,12 +98,17 @@ namespace Inventory
         /// <returns>Item at the given index.</returns>
         public InventoryItem GetItemAt(int itemIndex)
         {
-            return inventoryItem[itemIndex];
+            return inventoryItems[itemIndex];
         }
         
         public List<InventoryItem> GetAllItems()
         {
-            return inventoryItem;
+            return inventoryItems;
+        }
+        
+        public int GetAllQuantityOfItem(InventoryItem item)
+        {
+            return inventoryItems.FindAll(i => i.item == item.item).Sum(i=>i.quantity);
         }
 
         /// <summary>
@@ -111,22 +118,22 @@ namespace Inventory
         /// <param name="itemIndex2">Item two</param>
         public void SwapItems(int itemIndex1, int itemIndex2)
         {
-            (inventoryItem[itemIndex1], inventoryItem[itemIndex2]) =
-                (inventoryItem[itemIndex2], inventoryItem[itemIndex1]);
+            (inventoryItems[itemIndex1], inventoryItems[itemIndex2]) =
+                (inventoryItems[itemIndex2], inventoryItems[itemIndex1]);
             InformAboutChange();
         }
         
         public void SwapItemsMoveBetweenInventories(InventorySo otherInventory, int itemIndex1, int itemIndex2)
         {
-            (inventoryItem[itemIndex1], otherInventory.inventoryItem[itemIndex2]) =
-                (otherInventory.inventoryItem[itemIndex2], inventoryItem[itemIndex1]);
+            (inventoryItems[itemIndex1], otherInventory.inventoryItems[itemIndex2]) =
+                (otherInventory.inventoryItems[itemIndex2], inventoryItems[itemIndex1]);
             InformAboutChange();
             otherInventory.InformAboutChange();
         }
         
         public void SortInventory()
         {
-            inventoryItem.Sort((item1, item2) =>
+            inventoryItems.Sort((item1, item2) =>
             {
                 if (item1.IsEmpty && item2.IsEmpty) return 0;
                 if (item1.IsEmpty) return 1;
@@ -138,15 +145,36 @@ namespace Inventory
         
         public void RemoveItem(int itemIndex, int quantity)
         {
-            if (inventoryItem[itemIndex].IsEmpty) return;
-            if (inventoryItem[itemIndex].quantity <= quantity)
+            if (inventoryItems[itemIndex].IsEmpty) return;
+            if (inventoryItems[itemIndex].quantity <= quantity)
             {
-                inventoryItem[itemIndex] = InventoryItem.GetEmptyItem();
+                InventoryFeedback.Instance.ShowFeedback(inventoryItems[itemIndex].item.ItemImage, -quantity);
+                inventoryItems[itemIndex] = InventoryItem.GetEmptyItem();
                 InformAboutChange();
                 return;
             }
 
-            inventoryItem[itemIndex] = inventoryItem[itemIndex].ChangeQuantity(inventoryItem[itemIndex].quantity - quantity);
+            inventoryItems[itemIndex] = inventoryItems[itemIndex].ChangeQuantity(inventoryItems[itemIndex].quantity - quantity);
+            InventoryFeedback.Instance.ShowFeedback(inventoryItems[itemIndex].item.ItemImage, -quantity);
+            InformAboutChange();
+        }
+        
+        public void RemoveItem(ItemSo item, int quantity)
+        {
+            List<InventoryItem> itemsToRemove = inventoryItems.FindAll(inventoryItem => inventoryItem.item == item);
+            int quantityLeftToRemove = quantity;
+            for(int i = 0; i < itemsToRemove.Count; i++)
+            {
+                if (itemsToRemove[i].quantity <= quantityLeftToRemove)
+                {
+                    quantityLeftToRemove -= itemsToRemove[i].quantity;
+                    inventoryItems[inventoryItems.IndexOf(itemsToRemove[i])] = InventoryItem.GetEmptyItem();
+                    continue;
+                }
+                inventoryItems[inventoryItems.IndexOf(itemsToRemove[i])] = itemsToRemove[i].ChangeQuantity(itemsToRemove[i].quantity - quantityLeftToRemove);
+                InventoryFeedback.Instance.ShowFeedback(item.ItemImage, -quantity);
+                break;
+            }
             InformAboutChange();
         }
 
