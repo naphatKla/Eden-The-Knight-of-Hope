@@ -18,7 +18,7 @@ MonoBehaviour:
   <Description>k__BackingField: Just a Boots
   <ItemImage>k__BackingField: {fileID: 1623994067, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 4
-  maxHp: 65.25
+  maxHp: 24.75
   hp: 0
   stamina: 0
   atk: 0

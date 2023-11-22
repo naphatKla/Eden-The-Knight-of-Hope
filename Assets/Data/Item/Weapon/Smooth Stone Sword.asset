@@ -18,9 +18,9 @@ MonoBehaviour:
   <Description>k__BackingField: Ching ching ching
   <ItemImage>k__BackingField: {fileID: 257060865, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 0
-  maxHp: 100
+  maxHp: 0
   hp: 0
   stamina: 0
-  atk: 0
-  atkSpeedPercent: 10
+  atk: 10
+  atkSpeedPercent: 0
   coolDown: 0

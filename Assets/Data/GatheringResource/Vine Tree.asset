@@ -21,7 +21,7 @@ MonoBehaviour:
   itemDrop1:
   - obj:
       item: {fileID: 11400000, guid: df565b558d3c3154d8908c9c04a2039e, type: 2}
-      quantityDrop: {x: 1, y: 2}
+      quantityDrop: {x: 2, y: 4}
     spawnRate: 100
   itemDrop2:
   - obj:

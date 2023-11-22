@@ -20,11 +20,15 @@ MonoBehaviour:
   - obj:
       item: {fileID: 11400000, guid: d09348eb3707a7744b10ee3e617704a4, type: 2}
       quantityDrop: {x: 3, y: 5}
-    spawnRate: 27.5
+    spawnRate: 18.33
   - obj:
       item: {fileID: 11400000, guid: 0227960a72cc3ca4fa58804eb0be4d3b, type: 2}
       quantityDrop: {x: 2, y: 4}
-    spawnRate: 27.5
+    spawnRate: 18.33
+  - obj:
+      item: {fileID: 11400000, guid: df565b558d3c3154d8908c9c04a2039e, type: 2}
+      quantityDrop: {x: 3, y: 6}
+    spawnRate: 18.33
   - obj:
       item: {fileID: 11400000, guid: e81deace532277c408371362a0bf7cf1, type: 2}
       quantityDrop: {x: 2, y: 3}
@@ -45,11 +49,15 @@ MonoBehaviour:
   - obj:
       item: {fileID: 11400000, guid: d09348eb3707a7744b10ee3e617704a4, type: 2}
       quantityDrop: {x: 3, y: 5}
-    spawnRate: 27.5
+    spawnRate: 18.33
   - obj:
       item: {fileID: 11400000, guid: 0227960a72cc3ca4fa58804eb0be4d3b, type: 2}
       quantityDrop: {x: 2, y: 4}
-    spawnRate: 27.5
+    spawnRate: 18.33
+  - obj:
+      item: {fileID: 11400000, guid: df565b558d3c3154d8908c9c04a2039e, type: 2}
+      quantityDrop: {x: 3, y: 6}
+    spawnRate: 18.33
   - obj:
       item: {fileID: 11400000, guid: e81deace532277c408371362a0bf7cf1, type: 2}
       quantityDrop: {x: 2, y: 3}
@@ -70,11 +78,15 @@ MonoBehaviour:
   - obj:
       item: {fileID: 11400000, guid: d09348eb3707a7744b10ee3e617704a4, type: 2}
       quantityDrop: {x: 3, y: 5}
-    spawnRate: 27.5
+    spawnRate: 18.33
   - obj:
       item: {fileID: 11400000, guid: 0227960a72cc3ca4fa58804eb0be4d3b, type: 2}
       quantityDrop: {x: 2, y: 4}
-    spawnRate: 27.5
+    spawnRate: 18.33
+  - obj:
+      item: {fileID: 11400000, guid: df565b558d3c3154d8908c9c04a2039e, type: 2}
+      quantityDrop: {x: 3, y: 6}
+    spawnRate: 18.33
   - obj:
       item: {fileID: 11400000, guid: e81deace532277c408371362a0bf7cf1, type: 2}
       quantityDrop: {x: 2, y: 3}

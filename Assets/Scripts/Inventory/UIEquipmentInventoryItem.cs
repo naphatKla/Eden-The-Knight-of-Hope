@@ -1,6 +1,9 @@
+using System;
+using System.Collections.Generic;
 using Inventory;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public enum ItemSlotType
 {
@@ -15,6 +18,7 @@ public enum ItemSlotType
 
 public class UIEquipmentInventoryItem : BaseUIInventoryItem
 {
+    public Image BGSlot;
     public override void OnBeginDrag(PointerEventData eventData)
     {
         if (isEmpty) return;
@@ -30,6 +34,7 @@ public class UIEquipmentInventoryItem : BaseUIInventoryItem
         if (itemSlotType != ItemSlotType.QuickSlot)
             equipmentItemData?.AddStats();
         base.OnEndDrag(eventData);
+        BGSlot.gameObject.SetActive(isEmpty);
     }
 
     public override void OnPointerClick(PointerEventData pointerData)
@@ -48,6 +53,7 @@ public class UIEquipmentInventoryItem : BaseUIInventoryItem
             Debug.Log("Not Empty");
         }
         base.OnDrop(eventData);
+        BGSlot.gameObject.SetActive(isEmpty);
         if (itemSlotType == ItemSlotType.QuickSlot) return;
         equipmentItemData = ItemData as EquipmentItemSO;
         equipmentItemData?.AddStats();

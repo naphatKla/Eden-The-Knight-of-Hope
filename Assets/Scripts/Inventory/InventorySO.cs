@@ -63,7 +63,7 @@ namespace Inventory
                 }
 
                 inventoryItems[i] = new InventoryItem { item = item, quantity = quantityLeftToAdd };
-                InventoryFeedback.Instance.ShowFeedback(item.ItemImage, quantity);
+                InventoryFeedback.Instance?.ShowFeedback(item.ItemImage, quantity);
                 InformAboutChange();
                 return;
             }

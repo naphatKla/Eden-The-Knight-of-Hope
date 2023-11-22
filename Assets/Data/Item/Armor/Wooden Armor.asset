@@ -18,7 +18,7 @@ MonoBehaviour:
   <Description>k__BackingField: Just a armor
   <ItemImage>k__BackingField: {fileID: -353003502, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 2
-  maxHp: 152.25
+  maxHp: 35
   hp: 0
   stamina: 0
   atk: 0
