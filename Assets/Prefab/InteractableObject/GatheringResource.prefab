@@ -434,6 +434,9 @@ MonoBehaviour:
   - {fileID: 1126796864824265559}
   countdownTime: 0.5
   progressBar: {fileID: 6157137315286616074}
+  alphaLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
   resourceData: {fileID: 0}
 --- !u!61 &1840565014805192101
 BoxCollider2D:

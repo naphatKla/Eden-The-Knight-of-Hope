@@ -17,6 +17,7 @@ namespace Interaction
         {
             base.Start();
             gameObject.AddComponent<PolygonCollider2D>();
+            SpriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         protected override void InteractAction()

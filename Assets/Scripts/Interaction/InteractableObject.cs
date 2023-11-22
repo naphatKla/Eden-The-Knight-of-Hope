@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,11 +16,19 @@ namespace Interaction
         [SerializeField] protected float countdownTime;
         [SerializeField] public Slider progressBar;
         private Coroutine _interactCoroutine;
+        protected SpriteRenderer SpriteRenderer;
+        [SerializeField] private LayerMask alphaLayerMask;
         #endregion
 
         protected virtual void Start()
         {
             interactionTextUI.text = prompt;
+            SpriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
+        private void Update()
+        {
+            AlphaDetect();
         }
 
 
@@ -59,6 +68,35 @@ namespace Interaction
             Destroy(gameObject);
         }
     
+        private void AlphaDetect()
+        {
+            Collider2D[] objInSprite = Physics2D.OverlapBoxAll(transform.position + SpriteRenderer.sprite.bounds.center,
+                SpriteRenderer.sprite.bounds.size, 0, alphaLayerMask);
+            if (objInSprite.Length > 0)
+            {
+                if (objInSprite.Any(obj => obj.transform.position.y > transform.position.y))
+                {
+                    if (SpriteRenderer.color.a > 0.5f)
+                    {
+                        Color color = SpriteRenderer.color;
+                        color.a -= 0.01f;
+                        SpriteRenderer.color = color;
+                    }
+                }
+                else if (SpriteRenderer.color.a < 1)
+                {
+                    Color color = SpriteRenderer.color;
+                    color.a += 0.01f;
+                    SpriteRenderer.color = color;
+                }
+            }
+            else if (SpriteRenderer.color.a < 1)
+            {
+                Color color = SpriteRenderer.color;
+                color.a += 0.01f;
+                SpriteRenderer.color = color;
+            }
+        }
         
         // ReSharper disable Unity.PerformanceAnalysis
         /// <summary>

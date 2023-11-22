@@ -73,19 +73,7 @@ namespace PlayerBehavior
             // Lock the canvas UI rotation.
             canvasTransform.right = Vector3.right;
         }
-
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.CompareTag("Base")) return;
-            StartCoroutine(LerpAlpha(other.GetComponent<SpriteRenderer>(), 0.75f, 0.5f));
-        }
-
-        private void OnTriggerExit2D(Collider2D other)
-        {
-            if (other.CompareTag("Base")) return;
-            StartCoroutine(LerpAlpha(other.GetComponent<SpriteRenderer>(), 1f, 0.5f));
-        }
-
+        
         #region Methods
 
         /// <summary>
@@ -224,20 +212,6 @@ namespace PlayerBehavior
             SetPlayerState(PlayerState.Idle);
             _isDash = false;
             _currentSpeed = walkSpeed;
-        }
-
-        private IEnumerator LerpAlpha(SpriteRenderer spriteRenderer,float destination, float time)
-        {
-            float timeCout = 0;
-            while (timeCout < time)
-            {
-                if(!spriteRenderer) yield break;
-                Color color = spriteRenderer.color;
-                color.a = Mathf.Lerp(color.a, destination, timeCout / time);
-                spriteRenderer.color = color;
-                timeCout += Time.deltaTime;
-                yield return null;
-            }
         }
         #endregion
     }

@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -12,6 +14,7 @@ namespace Tower
         [SerializeField] private float attackCooldown;
         [SerializeField] private Transform attackPoint;
         [SerializeField] private LayerMask targetLayerMask;
+        [SerializeField] private LayerMask alphaLayerMask;
 
         [Header("Bullet")] 
         [SerializeField] private GameObject bulletPrefab;
@@ -22,12 +25,19 @@ namespace Tower
         private Collider2D[] _targetInAttackAreas;
         private float _nextAttackTime;
         private GameObject _currentTarget;
+        private SpriteRenderer _spriteRenderer;
         public GameObject CurrentTarget => _currentTarget;
 
         #endregion
 
+        private void Start()
+        {
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
         private void Update()
         {
+            AlphaDetect();
             _targetInAttackAreas = Physics2D.OverlapCircleAll(transform.position, attackRadius, targetLayerMask);   
             if (_targetInAttackAreas.Length <= 0) return;
 
@@ -61,6 +71,35 @@ namespace Tower
             _nextAttackTime = Time.time + attackCooldown;
         }
 
+        private void AlphaDetect()
+        {
+            Collider2D[] objInSprite = Physics2D.OverlapBoxAll(transform.position + _spriteRenderer.sprite.bounds.center,
+                _spriteRenderer.sprite.bounds.size + new Vector3(-2,-1,0), 0, alphaLayerMask);
+            if (objInSprite.Length > 0)
+            {
+                if (objInSprite.Any(obj => obj.transform.position.y > transform.position.y+0.5f))
+                {
+                    if (_spriteRenderer.color.a > 0.5f)
+                    {
+                        Color color = _spriteRenderer.color;
+                        color.a -= 0.01f;
+                        _spriteRenderer.color = color;
+                    }
+                }
+                else if (_spriteRenderer.color.a < 1)
+                {
+                    Color color = _spriteRenderer.color;
+                    color.a += 0.01f;
+                    _spriteRenderer.color = color;
+                }
+            }
+            else if (_spriteRenderer.color.a < 1)
+            {
+                Color color = _spriteRenderer.color;
+                color.a += 0.01f;
+                _spriteRenderer.color = color;
+            }
+        }
 
         /// <summary>
         /// Draw attack radius in the inspector.
