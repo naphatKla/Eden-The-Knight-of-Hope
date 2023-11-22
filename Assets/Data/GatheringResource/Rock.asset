@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Rock
   m_EditorClassIdentifier: 
   sprite:
-  - {fileID: -700917070, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: 172343809, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: 2017615685, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: 13655617, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
   point: {x: 10, y: 15}
   gatheringTime: 0.5
   itemDrop1:

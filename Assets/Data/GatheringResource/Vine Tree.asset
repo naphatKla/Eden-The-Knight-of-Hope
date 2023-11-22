@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Vine Tree
   m_EditorClassIdentifier: 
   sprite:
-  - {fileID: 1329415551, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: 692805382, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: -444330825, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: 813436606, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: 2056777226, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: 1971153286, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
   point: {x: 10, y: 15}
   gatheringTime: 0.5
   itemDrop1:

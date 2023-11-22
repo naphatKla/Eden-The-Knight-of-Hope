@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Tree
   m_EditorClassIdentifier: 
   sprite:
-  - {fileID: 68337909, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: -759459426, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: -1943305094, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: -399948413, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: 805151120, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: -539466159, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: -794606000, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: 582330314, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
   point: {x: 10, y: 15}
   gatheringTime: 0.5
   itemDrop1:

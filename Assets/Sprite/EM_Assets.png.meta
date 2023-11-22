@@ -1,0 +1,1491 @@
+fileFormatVersion: 2
+guid: 76d6bf1bd837ccb49a912cf8a7811468
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EM_Assets_0
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1532
+        width: 508
+        height: 891
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04666292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -31.6557, y: -400.3031}
+        - {x: -70.744995, y: -386.068}
+        - {x: -117.244934, y: -386.7151}
+        - {x: -119.515594, y: -367.75403}
+        - {x: -166.298, y: -370.2484}
+        - {x: -145.676, y: -352.172}
+        - {x: -124.374756, y: -326.85522}
+        - {x: 4.1202087, y: -314.02844}
+        - {x: 132.98566, y: -323.46533}
+        - {x: 174.91559, y: -366.90466}
+        - {x: 158.37115, y: -375.6963}
+        - {x: 131.307, y: -373.46826}
+        - {x: 98.51724, y: -385.4557}
+        - {x: 81.34784, y: -403.953}
+        - {x: 9.761047, y: -399.05627}
+        - {x: 5.668701, y: -414.09912}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9d1bbba0950a24ea25a609147c3de6
+      internalID: 805151120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_1
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 2157
+        width: 140
+        height: 168
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 48.206543, y: -70.17261}
+        - {x: 48.2265, y: -70.16992}
+        - {x: 48.206116, y: -70.20996}
+        - {x: 48.226135, y: -70.19263}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0acabfc5970ab09479a9252782f40902
+      internalID: -480925374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_2
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 2159
+        width: 109
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 47.345703, y: -31.978027}
+        - {x: 47.325684, y: -31.98291}
+        - {x: 47.34326, y: -31.98291}
+        - {x: 47.36328, y: -31.978027}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643cd89786b3cf54c92472926d623e17
+      internalID: 801031516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_3
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 1983
+        width: 557
+        height: 357
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14153762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 199.93909, y: -108.326416}
+        - {x: 170.80737, y: -126.15161}
+        - {x: 144.09692, y: -115.75769}
+        - {x: 108.35327, y: -119.064575}
+        - {x: 79.96289, y: -129.50513}
+        - {x: 55.86316, y: -128.64636}
+        - {x: 11.904419, y: -131.72473}
+        - {x: -50.540527, y: -141.39624}
+        - {x: -113.85327, y: -140.28223}
+        - {x: -143.62793, y: -141.90332}
+        - {x: -166.32495, y: -146.72534}
+        - {x: -219.4668, y: -125.32556}
+        - {x: -243.92188, y: -93.04541}
+        - {x: -249.38782, y: -71.181885}
+        - {x: -174.97559, y: -61.538574}
+        - {x: 8.903076, y: -50.962402}
+        - {x: 165.6654, y: -55.53589}
+        - {x: 260.15466, y: -66.930664}
+        - {x: 241.83618, y: -75.8186}
+        - {x: 236.46912, y: -97.9043}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f21edf1cc1375145980ac0be75c703c
+      internalID: 813436606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_4
+      rect:
+        serializedVersion: 2
+        x: 2015
+        y: 2217
+        width: 141
+        height: 169
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 56.326904, y: -70.815674}
+        - {x: 56.364258, y: -70.841064}
+        - {x: 56.376465, y: -70.841064}
+        - {x: 56.33911, y: -70.815674}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e015225a61a2784ebf38e869889511f
+      internalID: 1498545320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_5
+      rect:
+        serializedVersion: 2
+        x: 2313
+        y: 2215
+        width: 96
+        height: 127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 35.53125, y: -52.854004}
+        - {x: 35.53125, y: -52.8562}
+        - {x: 35.53833, y: -52.8562}
+        - {x: 35.53833, y: -52.854004}
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4757429dc343246a981f98c2b10dab
+      internalID: 60145945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_6
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 2202
+        width: 142
+        height: 177
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 52.165283, y: -83.04907}
+        - {x: 52.165283, y: -83.01221}
+        - {x: 52.183594, y: -83.038574}
+        - {x: 52.157227, y: -83.04907}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d278af2cdf3664daf9051457e42971
+      internalID: -1031797167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_7
+      rect:
+        serializedVersion: 2
+        x: 2871
+        y: 2138
+        width: 472
+        height: 264
+      alignment: 9
+      pivot: {x: 0.5, y: 0.20281243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 164.69336, y: -86.84546}
+        - {x: 136.3352, y: -89.29907}
+        - {x: 99.71533, y: -89.96118}
+        - {x: 68.524414, y: -84.19287}
+        - {x: 54.789795, y: -66.16016}
+        - {x: 28.661133, y: -69.95972}
+        - {x: -27.083984, y: -71.49048}
+        - {x: -68.67236, y: -73.77197}
+        - {x: -105.18457, y: -59.67456}
+        - {x: -138.99438, y: -39.63794}
+        - {x: -147.65259, y: -22.787598}
+        - {x: -130.17505, y: -15.860596}
+        - {x: -7.076172, y: -10.28418}
+        - {x: 113.896484, y: -13.600098}
+        - {x: 117.11084, y: -21.160889}
+        - {x: 107.47998, y: -38.653076}
+        - {x: 130.44434, y: -40.14917}
+        - {x: 163.79199, y: -41.073242}
+        - {x: 176.26782, y: -46.24756}
+        - {x: 184.60522, y: -53.584717}
+        - {x: 191.30127, y: -62.343506}
+        - {x: 179.9707, y: -78.391846}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76bd475bb0a515247a43b97db7aef224
+      internalID: -925582192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_9
+      rect:
+        serializedVersion: 2
+        x: 2015
+        y: 1948
+        width: 141
+        height: 166
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 51.974365, y: -64.670654}
+        - {x: 51.931885, y: -64.66016}
+        - {x: 51.98755, y: -64.66016}
+        - {x: 51.944824, y: -64.67053}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84e11212a0c6054ea10033713f6af84
+      internalID: 985626454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_10
+      rect:
+        serializedVersion: 2
+        x: 2313
+        y: 1945
+        width: 96
+        height: 127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 32.23047, y: -51.642212}
+        - {x: 32.19409, y: -51.617065}
+        - {x: 32.232666, y: -51.617065}
+        - {x: 32.19629, y: -51.642212}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0c849f8b4747e4ab2f41a630a42800
+      internalID: -808173363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_11
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 1935
+        width: 142
+        height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 52.10083, y: -76.4563}
+        - {x: 52.10083, y: -76.4707}
+        - {x: 52.115234, y: -76.49963}
+        - {x: 52.115234, y: -76.4563}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b62ed388f6a70e458c293e682fb4708
+      internalID: 1933686729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_12
+      rect:
+        serializedVersion: 2
+        x: 2935
+        y: 1827
+        width: 344
+        height: 234
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13534206}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 13.307861, y: -84.076294}
+        - {x: -53.12915, y: -82.274536}
+        - {x: -95.2207, y: -71.13867}
+        - {x: -122.529785, y: -49.74341}
+        - {x: -130.70435, y: -34.173584}
+        - {x: -84.66431, y: -19.280884}
+        - {x: 4.993408, y: -19.775146}
+        - {x: 89.860596, y: -23.15857}
+        - {x: 125.33667, y: -34.85486}
+        - {x: 112.67334, y: -64.72717}
+        - {x: 74.4729, y: -85.393555}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc199d24dfeeda43a40a88a9b872f56
+      internalID: -1935660299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_14
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 1536
+        width: 400
+        height: 500
+      alignment: 9
+      pivot: {x: 0.5, y: 0.043013427}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 32.832153, y: -206.66357}
+        - {x: 4.560791, y: -229.81592}
+        - {x: -53.434082, y: -193.76587}
+        - {x: -74.95935, y: -191.85632}
+        - {x: -112.38721, y: -195.698}
+        - {x: -118.09039, y: -191.1936}
+        - {x: -96.563354, y: -166.95776}
+        - {x: -2.8218994, y: -157.89612}
+        - {x: 93.02295, y: -166.9032}
+        - {x: 108.59607, y: -185.67822}
+        - {x: 109.08984, y: -196.0149}
+        - {x: 59.978394, y: -191.57898}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101efe7789899114bbc9e88b8ec7d8f2
+      internalID: 582330314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_15
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 1524
+        width: 443
+        height: 332
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08179925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128.5758, y: -119.62842}
+        - {x: 98.551025, y: -140.08777}
+        - {x: 73.29639, y: -124.339966}
+        - {x: 53.864014, y: -134.8324}
+        - {x: 36.625366, y: -126.63513}
+        - {x: 5.3117676, y: -140.97571}
+        - {x: -25.475586, y: -131.44531}
+        - {x: -39.328247, y: -139.3988}
+        - {x: -59.010864, y: -129.56311}
+        - {x: -95.920166, y: -140.61304}
+        - {x: -118.91785, y: -117.90491}
+        - {x: -148.3927, y: -113.83716}
+        - {x: -163.53894, y: -89.08765}
+        - {x: -178.91907, y: -80.20654}
+        - {x: -178.93164, y: -63.200073}
+        - {x: -105.72803, y: -54.885498}
+        - {x: 0.66625977, y: -50.59851}
+        - {x: 120.10547, y: -55.324585}
+        - {x: 193.77844, y: -64.488525}
+        - {x: 188.00891, y: -82.746826}
+        - {x: 170.69934, y: -88.3313}
+        - {x: 168.11719, y: -101.6156}
+        - {x: 155.17651, y: -113.9939}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ee56f3edea7f643bf5ecf7dc9d10d3
+      internalID: 2056777226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_16
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 1526
+        width: 443
+        height: 330
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07274762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 124.303955, y: -122.4624}
+        - {x: 97.933105, y: -140.52234}
+        - {x: 73.54834, y: -123.92822}
+        - {x: 53.719482, y: -135.35645}
+        - {x: 35.66455, y: -126.08618}
+        - {x: 2.1350098, y: -141.93738}
+        - {x: -28.059082, y: -131.5199}
+        - {x: -43.93091, y: -137.39514}
+        - {x: -61.328857, y: -128.79675}
+        - {x: -99.8208, y: -142.51318}
+        - {x: -119.36243, y: -120.50525}
+        - {x: -153.10059, y: -115.28882}
+        - {x: -163.11633, y: -91.41333}
+        - {x: -180.10754, y: -84.04602}
+        - {x: -182.49768, y: -60.171387}
+        - {x: -141.7472, y: -51.283813}
+        - {x: -88.041504, y: -47.399414}
+        - {x: 2.1674805, y: -47.606323}
+        - {x: 102.77026, y: -47.23108}
+        - {x: 149.81982, y: -49.214233}
+        - {x: 183.9502, y: -56.707397}
+        - {x: 190.68164, y: -77.922485}
+        - {x: 172.7268, y: -91.74402}
+        - {x: 160.07178, y: -113.52136}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583493990888de449aac9bdb21e78de0
+      internalID: 1971153286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_17
+      rect:
+        serializedVersion: 2
+        x: 2529
+        y: 1623
+        width: 141
+        height: 169
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 53.79663, y: -66.797485}
+        - {x: 53.79663, y: -66.83374}
+        - {x: 53.851074, y: -66.781494}
+        - {x: 53.79883, y: -66.84973}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2729fe1c2db7b3943949488a7a66ccbc
+      internalID: 125120904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_18
+      rect:
+        serializedVersion: 2
+        x: 2827
+        y: 1620
+        width: 96
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 36.812256, y: -53.728638}
+        - {x: 36.708496, y: -53.66626}
+        - {x: 36.788574, y: -53.718018}
+        - {x: 36.736816, y: -53.67688}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d303d558e48b143be5c1901d07ed01
+      internalID: -1347012259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_19
+      rect:
+        serializedVersion: 2
+        x: 3106
+        y: 1610
+        width: 142
+        height: 176
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 57.22461, y: -76.34741}
+        - {x: 57.191406, y: -76.382324}
+        - {x: 57.220703, y: -76.31604}
+        - {x: 57.1875, y: -76.31433}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7fcfbf0fa04bb49a7b16ccd1b2aae4
+      internalID: 1846529477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_20
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 982
+        width: 634
+        height: 414
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282f99f73f948a347ac6034d9ce88ed1
+      internalID: 347776515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_22
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 1106
+        width: 471
+        height: 282
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8682c12b80e64bf47a0ac284dd975522
+      internalID: 1550079462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_23
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 890
+        width: 731
+        height: 578
+      alignment: 9
+      pivot: {x: 0.5, y: 0.075279474}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 312.83618, y: -230.21124}
+        - {x: 213.75757, y: -244.6604}
+        - {x: 101.88843, y: -239.65796}
+        - {x: 17.614868, y: -245.36877}
+        - {x: -1.9013672, y: -274.73206}
+        - {x: -65.018555, y: -279.99585}
+        - {x: -176.37402, y: -281.35968}
+        - {x: -256.36987, y: -285.40082}
+        - {x: -318.54224, y: -265.1905}
+        - {x: -353.2683, y: -240.03363}
+        - {x: -362.68616, y: -213.29047}
+        - {x: -351.19836, y: -168.521}
+        - {x: -309.7932, y: -123.14722}
+        - {x: -283.45923, y: -99.12317}
+        - {x: -253.48242, y: -86.3407}
+        - {x: -233.82483, y: -73.32654}
+        - {x: -196.34888, y: -66.12366}
+        - {x: -104.87024, y: -57.40503}
+        - {x: 96.86841, y: -55.630737}
+        - {x: 220.65112, y: -58.582397}
+        - {x: 331.98413, y: -68.73462}
+        - {x: 361.45776, y: -97.00513}
+        - {x: 361.51904, y: -182.4361}
+        - {x: 344.8501, y: -201.18463}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e200e3365438a4b8e6d12b26d81000
+      internalID: -1377261865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_24
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 732
+        width: 426
+        height: 809
+      alignment: 9
+      pivot: {x: 0.5, y: 0.030514937}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 24.818115, y: -369.92548}
+        - {x: 1.21875, y: -377.78235}
+        - {x: -16.279785, y: -372.9709}
+        - {x: -67.92041, y: -353.41272}
+        - {x: -97.71484, y: -355.19098}
+        - {x: -107.911865, y: -346.8004}
+        - {x: -93.143555, y: -330.06836}
+        - {x: -86.53589, y: -318.05652}
+        - {x: -82.46973, y: -306.25897}
+        - {x: -2.7868652, y: -297.50446}
+        - {x: 79.0791, y: -306.6609}
+        - {x: 86.253174, y: -322.83612}
+        - {x: 94.947754, y: -335.76465}
+        - {x: 106.75488, y: -349.4801}
+        - {x: 85.04492, y: -355.60565}
+        - {x: 52.24414, y: -358.3979}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1c9a8c542e3c74e86f774ec1585363
+      internalID: -539466159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_25
+      rect:
+        serializedVersion: 2
+        x: 2890
+        y: 691
+        width: 519
+        height: 892
+      alignment: 9
+      pivot: {x: 0.5, y: 0.033115063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 127.63574, y: -397.36847}
+        - {x: 109.7146, y: -386.6651}
+        - {x: 95.51709, y: -387.4187}
+        - {x: 85.29175, y: -397.0509}
+        - {x: 96.06055, y: -409.29272}
+        - {x: 91.83276, y: -414.30847}
+        - {x: 62.722168, y: -407.883}
+        - {x: 22.60254, y: -405.0559}
+        - {x: -0.5192871, y: -404.90088}
+        - {x: -4.784668, y: -421.14362}
+        - {x: -42.519287, y: -403.8288}
+        - {x: -58.54004, y: -420.3943}
+        - {x: -68.65723, y: -398.22638}
+        - {x: -77.98511, y: -389.79468}
+        - {x: -96.99194, y: -387.85327}
+        - {x: -128.17651, y: -396.22003}
+        - {x: -120.681885, y: -372.664}
+        - {x: -174.35864, y: -377.00214}
+        - {x: -147.19873, y: -353.59973}
+        - {x: -129.99097, y: -330.54095}
+        - {x: -6.3530273, y: -316.53796}
+        - {x: 128.99219, y: -327.86792}
+        - {x: 148.14282, y: -348.23004}
+        - {x: 156.0708, y: -359.1502}
+        - {x: 167.83472, y: -364.1712}
+        - {x: 164.47192, y: -375.9934}
+        - {x: 147.6853, y: -379.27313}
+        - {x: 125.92114, y: -377.55017}
+        - {x: 129.29395, y: -385.9917}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14159205b97aae94bb9db0fe173c8a19
+      internalID: -794606000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_26
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 737
+        width: 142
+        height: 177
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 50.38513, y: -77.26874}
+        - {x: 50.35724, y: -77.31854}
+        - {x: 50.408875, y: -77.31854}
+        - {x: 50.438416, y: -77.36426}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bde78ec0a358044cb266375fa8fa14a
+      internalID: -1780656517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_27
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 902
+        width: 152
+        height: 89
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 25.67688, y: -37.944397}
+        - {x: -26.222717, y: -36.002808}
+        - {x: -59.243286, y: -34.01709}
+        - {x: -65.68469, y: -27.410522}
+        - {x: 1.2259521, y: -21.443237}
+        - {x: 69.914856, y: -23.942078}
+        - {x: 54.224304, y: -33.026062}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aad0440384ce0c46897ca19902c64a3
+      internalID: 2017615685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_28
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 871
+        width: 228
+        height: 157
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08304436}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 73.43347, y: -74.45093}
+        - {x: 44.129517, y: -74.5755}
+        - {x: 23.702637, y: -61.279114}
+        - {x: -4.3980713, y: -61.17157}
+        - {x: -56.61328, y: -60.647278}
+        - {x: -76.44617, y: -51.340088}
+        - {x: -96.27698, y: -27.731873}
+        - {x: -9.238037, y: -19.070862}
+        - {x: 81.88611, y: -28.046692}
+        - {x: 75.5376, y: -42.823547}
+        - {x: 95.20154, y: -52.916687}
+        - {x: 93.847534, y: -67.07892}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 249485a4393a37740a23434c0d7e43a5
+      internalID: 13655617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_30
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 736
+        width: 98
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 36.019012, y: -46.697083}
+        - {x: 36.019012, y: -46.63672}
+        - {x: 35.986908, y: -46.697327}
+        - {x: 35.895996, y: -46.727417}
+      tessellationDetail: 0
+      bones: []
+      spriteID: afde710922c63734da9a3a66f2333ff1
+      internalID: -638478986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_31
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 515
+        width: 345
+        height: 243
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16362797}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 70.700195, y: -78.719604}
+        - {x: 0.15661621, y: -78.30762}
+        - {x: -65.32477, y: -73.70422}
+        - {x: -105.51715, y: -60.768982}
+        - {x: -121.9137, y: -45.630127}
+        - {x: -131.75165, y: -28.385803}
+        - {x: 0.18896484, y: -17.318054}
+        - {x: 124.44495, y: -28.385803}
+        - {x: 118.11804, y: -50.60315}
+        - {x: 95.341064, y: -70.60693}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a4059866bb1d64588be1b8f7d6c0f1
+      internalID: -138263121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_33
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 475
+        width: 191
+        height: 326
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 19.867188, y: -145.85999}
+        - {x: -5.689209, y: -161.02905}
+        - {x: -24.294434, y: -147.17386}
+        - {x: -41.53894, y: -159.44348}
+        - {x: -35.177002, y: -140.70105}
+        - {x: -30.02417, y: -129.77087}
+        - {x: -4.3375244, y: -124.01355}
+        - {x: 24.916992, y: -131.78336}
+        - {x: 31.978271, y: -152.80035}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31b5995580e56e43a5ac5c950708a41
+      internalID: 1633684497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_34
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 542
+        width: 245
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 93.74475, y: -98.20093}
+        - {x: 93.50781, y: -98.04657}
+        - {x: 93.66162, y: -98.20453}
+        - {x: 93.66162, y: -98.20093}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23db1997f0cbbde4581359ab471924e4
+      internalID: -1109533312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_35
+      rect:
+        serializedVersion: 2
+        x: 1988
+        y: 546
+        width: 243
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 95.59985, y: -105.54144}
+        - {x: 95.4939, y: -105.607666}
+        - {x: 95.50049, y: -105.607666}
+        - {x: 95.606445, y: -105.54144}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6883efc51b86e3479b51c1b3d7a520e
+      internalID: -1002985335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_40
+      rect:
+        serializedVersion: 2
+        x: 2435
+        y: 410
+        width: 344
+        height: 237
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14636075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 35.61133, y: -85.397156}
+        - {x: -42.973877, y: -81.4043}
+        - {x: -87.66724, y: -74.23578}
+        - {x: -119.2605, y: -52.509216}
+        - {x: -128.74731, y: -32.349976}
+        - {x: -2.2070312, y: -17.221619}
+        - {x: 125.02222, y: -31.75705}
+        - {x: 123.25513, y: -51.288788}
+        - {x: 100.11963, y: -75.63312}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6574f156347f04f8636575c98ac309
+      internalID: -1171353352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_42
+      rect:
+        serializedVersion: 2
+        x: 2899
+        y: 377
+        width: 472
+        height: 276
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21327928}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 100.3689, y: -85.8353}
+        - {x: 68.24707, y: -80.35788}
+        - {x: 54.652344, y: -63.54956}
+        - {x: 25.466797, y: -67.186554}
+        - {x: -24.280762, y: -68.40323}
+        - {x: -70.79419, y: -70.11209}
+        - {x: -108.58032, y: -54.630554}
+        - {x: -144.75269, y: -31.86734}
+        - {x: -151.91089, y: -13.885132}
+        - {x: -9.901855, y: -2.8665771}
+        - {x: 117.67041, y: -12.332642}
+        - {x: 113.55542, y: -25.623077}
+        - {x: 103.23584, y: -45.28296}
+        - {x: 133.20117, y: -49.97693}
+        - {x: 160.15161, y: -54.19864}
+        - {x: 190.22461, y: -61.900116}
+        - {x: 181.04541, y: -74.569}
+        - {x: 154.87695, y: -85.74429}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c15b21a43167f64db5c54a596b82ba3
+      internalID: 1949998662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_43
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 398
+        width: 261
+        height: 233
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13668561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -80.01187, y: -80.04407}
+        - {x: -81.62398, y: 12.785034}
+        - {x: -68.178986, y: 68.484375}
+        - {x: 74.7832, y: 67.5907}
+        - {x: 79.5686, y: 17.44519}
+        - {x: 78.69675, y: -80.04407}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b4bd5700ff4b14e9bc14977d4b628c
+      internalID: 323751748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_44
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 429
+        width: 178
+        height: 204
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08334141}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 33.67279, y: -81.13287}
+        - {x: -15.742676, y: -82.911835}
+        - {x: -51.996582, y: -69.9028}
+        - {x: -62.268433, y: -55.525055}
+        - {x: -68.644104, y: -40.858185}
+        - {x: 2.019226, y: -35.545135}
+        - {x: 74.099365, y: -40.858185}
+        - {x: 64.35559, y: -58.54648}
+        - {x: 52.84723, y: -73.09061}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652462ce03814f24dba3ed63faa88087
+      internalID: -61030656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_46
+      rect:
+        serializedVersion: 2
+        x: 1981
+        y: 107
+        width: 343
+        height: 367
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39321b41fee0a4840aec2bbc64e158a4
+      internalID: 607922430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_47
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 471
+        width: 17
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120c3b9339b126f4182c40022ca8090f
+      internalID: 1898115769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_48
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 104
+        width: 344
+        height: 365
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5432800782ff7b045ad0261bb3acd603
+      internalID: -184819381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_50
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 85
+        width: 352
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461687997b511154190c906b88f98969
+      internalID: 1056713174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_52
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 85
+        width: 340
+        height: 294
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33175bf87da29804aa7371c5a8d4b027
+      internalID: -1808561688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_55
+      rect:
+        serializedVersion: 2
+        x: 2435
+        y: 92
+        width: 344
+        height: 234
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1260419}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2.027588, y: -83.71936}
+        - {x: -71.457275, y: -78.653824}
+        - {x: -108.17651, y: -63.001526}
+        - {x: -124.92627, y: -41.742462}
+        - {x: -130.15186, y: -30.544373}
+        - {x: 0.36254883, y: -20.206055}
+        - {x: 126.65723, y: -29.797852}
+        - {x: 123.51489, y: -49.719986}
+        - {x: 108.05371, y: -69.2529}
+        - {x: 76.1416, y: -84.04631}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92623a9821116c4a94ece97c2ec24e8
+      internalID: 1861435248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_57
+      rect:
+        serializedVersion: 2
+        x: 2902
+        y: 64
+        width: 473
+        height: 269
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18603629}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 129.3562, y: -90.45612}
+        - {x: 83.62036, y: -89.82912}
+        - {x: 63.62915, y: -81.640144}
+        - {x: 51.228027, y: -68.53662}
+        - {x: 38.538574, y: -70.487274}
+        - {x: -19.483154, y: -73.972015}
+        - {x: -62.357666, y: -76.02939}
+        - {x: -90.575195, y: -68.876175}
+        - {x: -129.98975, y: -49.01654}
+        - {x: -147.3479, y: -35.70311}
+        - {x: -154.84375, y: -16.616226}
+        - {x: -17.70337, y: -7.578064}
+        - {x: 113.43359, y: -17.916718}
+        - {x: 110.985596, y: -29.056763}
+        - {x: 104.34131, y: -43.099823}
+        - {x: 121.10547, y: -44.812775}
+        - {x: 166.91113, y: -44.973557}
+        - {x: 188.32056, y: -59.631668}
+        - {x: 180.43188, y: -73.997925}
+        - {x: 162.82373, y: -88.999565}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2bbc749570375a4d8bed9a6d5c21e5e
+      internalID: -1100186765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_58
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 227
+        width: 222
+        height: 92
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 59.755768, y: -25.857986}
+        - {x: 59.89084, y: -25.474808}
+        - {x: 59.71167, y: -25.74495}
+        - {x: 59.71167, y: -25.587845}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a79c7cf7ced6f34b8386ca16641da49
+      internalID: -844003267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EM_Assets_60
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 32
+        width: 203
+        height: 138
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 17.701324, y: -47.887257}
+        - {x: 17.785889, y: -48.136055}
+        - {x: 17.865295, y: -47.966923}
+        - {x: 17.780731, y: -48.05639}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e9dd9adf71b0240ae3fba331a4e867
+      internalID: -468962566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      EM_Assets_0: 805151120
+      EM_Assets_1: -480925374
+      EM_Assets_10: -808173363
+      EM_Assets_11: 1933686729
+      EM_Assets_12: -1935660299
+      EM_Assets_13: 960403581
+      EM_Assets_14: 582330314
+      EM_Assets_15: 2056777226
+      EM_Assets_16: 1971153286
+      EM_Assets_17: 125120904
+      EM_Assets_18: -1347012259
+      EM_Assets_19: 1846529477
+      EM_Assets_2: 801031516
+      EM_Assets_20: 347776515
+      EM_Assets_21: -572332715
+      EM_Assets_22: 1550079462
+      EM_Assets_23: -1377261865
+      EM_Assets_24: -539466159
+      EM_Assets_25: -794606000
+      EM_Assets_26: -1780656517
+      EM_Assets_27: 2017615685
+      EM_Assets_28: 13655617
+      EM_Assets_29: 599176725
+      EM_Assets_3: 813436606
+      EM_Assets_30: -638478986
+      EM_Assets_31: -138263121
+      EM_Assets_32: 1543815272
+      EM_Assets_33: 1633684497
+      EM_Assets_34: -1109533312
+      EM_Assets_35: -1002985335
+      EM_Assets_36: -387760713
+      EM_Assets_37: -970875116
+      EM_Assets_38: 196448343
+      EM_Assets_39: -1408640941
+      EM_Assets_4: 1498545320
+      EM_Assets_40: -1171353352
+      EM_Assets_41: -1983895833
+      EM_Assets_42: 1949998662
+      EM_Assets_43: 323751748
+      EM_Assets_44: -61030656
+      EM_Assets_45: -89382077
+      EM_Assets_46: 607922430
+      EM_Assets_47: 1898115769
+      EM_Assets_48: -184819381
+      EM_Assets_49: -415706792
+      EM_Assets_5: 60145945
+      EM_Assets_50: 1056713174
+      EM_Assets_51: 108677755
+      EM_Assets_52: -1808561688
+      EM_Assets_53: -1755547632
+      EM_Assets_54: -609230293
+      EM_Assets_55: 1861435248
+      EM_Assets_56: -1484139763
+      EM_Assets_57: -1100186765
+      EM_Assets_58: -844003267
+      EM_Assets_59: 1658481644
+      EM_Assets_6: -1031797167
+      EM_Assets_60: -468962566
+      EM_Assets_61: 1056933610
+      EM_Assets_62: -514858051
+      EM_Assets_63: -2086441014
+      EM_Assets_64: -446459003
+      EM_Assets_7: -925582192
+      EM_Assets_8: 437518938
+      EM_Assets_9: 985626454
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

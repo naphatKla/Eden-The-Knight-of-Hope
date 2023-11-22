@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Flower
   m_EditorClassIdentifier: 
   sprite:
-  - {fileID: -1425033434, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: 1864134706, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: 1934232410, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: -1752381786, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: -1760854080, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: -681699858, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: -1704100051, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: -1954242991, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: -480925374, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: 1498545320, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: -1031797167, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: 985626454, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: 1933686729, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: 125120904, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: 1846529477, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: -1780656517, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
   point: {x: 10, y: 15}
   gatheringTime: 0.5
   itemDrop1:

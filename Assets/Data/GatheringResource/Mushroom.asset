@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Mushroom
   m_EditorClassIdentifier: 
   sprite:
-  - {fileID: 2075236792, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: -1801970525, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: -1148125805, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: 2003467419, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: -1046089948, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: 1681812640, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  - {fileID: 60145945, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: -808173363, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: -1347012259, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: -638478986, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: -1109533312, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: -1002985335, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
   point: {x: 10, y: 15}
   gatheringTime: 0.5
   itemDrop1:
