@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using EnemyBehavior;
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -34,7 +35,7 @@ namespace HealthSystem
         
             if (attacker && attacker.CompareTag("Player"))
                 StartCoroutine(Stun(0.5f));
-            ShowDamageIndicator();
+            ShowDamageIndicator(damage);
             base.TakeDamage(damage, attacker);
         }
     
@@ -50,9 +51,10 @@ namespace HealthSystem
             base.Dead();
         }
 
-        public void ShowDamageIndicator()
+        public void ShowDamageIndicator(float damage)
         {
-            Instantiate(DamageIndicator, transform.position, quaternion.identity, transform);
+            var go = Instantiate(DamageIndicator, transform.position, quaternion.identity, transform);
+            go.GetComponent<TextMeshPro>().text = damage.ToString("0");
         }
 
         
