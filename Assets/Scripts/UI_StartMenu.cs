@@ -9,4 +9,9 @@ public class UI_StartMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(1);
     }
+
+    public void QuitButton()
+    {
+        Application.Quit();
+    }
 }
