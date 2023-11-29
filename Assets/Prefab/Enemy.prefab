@@ -303,6 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sliderHpPlayer: {fileID: 2566465687061256877}
   maxHp: 45
+  DamageIndicator: {fileID: 5281553924224638349, guid: 6dd982294d017a14fb3d96ab1797088f, type: 3}
 --- !u!114 &1154486622580121859
 MonoBehaviour:
   m_ObjectHideFlags: 0

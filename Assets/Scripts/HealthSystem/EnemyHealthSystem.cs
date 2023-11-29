@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using EnemyBehavior;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,6 +9,7 @@ namespace HealthSystem
 {
     public class EnemyHealthSystem : HealthSystem
     {
+        public GameObject DamageIndicator;
         private Enemy _enemy;
         protected override void Start()
         {
@@ -32,7 +34,7 @@ namespace HealthSystem
         
             if (attacker && attacker.CompareTag("Player"))
                 StartCoroutine(Stun(0.5f));
-        
+            ShowDamageIndicator();
             base.TakeDamage(damage, attacker);
         }
     
@@ -46,6 +48,11 @@ namespace HealthSystem
                 GameManager.Instance.AddPoint(10);
         
             base.Dead();
+        }
+
+        public void ShowDamageIndicator()
+        {
+            Instantiate(DamageIndicator, transform.position, quaternion.identity, transform);
         }
 
         
