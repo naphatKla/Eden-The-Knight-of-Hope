@@ -53,7 +53,7 @@ namespace HealthSystem
 
         public void ShowDamageIndicator(float damage)
         {
-            var go = Instantiate(DamageIndicator, transform.position, quaternion.identity, transform);
+            var go = Instantiate(DamageIndicator, transform.position, quaternion.identity);
             go.GetComponent<TextMeshPro>().text = damage.ToString("0");
         }
 
