@@ -140,7 +140,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: aa743973b6fdca84297631c2831b9217, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1b5d71398a87c6f4eb415ff33a2f4b29, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -152,7 +152,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Enemy
+  m_Name: Wolf
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Speed
@@ -233,7 +233,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d0cd3d6e8511c1b4f839499568d83695, type: 2}
+  m_Motion: {fileID: 7400000, guid: 780328c640fe0244fa831bf68cd1b70c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -260,7 +260,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 47ca4c45fda13a54ea9cbe5b71831c48, type: 2}
+  m_Motion: {fileID: 7400000, guid: 0f2aff75b77db024cbf4a32fba1df60d, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -313,7 +313,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: dc99d8fcb0507394ba1c1becd1cf92cb, type: 2}
+  m_Motion: {fileID: 7400000, guid: 62fdcc9b16f37ac4a943dfc604874777, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

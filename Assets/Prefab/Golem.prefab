@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 7892754169190233115}
   - component: {fileID: 3948467626594471964}
   m_Layer: 7
-  m_Name: Enemy
+  m_Name: Golem
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderHpPlayer: {fileID: 2566465687061256877}
-  maxHp: 45
+  maxHp: 70
 --- !u!114 &1154486622580121859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5738682e13ec3d54d9441f0567288e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseAttackStat: 13
+  baseAttackStat: 23
   attackPoint: {fileID: 1066272621460311471}
   attackArea: {x: 4, y: 1}
   targetLayer:
@@ -323,8 +323,8 @@ MonoBehaviour:
     m_Bits: 576
   attackPatterns:
   - power: 1
-    delay: 0.45
-    cooldown: 1.1
+    delay: 0.6
+    cooldown: 1.4
     attackState: 0
   attackState: 0
 --- !u!195 &3338019295559380173
@@ -337,7 +337,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.335
-  m_Speed: 3.5
+  m_Speed: 2.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -404,7 +404,7 @@ Animator:
   m_GameObject: {fileID: 3982792202371823300}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9787c54b062d36940bb1b404feba8424, type: 2}
+  m_Controller: {fileID: 9100000, guid: a9f878bea4df2d74ca01a74996b73e58, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
