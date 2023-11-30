@@ -1,4 +1,5 @@
 using System.Collections;
+using Inventory;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -51,6 +52,7 @@ public class GameManager : MonoBehaviour
         totalPoint += n;
         scoreText.text = $"{totalPoint}";
         scoreAddAnimation.text = $"+ {n}";
+        PlayerInventoryController.Instance.inventoryUI.totalPointText.text = $"{totalPoint}";
         StartCoroutine(ToggleSetActiveRelateWithAnimation(scoreAddAnimation.gameObject));
     }
     

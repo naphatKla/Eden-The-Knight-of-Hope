@@ -16,6 +16,7 @@ namespace Inventory
         public InventorySo ParentInventoryData { get; set; }
         public int Index { get; set; }
         public ItemSlotType itemSlotType;
+        public int Quantity;
         public event Action<BaseUIInventoryItem> OnItemClicked,
             OnItemDroppedOn,
             OnItemBeginDrag,
@@ -85,6 +86,7 @@ namespace Inventory
             itemImage.gameObject.SetActive(false);
             ItemData = null;
             isEmpty = true;
+            Quantity = 0;
         }
 
         /// <summary>
@@ -106,6 +108,7 @@ namespace Inventory
             //itemSlotType = itemData.ItemSlotType;
             itemImage.sprite = itemData.ItemImage;
             quantityText.text = quantity + "";
+            Quantity = quantity;
             ItemData = itemData;
             isEmpty = false;
         }
@@ -115,6 +118,7 @@ namespace Inventory
             itemImage.gameObject.SetActive(true);
             itemImage.sprite = sprite;
             quantityText.text = quantity + "";
+            Quantity = quantity;
             isEmpty = false;
         }
 

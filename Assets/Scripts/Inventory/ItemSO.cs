@@ -15,6 +15,7 @@ namespace Inventory
 
         [field: SerializeField] public Sprite ItemImage { get; set; }
         [field: SerializeField] public ItemSlotType ItemSlotType { get; set; }
+        [field: SerializeField] public int Cost { get; set; }
         public int ID => GetInstanceID();
     }
 }
