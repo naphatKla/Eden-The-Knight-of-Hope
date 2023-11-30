@@ -15,6 +15,11 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 1
   <MaxStackSize>k__BackingField: 99
   <Name>k__BackingField: Gold Ingot
-  <Description>k__BackingField: 
+  <Description>k__BackingField: 'Valuable material maybe it can be sell for a good
+    amount
+
+
+    Use to craft material'
   <ItemImage>k__BackingField: {fileID: -580801545, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 6
+  <Cost>k__BackingField: 0

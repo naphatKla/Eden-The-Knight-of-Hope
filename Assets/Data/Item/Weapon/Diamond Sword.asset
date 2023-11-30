@@ -15,9 +15,14 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Diamond Sword
-  <Description>k__BackingField: Sword long and big
+  <Description>k__BackingField: 'Only thing this sword can''t cut is her heart...
+
+
+    Damage
+    +50'
   <ItemImage>k__BackingField: {fileID: 548187599, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 0
+  <Cost>k__BackingField: 0
   maxHp: 0
   hp: 0
   stamina: 0

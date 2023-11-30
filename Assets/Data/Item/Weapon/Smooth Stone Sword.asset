@@ -15,9 +15,13 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Smooth Stone Sword
-  <Description>k__BackingField: Ching ching ching
+  <Description>k__BackingField: 'This sword is kinda heavy
+
+
+    Damage +10'
   <ItemImage>k__BackingField: {fileID: 257060865, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 0
+  <Cost>k__BackingField: 39
   maxHp: 0
   hp: 0
   stamina: 0

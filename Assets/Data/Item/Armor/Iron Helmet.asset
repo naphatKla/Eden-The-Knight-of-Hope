@@ -15,9 +15,13 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Iron Helmet
-  <Description>k__BackingField: Just a helmet
+  <Description>k__BackingField: 'Iron Helmet
+
+
+    Player max Hp +60'
   <ItemImage>k__BackingField: {fileID: -1008835163, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 1
+  <Cost>k__BackingField: 0
   maxHp: 60
   hp: 0
   stamina: 0

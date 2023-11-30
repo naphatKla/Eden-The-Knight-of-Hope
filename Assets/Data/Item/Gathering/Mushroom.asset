@@ -15,7 +15,10 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 1
   <MaxStackSize>k__BackingField: 99
   <Name>k__BackingField: Mushroom
-  <Description>k__BackingField: 
+  <Description>k__BackingField: 'Fungus Yumy! Yumy!
+
+
+    Use to craft portions'
   <ItemImage>k__BackingField: {fileID: -359449150, guid: 29e6d65dd80933f4caba5d02ffa19131, type: 3}
   <ItemSlotType>k__BackingField: 6
   <Cost>k__BackingField: 50

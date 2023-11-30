@@ -15,9 +15,13 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Bronze Leggings
-  <Description>k__BackingField: Just a leggings
+  <Description>k__BackingField: 'Bronze Leggings
+
+
+    Player max Hp +66'
   <ItemImage>k__BackingField: {fileID: -1146107639, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 3
+  <Cost>k__BackingField: 0
   maxHp: 66
   hp: 0
   stamina: 0

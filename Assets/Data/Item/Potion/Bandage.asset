@@ -15,9 +15,14 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 1
   <MaxStackSize>k__BackingField: 10
   <Name>k__BackingField: Bandage
-  <Description>k__BackingField: <color=red>Heal 50 HP.
+  <Description>k__BackingField: 'Maybe it might save your life in someday
+
+
+    <color=red>Heal
+    10 HP.'
   <ItemImage>k__BackingField: {fileID: 615272221, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 5
+  <Cost>k__BackingField: 0
   maxHp: 0
   hp: 10
   stamina: 0

@@ -15,9 +15,13 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Wooden Sword
-  <Description>k__BackingField: Ching ching ching
+  <Description>k__BackingField: 'How can this sword kill things?
+
+
+    Damage +5'
   <ItemImage>k__BackingField: {fileID: -2056426544, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 0
+  <Cost>k__BackingField: 24
   maxHp: 0
   hp: 0
   stamina: 0

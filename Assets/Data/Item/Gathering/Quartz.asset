@@ -15,7 +15,11 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 1
   <MaxStackSize>k__BackingField: 99
   <Name>k__BackingField: Quartz
-  <Description>k__BackingField: 
+  <Description>k__BackingField: 'A couldy looking meterial but people still  like
+    it
+
+
+    Sell for good amount of Gold Coins'
   <ItemImage>k__BackingField: {fileID: -777431801, guid: 29e6d65dd80933f4caba5d02ffa19131, type: 3}
   <ItemSlotType>k__BackingField: 6
   <Cost>k__BackingField: 50

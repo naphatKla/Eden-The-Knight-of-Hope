@@ -15,9 +15,13 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Diamond Armor
-  <Description>k__BackingField: Just a armor
+  <Description>k__BackingField: 'Diamond Armor
+
+
+    Player max Hp +152.25'
   <ItemImage>k__BackingField: {fileID: -724321749, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 2
+  <Cost>k__BackingField: 0
   maxHp: 152.25
   hp: 0
   stamina: 0
