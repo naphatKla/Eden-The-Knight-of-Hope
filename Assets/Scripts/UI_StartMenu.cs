@@ -5,13 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class UI_StartMenu : MonoBehaviour
 {
+    public Animator transition;
+    public float transitionTime = 1f;
     public void PlayButton()
     {
-        SceneManager.LoadSceneAsync(1);
+        StartCoroutine(LoadLevel(1));
     }
 
     public void QuitButton()
     {
         Application.Quit();
+    }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+       transition.SetTrigger("Start");
+       yield return new WaitForSeconds(transitionTime);
+       SceneManager.LoadScene(levelIndex);
     }
 }
