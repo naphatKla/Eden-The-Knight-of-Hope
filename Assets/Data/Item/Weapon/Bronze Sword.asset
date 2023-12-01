@@ -22,7 +22,7 @@ MonoBehaviour:
     +18'
   <ItemImage>k__BackingField: {fileID: 996317027, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 0
-  <Cost>k__BackingField: 0
+  <Cost>k__BackingField: 47
   maxHp: 0
   hp: 0
   stamina: 0

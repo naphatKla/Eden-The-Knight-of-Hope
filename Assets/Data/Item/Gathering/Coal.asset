@@ -22,4 +22,4 @@ MonoBehaviour:
     Use to craft material'
   <ItemImage>k__BackingField: {fileID: 1749726280, guid: 29e6d65dd80933f4caba5d02ffa19131, type: 3}
   <ItemSlotType>k__BackingField: 6
-  <Cost>k__BackingField: 50
+  <Cost>k__BackingField: 10

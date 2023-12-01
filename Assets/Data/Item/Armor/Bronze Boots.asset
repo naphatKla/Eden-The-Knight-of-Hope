@@ -21,7 +21,7 @@ MonoBehaviour:
     Player max Hp +33'
   <ItemImage>k__BackingField: {fileID: 984822533, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 4
-  <Cost>k__BackingField: 0
+  <Cost>k__BackingField: 40
   maxHp: 33
   hp: 0
   stamina: 0

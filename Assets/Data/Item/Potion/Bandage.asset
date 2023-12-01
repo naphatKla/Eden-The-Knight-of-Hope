@@ -22,7 +22,7 @@ MonoBehaviour:
     10 HP.'
   <ItemImage>k__BackingField: {fileID: 615272221, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 5
-  <Cost>k__BackingField: 0
+  <Cost>k__BackingField: 20
   maxHp: 0
   hp: 10
   stamina: 0

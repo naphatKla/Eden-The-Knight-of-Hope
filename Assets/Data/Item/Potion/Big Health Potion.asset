@@ -21,7 +21,7 @@ MonoBehaviour:
     <color=red>Heal 150 HP.'
   <ItemImage>k__BackingField: {fileID: -1698125817, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 5
-  <Cost>k__BackingField: 0
+  <Cost>k__BackingField: 95
   maxHp: 0
   hp: 150
   stamina: 0
