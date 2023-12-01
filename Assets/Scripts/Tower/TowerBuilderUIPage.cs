@@ -17,17 +17,27 @@ public class TowerBuilderUIPage : MonoBehaviour
     [SerializeField] private Image towerImage;
     [SerializeField] private TextMeshProUGUI towerName;
     [SerializeField] private TextMeshProUGUI towerDescription;
+    [SerializeField] private TextMeshProUGUI towerCost;
+    [SerializeField] private TextMeshProUGUI totalCoin;
     
     [Header("RequirementZone")]
     [SerializeField] private Transform requirementContent;
     [SerializeField] private RequireUIItem requirementItemPrefab;
     private List<RequireUIItem> _requireUIItems = new List<RequireUIItem>();
     [HideInInspector] public TowerSO currentTowerItem; //
-    public Action OnBuildTower; 
+    public Action OnBuildTower;
 
     [SerializeField] private Button buildButton;
+    [SerializeField] private Button closeButton;
+    [SerializeField] private List<TowerSO> towerRecipes;
 
-    public void Initialize(List<TowerSO> towerRecipes)
+    private void Start()
+    {
+        closeButton.onClick.AddListener(() => gameObject.transform.parent.gameObject.SetActive(false));
+        Initialize();
+    }
+
+    public void Initialize()
     {
         buildButton.onClick.AddListener(BuildTower);
         for (int i = 0; i < towerContent.childCount; i++)
@@ -52,6 +62,7 @@ public class TowerBuilderUIPage : MonoBehaviour
             _requireUIItems.Add(item);
         }
         currentTowerItem = towerRecipes[0];
+        SetDescriptionAndRequirementData(currentTowerItem);
     }
 
     private void SetDescriptionAndRequirementData(TowerSO towerSo)
@@ -59,6 +70,8 @@ public class TowerBuilderUIPage : MonoBehaviour
         towerImage.sprite = towerSo.TowerImage;
         towerName.text = towerSo.towerName;
         towerDescription.text = towerSo.towerDescription;
+        towerCost.text = GameManager.Instance.totalPoint >= towerSo.cost? $"<color=#05B900> Cost: ${towerSo.cost}": $"<color=red> Cost: ${towerSo.cost}";
+        totalCoin.text = $"{GameManager.Instance.totalPoint}";
 
         List<InventoryItem> requirementItems = towerSo.requireItems.ToList();
 
@@ -78,7 +91,7 @@ public class TowerBuilderUIPage : MonoBehaviour
 
     public void UpdatePage()
     {
-        _towerUIItems.ForEach(tower => tower.SetCorrectIcon(tower.TowerRecipe.CheckRecipe()));
+        _towerUIItems.ForEach(tower => tower.SetCorrectIcon(tower.TowerRecipe.CheckRecipe() && GameManager.Instance.totalPoint >= tower.TowerRecipe.cost));
         if(currentTowerItem) 
             SetDescriptionAndRequirementData(currentTowerItem);
     }

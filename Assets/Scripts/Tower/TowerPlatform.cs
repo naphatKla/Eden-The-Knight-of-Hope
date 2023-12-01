@@ -8,26 +8,26 @@ namespace Interaction
     {
         [SerializeField] private Image towerUpgradeUI;
         [SerializeField] private TowerBuilderUIPage towerBuilderUIPage;
-        [SerializeField] private List<TowerSO> towerRecipes;
         private HealthSystem.HealthSystem _towerHealthSystem;
         private GameObject _tower;
         private float _lastOpenTime;
+        private bool _isCloseUI;
         [SerializeField] private LayerMask playerLayer;
-
-        protected override void Start()
-        {
-            base.Start();
-            towerBuilderUIPage.OnBuildTower += BuildTower;
-            towerBuilderUIPage.Initialize(towerRecipes);
-        }
         
         protected void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape))
                 CloseTowerUI();
             if(_lastOpenTime + 1.5f > Time.time) return;
-            if (Physics2D.OverlapBoxNonAlloc(transform.position, new Vector2(10,10), 0,new Collider2D[1],playerLayer) == 0)
-                CloseTowerUI();
+            if (Physics2D.OverlapBoxNonAlloc(transform.position, new Vector2(10, 10), 0, new Collider2D[1],
+                    playerLayer) == 0)
+            {
+                if (!_isCloseUI)
+                {
+                    CloseTowerUI();
+                    _isCloseUI = true;
+                }
+            }
         }
         
         private void OpenTowerUI()
@@ -36,6 +36,10 @@ namespace Interaction
             towerUpgradeUI.gameObject.SetActive(true);
             towerBuilderUIPage.UpdatePage();
             _lastOpenTime = Time.time;
+            _isCloseUI = false;
+
+            towerBuilderUIPage.OnBuildTower = null;
+            towerBuilderUIPage.OnBuildTower += BuildTower;
         }
 
         private void CloseTowerUI()
