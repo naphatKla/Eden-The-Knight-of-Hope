@@ -18,6 +18,7 @@ MonoBehaviour:
   <Description>k__BackingField: 'This sword is kinda heavy
 
 
+    <color=#C04000>
     Damage +10'
   <ItemImage>k__BackingField: {fileID: 257060865, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 0

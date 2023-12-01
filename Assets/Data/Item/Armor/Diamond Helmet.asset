@@ -18,7 +18,8 @@ MonoBehaviour:
   <Description>k__BackingField: 'Diamond Helmet
 
 
-    Player max Hp +87'
+    <color=#1AA260> Max Health
+    +87'
   <ItemImage>k__BackingField: {fileID: 1773613788, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 1
   <Cost>k__BackingField: 396

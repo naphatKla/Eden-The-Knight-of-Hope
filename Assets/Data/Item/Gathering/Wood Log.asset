@@ -18,8 +18,8 @@ MonoBehaviour:
   <Description>k__BackingField: 'Global warming incoming!
 
 
-    Use to craft tools,
-    armors, material'
+    <color=#78866B> Use
+    to craft tools, armors, material'
   <ItemImage>k__BackingField: {fileID: 1105777196, guid: 29e6d65dd80933f4caba5d02ffa19131, type: 3}
   <ItemSlotType>k__BackingField: 6
   <Cost>k__BackingField: 5

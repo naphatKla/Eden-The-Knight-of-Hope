@@ -18,7 +18,7 @@ MonoBehaviour:
   <Description>k__BackingField: 'Bronze Armor
 
 
-    Player max Hp +77'
+    <color=#1AA260> Max Health +77'
   <ItemImage>k__BackingField: {fileID: -1553546066, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 2
   <Cost>k__BackingField: 96

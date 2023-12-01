@@ -18,8 +18,8 @@ MonoBehaviour:
   <Description>k__BackingField: 'Kinda feel like sword but it still not right
 
 
-    Damage
-    +18'
+    <color=#C04000>
+    Damage +18'
   <ItemImage>k__BackingField: {fileID: 996317027, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 0
   <Cost>k__BackingField: 47

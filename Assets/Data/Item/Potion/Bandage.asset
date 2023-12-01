@@ -18,7 +18,7 @@ MonoBehaviour:
   <Description>k__BackingField: 'Maybe it might save your life in someday
 
 
-    <color=red>Heal
+    <color=#32CD32>Heal
     10 HP.'
   <ItemImage>k__BackingField: {fileID: 615272221, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 5

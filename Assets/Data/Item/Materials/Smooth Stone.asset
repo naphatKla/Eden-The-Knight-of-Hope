@@ -18,8 +18,8 @@ MonoBehaviour:
   <Description>k__BackingField: 'Smooth like human skin jk
 
 
-    Use to craft tools,
-    armors'
+    <color=#78866B>
+    Use to craft tools, armors'
   <ItemImage>k__BackingField: {fileID: 1882262018, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 6
   <Cost>k__BackingField: 17

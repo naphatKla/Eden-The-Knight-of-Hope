@@ -18,8 +18,8 @@ MonoBehaviour:
   <Description>k__BackingField: 'Who need cotton if we had goblin
 
 
-    Use to craft
-    material'
+    <color=#78866B>
+    Use to craft material'
   <ItemImage>k__BackingField: {fileID: 469083581, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 6
   <Cost>k__BackingField: 10

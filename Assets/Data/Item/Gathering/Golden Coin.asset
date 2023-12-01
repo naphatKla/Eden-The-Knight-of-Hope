@@ -18,8 +18,8 @@ MonoBehaviour:
   <Description>k__BackingField: 'Coin that used by a royal
 
 
-    Sell for huge amount
-    of Gold Coins'
+    <color=#78866B>
+    Sell for huge amount of Gold Coins'
   <ItemImage>k__BackingField: {fileID: -208782134, guid: 29e6d65dd80933f4caba5d02ffa19131, type: 3}
   <ItemSlotType>k__BackingField: 6
   <Cost>k__BackingField: 100

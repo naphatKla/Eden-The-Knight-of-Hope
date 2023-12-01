@@ -18,7 +18,8 @@ MonoBehaviour:
   <Description>k__BackingField: 'Smooth Stone Boots
 
 
-    Player max Hp +24.75'
+    <color=#1AA260> Max Health
+    +24.75'
   <ItemImage>k__BackingField: {fileID: 1623994067, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 4
   <Cost>k__BackingField: 18

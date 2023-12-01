@@ -18,7 +18,8 @@ MonoBehaviour:
   <Description>k__BackingField: 'Finally some real sword!
 
 
-    Damage +30'
+    <color=#C04000> Damage
+    +30'
   <ItemImage>k__BackingField: {fileID: -1264473045, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 0
   <Cost>k__BackingField: 95

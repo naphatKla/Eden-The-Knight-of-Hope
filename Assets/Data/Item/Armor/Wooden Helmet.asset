@@ -18,7 +18,7 @@ MonoBehaviour:
   <Description>k__BackingField: 'Wooden Helmet
 
 
-    Player max Hp +20'
+    <color=#1AA260> Max Health +20'
   <ItemImage>k__BackingField: {fileID: 1727779032, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 1
   <Cost>k__BackingField: 15

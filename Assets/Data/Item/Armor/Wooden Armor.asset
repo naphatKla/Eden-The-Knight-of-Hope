@@ -18,7 +18,7 @@ MonoBehaviour:
   <Description>k__BackingField: 'Wooden Armor
 
 
-    Player max Hp +35'
+    <color=#1AA260> Max Health +35'
   <ItemImage>k__BackingField: {fileID: -353003502, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 2
   <Cost>k__BackingField: 33

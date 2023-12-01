@@ -18,7 +18,8 @@ MonoBehaviour:
   <Description>k__BackingField: 'Smooth Stone Leggings
 
 
-    Player max Hp +49.5'
+    <color=#1AA260> Max
+    Health +49.5'
   <ItemImage>k__BackingField: {fileID: -1496919022, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 3
   <Cost>k__BackingField: 42
