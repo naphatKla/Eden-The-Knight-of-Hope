@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Tower
 {
@@ -25,14 +26,14 @@ namespace Tower
         private Collider2D[] _targetInAttackAreas;
         private float _nextAttackTime;
         private GameObject _currentTarget;
-        private SpriteRenderer _spriteRenderer;
+        [HideInInspector] public SpriteRenderer spriteRenderer;
         public GameObject CurrentTarget => _currentTarget;
 
         #endregion
 
         private void Start()
         {
-            _spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         private void Update()
@@ -73,31 +74,31 @@ namespace Tower
 
         private void AlphaDetect()
         {
-            Collider2D[] objInSprite = Physics2D.OverlapBoxAll(transform.position + _spriteRenderer.sprite.bounds.center,
-                _spriteRenderer.sprite.bounds.size + new Vector3(-2,-1,0), 0, alphaLayerMask);
+            Collider2D[] objInSprite = Physics2D.OverlapBoxAll(transform.position + spriteRenderer.sprite.bounds.center,
+                spriteRenderer.sprite.bounds.size + new Vector3(-2,-1,0), 0, alphaLayerMask);
             if (objInSprite.Length > 0)
             {
                 if (objInSprite.Any(obj => obj.transform.position.y > transform.position.y+0.5f))
                 {
-                    if (_spriteRenderer.color.a > 0.5f)
+                    if (spriteRenderer.color.a > 0.5f)
                     {
-                        Color color = _spriteRenderer.color;
+                        Color color = spriteRenderer.color;
                         color.a -= 0.01f;
-                        _spriteRenderer.color = color;
+                        spriteRenderer.color = color;
                     }
                 }
-                else if (_spriteRenderer.color.a < 1)
+                else if (spriteRenderer.color.a < 1)
                 {
-                    Color color = _spriteRenderer.color;
+                    Color color = spriteRenderer.color;
                     color.a += 0.01f;
-                    _spriteRenderer.color = color;
+                    spriteRenderer.color = color;
                 }
             }
-            else if (_spriteRenderer.color.a < 1)
+            else if (spriteRenderer.color.a < 1)
             {
-                Color color = _spriteRenderer.color;
+                Color color = spriteRenderer.color;
                 color.a += 0.01f;
-                _spriteRenderer.color = color;
+                spriteRenderer.color = color;
             }
         }
 

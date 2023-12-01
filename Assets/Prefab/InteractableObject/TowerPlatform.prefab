@@ -670,8 +670,16 @@ MonoBehaviour:
   - {fileID: 4985006355007062428}
   countdownTime: 0.5
   progressBar: {fileID: 7325326020842072738}
-  towerPrefab: {fileID: 1220393125980194530, guid: 54351d679020be840b2bad54c4228904, type: 3}
-  cost: 100
+  alphaLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  towerUpgradeUI: {fileID: 0}
+  towerBuilderUIPage: {fileID: 0}
+  towerRecipes:
+  - {fileID: 11400000, guid: 0bf4e2cdc21d5004b979b4b11d43c528, type: 2}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &4985006355007062428
 GameObject:
   m_ObjectHideFlags: 0
