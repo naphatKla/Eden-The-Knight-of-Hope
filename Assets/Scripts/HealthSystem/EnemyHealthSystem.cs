@@ -30,8 +30,8 @@ namespace HealthSystem
         {
             _enemy.Target = attacker;
         
-            if (attacker && attacker.CompareTag("Player"))
-                StartCoroutine(Stun(0.5f));
+            /*if (attacker && attacker.CompareTag("Player"))
+                StartCoroutine(Stun(0.5f));*/
         
             base.TakeDamage(damage, attacker);
         }

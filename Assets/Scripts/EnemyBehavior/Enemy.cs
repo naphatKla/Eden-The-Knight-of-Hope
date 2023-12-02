@@ -41,6 +41,7 @@ namespace EnemyBehavior
         private Animator _animator;
         private Rigidbody2D _rigidbody2D;
         private static readonly int Speed = Animator.StringToHash("Speed");
+        private float _lastTimeTurn;
 
         public bool NightMode { get => nightMode; set => nightMode = value; }
         public bool IsStun { get; set; }
@@ -117,6 +118,12 @@ namespace EnemyBehavior
         private void FollowTargetHandle()
         {
             SelectTarget();
+            if (!Target || !Target.activeSelf)
+            {
+                ReturnToSpawnHandle();
+                Target = null;
+                return;
+            }
             SetEnemyState(EnemyState.FollowTarget);
             Agent.SetDestination(Target.transform.position);
         }
@@ -154,8 +161,11 @@ namespace EnemyBehavior
             _animator.SetFloat(Speed, Agent.velocity.magnitude);
 
             // flip horizontal direction relate with enemy direction
-            if (Mathf.Abs(Agent.velocity.x) > 0)
+            if (Mathf.Abs(Agent.velocity.x) > 0.25f && Time.time > _lastTimeTurn + 0.25f)
+            {
                 transform.right = Agent.velocity.x < 0 ? Vector2.left : Vector2.right;
+                _lastTimeTurn = Time.time;
+            }
         }
 
     
@@ -191,6 +201,7 @@ namespace EnemyBehavior
             yield return new WaitForSeconds(time);
         
             SetEnemyState(EnemyState.ReturnToSpawn);
+            Target = null;
             while (CheckState(EnemyState.ReturnToSpawn))
             {
                 Agent.SetDestination(_spawnPoint);

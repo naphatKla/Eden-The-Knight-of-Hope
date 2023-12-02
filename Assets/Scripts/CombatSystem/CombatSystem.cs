@@ -52,7 +52,7 @@ namespace CombatSystem
     
         protected virtual void Update()
         {
-            TargetInAttackArea = Physics2D.OverlapBoxAll(attackPoint.position, attackArea, 0, targetLayer).ToList();
+            TargetInAttackArea = Physics2D.OverlapBoxAll(attackPoint.position, attackArea, 0 , targetLayer).ToList();
             AttackHandle();
         }
 

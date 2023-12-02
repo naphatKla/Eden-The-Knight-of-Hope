@@ -31,5 +31,11 @@ namespace HealthSystem
             ResetHealth();
             transform.position = GameManager.Instance.spawnPoint;
         }
+
+        public override void TakeDamage(float damage, GameObject attacker = null)
+        {
+            if (PlayerBehavior.Player.Instance.IsDash) return; 
+            base.TakeDamage(damage, attacker);
+        }
     }
 }
