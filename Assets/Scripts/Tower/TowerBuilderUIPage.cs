@@ -67,7 +67,7 @@ public class TowerBuilderUIPage : MonoBehaviour
 
     private void SetDescriptionAndRequirementData(TowerSO towerSo)
     {
-        towerImage.sprite = towerSo.TowerImage;
+        towerImage.sprite = towerSo.towerImage;
         towerName.text = towerSo.towerName;
         towerDescription.text = towerSo.towerDescription;
         towerCost.text = GameManager.Instance.totalPoint >= towerSo.cost? $"<color=#05B900> Cost: ${towerSo.cost}": $"<color=red> Cost: ${towerSo.cost}";

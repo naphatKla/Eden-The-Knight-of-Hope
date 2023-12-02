@@ -10,6 +10,7 @@ namespace Interaction
         [SerializeField] private TowerBuilderUIPage towerBuilderUIPage;
         private HealthSystem.HealthSystem _towerHealthSystem;
         private GameObject _tower;
+        private TowerSO _currentTowerSO;
         private float _lastOpenTime;
         private bool _isCloseUI;
         [SerializeField] private LayerMask playerLayer;
@@ -57,11 +58,13 @@ namespace Interaction
 
         private void BuildTower()
         {
+            if (_tower) return;
             Tower.Tower towerPrefab = towerBuilderUIPage.currentTowerItem.towerPrefab;
             int cost = towerBuilderUIPage.currentTowerItem.cost;
             Transform thisTransform = transform;
             _tower = Instantiate(towerPrefab.gameObject, thisTransform.position + new Vector3(0, -0.28f, 0), Quaternion.identity,
                 thisTransform);
+            _currentTowerSO = towerBuilderUIPage.currentTowerItem;
             _towerHealthSystem = _tower.GetComponent<HealthSystem.HealthSystem>();
             GameManager.Instance.AddPoint(-cost);
         }

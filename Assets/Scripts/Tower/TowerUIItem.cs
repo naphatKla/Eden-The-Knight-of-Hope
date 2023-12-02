@@ -11,7 +11,7 @@ public class TowerUIItem : MonoBehaviour
 
     public void SetData(TowerSO recipe)
     {
-        towerImage.sprite = recipe.TowerImage;
+        towerImage.sprite = recipe.towerImage;
         nameText.text = recipe.towerName;
         TowerRecipe = recipe;
     }
