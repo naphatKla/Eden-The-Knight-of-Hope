@@ -140,6 +140,9 @@ namespace PlayerBehavior
         /// <summary>
         /// Use for handle dash system.
         /// </summary>
+
+        [SerializeField] private float iframeDuration;
+        
         private void DashHandle()
         {
             if (CheckPlayerState(PlayerState.Idle) || _isDash) return;
@@ -167,6 +170,8 @@ namespace PlayerBehavior
             yield return new WaitForSeconds(dashCooldown);
             _isDashCooldown = false;
         }
+        
+        
 
         /// <summary>
         /// Use for set player state.
