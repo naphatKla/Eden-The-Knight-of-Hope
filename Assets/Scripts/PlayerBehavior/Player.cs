@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Linq;
+using CombatSystem;
 using UnityEngine;
 
 
@@ -39,11 +40,13 @@ namespace PlayerBehavior
 
         private bool _isDash;
         private bool _isDashCooldown;
+        private bool _dashBuffering;
         private float _currentSpeed;
         [SerializeField] private float _currentStamina; //When stamina bar is done, delete [SerializeField] this code
         private float _staminaRegenCurrentCooldown;
         private Animator _animator;
         private Rigidbody2D _playerRigidbody2D;
+        private SpriteRenderer _spriteRenderer;
         public static Player Instance;
         private static readonly int IsDashAnimation = Animator.StringToHash("IsDash");
         public Animator Animator => _animator;
@@ -60,10 +63,12 @@ namespace PlayerBehavior
             ResetState();
             Instance = this;
             _currentStamina = maxStamina;
+            _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         private void Update()
         {
+            Debug.Log(_spriteRenderer.color.a);
             MovementHandle();
             RegenStaminaHandle();
         }
@@ -72,6 +77,10 @@ namespace PlayerBehavior
         {
             // Lock the canvas UI rotation.
             canvasTransform.right = Vector3.right;
+            if(!_isDash) return;
+            var color = _spriteRenderer.color;
+            color = new Color(color.r, color.g, color.b, 0.5f);
+            _spriteRenderer.color = color;
         }
         
         #region Methods
@@ -87,6 +96,9 @@ namespace PlayerBehavior
                 _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerHeavyAttack"))
             {
                 _playerRigidbody2D.velocity = Vector2.zero;
+                if (Input.GetKeyDown(dashKey))
+                    _dashBuffering = true;
+                    
                 return;
             }
 
@@ -94,10 +106,26 @@ namespace PlayerBehavior
             SprintHandle();
             DashHandle();
 
-            Vector2 playerVelocity =
-                new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * _currentSpeed;
-            _playerRigidbody2D.velocity = Vector2.ClampMagnitude(playerVelocity, _currentSpeed);
-            
+            Vector2 playerVelocity;
+
+            if (_isDash)
+            {
+                if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
+                {
+                    playerVelocity =  transform.right * _currentSpeed;
+                    _playerRigidbody2D.velocity = Vector2.ClampMagnitude(playerVelocity, _currentSpeed);
+                }
+                else
+                {
+                    playerVelocity =  new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * _currentSpeed;
+                    _playerRigidbody2D.velocity = Vector2.ClampMagnitude(playerVelocity, _currentSpeed);
+                }
+            }
+            else
+            {
+                playerVelocity =  new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * _currentSpeed;
+                _playerRigidbody2D.velocity = Vector2.ClampMagnitude(playerVelocity, _currentSpeed);
+            }
             _animator.SetTrigger(playerState.ToString());
             _animator.SetBool(IsDashAnimation, _isDash);
 
@@ -145,9 +173,9 @@ namespace PlayerBehavior
         
         private void DashHandle()
         {
-            if (CheckPlayerState(PlayerState.Idle) || _isDash) return;
+            if (_isDash) return;
             if (_isDashCooldown || _currentStamina < dashStaminaDrain) return;
-            if (!Input.GetKeyDown(dashKey)) return;
+            if (!Input.GetKeyDown(dashKey) && !_dashBuffering) return;
 
             StartCoroutine(Dash());
             _currentStamina -= dashStaminaDrain;
@@ -165,14 +193,17 @@ namespace PlayerBehavior
 
             yield return new WaitForSeconds(dashDuration);
             _isDash = false;
+            _dashBuffering = false;
             SetPlayerState(PlayerState.Idle);
+            transform.right *= -1;
+            _spriteRenderer.color = Color.white;
+            PlayerCombatSystem.Instance.CurrentAttackCooldown /= 2;
 
             yield return new WaitForSeconds(dashCooldown);
             _isDashCooldown = false;
         }
         
         
-
         /// <summary>
         /// Use for set player state.
         /// </summary>

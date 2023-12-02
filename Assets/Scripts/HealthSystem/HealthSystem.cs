@@ -11,14 +11,14 @@ namespace HealthSystem
         public float CurrentHp { get; private set; }
         private bool _isDead;
         private Animator _animator;
-        private SpriteRenderer _spriteRenderer;
+        protected SpriteRenderer spriteRenderer;
         private static readonly int TakDamage = Animator.StringToHash("TakeDamage");
         #endregion
     
         protected virtual void Start()
         {
             CurrentHp = maxHp;
-            _spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
             TryGetComponent(out _animator);
         }
 
@@ -44,7 +44,7 @@ namespace HealthSystem
         
             /*if(_animator)
                 _animator.SetTrigger(TakDamage);*/
-            _spriteRenderer.color = new Color(1,0.6f,0.6f,1);
+            spriteRenderer.color = new Color(1,0.6f,0.6f,1);
             Invoke(nameof(ResetSpriteColor), 0.2f);
         
             if (CurrentHp > 0 || _isDead) return;
@@ -93,9 +93,9 @@ namespace HealthSystem
             sliderHpPlayer.value = CurrentHp / maxHp;
         }
 
-        private void ResetSpriteColor()
+        protected void ResetSpriteColor()
         {
-            _spriteRenderer.color = Color.white;
+            spriteRenderer.color = Color.white;
         }
         #endregion
     }
