@@ -47,6 +47,7 @@ namespace PlayerBehavior
         private Animator _animator;
         private Rigidbody2D _playerRigidbody2D;
         private SpriteRenderer _spriteRenderer;
+        private Vector2 _firstDashDirection;
         public static Player Instance;
         private static readonly int IsDashAnimation = Animator.StringToHash("IsDash");
         public Animator Animator => _animator;
@@ -117,7 +118,9 @@ namespace PlayerBehavior
                 }
                 else
                 {
-                    playerVelocity =  new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * _currentSpeed;
+                    if (_firstDashDirection == Vector2.zero)
+                        _firstDashDirection = transform.right;
+                    playerVelocity =  _firstDashDirection * _currentSpeed;
                     _playerRigidbody2D.velocity = Vector2.ClampMagnitude(playerVelocity, _currentSpeed);
                 }
             }
@@ -186,6 +189,7 @@ namespace PlayerBehavior
         /// </summary>
         private IEnumerator Dash()
         {
+            _firstDashDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             _isDash = true;
             _isDashCooldown = true;
             _currentSpeed = dashSpeed;
@@ -243,7 +247,7 @@ namespace PlayerBehavior
         /// <summary>
         /// Reset every behavior to default. ( Use when start / respawn. )
         /// </summary>
-        private void ResetState()
+        public void ResetState()
         {
             SetPlayerState(PlayerState.Idle);
             _isDash = false;

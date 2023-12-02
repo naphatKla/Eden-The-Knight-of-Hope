@@ -1,3 +1,4 @@
+using PlayerBehavior;
 using UnityEngine;
 
 namespace HealthSystem
@@ -29,6 +30,7 @@ namespace HealthSystem
         {
             gameObject.SetActive(true);
             ResetHealth();
+            Player.Instance.ResetState();
             transform.position = GameManager.Instance.spawnPoint;
         }
 
