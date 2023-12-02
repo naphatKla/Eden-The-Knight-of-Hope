@@ -15,10 +15,11 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Wooden Helmet
-  <Description>k__BackingField: 'Wooden Helmet
+  <Description>k__BackingField: 'How to name this armor? The kitchen warrior armor?
 
 
-    <color=#1AA260> Max Health +20'
+    <color=#1AA260>
+    Max Health +20'
   <ItemImage>k__BackingField: {fileID: 1727779032, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 1
   <Cost>k__BackingField: 15

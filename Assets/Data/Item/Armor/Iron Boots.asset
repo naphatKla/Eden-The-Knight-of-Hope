@@ -15,10 +15,11 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Iron Boots
-  <Description>k__BackingField: 'Iron Boots
+  <Description>k__BackingField: 'Feel good to wear, and might smell good too O/w//O
 
 
-    <color=#1AA260> Max Health +45'
+    <color=#1AA260>
+    Max Health +45'
   <ItemImage>k__BackingField: {fileID: 2019524890, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 4
   <Cost>k__BackingField: 61
