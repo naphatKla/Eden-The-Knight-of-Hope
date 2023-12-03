@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestSystem/FirstPlayable.unity
     guid: 23fd7350957b33a48a62aa891d191b40
+  - enabled: 1
+    path: Assets/Scenes/End Credits.unity
+    guid: 659f92a059c1d294fa4d5de5553b0d7e
   - enabled: 0
     path: Assets/Scenes/TestSystem/Base&Tower.unity
     guid: 7439aada31b3fab449fb38ef119b7c48

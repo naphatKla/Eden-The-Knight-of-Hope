@@ -6,16 +6,20 @@ using UnityEngine.SceneManagement;
 public class CreditsManager : MonoBehaviour
 {
     [SerializeField] private KeyCode keyExit;
+    public Animator transition;
+    public float transitionTime = 1f;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(keyExit))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            HadleEscInput();
+            StartCoroutine(LoadLevel(0));
         }
     }
-    void HadleEscInput()
+    IEnumerator LoadLevel(int levelIndex)
     {
-        SceneManager.LoadScene("FirstPlayable");
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(levelIndex);
     }
 }
