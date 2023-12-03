@@ -57,7 +57,6 @@ public class TowerSO : ScriptableObject
         TowerRepairState result = new TowerRepairState();
         foreach (TowerRepairState repairState in repairStates)
         {
-            Debug.Log($"{hp} : {repairState.hpPercentGreaterThan}");
             if (hp < repairState.hpPercentGreaterThan) continue;
             return repairState;
         }

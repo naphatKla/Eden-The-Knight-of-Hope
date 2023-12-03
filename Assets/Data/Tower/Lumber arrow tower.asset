@@ -14,41 +14,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerName: Wood arrow tower <color=grey>(Tier 2)
   towerDescription: tier 2
-  towerPrefab: {fileID: 3840941788676572609, guid: 54351d679020be840b2bad54c4228904, type: 3}
-  cost: 1
-  towerImage: {fileID: 664070334, guid: db6b97b451609844fa092e61a2d8d6d3, type: 3}
+  towerPrefab: {fileID: 3840941788676572609, guid: 7f003bd458d3f7f4897d43f68ed50b13, type: 3}
+  cost: 250
+  towerImage: {fileID: -138820848, guid: db6b97b451609844fa092e61a2d8d6d3, type: 3}
   tier: 2
   requireItems:
-  - quantity: 1
-    item: {fileID: 11400000, guid: b9fba1e7e896ddd4ca6086a672e7cea1, type: 2}
-  - quantity: 1
-    item: {fileID: 11400000, guid: df565b558d3c3154d8908c9c04a2039e, type: 2}
+  - quantity: 10
+    item: {fileID: 11400000, guid: ba92d7966d383ef44b6d57bca5bdbd19, type: 2}
+  - quantity: 5
+    item: {fileID: 11400000, guid: 1d778c8eb9da56a46a2acd489cf37ad3, type: 2}
   repairStates:
   - hpPercentGreaterThan: 80
-    repairCost: 10
+    repairCost: 25
     repairItems:
+    - quantity: 2
+      item: {fileID: 11400000, guid: ba92d7966d383ef44b6d57bca5bdbd19, type: 2}
     - quantity: 1
-      item: {fileID: 11400000, guid: b9fba1e7e896ddd4ca6086a672e7cea1, type: 2}
-    - quantity: 1
-      item: {fileID: 11400000, guid: df565b558d3c3154d8908c9c04a2039e, type: 2}
+      item: {fileID: 11400000, guid: 1d778c8eb9da56a46a2acd489cf37ad3, type: 2}
   - hpPercentGreaterThan: 50
-    repairCost: 20
+    repairCost: 50
     repairItems:
+    - quantity: 5
+      item: {fileID: 11400000, guid: ba92d7966d383ef44b6d57bca5bdbd19, type: 2}
     - quantity: 2
-      item: {fileID: 11400000, guid: b9fba1e7e896ddd4ca6086a672e7cea1, type: 2}
-    - quantity: 2
-      item: {fileID: 11400000, guid: df565b558d3c3154d8908c9c04a2039e, type: 2}
+      item: {fileID: 11400000, guid: 1d778c8eb9da56a46a2acd489cf37ad3, type: 2}
   - hpPercentGreaterThan: 15
-    repairCost: 30
+    repairCost: 75
     repairItems:
+    - quantity: 6
+      item: {fileID: 11400000, guid: ba92d7966d383ef44b6d57bca5bdbd19, type: 2}
     - quantity: 3
-      item: {fileID: 11400000, guid: b9fba1e7e896ddd4ca6086a672e7cea1, type: 2}
-    - quantity: 3
-      item: {fileID: 11400000, guid: df565b558d3c3154d8908c9c04a2039e, type: 2}
+      item: {fileID: 11400000, guid: 1d778c8eb9da56a46a2acd489cf37ad3, type: 2}
   - hpPercentGreaterThan: 0
-    repairCost: 40
+    repairCost: 100
     repairItems:
-    - quantity: 4
-      item: {fileID: 11400000, guid: b9fba1e7e896ddd4ca6086a672e7cea1, type: 2}
-    - quantity: 4
-      item: {fileID: 11400000, guid: df565b558d3c3154d8908c9c04a2039e, type: 2}
+    - quantity: 8
+      item: {fileID: 11400000, guid: ba92d7966d383ef44b6d57bca5bdbd19, type: 2}
+    - quantity: 3
+      item: {fileID: 11400000, guid: 1d778c8eb9da56a46a2acd489cf37ad3, type: 2}

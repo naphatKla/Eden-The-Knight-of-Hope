@@ -15,9 +15,12 @@ namespace HealthSystem
         private static readonly int TakDamage = Animator.StringToHash("TakeDamage");
         #endregion
     
-        protected virtual void Start()
+        private void Awake()
         {
             CurrentHp = maxHp;
+        }
+        protected virtual void Start()
+        {
             spriteRenderer = GetComponent<SpriteRenderer>();
             TryGetComponent(out _animator);
         }

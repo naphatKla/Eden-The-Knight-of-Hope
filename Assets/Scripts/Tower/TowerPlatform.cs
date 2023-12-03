@@ -77,6 +77,7 @@ namespace Interaction
             TowerSO currentTowerItemOnPage = towerBuilderUIPage.currentTowerItemOnPage;
             BuildTowerState buildTowerState = towerBuilderUIPage.buildTowerState;
             float towerHpPercentage = _towerOnPlatform ? (_towerOnPlatform.GetComponent<HealthSystem.HealthSystem>().CurrentHp / _towerOnPlatform.GetComponent<HealthSystem.HealthSystem>().maxHp) * 100 : 0;
+            towerBuilderUIPage.UpdatePage(_maxTierBuilded, _currentTowerSO,towerHpPercentage);
             
             if (buildTowerState == BuildTowerState.Build)
             {
@@ -95,6 +96,7 @@ namespace Interaction
                 _towerOnPlatform = Instantiate(towerPrefab.gameObject, transform.position + new Vector3(0, -0.28f, 0), Quaternion.identity, transform);
                 _currentTowerSO = currentTowerItemOnPage;
                 _maxTierBuilded = _currentTowerSO.tier > _maxTierBuilded ? _currentTowerSO.tier : _maxTierBuilded;
+                towerHpPercentage = _towerOnPlatform ? (_towerOnPlatform.GetComponent<HealthSystem.HealthSystem>().CurrentHp / _towerOnPlatform.GetComponent<HealthSystem.HealthSystem>().maxHp) * 100 : 0;
                 towerBuilderUIPage.UpdatePage(_maxTierBuilded, _currentTowerSO, towerHpPercentage);
             }
             else if (buildTowerState == BuildTowerState.Repair)
@@ -108,6 +110,8 @@ namespace Interaction
                     inventoryData.RemoveItem(repairItem.item, repairItem.quantity);
                 }
                 GameManager.Instance.AddPoint(-cost);
+                _towerOnPlatform.GetComponent<HealthSystem.HealthSystem>().ResetHealth();
+                towerHpPercentage = _towerOnPlatform ? (_towerOnPlatform.GetComponent<HealthSystem.HealthSystem>().CurrentHp / _towerOnPlatform.GetComponent<HealthSystem.HealthSystem>().maxHp) * 100 : 0;
                 towerBuilderUIPage.UpdatePage(_maxTierBuilded, _currentTowerSO, towerHpPercentage);
             }
             else if (buildTowerState == BuildTowerState.Upgrade)
@@ -127,6 +131,7 @@ namespace Interaction
                 _towerOnPlatform = Instantiate(towerPrefab.gameObject, transform.position + new Vector3(0, -0.28f, 0), Quaternion.identity, transform);
                 _currentTowerSO = currentTowerItemOnPage;
                 _maxTierBuilded = _currentTowerSO.tier > _maxTierBuilded ? _currentTowerSO.tier : _maxTierBuilded;
+                towerHpPercentage = _towerOnPlatform ? (_towerOnPlatform.GetComponent<HealthSystem.HealthSystem>().CurrentHp / _towerOnPlatform.GetComponent<HealthSystem.HealthSystem>().maxHp) * 100 : 0;
                 towerBuilderUIPage.UpdatePage(_maxTierBuilded, _currentTowerSO,towerHpPercentage);
             }
         }

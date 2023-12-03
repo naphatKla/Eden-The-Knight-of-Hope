@@ -117,8 +117,9 @@ public class TowerBuilderUIPage : MonoBehaviour
             buildTowerState = BuildTowerState.Build;
             foreach (TowerUIItem tower in _towerUIItems)
             {
-                if (tower.TowerRecipe.tier > maxTierBuilded+1) tower.CloseButton();
+                if (tower.TowerRecipe.tier > maxTierBuilded) tower.CloseButton();
                 else tower.OpenButton();
+                if (tower.TowerRecipe.tier == 1) tower.OpenButton();
                 tower.SetCorrectIcon(tower.TowerRecipe.CheckRecipe() && GameManager.Instance.totalPoint >= tower.TowerRecipe.cost && tower.TowerRecipe.tier <= maxTierBuilded+1);
             }
             if(currentTowerItemOnPage) 
@@ -130,9 +131,12 @@ public class TowerBuilderUIPage : MonoBehaviour
             buildTowerState = BuildTowerState.Upgrade;
             foreach (TowerUIItem tower in _towerUIItems)
             {
-                if (tower.TowerRecipe.tier > maxTierBuilded+1) tower.CloseButton();
+                if (tower.TowerRecipe.tier > maxTierBuilded+1 || tower.TowerRecipe.tier < maxTierBuilded) tower.CloseButton();
                 else tower.OpenButton();
-                tower.SetCorrectIcon(tower.TowerRecipe.CheckRecipe() && GameManager.Instance.totalPoint >= tower.TowerRecipe.cost && tower.TowerRecipe.tier <= maxTierBuilded+1);
+                if (tower.TowerRecipe.tier == currentTowerSo.tier+1)
+                    tower.SetCorrectIcon(tower.TowerRecipe.CheckRecipe() && GameManager.Instance.totalPoint >= tower.TowerRecipe.cost && tower.TowerRecipe.tier <= maxTierBuilded+1);
+                if (tower.TowerRecipe == currentTowerSo)
+                    tower.SetCurrentIcon(true);
             }
             if(currentTowerItemOnPage) 
                 SetDescriptionAndRequirementData(currentTowerItemOnPage);
@@ -143,15 +147,22 @@ public class TowerBuilderUIPage : MonoBehaviour
             buildTowerState = BuildTowerState.Repair;
             foreach (TowerUIItem tower in _towerUIItems)
             {
-                if (tower.TowerRecipe.tier > maxTierBuilded+1) tower.CloseButton();
+                if (tower.TowerRecipe.tier > maxTierBuilded+1 || tower.TowerRecipe.tier < maxTierBuilded) tower.CloseButton();
                 else tower.OpenButton();
-                tower.SetCorrectIcon(tower.TowerRecipe.CheckRepairRecipe(currentHpPercentage) && GameManager.Instance.totalPoint >= tower.TowerRecipe.GetRepairState(currentHpPercentage).repairCost && tower.TowerRecipe.tier <= maxTierBuilded+1);
+                if (tower.TowerRecipe.tier == currentTowerSo.tier+1)
+                    tower.SetCorrectIcon(tower.TowerRecipe.CheckRecipe() && GameManager.Instance.totalPoint >= tower.TowerRecipe.cost && tower.TowerRecipe.tier <= maxTierBuilded+1);
+                if (tower.TowerRecipe == currentTowerSo)
+                    tower.SetCurrentIcon(true);
             }
             if(currentTowerItemOnPage) 
                 SetDescriptionAndRequirementData(currentTowerItemOnPage, currentTowerItemOnPage.GetRepairState(currentHpPercentage).repairItems.ToList());
         }
         else
+        {
             buildButton.gameObject.SetActive(false);
+            
+        }
+           
         
         lastedMaxTierBuilded = maxTierBuilded;
         lastedCurrentTowerSoOnPlatform = currentTowerSo;
