@@ -30,7 +30,7 @@ namespace CombatSystem
             if (TargetInAttackArea.All(target => target.gameObject != _enemy.Target)) return;
 
             float distance = Vector2.Distance((Vector2)transform.position,_enemy.Target.transform.position);
-            if(distance >= attackArea.x - 1.5) return;
+            if(distance >= attackArea.x - 2) return;
             
             _enemy.Agent.velocity = Vector2.zero;
             base.AttackHandle();

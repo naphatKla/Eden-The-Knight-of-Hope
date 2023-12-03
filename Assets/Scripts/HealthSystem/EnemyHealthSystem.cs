@@ -42,7 +42,7 @@ namespace HealthSystem
         /// </summary>
         protected override void Dead()
         {
-            if(Random.Range(0,101) >= 90)
+            if(Random.Range(0,101) >= 0)
                 GameManager.Instance.AddPoint(10);
         
             base.Dead();

@@ -42,7 +42,7 @@ namespace PlayerBehavior
         private bool _isDashCooldown;
         private bool _dashBuffering;
         private float _currentSpeed;
-        [SerializeField] private float _currentStamina; //When stamina bar is done, delete [SerializeField] this code
+        private float _currentStamina;
         private float _staminaRegenCurrentCooldown;
         private Animator _animator;
         private Rigidbody2D _playerRigidbody2D;
@@ -209,7 +209,7 @@ namespace PlayerBehavior
             _isDash = false;
             _dashBuffering = false;
             SetPlayerState(PlayerState.Idle);
-            transform.right *= -1;
+            //transform.right *= -1;
             _spriteRenderer.color = Color.white;
             PlayerCombatSystem.Instance.CurrentAttackCooldown /= 2;
 
@@ -261,7 +261,10 @@ namespace PlayerBehavior
         {
             SetPlayerState(PlayerState.Idle);
             _isDash = false;
+            _isDashCooldown = false;
             _currentSpeed = walkSpeed;
+            PlayerInteractSystem.Instance.isStopMove = false;
+            PlayerCombatSystem.Instance.CancelAttacking();
         }
         #endregion
     }

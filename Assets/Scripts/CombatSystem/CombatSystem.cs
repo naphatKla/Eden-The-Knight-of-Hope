@@ -98,7 +98,7 @@ namespace CombatSystem
         /// <summary>
         /// Cancel attacking.
         /// </summary>
-        protected void CancelAttacking()
+        public void CancelAttacking()
         {
             if (_attackCoroutine == null) return;
             StopCoroutine(_attackCoroutine);
