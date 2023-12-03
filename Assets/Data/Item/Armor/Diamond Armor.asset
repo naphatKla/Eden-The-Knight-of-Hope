@@ -15,10 +15,11 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Diamond Armor
-  <Description>k__BackingField: 'Diamond Armor
+  <Description>k__BackingField: 'Diamond armor son!
 
 
-    <color=#1AA260> Max Health +152.25'
+    <color=#1AA260> Max Health
+    +152.25'
   <ItemImage>k__BackingField: {fileID: -724321749, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 2
   <Cost>k__BackingField: 590
