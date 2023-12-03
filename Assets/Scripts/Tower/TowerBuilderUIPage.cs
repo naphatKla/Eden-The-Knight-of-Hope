@@ -4,8 +4,15 @@ using System.Linq;
 using Inventory;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
+public enum BuildTowerState
+{
+    Build,
+    Upgrade,
+    Repair
+}
 public class TowerBuilderUIPage : MonoBehaviour
 {
     [Header("TowerZone")]
@@ -24,14 +31,19 @@ public class TowerBuilderUIPage : MonoBehaviour
     [SerializeField] private Transform requirementContent;
     [SerializeField] private RequireUIItem requirementItemPrefab;
     private List<RequireUIItem> _requireUIItems = new List<RequireUIItem>();
-    [HideInInspector] public TowerSO currentTowerItem; //
+    [FormerlySerializedAs("currentTowerItem")] [HideInInspector] public TowerSO currentTowerItemOnPage; //
     public Action OnBuildTower;
 
     [SerializeField] private Button buildButton;
+    [SerializeField] private TextMeshProUGUI buildButtonText;
     [SerializeField] private Button closeButton;
     [SerializeField] private List<TowerSO> towerRecipes;
+    public BuildTowerState buildTowerState;
+    private int lastedMaxTierBuilded = 0;
+    private TowerSO lastedCurrentTowerSoOnPlatform;
+    private float lastedCurrentTowerHpPercentage = 100;
 
-    private void Start()
+    private void Awake()
     {
         closeButton.onClick.AddListener(() => gameObject.transform.parent.gameObject.SetActive(false));
         Initialize();
@@ -50,7 +62,12 @@ public class TowerBuilderUIPage : MonoBehaviour
         {
             TowerUIItem towerUIItem = Instantiate(towerUIItemPrefab, towerContent);
             towerUIItem.SetData(tower);
-            towerUIItem.GetComponent<Button>().onClick.AddListener(() => SetDescriptionAndRequirementData(tower));
+            towerUIItem.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                SetDescriptionAndRequirementData(tower);
+                if (lastedCurrentTowerSoOnPlatform) 
+                    UpdatePage(lastedMaxTierBuilded,lastedCurrentTowerSoOnPlatform,lastedCurrentTowerHpPercentage);
+            });
             _towerUIItems.Add(towerUIItem);
         }
         
@@ -61,11 +78,11 @@ public class TowerBuilderUIPage : MonoBehaviour
             item.gameObject.SetActive(false);
             _requireUIItems.Add(item);
         }
-        currentTowerItem = towerRecipes[0];
-        SetDescriptionAndRequirementData(currentTowerItem);
+        currentTowerItemOnPage = towerRecipes[0];
+        SetDescriptionAndRequirementData(currentTowerItemOnPage);
     }
 
-    private void SetDescriptionAndRequirementData(TowerSO towerSo)
+    private void SetDescriptionAndRequirementData(TowerSO towerSo, List<InventoryItem> requirementItems = null)
     {
         towerImage.sprite = towerSo.towerImage;
         towerName.text = towerSo.towerName;
@@ -73,7 +90,8 @@ public class TowerBuilderUIPage : MonoBehaviour
         towerCost.text = GameManager.Instance.totalPoint >= towerSo.cost? $"<color=#05B900> Cost: ${towerSo.cost}": $"<color=red> Cost: ${towerSo.cost}";
         totalCoin.text = $"{GameManager.Instance.totalPoint}";
 
-        List<InventoryItem> requirementItems = towerSo.requireItems.ToList();
+        if (requirementItems == null)
+            requirementItems = towerSo.requireItems.ToList();
 
         for(int i = 0; i < _requireUIItems.Count; i++)
         {
@@ -85,26 +103,63 @@ public class TowerBuilderUIPage : MonoBehaviour
             _requireUIItems[i].gameObject.SetActive(true);
             int available = PlayerInventoryController.Instance.InventoryData.GetAllQuantityOfItem(requirementItems[i]);
             _requireUIItems[i].SetData(requirementItems[i], requirementItems[i].quantity, available);
-            currentTowerItem = towerSo;
+            currentTowerItemOnPage = towerSo;
         }
     }
 
-    public void UpdatePage()
+    // ReSharper disable Unity.PerformanceAnalysis
+    public void UpdatePage(int maxTierBuilded, TowerSO currentTowerSo, float currentHpPercentage)
     {
-        _towerUIItems.ForEach(tower => tower.SetCorrectIcon(tower.TowerRecipe.CheckRecipe() && GameManager.Instance.totalPoint >= tower.TowerRecipe.cost));
-        if(currentTowerItem) 
-            SetDescriptionAndRequirementData(currentTowerItem);
+        buildButton.gameObject.SetActive(true);
+        if (!currentTowerSo)
+        {
+            buildButtonText.text = "Build";
+            buildTowerState = BuildTowerState.Build;
+            foreach (TowerUIItem tower in _towerUIItems)
+            {
+                if (tower.TowerRecipe.tier > maxTierBuilded+1) tower.CloseButton();
+                else tower.OpenButton();
+                tower.SetCorrectIcon(tower.TowerRecipe.CheckRecipe() && GameManager.Instance.totalPoint >= tower.TowerRecipe.cost && tower.TowerRecipe.tier <= maxTierBuilded+1);
+            }
+            if(currentTowerItemOnPage) 
+                SetDescriptionAndRequirementData(currentTowerItemOnPage);
+        }
+        else if (currentTowerItemOnPage.tier > currentTowerSo.tier)
+        {
+            buildButtonText.text = "Upgrade";
+            buildTowerState = BuildTowerState.Upgrade;
+            foreach (TowerUIItem tower in _towerUIItems)
+            {
+                if (tower.TowerRecipe.tier > maxTierBuilded+1) tower.CloseButton();
+                else tower.OpenButton();
+                tower.SetCorrectIcon(tower.TowerRecipe.CheckRecipe() && GameManager.Instance.totalPoint >= tower.TowerRecipe.cost && tower.TowerRecipe.tier <= maxTierBuilded+1);
+            }
+            if(currentTowerItemOnPage) 
+                SetDescriptionAndRequirementData(currentTowerItemOnPage);
+        }
+        else if (currentTowerSo == currentTowerItemOnPage)
+        {
+            buildButtonText.text = "Repair";
+            buildTowerState = BuildTowerState.Repair;
+            foreach (TowerUIItem tower in _towerUIItems)
+            {
+                if (tower.TowerRecipe.tier > maxTierBuilded+1) tower.CloseButton();
+                else tower.OpenButton();
+                tower.SetCorrectIcon(tower.TowerRecipe.CheckRepairRecipe(currentHpPercentage) && GameManager.Instance.totalPoint >= tower.TowerRecipe.GetRepairState(currentHpPercentage).repairCost && tower.TowerRecipe.tier <= maxTierBuilded+1);
+            }
+            if(currentTowerItemOnPage) 
+                SetDescriptionAndRequirementData(currentTowerItemOnPage, currentTowerItemOnPage.GetRepairState(currentHpPercentage).repairItems.ToList());
+        }
+        else
+            buildButton.gameObject.SetActive(false);
+        
+        lastedMaxTierBuilded = maxTierBuilded;
+        lastedCurrentTowerSoOnPlatform = currentTowerSo;
+        lastedCurrentTowerHpPercentage = currentHpPercentage;
     }
-
+    
     private void BuildTower()
     {
-        InventorySo inventoryData = PlayerInventoryController.Instance.InventoryData;
-        if (!currentTowerItem.CheckRecipe()) return;
         OnBuildTower?.Invoke();
-        foreach (InventoryItem requireItem in currentTowerItem.requireItems)
-        {
-            inventoryData.RemoveItem(requireItem.item, requireItem.quantity);
-        }
-        UpdatePage();
     }
 }

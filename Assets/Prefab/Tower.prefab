@@ -138,8 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46ff0d068a1ba4f418eb7e8b1b8319dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 15
-  attackCooldown: 1.5
+  attackRadius: 17.5
+  attackCooldown: 1
   attackPoint: {fileID: 3745804380099421501}
   targetLayerMask:
     serializedVersion: 2
@@ -149,8 +149,9 @@ MonoBehaviour:
     m_Bits: 192
   bulletPrefab: {fileID: 7684876603425027750, guid: 2c0effeb60ae2be4299195950078ceaa, type: 3}
   bulletSpawnPoint: {fileID: 7521590804567726720}
-  bulletDamage: 17.5
+  bulletDamage: 20
   bulletSpeed: 10
+  spriteRenderer: {fileID: 0}
 --- !u!114 &423204310504910108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderHpPlayer: {fileID: 8527158778361198969}
-  maxHp: 400
+  maxHp: 250
 --- !u!60 &8249009458153756354
 PolygonCollider2D:
   m_ObjectHideFlags: 0
