@@ -33,6 +33,7 @@ public class EquipmentInventoryController : BaseInventoryController<UIEquipmentI
             _quickSlot1Cooldown = equipmentItemData.coolDown;
             equipmentItemData.AddStats();
             quickSlot.ParentInventoryData.RemoveItem(quickSlot.Index, 1);
+            quickSlot.BGSlot.gameObject.SetActive(quickSlot.isEmpty);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -45,6 +46,7 @@ public class EquipmentInventoryController : BaseInventoryController<UIEquipmentI
             _quickSlot2Cooldown = equipmentItemData.coolDown;
             equipmentItemData.AddStats();
             quickSlot.ParentInventoryData.RemoveItem(quickSlot.Index, 1);
+            quickSlot.BGSlot.gameObject.SetActive(quickSlot.isEmpty);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
@@ -57,6 +59,7 @@ public class EquipmentInventoryController : BaseInventoryController<UIEquipmentI
             _quickSlot3Cooldown = equipmentItemData.coolDown;
             equipmentItemData.AddStats();
             quickSlot.ParentInventoryData.RemoveItem(quickSlot.Index, 1);
+            quickSlot.BGSlot.gameObject.SetActive(quickSlot.isEmpty);
         }
         
         _quickSlot1CurrentCooldown = _quickSlot1CurrentCooldown <= 0 || double.IsNaN(_quickSlot1CurrentCooldown)? 0 : _quickSlot1CurrentCooldown - Time.deltaTime;

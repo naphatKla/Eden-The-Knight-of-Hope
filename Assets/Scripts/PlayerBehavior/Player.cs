@@ -69,7 +69,6 @@ namespace PlayerBehavior
 
         private void Update()
         {
-            Debug.Log(_spriteRenderer.color.a);
             MovementHandle();
             RegenStaminaHandle();
         }
@@ -94,8 +93,14 @@ namespace PlayerBehavior
             if (_animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttackState_1") ||
                 _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttackState_2") ||
                 _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttackState_3") ||
-                _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerHeavyAttack"))
+                _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerHeavyAttack") ||
+                PlayerInteractSystem.Instance.isStopMove)
             {
+                if (PlayerInteractSystem.Instance.isStopMove)
+                {
+                    SetPlayerState(PlayerState.Idle);
+                    _animator.SetTrigger(playerState.ToString());
+                }
                 _playerRigidbody2D.velocity = Vector2.zero;
                 if (Input.GetKeyDown(dashKey))
                     _dashBuffering = true;
@@ -144,13 +149,13 @@ namespace PlayerBehavior
         {
             if (CheckPlayerState(PlayerState.Dash)) return;
             _currentSpeed = walkSpeed;
-
+            
             if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
             {
                 SetPlayerState(PlayerState.Idle);
                 return;
             }
-
+            
             SetPlayerState(PlayerState.Walk);
         }
 
@@ -177,7 +182,12 @@ namespace PlayerBehavior
         private void DashHandle()
         {
             if (_isDash) return;
-            if (_isDashCooldown || _currentStamina < dashStaminaDrain) return;
+            if (_isDashCooldown) return;
+            if (_currentStamina < dashStaminaDrain)
+            {
+                _dashBuffering = false;
+                return;
+            }
             if (!Input.GetKeyDown(dashKey) && !_dashBuffering) return;
 
             StartCoroutine(Dash());

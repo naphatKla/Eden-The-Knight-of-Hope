@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Linq;
+using PlayerBehavior;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -113,17 +114,22 @@ namespace Interaction
                 progressBar.value = progressionTimeLeft / time;
                 progressionTimeLeft -= Time.deltaTime;
                 yield return null;
-            
+
+                PlayerInteractSystem.Instance.isStopMove = time - progressionTimeLeft <= 0.3f;
                 if (progressionTimeLeft < 0.15f) continue;
                 if(Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0) continue;
+                if (PlayerInteractSystem.Instance.isStopMove) continue;
                 progressBar.gameObject.SetActive(false);
                 _interactCoroutine = null;
+                PlayerInteractSystem.Instance.isStopMove = false;
                 yield break;
             }
         
             InteractAction();
             progressBar.gameObject.SetActive(false);
             _interactCoroutine = null;
+            progressBar.gameObject.SetActive(false);
+            PlayerInteractSystem.Instance.isStopMove = false;
         }
         #endregion
     }

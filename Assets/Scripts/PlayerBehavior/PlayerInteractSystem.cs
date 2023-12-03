@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Interaction;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace PlayerBehavior
 {
@@ -14,7 +15,14 @@ namespace PlayerBehavior
         private readonly Collider2D[] _objectsInArea = new Collider2D[1];
         private InteractableObject _targetObject;
         private InteractableObject _lastTargetObject;
+        public bool isStopMove;
+        public static PlayerInteractSystem Instance;
         #endregion
+        
+        private void Awake()
+        {
+            Instance = this;
+        }
         private void Update()
         {
             float objCount = Physics2D.OverlapCircleNonAlloc(interactionPoint.position, interactionPointRadius, _objectsInArea, interactableMask);
