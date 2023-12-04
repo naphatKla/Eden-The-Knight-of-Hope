@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Inventory;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Interaction
@@ -9,7 +10,7 @@ namespace Interaction
     {
         [SerializeField] private Image towerUpgradeUI;
         [SerializeField] private TowerBuilderUIPage towerBuilderUIPage;
-        private GameObject _towerOnPlatform;
+        [HideInInspector] public GameObject towerOnPlatform;
         private TowerSO _currentTowerSO;
         private float _lastOpenTime;
         private bool _isCloseUI;
@@ -19,10 +20,10 @@ namespace Interaction
         
         protected void Update()
         {
-            if (_towerOnPlatform && Input.GetKeyDown(KeyCode.C))
-                _towerOnPlatform.GetComponent<HealthSystem.HealthSystem>().TakeDamage(50);
+            if (towerOnPlatform && Input.GetKeyDown(KeyCode.C))
+                towerOnPlatform.GetComponent<HealthSystem.HealthSystem>().TakeDamage(50);
                 
-            if (!_towerOnPlatform)
+            if (!towerOnPlatform)
             {
                 if (_currentTowerSO)
                 {
@@ -51,7 +52,7 @@ namespace Interaction
             if (UIManager.Instance.CheckIsAnyUIOpen()) return;
             towerUpgradeUI.gameObject.SetActive(true);
             towerBuilderUIPage.TowerPlatformLinked = this;
-            float towerHpPercentage = _towerOnPlatform ? (_towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp) * 100 : 0;
+            float towerHpPercentage = towerOnPlatform ? (_towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp) * 100 : 0;
             towerBuilderUIPage.currentTowerItemOnPage = _maxTierBuilded <= 0? towerBuilderUIPage.currentTowerItemOnPage : _currentTowerSO;
             towerBuilderUIPage.UpdatePage(_maxTierBuilded, _currentTowerSO, towerHpPercentage);
             _lastOpenTime = Time.time;
@@ -65,7 +66,7 @@ namespace Interaction
         {
             if (towerUpgradeUI.gameObject.activeSelf == false) return;
             if (towerBuilderUIPage.TowerPlatformLinked != this) return;
-            float towerHpPercentage = _towerOnPlatform ? (_towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp) * 100 : 0;
+            float towerHpPercentage = towerOnPlatform ? (_towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp) * 100 : 0;
             towerBuilderUIPage.UpdatePage(_maxTierBuilded, _currentTowerSO, towerHpPercentage);
         }
 
@@ -92,7 +93,7 @@ namespace Interaction
             
             if (buildTowerState == BuildTowerState.Build)
             {
-                if (_towerOnPlatform) return;
+                if (towerOnPlatform) return;
                 if (!currentTowerItemOnPage.CheckRecipe()) return;
                 int cost = currentTowerItemOnPage.cost;
                 if (GameManager.Instance.totalPoint < cost) return;
@@ -104,13 +105,13 @@ namespace Interaction
                 }
                 GameManager.Instance.AddPoint(-cost);
                 
-                _towerOnPlatform = Instantiate(towerPrefab.gameObject, transform.position + new Vector3(0, -0.28f, 0), Quaternion.identity, transform);
+                towerOnPlatform = Instantiate(towerPrefab.gameObject, transform.position + new Vector3(0, -0.28f, 0), Quaternion.identity, transform);
                 _currentTowerSO = currentTowerItemOnPage;
                 _maxTierBuilded = _currentTowerSO.tier > _maxTierBuilded ? _currentTowerSO.tier : _maxTierBuilded;
-                _towerHealthSystem = _towerOnPlatform?.GetComponent<TowerHealthSystem>();
+                _towerHealthSystem = towerOnPlatform?.GetComponent<TowerHealthSystem>();
                 if (_towerHealthSystem)
                     _towerHealthSystem.OnTowerDamaged += UpdateTowerUIPage;
-                towerHpPercentage = _towerOnPlatform? (_towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp) * 100 : 0;
+                towerHpPercentage = towerOnPlatform? (_towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp) * 100 : 0;
                 towerBuilderUIPage.UpdatePage(_maxTierBuilded, _currentTowerSO, towerHpPercentage);
             }
             else if (buildTowerState == BuildTowerState.Repair)
@@ -124,9 +125,9 @@ namespace Interaction
                     inventoryData.RemoveItem(repairItem.item, repairItem.quantity);
                 }
                 GameManager.Instance.AddPoint(-cost);
-                _towerHealthSystem = _towerOnPlatform?.GetComponent<TowerHealthSystem>();
+                _towerHealthSystem = towerOnPlatform?.GetComponent<TowerHealthSystem>();
                 _towerHealthSystem.ResetHealth();
-                towerHpPercentage = _towerOnPlatform ? (_towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp) * 100 : 0;
+                towerHpPercentage = towerOnPlatform ? (_towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp) * 100 : 0;
                 towerBuilderUIPage.UpdatePage(_maxTierBuilded, _currentTowerSO, towerHpPercentage);
             }
             else if (buildTowerState == BuildTowerState.Upgrade)
@@ -142,14 +143,14 @@ namespace Interaction
                 }
                 GameManager.Instance.AddPoint(-cost);
                 
-                Destroy(_towerOnPlatform);
-                _towerOnPlatform = Instantiate(towerPrefab.gameObject, transform.position + new Vector3(0, -0.28f, 0), Quaternion.identity, transform);
+                Destroy(towerOnPlatform);
+                towerOnPlatform = Instantiate(towerPrefab.gameObject, transform.position + new Vector3(0, -0.28f, 0), Quaternion.identity, transform);
                 _currentTowerSO = currentTowerItemOnPage;
                 _maxTierBuilded = _currentTowerSO.tier > _maxTierBuilded ? _currentTowerSO.tier : _maxTierBuilded;
-                _towerHealthSystem = _towerOnPlatform?.GetComponent<TowerHealthSystem>();
+                _towerHealthSystem = towerOnPlatform?.GetComponent<TowerHealthSystem>();
                 if (_towerHealthSystem)
                     _towerHealthSystem.OnTowerDamaged += UpdateTowerUIPage;
-                towerHpPercentage = _towerOnPlatform ? (_towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp) * 100 : 0;
+                towerHpPercentage = towerOnPlatform ? (_towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp) * 100 : 0;
                 towerBuilderUIPage.UpdatePage(_maxTierBuilded, _currentTowerSO,towerHpPercentage);
             }
         }

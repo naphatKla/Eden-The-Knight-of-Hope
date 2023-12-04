@@ -43,11 +43,13 @@ public class TowerBuilderUIPage : MonoBehaviour
     private int lastedMaxTierBuilded = 0;
     private TowerSO lastedCurrentTowerSoOnPlatform;
     private float lastedCurrentTowerHpPercentage = 100;
+    private Color _buildButtonDefaultColor;
     public TowerPlatform TowerPlatformLinked { get; set; }
 
     private void Awake()
     {
         closeButton.onClick.AddListener(() => gameObject.transform.parent.gameObject.SetActive(false));
+        _buildButtonDefaultColor = buildButton.GetComponent<Image>().color;
         Initialize();
     }
 
@@ -113,6 +115,9 @@ public class TowerBuilderUIPage : MonoBehaviour
     public void UpdatePage(int maxTierBuilded, TowerSO currentTowerSo, float currentHpPercentage)
     {
         buildButton.gameObject.SetActive(true);
+        buildButton.GetComponent<Button>().enabled = true;
+        buildButton.GetComponent<Image>().color = _buildButtonDefaultColor;
+        buildButton.GetComponentInChildren<TextMeshProUGUI>().color = new Color(0.1960784f, 0.1960784f, 0.1960784f, 1);
         if (!currentTowerSo)
         {
             buildButtonText.text = "Build";
@@ -124,12 +129,21 @@ public class TowerBuilderUIPage : MonoBehaviour
                 tower.SetCorrectIcon(tower.TowerRecipe.CheckRecipe() && GameManager.Instance.totalPoint >= tower.TowerRecipe.cost && tower.TowerRecipe.tier <= maxTierBuilded);
                 if (tower.TowerRecipe.tier == 1)
                 {
-                    tower.SetCorrectIcon(true);
+                    tower.SetCorrectIcon(tower.TowerRecipe.CheckRecipe() && GameManager.Instance.totalPoint >= tower.TowerRecipe.cost);
                     tower.OpenButton();
                 }
             }
             if(currentTowerItemOnPage) 
                 SetDescriptionAndRequirementData(currentTowerItemOnPage);
+            
+            int cost = currentTowerItemOnPage.cost;
+            if (!currentTowerItemOnPage.CheckRecipe() ||
+                GameManager.Instance.totalPoint < cost)
+            {
+                buildButton.GetComponent<Button>().enabled = false;
+                buildButton.GetComponent<Image>().color = new Color(0,0,0,0.5f);
+                buildButton.GetComponentInChildren<TextMeshProUGUI>().color = new Color(0.1960784f, 0.1960784f, 0.1960784f, 0.35f);
+            }
         }
         else if (currentTowerItemOnPage.tier > currentTowerSo.tier)
         {
@@ -146,6 +160,15 @@ public class TowerBuilderUIPage : MonoBehaviour
             }
             if(currentTowerItemOnPage) 
                 SetDescriptionAndRequirementData(currentTowerItemOnPage);
+            
+            int cost = currentTowerItemOnPage.cost;
+            if (!currentTowerItemOnPage.CheckRecipe() ||
+                GameManager.Instance.totalPoint < cost)
+            {
+                buildButton.GetComponent<Button>().enabled = false;
+                buildButton.GetComponent<Image>().color = new Color(0,0,0,0.5f);
+                buildButton.GetComponentInChildren<TextMeshProUGUI>().color = new Color(0.1960784f, 0.1960784f, 0.1960784f, 0.35f);
+            }
         }
         else if (currentTowerSo == currentTowerItemOnPage)
         {
@@ -162,11 +185,21 @@ public class TowerBuilderUIPage : MonoBehaviour
             }
             if(currentTowerItemOnPage) 
                 SetDescriptionAndRequirementData(currentTowerItemOnPage, currentTowerItemOnPage.GetRepairState(currentHpPercentage).repairItems.ToList());
+            
+            TowerHealthSystem _towerHealthSystem = TowerPlatformLinked.towerOnPlatform.GetComponent<TowerHealthSystem>();
+            float towerHpPercentage = _towerHealthSystem ? (_towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp) * 100 : 0;
+            int cost = currentTowerItemOnPage.GetRepairState(towerHpPercentage).repairCost;
+            if (!currentTowerItemOnPage.CheckRepairRecipe(towerHpPercentage) ||
+                GameManager.Instance.totalPoint < cost || towerHpPercentage >= 100)
+            {
+                buildButton.GetComponent<Button>().enabled = false;
+                buildButton.GetComponent<Image>().color = new Color(0,0,0,0.5f);
+                buildButton.GetComponentInChildren<TextMeshProUGUI>().color = new Color(0.1960784f, 0.1960784f, 0.1960784f, 0.35f);
+            }
         }
         else
         {
             buildButton.gameObject.SetActive(false);
-            
         }
         
         lastedMaxTierBuilded = maxTierBuilded;
