@@ -8,7 +8,8 @@ public class TowerHealthSystem : HealthSystem.HealthSystem
 
     public override void TakeDamage(float damage, GameObject attacker = null)
     {
-        OnTowerDamaged?.Invoke();
         base.TakeDamage(damage, attacker);
+        if (this)
+            OnTowerDamaged?.Invoke();
     }
 }

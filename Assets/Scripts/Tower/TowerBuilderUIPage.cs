@@ -86,12 +86,14 @@ public class TowerBuilderUIPage : MonoBehaviour
         SetDescriptionAndRequirementData(currentTowerItemOnPage);
     }
 
-    private void SetDescriptionAndRequirementData(TowerSO towerSo, List<InventoryItem> requirementItems = null)
+    private void SetDescriptionAndRequirementData(TowerSO towerSo, List<InventoryItem> requirementItems = null, int cost = -1)
     {
+        if (cost == -1)
+            cost = towerSo.cost;
         towerImage.sprite = towerSo.towerImage;
         towerName.text = towerSo.towerName;
         towerDescription.text = towerSo.towerDescription;
-        towerCost.text = GameManager.Instance.totalPoint >= towerSo.cost? $"<color=#05B900> Cost: ${towerSo.cost}": $"<color=red> Cost: ${towerSo.cost}";
+        towerCost.text = GameManager.Instance.totalPoint >= cost? $"<color=#05B900> Cost: ${cost}": $"<color=red> Cost: ${cost}";
         totalCoin.text = $"{GameManager.Instance.totalPoint}";
 
         if (requirementItems == null)
@@ -110,7 +112,7 @@ public class TowerBuilderUIPage : MonoBehaviour
             currentTowerItemOnPage = towerSo;
         }
     }
-
+    
     // ReSharper disable Unity.PerformanceAnalysis
     public void UpdatePage(int maxTierBuilded, TowerSO currentTowerSo, float currentHpPercentage)
     {
@@ -184,7 +186,7 @@ public class TowerBuilderUIPage : MonoBehaviour
                     tower.SetCurrentIcon(true);
             }
             if(currentTowerItemOnPage) 
-                SetDescriptionAndRequirementData(currentTowerItemOnPage, currentTowerItemOnPage.GetRepairState(currentHpPercentage).repairItems.ToList());
+                SetDescriptionAndRequirementData(currentTowerItemOnPage, currentTowerItemOnPage.GetRepairState(currentHpPercentage).repairItems.ToList(), currentTowerItemOnPage.GetRepairState(currentHpPercentage).repairCost);
             
             TowerHealthSystem _towerHealthSystem = TowerPlatformLinked.towerOnPlatform.GetComponent<TowerHealthSystem>();
             float towerHpPercentage = _towerHealthSystem ? (_towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp) * 100 : 0;
