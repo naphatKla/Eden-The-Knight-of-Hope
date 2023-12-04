@@ -206,7 +206,7 @@ public class TowerBuilderUIPage : MonoBehaviour
             Color color = towerHpFill.color;
             color.a = 0.75f;
             towerHpFill.color = color;
-            towerHpText.text = $"{_towerHealthSystem.CurrentHp}/{_towerHealthSystem.maxHp}";
+            towerHpText.text = $"{_towerHealthSystem.CurrentHp} / {_towerHealthSystem.maxHp}";
             float towerHpPercentage = _towerHealthSystem ? (_towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp) * 100 : 0;
             int cost = currentTowerItemOnPage.GetRepairState(towerHpPercentage).repairCost;
             if (!currentTowerItemOnPage.CheckRepairRecipe(towerHpPercentage) ||
