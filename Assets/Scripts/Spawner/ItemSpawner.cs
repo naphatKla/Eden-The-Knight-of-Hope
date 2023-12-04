@@ -22,7 +22,7 @@ namespace Spawner
             base.SpawnObjectHandler();
         }
         
-        protected override void SpawnObject()
+        protected override void SpawnObject(GameObject objToSpawn = null)
         {
             base.SpawnObject();
             GatheringResourceSO itemToSpawn = ProjectExtensions.RandomPickOne(itemsDataToSpawn).obj;

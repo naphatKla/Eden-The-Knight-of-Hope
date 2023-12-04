@@ -1,22 +1,33 @@
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using EnemyBehavior;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 namespace Spawner
 {
-    [System.Serializable]
-    public struct NightModeSpawn
+    [Serializable]
+    public struct NightModeSpawnRate
     {
         public int day;
         public float spawnCoolDown;
     }
+
+    [Serializable]
+    public struct NightModeSpawn
+    {
+        public int dayGreaterOrEqualThan;
+        public List<PriorityObject<GameObject>> enemies;
+    }
     public class EnemySpawner : Spawner
     {
         #region Declare Variables
-        [Space] [SerializeField] private bool nightMode;
+        [Header("Night Mode")] [Space] [SerializeField] private bool nightMode;
         [SerializeField] private LayerMask playerMask;
-        [SerializeField] private NightModeSpawn[] nightModeSpawnRates;
+        [SerializeField] private NightModeSpawnRate[] nightModeSpawnRates;
+        [SerializeField] private NightModeSpawn[] nightModeSpawnEnemies;
         private bool _isReduceRate;
         #endregion
         
@@ -57,11 +68,16 @@ namespace Spawner
         /// <summary>
         /// If night mode is on, spawn enemy with night mode.
         /// </summary>
-        protected override void SpawnObject()
+        protected override void SpawnObject(GameObject objToSpawn = null)
         {
-            base.SpawnObject();
-            
-            if (!nightMode) return;
+            if (!nightMode)
+            {
+                base.SpawnObject();
+                return;
+            }
+            List<PriorityObject<GameObject>> enemyList = nightModeSpawnEnemies.LastOrDefault(enemy => enemy.dayGreaterOrEqualThan <= TimeSystem.Instance.day).enemies;
+            GameObject enemyToSpawn = ProjectExtensions.RandomPickOne(enemyList).obj;
+            base.SpawnObject(enemyToSpawn);
             LastSpawnedObject.GetComponent<Enemy>().NightMode = true;
         }
 
