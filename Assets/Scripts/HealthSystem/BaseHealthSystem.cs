@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace HealthSystem
 {
@@ -7,6 +8,7 @@ namespace HealthSystem
     {
         [SerializeField] private float hpRegenPercentage;
         [SerializeField] private LayerMask alphaLayerMask;
+        [SerializeField] private Image hpFill;
         public static BaseHealthSystem Instance;
         private SpriteRenderer _spriteRenderer;
 
@@ -24,6 +26,18 @@ namespace HealthSystem
             sliderHpPlayer.gameObject.SetActive(CurrentHp < maxHp);
             if(TimeSystem.Instance.timeState != TimeState.Day) return;
             Heal((hpRegenPercentage / 100) * maxHp * Time.deltaTime);
+        }
+
+        public override void TakeDamage(float damage, GameObject attacker = null)
+        {
+            hpFill.color = CurrentHp / maxHp > 0.5f
+                ? Color.Lerp(Color.green, Color.yellow, (1 - (CurrentHp / maxHp)) * 2)
+                : Color.Lerp(Color.yellow, Color.red, (1 - (CurrentHp / (maxHp / 2))));
+            
+            Color color = hpFill.color;
+            color.a = 0.75f;
+            hpFill.color = color;
+            base.TakeDamage(damage, attacker);
         }
 
         private void AlphaDetect()

@@ -17,7 +17,7 @@ public struct TowerRepairState
 public class TowerSO : ScriptableObject
 {
     public string towerName;
-    public string towerDescription;
+    [TextArea] public string towerDescription;
     public Tower.Tower towerPrefab;
     public int cost;
     public Sprite towerImage;

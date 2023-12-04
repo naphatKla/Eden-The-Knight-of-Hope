@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using HealthSystem;
 using Inventory;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -20,9 +21,6 @@ namespace Interaction
         
         protected void Update()
         {
-            if (towerOnPlatform && Input.GetKeyDown(KeyCode.C))
-                towerOnPlatform.GetComponent<HealthSystem.HealthSystem>().TakeDamage(50);
-                
             if (!towerOnPlatform)
             {
                 if (_currentTowerSO)

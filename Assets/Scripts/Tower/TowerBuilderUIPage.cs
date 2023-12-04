@@ -38,6 +38,9 @@ public class TowerBuilderUIPage : MonoBehaviour
     [SerializeField] private Button buildButton;
     [SerializeField] private TextMeshProUGUI buildButtonText;
     [SerializeField] private Button closeButton;
+    [SerializeField] private Slider towerHpSlider;
+    [SerializeField] private Image towerHpFill;
+    [SerializeField] private TextMeshProUGUI towerHpText;
     [SerializeField] private List<TowerSO> towerRecipes;
     public BuildTowerState buildTowerState;
     private int lastedMaxTierBuilded = 0;
@@ -120,6 +123,8 @@ public class TowerBuilderUIPage : MonoBehaviour
         buildButton.GetComponent<Button>().enabled = true;
         buildButton.GetComponent<Image>().color = _buildButtonDefaultColor;
         buildButton.GetComponentInChildren<TextMeshProUGUI>().color = new Color(0.1960784f, 0.1960784f, 0.1960784f, 1);
+        towerHpSlider.gameObject.SetActive(false);
+        
         if (!currentTowerSo)
         {
             buildButtonText.text = "Build";
@@ -137,7 +142,11 @@ public class TowerBuilderUIPage : MonoBehaviour
             }
             if(currentTowerItemOnPage) 
                 SetDescriptionAndRequirementData(currentTowerItemOnPage);
-            
+            else
+            {
+                SetDescriptionAndRequirementData(towerRecipes[0]);
+                currentTowerItemOnPage = towerRecipes[0];
+            }
             int cost = currentTowerItemOnPage.cost;
             if (!currentTowerItemOnPage.CheckRecipe() ||
                 GameManager.Instance.totalPoint < cost)
@@ -189,6 +198,15 @@ public class TowerBuilderUIPage : MonoBehaviour
                 SetDescriptionAndRequirementData(currentTowerItemOnPage, currentTowerItemOnPage.GetRepairState(currentHpPercentage).repairItems.ToList(), currentTowerItemOnPage.GetRepairState(currentHpPercentage).repairCost);
             
             TowerHealthSystem _towerHealthSystem = TowerPlatformLinked.towerOnPlatform.GetComponent<TowerHealthSystem>();
+            towerHpSlider.gameObject.SetActive(true);
+            towerHpSlider.value = _towerHealthSystem.maxHp > 0 ? _towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp : 0;
+            towerHpFill.color = _towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp > 0.5f ? 
+                Color.Lerp(Color.green, Color.yellow, (1f - (_towerHealthSystem.CurrentHp / (_towerHealthSystem.maxHp))) * 2) :
+                Color.Lerp(Color.yellow, Color.red, 1f - (_towerHealthSystem.CurrentHp / (_towerHealthSystem.maxHp / 2)));
+            Color color = towerHpFill.color;
+            color.a = 0.75f;
+            towerHpFill.color = color;
+            towerHpText.text = $"{_towerHealthSystem.CurrentHp}/{_towerHealthSystem.maxHp}";
             float towerHpPercentage = _towerHealthSystem ? (_towerHealthSystem.CurrentHp / _towerHealthSystem.maxHp) * 100 : 0;
             int cost = currentTowerItemOnPage.GetRepairState(towerHpPercentage).repairCost;
             if (!currentTowerItemOnPage.CheckRepairRecipe(towerHpPercentage) ||

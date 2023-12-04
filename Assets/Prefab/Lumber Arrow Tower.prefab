@@ -166,6 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sliderHpPlayer: {fileID: 8527158778361198969}
   maxHp: 450
+  towerHpFill: {fileID: 4881175787183757315}
 --- !u!60 &8249009458153756354
 PolygonCollider2D:
   m_ObjectHideFlags: 0
