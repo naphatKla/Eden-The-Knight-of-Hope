@@ -41,8 +41,14 @@ public class CraftingUIPage : MonoBehaviour
     [SerializeField] private RequireUIItem requirementItemPrefab;
     private List<RequireUIItem> _requireUIItems = new List<RequireUIItem>();
     private CraftingItem _currentCraftingItem;
+    private Color _craftButtonDefaultColor;
     
     [SerializeField] private Button craftButton;
+
+    private void Awake()
+    {
+        _craftButtonDefaultColor = new Color(0.386788f, 1, 0.2877358f, 1);
+    }
 
     public void Initialize(List<CraftingItem> craftingItems)
     {
@@ -93,14 +99,28 @@ public class CraftingUIPage : MonoBehaviour
             int available = PlayerInventoryController.Instance.InventoryData.GetAllQuantityOfItem(requirementItems[i]);
             _requireUIItems[i].SetData(requirementItems[i], requirementItems[i].quantity, available);
             _currentCraftingItem = craftingItem;
+            if (_currentCraftingItem.craftingRecipe.CheckRecipe())
+            {
+                craftButton.enabled = true;
+                craftButton.GetComponent<Image>().color = _craftButtonDefaultColor;
+                craftButton.GetComponentInChildren<TextMeshProUGUI>().color = new Color(0.1960784f, 0.1960784f, 0.1960784f, 1);
+            }
+            else
+            {
+                craftButton.enabled = false;
+                craftButton.GetComponent<Image>().color = new Color(0,0,0,0.5f);
+                craftButton.GetComponentInChildren<TextMeshProUGUI>().color = new Color(0.1960784f, 0.1960784f, 0.1960784f, 0.35f);
+            }
         }
     }
 
     public void UpdatePage()
     {
         _craftingUIItems.ForEach(item => item.SetCorrectIcon(item.CraftingRecipe.CheckRecipe()));
-        if(_currentCraftingItem.craftingRecipe) 
+        if (_currentCraftingItem.craftingRecipe)
+        {
             SetDescriptionAndRequirementData(_currentCraftingItem);
+        }
     }
 
     private void Craft()
