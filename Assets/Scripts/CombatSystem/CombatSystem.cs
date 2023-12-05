@@ -20,6 +20,7 @@ namespace CombatSystem
         public float delay;
         public float cooldown;
         public AttackState attackState;
+        public AudioClip[] attackSounds;
     }
     public class CombatSystem : MonoBehaviour
     {
@@ -41,9 +42,6 @@ namespace CombatSystem
         protected Coroutine attackCoroutine;
         protected Animator animator;
         protected float lastAttackTime;
-        
-        [Header("Sound")]
-        public AudioClip[] attackSounds;
         
         private HealthSystem.HealthSystem _healthSystem;
         #endregion
@@ -94,7 +92,7 @@ namespace CombatSystem
             animator.SetTrigger(attackState.ToString());
         
             yield return new WaitForSeconds(delay);
-            SoundManager.Instance.RandomPlaySound(attackSounds);
+            SoundManager.Instance.RandomPlaySound(currentAttackPattern.attackSounds);
         
             List<HealthSystem.HealthSystem> targetHealthSystems = TargetInAttackArea.Select(target => target.GetComponent<HealthSystem.HealthSystem>()).ToList();
             targetHealthSystems.ForEach(target => target.TakeDamage(currentAttackPattern.power * attackStat,gameObject));
