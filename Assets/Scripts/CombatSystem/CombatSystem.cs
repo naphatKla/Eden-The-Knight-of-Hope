@@ -90,10 +90,10 @@ namespace CombatSystem
         {
             lastAttackTime = Time.time;
             animator.SetTrigger(attackState.ToString());
-        
-            yield return new WaitForSeconds(delay);
+            
             SoundManager.Instance.RandomPlaySound(currentAttackPattern.attackSounds);
-        
+            yield return new WaitForSeconds(delay);
+            
             List<HealthSystem.HealthSystem> targetHealthSystems = TargetInAttackArea.Select(target => target.GetComponent<HealthSystem.HealthSystem>()).ToList();
             targetHealthSystems.ForEach(target => target.TakeDamage(currentAttackPattern.power * attackStat,gameObject));
         
