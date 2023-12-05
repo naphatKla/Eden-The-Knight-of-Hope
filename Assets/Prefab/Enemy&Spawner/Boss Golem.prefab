@@ -424,7 +424,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 4.6668, y: 4.6668, z: 2.3334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3370723974519292636}
@@ -522,8 +522,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3370723974519292636}
   - component: {fileID: 1734368787897043285}
-  - component: {fileID: 3444200652622413433}
-  - component: {fileID: 5154355928594903212}
+  - component: {fileID: 6148132709490688033}
+  - component: {fileID: 3764967737496565788}
   - component: {fileID: 3411352864226028852}
   - component: {fileID: 5759400404162797542}
   - component: {fileID: 123384547005520381}
@@ -606,7 +606,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &3444200652622413433
+--- !u!114 &6148132709490688033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -615,20 +615,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4437877851713272834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f377ac681eefa8746809e39a1d98e4cd, type: 3}
+  m_Script: {fileID: 11500000, guid: e90d73850c32117439ee118d67ebc189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   viewDistance: 10
   roamDuration: 3
   roamCooldown: 5
   roamArea: {x: -4, y: 4}
-  nightMode: 0
+  nightMode: 1
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 576
   priorityTags: 000000000200000003000000
   enemyActionState: 0
---- !u!114 &5154355928594903212
+--- !u!114 &3764967737496565788
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4437877851713272834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c50d354ff94fd458ab004447f9eb76, type: 3}
+  m_Script: {fileID: 11500000, guid: f7dd8cca0a7f82f4695a748e96ce4254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sliderHpPlayer: {fileID: 3122817313073520472}

@@ -51,7 +51,7 @@ namespace EnemyBehavior
         private EnemyHealthSystem _enemyHealthSystem;
         #endregion
     
-        protected void Start()
+        protected void Awake()
         {
             _enemyHealthSystem = GetComponent<EnemyHealthSystem>();
             _animator = GetComponent<Animator>();

@@ -401,7 +401,7 @@ MonoBehaviour:
   progressBar: {fileID: 491637171924939819}
   alphaLayerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   resourceData: {fileID: 0}
 --- !u!61 &1840565014805192101
 BoxCollider2D:

@@ -1,4 +1,5 @@
 using System.Collections;
+using EnemyBehavior;
 using Inventory;
 using TMPro;
 using UnityEngine;
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
     public Vector2 spawnPoint;
     public Transform player;
     public Transform playerBase;
+    public Enemy lastBoss;
+    public bool isNightWarning;
     
     public static GameManager Instance;
     #endregion
@@ -26,7 +29,9 @@ public class GameManager : MonoBehaviour
     
     private void Update()
     {
-        if (!playerBase) SceneManager.LoadScene(0);
+        if (!playerBase || !lastBoss) 
+            EndGameHandle();
+            
         EvenWarningHandler();
     }
     
@@ -37,8 +42,13 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void EvenWarningHandler()
     {
-        if (!TimeSystem.Instance.TimePeriodCheck(17, 19)) return;
-        if (warningText.gameObject.activeSelf) return;
+        if (!TimeSystem.Instance.TimePeriodCheck(17, 18))
+        {
+            isNightWarning = false;
+            return;
+        }
+        if (warningText.gameObject.activeSelf || isNightWarning) return;
+        isNightWarning = true;
         StartCoroutine(ToggleSetActiveRelateWithAnimation(warningText.gameObject));
     }
 
@@ -56,6 +66,15 @@ public class GameManager : MonoBehaviour
         StartCoroutine(ToggleSetActiveRelateWithAnimation(scoreAddAnimation.gameObject));
     }
     
+    public void SpawnLastBoss()
+    {
+        lastBoss.gameObject.SetActive(true);
+    }
+
+    public void EndGameHandle()
+    {
+        SceneManager.LoadScene(0);
+    }
     
     /// <summary>
     /// Toggle set active game object relate with animation.

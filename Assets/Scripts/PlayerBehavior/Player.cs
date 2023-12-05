@@ -265,6 +265,7 @@ namespace PlayerBehavior
             _isDash = false;
             _isDashCooldown = false;
             _currentSpeed = walkSpeed;
+            _currentStamina = maxStamina;
             PlayerInteractSystem.Instance.isStopMove = false;
             PlayerCombatSystem.Instance.CancelAttacking();
         }

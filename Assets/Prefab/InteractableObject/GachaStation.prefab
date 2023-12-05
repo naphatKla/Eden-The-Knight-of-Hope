@@ -496,7 +496,7 @@ MonoBehaviour:
   progressBar: {fileID: 1260059282372645095}
   alphaLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   gachaArea: {x: 10, y: 10}
   playerLayer:
     serializedVersion: 2

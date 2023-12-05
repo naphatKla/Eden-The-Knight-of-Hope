@@ -13,7 +13,9 @@ public enum TimeState
 public class TimeSystem : MonoBehaviour
 {
     #region MyRegion
-    [Header("Time")]
+
+    [Header("Time")] 
+    public int dayEnd;
     public float dayTime;
     public float nightTime;
     public float gameStartTime;
@@ -80,7 +82,7 @@ public class TimeSystem : MonoBehaviour
         UpdateTimeMultiplier();
         time += Time.deltaTime * _timeMultiplier;
         dayText.text = $"Day {day}";
-        timeText.text = $"{Mathf.Floor(GetCurrentTime()):F0}:00";
+        timeText.text = _timeMultiplier == 0? $"∞" : $"{Mathf.Floor(GetCurrentTime()):F0}:00";
         
         // new day
         if (time < cycleLength) return;
@@ -97,6 +99,13 @@ public class TimeSystem : MonoBehaviour
     {
         const float dayTimeMultiplier = 1;
         float nightTimeMultiplier = dayTime / nightTime;
+        
+        if (day == dayEnd+1 && _timeMultiplier != 0)
+        {
+            _timeMultiplier = 0;
+            GameManager.Instance.SpawnLastBoss();
+            return;
+        }
         
         if (TimePeriodCheck(dayPeriod.x, dayPeriod.y))
         {
