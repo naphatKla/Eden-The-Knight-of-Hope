@@ -16,6 +16,7 @@ namespace CombatSystem
         public float CurrentAttackCooldown {get => currentAttackCooldown; set => currentAttackCooldown = value;}
         private bool _attackBuffering;
         
+        
         protected override void Start()
         {
             base.Start();

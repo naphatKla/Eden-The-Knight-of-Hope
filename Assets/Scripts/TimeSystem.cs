@@ -46,6 +46,10 @@ public class TimeSystem : MonoBehaviour
     [SerializeField] private Sprite dayIcon;
     [SerializeField] private Sprite nightIcon;
     public TimeState timeState;
+    
+    [Header("Ambient Sound")]
+    public AudioClip[] dayAmbientSounds;
+    public AudioClip[] nightAmbientSounds;
     public event Action OnNewDay, OnDay, OnNight;
     public static TimeSystem Instance;
     #endregion
@@ -62,13 +66,14 @@ public class TimeSystem : MonoBehaviour
         _lightUpDuration = lightUpPeriod.y - lightUpPeriod.x;
         _lightDownDuration = lightDownPeriod.y - lightDownPeriod.x;
         time = ConvertHourToSec(gameStartTime);
+        SoundManager.Instance.RandomPlayBackGroundMusic(dayAmbientSounds, true);
     }
     
     private void Update()
     {
         TimeUpdateHandler();
         DayLightHandle();
-
+     
         clock.rectTransform.rotation = Quaternion.Euler(0, 0, (time / cycleLength) * 360);
     }
 
@@ -113,6 +118,7 @@ public class TimeSystem : MonoBehaviour
             _timeMultiplier = dayTimeMultiplier;
             timeState = TimeState.Day;
             dayAndNightIcon.sprite = dayIcon;
+            SoundManager.Instance.RandomPlayBackGroundMusic(dayAmbientSounds, true);
             OnDay?.Invoke();
         }
         else
@@ -121,6 +127,7 @@ public class TimeSystem : MonoBehaviour
             _timeMultiplier = nightTimeMultiplier;
             timeState = TimeState.Night;
             dayAndNightIcon.sprite = nightIcon;
+            SoundManager.Instance.RandomPlayBackGroundMusic(nightAmbientSounds, true);
             OnNight?.Invoke();
         }
     }
