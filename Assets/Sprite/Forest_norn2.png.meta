@@ -1,0 +1,336 @@
+fileFormatVersion: 2
+guid: a27b138bc90dddf42a18c12bfac2406d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Forest_norn2_0
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 3242
+        width: 1672
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 616, y: -351}
+        - {x: 569, y: -386}
+        - {x: 470, y: -420}
+        - {x: 397, y: -412}
+        - {x: 316.265, y: -389.59106}
+        - {x: 199, y: -385}
+        - {x: 100, y: -421}
+        - {x: 23, y: -393}
+        - {x: -100, y: -377}
+        - {x: -181, y: -392}
+        - {x: -303, y: -419}
+        - {x: -403.75635, y: -390.5376}
+        - {x: -505, y: -389}
+        - {x: -617, y: -422}
+        - {x: -734, y: -395}
+        - {x: -734, y: -365}
+        - {x: -709, y: -325}
+        - {x: -703, y: -231}
+        - {x: -592, y: -189}
+        - {x: -380, y: -173}
+        - {x: -190, y: -162}
+        - {x: 141, y: -157}
+        - {x: 453, y: -152}
+        - {x: 694, y: -114}
+        - {x: 714, y: -261}
+        - {x: 745, y: -311}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56fc356bf2d4b364bb696954f9f06b7d
+      internalID: 1865327926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_norn2_5
+      rect:
+        serializedVersion: 2
+        x: 2755
+        y: 3255
+        width: 427
+        height: 832
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 75.5, y: -351}
+        - {x: 37.5, y: -365}
+        - {x: -6.5, y: -377}
+        - {x: -57.5, y: -351}
+        - {x: -105.5, y: -352}
+        - {x: -108.5, y: -326}
+        - {x: -84.5, y: -291}
+        - {x: -77.5, y: -263}
+        - {x: -1.5, y: -248}
+        - {x: 78.5, y: -269}
+        - {x: 87.5, y: -309}
+        - {x: 112.5, y: -342}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b707b5dfb8ebaef48a365eb72dff6d7e
+      internalID: -107624882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_norn2_7
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 2080
+        width: 3098
+        height: 1041
+      alignment: 9
+      pivot: {x: 0.5, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1261.646, y: -475.29712}
+        - {x: -1444.7, y: -472.542}
+        - {x: -1453, y: -422.5}
+        - {x: -1425, y: -362.5}
+        - {x: -1437, y: 142.5}
+        - {x: -1365, y: 189.5}
+        - {x: -1286.7687, y: 234.64722}
+        - {x: 1343.1499, y: 220.10205}
+        - {x: 1380, y: 177.5}
+        - {x: 1443.2207, y: 95.57764}
+        - {x: 1426, y: -147.5}
+        - {x: 1464, y: -236.5}
+        - {x: 1411, y: -300.5}
+        - {x: 1463, y: -384.5}
+        - {x: 1295, y: -416.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb26b53bba55fe74daa25107af8f553b
+      internalID: -899795861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_norn2_16
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 408
+        width: 3507
+        height: 1465
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1366.489, y: -689.5}
+        - {x: -1364.6903, y: -689.5}
+        - {x: -1456.5, y: -636.5}
+        - {x: -1540.5, y: -642.5}
+        - {x: -1630.5, y: -628.5}
+        - {x: -1660.5, y: -596.5}
+        - {x: -1624.5, y: -554.5}
+        - {x: -1609.5, y: -73.5}
+        - {x: -1414.5, y: 221.5}
+        - {x: -1173.5, y: 365.5}
+        - {x: -896.5, y: 410.5}
+        - {x: -534.5, y: 446.5}
+        - {x: -28.5, y: 443.5}
+        - {x: 432.5, y: 429.5}
+        - {x: 904.5, y: 408.5}
+        - {x: 1441.5, y: 303.5}
+        - {x: 1620.5, y: 127.5}
+        - {x: 1631.5, y: -51.5}
+        - {x: 1626.5, y: -197.5}
+        - {x: 1660.5, y: -313.5}
+        - {x: 1607.5, y: -340.5}
+        - {x: 1527.5, y: -392.5}
+        - {x: 1507.5, y: -492.5}
+        - {x: 1520.5, y: -591.5}
+        - {x: 1412.5, y: -641.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ff68eef9fe9e14b815e0569dcfd44f
+      internalID: -1328005813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_norn2_17
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 810
+        width: 4
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4706a8db8a98f004b89a9037247d5e0b
+      internalID: -1276785751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Forest_norn2_0: 1865327926
+      Forest_norn2_1: -1170119355
+      Forest_norn2_10: -1271496476
+      Forest_norn2_11: -843580074
+      Forest_norn2_12: -608353175
+      Forest_norn2_13: 1535375494
+      Forest_norn2_14: 364433106
+      Forest_norn2_15: -1953047970
+      Forest_norn2_16: -1328005813
+      Forest_norn2_17: -1276785751
+      Forest_norn2_18: -719136437
+      Forest_norn2_19: -1018471826
+      Forest_norn2_2: 133554842
+      Forest_norn2_20: 1241041880
+      Forest_norn2_21: -491630120
+      Forest_norn2_22: -1631367347
+      Forest_norn2_23: 1392933165
+      Forest_norn2_24: -2127668269
+      Forest_norn2_25: -1195229772
+      Forest_norn2_3: 365700417
+      Forest_norn2_4: 1751776562
+      Forest_norn2_5: -107624882
+      Forest_norn2_6: 332772363
+      Forest_norn2_7: -899795861
+      Forest_norn2_8: -763055055
+      Forest_norn2_9: 1044777239
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
