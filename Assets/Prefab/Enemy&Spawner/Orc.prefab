@@ -657,6 +657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sliderHpPlayer: {fileID: 4662909907157406043}
   maxHp: 45
+  isDead: 0
 --- !u!114 &8320007089722136384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,6 +682,7 @@ MonoBehaviour:
     cooldown: 1.1
     attackState: 0
   attackState: 0
+  attackRangeOffset: 1
 --- !u!195 &3568997344390356489
 NavMeshAgent:
   m_ObjectHideFlags: 0

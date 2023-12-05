@@ -7,7 +7,7 @@ namespace CombatSystem
     public class EnemyCombatSystem : CombatSystem
     {
         private Enemy _enemy;
-
+        [SerializeField] private float attackRangeOffset;
         protected override void Start()
         {
             _enemy = GetComponent<Enemy>();
@@ -28,9 +28,9 @@ namespace CombatSystem
             
             // if the target is not in attack area, cancel attacking and follow the target.
             if (TargetInAttackArea.All(target => target.gameObject != _enemy.Target)) return;
-
-            float distance = Vector2.Distance((Vector2)transform.position,_enemy.Target.transform.position);
-            if(distance >= attackArea.x - 2) return;
+            float offset = Mathf.Abs(attackPoint.position.x - transform.position.x);
+            float distance = Vector2.Distance((Vector2)transform.position,_enemy.Target.transform.position) + offset;
+            if(distance >= attackArea.x - attackRangeOffset) return;
             
             _enemy.Agent.velocity = Vector2.zero;
             base.AttackHandle();

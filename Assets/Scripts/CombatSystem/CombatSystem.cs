@@ -36,9 +36,9 @@ namespace CombatSystem
         [Header("Normal Attack")]
         [SerializeField] protected List<AttackPattern> attackPatterns;
         protected AttackPattern currentAttackPattern;
-        [SerializeField] private AttackState attackState;
-        private Coroutine _attackCoroutine;
-        private Animator _animator;
+        [SerializeField] protected AttackState attackState;
+        protected Coroutine attackCoroutine;
+        protected Animator animator;
         protected float lastAttackTime;
         
         private HealthSystem.HealthSystem _healthSystem;
@@ -49,7 +49,7 @@ namespace CombatSystem
             attackStat = baseAttackStat;
             attackState = AttackState.AttackState0;
             currentAttackPattern = attackPatterns[0];
-            _animator = GetComponent<Animator>();
+            animator = GetComponent<Animator>();
             _healthSystem = GetComponent<HealthSystem.HealthSystem>();
             
         }
@@ -69,12 +69,12 @@ namespace CombatSystem
         protected virtual void AttackHandle()
         {
             if (Time.time < lastAttackTime + currentAttackCooldown) return;   // cooldown check.
-            if (_attackCoroutine != null) return;
+            if (attackCoroutine != null) return;
       
             attackState = Time.time - lastAttackTime > 2 ? AttackState.AttackState0 : attackState;
             currentAttackPattern = attackPatterns[(int)attackState];
             currentAttackCooldown = currentAttackPattern.cooldown - (currentAttackPattern.cooldown * ReduceCoolDownPercent);
-            _attackCoroutine = StartCoroutine(Attack(currentAttackPattern.delay));
+            attackCoroutine = StartCoroutine(Attack(currentAttackPattern.delay));
         }
     
     
@@ -87,7 +87,7 @@ namespace CombatSystem
         protected virtual IEnumerator Attack(float delay)
         {
             lastAttackTime = Time.time;
-            _animator.SetTrigger(attackState.ToString());
+            animator.SetTrigger(attackState.ToString());
         
             yield return new WaitForSeconds(delay);
         
@@ -96,7 +96,7 @@ namespace CombatSystem
         
             // Change attack stage to next stage, if attack state is the last state, change to the first state.
             attackState = (int)attackState >= attackPatterns.Count - 1 ? AttackState.AttackState0 : attackState + 1;
-            _attackCoroutine = null;
+            attackCoroutine = null;
         }
     
     
@@ -105,9 +105,9 @@ namespace CombatSystem
         /// </summary>
         public void CancelAttacking()
         {
-            if (_attackCoroutine == null) return;
-            StopCoroutine(_attackCoroutine);
-            _attackCoroutine = null;
+            if (attackCoroutine == null) return;
+            StopCoroutine(attackCoroutine);
+            attackCoroutine = null;
         }
     
     
