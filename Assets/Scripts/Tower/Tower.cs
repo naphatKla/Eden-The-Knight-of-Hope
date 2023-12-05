@@ -80,7 +80,7 @@ namespace Tower
             {
                 if (objInSprite.Any(obj => obj.transform.position.y > transform.position.y+0.5f))
                 {
-                    if (spriteRenderer.color.a > 0.5f)
+                    if (spriteRenderer.color.a > 0.75f)
                     {
                         Color color = spriteRenderer.color;
                         color.a -= 0.01f;

@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     #endregion
     
-    private void Start()
+    private void Awake()
     {
         Instance = this;
     }

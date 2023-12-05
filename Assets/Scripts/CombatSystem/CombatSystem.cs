@@ -40,6 +40,8 @@ namespace CombatSystem
         private Coroutine _attackCoroutine;
         private Animator _animator;
         protected float lastAttackTime;
+        
+        private HealthSystem.HealthSystem _healthSystem;
         #endregion
     
         protected virtual void Start()
@@ -48,10 +50,13 @@ namespace CombatSystem
             attackState = AttackState.AttackState0;
             currentAttackPattern = attackPatterns[0];
             _animator = GetComponent<Animator>();
+            _healthSystem = GetComponent<HealthSystem.HealthSystem>();
+            
         }
     
         protected virtual void Update()
         {
+            if (_healthSystem.isDead) return;
             TargetInAttackArea = Physics2D.OverlapBoxAll(attackPoint.position, attackArea, 0 , targetLayer).ToList();
             AttackHandle();
         }

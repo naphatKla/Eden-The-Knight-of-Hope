@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Linq;
 using CombatSystem;
+using HealthSystem;
 using UnityEngine;
 
 
@@ -94,6 +95,7 @@ namespace PlayerBehavior
                 _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttackState_2") ||
                 _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttackState_3") ||
                 _animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerHeavyAttack") ||
+                PlayerHealthSystem.Instance.isDead ||
                 PlayerInteractSystem.Instance.isStopMove)
             {
                 if (PlayerInteractSystem.Instance.isStopMove)

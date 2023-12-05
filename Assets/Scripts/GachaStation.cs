@@ -34,11 +34,11 @@ public class GachaStation : InteractableObject
         selectButton.onClick.AddListener(SelectGacha);
         discardButton.onClick.AddListener(OpenGachaUI);
         closeButton.onClick.AddListener(CloseGachaUI);
-        interactionTextUI.text = $"Press E to open the gachapon.\n<color=blue>Cost: {cost} coins</color>";
     }
 
-    protected void Update()
+    protected override void Update()
     {
+        base.Update();
         if (Input.GetKeyDown(KeyCode.Escape))
             CloseGachaUI();
         if(_lastOpenTime + 1.5f > Time.time) return;

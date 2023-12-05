@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using HealthSystem;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -47,10 +48,12 @@ namespace EnemyBehavior
         public bool IsStun { get; set; }
         public GameObject Target { get; set; }
         public NavMeshAgent Agent { get; private set; }
+        private EnemyHealthSystem _enemyHealthSystem;
         #endregion
     
         protected void Start()
         {
+            _enemyHealthSystem = GetComponent<EnemyHealthSystem>();
             _animator = GetComponent<Animator>();
             Agent = GetComponent<NavMeshAgent>();
             GetComponent<SpriteRenderer>();
@@ -62,7 +65,7 @@ namespace EnemyBehavior
 
         protected void Update()
         {
-            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttack") || IsStun)
+            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttack") || IsStun || _enemyHealthSystem.isDead)
             {
                 Agent.velocity = Vector2.zero;
                 return;

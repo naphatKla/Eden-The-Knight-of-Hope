@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +11,7 @@ namespace HealthSystem
         [SerializeField] protected Slider sliderHpPlayer;
         [SerializeField] public float maxHp;
         public float CurrentHp { get; private set; }
-        protected bool isDead;
+        [HideInInspector] public bool isDead;
         protected Animator animator;
         protected SpriteRenderer spriteRenderer;
         #endregion
@@ -51,7 +53,6 @@ namespace HealthSystem
             Invoke(nameof(ResetSpriteColor), 0.2f);
         
             if (CurrentHp > 0 || isDead) return;
-            isDead = true;
             Dead();
         }
 
@@ -60,7 +61,7 @@ namespace HealthSystem
         /// Heal and increase the current hp.
         /// </summary>
         /// <param name="healPoint">Heal amount.</param>
-        public void Heal(float healPoint)
+        public virtual  void Heal(float healPoint)
         {
             CurrentHp += healPoint;
             CurrentHp = Mathf.Clamp(CurrentHp, 0, maxHp);
@@ -73,7 +74,27 @@ namespace HealthSystem
         /// </summary>
         protected virtual void Dead()
         {
-            Destroy(gameObject);
+            isDead = true;
+            StartCoroutine(WaitForDeadAnimation());
+        }
+        
+        IEnumerator WaitForDeadAnimation()
+        {
+            if (animator)
+                animator.SetTrigger("Dead");
+            float timeCount = 0;
+            while (timeCount < 1f)
+            {
+                Color color = spriteRenderer.color;
+                color.a = 1 - timeCount;
+                spriteRenderer.color = color;
+                timeCount += Time.deltaTime;
+                yield return null;
+            }
+            if(this is PlayerHealthSystem)
+                gameObject.SetActive(false);
+            else
+                Destroy(gameObject);
         }
     
         

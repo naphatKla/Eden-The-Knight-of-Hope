@@ -48,8 +48,9 @@ public class CraftingTable : InteractableObject
         potionPage.Initialize(potionItems);
     }
     
-    protected void Update()
+    protected override void Update()
     {
+        base.Update();
         if (Input.GetKeyDown(KeyCode.Escape))
             CloseCraftingUI();
         if(_lastOpenTime + 1.5f > Time.time) return;

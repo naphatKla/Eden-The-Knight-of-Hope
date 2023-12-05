@@ -29,6 +29,7 @@ namespace Spawner
         [SerializeField] private NightModeSpawnRate[] nightModeSpawnRates;
         [SerializeField] private NightModeSpawn[] nightModeSpawnEnemies;
         private bool _isReduceRate;
+        List<PriorityObject<GameObject>> enemyList;
         #endregion
         
         protected override void Start()
@@ -75,7 +76,8 @@ namespace Spawner
                 base.SpawnObject();
                 return;
             }
-            List<PriorityObject<GameObject>> enemyList = nightModeSpawnEnemies.LastOrDefault(enemy => enemy.dayGreaterOrEqualThan <= TimeSystem.Instance.day).enemies;
+            if (TimeSystem.Instance.TimePeriodCheck(18,23))
+                enemyList = nightModeSpawnEnemies.LastOrDefault(enemy => enemy.dayGreaterOrEqualThan <= TimeSystem.Instance.day).enemies;
             GameObject enemyToSpawn = ProjectExtensions.RandomPickOne(enemyList).obj;
             base.SpawnObject(enemyToSpawn);
             LastSpawnedObject.GetComponent<Enemy>().NightMode = true;

@@ -48,7 +48,7 @@ namespace HealthSystem
             {
                 if (objInSprite.Any(obj => obj.transform.position.y > transform.position.y+1f))
                 {
-                    if (_spriteRenderer.color.a > 0.5f)
+                    if (_spriteRenderer.color.a > 0.75f)
                     {
                         Color color = _spriteRenderer.color;
                         color.a -= 0.01f;

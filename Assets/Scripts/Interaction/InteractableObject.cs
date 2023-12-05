@@ -11,7 +11,7 @@ namespace Interaction
     {
         #region Declare Variables
         [SerializeField] protected KeyCode key;
-        [SerializeField] protected string prompt;
+        [TextArea] [SerializeField] protected string prompt;
         [SerializeField] protected TextMeshProUGUI interactionTextUI;
         [SerializeField] protected GameObject[] interactionIndicators;
         [SerializeField] protected float countdownTime;
@@ -27,12 +27,11 @@ namespace Interaction
             SpriteRenderer = GetComponent<SpriteRenderer>();
         }
 
-        private void Update()
+        protected virtual void Update()
         {
             AlphaDetect();
         }
-
-
+        
         #region Methods
         /// <summary>
         /// Event when the object is targeted.
@@ -77,7 +76,7 @@ namespace Interaction
             {
                 if (objInSprite.Any(obj => obj.transform.position.y > transform.position.y))
                 {
-                    if (SpriteRenderer.color.a > 0.5f)
+                    if (SpriteRenderer.color.a > 0.75f)
                     {
                         Color color = SpriteRenderer.color;
                         color.a -= 0.01f;
