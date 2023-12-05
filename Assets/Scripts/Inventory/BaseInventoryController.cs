@@ -4,7 +4,7 @@ namespace Inventory
 {
     public class BaseInventoryController<T> : MonoBehaviour where T : BaseUIInventoryPage
     {
-        [SerializeField] protected T inventoryUI;
+        public T inventoryUI;
         [SerializeField] protected InventorySo inventoryData;
         public List<InventoryItem> initialItems = new List<InventoryItem>();
 

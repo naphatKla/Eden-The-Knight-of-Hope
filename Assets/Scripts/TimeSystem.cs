@@ -13,7 +13,9 @@ public enum TimeState
 public class TimeSystem : MonoBehaviour
 {
     #region MyRegion
-    [Header("Time")]
+
+    [Header("Time")] 
+    public int dayEnd;
     public float dayTime;
     public float nightTime;
     public float gameStartTime;
@@ -44,6 +46,10 @@ public class TimeSystem : MonoBehaviour
     [SerializeField] private Sprite dayIcon;
     [SerializeField] private Sprite nightIcon;
     public TimeState timeState;
+    
+    [Header("Ambient Sound")]
+    public AudioClip[] dayAmbientSounds;
+    public AudioClip[] nightAmbientSounds;
     public event Action OnNewDay, OnDay, OnNight;
     public static TimeSystem Instance;
     #endregion
@@ -60,13 +66,14 @@ public class TimeSystem : MonoBehaviour
         _lightUpDuration = lightUpPeriod.y - lightUpPeriod.x;
         _lightDownDuration = lightDownPeriod.y - lightDownPeriod.x;
         time = ConvertHourToSec(gameStartTime);
+        SoundManager.Instance.RandomPlayBackGroundMusic(dayAmbientSounds, true);
     }
     
     private void Update()
     {
         TimeUpdateHandler();
         DayLightHandle();
-
+     
         clock.rectTransform.rotation = Quaternion.Euler(0, 0, (time / cycleLength) * 360);
     }
 
@@ -80,7 +87,7 @@ public class TimeSystem : MonoBehaviour
         UpdateTimeMultiplier();
         time += Time.deltaTime * _timeMultiplier;
         dayText.text = $"Day {day}";
-        timeText.text = $"{Mathf.Floor(GetCurrentTime()):F0}:00";
+        timeText.text = _timeMultiplier == 0? $"∞" : $"{Mathf.Floor(GetCurrentTime()):F0}:00";
         
         // new day
         if (time < cycleLength) return;
@@ -98,12 +105,20 @@ public class TimeSystem : MonoBehaviour
         const float dayTimeMultiplier = 1;
         float nightTimeMultiplier = dayTime / nightTime;
         
+        if (day == dayEnd+1 && _timeMultiplier != 0)
+        {
+            _timeMultiplier = 0;
+            GameManager.Instance.SpawnLastBoss();
+            return;
+        }
+        
         if (TimePeriodCheck(dayPeriod.x, dayPeriod.y))
         {
             if (TimeSystem.Instance.timeState == TimeState.Day) return;
             _timeMultiplier = dayTimeMultiplier;
             timeState = TimeState.Day;
             dayAndNightIcon.sprite = dayIcon;
+            SoundManager.Instance.RandomPlayBackGroundMusic(dayAmbientSounds, true);
             OnDay?.Invoke();
         }
         else
@@ -112,6 +127,7 @@ public class TimeSystem : MonoBehaviour
             _timeMultiplier = nightTimeMultiplier;
             timeState = TimeState.Night;
             dayAndNightIcon.sprite = nightIcon;
+            SoundManager.Instance.RandomPlayBackGroundMusic(nightAmbientSounds, true);
             OnNight?.Invoke();
         }
     }

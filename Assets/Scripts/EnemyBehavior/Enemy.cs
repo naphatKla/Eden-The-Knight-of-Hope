@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using HealthSystem;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -41,15 +42,18 @@ namespace EnemyBehavior
         private Animator _animator;
         private Rigidbody2D _rigidbody2D;
         private static readonly int Speed = Animator.StringToHash("Speed");
+        private float _lastTimeTurn;
 
         public bool NightMode { get => nightMode; set => nightMode = value; }
         public bool IsStun { get; set; }
         public GameObject Target { get; set; }
         public NavMeshAgent Agent { get; private set; }
+        private EnemyHealthSystem _enemyHealthSystem;
         #endregion
     
-        protected void Start()
+        protected void Awake()
         {
+            _enemyHealthSystem = GetComponent<EnemyHealthSystem>();
             _animator = GetComponent<Animator>();
             Agent = GetComponent<NavMeshAgent>();
             GetComponent<SpriteRenderer>();
@@ -61,7 +65,7 @@ namespace EnemyBehavior
 
         protected void Update()
         {
-            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttack") || IsStun)
+            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttack") || IsStun || _enemyHealthSystem.isDead)
             {
                 Agent.velocity = Vector2.zero;
                 return;
@@ -117,6 +121,12 @@ namespace EnemyBehavior
         private void FollowTargetHandle()
         {
             SelectTarget();
+            if (!Target || !Target.activeSelf)
+            {
+                ReturnToSpawnHandle();
+                Target = null;
+                return;
+            }
             SetEnemyState(EnemyState.FollowTarget);
             Agent.SetDestination(Target.transform.position);
         }
@@ -154,8 +164,11 @@ namespace EnemyBehavior
             _animator.SetFloat(Speed, Agent.velocity.magnitude);
 
             // flip horizontal direction relate with enemy direction
-            if (Mathf.Abs(Agent.velocity.x) > 0)
+            if (Mathf.Abs(Agent.velocity.x) > 0.25f && Time.time > _lastTimeTurn + 0.25f)
+            {
                 transform.right = Agent.velocity.x < 0 ? Vector2.left : Vector2.right;
+                _lastTimeTurn = Time.time;
+            }
         }
 
     
@@ -191,6 +204,7 @@ namespace EnemyBehavior
             yield return new WaitForSeconds(time);
         
             SetEnemyState(EnemyState.ReturnToSpawn);
+            Target = null;
             while (CheckState(EnemyState.ReturnToSpawn))
             {
                 Agent.SetDestination(_spawnPoint);

@@ -1,4 +1,7 @@
+using System.Collections;
+using System.Linq;
 using Inventory;
+using PlayerBehavior;
 using UnityEngine;
 
 namespace Interaction
@@ -6,7 +9,8 @@ namespace Interaction
     public class GatheringResource : InteractableObject
     {
         public GatheringResourceSO resourceData;
-        
+        private PolygonCollider2D _collider2D;
+        private bool _isDestroying;
         public void SetData(GatheringResourceSO data)
         {
             resourceData = data;
@@ -16,8 +20,31 @@ namespace Interaction
         protected override void Start()
         {
             base.Start();
-            gameObject.AddComponent<PolygonCollider2D>();
+            _collider2D = gameObject.AddComponent<PolygonCollider2D>();
+            prompt = $"<b>[ E ] {resourceData.name}";
+            interactionTextUI.text = prompt;
             SpriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
+        protected override void InteractHandler()
+        {
+            if (_isDestroying) return;
+            base.InteractHandler();
+        }
+
+        public override void OnTarget(bool isTarget)
+        {
+            if (_isDestroying)
+            {
+                foreach (var interactionIndicator in interactionIndicators)
+                        interactionIndicator.SetActive(false);
+                return;
+            }
+            foreach (var interactionIndicator in interactionIndicators)
+                interactionIndicator.SetActive(isTarget);
+        
+            if (!isTarget) return;
+            InteractHandler();
         }
 
         protected override void InteractAction()
@@ -60,7 +87,25 @@ namespace Interaction
                 PlayerInventoryController.Instance.InventoryData.AddItem(gatheringItemDrop.item, quantity);
             }
 
-            base.InteractAction();
+            StartCoroutine(FadeAnimWhenDestroy());
+        }
+
+        IEnumerator FadeAnimWhenDestroy()
+        {
+            PlayerInteractSystem.Instance.isStopMove = false;
+            progressBar.gameObject.SetActive(false);
+            _isDestroying = true;
+            _collider2D.isTrigger = true;
+            float timeCount = 0;
+            while (timeCount < 0.5f)
+            {
+                Color color = SpriteRenderer.color;
+                color.a = 1 - timeCount / 0.5f;
+                SpriteRenderer.color = color;
+                timeCount += Time.deltaTime;
+                yield return null;
+            }
+            Destroy(gameObject);
         }
     }
 }

@@ -15,9 +15,14 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Wooden Leggings
-  <Description>k__BackingField: Just a leggings
+  <Description>k__BackingField: 'They might have splinter so be careful
+
+
+    <color=#1AA260>
+    Max Health +30 </color> '
   <ItemImage>k__BackingField: {fileID: -1007087290, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 3
+  <Cost>k__BackingField: 24
   maxHp: 30
   hp: 0
   stamina: 0

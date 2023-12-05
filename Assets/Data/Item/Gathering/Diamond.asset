@@ -15,6 +15,11 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 1
   <MaxStackSize>k__BackingField: 99
   <Name>k__BackingField: Diamond
-  <Description>k__BackingField: 
+  <Description>k__BackingField: 'High quality mineral one step closer to become god
+
+
+    <color=#78866B>
+    Use to craft tools, armors, material'
   <ItemImage>k__BackingField: {fileID: -117493683, guid: 29e6d65dd80933f4caba5d02ffa19131, type: 3}
   <ItemSlotType>k__BackingField: 6
+  <Cost>k__BackingField: 120

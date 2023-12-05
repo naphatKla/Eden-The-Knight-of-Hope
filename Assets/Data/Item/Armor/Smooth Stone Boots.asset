@@ -15,9 +15,11 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Smooth Stone Boots
-  <Description>k__BackingField: Just a Boots
+  <Description>k__BackingField: "Lucky you we don\u2019t have slow debuff for this
+    armor ;p\n\n<color=#1AA260> Max Health +24.75"
   <ItemImage>k__BackingField: {fileID: 1623994067, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 4
+  <Cost>k__BackingField: 18
   maxHp: 24.75
   hp: 0
   stamina: 0

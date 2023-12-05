@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using HealthSystem;
 using UnityEngine;
 
 namespace CombatSystem
@@ -19,6 +20,7 @@ namespace CombatSystem
         public float delay;
         public float cooldown;
         public AttackState attackState;
+        public AudioClip[] attackSounds;
     }
     public class CombatSystem : MonoBehaviour
     {
@@ -36,10 +38,12 @@ namespace CombatSystem
         [Header("Normal Attack")]
         [SerializeField] protected List<AttackPattern> attackPatterns;
         protected AttackPattern currentAttackPattern;
-        [SerializeField] private AttackState attackState;
-        private Coroutine _attackCoroutine;
-        private Animator _animator;
+        [SerializeField] protected AttackState attackState;
+        protected Coroutine attackCoroutine;
+        protected Animator animator;
         protected float lastAttackTime;
+        
+        private HealthSystem.HealthSystem _healthSystem;
         #endregion
     
         protected virtual void Start()
@@ -47,12 +51,15 @@ namespace CombatSystem
             attackStat = baseAttackStat;
             attackState = AttackState.AttackState0;
             currentAttackPattern = attackPatterns[0];
-            _animator = GetComponent<Animator>();
+            animator = GetComponent<Animator>();
+            _healthSystem = GetComponent<HealthSystem.HealthSystem>();
+            
         }
     
         protected virtual void Update()
         {
-            TargetInAttackArea = Physics2D.OverlapBoxAll(attackPoint.position, attackArea, 0, targetLayer).ToList();
+            if (_healthSystem.isDead) return;
+            TargetInAttackArea = Physics2D.OverlapBoxAll(attackPoint.position, attackArea, 0 , targetLayer).ToList();
             AttackHandle();
         }
 
@@ -64,12 +71,12 @@ namespace CombatSystem
         protected virtual void AttackHandle()
         {
             if (Time.time < lastAttackTime + currentAttackCooldown) return;   // cooldown check.
-            if (_attackCoroutine != null) return;
+            if (attackCoroutine != null) return;
       
             attackState = Time.time - lastAttackTime > 2 ? AttackState.AttackState0 : attackState;
             currentAttackPattern = attackPatterns[(int)attackState];
             currentAttackCooldown = currentAttackPattern.cooldown - (currentAttackPattern.cooldown * ReduceCoolDownPercent);
-            _attackCoroutine = StartCoroutine(Attack(currentAttackPattern.delay));
+            attackCoroutine = StartCoroutine(Attack(currentAttackPattern.delay));
         }
     
     
@@ -82,27 +89,28 @@ namespace CombatSystem
         protected virtual IEnumerator Attack(float delay)
         {
             lastAttackTime = Time.time;
-            _animator.SetTrigger(attackState.ToString());
-        
+            animator.SetTrigger(attackState.ToString());
+            
+            SoundManager.Instance.RandomPlaySound(currentAttackPattern.attackSounds);
             yield return new WaitForSeconds(delay);
-        
+            
             List<HealthSystem.HealthSystem> targetHealthSystems = TargetInAttackArea.Select(target => target.GetComponent<HealthSystem.HealthSystem>()).ToList();
             targetHealthSystems.ForEach(target => target.TakeDamage(currentAttackPattern.power * attackStat,gameObject));
         
             // Change attack stage to next stage, if attack state is the last state, change to the first state.
             attackState = (int)attackState >= attackPatterns.Count - 1 ? AttackState.AttackState0 : attackState + 1;
-            _attackCoroutine = null;
+            attackCoroutine = null;
         }
     
     
         /// <summary>
         /// Cancel attacking.
         /// </summary>
-        protected void CancelAttacking()
+        public void CancelAttacking()
         {
-            if (_attackCoroutine == null) return;
-            StopCoroutine(_attackCoroutine);
-            _attackCoroutine = null;
+            if (attackCoroutine == null) return;
+            StopCoroutine(attackCoroutine);
+            attackCoroutine = null;
         }
     
     

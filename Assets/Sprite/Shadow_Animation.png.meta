@@ -1,0 +1,810 @@
+fileFormatVersion: 2
+guid: e9330b95419c2d94882a88ebe9cd2d9b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shadow_Animation_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 905
+        width: 201
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7c4968964d2c742a311e7f8f7b410e
+      internalID: 2074222398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_1
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 905
+        width: 201
+        height: 266
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c612205bf276144b441fe783cc58f7
+      internalID: -1861493004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_2
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 905
+        width: 201
+        height: 259
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3de575b396bfd47aa7fa8585508a49
+      internalID: -2049642775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_3
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 905
+        width: 201
+        height: 268
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d05963c7d5133047b2403de1a12dd9a
+      internalID: -2004815394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_4
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 905
+        width: 201
+        height: 266
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06fee0e394c4d644b86fce4261159eae
+      internalID: -473277168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_5
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 905
+        width: 201
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e68043be58259e4d976893ac7a01737
+      internalID: 1941277296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_6
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 605
+        width: 201
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11ebb518798a4141b77fddb3fc2321e
+      internalID: -1892674024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_7
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 605
+        width: 201
+        height: 267
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aaa456faf6dc3a43884402e08da14f3
+      internalID: 1946989522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_8
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 605
+        width: 201
+        height: 263
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb322866a64e57f48b12d7e683246c55
+      internalID: -1908907226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_9
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 605
+        width: 201
+        height: 267
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd4b932ce6594f4ebe70664b5234928
+      internalID: 1536462765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_10
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 605
+        width: 201
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9285c69e831908142b91966c3e8bae46
+      internalID: -1278921508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_11
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 605
+        width: 201
+        height: 269
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f816da39a55c643a5fec3df0053d2d
+      internalID: 474129867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_12
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 605
+        width: 201
+        height: 263
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29433b90cc776484abd870f36ee92b8a
+      internalID: 2049818914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_13
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 605
+        width: 201
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7931d7a290736994ba61de44dea08399
+      internalID: -437795664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_14
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 304
+        width: 201
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bef21ea94abd7142b97a27fa84e8bd3
+      internalID: 1686790018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_15
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 305
+        width: 201
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03aee3474ca122947bcac4c09acaac91
+      internalID: 92087390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_16
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 305
+        width: 201
+        height: 258
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a970bff943164744b2b883e2b7a205c
+      internalID: 2043669211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_17
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 305
+        width: 201
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a027c2d06abe33843ad88e27c8f6357e
+      internalID: 214825735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_18
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 305
+        width: 201
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ff1a1d93cb41740b17875c89cb6aec
+      internalID: 583924854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_19
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 305
+        width: 201
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e7361d8a5d844459f2f8111422b07f
+      internalID: -75840821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_20
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 305
+        width: 201
+        height: 257
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b21b87b6f887f345b564bf21eed1ac6
+      internalID: -1773373884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_21
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 305
+        width: 201
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fdc1fd98f1203749a3e049f1549c204
+      internalID: 557679254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_22
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 5
+        width: 201
+        height: 259
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a664519b9d07534689d0481b3be21c2
+      internalID: -1499877996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_23
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 5
+        width: 207
+        height: 246
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b712f5f8c1fe96d4b904b3c8e9fca652
+      internalID: -1075711694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_24
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 5
+        width: 209
+        height: 181
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96b9d25f9e7cfe4a927b4c7984fc2df
+      internalID: -553362594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_25
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 5
+        width: 201
+        height: 218
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3b6ed7f008ec24d8d6a8fa615e94de
+      internalID: -151539867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_26
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 5
+        width: 208
+        height: 201
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f461c18cecd544cb9d64b0f4be4ce2
+      internalID: -479747514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_27
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 5
+        width: 212
+        height: 198
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29324eddd58f1b845ae2ba82c576722a
+      internalID: -1251050934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_28
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 5
+        width: 201
+        height: 234
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf45dcb566871c47a42e8f7568c7697
+      internalID: -1714452746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_29
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 5
+        width: 201
+        height: 254
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735deeb34ad89604e8fe8d201cb3cbab
+      internalID: 1771077640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow_Animation_30
+      rect:
+        serializedVersion: 2
+        x: 1853
+        y: 905
+        width: 202
+        height: 273
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5029d7676a25bc49b468b896f8ef392
+      internalID: 2094023666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Shadow_Animation_0: 2074222398
+      Shadow_Animation_1: -1861493004
+      Shadow_Animation_10: -1278921508
+      Shadow_Animation_11: 474129867
+      Shadow_Animation_12: 2049818914
+      Shadow_Animation_13: -437795664
+      Shadow_Animation_14: 1686790018
+      Shadow_Animation_15: 92087390
+      Shadow_Animation_16: 2043669211
+      Shadow_Animation_17: 214825735
+      Shadow_Animation_18: 583924854
+      Shadow_Animation_19: -75840821
+      Shadow_Animation_2: -2049642775
+      Shadow_Animation_20: -1773373884
+      Shadow_Animation_21: 557679254
+      Shadow_Animation_22: -1499877996
+      Shadow_Animation_23: -1075711694
+      Shadow_Animation_24: -553362594
+      Shadow_Animation_25: -151539867
+      Shadow_Animation_26: -479747514
+      Shadow_Animation_27: -1251050934
+      Shadow_Animation_28: -1714452746
+      Shadow_Animation_29: 1771077640
+      Shadow_Animation_3: -2004815394
+      Shadow_Animation_30: 2094023666
+      Shadow_Animation_31: -803890055
+      Shadow_Animation_4: -473277168
+      Shadow_Animation_5: 1941277296
+      Shadow_Animation_6: -1892674024
+      Shadow_Animation_7: 1946989522
+      Shadow_Animation_8: -1908907226
+      Shadow_Animation_9: 1536462765
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

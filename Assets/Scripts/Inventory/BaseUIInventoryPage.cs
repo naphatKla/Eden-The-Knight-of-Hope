@@ -87,7 +87,7 @@ namespace Inventory
         /// <summary>
         /// Hide the inventory UI page.
         /// </summary>
-        public void Hide()
+        public virtual void Hide()
         {
             gameObject.SetActive(false);
         }
@@ -95,7 +95,7 @@ namespace Inventory
         /// <summary>
         /// Reset all items in the inventory UI page.
         /// </summary>
-        public void ResetAllItems()
+        public virtual void ResetAllItems()
         {
             foreach (var item in listOfUIItems)
             {
@@ -108,7 +108,7 @@ namespace Inventory
         /// Handle the item selection.
         /// </summary>
         /// <param name="inventoryItemBaseUI">Item target</param>
-        private void HandleItemSelection(BaseUIInventoryItem inventoryItemBaseUI)
+        protected virtual void HandleItemSelection(BaseUIInventoryItem inventoryItemBaseUI)
         {
             int index = listOfUIItems.IndexOf(inventoryItemBaseUI);
             if (index == -1) return;

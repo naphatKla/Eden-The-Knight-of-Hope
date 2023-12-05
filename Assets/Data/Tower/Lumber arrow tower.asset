@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1afd1fae86dc9c48b63021824b17395, type: 3}
+  m_Name: Lumber arrow tower
+  m_EditorClassIdentifier: 
+  towerName: Wood arrow tower <color=grey>(Tier 2)
+  towerDescription: "HP : <color=grey>450</color>                   Damage : <color=grey>45</color> 
+    \nCooldown  : <color=grey>0.9s</color>      Radius : <color=grey>18.5</color>  "
+  towerPrefab: {fileID: 3840941788676572609, guid: 7f003bd458d3f7f4897d43f68ed50b13, type: 3}
+  cost: 250
+  towerImage: {fileID: -138820848, guid: db6b97b451609844fa092e61a2d8d6d3, type: 3}
+  tier: 2
+  requireItems:
+  - quantity: 10
+    item: {fileID: 11400000, guid: ba92d7966d383ef44b6d57bca5bdbd19, type: 2}
+  - quantity: 5
+    item: {fileID: 11400000, guid: 1d778c8eb9da56a46a2acd489cf37ad3, type: 2}
+  repairStates:
+  - hpPercentGreaterThan: 80
+    repairCost: 25
+    repairItems:
+    - quantity: 2
+      item: {fileID: 11400000, guid: ba92d7966d383ef44b6d57bca5bdbd19, type: 2}
+    - quantity: 1
+      item: {fileID: 11400000, guid: 1d778c8eb9da56a46a2acd489cf37ad3, type: 2}
+  - hpPercentGreaterThan: 50
+    repairCost: 50
+    repairItems:
+    - quantity: 5
+      item: {fileID: 11400000, guid: ba92d7966d383ef44b6d57bca5bdbd19, type: 2}
+    - quantity: 2
+      item: {fileID: 11400000, guid: 1d778c8eb9da56a46a2acd489cf37ad3, type: 2}
+  - hpPercentGreaterThan: 15
+    repairCost: 75
+    repairItems:
+    - quantity: 6
+      item: {fileID: 11400000, guid: ba92d7966d383ef44b6d57bca5bdbd19, type: 2}
+    - quantity: 3
+      item: {fileID: 11400000, guid: 1d778c8eb9da56a46a2acd489cf37ad3, type: 2}
+  - hpPercentGreaterThan: 0
+    repairCost: 100
+    repairItems:
+    - quantity: 8
+      item: {fileID: 11400000, guid: ba92d7966d383ef44b6d57bca5bdbd19, type: 2}
+    - quantity: 3
+      item: {fileID: 11400000, guid: 1d778c8eb9da56a46a2acd489cf37ad3, type: 2}

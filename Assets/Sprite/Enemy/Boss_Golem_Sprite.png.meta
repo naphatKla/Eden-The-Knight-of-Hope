@@ -1,0 +1,440 @@
+fileFormatVersion: 2
+guid: ac1a92dcee49af94f86bb372968dbbd7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_Golem_Sprite_0
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 2583
+        width: 756
+        height: 736
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8dd80e7c29e41744bb7abc1c380f5a6
+      internalID: 1790357394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Golem_Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 2583
+        width: 757
+        height: 726
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aade7a424e8373d4d8e7389ed331c4ee
+      internalID: 1788941722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Golem_Sprite_4
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 2583
+        width: 755
+        height: 726
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc67fe857f764ba4e8efe070cd71833b
+      internalID: 1634166658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Golem_Sprite_6
+      rect:
+        serializedVersion: 2
+        x: 2625
+        y: 2583
+        width: 756
+        height: 709
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec50960eccd8af64c95de422b8e2f734
+      internalID: -798559331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Golem_Sprite_8
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1725
+        width: 832
+        height: 726
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a917db5ef65366d46be8a47c3d0bf473
+      internalID: -478297936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Golem_Sprite_9
+      rect:
+        serializedVersion: 2
+        x: 1772
+        y: 1725
+        width: 727
+        height: 726
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d3fe1ec41c2844e90df31da88845ed
+      internalID: -1270300774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Golem_Sprite_11
+      rect:
+        serializedVersion: 2
+        x: 2647
+        y: 1725
+        width: 710
+        height: 726
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab07990a27b8a54199a9a067dc8dda1
+      internalID: 150155885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Golem_Sprite_13
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1725
+        width: 808
+        height: 724
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2311768e3289c4b99c6bf46ed6c1ef
+      internalID: -1699951324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Golem_Sprite_14
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 867
+        width: 836
+        height: 795
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4585fe488f54f7c45b40e09dcfd79e41
+      internalID: -571474023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Golem_Sprite_15
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 867
+        width: 1001
+        height: 717
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb2cf7fa7c7c114893e22046952ab15
+      internalID: 1300152993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Golem_Sprite_16
+      rect:
+        serializedVersion: 2
+        x: 2221
+        y: 867
+        width: 852
+        height: 717
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c28ffe0a9d7f6c47868a5dbbc8a2196
+      internalID: 1392483807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Golem_Sprite_17
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 9
+        width: 732
+        height: 717
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b375d3afe4f99214fb16ceeee19b9a20
+      internalID: -963749308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Golem_Sprite_18
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 9
+        width: 880
+        height: 763
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798c16f43eb68624c94363c9bf976841
+      internalID: -917519393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Golem_Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 2096
+        y: 34
+        width: 879
+        height: 756
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c64d62c87e9f24da8a46cbf0dbb504
+      internalID: 892414806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Boss_Golem_Sprite_0: 1790357394
+      Boss_Golem_Sprite_1: 892414806
+      Boss_Golem_Sprite_10: 2101410472
+      Boss_Golem_Sprite_11: 150155885
+      Boss_Golem_Sprite_12: 1416876787
+      Boss_Golem_Sprite_13: -1699951324
+      Boss_Golem_Sprite_14: -571474023
+      Boss_Golem_Sprite_15: 1300152993
+      Boss_Golem_Sprite_16: 1392483807
+      Boss_Golem_Sprite_17: -963749308
+      Boss_Golem_Sprite_18: -917519393
+      Boss_Golem_Sprite_2: 1788941722
+      Boss_Golem_Sprite_3: -1877091941
+      Boss_Golem_Sprite_4: 1634166658
+      Boss_Golem_Sprite_5: -293132178
+      Boss_Golem_Sprite_6: -798559331
+      Boss_Golem_Sprite_7: -1410323037
+      Boss_Golem_Sprite_8: -478297936
+      Boss_Golem_Sprite_9: -1270300774
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

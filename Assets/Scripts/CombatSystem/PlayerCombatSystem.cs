@@ -14,6 +14,8 @@ namespace CombatSystem
         public float BaseAttackStat {get => baseAttackStat;}
         public AttackPattern CurrentAttackPattern { get => currentAttackPattern; }
         public float CurrentAttackCooldown {get => currentAttackCooldown; set => currentAttackCooldown = value;}
+        private bool _attackBuffering;
+        
         
         protected override void Start()
         {
@@ -36,9 +38,15 @@ namespace CombatSystem
             }
             
             if (UIManager.Instance.CheckIsAnyUIOpen()) return;
-            if (Player.Instance.Animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDash")) return;
-            if(!Input.GetMouseButtonDown(0)) return;
+            if (Player.Instance.Animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDash"))
+            {
+                if (Input.GetMouseButtonDown(0))
+                    _attackBuffering = true;
+                return;
+            }
+            if(!Input.GetMouseButtonDown(0) && !_attackBuffering) return;
             base.AttackHandle();
+            _attackBuffering = false;
         }
     }
 }

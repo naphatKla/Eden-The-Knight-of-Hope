@@ -52,11 +52,12 @@ namespace Spawner
             SpawnObject();
         }
 
-        protected virtual void SpawnObject()
+        protected virtual void SpawnObject(GameObject objToSpawn = null)
         {
+            
             Vector2 randomPosition = new Vector2(Random.Range(-spawnArea.x, spawnArea.x), Random.Range(-spawnArea.y, spawnArea.y));
             Vector2 spawnPosition = randomPosition + (Vector2)transform.position;
-            GameObject pickObject = ProjectExtensions.RandomPickOne(objectsToSpawn).obj;
+            GameObject pickObject =  objToSpawn? objToSpawn : ProjectExtensions.RandomPickOne(objectsToSpawn).obj;
             List<GameObject> spawnedObjects = new List<GameObject>();
             
             for (int i = 0; i < transform.childCount; i++)

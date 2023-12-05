@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Linq;
+using PlayerBehavior;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +11,7 @@ namespace Interaction
     {
         #region Declare Variables
         [SerializeField] protected KeyCode key;
-        [SerializeField] protected string prompt;
+        [TextArea] [SerializeField] protected string prompt;
         [SerializeField] protected TextMeshProUGUI interactionTextUI;
         [SerializeField] protected GameObject[] interactionIndicators;
         [SerializeField] protected float countdownTime;
@@ -26,12 +27,11 @@ namespace Interaction
             SpriteRenderer = GetComponent<SpriteRenderer>();
         }
 
-        private void Update()
+        protected virtual void Update()
         {
             AlphaDetect();
         }
-
-
+        
         #region Methods
         /// <summary>
         /// Event when the object is targeted.
@@ -76,7 +76,7 @@ namespace Interaction
             {
                 if (objInSprite.Any(obj => obj.transform.position.y > transform.position.y))
                 {
-                    if (SpriteRenderer.color.a > 0.5f)
+                    if (SpriteRenderer.color.a > 0.75f)
                     {
                         Color color = SpriteRenderer.color;
                         color.a -= 0.01f;
@@ -113,17 +113,22 @@ namespace Interaction
                 progressBar.value = progressionTimeLeft / time;
                 progressionTimeLeft -= Time.deltaTime;
                 yield return null;
-            
+
+                PlayerInteractSystem.Instance.isStopMove = time - progressionTimeLeft <= 0.3f;
                 if (progressionTimeLeft < 0.15f) continue;
                 if(Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0) continue;
+                if (PlayerInteractSystem.Instance.isStopMove) continue;
                 progressBar.gameObject.SetActive(false);
                 _interactCoroutine = null;
+                PlayerInteractSystem.Instance.isStopMove = false;
                 yield break;
             }
         
             InteractAction();
             progressBar.gameObject.SetActive(false);
             _interactCoroutine = null;
+            progressBar.gameObject.SetActive(false);
+            PlayerInteractSystem.Instance.isStopMove = false;
         }
         #endregion
     }

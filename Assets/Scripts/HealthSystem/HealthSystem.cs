@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,15 +11,19 @@ namespace HealthSystem
         [SerializeField] protected Slider sliderHpPlayer;
         [SerializeField] public float maxHp;
         public float CurrentHp { get; private set; }
-        private bool _isDead;
-        private Animator _animator;
-        private static readonly int TakDamage = Animator.StringToHash("TakeDamage");
+        [HideInInspector] public bool isDead;
+        protected Animator animator;
+        protected SpriteRenderer spriteRenderer;
         #endregion
     
-        protected virtual void Start()
+        private void Awake()
         {
             CurrentHp = maxHp;
-            TryGetComponent(out _animator);
+        }
+        protected virtual void Start()
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            TryGetComponent(out animator);
         }
 
         private void LateUpdate()
@@ -36,15 +42,17 @@ namespace HealthSystem
         /// <param name="attacker">Attacker.</param>
         public virtual void TakeDamage(float damage, GameObject attacker = null)
         {
+            if (isDead) return;
             CurrentHp -= damage;
             CurrentHp = Mathf.Clamp(CurrentHp, 0, maxHp);
             UpdateUI();
         
-            if(_animator)
-                _animator.SetTrigger(TakDamage);
+            /*if(_animator)
+                _animator.SetTrigger(TakDamage);*/
+            spriteRenderer.color = new Color(1,0.6f,0.6f,1);
+            Invoke(nameof(ResetSpriteColor), 0.2f);
         
-            if (CurrentHp > 0 || _isDead) return;
-            _isDead = true;
+            if (CurrentHp > 0 || isDead) return;
             Dead();
         }
 
@@ -53,7 +61,7 @@ namespace HealthSystem
         /// Heal and increase the current hp.
         /// </summary>
         /// <param name="healPoint">Heal amount.</param>
-        public void Heal(float healPoint)
+        public virtual  void Heal(float healPoint)
         {
             CurrentHp += healPoint;
             CurrentHp = Mathf.Clamp(CurrentHp, 0, maxHp);
@@ -66,7 +74,27 @@ namespace HealthSystem
         /// </summary>
         protected virtual void Dead()
         {
-            Destroy(gameObject);
+            isDead = true;
+            StartCoroutine(WaitForDeadAnimation());
+        }
+        
+        IEnumerator WaitForDeadAnimation()
+        {
+            if (animator)
+                animator.SetTrigger("Dead");
+            float timeCount = 0;
+            while (timeCount < 1f)
+            {
+                Color color = spriteRenderer.color;
+                color.a = 1 - timeCount;
+                spriteRenderer.color = color;
+                timeCount += Time.deltaTime;
+                yield return null;
+            }
+            if(this is PlayerHealthSystem)
+                gameObject.SetActive(false);
+            else
+                Destroy(gameObject);
         }
     
         
@@ -75,7 +103,7 @@ namespace HealthSystem
         /// </summary>
         public void ResetHealth()
         {
-            _isDead = false;
+            isDead = false;
             CurrentHp = maxHp;
             UpdateUI();
         }
@@ -87,6 +115,11 @@ namespace HealthSystem
         private void UpdateUI()
         {
             sliderHpPlayer.value = CurrentHp / maxHp;
+        }
+
+        protected void ResetSpriteColor()
+        {
+            spriteRenderer.color = Color.white;
         }
         #endregion
     }

@@ -15,9 +15,14 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 1
   <MaxStackSize>k__BackingField: 10
   <Name>k__BackingField: Small Health Potion
-  <Description>k__BackingField: <color=red>Heal 25 HP.
+  <Description>k__BackingField: 'Just a sip that what i need
+
+
+    <color=#32CD32>Heal
+    25 HP.'
   <ItemImage>k__BackingField: {fileID: 1124136883, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 5
+  <Cost>k__BackingField: 39
   maxHp: 0
   hp: 25
   stamina: 0

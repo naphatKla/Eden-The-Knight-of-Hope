@@ -181,7 +181,7 @@ namespace Inventory
         /// <summary>
         /// Update the inventory data.
         /// </summary>
-        private void InformAboutChange()
+        public void InformAboutChange()
         {
             OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
         }

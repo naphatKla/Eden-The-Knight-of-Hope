@@ -1,12 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class SoundManager : Singleton<SoundManager>
 {
     public AudioSource audioSource;
-
+    
     private void Awake()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
@@ -18,10 +16,37 @@ public class SoundManager : Singleton<SoundManager>
         audioSource.PlayOneShot(audioClip);
     }
     
-    public void PlayMusic(AudioClip audioClip)
+    public void RandomPlaySound(AudioClip[] audioClips)
     {
-        Debug.Log(audioClip.name);
+        if (audioClips.Length <= 0) return;
+        int randomIndex = Random.Range(0, audioClips.Length);
+        audioSource.PlayOneShot(audioClips[randomIndex]);
+    }
+    
+    public void PlayBackGroundMusic(AudioClip audioClip, bool isFadeIn = false)
+    {
+        if (isFadeIn)
+        {
+            StartCoroutine(PlayWithFadeIn(audioClip));
+            return;
+        }
+        
         audioSource.clip = audioClip;
+        audioSource.Play();
+    }
+    
+    public void RandomPlayBackGroundMusic(AudioClip[] audioClips, bool isFadeIn = false)
+    {
+        if (audioClips.Length <= 0) return;
+        int randomIndex = Random.Range(0, audioClips.Length);
+        
+        if (isFadeIn)
+        {
+            StartCoroutine(PlayWithFadeIn(audioClips[randomIndex]));
+            return;
+        }
+        
+        audioSource.clip = audioClips[randomIndex];
         audioSource.Play();
     }
     public void StopMusic()
@@ -44,6 +69,28 @@ public class SoundManager : Singleton<SoundManager>
         audioSource.volume = volume;
     }
 
-
-
+    IEnumerator PlayWithFadeIn(AudioClip audioClip)
+    {
+        float timeCount = 3;
+        if (audioSource.isPlaying)
+        {
+            while (timeCount > 0)
+            {
+                timeCount -= Time.deltaTime;
+                audioSource.volume = timeCount / 3;
+                yield return null;
+            }
+        }
+        
+        StopMusic();
+        audioSource.clip = audioClip;
+        audioSource.Play();
+        timeCount = 0;
+        while (timeCount < 3)
+        {
+            timeCount += Time.deltaTime;
+            audioSource.volume = timeCount / 3;
+            yield return null;
+        }
+    }
 }

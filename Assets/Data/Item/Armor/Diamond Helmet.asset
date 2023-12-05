@@ -15,9 +15,14 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Diamond Helmet
-  <Description>k__BackingField: Just a helmet
+  <Description>k__BackingField: 'Wearing this set of armor will make you become the
+    strongest man alive
+
+
+    <color=#1AA260> Max Health +87'
   <ItemImage>k__BackingField: {fileID: 1773613788, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 1
+  <Cost>k__BackingField: 396
   maxHp: 87
   hp: 0
   stamina: 0

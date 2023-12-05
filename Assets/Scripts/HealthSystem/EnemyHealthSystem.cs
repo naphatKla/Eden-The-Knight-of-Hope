@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using CombatSystem;
 using EnemyBehavior;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -12,14 +13,10 @@ namespace HealthSystem
         protected override void Start()
         {
             _enemy = GetComponent<Enemy>();
+            sliderHpPlayer.gameObject.SetActive(CurrentHp < maxHp && CurrentHp > 0);
             base.Start();
         }
-
-        private void Update()
-        {
-            sliderHpPlayer.gameObject.SetActive(CurrentHp < maxHp);
-        }
-
+        
         /// <summary>
         /// Take damage and stun the enemy if the attacker is the player.
         /// And then set enemy target to the attacker.
@@ -30,10 +27,11 @@ namespace HealthSystem
         {
             _enemy.Target = attacker;
         
-            if (attacker && attacker.CompareTag("Player"))
-                StartCoroutine(Stun(0.5f));
+            /*if (attacker && attacker.CompareTag("Player"))
+                StartCoroutine(Stun(0.5f));*/
         
             base.TakeDamage(damage, attacker);
+            sliderHpPlayer.gameObject.SetActive(CurrentHp < maxHp && CurrentHp > 0);
         }
     
         
@@ -42,12 +40,11 @@ namespace HealthSystem
         /// </summary>
         protected override void Dead()
         {
-            if(Random.Range(0,101) >= 90)
+            if(Random.Range(0,101) >= 0)
                 GameManager.Instance.AddPoint(10);
-        
+            
             base.Dead();
         }
-
         
         /// <summary>
         /// stun the enemy.

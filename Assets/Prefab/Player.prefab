@@ -169,7 +169,6 @@ GameObject:
   - component: {fileID: 1090296706133578731}
   - component: {fileID: 7230888628965848483}
   - component: {fileID: 5482898029961405059}
-  - component: {fileID: 5052488181067766391}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -237,12 +236,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1567854851, guid: bb9686ed9253ecc4489259b418222eb6, type: 3}
+  m_Sprite: {fileID: 1186989865, guid: 0604dd7e6a007e94399e4e108ab30fe4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.12, y: 2.8803148}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -283,9 +282,9 @@ BoxCollider2D:
   m_Offset: {x: 0.029441833, y: 0.16186619}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.12}
-    oldSize: {x: 2.12, y: 2.8803148}
-    newSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.35, y: 2.54}
+    newSize: {x: 2.12, y: 2.8803148}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -333,11 +332,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerState: 0
-  walkSpeed: 4
-  sprintSpeed: 9
-  dashSpeed: 25
+  walkSpeed: 3
+  sprintSpeed: 8
+  dashSpeed: 17
   dashDuration: 0.25
-  dashCooldown: 1
+  dashCooldown: 0.5
   sprintKey: 304
   dashKey: 32
   canvasTransform: {fileID: 2254507535340655425}
@@ -348,8 +347,8 @@ MonoBehaviour:
   staminaRegenSpeed: 25
   staminaRegenCooldown: 3
   sprintStaminaDrain: 5
-  dashStaminaDrain: 20
-  _currentStamina: 0
+  dashStaminaDrain: 10
+  iframeDuration: 0
 --- !u!114 &1899462294495903435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,7 +363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseAttackStat: 16
   attackPoint: {fileID: 6126908590091014635}
-  attackArea: {x: 4, y: 2.5}
+  attackArea: {x: 4, y: 2}
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -378,7 +377,7 @@ MonoBehaviour:
     cooldown: 1
     attackState: 1
   - power: 1.5
-    delay: 0.1
+    delay: 0.2
     cooldown: 2
     attackState: 2
   attackState: 0
@@ -438,6 +437,7 @@ MonoBehaviour:
   interactableMask:
     serializedVersion: 2
     m_Bits: 256
+  isStopMove: 0
 --- !u!114 &7230888628965848483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,7 +452,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 0}
   inventoryData: {fileID: 11400000, guid: 7c8a5a2af1efac84c8cafb5edf47f58d, type: 2}
-  initialItems: []
+  initialItems:
+  - quantity: 1000
+    item: {fileID: 11400000, guid: b9fba1e7e896ddd4ca6086a672e7cea1, type: 2}
+  - quantity: 1000
+    item: {fileID: 11400000, guid: df565b558d3c3154d8908c9c04a2039e, type: 2}
+  - quantity: 1000
+    item: {fileID: 11400000, guid: ba92d7966d383ef44b6d57bca5bdbd19, type: 2}
+  - quantity: 1000
+    item: {fileID: 11400000, guid: 1d778c8eb9da56a46a2acd489cf37ad3, type: 2}
+  - quantity: 1000
+    item: {fileID: 11400000, guid: 731e20d879e22d945a38155ce707b38a, type: 2}
   key: 9
 --- !u!114 &5482898029961405059
 MonoBehaviour:
@@ -498,51 +508,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!61 &5052488181067766391
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2961274887369379640}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.0945187}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.12}
-    oldSize: {x: 2.12, y: 2.8803148}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.12, y: 2.8803148}
-  m_EdgeRadius: 0
 --- !u!1 &3310748922961203263
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,7 +756,7 @@ Transform:
   m_GameObject: {fileID: 3817412853105133270}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.54, z: 0}
+  m_LocalPosition: {x: 1.34, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

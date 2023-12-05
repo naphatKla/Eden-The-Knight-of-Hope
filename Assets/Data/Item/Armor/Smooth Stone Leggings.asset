@@ -15,9 +15,11 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Smooth Stone Leggings
-  <Description>k__BackingField: Just a leggings
+  <Description>k__BackingField: "Don\u2019t skip leg day brother\n\n<color=#1AA260>
+    Max Health +49.5"
   <ItemImage>k__BackingField: {fileID: -1496919022, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 3
+  <Cost>k__BackingField: 42
   maxHp: 49.5
   hp: 0
   stamina: 0

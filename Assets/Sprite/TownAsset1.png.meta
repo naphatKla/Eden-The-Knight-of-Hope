@@ -117,11 +117,28 @@ TextureImporter:
         y: 1643
         width: 383
         height: 648
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 124.5, y: -268}
+        - {x: 74.5, y: -281}
+        - {x: 29.5, y: -287}
+        - {x: -16.5, y: -287}
+        - {x: -70.5, y: -282}
+        - {x: -93.94653, y: -276.83813}
+        - {x: -122.5, y: -269}
+        - {x: -148.5, y: -254}
+        - {x: -151.5, y: -233}
+        - {x: -148.5, y: -202}
+        - {x: -134.5, y: -185}
+        - {x: -39.5, y: -185}
+        - {x: 54.5, y: -186}
+        - {x: 133.5, y: -189}
+        - {x: 146.5, y: -204}
+        - {x: 151.5, y: -230}
+        - {x: 146.5, y: -252}
       tessellationDetail: 0
       bones: []
       spriteID: 1663c84e570daab4cbd877b870b175a9
@@ -231,7 +248,7 @@ TextureImporter:
         width: 1374
         height: 1492
       alignment: 9
-      pivot: {x: 0.5, y: 0.028744174}
+      pivot: {x: 0.5, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -265,11 +282,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 188
-        y: 178
+        y: 179
         width: 488
         height: 1039
       alignment: 9
-      pivot: {x: 0.5, y: 0.04}
+      pivot: {x: 0.5, y: 0.0414}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -298,11 +315,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 751
-        y: 206
+        y: 208
         width: 488
         height: 1061
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -329,8 +346,8 @@ TextureImporter:
         y: 206
         width: 487
         height: 1059
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -405,6 +422,7 @@ TextureImporter:
       TownAsset1_0: 1338969011
       TownAsset1_1: 360890908
       TownAsset1_10: 1764970561
+      TownAsset1_11: -1200335436
       TownAsset1_2: -1220197492
       TownAsset1_3: 1562715568
       TownAsset1_4: 736913519

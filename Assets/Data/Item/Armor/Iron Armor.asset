@@ -15,9 +15,14 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Iron Helmet
-  <Description>k__BackingField: Just a armor
+  <Description>k__BackingField: 'Ayeee knight armor gud gud  - u - b
+
+
+    <color=#1AA260>
+    Max Health +105'
   <ItemImage>k__BackingField: {fileID: -1238755888, guid: 8735ab4ff21c66447b35bc440a01fa8a, type: 3}
   <ItemSlotType>k__BackingField: 2
+  <Cost>k__BackingField: 140
   maxHp: 105
   hp: 0
   stamina: 0

@@ -1,3 +1,4 @@
+using PlayerBehavior;
 using UnityEngine;
 
 namespace HealthSystem
@@ -19,7 +20,7 @@ namespace HealthSystem
         protected override void Dead()
         {
             Invoke(nameof(Respawn),respawnTime);
-            gameObject.SetActive(false);
+            base.Dead();
         }
 
         /// <summary>
@@ -28,8 +29,16 @@ namespace HealthSystem
         private void Respawn()
         {
             gameObject.SetActive(true);
+            spriteRenderer.color = Color.white;
             ResetHealth();
+            Player.Instance.ResetState();
             transform.position = GameManager.Instance.spawnPoint;
+        }
+
+        public override void TakeDamage(float damage, GameObject attacker = null)
+        {
+            if (PlayerBehavior.Player.Instance.IsDash) return; 
+            base.TakeDamage(damage, attacker);
         }
     }
 }
