@@ -14,6 +14,10 @@ namespace HealthSystem
         [HideInInspector] public bool isDead;
         protected Animator animator;
         protected SpriteRenderer spriteRenderer;
+        
+        [Header("Sound")]
+        [SerializeField] protected AudioClip[] takeDamageSounds;
+        [SerializeField] protected AudioClip[] deadSounds;
         #endregion
     
         private void Awake()
@@ -45,6 +49,7 @@ namespace HealthSystem
             if (isDead) return;
             CurrentHp -= damage;
             CurrentHp = Mathf.Clamp(CurrentHp, 0, maxHp);
+            SoundManager.Instance.RandomPlaySound(takeDamageSounds);
             UpdateUI();
         
             /*if(_animator)
@@ -75,6 +80,7 @@ namespace HealthSystem
         protected virtual void Dead()
         {
             isDead = true;
+            SoundManager.Instance.RandomPlaySound(deadSounds);
             StartCoroutine(WaitForDeadAnimation());
         }
         

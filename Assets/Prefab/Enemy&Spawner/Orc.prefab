@@ -658,6 +658,10 @@ MonoBehaviour:
   sliderHpPlayer: {fileID: 4662909907157406043}
   maxHp: 45
   isDead: 0
+  takeDamageSounds:
+  - {fileID: 8300000, guid: 88fa9bbe865c0b44ebc76b910f57358e, type: 3}
+  deadSounds:
+  - {fileID: 8300000, guid: 27f9594a1f986be4db41d1586d2f9333, type: 3}
 --- !u!114 &8320007089722136384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,6 +685,7 @@ MonoBehaviour:
     delay: 0.35
     cooldown: 1.1
     attackState: 0
+    attackSounds: []
   attackState: 0
   attackRangeOffset: 1
 --- !u!195 &3568997344390356489

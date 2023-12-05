@@ -3,11 +3,14 @@ using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
 {
-    public AudioSource audioSource;
+    [HideInInspector] public AudioSource audioSource;
+    [HideInInspector] public AudioSource musicSource;
     
     private void Awake()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
+        musicSource = gameObject.AddComponent<AudioSource>();
+        musicSource.loop = true;
         audioSource.loop = true;
     }
 
@@ -31,8 +34,8 @@ public class SoundManager : Singleton<SoundManager>
             return;
         }
         
-        audioSource.clip = audioClip;
-        audioSource.Play();
+        musicSource.clip = audioClip;
+        musicSource.Play();
     }
     
     public void RandomPlayBackGroundMusic(AudioClip[] audioClips, bool isFadeIn = false)
@@ -46,50 +49,50 @@ public class SoundManager : Singleton<SoundManager>
             return;
         }
         
-        audioSource.clip = audioClips[randomIndex];
-        audioSource.Play();
+        musicSource.clip = audioClips[randomIndex];
+        musicSource.Play();
     }
     public void StopMusic()
     {
-        audioSource.Stop();
+        musicSource.Stop();
     }
     
     public void PauseMusic()
     {
-        audioSource.Pause();
+        musicSource.Pause();
     }
     
     public void ResumeMusic()
     {
-        audioSource.UnPause();
+        musicSource.UnPause();
     }
     
     public void SetMusicVolume(float volume)
     {
-        audioSource.volume = volume;
+        musicSource.volume = volume;
     }
 
     IEnumerator PlayWithFadeIn(AudioClip audioClip)
     {
         float timeCount = 3;
-        if (audioSource.isPlaying)
+        if (musicSource.isPlaying)
         {
             while (timeCount > 0)
             {
                 timeCount -= Time.deltaTime;
-                audioSource.volume = timeCount / 3;
+                musicSource.volume = timeCount / 3;
                 yield return null;
             }
         }
         
         StopMusic();
-        audioSource.clip = audioClip;
-        audioSource.Play();
+        musicSource.clip = audioClip;
+        musicSource.Play();
         timeCount = 0;
         while (timeCount < 3)
         {
             timeCount += Time.deltaTime;
-            audioSource.volume = timeCount / 3;
+            musicSource.volume = timeCount / 3;
             yield return null;
         }
     }
