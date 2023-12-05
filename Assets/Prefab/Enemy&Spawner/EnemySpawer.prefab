@@ -44,9 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463076e0ac776249a1614d3d3c4b77b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpawnRadius: {x: 30, y: 10}
-  enemySpawnTime: 7
-  maxEnemy: 20
-  currentEnemyCount: 0
+  spawnArea: {x: 0, y: 0}
+  spawnCooldown: 0
+  spawnOffset: 0
+  maxObject: 0
+  spawnMode: 0
+  objectsToSpawn: []
+  gizmosColor: {r: 0, g: 0, b: 0, a: 0}
   nightMode: 1
-  enemyPrefab: {fileID: 3982792202371823300, guid: 6ec4834ef71f58e459b9c24f3c971814, type: 3}
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  nightModeSpawnRates: []
+  nightModeSpawnEnemies: []

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using CombatSystem;
 using EnemyBehavior;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -42,13 +43,23 @@ namespace HealthSystem
         /// </summary>
         protected override void Dead()
         {
+            isDead = true;
             if(Random.Range(0,101) >= 0)
                 GameManager.Instance.AddPoint(10);
-        
+
             base.Dead();
+           // StartCoroutine(WaitForDeadAnimation());
         }
 
-        
+
+        IEnumerator WaitForDeadAnimation()
+        {
+            GetComponent<Enemy>().enabled = false;
+            GetComponent<EnemyCombatSystem>().enabled = false;
+            animator.SetTrigger("Dead");
+            yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+            base.Dead();
+        }
         /// <summary>
         /// stun the enemy.
         /// </summary>

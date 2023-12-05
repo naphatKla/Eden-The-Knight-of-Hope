@@ -9,10 +9,9 @@ namespace HealthSystem
         [SerializeField] protected Slider sliderHpPlayer;
         [SerializeField] public float maxHp;
         public float CurrentHp { get; private set; }
-        private bool _isDead;
-        private Animator _animator;
+        protected bool isDead;
+        protected Animator animator;
         protected SpriteRenderer spriteRenderer;
-        private static readonly int TakDamage = Animator.StringToHash("TakeDamage");
         #endregion
     
         private void Awake()
@@ -22,7 +21,7 @@ namespace HealthSystem
         protected virtual void Start()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
-            TryGetComponent(out _animator);
+            TryGetComponent(out animator);
         }
 
         private void LateUpdate()
@@ -41,6 +40,7 @@ namespace HealthSystem
         /// <param name="attacker">Attacker.</param>
         public virtual void TakeDamage(float damage, GameObject attacker = null)
         {
+            if (isDead) return;
             CurrentHp -= damage;
             CurrentHp = Mathf.Clamp(CurrentHp, 0, maxHp);
             UpdateUI();
@@ -50,8 +50,8 @@ namespace HealthSystem
             spriteRenderer.color = new Color(1,0.6f,0.6f,1);
             Invoke(nameof(ResetSpriteColor), 0.2f);
         
-            if (CurrentHp > 0 || _isDead) return;
-            _isDead = true;
+            if (CurrentHp > 0 || isDead) return;
+            isDead = true;
             Dead();
         }
 
@@ -82,7 +82,7 @@ namespace HealthSystem
         /// </summary>
         public void ResetHealth()
         {
-            _isDead = false;
+            isDead = false;
             CurrentHp = maxHp;
             UpdateUI();
         }
