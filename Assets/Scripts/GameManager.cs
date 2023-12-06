@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     public Enemy lastBoss;
     public bool isNightWarning;
     
+    [Header("Sound")]
+    [SerializeField] private AudioClip[] bossSpawnSound;
+    
     public static GameManager Instance;
     #endregion
     
@@ -69,6 +72,7 @@ public class GameManager : MonoBehaviour
     public void SpawnLastBoss()
     {
         lastBoss.gameObject.SetActive(true);
+        SoundManager.Instance.RandomPlaySound(bossSpawnSound);
     }
 
     public void EndGameHandle()

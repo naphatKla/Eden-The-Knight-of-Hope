@@ -2,6 +2,7 @@ using System.Collections;
 using System.Linq;
 using Inventory;
 using PlayerBehavior;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace Interaction
@@ -11,6 +12,7 @@ namespace Interaction
         public GatheringResourceSO resourceData;
         private PolygonCollider2D _collider2D;
         private bool _isDestroying;
+        private AudioSource _audioSource;
         
         public void SetData(GatheringResourceSO data)
         {
@@ -27,6 +29,8 @@ namespace Interaction
             SpriteRenderer = GetComponent<SpriteRenderer>();
             if (resourceData)
                 SetData(resourceData);
+            _audioSource = gameObject.AddComponent<AudioSource>();
+            _audioSource.loop = true;
         }
 
         protected override void InteractHandler()
@@ -97,8 +101,38 @@ namespace Interaction
 
         protected override IEnumerator CountDownAndInteract(float time)
         {
-            SoundManager.Instance.RandomPlaySound(resourceData.gatheringSounds);
-            return base.CountDownAndInteract(time);
+            if (resourceData.gatheringSounds.Length > 0)
+            {
+                AudioClip audioClip = resourceData.gatheringSounds[Random.Range(0, resourceData.gatheringSounds.Length)];
+                _audioSource.clip = audioClip;
+                _audioSource.Play();
+            }
+            
+            float progressionTimeLeft = time;
+            progressBar.gameObject.SetActive(true);
+        
+            while (progressionTimeLeft > 0)
+            {
+                progressBar.value = progressionTimeLeft / time;
+                progressionTimeLeft -= Time.deltaTime;
+                yield return null;
+
+                PlayerInteractSystem.Instance.isStopMove = time - progressionTimeLeft <= 0.3f;
+                if (progressionTimeLeft < 0.15f) continue;
+                if(Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0) continue;
+                if (PlayerInteractSystem.Instance.isStopMove) continue;
+                progressBar.gameObject.SetActive(false);
+                interactCoroutine = null;
+                PlayerInteractSystem.Instance.isStopMove = false;
+                _audioSource.Stop();
+                yield break;
+            }
+        
+            InteractAction();
+            progressBar.gameObject.SetActive(false);
+            interactCoroutine = null;
+            progressBar.gameObject.SetActive(false);
+            PlayerInteractSystem.Instance.isStopMove = false;
         }
 
         IEnumerator FadeAnimWhenDestroy()

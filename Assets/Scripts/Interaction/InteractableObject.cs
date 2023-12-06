@@ -16,7 +16,7 @@ namespace Interaction
         [SerializeField] protected GameObject[] interactionIndicators;
         [SerializeField] protected float countdownTime;
         [SerializeField] public Slider progressBar;
-        private Coroutine _interactCoroutine;
+        protected Coroutine interactCoroutine;
         protected SpriteRenderer SpriteRenderer;
         [SerializeField] private LayerMask alphaLayerMask;
         #endregion
@@ -55,8 +55,8 @@ namespace Interaction
             // Pls override this method
             // Do something when interact
             if(!Input.GetKeyDown(key)) return;
-            if(_interactCoroutine != null) return;
-            _interactCoroutine = StartCoroutine(CountDownAndInteract(countdownTime));
+            if(interactCoroutine != null) return;
+            interactCoroutine = StartCoroutine(CountDownAndInteract(countdownTime));
         }
     
         
@@ -119,14 +119,14 @@ namespace Interaction
                 if(Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0) continue;
                 if (PlayerInteractSystem.Instance.isStopMove) continue;
                 progressBar.gameObject.SetActive(false);
-                _interactCoroutine = null;
+                interactCoroutine = null;
                 PlayerInteractSystem.Instance.isStopMove = false;
                 yield break;
             }
         
             InteractAction();
             progressBar.gameObject.SetActive(false);
-            _interactCoroutine = null;
+            interactCoroutine = null;
             progressBar.gameObject.SetActive(false);
             PlayerInteractSystem.Instance.isStopMove = false;
         }
