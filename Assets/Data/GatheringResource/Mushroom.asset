@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: -1109533312, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
   - {fileID: -1002985335, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
   point: {x: 10, y: 15}
-  gatheringTime: 0.5
+  gatheringTime: 1
   itemDrop1:
   - obj:
       item: {fileID: 11400000, guid: 02ff19e1303e2d84ba0b08b594a190cd, type: 2}
@@ -30,3 +30,16 @@ MonoBehaviour:
   itemDrop3: []
   itemDrop4: []
   itemDrop5: []
+  gatheringSounds:
+  - {fileID: 8300000, guid: 1e9b8aa025ced5a4ca4b8e1a659d4f6c, type: 3}
+  - {fileID: 8300000, guid: 5c26cb4b57e246b4db58a9d719548b3f, type: 3}
+  - {fileID: 8300000, guid: 912ec0cd7ede6aa4b95b545b8fee55fe, type: 3}
+  - {fileID: 8300000, guid: b063641e9202f724ea1390d0e85916e9, type: 3}
+  - {fileID: 8300000, guid: de52f6910fa51f14d9d6c666927f323e, type: 3}
+  - {fileID: 8300000, guid: a7263e4cab4a6624ba627746d3dc1058, type: 3}
+  destroySounds:
+  - {fileID: 8300000, guid: e240a1405c242f24e8d13ee292ada3dc, type: 3}
+  - {fileID: 8300000, guid: aab7606ef09e6db47845117b5e4c65cf, type: 3}
+  - {fileID: 8300000, guid: bf52339b006906343b732cbdabb39e40, type: 3}
+  - {fileID: 8300000, guid: f77d3c1837e895344a5bb1df080218a1, type: 3}
+  - {fileID: 8300000, guid: ff792728839b2c44788d9e61b62d7685, type: 3}

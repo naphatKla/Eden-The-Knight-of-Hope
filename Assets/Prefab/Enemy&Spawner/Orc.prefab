@@ -659,9 +659,13 @@ MonoBehaviour:
   maxHp: 45
   isDead: 0
   takeDamageSounds:
-  - {fileID: 8300000, guid: 88fa9bbe865c0b44ebc76b910f57358e, type: 3}
+  - {fileID: 8300000, guid: ad112783df076e548af2a2e24f98e32d, type: 3}
+  - {fileID: 8300000, guid: 0334caeff82789c44a921aad3a831c0b, type: 3}
+  - {fileID: 8300000, guid: 7e8fffec87d7a1546ad5f9267fb770e9, type: 3}
   deadSounds:
-  - {fileID: 8300000, guid: 27f9594a1f986be4db41d1586d2f9333, type: 3}
+  - {fileID: 8300000, guid: f6fc274d2765aab4993a6f8109efb423, type: 3}
+  - {fileID: 8300000, guid: b00d0c648fc9bae40b6ccff852d00b99, type: 3}
+  - {fileID: 8300000, guid: 2f0f3a7ad755ce440887ac94efb45de5, type: 3}
 --- !u!114 &8320007089722136384
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -49,6 +49,8 @@ namespace Interaction
 
         protected override void InteractAction()
         {
+            SoundManager.Instance.RandomPlaySound(resourceData.destroySounds);
+            
             if (resourceData.point.y > 0)
                 GameManager.Instance.AddPoint((int)Random.Range(resourceData.point.x, resourceData.point.y+1));
             
@@ -88,6 +90,12 @@ namespace Interaction
             }
 
             StartCoroutine(FadeAnimWhenDestroy());
+        }
+
+        protected override IEnumerator CountDownAndInteract(float time)
+        {
+            SoundManager.Instance.RandomPlaySound(resourceData.gatheringSounds);
+            return base.CountDownAndInteract(time);
         }
 
         IEnumerator FadeAnimWhenDestroy()

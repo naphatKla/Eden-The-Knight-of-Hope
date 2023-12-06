@@ -15,7 +15,7 @@ MonoBehaviour:
   sprite:
   - {fileID: 323751748, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
   point: {x: 20, y: 30}
-  gatheringTime: 0.5
+  gatheringTime: 1.5
   itemDrop1:
   - obj:
       item: {fileID: 11400000, guid: b9fba1e7e896ddd4ca6086a672e7cea1, type: 2}
@@ -141,3 +141,16 @@ MonoBehaviour:
     spawnRate: 10
   itemDrop4: []
   itemDrop5: []
+  gatheringSounds:
+  - {fileID: 8300000, guid: 8d6bb57299f157049bfd2d2791a609b7, type: 3}
+  - {fileID: 8300000, guid: 299110d5965121e4eb6d3e461c223adc, type: 3}
+  - {fileID: 8300000, guid: febd41e45a6a4fd43bb6be321a8c6a6b, type: 3}
+  - {fileID: 8300000, guid: 615ba2f5c64673047a6d9933d2b2e1ae, type: 3}
+  - {fileID: 8300000, guid: ecdfbc1834bf4a644b72686d565b7531, type: 3}
+  - {fileID: 8300000, guid: e38ab383e0f610141baeb64de4dd0f4b, type: 3}
+  destroySounds:
+  - {fileID: 8300000, guid: 94201866859881741b5ac510a1bfedba, type: 3}
+  - {fileID: 8300000, guid: fa8566bef20f94a498401256e785d859, type: 3}
+  - {fileID: 8300000, guid: 74d6140978b5be44085d4cc2bbaa4b6a, type: 3}
+  - {fileID: 8300000, guid: 9b392e886159ec64592c260c16f1cbe0, type: 3}
+  - {fileID: 8300000, guid: 16be3be51451b56498629cb449e652ee, type: 3}

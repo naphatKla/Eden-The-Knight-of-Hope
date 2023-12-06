@@ -90,12 +90,23 @@ namespace CombatSystem
         {
             lastAttackTime = Time.time;
             animator.SetTrigger(attackState.ToString());
-            
+                
             SoundManager.Instance.RandomPlaySound(currentAttackPattern.attackSounds);
             yield return new WaitForSeconds(delay);
             
             List<HealthSystem.HealthSystem> targetHealthSystems = TargetInAttackArea.Select(target => target.GetComponent<HealthSystem.HealthSystem>()).ToList();
-            targetHealthSystems.ForEach(target => target.TakeDamage(currentAttackPattern.power * attackStat,gameObject));
+
+            List<AudioClip> soundList = new List<AudioClip>();
+            targetHealthSystems.ForEach(target =>
+            {
+                target.TakeDamage(currentAttackPattern.power * attackStat, gameObject);
+                
+                /*if (target.takeDamageSounds.Length <= 0) return;
+                AudioClip takeDamageSound = target.takeDamageSounds[Random.Range(0, target.takeDamageSounds.Length)];
+                if (soundList.Contains(takeDamageSound)) return;
+                soundList.Add(takeDamageSound);
+                SoundManager.Instance.PlaySound(takeDamageSound);*/
+            });
         
             // Change attack stage to next stage, if attack state is the last state, change to the first state.
             attackState = (int)attackState >= attackPatterns.Count - 1 ? AttackState.AttackState0 : attackState + 1;

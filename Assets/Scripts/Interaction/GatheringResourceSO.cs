@@ -22,4 +22,8 @@ public class GatheringResourceSO : ScriptableObject
     public List<PriorityObject<GatheringItemDrop>> itemDrop3;
     public List<PriorityObject<GatheringItemDrop>> itemDrop4;
     public List<PriorityObject<GatheringItemDrop>> itemDrop5;
+    
+    [Header("Sound")]
+    public AudioClip[] gatheringSounds;
+    public AudioClip[] destroySounds;
 }

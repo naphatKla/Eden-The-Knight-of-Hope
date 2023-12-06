@@ -213,7 +213,7 @@ namespace PlayerBehavior
             SetPlayerState(PlayerState.Idle);
             //transform.right *= -1;
             _spriteRenderer.color = Color.white;
-            PlayerCombatSystem.Instance.CurrentAttackCooldown /= 2;
+            //PlayerCombatSystem.Instance.CurrentAttackCooldown /= 2;
 
             yield return new WaitForSeconds(dashCooldown);
             _isDashCooldown = false;

@@ -5,6 +5,13 @@ using UnityEngine.UI;
 
 namespace HealthSystem
 {
+    public enum CharacterName
+    {
+        Player,
+        Orc,
+        Wolf,
+        Golem
+    }
     public class HealthSystem : MonoBehaviour
     {
         #region Declare Variables
@@ -14,9 +21,9 @@ namespace HealthSystem
         [HideInInspector] public bool isDead;
         protected Animator animator;
         protected SpriteRenderer spriteRenderer;
-        
+
         [Header("Sound")]
-        [SerializeField] protected AudioClip[] takeDamageSounds;
+        public AudioClip[] takeDamageSounds;
         [SerializeField] protected AudioClip[] deadSounds;
         #endregion
     
@@ -47,9 +54,9 @@ namespace HealthSystem
         public virtual void TakeDamage(float damage, GameObject attacker = null)
         {
             if (isDead) return;
+            SoundManager.Instance.RandomPlaySound(takeDamageSounds);
             CurrentHp -= damage;
             CurrentHp = Mathf.Clamp(CurrentHp, 0, maxHp);
-            SoundManager.Instance.RandomPlaySound(takeDamageSounds);
             UpdateUI();
         
             /*if(_animator)
