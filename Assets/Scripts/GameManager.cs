@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI scoreAddAnimation;
     [SerializeField] private GameObject warningText;
+    [SerializeField] private GameObject YouWin;
+    [SerializeField] private GameObject YouLose;
+    
     public Vector2 spawnPoint;
     public Transform player;
     public Transform playerBase;
@@ -29,8 +32,7 @@ public class GameManager : MonoBehaviour
     
     private void Update()
     {
-        if (!playerBase || !lastBoss) 
-            EndGameHandle();
+        EndGameHandle();
             
         EvenWarningHandler();
     }
@@ -73,7 +75,10 @@ public class GameManager : MonoBehaviour
 
     public void EndGameHandle()
     {
-        SceneManager.LoadScene(0);
+        if (!playerBase)
+            YouLose.SetActive(true);
+        if (!lastBoss)
+            YouWin.SetActive(true);
     }
     
     /// <summary>

@@ -427,7 +427,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 101
-  point: 15
   prompt: Press 'E' to Harvest
   interactionTextUI: {fileID: 8694446730242176781}
   interactionIndicators:
@@ -435,15 +434,10 @@ MonoBehaviour:
   - {fileID: 1126796864824265559}
   countdownTime: 0.5
   progressBar: {fileID: 6157137315286616074}
-  sprites:
-  - {fileID: -1526556897, guid: 262b25c57deae174ca513504431ad414, type: 3}
-  - {fileID: 305118481, guid: 262b25c57deae174ca513504431ad414, type: 3}
-  - {fileID: -1812116609, guid: 262b25c57deae174ca513504431ad414, type: 3}
-  - {fileID: -1453732517, guid: 262b25c57deae174ca513504431ad414, type: 3}
-  - {fileID: 1049354965, guid: 262b25c57deae174ca513504431ad414, type: 3}
-  - {fileID: -54371043, guid: 262b25c57deae174ca513504431ad414, type: 3}
-  - {fileID: 1922868109, guid: 262b25c57deae174ca513504431ad414, type: 3}
-  - {fileID: 1001979592, guid: 262b25c57deae174ca513504431ad414, type: 3}
+  alphaLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  resourceData: {fileID: 0}
 --- !u!61 &1840565014805192101
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -556,7 +550,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press E To Interact
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b4fdbc92fec4e8143a6ff36fe7831d8a, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -620,7 +614,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2634614474557428573
