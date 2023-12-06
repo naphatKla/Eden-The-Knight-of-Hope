@@ -39,6 +39,8 @@ namespace PlayerBehavior
         [SerializeField] private float sprintStaminaDrain;
         [SerializeField] private float dashStaminaDrain;
 
+        [SerializeField] private GameObject MiniMapUI;
+
         private bool _isDash;
         private bool _isDashCooldown;
         private bool _dashBuffering;
@@ -72,6 +74,7 @@ namespace PlayerBehavior
         {
             MovementHandle();
             RegenStaminaHandle();
+            MiniMapOpenHandle(MiniMapUI);
         }
 
         private void LateUpdate()
@@ -269,6 +272,16 @@ namespace PlayerBehavior
             PlayerInteractSystem.Instance.isStopMove = false;
             PlayerCombatSystem.Instance.CancelAttacking();
         }
+
+        private void MiniMapOpenHandle(GameObject miniMapOpen)
+        {
+            if (!Input.GetKeyDown(KeyCode.M))
+                return;
+            miniMapOpen.SetActive(!miniMapOpen.activeSelf);
+            
+        }
         #endregion
+        
+        
     }
 }
