@@ -35,4 +35,7 @@ MonoBehaviour:
   itemDrop4: []
   itemDrop5: []
   gatheringSounds: []
-  destroySounds: []
+  destroySounds:
+  - {fileID: 8300000, guid: cb71b654d36a8e14b93b827779b1ebcf, type: 3}
+  - {fileID: 8300000, guid: 5f33474a7463e2c4e8827d42850fd08a, type: 3}
+  - {fileID: 8300000, guid: 01b8dd069d84e04409ec58bf701aac1d, type: 3}

@@ -38,6 +38,9 @@ namespace PlayerBehavior
         [SerializeField] private float staminaRegenCooldown;
         [SerializeField] private float sprintStaminaDrain;
         [SerializeField] private float dashStaminaDrain;
+        
+        [Header("Dash Sound")]
+        [SerializeField] private AudioClip[] dashSound;
 
         private bool _isDash;
         private bool _isDashCooldown;
@@ -202,6 +205,7 @@ namespace PlayerBehavior
         private IEnumerator Dash()
         {
             _firstDashDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            SoundManager.Instance.RandomPlaySound(dashSound);
             _isDash = true;
             _isDashCooldown = true;
             _currentSpeed = dashSpeed;
@@ -244,6 +248,7 @@ namespace PlayerBehavior
             _staminaRegenCurrentCooldown += Time.deltaTime;
             if (_staminaRegenCurrentCooldown < staminaRegenCooldown) return;
             _currentStamina += staminaRegenSpeed * Time.deltaTime;
+            _currentStamina = Mathf.Clamp(_currentStamina, 0, maxStamina);
         }
         
         /// <summary>

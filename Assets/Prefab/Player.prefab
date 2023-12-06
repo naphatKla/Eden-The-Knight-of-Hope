@@ -345,7 +345,7 @@ MonoBehaviour:
     m_Bits: 833
   maxStamina: 100
   staminaRegenSpeed: 25
-  staminaRegenCooldown: 3
+  staminaRegenCooldown: 1.5
   sprintStaminaDrain: 5
   dashStaminaDrain: 10
   iframeDuration: 0
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945e76673898cb140a9ba764115e95d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseAttackStat: 16
+  baseAttackStat: 15
   attackPoint: {fileID: 6126908590091014635}
   attackArea: {x: 4, y: 2}
   targetLayer:
@@ -372,14 +372,29 @@ MonoBehaviour:
     delay: 0.1
     cooldown: 1
     attackState: 0
+    attackSounds:
+    - {fileID: 8300000, guid: b439d7920113c48488ff9ded0f113cab, type: 3}
+    - {fileID: 8300000, guid: aaca4db92f7d42d4ead5bad053d71328, type: 3}
+    - {fileID: 8300000, guid: 87bf957ef2d13ee46a9912fd73611bd3, type: 3}
   - power: 1
     delay: 0.1
     cooldown: 1
     attackState: 1
+    attackSounds:
+    - {fileID: 8300000, guid: b439d7920113c48488ff9ded0f113cab, type: 3}
+    - {fileID: 8300000, guid: aaca4db92f7d42d4ead5bad053d71328, type: 3}
+    - {fileID: 8300000, guid: 87bf957ef2d13ee46a9912fd73611bd3, type: 3}
   - power: 1.5
     delay: 0.2
     cooldown: 2
     attackState: 2
+    attackSounds:
+    - {fileID: 8300000, guid: cc66e61207f2cb946b5d59c76bc1be32, type: 3}
+    - {fileID: 8300000, guid: becacae37a1c36746bd61f1c041d2382, type: 3}
+    - {fileID: 8300000, guid: 5eb9fcd52da6fa4499551904d5083726, type: 3}
+    - {fileID: 8300000, guid: 6e1b83e7ad36f8043812d8018dd44d65, type: 3}
+    - {fileID: 8300000, guid: 8c003ae01c3a68144be0d6b4c3ef545f, type: 3}
+    - {fileID: 8300000, guid: b710d168afecb4540b0a8be86e57564c, type: 3}
   attackState: 0
   attackCooldownSlider: {fileID: 7759999872238343541}
   weaponSlot: {fileID: 0}
@@ -398,6 +413,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sliderHpPlayer: {fileID: 0}
   maxHp: 100
+  isDead: 0
+  takeDamageSounds: []
+  deadSounds: []
   respawnTime: 5
 --- !u!95 &7170810262454737404
 Animator:
@@ -452,17 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 0}
   inventoryData: {fileID: 11400000, guid: 7c8a5a2af1efac84c8cafb5edf47f58d, type: 2}
-  initialItems:
-  - quantity: 1000
-    item: {fileID: 11400000, guid: b9fba1e7e896ddd4ca6086a672e7cea1, type: 2}
-  - quantity: 1000
-    item: {fileID: 11400000, guid: df565b558d3c3154d8908c9c04a2039e, type: 2}
-  - quantity: 1000
-    item: {fileID: 11400000, guid: ba92d7966d383ef44b6d57bca5bdbd19, type: 2}
-  - quantity: 1000
-    item: {fileID: 11400000, guid: 1d778c8eb9da56a46a2acd489cf37ad3, type: 2}
-  - quantity: 1000
-    item: {fileID: 11400000, guid: 731e20d879e22d945a38155ce707b38a, type: 2}
+  initialItems: []
   key: 9
 --- !u!114 &5482898029961405059
 MonoBehaviour:
