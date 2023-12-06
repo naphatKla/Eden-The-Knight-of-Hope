@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,13 @@ public class UI_StartMenu : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 1f;
+    [SerializeField] private AudioClip backgroundMusic;
+
+    private void Start()
+    {
+        SoundManager.Instance.PlayBackGroundMusic(backgroundMusic);
+    }
+
     public void PlayButton()
     {
         StartCoroutine(LoadLevel(1));
