@@ -269,8 +269,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press E To Interact
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b4fdbc92fec4e8143a6ff36fe7831d8a, type: 2}
+  m_sharedMaterial: {fileID: 1571631574542425056, guid: b4fdbc92fec4e8143a6ff36fe7831d8a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3933105803324738824
@@ -611,10 +611,10 @@ MonoBehaviour:
   - {fileID: 5067326833207498990}
   countdownTime: 0.5
   progressBar: {fileID: 1343498073486773355}
-  point: {x: 50, y: 70}
-  sprites:
-  - {fileID: -2146916619, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
-  - {fileID: -1311370179, guid: 30007e69b2a65f74498a4189149926f9, type: 3}
+  alphaLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  resourceData: {fileID: 0}
 --- !u!61 &525955464144991036
 BoxCollider2D:
   m_ObjectHideFlags: 0
