@@ -271,6 +271,9 @@ MonoBehaviour:
   sliderHpPlayer: {fileID: 4159957233156935636}
   maxHp: 30
   isDead: 0
+  takeDamageSounds: []
+  deadSounds: []
+  coinDropRange: {x: 10, y: 10}
 --- !u!114 &1038195456504431633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,6 +297,7 @@ MonoBehaviour:
     delay: 0.35
     cooldown: 1
     attackState: 0
+    attackSounds: []
   attackState: 0
   attackRangeOffset: 1
 --- !u!195 &2236703541696821052

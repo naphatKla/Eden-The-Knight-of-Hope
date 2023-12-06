@@ -11,6 +11,7 @@ namespace Interaction
         public GatheringResourceSO resourceData;
         private PolygonCollider2D _collider2D;
         private bool _isDestroying;
+        
         public void SetData(GatheringResourceSO data)
         {
             resourceData = data;
@@ -24,6 +25,8 @@ namespace Interaction
             prompt = $"<b>[ E ] {resourceData.name}";
             interactionTextUI.text = prompt;
             SpriteRenderer = GetComponent<SpriteRenderer>();
+            if (resourceData)
+                SetData(resourceData);
         }
 
         protected override void InteractHandler()

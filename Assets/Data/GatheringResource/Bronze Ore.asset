@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13d9b7fd7374604890f6ede16e79abd, type: 3}
+  m_Name: Bronze Ore
+  m_EditorClassIdentifier: 
+  sprite:
+  - {fileID: -1171353352, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  point: {x: 0, y: 0}
+  gatheringTime: 2
+  itemDrop1:
+  - obj:
+      item: {fileID: 11400000, guid: 0ad89db0ac0e76648a1df444cae8514e, type: 2}
+      quantityDrop: {x: 2, y: 3}
+    spawnRate: 100
+  itemDrop2:
+  - obj:
+      item: {fileID: 11400000, guid: 0227960a72cc3ca4fa58804eb0be4d3b, type: 2}
+      quantityDrop: {x: 1, y: 2}
+    spawnRate: 50
+  - obj:
+      item: {fileID: 0}
+      quantityDrop: {x: 0, y: 0}
+    spawnRate: 50
+  itemDrop3: []
+  itemDrop4: []
+  itemDrop5: []
+  gatheringSounds: []
+  destroySounds: []

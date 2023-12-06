@@ -8,6 +8,7 @@ namespace HealthSystem
     public class EnemyHealthSystem : HealthSystem
     {
         private Enemy _enemy;
+        public Vector2 coinDropRange;
         protected override void Start()
         {
             _enemy = GetComponent<Enemy>();
@@ -38,8 +39,8 @@ namespace HealthSystem
         /// </summary>
         protected override void Dead()
         {
-            if(Random.Range(0,101) >= 0)
-                GameManager.Instance.AddPoint(10);
+           if (_enemy.Target.CompareTag("Player")) 
+               GameManager.Instance.AddPoint((int)Random.Range(coinDropRange.x, coinDropRange.y));
             
             base.Dead();
         }

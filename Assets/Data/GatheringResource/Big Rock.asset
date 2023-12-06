@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite:
   - {fileID: -1377261865, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
-  point: {x: 10, y: 15}
-  gatheringTime: 0.5
+  point: {x: 0, y: 0}
+  gatheringTime: 10
   itemDrop1:
   - obj:
       item: {fileID: 11400000, guid: 0227960a72cc3ca4fa58804eb0be4d3b, type: 2}
@@ -33,3 +33,5 @@ MonoBehaviour:
   itemDrop3: []
   itemDrop4: []
   itemDrop5: []
+  gatheringSounds: []
+  destroySounds: []
