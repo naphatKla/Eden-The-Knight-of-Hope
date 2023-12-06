@@ -375,7 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 8663558823000584141}
   transitionTime: 1
-  backgroundMusic: {fileID: 0}
+  backgroundMusic: {fileID: 8300000, guid: 4a02718cd9a10d84ca2f669fc78d46ea, type: 3}
 --- !u!114 &393782084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -869,8 +869,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c9a531ab95b3d43b48635a884f6202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseEnter: {fileID: 0}
-  mouseClick: {fileID: 0}
+  mouseEnter: {fileID: 8300000, guid: 34450038decd426478177147728f1d2b, type: 3}
+  mouseClick: {fileID: 8300000, guid: 3e4437634315a8146895d8c83377447b, type: 3}
 --- !u!1 &839241193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,8 +1039,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c9a531ab95b3d43b48635a884f6202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseEnter: {fileID: 0}
-  mouseClick: {fileID: 0}
+  mouseEnter: {fileID: 8300000, guid: 34450038decd426478177147728f1d2b, type: 3}
+  mouseClick: {fileID: 8300000, guid: 3e4437634315a8146895d8c83377447b, type: 3}
 --- !u!1 &873681812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2058,8 +2058,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c9a531ab95b3d43b48635a884f6202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseEnter: {fileID: 0}
-  mouseClick: {fileID: 0}
+  mouseEnter: {fileID: 8300000, guid: 34450038decd426478177147728f1d2b, type: 3}
+  mouseClick: {fileID: 8300000, guid: 3e4437634315a8146895d8c83377447b, type: 3}
 --- !u!1001 &8663558823000584138
 PrefabInstance:
   m_ObjectHideFlags: 0
