@@ -14,7 +14,7 @@ public class TimeSystem : MonoBehaviour
 {
     #region MyRegion
 
-    [Header("Time")] 
+    [Header("Time")]
     public int dayEnd;
     public float dayTime;
     public float nightTime;
@@ -22,7 +22,8 @@ public class TimeSystem : MonoBehaviour
     [SerializeField] private Vector2 dayPeriod;
     [HideInInspector] public float cycleLength;
     [HideInInspector] public float time;
-    [HideInInspector] public int day;
+    public int day;
+    public int startDay;
     private float _timeMultiplier;
     
     [Header("Light")] 
@@ -61,7 +62,7 @@ public class TimeSystem : MonoBehaviour
 
     private void Start()
     {
-        day = 0;
+        day = startDay;
         cycleLength = dayTime + nightTime;
         _lightUpDuration = lightUpPeriod.y - lightUpPeriod.x;
         _lightDownDuration = lightDownPeriod.y - lightDownPeriod.x;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1afd1fae86dc9c48b63021824b17395, type: 3}
   m_Name: Stone arrow tower
   m_EditorClassIdentifier: 
-  towerName: Wood arrow tower <color=grey>(Tier 3)
+  towerName: Wood arrow tower <color=grey>(T 3)
   towerDescription: "HP : <color=grey>725</color>                   Damage : <color=grey>60</color> 
     \nCooldown  : <color=grey>0.75s</color>    Radius : <color=grey>19.5</color>  "
   towerPrefab: {fileID: 3840941788676572609, guid: 1d7c596de54caba48ab3c53b952b5049, type: 3}

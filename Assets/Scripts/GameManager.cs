@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject warningText;
     [SerializeField] private GameObject YouWin;
     [SerializeField] private GameObject YouLose;
+    [SerializeField] private Button restartButton;
+    [SerializeField] private Button mainMenuButton;
+    [SerializeField] private Button continueButton;
     
     public Vector2 spawnPoint;
     public Transform player;
@@ -31,6 +34,9 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        restartButton.onClick.AddListener(() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex));
+        mainMenuButton.onClick.AddListener(() => SceneManager.LoadScene(0));
+        continueButton.onClick.AddListener(() => SceneManager.LoadScene(2));
     }
     
     private void Update()

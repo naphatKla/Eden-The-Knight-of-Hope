@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Linq;
 using Inventory;
 using PlayerBehavior;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace Interaction

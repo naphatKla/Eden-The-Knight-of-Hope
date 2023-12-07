@@ -666,7 +666,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f6fc274d2765aab4993a6f8109efb423, type: 3}
   - {fileID: 8300000, guid: b00d0c648fc9bae40b6ccff852d00b99, type: 3}
   - {fileID: 8300000, guid: 2f0f3a7ad755ce440887ac94efb45de5, type: 3}
-  coinDropRange: {x: 10, y: 10}
+  coinDropRange: {x: 10, y: 15}
 --- !u!114 &8320007089722136384
 MonoBehaviour:
   m_ObjectHideFlags: 0

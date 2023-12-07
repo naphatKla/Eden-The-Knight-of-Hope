@@ -169,8 +169,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.1568501, y: 1.1181998, z: 0}
-    m_Extent: {x: 5.2014503, y: 7.4469, z: 0}
+    m_Center: {x: 0.16350007, y: 1.1121001, z: 0}
+    m_Extent: {x: 5.207, y: 7.4498, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 7
@@ -351,6 +351,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sliderHpPlayer: {fileID: 2823126208760890925}
   maxHp: 2500
+  isDead: 0
+  takeDamageSounds: []
+  deadSounds: []
   hpRegenPercentage: 1
   alphaLayerMask:
     serializedVersion: 2
@@ -391,7 +394,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.028744174}
+    pivot: {x: 0.5, y: 0.06}
     oldSize: {x: 13.74, y: 14.9215975}
     newSize: {x: 24.802656, y: 19.380001}
     adaptiveTilingThreshold: 0.5
@@ -540,7 +543,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 0.72780204, y: 0.6701695, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7858508900659508613}
@@ -586,11 +589,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
+  m_Sprite: {fileID: -2086678888, guid: db6b97b451609844fa092e61a2d8d6d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 2
+  m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0

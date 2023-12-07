@@ -39,6 +39,7 @@ public class BossCombatSystem : EnemyCombatSystem
         targetHealthSystems.ForEach(target => target.TakeDamage(currentAttackPattern.power * attackStat,gameObject));
         
         // Change attack stage to next stage, if attack state is the last state, change to the first state.
+        SoundManager.Instance.RandomPlaySound(currentAttackPattern.attackSounds);
         attackState = (int)attackState >= attackPatterns.Count - 1 ? AttackState.AttackState0 : attackState + 1;
         attackCoroutine = null;
         

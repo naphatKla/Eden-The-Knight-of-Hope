@@ -1,13 +1,15 @@
 using System.Collections;
 using UnityEngine;
 
-public class SoundManager : Singleton<SoundManager>
+public class SoundManager : MonoBehaviour
 {
     [HideInInspector] public AudioSource audioSource;
     [HideInInspector] public AudioSource musicSource;
+    public static SoundManager Instance;
     
     private void Awake()
     {
+        Instance = this;
         audioSource = gameObject.AddComponent<AudioSource>();
         musicSource = gameObject.AddComponent<AudioSource>();
         musicSource.loop = true;

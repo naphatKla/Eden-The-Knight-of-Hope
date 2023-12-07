@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRadius: 19.5
-  attackCooldown: 0.75
+  attackCooldown: 1
   attackPoint: {fileID: 3745804380099421501}
   targetLayerMask:
     serializedVersion: 2
@@ -149,7 +149,7 @@ MonoBehaviour:
     m_Bits: 192
   bulletPrefab: {fileID: 7684876603425027750, guid: 2c0effeb60ae2be4299195950078ceaa, type: 3}
   bulletSpawnPoint: {fileID: 7521590804567726720}
-  bulletDamage: 60
+  bulletDamage: 40
   bulletSpeed: 10
   spriteRenderer: {fileID: 0}
 --- !u!114 &-8793142761518223349
@@ -166,6 +166,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sliderHpPlayer: {fileID: 8527158778361198969}
   maxHp: 725
+  isDead: 0
+  takeDamageSounds: []
+  deadSounds: []
   towerHpFill: {fileID: 4881175787183757315}
 --- !u!60 &8249009458153756354
 PolygonCollider2D:
@@ -202,7 +205,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.015}
     oldSize: {x: 4.87, y: 10.591134}
     newSize: {x: 6, y: 4.19}
     adaptiveTilingThreshold: 0.5

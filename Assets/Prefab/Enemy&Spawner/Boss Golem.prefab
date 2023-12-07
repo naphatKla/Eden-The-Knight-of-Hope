@@ -643,6 +643,15 @@ MonoBehaviour:
   sliderHpPlayer: {fileID: 3122817313073520472}
   maxHp: 700
   isDead: 0
+  takeDamageSounds:
+  - {fileID: 8300000, guid: ad112783df076e548af2a2e24f98e32d, type: 3}
+  - {fileID: 8300000, guid: 0334caeff82789c44a921aad3a831c0b, type: 3}
+  - {fileID: 8300000, guid: 7e8fffec87d7a1546ad5f9267fb770e9, type: 3}
+  deadSounds:
+  - {fileID: 8300000, guid: f6fc274d2765aab4993a6f8109efb423, type: 3}
+  - {fileID: 8300000, guid: b00d0c648fc9bae40b6ccff852d00b99, type: 3}
+  - {fileID: 8300000, guid: 2f0f3a7ad755ce440887ac94efb45de5, type: 3}
+  coinDropRange: {x: 0, y: 0}
 --- !u!114 &3411352864226028852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,6 +675,7 @@ MonoBehaviour:
     delay: 1
     cooldown: 2
     attackState: 0
+    attackSounds: []
   attackState: 0
   attackRangeOffset: 2.5
   bossAttackAreaIndicator: {fileID: 1304857755325668209}

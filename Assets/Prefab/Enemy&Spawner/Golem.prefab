@@ -280,9 +280,15 @@ MonoBehaviour:
   sliderHpPlayer: {fileID: 4777328305691578600}
   maxHp: 70
   isDead: 0
-  takeDamageSounds: []
-  deadSounds: []
-  coinDropRange: {x: 10, y: 10}
+  takeDamageSounds:
+  - {fileID: 8300000, guid: ad112783df076e548af2a2e24f98e32d, type: 3}
+  - {fileID: 8300000, guid: 0334caeff82789c44a921aad3a831c0b, type: 3}
+  - {fileID: 8300000, guid: 7e8fffec87d7a1546ad5f9267fb770e9, type: 3}
+  deadSounds:
+  - {fileID: 8300000, guid: f6fc274d2765aab4993a6f8109efb423, type: 3}
+  - {fileID: 8300000, guid: b00d0c648fc9bae40b6ccff852d00b99, type: 3}
+  - {fileID: 8300000, guid: 2f0f3a7ad755ce440887ac94efb45de5, type: 3}
+  coinDropRange: {x: 20, y: 25}
 --- !u!114 &8752889855235501269
 MonoBehaviour:
   m_ObjectHideFlags: 0
