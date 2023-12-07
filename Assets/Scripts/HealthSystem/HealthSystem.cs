@@ -1,4 +1,7 @@
+using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace HealthSystem
@@ -12,6 +15,7 @@ namespace HealthSystem
         private bool _isDead;
         private Animator _animator;
         private static readonly int TakDamage = Animator.StringToHash("TakeDamage");
+        public GameObject damageIndicator;
         #endregion
     
         protected virtual void Start()
@@ -39,7 +43,8 @@ namespace HealthSystem
             CurrentHp -= damage;
             CurrentHp = Mathf.Clamp(CurrentHp, 0, maxHp);
             UpdateUI();
-        
+            ShowDamageIndicator(damage);
+            
             if(_animator)
                 _animator.SetTrigger(TakDamage);
         
@@ -87,6 +92,13 @@ namespace HealthSystem
         private void UpdateUI()
         {
             sliderHpPlayer.value = CurrentHp / maxHp;
+        }
+        
+        public void ShowDamageIndicator(float damage)
+        {
+            if (!damageIndicator) return;
+            var go = Instantiate(damageIndicator, transform.position, quaternion.identity);
+            go.GetComponent<TextMeshPro>().text = damage.ToString("0");
         }
         #endregion
     }

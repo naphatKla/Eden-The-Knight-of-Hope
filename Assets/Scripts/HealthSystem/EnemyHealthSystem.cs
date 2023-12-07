@@ -10,7 +10,6 @@ namespace HealthSystem
 {
     public class EnemyHealthSystem : HealthSystem
     {
-        public GameObject DamageIndicator;
         private Enemy _enemy;
         protected override void Start()
         {
@@ -35,7 +34,6 @@ namespace HealthSystem
         
             if (attacker && attacker.CompareTag("Player"))
                 StartCoroutine(Stun(0.5f));
-            ShowDamageIndicator(damage);
             base.TakeDamage(damage, attacker);
         }
     
@@ -50,13 +48,6 @@ namespace HealthSystem
         
             base.Dead();
         }
-
-        public void ShowDamageIndicator(float damage)
-        {
-            var go = Instantiate(DamageIndicator, transform.position, quaternion.identity);
-            go.GetComponent<TextMeshPro>().text = damage.ToString("0");
-        }
-
         
         /// <summary>
         /// stun the enemy.
