@@ -1,7 +1,9 @@
-
 using System;
+using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class TowerHealthSystem : HealthSystem.HealthSystem
 {
@@ -31,5 +33,13 @@ public class TowerHealthSystem : HealthSystem.HealthSystem
     {
         base.Heal(healPoint);
         sliderHpPlayer.gameObject.SetActive(CurrentHp < maxHp && CurrentHp > 0);
+    }
+    
+    protected override void ShowDamageIndicator(float damage)
+    {
+        if (!damageIndicator) return;
+        Vector3 offset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f),0);
+        var go = Instantiate(damageIndicator, transform.position + offset, quaternion.identity);
+        go.GetComponent<TextMeshPro>().text = $"<color=red>{damage}";
     }
 }

@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 101
-  prompt: 
+  prompt: <b>[ E ] Open Gacha
   interactionTextUI: {fileID: 3020309683970117016}
   interactionIndicators:
   - {fileID: 4889199489500931004}

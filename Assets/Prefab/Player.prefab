@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8896434625491948225}
   - component: {fileID: 7293210232763811170}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: MinimapIconOpen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7000580293569115590}
@@ -424,16 +424,16 @@ MonoBehaviour:
   sprintKey: 304
   dashKey: 32
   canvasTransform: {fileID: 2254507535340655425}
-  visibleLayerMask:
-    serializedVersion: 2
-    m_Bits: 833
   maxStamina: 100
   staminaRegenSpeed: 25
   staminaRegenCooldown: 1.5
   sprintStaminaDrain: 5
   dashStaminaDrain: 10
-  dashSound: []
-  iframeDuration: 0
+  dashSound:
+  - {fileID: 8300000, guid: 5ad412be5cf5038479de57c68e4849d0, type: 3}
+  - {fileID: 8300000, guid: f11ff1fead4556e49b28174080150896, type: 3}
+  - {fileID: 8300000, guid: 73d8ca49fa83f724db160f368ef7acc1, type: 3}
+  miniMapUI: {fileID: 0}
 --- !u!114 &1899462294495903435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,8 +499,9 @@ MonoBehaviour:
   sliderHpPlayer: {fileID: 0}
   maxHp: 100
   isDead: 0
+  damageIndicator: {fileID: 5281553924224638349, guid: 6dd982294d017a14fb3d96ab1797088f, type: 3}
   takeDamageSounds:
-  - {fileID: 8300000, guid: 432562b90048f5449a196ce6eae6d8dc, type: 3}
+  - {fileID: 8300000, guid: 72b031e0779da9e4eaff6f63a2810ea9, type: 3}
   deadSounds:
   - {fileID: 8300000, guid: 2f0f3a7ad755ce440887ac94efb45de5, type: 3}
   - {fileID: 8300000, guid: f6fc274d2765aab4993a6f8109efb423, type: 3}

@@ -1,6 +1,9 @@
 using System.Linq;
+using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace HealthSystem
 {
@@ -68,6 +71,14 @@ namespace HealthSystem
                 color.a += 0.01f;
                 _spriteRenderer.color = color;
             }
+        }
+        
+        protected override void ShowDamageIndicator(float damage)
+        {
+            if (!damageIndicator) return;
+            Vector3 offset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f),0);
+            var go = Instantiate(damageIndicator, transform.position + offset, quaternion.identity);
+            go.GetComponent<TextMeshPro>().text = $"<color=red>{damage}";
         }
     }
 }

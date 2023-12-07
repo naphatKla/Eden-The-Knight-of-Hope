@@ -271,6 +271,7 @@ MonoBehaviour:
   sliderHpPlayer: {fileID: 4159957233156935636}
   maxHp: 30
   isDead: 0
+  damageIndicator: {fileID: 5281553924224638349, guid: 6dd982294d017a14fb3d96ab1797088f, type: 3}
   takeDamageSounds:
   - {fileID: 8300000, guid: ad112783df076e548af2a2e24f98e32d, type: 3}
   - {fileID: 8300000, guid: 0334caeff82789c44a921aad3a831c0b, type: 3}

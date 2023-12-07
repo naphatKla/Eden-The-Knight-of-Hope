@@ -1,5 +1,8 @@
 using PlayerBehavior;
+using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace HealthSystem
 {
@@ -38,7 +41,16 @@ namespace HealthSystem
         public override void TakeDamage(float damage, GameObject attacker = null)
         {
             if (PlayerBehavior.Player.Instance.IsDash) return; 
+            SoundManager.Instance.RandomPlaySound(takeDamageSounds);
             base.TakeDamage(damage, attacker);
+        }
+
+        protected override void ShowDamageIndicator(float damage)
+        {
+            if (!damageIndicator) return;
+            Vector3 offset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f),0);
+            var go = Instantiate(damageIndicator, transform.position + offset, quaternion.identity);
+            go.GetComponent<TextMeshPro>().text = $"<color=red>{damage}";
         }
     }
 }

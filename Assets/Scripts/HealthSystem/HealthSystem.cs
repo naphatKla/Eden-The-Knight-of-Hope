@@ -1,8 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace HealthSystem
 {
@@ -56,7 +57,7 @@ namespace HealthSystem
         public virtual void TakeDamage(float damage, GameObject attacker = null)
         {
             if (isDead) return;
-            SoundManager.Instance.RandomPlaySound(takeDamageSounds);
+            ShowDamageIndicator(damage);
             CurrentHp -= damage;
             CurrentHp = Mathf.Clamp(CurrentHp, 0, maxHp);
             UpdateUI();
@@ -137,10 +138,11 @@ namespace HealthSystem
             spriteRenderer.color = Color.white;
         }
         
-        public void ShowDamageIndicator(float damage)
+        protected virtual void ShowDamageIndicator(float damage)
         {
             if (!damageIndicator) return;
-            var go = Instantiate(damageIndicator, transform.position, quaternion.identity);
+            Vector3 offset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f),0);
+            var go = Instantiate(damageIndicator, transform.position + offset, quaternion.identity);
             go.GetComponent<TextMeshPro>().text = damage.ToString("0");
         }
         #endregion
