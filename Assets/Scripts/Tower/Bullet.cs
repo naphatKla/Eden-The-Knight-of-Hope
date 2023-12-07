@@ -55,7 +55,15 @@ namespace Tower
         private void OnTriggerEnter2D(Collider2D other)
         {
             if(other.gameObject != _target.gameObject) return;
-        
+
+
+            if (_target.GetComponent<HealthSystem.HealthSystem>() as BossGolemHeathSystem)
+            {
+                _target.GetComponent<HealthSystem.HealthSystem>().TakeDamage(_damage / 10,_parentTower.gameObject);
+                Destroy(gameObject);
+                return;
+            }
+                
             _target.GetComponent<HealthSystem.HealthSystem>().TakeDamage(_damage,_parentTower.gameObject);
             Destroy(gameObject);
         }

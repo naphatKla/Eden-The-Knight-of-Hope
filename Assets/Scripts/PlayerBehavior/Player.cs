@@ -4,6 +4,7 @@ using System.Linq;
 using CombatSystem;
 using HealthSystem;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 namespace PlayerBehavior
@@ -30,7 +31,6 @@ namespace PlayerBehavior
         [SerializeField] private KeyCode sprintKey;
         [SerializeField] private KeyCode dashKey;
         [SerializeField] private Transform canvasTransform;
-        [SerializeField] private LayerMask visibleLayerMask;
 
         [Header("Player Stamina")] 
         [SerializeField] private float maxStamina;
@@ -38,8 +38,9 @@ namespace PlayerBehavior
         [SerializeField] private float staminaRegenCooldown;
         [SerializeField] private float sprintStaminaDrain;
         [SerializeField] private float dashStaminaDrain;
-
-        [SerializeField] private GameObject MiniMapUI;
+        
+        [Header("UI")]
+        [SerializeField] private GameObject miniMapUI;
 
         private bool _isDash;
         private bool _isDashCooldown;
@@ -74,7 +75,7 @@ namespace PlayerBehavior
         {
             MovementHandle();
             RegenStaminaHandle();
-            MiniMapOpenHandle(MiniMapUI);
+            MiniMapOpenHandle(miniMapUI);
         }
 
         private void LateUpdate()
@@ -181,9 +182,6 @@ namespace PlayerBehavior
         /// <summary>
         /// Use for handle dash system.
         /// </summary>
-
-        [SerializeField] private float iframeDuration;
-        
         private void DashHandle()
         {
             if (_isDash) return;
@@ -281,7 +279,5 @@ namespace PlayerBehavior
             
         }
         #endregion
-        
-        
     }
 }
