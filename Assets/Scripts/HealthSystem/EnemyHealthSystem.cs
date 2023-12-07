@@ -1,5 +1,7 @@
 using System.Collections;
 using EnemyBehavior;
+using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

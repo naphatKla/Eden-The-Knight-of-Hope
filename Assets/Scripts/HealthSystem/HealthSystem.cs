@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace HealthSystem
@@ -21,6 +22,7 @@ namespace HealthSystem
         [HideInInspector] public bool isDead;
         protected Animator animator;
         protected SpriteRenderer spriteRenderer;
+        public GameObject damageIndicator;
 
         [Header("Sound")]
         public AudioClip[] takeDamageSounds;
@@ -133,6 +135,13 @@ namespace HealthSystem
         protected void ResetSpriteColor()
         {
             spriteRenderer.color = Color.white;
+        }
+        
+        public void ShowDamageIndicator(float damage)
+        {
+            if (!damageIndicator) return;
+            var go = Instantiate(damageIndicator, transform.position, quaternion.identity);
+            go.GetComponent<TextMeshPro>().text = damage.ToString("0");
         }
         #endregion
     }
