@@ -4,6 +4,7 @@ using System.Linq;
 using CombatSystem;
 using HealthSystem;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 namespace PlayerBehavior
@@ -30,7 +31,6 @@ namespace PlayerBehavior
         [SerializeField] private KeyCode sprintKey;
         [SerializeField] private KeyCode dashKey;
         [SerializeField] private Transform canvasTransform;
-        [SerializeField] private LayerMask visibleLayerMask;
 
         [Header("Player Stamina")] 
         [SerializeField] private float maxStamina;
@@ -41,6 +41,9 @@ namespace PlayerBehavior
         
         [Header("Dash Sound")]
         [SerializeField] private AudioClip[] dashSound;
+        
+        [Header("UI")]
+        [SerializeField] private GameObject miniMapUI;
 
         private bool _isDash;
         private bool _isDashCooldown;
@@ -75,6 +78,7 @@ namespace PlayerBehavior
         {
             MovementHandle();
             RegenStaminaHandle();
+            MiniMapOpenHandle(miniMapUI);
         }
 
         private void LateUpdate()
@@ -181,9 +185,6 @@ namespace PlayerBehavior
         /// <summary>
         /// Use for handle dash system.
         /// </summary>
-
-        [SerializeField] private float iframeDuration;
-        
         private void DashHandle()
         {
             if (_isDash) return;
@@ -273,6 +274,14 @@ namespace PlayerBehavior
             _currentStamina = maxStamina;
             PlayerInteractSystem.Instance.isStopMove = false;
             PlayerCombatSystem.Instance.CancelAttacking();
+        }
+
+        private void MiniMapOpenHandle(GameObject miniMapOpen)
+        {
+            if (!Input.GetKeyDown(KeyCode.M))
+                return;
+            miniMapOpen.SetActive(!miniMapOpen.activeSelf);
+            
         }
         #endregion
     }

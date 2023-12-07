@@ -19,7 +19,7 @@ namespace Interaction
         private TowerHealthSystem _towerHealthSystem;
         [SerializeField] private LayerMask playerLayer;
         
-        protected void Update()
+        protected override void Update()
         {
             if (!towerOnPlatform)
             {
