@@ -168,6 +168,12 @@ MonoBehaviour:
   itemImage: {fileID: 3184238502548903279}
   quantityText: {fileID: 2511206729587454490}
   borderImage: {fileID: 2163889471937947778}
+  clickSounds:
+  - {fileID: 8300000, guid: 04ee6cd9e3d9138438eecec629edc075, type: 3}
+  dragSounds:
+  - {fileID: 8300000, guid: 04ee6cd9e3d9138438eecec629edc075, type: 3}
+  dropSounds:
+  - {fileID: 8300000, guid: 04ee6cd9e3d9138438eecec629edc075, type: 3}
   itemSlotType: 0
   Quantity: 0
   isEmpty: 1

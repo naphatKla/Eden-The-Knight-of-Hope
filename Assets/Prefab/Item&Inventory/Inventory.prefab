@@ -1773,6 +1773,7 @@ MonoBehaviour:
   otherPages:
   - {fileID: 9029851852755653342}
   listOfUIItems: []
+  openSound: []
   itemDescription: {fileID: 9177034042447995587}
   listOfItemTypes: 0000000001000000050000000200000005000000030000000500000004000000
   lisOfQuickSlots: []
@@ -2126,8 +2127,9 @@ MonoBehaviour:
   otherPages:
   - {fileID: 5244888614705784568}
   listOfUIItems: []
+  openSound: []
   itemDescription: {fileID: 9177034042447995587}
-  equipmentPanel: {fileID: 5297344303960145561}
+  equipmentPanel: {fileID: 5244888614705784568}
   equipmentButton: {fileID: 5119830376183685292}
   descriptionButton: {fileID: 4707926367510485640}
   descriptionText: {fileID: 0}

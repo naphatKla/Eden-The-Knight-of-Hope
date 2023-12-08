@@ -14,6 +14,9 @@ namespace Inventory
         protected int currentlyDraggedItemIndex = -1; // -1 means no item is being dragged
         public event Action<int> OnDescriptionRequested, OnItemActionRequested, OnStarDragging;
         public event Action<int, int> OnSwapItem;
+        
+        [Header("Sound")] 
+        [SerializeField] protected AudioClip[] openSound;
         public virtual void Awake()
         {
             mouseFollower.Toggle(false);
@@ -77,9 +80,11 @@ namespace Inventory
         /// <summary>
         /// Show the inventory UI page.
         /// </summary>
-        public void Show()
+        public void Show(bool waitForAnyUIClose = true)
         {
-            if (UIManager.Instance.CheckIsAnyUIOpen()) return;
+            if (UIManager.Instance.CheckIsAnyUIOpen() && waitForAnyUIClose) return;
+
+            SoundManager.Instance.RandomPlaySound(openSound);
             gameObject.SetActive(true);
             ResetSelection();
         }
@@ -89,6 +94,7 @@ namespace Inventory
         /// </summary>
         public virtual void Hide()
         {
+            SoundManager.Instance.RandomPlaySound(openSound);
             gameObject.SetActive(false);
         }
         

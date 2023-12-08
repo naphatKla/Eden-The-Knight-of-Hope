@@ -4,6 +4,7 @@ using Inventory;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     public bool isNightWarning;
     
     [Header("Sound")]
+    [SerializeField] private AudioClip[] nightAlertSound;
     [SerializeField] private AudioClip[] bossSpawnSound;
     
     public static GameManager Instance;
@@ -60,6 +62,7 @@ public class GameManager : MonoBehaviour
         }
         if (warningText.gameObject.activeSelf || isNightWarning) return;
         isNightWarning = true;
+        SoundManager.Instance.RandomPlaySound(nightAlertSound);
         StartCoroutine(ToggleSetActiveRelateWithAnimation(warningText.gameObject));
     }
 
@@ -102,7 +105,7 @@ public class GameManager : MonoBehaviour
         if (!obj.TryGetComponent(out Animator animator)) yield break;
         yield return new WaitUntil(() => !obj.activeSelf);
         obj.SetActive(true);
-        
+
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
         obj.SetActive(false);
     }

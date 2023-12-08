@@ -44,6 +44,8 @@ namespace PlayerBehavior
         
         [Header("UI")]
         [SerializeField] private GameObject miniMapUI;
+        [SerializeField] private Camera miniMapCamera;
+        [SerializeField] private AudioClip[] openMinimapSounds;
 
         private bool _isDash;
         private bool _isDashCooldown;
@@ -278,10 +280,10 @@ namespace PlayerBehavior
 
         private void MiniMapOpenHandle(GameObject miniMapOpen)
         {
-            if (!Input.GetKeyDown(KeyCode.M))
-                return;
+            if (!Input.GetKeyDown(KeyCode.M)) return;
             miniMapOpen.SetActive(!miniMapOpen.activeSelf);
-            
+            miniMapCamera.gameObject.SetActive(miniMapOpen.activeSelf);
+            SoundManager.Instance.RandomPlaySound(openMinimapSounds);
         }
         #endregion
     }

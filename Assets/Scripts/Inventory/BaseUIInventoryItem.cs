@@ -12,6 +12,9 @@ namespace Inventory
         [SerializeField] private Image itemImage;
         [SerializeField] public TMP_Text quantityText;
         [SerializeField] private Image borderImage;
+        [SerializeField] protected AudioClip[] clickSounds;
+        [SerializeField] protected AudioClip[] dragSounds;
+        [SerializeField] protected AudioClip[] dropSounds;
         public ItemSo ItemData { get; set; }
         public InventorySo ParentInventoryData { get; set; }
         public int Index { get; set; }
@@ -36,6 +39,7 @@ namespace Inventory
             HandleClick(pointerData);
             if (pointerData.button == PointerEventData.InputButton.Middle)
                 ParentInventoryData.SortInventory();
+            SoundManager.Instance.RandomPlaySound(clickSounds);
         }
 
         public virtual void OnBeginDrag(PointerEventData eventData)
@@ -43,6 +47,7 @@ namespace Inventory
             if (isEmpty) return;
             if (eventData.button != PointerEventData.InputButton.Left) return;
             OnItemBeginDrag?.Invoke(this);
+            SoundManager.Instance.RandomPlaySound(dragSounds);
         }
 
         public virtual void OnEndDrag(PointerEventData eventData)
@@ -62,6 +67,7 @@ namespace Inventory
             }
             
             OnItemDroppedOn?.Invoke(this);
+            SoundManager.Instance.RandomPlaySound(dropSounds);
         }
 
         public void OnDrag(PointerEventData eventData)

@@ -7,7 +7,7 @@ namespace Inventory
     public class PlayerUIInventoryPage : BaseUIInventoryPage
     {
         [SerializeField] private UIInventoryDescription itemDescription; //
-        [SerializeField] private GameObject equipmentPanel; //
+        [SerializeField] private UIEquipmentInventoryPage equipmentPanel; //
         [Header("Button")] [SerializeField] private Button equipmentButton; //
         [SerializeField] private Button descriptionButton; //
         [SerializeField] private TextMeshProUGUI descriptionText;
@@ -27,8 +27,8 @@ namespace Inventory
         {
             mouseFollower.Toggle(false);
             itemDescription?.ResetDescription();
-            equipmentButton?.onClick.AddListener(() => {itemDescription.gameObject.SetActive(false); equipmentPanel.SetActive(true);});
-            descriptionButton?.onClick.AddListener(() => {itemDescription.gameObject.SetActive(true); equipmentPanel.SetActive(false);});
+            equipmentButton?.onClick.AddListener(() => {itemDescription.gameObject.SetActive(false); equipmentPanel.Show(false);});
+            descriptionButton?.onClick.AddListener(() => {itemDescription.gameObject.SetActive(true); equipmentPanel.Hide();});
             sellButton.onClick.AddListener(SellItem);
             sellAllButton.onClick.AddListener(SellAllItem);
             cancelSellButton.onClick.AddListener(()=>confirmSellPanel.gameObject.SetActive(false));
@@ -41,12 +41,12 @@ namespace Inventory
             if (itemDescription.gameObject.activeSelf)
             {
                 itemDescription.gameObject.SetActive(false); 
-                equipmentPanel.SetActive(true);
+                equipmentPanel.Show(false);
             }
             else
             {
                 itemDescription.gameObject.SetActive(true); 
-                equipmentPanel.SetActive(false);
+                equipmentPanel.Hide();
             }
         }
 
@@ -100,7 +100,7 @@ namespace Inventory
             sellZone.gameObject.SetActive(true);
             sellButton.gameObject.SetActive(true);
             sellAllButton.gameObject.SetActive(true);
-            equipmentPanel.SetActive(false);
+            equipmentPanel.Hide();
             itemDescription.gameObject.SetActive(true);
             equipmentButton.gameObject.SetActive(false);
             descriptionButton.gameObject.SetActive(false);
