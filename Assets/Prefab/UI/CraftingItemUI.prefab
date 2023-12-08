@@ -321,6 +321,10 @@ MonoBehaviour:
   itemImage: {fileID: 2533054128612818584}
   nameText: {fileID: 7123794068154636808}
   correctIcon: {fileID: 6528087707009627769}
+  mouseHoverSounds:
+  - {fileID: 8300000, guid: cce3af25e8fb7c345b64aee57e8d3478, type: 3}
+  mouseClickSounds:
+  - {fileID: 8300000, guid: cb6842d7e084a904a9331ac7ebddfca3, type: 3}
 --- !u!1 &4328861446111708102
 GameObject:
   m_ObjectHideFlags: 0

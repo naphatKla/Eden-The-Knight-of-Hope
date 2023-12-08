@@ -44,7 +44,9 @@ public class CraftingUIPage : MonoBehaviour
     private Color _craftButtonDefaultColor;
     
     [SerializeField] private Button craftButton;
-
+    [Header("Sound")]
+    [SerializeField] private AudioClip[] openSounds;
+    [SerializeField] private AudioClip[] craftSounds;
     private void Awake()
     {
         _craftButtonDefaultColor = new Color(0.386788f, 1, 0.2877358f, 1);
@@ -123,6 +125,15 @@ public class CraftingUIPage : MonoBehaviour
         }
     }
 
+    public void ShowPage(bool isShow)
+    {
+        gameObject.SetActive(isShow);
+        if (isShow)
+        {
+            SoundManager.Instance.RandomPlaySound(openSounds);
+        }
+    }
+    
     private void Craft()
     {
         InventorySo inventoryData = PlayerInventoryController.Instance.InventoryData;
@@ -132,6 +143,7 @@ public class CraftingUIPage : MonoBehaviour
         {
             inventoryData.RemoveItem(requireItem.item, requireItem.quantity);
         }
+        SoundManager.Instance.RandomPlaySound(craftSounds);
         UpdatePage();
     }
 }

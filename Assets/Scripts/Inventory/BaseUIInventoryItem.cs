@@ -39,6 +39,7 @@ namespace Inventory
             HandleClick(pointerData);
             if (pointerData.button == PointerEventData.InputButton.Middle)
                 ParentInventoryData.SortInventory();
+            if(isEmpty) return;
             SoundManager.Instance.RandomPlaySound(clickSounds);
         }
 

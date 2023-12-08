@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Interaction;
 using UnityEngine;
@@ -32,14 +33,16 @@ public class CraftingTable : InteractableObject
     
     private float _lastOpenTime;
     [SerializeField] private LayerMask playerLayer;
-    
+    [Header("Sound")] [SerializeField] private AudioClip[] openCraftTableSounds;
+    [SerializeField] private AudioClip[] closeCraftTableSounds;
+
     protected override void Start()
     {
         base.Start();
-        materialButton.onClick.AddListener(() => {materialPage.gameObject.SetActive(true); armorPage.gameObject.SetActive(false); weaponPage.gameObject.SetActive(false); potionPage.gameObject.SetActive(false); materialPage.UpdatePage();});
-        armorButton.onClick.AddListener(() => {materialPage.gameObject.SetActive(false); armorPage.gameObject.SetActive(true); weaponPage.gameObject.SetActive(false); potionPage.gameObject.SetActive(false); armorPage.UpdatePage();});
-        weaponButton.onClick.AddListener(() => {materialPage.gameObject.SetActive(false); armorPage.gameObject.SetActive(false); weaponPage.gameObject.SetActive(true); potionPage.gameObject.SetActive(false); weaponPage.UpdatePage();});
-        potionButton.onClick.AddListener(() => {materialPage.gameObject.SetActive(false); armorPage.gameObject.SetActive(false); weaponPage.gameObject.SetActive(false); potionPage.gameObject.SetActive(true); potionPage.UpdatePage();});
+        materialButton.onClick.AddListener(() => {materialPage.ShowPage(true); armorPage.ShowPage(false); weaponPage.ShowPage(false); potionPage.ShowPage(false); materialPage.UpdatePage();});
+        armorButton.onClick.AddListener(() => {materialPage.ShowPage(false); armorPage.ShowPage(true); weaponPage.ShowPage(false); potionPage.ShowPage(false); armorPage.UpdatePage();});
+        weaponButton.onClick.AddListener(() => {materialPage.ShowPage(false); armorPage.ShowPage(false); weaponPage.ShowPage(true); potionPage.ShowPage(false); weaponPage.UpdatePage();});
+        potionButton.onClick.AddListener(() => {materialPage.ShowPage(false); armorPage.ShowPage(false); weaponPage.ShowPage(false); potionPage.ShowPage(true); potionPage.UpdatePage();});
 
         closeButton.onClick.AddListener(CloseCraftingUI);
         materialPage.Initialize(materialCraftingItems);
@@ -72,10 +75,13 @@ public class CraftingTable : InteractableObject
         weaponPage.UpdatePage();
         potionPage.UpdatePage();
         _lastOpenTime = Time.time;
+        SoundManager.Instance.RandomPlaySound(openCraftTableSounds);
     }
 
     private void CloseCraftingUI()
     {
+        if (craftingUI.gameObject.activeSelf == false) return;
         craftingUI.gameObject.SetActive(false);
+        SoundManager.Instance.RandomPlaySound(closeCraftTableSounds);
     }
 }
