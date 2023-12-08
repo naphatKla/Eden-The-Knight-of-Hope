@@ -18,6 +18,8 @@ namespace Interaction
         private int _maxTierBuilded = 0;
         private TowerHealthSystem _towerHealthSystem;
         [SerializeField] private LayerMask playerLayer;
+        [Header("Sound")] [SerializeField] private AudioClip[] openTowerPlatformSounds;
+        [SerializeField] private AudioClip[] closeTowerPlatformSounds;
         
         protected override void Update()
         {
@@ -31,7 +33,7 @@ namespace Interaction
                 }
             }
                
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab))
                 CloseTowerUI();
             if(_lastOpenTime + 1.5f > Time.time) return;
             if (Physics2D.OverlapBoxNonAlloc(transform.position, new Vector2(10, 10), 0, new Collider2D[1],
@@ -58,6 +60,7 @@ namespace Interaction
 
             towerBuilderUIPage.OnBuildTower = null;
             towerBuilderUIPage.OnBuildTower += BuildTower;
+            SoundManager.Instance.RandomPlaySound(openTowerPlatformSounds);
         }
         
         private void UpdateTowerUIPage()
@@ -68,9 +71,11 @@ namespace Interaction
             towerBuilderUIPage.UpdatePage(_maxTierBuilded, _currentTowerSO, towerHpPercentage);
         }
 
-        private void CloseTowerUI()
+        public void CloseTowerUI()
         {
+            if (towerUpgradeUI.gameObject.activeSelf == false) return;
             towerUpgradeUI.gameObject.SetActive(false);
+            SoundManager.Instance.RandomPlaySound(closeTowerPlatformSounds);
         }
         
         /// <summary>

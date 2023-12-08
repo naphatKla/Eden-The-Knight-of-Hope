@@ -51,7 +51,7 @@ public class TowerBuilderUIPage : MonoBehaviour
 
     private void Awake()
     {
-        closeButton.onClick.AddListener(() => gameObject.transform.parent.gameObject.SetActive(false));
+        closeButton.onClick.AddListener(() => TowerPlatformLinked.CloseTowerUI());
         _buildButtonDefaultColor = buildButton.GetComponent<Image>().color;
         Initialize();
     }

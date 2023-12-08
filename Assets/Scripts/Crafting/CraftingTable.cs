@@ -54,7 +54,7 @@ public class CraftingTable : InteractableObject
     protected override void Update()
     {
         base.Update();
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab))
             CloseCraftingUI();
         if(_lastOpenTime + 1.5f > Time.time) return;
         if (Physics2D.OverlapBoxNonAlloc(transform.position, new Vector2(10,10), 0,new Collider2D[1],playerLayer) == 0)

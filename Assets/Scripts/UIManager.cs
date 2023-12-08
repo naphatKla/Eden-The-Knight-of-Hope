@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         playerBaseHpSlider.value = BaseHealthSystem.Instance.CurrentHp / BaseHealthSystem.Instance.maxHp;
         playerHpSlider.value = PlayerHealthSystem.Instance.CurrentHp / PlayerHealthSystem.Instance.maxHp;

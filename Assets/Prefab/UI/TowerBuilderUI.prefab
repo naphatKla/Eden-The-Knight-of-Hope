@@ -553,6 +553,7 @@ GameObject:
   - component: {fileID: 738702909522146565}
   - component: {fileID: 9148790788487892699}
   - component: {fileID: 1106836718907673258}
+  - component: {fileID: -3728612405203996733}
   m_Layer: 0
   m_Name: TowerBuilderUI
   m_TagString: Untagged
@@ -709,3 +710,19 @@ MonoBehaviour:
   correctIcon: {fileID: 6994799862797442997}
   currentIcon: {fileID: 5523709344609467913}
   closeButton: {fileID: 288704962906109152}
+--- !u!114 &-3728612405203996733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337832175690906939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89459764ab196b4caea175beb7fce3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseHoverSounds:
+  - {fileID: 8300000, guid: cce3af25e8fb7c345b64aee57e8d3478, type: 3}
+  mouseClickSounds:
+  - {fileID: 8300000, guid: cb6842d7e084a904a9331ac7ebddfca3, type: 3}
