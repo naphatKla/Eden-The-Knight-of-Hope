@@ -57,11 +57,18 @@ namespace Spawner
                 return;
             }
 
-            if (isPlayerInArea)
+            if (isPlayerInArea && spawnMode == SpawnMode.Loop)
             {
                 NextSpawnTime = Time.time + spawnCooldown;
                 return;
             }
+            if (TimeSystem.Instance.timeState == TimeState.Night)
+            {
+                // reset spawning operation.
+                IsSpawningComplete = false; 
+                return;
+            }
+            
             base.SpawnObjectHandler();
         }
 

@@ -1,8 +1,5 @@
-using System.Collections.Generic;
-using HealthSystem;
 using Inventory;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Interaction

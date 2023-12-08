@@ -23,7 +23,7 @@ namespace Spawner
         [SerializeField] protected float spawnCooldown;
         [SerializeField] private float spawnOffset;
         [SerializeField] private int maxObject;
-        [SerializeField] private SpawnMode spawnMode;
+        [SerializeField] protected SpawnMode spawnMode;
         [SerializeField] private List<PriorityObject<GameObject>> objectsToSpawn;
         [SerializeField] private Color gizmosColor;
         protected bool IsSpawningComplete;

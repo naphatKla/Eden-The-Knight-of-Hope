@@ -33,6 +33,12 @@ public class TowerHealthSystem : HealthSystem.HealthSystem
     {
         base.Heal(healPoint);
         sliderHpPlayer.gameObject.SetActive(CurrentHp < maxHp && CurrentHp > 0);
+        towerHpFill.color = CurrentHp / maxHp > 0.5f
+            ? Color.Lerp(Color.green, Color.yellow, (1 - (CurrentHp / maxHp)) * 2)
+            : Color.Lerp(Color.yellow, Color.red, (1 - (CurrentHp / (maxHp / 2))));
+        Color color = towerHpFill.color;
+        color.a = 0.75f;
+        towerHpFill.color = color;
     }
     
     protected override void ShowDamageIndicator(float damage)
