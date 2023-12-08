@@ -138,7 +138,7 @@ namespace Inventory
         /// Handle the item swap.
         /// </summary>
         /// <param name="inventoryItemBaseUI">Item target</param>
-        private void HandleSwap(BaseUIInventoryItem inventoryItemBaseUI)
+        protected virtual void HandleSwap(BaseUIInventoryItem inventoryItemBaseUI)
         {
             int index = listOfUIItems.IndexOf(inventoryItemBaseUI);
             if (index == -1 || currentlyDraggedItemIndex == -1) return;

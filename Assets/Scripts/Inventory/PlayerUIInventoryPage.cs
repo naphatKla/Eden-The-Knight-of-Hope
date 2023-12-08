@@ -76,6 +76,14 @@ namespace Inventory
             listOfUIItems[itemIndex].Select();
         }
 
+        protected override void HandleSwap(BaseUIInventoryItem inventoryItemBaseUI)
+        {
+            int index = listOfUIItems.IndexOf(inventoryItemBaseUI);
+            if (index == -1 || currentlyDraggedItemIndex == -1) return;
+            base.HandleSwap(inventoryItemBaseUI);
+            UpdateDescription(index, inventoryItemBaseUI.ItemData.ItemImage, inventoryItemBaseUI.ItemData.name, inventoryItemBaseUI.ItemData.Description);
+        }
+
         protected override void HandleItemSelection(BaseUIInventoryItem inventoryItemBaseUI)
         {
             _selectedItem = inventoryItemBaseUI;

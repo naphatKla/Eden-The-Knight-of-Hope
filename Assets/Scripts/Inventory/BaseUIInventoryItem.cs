@@ -53,6 +53,7 @@ namespace Inventory
         public virtual void OnEndDrag(PointerEventData eventData)
         {
             OnItemEndDrag?.Invoke(this);
+            if (isEmpty) Deselect();
         }
 
         public virtual void OnDrop(PointerEventData eventData)
@@ -63,6 +64,8 @@ namespace Inventory
             { 
                 if (droppedItem.isEmpty) return;
                 droppedItem.ParentInventoryData.SwapItemsMoveBetweenInventories(ParentInventoryData, droppedItem.Index, Index);
+                SoundManager.Instance.RandomPlaySound(dropSounds);
+                Select();
                 return;
             }
             
