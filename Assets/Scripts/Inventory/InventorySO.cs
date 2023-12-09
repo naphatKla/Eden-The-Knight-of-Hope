@@ -118,15 +118,55 @@ namespace Inventory
         /// <param name="itemIndex2">Item two</param>
         public void SwapItems(int itemIndex1, int itemIndex2)
         {
+            if (inventoryItems[itemIndex1].IsEmpty && inventoryItems[itemIndex2].IsEmpty) return;
+            if (inventoryItems[itemIndex1].item == inventoryItems[itemIndex2].item
+                && itemIndex1 != itemIndex2)
+            {
+                int addedQuantity = inventoryItems[itemIndex1].quantity + inventoryItems[itemIndex2].quantity;
+                if (addedQuantity <= inventoryItems[itemIndex2].item.MaxStackSize)
+                {
+                    inventoryItems[itemIndex2] = inventoryItems[itemIndex1].ChangeQuantity(addedQuantity);
+                    inventoryItems[itemIndex1] = InventoryItem.GetEmptyItem();
+                    InformAboutChange();
+                    return;
+                }
+
+                inventoryItems[itemIndex2] = inventoryItems[itemIndex2].ChangeQuantity(inventoryItems[itemIndex1].item.MaxStackSize);
+                inventoryItems[itemIndex1] = inventoryItems[itemIndex1].ChangeQuantity(addedQuantity - inventoryItems[itemIndex1].item.MaxStackSize);
+                InformAboutChange();
+                return;
+            }
             (inventoryItems[itemIndex1], inventoryItems[itemIndex2]) =
                 (inventoryItems[itemIndex2], inventoryItems[itemIndex1]);
+            
             InformAboutChange();
         }
         
         public void SwapItemsMoveBetweenInventories(InventorySo otherInventory, int itemIndex1, int itemIndex2)
         {
+            if (inventoryItems[itemIndex1].IsEmpty && otherInventory.inventoryItems[itemIndex2].IsEmpty) return;
+            if (inventoryItems[itemIndex1].item == otherInventory.inventoryItems[itemIndex2].item)
+            {
+                int addedQuantity = inventoryItems[itemIndex1].quantity + otherInventory.inventoryItems[itemIndex2].quantity;
+                if (addedQuantity <= otherInventory.inventoryItems[itemIndex2].item.MaxStackSize)
+                {
+                    otherInventory.inventoryItems[itemIndex2] = inventoryItems[itemIndex1].ChangeQuantity(addedQuantity);
+                    inventoryItems[itemIndex1] = InventoryItem.GetEmptyItem();
+                    InformAboutChange();
+                    otherInventory.InformAboutChange();
+                    return;
+                }
+
+                otherInventory.inventoryItems[itemIndex2] = otherInventory.inventoryItems[itemIndex2].ChangeQuantity(inventoryItems[itemIndex1].item.MaxStackSize);
+                inventoryItems[itemIndex1] = inventoryItems[itemIndex1].ChangeQuantity(addedQuantity - inventoryItems[itemIndex1].item.MaxStackSize);
+                InformAboutChange();
+                otherInventory.InformAboutChange();
+                return;
+            }
+            
             (inventoryItems[itemIndex1], otherInventory.inventoryItems[itemIndex2]) =
                 (otherInventory.inventoryItems[itemIndex2], inventoryItems[itemIndex1]);
+            
             InformAboutChange();
             otherInventory.InformAboutChange();
         }

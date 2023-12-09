@@ -28,6 +28,7 @@ namespace HealthSystem
         [Header("Sound")]
         public AudioClip[] takeDamageSounds;
         [SerializeField] protected AudioClip[] deadSounds;
+        protected AudioSource audioSource;
         #endregion
     
         private void Awake()
@@ -38,6 +39,11 @@ namespace HealthSystem
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
             TryGetComponent(out animator);
+            audioSource = GetComponent<AudioSource>();
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.spatialBlend = 3f;
+            audioSource.rolloffMode = AudioRolloffMode.Custom;
+            audioSource.maxDistance = 30f;
         }
 
         private void LateUpdate()
@@ -61,9 +67,11 @@ namespace HealthSystem
             CurrentHp -= damage;
             CurrentHp = Mathf.Clamp(CurrentHp, 0, maxHp);
             UpdateUI();
+            
         
             /*if(_animator)
                 _animator.SetTrigger(TakDamage);*/
+            
             spriteRenderer.color = new Color(1,0.6f,0.6f,1);
             Invoke(nameof(ResetSpriteColor), 0.2f);
         
@@ -90,7 +98,7 @@ namespace HealthSystem
         protected virtual void Dead()
         {
             isDead = true;
-            SoundManager.Instance.RandomPlaySound(deadSounds);
+            PlaySound(deadSounds);
             StartCoroutine(WaitForDeadAnimation());
         }
         
@@ -144,6 +152,19 @@ namespace HealthSystem
             Vector3 offset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f),0);
             var go = Instantiate(damageIndicator, transform.position + offset, quaternion.identity);
             go.GetComponent<TextMeshPro>().text = damage.ToString("0");
+        }
+        
+        public void PlaySound(AudioClip[] audioClip)
+        {
+            if(audioClip.Length <= 0) return;
+            AudioClip sound = audioClip[Random.Range(0, audioClip.Length)];
+            audioSource.PlayOneShot(sound);
+        }
+        
+        public void PlaySound(AudioClip audioClip)
+        {
+            if (!audioClip) return;
+            audioSource.PlayOneShot(audioClip);
         }
         #endregion
     }

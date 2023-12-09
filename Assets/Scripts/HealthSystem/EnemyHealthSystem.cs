@@ -1,7 +1,5 @@
 using System.Collections;
 using EnemyBehavior;
-using TMPro;
-using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -27,12 +25,13 @@ namespace HealthSystem
         public override void TakeDamage(float damage, GameObject attacker = null)
         {
             _enemy.Target = attacker;
-        
             /*if (attacker && attacker.CompareTag("Player"))
                 StartCoroutine(Stun(0.5f));*/
-        
+            
             base.TakeDamage(damage, attacker);
             sliderHpPlayer.gameObject.SetActive(CurrentHp < maxHp && CurrentHp > 0);
+            if (!attacker.CompareTag("Player"))
+                PlaySound(takeDamageSounds);
         }
     
         

@@ -102,12 +102,12 @@ namespace CombatSystem
             {
                 target.TakeDamage(currentAttackPattern.power * attackStat, gameObject);
                 
-                if (target.takeDamageSounds.Length <= 0) return;
                 if (target.CompareTag("Player")) return;
+                if (target.takeDamageSounds.Length <= 0) return;
                 AudioClip takeDamageSound = target.takeDamageSounds[Random.Range(0, target.takeDamageSounds.Length)];
                 if (soundList.Contains(takeDamageSound)) return;
                 soundList.Add(takeDamageSound);
-                SoundManager.Instance.PlaySound(takeDamageSound);
+                target.PlaySound(takeDamageSound);
             });
         
             // Change attack stage to next stage, if attack state is the last state, change to the first state.

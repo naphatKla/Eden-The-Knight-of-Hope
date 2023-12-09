@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        
         restartButton.onClick.AddListener(() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex));
         mainMenuButton.onClick.AddListener(() => SceneManager.LoadScene(0));
         continueButton.onClick.AddListener(() => SceneManager.LoadScene(2));

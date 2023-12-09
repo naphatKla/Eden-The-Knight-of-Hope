@@ -40,8 +40,8 @@ namespace HealthSystem
 
         public override void TakeDamage(float damage, GameObject attacker = null)
         {
-            if (PlayerBehavior.Player.Instance.IsDash) return; 
-            SoundManager.Instance.RandomPlaySound(takeDamageSounds);
+            if (PlayerBehavior.Player.Instance.IsDash) return;
+            PlaySound(takeDamageSounds);
             base.TakeDamage(damage, attacker);
         }
 
