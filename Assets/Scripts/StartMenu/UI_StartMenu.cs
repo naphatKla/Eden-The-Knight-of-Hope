@@ -19,7 +19,7 @@ public class UI_StartMenu : MonoBehaviour
     {
         StartCoroutine(LoadLevel(1));
     }
-    
+
     public void CreditsButton()
     {
         StartCoroutine(LoadLevel(2));

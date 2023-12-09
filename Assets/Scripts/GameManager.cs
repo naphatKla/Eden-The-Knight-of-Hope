@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+/*using Input = UnityEngine.Windows.Input;*/
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject warningText;
     [SerializeField] private GameObject YouWin;
     [SerializeField] private GameObject YouLose;
+    [SerializeField] private GameObject YouStop;
     [SerializeField] private Button restartButton;
     [SerializeField] private Button mainMenuButton;
     [SerializeField] private Button continueButton;

@@ -4,7 +4,7 @@ using System.Linq;
 using CombatSystem;
 using HealthSystem;
 using UnityEngine;
-using UnityEngine.Serialization;
+/*using UnityEngine.Serialization;*/
 
 
 namespace PlayerBehavior
