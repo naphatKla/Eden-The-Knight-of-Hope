@@ -96,6 +96,7 @@ public class GachaStation : InteractableObject
 
     private void SelectGacha()
     {
+        _currentGachaSelect?.RemoveStat();
         _currentGachaPick?.AddStat();
         _currentGachaSelect = _currentGachaPick;
         gachaNameText.text = $"Selected {_currentGachaPick.GachaNamWithHexColor}!";

@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using HealthSystem;
 using Inventory;
+using PlayerBehavior;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -23,6 +25,7 @@ public class EquipmentInventoryController : BaseInventoryController<UIEquipmentI
 
     private void QuickSlotHandle()
     {
+        if (PlayerHealthSystem.Instance.isDead) return;
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             UIEquipmentInventoryItem quickSlot = inventoryUI.lisOfQuickSlots[0];

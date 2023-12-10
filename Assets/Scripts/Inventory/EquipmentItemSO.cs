@@ -21,33 +21,21 @@ public class EquipmentItemSO : ItemSo
     
     public void AddStats()
     {
-        Debug.LogWarning("Add Stats");
-        float baseAttackStat = PlayerCombatSystem.Instance.BaseAttackStat;
-
         PlayerCombatSystem.Instance.AttackStat += atk;
         PlayerCombatSystem.Instance.ReduceCoolDownPercent += (atkSpeedPercent/100);
         PlayerHealthSystem.Instance.Heal(hp);
         Player.Instance.CurrentStamina += stamina;
         PlayerHealthSystem.Instance.maxHp += maxHp;
-        Debug.Log($"atk : {PlayerCombatSystem.Instance.AttackStat}");
-        Debug.Log($"atk speed : {PlayerCombatSystem.Instance.CurrentAttackCooldown}");
-        Debug.Log($"hp : {PlayerHealthSystem.Instance.maxHp}");
-        SoundManager.Instance.PlaySound(useSounds[Random.Range(0, useSounds.Length)]);
+        SoundManager.Instance.RandomPlaySound(useSounds);
     }
     
     public void RemoveStats()
     {
-        Debug.LogWarning("Remove Stats");
-        float baseAttackStat = PlayerCombatSystem.Instance.BaseAttackStat;
-
         PlayerCombatSystem.Instance.AttackStat -= atk;
         PlayerCombatSystem.Instance.ReduceCoolDownPercent -= (atkSpeedPercent/100);
         PlayerHealthSystem.Instance.maxHp -= maxHp;
         PlayerHealthSystem.Instance.Heal(-hp);
         Player.Instance.CurrentStamina -= stamina;
-        Debug.Log($"atk : {PlayerCombatSystem.Instance.AttackStat}");
-        Debug.Log($"atk speed : {PlayerCombatSystem.Instance.CurrentAttackCooldown}");
-        Debug.Log($"hp : {PlayerHealthSystem.Instance.maxHp}");
     }
 }
 

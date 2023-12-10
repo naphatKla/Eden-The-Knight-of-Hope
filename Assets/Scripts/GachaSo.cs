@@ -62,10 +62,14 @@ public class GachaSo : ScriptableObject
 
     public void AddStat()
     {
-        float baseAttackStat = PlayerCombatSystem.Instance.BaseAttackStat;
-
-        PlayerCombatSystem.Instance.AttackStat = baseAttackStat + (baseAttackStat * (atkStatsPercentage/100));
-        PlayerCombatSystem.Instance.ReduceCoolDownPercent = (atkSpeedStatsPercentage/100);
+        PlayerCombatSystem.Instance.AtkPercent += atkStatsPercentage / 100;
+        PlayerCombatSystem.Instance.ReduceCoolDownPercent += (atkSpeedStatsPercentage/100);
+    }
+    
+    public void RemoveStat()
+    {
+        PlayerCombatSystem.Instance.AtkPercent -= atkStatsPercentage / 100;
+        PlayerCombatSystem.Instance.ReduceCoolDownPercent -= (atkSpeedStatsPercentage/100);
     }
     
     public string GetDescription()

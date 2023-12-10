@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour
     public void AddPoint(int n)
     {
         totalPoint += n;
+        totalPoint = Mathf.Clamp(totalPoint, 0, int.MaxValue);
         scoreText.text = $"{totalPoint}";
         scoreAddAnimation.text = n < 0? $"<color=red>- {n}": $"<color=yellow>+ {n}";
         PlayerInventoryController.Instance.inventoryUI.totalPointText.text = $"{totalPoint}";

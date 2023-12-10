@@ -33,6 +33,7 @@ namespace CombatSystem
         protected List<Collider2D> TargetInAttackArea;
         protected float currentAttackCooldown;
         public float ReduceCoolDownPercent { get; set; }
+        public float AtkPercent { get; set; }
         protected float attackStat;
 
         [Header("Normal Attack")]
@@ -100,7 +101,7 @@ namespace CombatSystem
             List<AudioClip> soundList = new List<AudioClip>();
             targetHealthSystems.ForEach(target =>
             {
-                target.TakeDamage(currentAttackPattern.power * attackStat, gameObject);
+                target.TakeDamage(currentAttackPattern.power * (attackStat + attackStat*AtkPercent), gameObject);
                 
                 if (target.CompareTag("Player")) return;
                 if (target.takeDamageSounds.Length <= 0) return;

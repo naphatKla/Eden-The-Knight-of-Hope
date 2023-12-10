@@ -125,7 +125,7 @@ namespace HealthSystem
         /// <summary>
         /// Reset the current hp to max hp.
         /// </summary>
-        public void ResetHealth()
+        public virtual void ResetHealth()
         {
             isDead = false;
             CurrentHp = maxHp;

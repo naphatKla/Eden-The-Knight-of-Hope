@@ -43,13 +43,15 @@ namespace HealthSystem
         /// </summary>
         protected override void Dead()
         {
-           if (_enemy.Target.CompareTag("Player")) 
-               GameManager.Instance.AddPoint((int)Random.Range(coinDropRange.x, coinDropRange.y));
-           GatheringItemDrop itemDrop = ProjectExtensions.RandomPickOne(itemDrops).obj;
-           int quantity = (int)Random.Range(itemDrop.quantityDrop.x, itemDrop.quantityDrop.y);
+            if (_enemy.Target.CompareTag("Player"))
+            {
+                GameManager.Instance.AddPoint((int)Random.Range(coinDropRange.x, coinDropRange.y));
+                GatheringItemDrop itemDrop = ProjectExtensions.RandomPickOne(itemDrops).obj;
+                int quantity = (int)Random.Range(itemDrop.quantityDrop.x, itemDrop.quantityDrop.y);
            
-            if (itemDrop.item && quantity > 0)
-                PlayerInventoryController.Instance.InventoryData.AddItem(itemDrop.item, quantity);
+                if (itemDrop.item && quantity > 0)
+                    PlayerInventoryController.Instance.InventoryData.AddItem(itemDrop.item, quantity);
+            }
             
             base.Dead();
         }
