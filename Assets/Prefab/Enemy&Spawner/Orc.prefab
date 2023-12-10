@@ -668,6 +668,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b00d0c648fc9bae40b6ccff852d00b99, type: 3}
   - {fileID: 8300000, guid: 2f0f3a7ad755ce440887ac94efb45de5, type: 3}
   coinDropRange: {x: 10, y: 15}
+  itemDrops:
+  - obj:
+      item: {fileID: 11400000, guid: 4a9469025844662498f4c988e464c4e4, type: 2}
+      quantityDrop: {x: 1, y: 2}
+    spawnRate: 50
+  - obj:
+      item: {fileID: 0}
+      quantityDrop: {x: 1, y: 2}
+    spawnRate: 50
 --- !u!114 &8320007089722136384
 MonoBehaviour:
   m_ObjectHideFlags: 0

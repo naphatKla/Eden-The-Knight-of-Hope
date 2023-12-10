@@ -17,6 +17,7 @@ public class EquipmentItemSO : ItemSo
     [SerializeField] private float atkSpeedPercent;
     [Header("For Usable Item(Quick Slot) Only")]
     public float coolDown;
+    public AudioClip[] useSounds;
     
     public void AddStats()
     {
@@ -31,6 +32,7 @@ public class EquipmentItemSO : ItemSo
         Debug.Log($"atk : {PlayerCombatSystem.Instance.AttackStat}");
         Debug.Log($"atk speed : {PlayerCombatSystem.Instance.CurrentAttackCooldown}");
         Debug.Log($"hp : {PlayerHealthSystem.Instance.maxHp}");
+        SoundManager.Instance.PlaySound(useSounds[Random.Range(0, useSounds.Length)]);
     }
     
     public void RemoveStats()

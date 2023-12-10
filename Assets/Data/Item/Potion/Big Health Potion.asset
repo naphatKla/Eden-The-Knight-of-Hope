@@ -28,3 +28,5 @@ MonoBehaviour:
   atk: 0
   atkSpeedPercent: 0
   coolDown: 1
+  useSounds:
+  - {fileID: 8300000, guid: d2c48669d4e3ec94286bf8d86ad6c56e, type: 3}

@@ -23,6 +23,7 @@ namespace HealthSystem
         protected override void Dead()
         {
             Invoke(nameof(Respawn),respawnTime);
+            Invoke(nameof(DeadPunishment), respawnTime+0.5f);
             base.Dead();
         }
 
@@ -36,6 +37,11 @@ namespace HealthSystem
             ResetHealth();
             Player.Instance.ResetState();
             transform.position = GameManager.Instance.spawnPoint;
+        }
+
+        public void DeadPunishment()
+        {
+            GameManager.Instance.AddPoint(-200);
         }
 
         public override void TakeDamage(float damage, GameObject attacker = null)

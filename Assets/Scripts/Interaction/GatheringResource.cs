@@ -22,7 +22,10 @@ namespace Interaction
         {
             base.Start();
             _collider2D = gameObject.AddComponent<PolygonCollider2D>();
-            prompt = $"<b>[ E ] {resourceData.name}";
+            if (resourceData.name != "Big Rock")
+                prompt = $"<b>[ E ] {resourceData.name}";
+            else
+                prompt = $"<b><color=red>[ E ] Danger Zone!!";
             interactionTextUI.text = prompt;
             SpriteRenderer = GetComponent<SpriteRenderer>();
             if (resourceData)
@@ -114,6 +117,14 @@ namespace Interaction
                 progressBar.value = progressionTimeLeft / time;
                 progressionTimeLeft -= Time.deltaTime;
                 yield return null;
+                if (Player.Instance._spriteRenderer.color != Color.white)
+                {
+                    interactCoroutine = null;
+                    progressBar.gameObject.SetActive(false);
+                    PlayerInteractSystem.Instance.isStopMove = false;
+                    _audioSource.Stop();
+                    yield break;
+                }
 
                 PlayerInteractSystem.Instance.isStopMove = time - progressionTimeLeft <= 0.3f;
                 if (progressionTimeLeft < 0.15f) continue;
@@ -127,7 +138,6 @@ namespace Interaction
             }
         
             InteractAction();
-            progressBar.gameObject.SetActive(false);
             interactCoroutine = null;
             progressBar.gameObject.SetActive(false);
             PlayerInteractSystem.Instance.isStopMove = false;

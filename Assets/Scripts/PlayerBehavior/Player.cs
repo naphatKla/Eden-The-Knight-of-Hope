@@ -55,7 +55,7 @@ namespace PlayerBehavior
         private float _staminaRegenCurrentCooldown;
         private Animator _animator;
         private Rigidbody2D _playerRigidbody2D;
-        private SpriteRenderer _spriteRenderer;
+        [HideInInspector] public SpriteRenderer _spriteRenderer;
         private Vector2 _firstDashDirection;
         public static Player Instance;
         private static readonly int IsDashAnimation = Animator.StringToHash("IsDash");

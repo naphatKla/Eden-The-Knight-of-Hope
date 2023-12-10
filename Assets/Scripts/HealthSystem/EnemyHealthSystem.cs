@@ -1,5 +1,7 @@
 using System.Collections;
+using System.Collections.Generic;
 using EnemyBehavior;
+using Inventory;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,6 +11,7 @@ namespace HealthSystem
     {
         private Enemy _enemy;
         public Vector2 coinDropRange;
+        public List<PriorityObject<GatheringItemDrop>> itemDrops;
         protected override void Start()
         {
             _enemy = GetComponent<Enemy>();
@@ -42,6 +45,11 @@ namespace HealthSystem
         {
            if (_enemy.Target.CompareTag("Player")) 
                GameManager.Instance.AddPoint((int)Random.Range(coinDropRange.x, coinDropRange.y));
+           GatheringItemDrop itemDrop = ProjectExtensions.RandomPickOne(itemDrops).obj;
+           int quantity = (int)Random.Range(itemDrop.quantityDrop.x, itemDrop.quantityDrop.y);
+           
+            if (itemDrop.item && quantity > 0)
+                PlayerInventoryController.Instance.InventoryData.AddItem(itemDrop.item, quantity);
             
             base.Dead();
         }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Diamond Ore
   m_EditorClassIdentifier: 
   sprite:
-  - {fileID: 13655617, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
+  - {fileID: -1100186765, guid: 76d6bf1bd837ccb49a912cf8a7811468, type: 3}
   point: {x: 0, y: 0}
   gatheringTime: 2
   itemDrop1:

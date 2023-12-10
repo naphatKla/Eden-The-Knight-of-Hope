@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     [Header("Sound")]
     [SerializeField] private AudioClip[] nightAlertSound;
     [SerializeField] private AudioClip[] bossSpawnSound;
+    [SerializeField] private AudioClip[] coinSound;
     
     public static GameManager Instance;
     #endregion
@@ -76,8 +77,9 @@ public class GameManager : MonoBehaviour
     {
         totalPoint += n;
         scoreText.text = $"{totalPoint}";
-        scoreAddAnimation.text = $"+ {n}";
+        scoreAddAnimation.text = n < 0? $"<color=red>- {n}": $"<color=yellow>+ {n}";
         PlayerInventoryController.Instance.inventoryUI.totalPointText.text = $"{totalPoint}";
+        SoundManager.Instance.RandomPlaySound(coinSound);
         StartCoroutine(ToggleSetActiveRelateWithAnimation(scoreAddAnimation.gameObject));
     }
     
